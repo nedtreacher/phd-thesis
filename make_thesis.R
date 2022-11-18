@@ -5,6 +5,10 @@ library("quarto")
 
 quarto_render(output_format = "html")
 
+# word document
+
+quarto_render(output_format = "docx")
+
 
 #pdf
 #install.packages("tinytex")
