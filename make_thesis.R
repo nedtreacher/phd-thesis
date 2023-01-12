@@ -3,11 +3,11 @@ library("quarto")
 
 # html
 
-quarto_render(output_format = "html")
+#quarto_render(output_format = "html")
 
 # word document
 
-quarto_render(output_format = "docx")
+#quarto_render(output_format = "docx")
 
 
 #pdf
@@ -18,4 +18,4 @@ quarto_render(output_format = "pdf")
 
 
 #both pdf and html
-quarto_render()
+#quarto_render()
