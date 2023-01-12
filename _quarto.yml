@@ -6,7 +6,7 @@ book:
   title: "Volatile Organic Compound Detection Using Insect Odorant-Receptor Functionalised Field-Effect Transistors"
   author: "Eddyn Oswald Perkins Treacher"
   date: today
-  date-format: "dddd MM YYYY"
+  date-format: "DD-MM-YYYY"
   chapters:
     - index.qmd
     - 0-abstract.qmd
@@ -41,7 +41,6 @@ format:
       \setlength{\droptitle}{-2cm}
       \preauthor{
         \begin{center}
-        \includegraphics[width=5in,height=4in]{figures/IMG_20210719_134928644.jpg}\\ % cover figure
         \Large
       }
       \postauthor{
@@ -56,14 +55,13 @@ format:
       }
       \postdate{
         \\
-        \includegraphics[width=1.5in,height=1.5in]{figures/UiB-emblem500px_gray.png}\\
+        \includegraphics[width=3in,height=1.5in]{figures/VUW-emblem.png}\\
         \end{center}
         \newpage
         \mbox{}
         \vfill
         Cover page\\
         }
-    # \emph{Beckwithia glacialis} on Snøhetta.
         
 
        
