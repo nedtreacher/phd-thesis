@@ -6,13 +6,13 @@ book:
   title: "Volatile Organic Compound Detection Using Insect Odorant-Receptor Functionalised Field-Effect Transistors"
   author: "Eddyn Oswald Perkins Treacher"
   date: today
-  date-format: "DD-MM-YYYY"
+  date-format: "MMM YYYY"
   chapters:
     - index.qmd
     - 0-abstract.qmd
     - 1-introduction.qmd
     - 2-biosensors.qmd
-    - 3-methods.qmd
+    - 3-fabrication.qmd
     - 4-functionalisation.qmd
     - 5-liquid-sensing.qmd
     - 6-vapour-sensing.qmd
@@ -42,25 +42,30 @@ format:
       \preauthor{
         \begin{center}
         \Large
+        \vspace{10mm}
+        by
+
+        \vspace{20mm}
       }
       \postauthor{
         \end{center}
+        \vfill
       }
+      
       \predate{
         \begin{center}
+        A thesis 
+        submitted in fulfilment of the \\
+        requirements of the degree of \\
         Doctor of Philosophy in Physics\\               % Degree
-        Department of Physical and Chemical Sciences\\          % Department
+        School of Physical and Chemical Sciences\\          % Department
         Te Herenga Waka - Victoria University of Wellington\\                       % University 
         \vspace{5mm}
       }
       \postdate{
         \\
-        \includegraphics[width=3in,height=1.5in]{figures/VUW-emblem.png}\\
+        \includegraphics[width=3in,height=1.5in]{figures/VUW-logo.png}\\
         \end{center}
-        \newpage
-        \mbox{}
-        \vfill
-        Cover page\\
         }
         
 
