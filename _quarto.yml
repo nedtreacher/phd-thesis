@@ -3,28 +3,30 @@ project:
   output-dir: docs
   
 book:
-  title: "The title of my most excellent thesis"
-  author: "Jane Doe"
+  title: "Volatile Organic Compound Detection Using Insect Odorant-Receptor Functionalised Field-Effect Transistors"
+  author: "Eddyn Oswald Perkins Treacher"
   date: today
-  date-format: "MMMM YYYY"
+  date-format: "dd MM YYYY"
   chapters:
     - index.qmd
-#    - acknowledgements.qmd         # uncomment this line to see acknowledgements in html (will appear twice in pfd)
     - 0-abstract.qmd
     - 1-introduction.qmd
-    - 2-methods.qmd
-    - 3-results.qmd
-    - 4-discussion.qmd
-    - 5-conclusions.qmd
+    - 2-biosensors.qmd
+    - 3-methods.qmd
+    - 4-functionalisation.qmd
+    - 5-liquid-sensing.qmd
+    - 6-vapour-sensing.qmd
+    - 7-conclusions.qmd
+    #    - acknowledgements.qmd         # uncomment this line to see acknowledgements in html (will appear twice in pfd)
     - references.qmd
-  appendices:
-    - app1-resources.qmd
-    - app2-tools.qmd
+  # appendices:
+    # - app1-resources.qmd
+    # - app2-tools.qmd
 
 bibliography: references.bib
 
 execute:
-  echo: true # change to false to hide code
+  echo: false # change to false to hide code
 
 format:
   html:
@@ -47,10 +49,9 @@ format:
       }
       \predate{
         \begin{center}
-        Master of Science in Biology\\               % Degree
-        Biodiversity, Evolution and Ecology\\        % Degree stream
-        Department of Biological Sciences\\          % Department
-        University of Bergen\\                       % University 
+        Doctor of Philosophy in Physics\\               % Degree
+        Department of Physical and Chemical Sciences\\          % Department
+        Te Herenga Waka - Victoria University of Wellington\\                       % University 
         \vspace{5mm}
       }
       \postdate{
@@ -61,8 +62,11 @@ format:
         \mbox{}
         \vfill
         Cover page\\
-        \emph{Beckwithia glacialis} on Snøhetta.
-       }
+        }
+    # \emph{Beckwithia glacialis} on Snøhetta.
+        
+
+       
 
 editor: visual
 
