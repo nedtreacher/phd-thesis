@@ -1,12 +1,7 @@
 ---
 keep-tex: true
-output:
-  pdf_document:
-    citation_package: natbib
-    keep_md: yes
-  html_document: default
-bibliography: references.bib
-link_citations: true
+format: pdf
+
 ---
 
 #   Functionalisation of Carbon Nanotubes and Graphene with Odorant Receptors
@@ -17,14 +12,19 @@ link_citations: true
 
 - insert figure here - 
 
-1-Pyrenebutanoic acid N-hydroxysuccinimide ester (also known as 1-Pyrenebutyric acid N-hydroxysuccinimide ester, PBASE, PyBASE, PBSE, PANHS) is an aromatic molecule commonly used for tethering biomolecules to the carbon rings of graphene and carbon nanotubes. The use of this bifunctional molecule for noncovalent functionalisation of proteins onto a single-walled carbon nanotube was first reported in 2001 by Chen *et al.* @Chen2001 . Two methods for protein functionalisation were successfully used, with the only differences being the solvent used to dissolve the PBASE powder (DMF, methanol) and the final concentration of the resulting solutions (6 mM, 1 mM respectively). The lower concentration may have been used for PBASE in methanol as PBASE appears to dissolve poorly in methanol at higher concentrations. Subsequent publications appear to have largely either chosen or slightly adapted one of these two methods, as outlined in @tbl-pbase-functionalisation.
+1-Pyrenebutanoic acid N-hydroxysuccinimide ester (also known as 1-Pyrenebutyric acid N-hydroxysuccinimide ester, PBASE, PBSE, Pyr-NHS, PyBASE, PANHS) is an aromatic molecule commonly used for tethering biomolecules to the carbon rings of graphene and carbon nanotubes. The use of this bifunctional molecule for noncovalent functionalisation of proteins onto a single-walled carbon nanotube was first reported in 2001 by Chen *et al.* [@Chen2001]. Two methods for protein functionalisation were successfully used, with the only differences being the solvent used to dissolve the PBASE powder (DMF, methanol) and the final concentration of the resulting solutions (6 mM, 1 mM respectively). The lower concentration may have been used for PBASE in methanol as PBASE appears to dissolve poorly in methanol at higher concentrations. Subsequent publications appear to have largely either chosen or adapted one of these two methods, as demonstrated by the frequency of the use of 6 mM PBASE in DMF and 1 mM PBASE in methanol in @tbl-pbase-functionalisation \cite{Chen2001} . ... directly cite Chen *et al.* when discussing functionalisation with PBASE.
+
+ However, despite this common theme linking the various methodologies, there is a large degree of variation in 
+
+We purchased PBASE from two suppliers, Sigma-Aldrich and Setareh Biotech. Sigma recommends DMF and methanol as suitable solvents for dissolving PBASE alongside chloroform and DMSO. Setareh Biotech indicates methanol can be used for dissolving PBASE. The two suppliers have conflicting information for suitable storage of PBASE, with Sigma recommending room temperature storage while Setareh Biotech recommends storage of  $-5$ to $-30 ^\circ \text{C}$ and protection from light and moisture.
+
 
 \newpage
 \KOMAoptions{paper=landscape,pagesize}
 
 ```{r}
 #| label: tbl-pbase-functionalisation
-#| tbl-cap: Comparison of PBASE functionalisation processes used for liquid-gated CNTFET and graphene FET sensors
+#| tbl-cap: Comparison of PBASE functionalisation processes used for immobilisation of proteins and aptamers onto liquid-gated CNTFET and graphene FET sensors
 
 library(gt)
 
@@ -46,4 +46,3 @@ cols_label(solvent = "Solvent",           # Display column headers
 \newpage
 \KOMAoptions{paper=portrait,pagesize}
 
-We purchased PBASE from two suppliers, Sigma-Aldrich and Setareh Biotech. Sigma recommends DMF and methanol as suitable solvents for dissolving PBASE alongside chloroform and DMSO. Setareh Biotech indicates methanol can be used as a solvent. The two suppliers have conflicting information for suitable storage of PBASE, with Sigma recommending room temperature storage while Setareh Biotech recommends storage of  $-5$ to $-30 ^\circ \text{C}$ and protection from light and moisture.

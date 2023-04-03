@@ -72,29 +72,6 @@
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newlength{\cslentryspacingunit} % times entry-spacing
-\setlength{\cslentryspacingunit}{\parskip}
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1
-  \let\oldpar\par
-  \def\par{\hangindent=\cslhangindent\oldpar}
-  \fi
-  % set entry spacing
-  \setlength{\parskip}{#2\cslentryspacingunit}
- }%
- {}
-\usepackage{calc}
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 \usepackage{amsmath}
 \usepackage{booktabs}
@@ -188,6 +165,8 @@
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
+\usepackage[]{biblatex}
+\addbibresource{references.bib}
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
@@ -205,7 +184,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, sharp corners, interior hidden, breakable, boxrule=0pt, enhanced, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, enhanced, boxrule=0pt, sharp corners, interior hidden, breakable, frame hidden]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -241,7 +220,8 @@ Make a new paragraph by leaving a blank line.
 
 This is a book created from markdown and executable code.
 
-See \textbf{knuth84?} for additional discussion of literate programming.
+See \textcite{knuth84} for additional discussion of literate
+programming.
 
 \begin{verbatim}
 [1] 2
@@ -298,15 +278,15 @@ PyBASE, PANHS) is an aromatic molecule commonly used for tethering
 biomolecules to the carbon rings of graphene and carbon nanotubes. The
 use of this bifunctional molecule for noncovalent functionalisation of
 proteins onto a single-walled carbon nanotube was first reported in 2001
-by Chen \emph{et al.} {[}1{]}. Two methods for protein functionalisation
-were successfully used, with the only differences being the solvent used
-to dissolve the PBASE powder (DMF, methanol) and the final concentration
-of the resulting solutions (6 mM, 1 mM respectively). The lower
-concentration may have been used for PBASE in methanol as PBASE appears
-to dissolve poorly in methanol at higher concentrations. Subsequent
-publications appear to have largely either chosen or adapted one of
-these two methods, as demonstrated by the frequency of the use of 6 mM
-PBASE in DMF and 1 mM PBASE in methanol in
+by Chen \emph{et al.} \autocite{Chen2001}. Two methods for protein
+functionalisation were successfully used, with the only differences
+being the solvent used to dissolve the PBASE powder (DMF, methanol) and
+the final concentration of the resulting solutions (6 mM, 1 mM
+respectively). The lower concentration may have been used for PBASE in
+methanol as PBASE appears to dissolve poorly in methanol at higher
+concentrations. Subsequent publications appear to have largely either
+chosen or adapted one of these two methods, as demonstrated by the
+frequency of the use of 6 mM PBASE in DMF and 1 mM PBASE in methanol in
 Table~\ref{tbl-pbase-functionalisation} . \ldots{} directly cite Chen
 \emph{et al.} when discussing functionalisation with PBASE.
 
@@ -399,19 +379,9 @@ In summary, this book has no content whatsoever.
 
 \markboth{References}{References}
 
-\hypertarget{refs}{}
-\begin{CSLReferences}{0}{0}
-\leavevmode\vadjust pre{\hypertarget{ref-Chen2001}{}}%
-\CSLLeftMargin{{[}1{]} }%
-\CSLRightInline{R. J. Chen, Y. Zhang, D. Wang, and H. Dai,
-{``{Noncovalent sidewall functionalization of single-walled carbon
-nanotubes for protein immobilization},''} \emph{Journal of the American
-Chemical Society}, vol. 123, no. 16, pp. 3838--3839, 2001, doi:
-\href{https://doi.org/10.1021/ja010172b}{10.1021/ja010172b}.}
-
-\end{CSLReferences}
-
 
 \backmatter
+\printbibliography
+
 
 \end{document}
