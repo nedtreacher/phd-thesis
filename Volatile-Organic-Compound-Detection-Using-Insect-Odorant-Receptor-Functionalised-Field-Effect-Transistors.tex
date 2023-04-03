@@ -72,34 +72,7 @@
 \makeatletter
 \def\fps@figure{htbp}
 \makeatother
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newlength{\cslentryspacingunit} % times entry-spacing
-\setlength{\cslentryspacingunit}{\parskip}
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1
-  \let\oldpar\par
-  \def\par{\hangindent=\cslhangindent\oldpar}
-  \fi
-  % set entry spacing
-  \setlength{\parskip}{#2\cslentryspacingunit}
- }%
- {}
-\usepackage{calc}
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
-\usepackage{amsmath}
-\usepackage{booktabs}
-\usepackage{caption}
-\usepackage{longtable}
 \usepackage{titling}
 \setlength{\droptitle}{-2cm}
 \preauthor{
@@ -188,6 +161,8 @@
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
+\usepackage[]{biblatex}
+\addbibresource{references.bib}
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same} % disable monospaced font for URLs
@@ -205,7 +180,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, sharp corners, interior hidden, breakable, boxrule=0pt, enhanced, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, borderline west={3pt}{0pt}{shadecolor}, frame hidden, interior hidden, sharp corners, enhanced, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -241,7 +216,8 @@ Make a new paragraph by leaving a blank line.
 
 This is a book created from markdown and executable code.
 
-See \textbf{knuth84?} for additional discussion of literate programming.
+See \textcite{knuth84} for additional discussion of literate
+programming.
 
 \begin{verbatim}
 [1] 2
@@ -298,17 +274,18 @@ PyBASE, PANHS) is an aromatic molecule commonly used for tethering
 biomolecules to the carbon rings of graphene and carbon nanotubes. The
 use of this bifunctional molecule for noncovalent functionalisation of
 proteins onto a single-walled carbon nanotube was first reported in 2001
-by Chen \emph{et al.} {[}1{]}. Two methods for protein functionalisation
-were successfully used, with the only differences being the solvent used
-to dissolve the PBASE powder (DMF, methanol) and the final concentration
-of the resulting solutions (6 mM, 1 mM respectively). The lower
-concentration may have been used for PBASE in methanol as PBASE appears
-to dissolve poorly in methanol at higher concentrations. Subsequent
-publications appear to have largely either chosen or adapted one of
-these two methods, as demonstrated by the frequency of the use of 6 mM
-PBASE in DMF and 1 mM PBASE in methanol in
-Table~\ref{tbl-pbase-functionalisation} . \ldots{} directly cite Chen
-\emph{et al.} when discussing functionalisation with PBASE.
+by Chen \emph{et al.} \autocite{Chen2001,Campos2019}. Two methods for
+protein functionalisation were successfully used, with the only
+differences being the solvent used to dissolve the PBASE powder (DMF,
+methanol) and the final concentration of the resulting solutions (6 mM,
+1 mM respectively). The lower concentration may have been used for PBASE
+in methanol as PBASE appears to dissolve poorly in methanol at higher
+concentrations. Subsequent publications appear to have largely either
+chosen or adapted one of these two methods, as demonstrated by the
+frequency of the use of 6 mM PBASE in DMF and 1 mM PBASE in methanol in
+Table~\ref{tbl-pbase-functionalisation} \cite{Chen2001} . \ldots{}
+directly cite Chen \emph{et al.} when discussing functionalisation with
+PBASE.
 
 However, despite this common theme linking the various methodologies,
 there is a large degree of variation in
@@ -326,37 +303,46 @@ and moisture.
 \KOMAoptions{paper=landscape,pagesize}
 
 \hypertarget{tbl-pbase-functionalisation}{}
-\begin{longtable}{llrlrll}
-\caption{\label{tbl-pbase-functionalisation}Comparison of PBASE functionalisation processes used for immobilisation
-of proteins and aptamers onto liquid-gated CNTFET and graphene FET
-sensors }\tabularnewline
-
-\toprule
-Solvent & Channel & Conc. (mM) & Incubation type & Time (hr) & Rinse steps & References \\ 
-\midrule
-DMF & CNTs & 5 & Immersed & 1 & PBS & Maehashi et al. \\ 
- &  & 6 & Immersed & 1 & DMF, PBS & García-Aljaro et al. \\ 
- &  & 6 & Immersed & 1 & DMF & Chen et al. \\ 
- &  & 6 & Immersed & 1 & DMF & Cella et al. \\ 
- &  & 6 & Immersed & 1 & DMF & Das  et al. \\ 
- & Graphene & - & - & 2 & DMF & Tsang et al. \\ 
- &  & - & - & 20 & - & Wiedman et al. \\ 
- &  & 0.2 & Immersed & 20 & DMF, IPA, DI water & Gao et al. \\ 
- &  & 1 & Droplet & 6 & DMF, IPA, DI water & Nekrasov et al. \\ 
- &  & 5 & Immersed & 1 & DMF, DI water & Hwang et al. \\ 
- &  & 6 & Droplet & 2 & DMF, DI water & Nasufiya et al. \\ 
- &  & 10 & Droplet & 2 & DMF, DI water & Campos et al. \\ 
- &  & 10 & Immersed & 2 & DMF, PBS & Kuscu et al. \\ 
- &  & 10 & Immersed & 1 & DMF & Xu et al. \\ 
- &  & 10 & Immersed & 12 & DMF, ethanol, DI water & Khan et al. \\ 
-2-Methoxyethanol & Graphene & 1 & Immersed & 1 & DI water & Ono et al. \\ 
-Methanol & CNTs & 1 & Immersed & 1 & Methanol, DI water & Zheng et al. \\ 
- &  & 1 & Immersed & 2 & Methanol & Kim et al. \\ 
- & Graphene & 5 & Immersed & 2 & - & Sethi et al. \\ 
- &  & 5 & Immersed & 1 & Methanol, PBS & Ohno et al. \\ 
-DMSO & CNTs & 10 & - & 1 & DI water & Lopez et al. \\ 
- &  & 10 & Immersed & 1 & PBS & Strack et al. \\ 
-\bottomrule
+\begin{longtable}[]{@{}llllrll@{}}
+\caption{\label{tbl-pbase-functionalisation}Comparison of PBASE
+functionalisation processes used for immobilisation of proteins and
+aptamers onto liquid-gated CNTFET and graphene FET
+sensors}\tabularnewline
+\toprule()
+Solvent & Channel & Conc. (mM) & Incubation type & Time (hr) & Rinse
+steps & References \\
+\midrule()
+\endfirsthead
+\toprule()
+Solvent & Channel & Conc. (mM) & Incubation type & Time (hr) & Rinse
+steps & References \\
+\midrule()
+\endhead
+DMF & CNTs & 5 & Immersed & 1 & PBS & Maehashi et al. \\
+& & 6 & Immersed & 1 & DMF, PBS & García-Aljaro et al. \\
+& & 6 & Immersed & 1 & DMF & Chen \textit{et al.} \cite{Chen2001} \\
+& & 6 & Immersed & 1 & DMF & Cella et al. \\
+& & 6 & Immersed & 1 & DMF & Das et al. \\
+& Graphene & - & - & 2 & DMF & Tsang et al. \\
+& & - & - & 20 & - & Wiedman et al. \\
+& & 0.2 & Immersed & 20 & DMF, IPA, DI water & Gao et al. \\
+& & 1 & Droplet & 6 & DMF, IPA, DI water & Nekrasov et al. \\
+& & 5 & Immersed & 1 & DMF, DI water & Hwang et al. \\
+& & 6 & Droplet & 2 & DMF, DI water & Nasufiya et al. \\
+& & 10 & Droplet & 2 & DMF, DI water & Campos et al. \\
+& & 10 & Immersed & 2 & DMF, PBS & Kuscu et al. \\
+& & 10 & Immersed & 1 & DMF & Xu et al. \\
+& & 10 & Immersed & 12 & DMF, ethanol, DI water & Khan et al. \\
+2-Methoxyethanol & Graphene & 1 & Immersed & 1 & DI water & Ono et
+al. \\
+Methanol & CNTs & 1 & Immersed & 1 & Methanol, DI water & Zheng et
+al. \\
+& & 1 & Immersed & 2 & Methanol & Kim et al. \\
+& Graphene & 5 & Immersed & 2 & - & Sethi et al. \\
+& & 5 & Immersed & 1 & Methanol, PBS & Ohno et al. \\
+DMSO & CNTs & 10 & - & 1 & DI water & Lopez et al. \\
+& & 10 & Immersed & 1 & PBS & Strack et al. \\
+\bottomrule()
 \end{longtable}
 
 \newpage
@@ -399,19 +385,9 @@ In summary, this book has no content whatsoever.
 
 \markboth{References}{References}
 
-\hypertarget{refs}{}
-\begin{CSLReferences}{0}{0}
-\leavevmode\vadjust pre{\hypertarget{ref-Chen2001}{}}%
-\CSLLeftMargin{{[}1{]} }%
-\CSLRightInline{R. J. Chen, Y. Zhang, D. Wang, and H. Dai,
-{``{Noncovalent sidewall functionalization of single-walled carbon
-nanotubes for protein immobilization},''} \emph{Journal of the American
-Chemical Society}, vol. 123, no. 16, pp. 3838--3839, 2001, doi:
-\href{https://doi.org/10.1021/ja010172b}{10.1021/ja010172b}.}
-
-\end{CSLReferences}
-
 
 \backmatter
+\printbibliography
+
 
 \end{document}

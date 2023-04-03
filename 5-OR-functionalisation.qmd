@@ -1,7 +1,6 @@
 ---
 keep-tex: true
 format: pdf
-
 ---
 
 #   Functionalisation of Carbon Nanotubes and Graphene with Odorant Receptors
@@ -12,7 +11,7 @@ format: pdf
 
 - insert figure here - 
 
-1-Pyrenebutanoic acid N-hydroxysuccinimide ester (also known as 1-Pyrenebutyric acid N-hydroxysuccinimide ester, PBASE, PBSE, Pyr-NHS, PyBASE, PANHS) is an aromatic molecule commonly used for tethering biomolecules to the carbon rings of graphene and carbon nanotubes. The use of this bifunctional molecule for noncovalent functionalisation of proteins onto a single-walled carbon nanotube was first reported in 2001 by Chen *et al.* [@Chen2001]. Two methods for protein functionalisation were successfully used, with the only differences being the solvent used to dissolve the PBASE powder (DMF, methanol) and the final concentration of the resulting solutions (6 mM, 1 mM respectively). The lower concentration may have been used for PBASE in methanol as PBASE appears to dissolve poorly in methanol at higher concentrations. Subsequent publications appear to have largely either chosen or adapted one of these two methods, as demonstrated by the frequency of the use of 6 mM PBASE in DMF and 1 mM PBASE in methanol in @tbl-pbase-functionalisation \cite{Chen2001} . ... directly cite Chen *et al.* when discussing functionalisation with PBASE.
+1-Pyrenebutanoic acid N-hydroxysuccinimide ester (also known as 1-Pyrenebutyric acid N-hydroxysuccinimide ester, PBASE, PBSE, Pyr-NHS, PyBASE, PANHS) is an aromatic molecule commonly used for tethering biomolecules to the carbon rings of graphene and carbon nanotubes. The use of this bifunctional molecule for noncovalent functionalisation of proteins onto a single-walled carbon nanotube was first reported in 2001 by Chen *et al.* [@Chen2001; @Campos2019]. Two methods for protein functionalisation were successfully used, with the only differences being the solvent used to dissolve the PBASE powder (DMF, methanol) and the final concentration of the resulting solutions (6 mM, 1 mM respectively). The lower concentration may have been used for PBASE in methanol as PBASE appears to dissolve poorly in methanol at higher concentrations. Subsequent publications appear to have largely either chosen or adapted one of these two methods, as demonstrated by the frequency of the use of 6 mM PBASE in DMF and 1 mM PBASE in methanol in @tbl-pbase-functionalisation \cite{Chen2001} . ... directly cite Chen *et al.* when discussing functionalisation with PBASE.
 
  However, despite this common theme linking the various methodologies, there is a large degree of variation in 
 
@@ -26,23 +25,22 @@ We purchased PBASE from two suppliers, Sigma-Aldrich and Setareh Biotech. Sigma 
 #| label: tbl-pbase-functionalisation
 #| tbl-cap: Comparison of PBASE functionalisation processes used for immobilisation of proteins and aptamers onto liquid-gated CNTFET and graphene FET sensors
 
-library(gt)
+knitr::opts_chunk$set(echo = FALSE)
+library(knitr)
 
 pbase_table <- read.csv("tables/pbase_table.csv", sep=",")
 pbase_table <- pbase_table[rowSums(is.na(pbase_table)) == 0,]
 
-pbase_table |>
-gt() |> 
-cols_label(solvent = "Solvent",           # Display column headers
-           material = "Channel",
-           conc = "Conc. (mM)",
-           incubation = "Incubation type",
-           time = "Time (hr)",
-           rinse = "Rinse steps",
-           ref = "References")
+knitr::kable(pbase_table, 
+            col.names = c("Solvent",
+                           "Channel",
+                           "Conc. (mM)",
+                           "Incubation type",
+                           "Time (hr)",
+                           "Rinse steps",
+                           "References"), format = "simple")
     
 ```
 
 \newpage
 \KOMAoptions{paper=portrait,pagesize}
-
