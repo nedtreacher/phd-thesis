@@ -26,7 +26,8 @@ book:
 
 bibliography: references.bib
 cite-method: biblatex
-csl: ieee.csl
+biblatexoptions:
+  - citestyle = ieee
 
 execute:
   echo: false # change to false to hide code
