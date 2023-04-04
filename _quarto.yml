@@ -29,6 +29,9 @@ cite-method: biblatex
 biblatexoptions:
   - citestyle = ieee
 
+mainfont: Latin Modern Roman
+sansfont: Latin Modern Roman
+
 execute:
   echo: false # change to false to hide code
 
@@ -71,7 +74,8 @@ format:
         \includegraphics[width=3in,height=1.5in]{figures/VUW-logo.png}\\
         \end{center}
         }
-        
+      
+      
 
        
 

@@ -17,6 +17,8 @@
   \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+  \setmainfont[]{Latin Modern Roman}
+  \setsansfont[]{Latin Modern Roman}
 \fi
 % Use upquote if available, for straight quotes in verbatim environments
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
@@ -103,7 +105,8 @@
   \includegraphics[width=3in,height=1.5in]{figures/VUW-logo.png}\\
   \end{center}
   }
-  
+
+
 
  
 \makeatletter
@@ -180,7 +183,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, breakable, boxrule=0pt, sharp corners, borderline west={3pt}{0pt}{shadecolor}, interior hidden, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, borderline west={3pt}{0pt}{shadecolor}, frame hidden, sharp corners, breakable, interior hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -261,28 +264,59 @@ Receptors}\label{functionalisation-of-carbon-nanotubes-and-graphene-with-odorant
 \subsection{1-Pyrenebutanoic acid N-hydroxysuccinimide ester
 (PBASE)}\label{pyrenebutanoic-acid-n-hydroxysuccinimide-ester-pbase}}
 
-\begin{itemize}
-\tightlist
-\item
-  insert figure here -
-\end{itemize}
+\begin{figure}
 
-1-Pyrenebutanoic acid N-hydroxysuccinimide ester (variously known as
-1-Pyrenebutyric acid N-hydroxysuccinimide ester, PBASE, PBSE, PASE,
-Pyr-NHS, PyBASE, PANHS) is an aromatic molecule commonly used for
-tethering biomolecules to the carbon rings of graphene and carbon
-nanotubes. The use of this bifunctional molecule for noncovalent
-functionalisation of proteins onto a single-walled carbon nanotube was
-first reported in 2001 by Chen \emph{et al.} \autocite{Chen2001}. Two
-methods for protein functionalisation were successfully used, with the
-only differences being the solvent used to dissolve the PBASE powder
-(DMF, methanol) and the final concentration of the resulting solutions
-(6 mM, 1 mM respectively). The lower concentration may have been used
-for PBASE in methanol as PBASE appears to dissolve poorly in methanol at
-higher concentrations. Subsequent publications appear to have largely
-either chosen or adapted one of these two methods, as demonstrated by
-the frequency of the use of 6 mM PBASE in DMF and 1 mM PBASE in methanol
-in Table~\ref{tbl-pbase-functionalisation}. Cella \emph{et al.}, Campos
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/pbase_stable_1.JPG}
+
+}
+
+}
+
+\subcaption{\label{fig-pbase-stable-1}Stable form 1}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/pbase_stable_2.JPG}
+
+}
+
+}
+
+\subcaption{\label{fig-pbase-stable-2}Stable form 2}
+\end{minipage}%
+
+\caption{\label{fig-pbase-structure}Stable forms of PBASE}
+
+\end{figure}
+
+1-Pyrenebutanoic acid N-hydroxysuccinimide ester (variously known
+commercially and in the literature as 1-Pyrenebutyric acid
+N-hydroxysuccinimide ester, PBASE, PBSE, PASE, Pyr-NHS, PyBASE, PANHS)
+is an aromatic molecule commonly used for tethering biomolecules to the
+carbon rings of graphene and carbon nanotubes. The use of this
+bifunctional molecule for noncovalent functionalisation of proteins onto
+a single-walled carbon nanotube was first reported in 2001 by Chen
+\emph{et al.} \autocite{Chen2001}. Two methods for protein
+functionalisation were successfully used, with the only differences
+being the solvent used to dissolve the PBASE powder (DMF, methanol) and
+the final concentration of the resulting solutions (6 mM, 1 mM
+respectively). The lower concentration may have been used for PBASE in
+methanol as PBASE appears to dissolve poorly in methanol at higher
+concentrations. Subsequent publications appear to have largely either
+chosen or adapted one of these two methods, as demonstrated by the
+frequency of the use of 6 mM PBASE in DMF and 1 mM PBASE in methanol in
+Table~\ref{tbl-pbase-functionalisation}. Cella \emph{et al.}, Campos
 \emph{et al.}, Zheng \emph{et al.} and Ohno \emph{et al.} directly cite
 Chen \emph{et al.} when discussing functionalisation with PBASE
 \autocite{Cella2010,Campos2019,Zheng2016,Ohno2010}.
