@@ -161,7 +161,7 @@
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
-\usepackage[]{biblatex}
+\usepackage[citestyle = ieee]{biblatex}
 \addbibresource{references.bib}
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
@@ -180,7 +180,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, borderline west={3pt}{0pt}{shadecolor}, frame hidden, interior hidden, sharp corners, enhanced, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, breakable, boxrule=0pt, sharp corners, borderline west={3pt}{0pt}{shadecolor}, interior hidden, frame hidden]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -216,8 +216,7 @@ Make a new paragraph by leaving a blank line.
 
 This is a book created from markdown and executable code.
 
-See \textcite{knuth84} for additional discussion of literate
-programming.
+See for additional discussion of literate programming.
 
 \begin{verbatim}
 [1] 2
@@ -268,27 +267,28 @@ Receptors}\label{functionalisation-of-carbon-nanotubes-and-graphene-with-odorant
   insert figure here -
 \end{itemize}
 
-1-Pyrenebutanoic acid N-hydroxysuccinimide ester (also known as
-1-Pyrenebutyric acid N-hydroxysuccinimide ester, PBASE, PBSE, Pyr-NHS,
-PyBASE, PANHS) is an aromatic molecule commonly used for tethering
-biomolecules to the carbon rings of graphene and carbon nanotubes. The
-use of this bifunctional molecule for noncovalent functionalisation of
-proteins onto a single-walled carbon nanotube was first reported in 2001
-by Chen \emph{et al.} \autocite{Chen2001,Campos2019}. Two methods for
-protein functionalisation were successfully used, with the only
-differences being the solvent used to dissolve the PBASE powder (DMF,
-methanol) and the final concentration of the resulting solutions (6 mM,
-1 mM respectively). The lower concentration may have been used for PBASE
-in methanol as PBASE appears to dissolve poorly in methanol at higher
-concentrations. Subsequent publications appear to have largely either
-chosen or adapted one of these two methods, as demonstrated by the
-frequency of the use of 6 mM PBASE in DMF and 1 mM PBASE in methanol in
-Table~\ref{tbl-pbase-functionalisation} \cite{Chen2001} . \ldots{}
-directly cite Chen \emph{et al.} when discussing functionalisation with
-PBASE.
+1-Pyrenebutanoic acid N-hydroxysuccinimide ester (variously known as
+1-Pyrenebutyric acid N-hydroxysuccinimide ester, PBASE, PBSE, PASE,
+Pyr-NHS, PyBASE, PANHS) is an aromatic molecule commonly used for
+tethering biomolecules to the carbon rings of graphene and carbon
+nanotubes. The use of this bifunctional molecule for noncovalent
+functionalisation of proteins onto a single-walled carbon nanotube was
+first reported in 2001 by Chen \emph{et al.} \autocite{Chen2001}. Two
+methods for protein functionalisation were successfully used, with the
+only differences being the solvent used to dissolve the PBASE powder
+(DMF, methanol) and the final concentration of the resulting solutions
+(6 mM, 1 mM respectively). The lower concentration may have been used
+for PBASE in methanol as PBASE appears to dissolve poorly in methanol at
+higher concentrations. Subsequent publications appear to have largely
+either chosen or adapted one of these two methods, as demonstrated by
+the frequency of the use of 6 mM PBASE in DMF and 1 mM PBASE in methanol
+in Table~\ref{tbl-pbase-functionalisation}. Cella \emph{et al.}, Campos
+\emph{et al.}, Zheng \emph{et al.} and Ohno \emph{et al.} directly cite
+Chen \emph{et al.} when discussing functionalisation with PBASE
+\autocite{Cella2010,Campos2019,Zheng2016,Ohno2010}.
 
-However, despite this common theme linking the various methodologies,
-there is a large degree of variation in
+However, despite these various methodologies appearing to possess a
+common ancestor, there is a large degree of variation in
 
 We purchased PBASE from two suppliers, Sigma-Aldrich and Setareh
 Biotech. Sigma recommends DMF and methanol as suitable solvents for
@@ -318,30 +318,44 @@ Solvent & Channel & Conc. (mM) & Incubation type & Time (hr) & Rinse
 steps & References \\
 \midrule()
 \endhead
-DMF & CNTs & 5 & Immersed & 1 & PBS & Maehashi et al. \\
-& & 6 & Immersed & 1 & DMF, PBS & García-Aljaro et al. \\
+DMF & CNTs & 5 & Immersed & 1 & PBS & Maehashi \textit{et al.}
+\cite{Maehashi2007} \\
+& & 6 & Immersed & 1 & DMF, PBS & García-Aljaro \textit{et al.}
+\cite{Garcia-Aljaro2010} \\
 & & 6 & Immersed & 1 & DMF & Chen \textit{et al.} \cite{Chen2001} \\
-& & 6 & Immersed & 1 & DMF & Cella et al. \\
-& & 6 & Immersed & 1 & DMF & Das et al. \\
-& Graphene & - & - & 2 & DMF & Tsang et al. \\
-& & - & - & 20 & - & Wiedman et al. \\
-& & 0.2 & Immersed & 20 & DMF, IPA, DI water & Gao et al. \\
-& & 1 & Droplet & 6 & DMF, IPA, DI water & Nekrasov et al. \\
-& & 5 & Immersed & 1 & DMF, DI water & Hwang et al. \\
-& & 6 & Droplet & 2 & DMF, DI water & Nasufiya et al. \\
-& & 10 & Droplet & 2 & DMF, DI water & Campos et al. \\
-& & 10 & Immersed & 2 & DMF, PBS & Kuscu et al. \\
-& & 10 & Immersed & 1 & DMF & Xu et al. \\
-& & 10 & Immersed & 12 & DMF, ethanol, DI water & Khan et al. \\
-2-Methoxyethanol & Graphene & 1 & Immersed & 1 & DI water & Ono et
-al. \\
-Methanol & CNTs & 1 & Immersed & 1 & Methanol, DI water & Zheng et
-al. \\
-& & 1 & Immersed & 2 & Methanol & Kim et al. \\
-& Graphene & 5 & Immersed & 2 & - & Sethi et al. \\
-& & 5 & Immersed & 1 & Methanol, PBS & Ohno et al. \\
-DMSO & CNTs & 10 & - & 1 & DI water & Lopez et al. \\
-& & 10 & Immersed & 1 & PBS & Strack et al. \\
+& & 6 & Immersed & 1 & DMF & Cella \textit{et al.} \cite{Cella2010} \\
+& & 6 & Immersed & 1 & DMF & Das \textit{et al.} \cite{Das2011} \\
+& Graphene & - & - & 2 & DMF & Kwong Hong Tsang \textit{et al.}
+\cite{KwongHongTsang2019} \\
+& & - & - & 20 & - & Wiedman \textit{et al.} \cite{Wiedman2017} \\
+& & 0.2 & Immersed & 20 & DMF, IPA, DI water & Gao \textit{et al.}
+\cite{Gao2018} \\
+& & 1 & 100 \(\mu\)L droplet & 6 & DMF, IPA, DI water & Nekrasov
+\textit{et al.} \cite{Nekrasov2021} \\
+& & 5 & Immersed & 1 & DMF, DI water & Hwang \textit{et al.}
+\cite{Hwang2016} \\
+& & 6 & 6 \(\mu\)L droplet & 2 & DMF, DI water & Nur Nasufiya
+\textit{et al.} \cite{NurNasyifa2020} \\
+& & 10 & 10 \(\mu\)L droplet & 2 & DMF, DI water & Campos
+\textit{et al.} \cite{Campos2019} \\
+& & 10 & Immersed & 2 & DMF, PBS & Kuscu \textit{et al.}
+\cite{Kuscu2020} \\
+& & 10 & Immersed & 1 & DMF & Xu \textit{et al.} \cite{Xu2017} \\
+& & 10 & Immersed & 12 & DMF, ethanol, DI water & Khan \textit{et al.}
+\cite{Khan2020} \\
+2-Methoxyethanol & Graphene & 1 & Immersed & 1 & DI water & Ono
+\textit{et al.} \cite{Ono2020} \\
+Methanol & CNTs & 1 & Immersed & 1 & Methanol, DI water & Zheng
+\textit{et al.} \cite{Zheng2016} \\
+& & 1 & Immersed & 2 & Methanol & Kim \textit{et al.} \cite{Kim2009} \\
+& Graphene & 5 & Immersed & 2 & - & Sethi \textit{et al.}
+\cite{Sethi2020} \\
+& & 5 & Immersed & 1 & Methanol, PBS & Ohno \textit{et al.}
+\cite{Ohno2010} \\
+DMSO & CNTs & 10 & - & 1 & DI water & Lopez \textit{et al.}
+\cite{Lopez2015} \\
+& & 10 & Immersed & 1 & PBS & Strack \textit{et al.}
+\cite{Strack2013} \\
 \bottomrule()
 \end{longtable}
 
