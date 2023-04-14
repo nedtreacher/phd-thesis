@@ -11,19 +11,32 @@ format: pdf
 
 ::: {#fig-pbase-structure layout="[[47.5,-5,47.5]]"}
 
-![Hartree-Fock energy: -3427728.67 kJ/mol (9 s.f.)](figures/ch5/pbase_stable_1.JPG){#fig-pbase-stable-1}
+![Hartree-Fock energy: -3427728.67 kJ/mol (9 s.f.)](figures/ch5/pbase_stable_1.png){#fig-pbase-stable-1}
 
-![Hartree-Fock energy: -3427729.66 kJ/mol (9 s.f.)](figures/ch5/pbase_stable_2.JPG){#fig-pbase-stable-2}
+![Hartree-Fock energy: -3427729.66 kJ/mol (9 s.f.)](figures/ch5/pbase_stable_2.png){#fig-pbase-stable-2}
 
-Two conformations of PBASE molecule with geometry optimised via *ab initio* calculation (computed using Gaussian software [@g16]). The difference between computed Hartree-Fock energies is 1.0 kJ/mol, small enough that the existence of both conformations is physically possible.
+Two conformations of PBASE molecule with geometry optimised via *ab initio* calculation (computed using Gaussian 16 [@g16]). The difference between computed Hartree-Fock energies is 1.0 kJ/mol, small enough that the existence of both molecular conformations is physically possible.
 :::
 
-1-Pyrenebutanoic acid N-hydroxysuccinimide ester (variously known commercially and in the literature as 1-Pyrenebutyric acid N-hydroxysuccinimide ester, PBASE, PBSE, PASE, Pyr-NHS, PyBASE, PANHS) is an aromatic molecule commonly used for tethering biomolecules to the carbon rings of graphene and carbon nanotubes. The use of this bifunctional molecule for noncovalent functionalisation of proteins onto a single-walled carbon nanotube was first reported in 2001 by Chen *et al.* [@Chen2001]. Two methods for protein functionalisation were successfully used, with the only differences being the solvent used to dissolve the PBASE powder (DMF, methanol) and the final concentration of the resulting solutions (6 mM, 1 mM respectively). The lower concentration may have been used for PBASE in methanol as PBASE appears to dissolve poorly in methanol at higher concentrations. Subsequent publications appear to have largely either chosen or adapted one of these two methods, as demonstrated by the frequency of the use of 6 mM PBASE in DMF and 1 mM PBASE in methanol in @tbl-pbase-functionalisation. Cella *et al.*, Campos *et al.*, Zheng *et al.* and Ohno *et al.* directly cite Chen *et al.* when discussing functionalisation with PBASE [@Cella2010; @Campos2019; @Zheng2016; @Ohno2010].
+1-Pyrenebutanoic acid N-hydroxysuccinimide ester (variously known commercially and in the literature as 1-Pyrenebutyric acid N-hydroxysuccinimide ester, PBASE, PBSE, PASE, Pyr-NHS, PyBASE, PANHS) is a aromatic, bifunctional molecule commonly used for tethering biomolecules to the carbon rings of graphene and carbon nanotubes. The optimised molecular structure of PBASE is shown in @fig-pbase-structure. 
 
- However, despite these various methodologies appearing to possess a common ancestor, there is a large degree of variation in 
+The non-covalent functionalisation of proteins onto a single-walled carbon nanotube using PBASE was first reported by Chen *et al.* in 2001 [@Chen2001]. Two methods for protein functionalisation and immobilisation were successfully used, with the only differences being the solvent used to dissolve the PBASE powder (DMF, methanol) and the final concentration of the resulting solutions (6 mM, 1 mM respectively). The lower concentration may have been used for PBASE in methanol as PBASE powder appears to dissolve poorly in methanol at higher concentrations. Cella *et al.*, Campos *et al.*, Zheng *et al.* and Ohno *et al.* all directly cite Chen *et al.* when discussing functionalisation with PBASE [@Cella2010; @Campos2019; @Zheng2016; @Ohno2010]. Other groups using PBASE for graphene or carbon nanotube functionalisation do not explicitly reference Chen *et al.* in their methodology, but it is apparent they often draw on one of these two original methods. This common ancestry becomes apparent from the high frequency of methods detailing the use of 6 mM PBASE in DMF and 1 mM PBASE in methanol, as seen in @tbl-pbase-functionalisation.
 
-We purchased PBASE from two suppliers, Sigma-Aldrich and Setareh Biotech. Sigma recommends DMF and methanol as suitable solvents for dissolving PBASE alongside chloroform and DMSO. Setareh Biotech indicates methanol can be used for dissolving PBASE. The two suppliers have conflicting information for suitable storage of PBASE, with Sigma recommending room temperature storage while Setareh Biotech recommends storage of  $-5$ to $-30 ^\circ \text{C}$ and protection from light and moisture.
+ However, despite this shared heritage, it is also apparent from @tbl-pbase-functionalisation that there is a large degree of variation in the methods used for PBASE functionalisation. Various electrical characterisation, microscopy and spectroscopy techniques have been used to demonstrate successful functionalisation. However, there has historically been little  justification provided for the exact parameters used in the procedure. As noted by Zhen *et al.* and Hinnemo *et al.*,  there is more generally a lack of systematic research into formation of pyrene-derivative monolayers on graphene and other carbon nanomaterials, despite the wide use of this chemistry in the literature [@Zhen2018; @Hinnemo2017].
 
+::: {#fig-pbase-nmr layout-ncol=1}
+
+![Sigma NMR](figures/ch5/sigma_pbase_nmr.png){#fig-sigma-nmr}
+
+![Setareh NMR](figures/ch5/setareh_pbase_nmr.png){#fig-setareh-nmr}
+
+ ![Blank (DMSO only) NMR](figures/ch5/dmso_nmr.png){#fig-dmso-nmr}
+
+ Comparison of NMR spectrum profiles
+
+:::
+
+We purchased PBASE from two suppliers, Sigma-Aldrich and Setareh Biotech. Sigma recommends DMF and methanol as suitable solvents for dissolving PBASE alongside chloroform and DMSO. Setareh Biotech indicates methanol can be used for dissolving PBASE. The two suppliers have conflicting information for suitable storage of PBASE, with Sigma recommending room temperature storage while Setareh Biotech recommends storage of  $-5$ to $-30 ^\circ \text{C}$ and protection from light and moisture. @fig-pbase-nmr compares the shapes of NMR spectra of PBASE from each supplier dissolved in DMSO, alongside a blank DMSO spectrum.
 
 \newpage
 \KOMAoptions{paper=landscape,pagesize}

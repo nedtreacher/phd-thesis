@@ -183,7 +183,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, borderline west={3pt}{0pt}{shadecolor}, frame hidden, boxrule=0pt, enhanced, breakable, interior hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, enhanced, interior hidden, borderline west={3pt}{0pt}{shadecolor}, breakable, frame hidden, sharp corners]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -272,7 +272,7 @@ Receptors}\label{functionalisation-of-carbon-nanotubes-and-graphene-with-odorant
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch5/pbase_stable_1.JPG}
+\includegraphics{./figures/ch5/pbase_stable_1.png}
 
 }
 
@@ -298,7 +298,7 @@ kJ/mol (9 s.f.)}
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch5/pbase_stable_2.JPG}
+\includegraphics{./figures/ch5/pbase_stable_2.png}
 
 }
 
@@ -310,35 +310,101 @@ kJ/mol (9 s.f.)}
 
 \caption{\label{fig-pbase-structure}Two conformations of PBASE molecule
 with geometry optimised via \emph{ab initio} calculation (computed using
-Gaussian software \autocite{g16}). The difference between computed
+Gaussian 16 \autocite{g16}). The difference between computed
 Hartree-Fock energies is 1.0 kJ/mol, small enough that the existence of
-both conformations is physically possible.}
+both molecular conformations is physically possible.}
 
 \end{figure}
 
 1-Pyrenebutanoic acid N-hydroxysuccinimide ester (variously known
 commercially and in the literature as 1-Pyrenebutyric acid
 N-hydroxysuccinimide ester, PBASE, PBSE, PASE, Pyr-NHS, PyBASE, PANHS)
-is an aromatic molecule commonly used for tethering biomolecules to the
-carbon rings of graphene and carbon nanotubes. The use of this
-bifunctional molecule for noncovalent functionalisation of proteins onto
-a single-walled carbon nanotube was first reported in 2001 by Chen
-\emph{et al.} \autocite{Chen2001}. Two methods for protein
-functionalisation were successfully used, with the only differences
-being the solvent used to dissolve the PBASE powder (DMF, methanol) and
-the final concentration of the resulting solutions (6 mM, 1 mM
-respectively). The lower concentration may have been used for PBASE in
-methanol as PBASE appears to dissolve poorly in methanol at higher
-concentrations. Subsequent publications appear to have largely either
-chosen or adapted one of these two methods, as demonstrated by the
-frequency of the use of 6 mM PBASE in DMF and 1 mM PBASE in methanol in
-Table~\ref{tbl-pbase-functionalisation}. Cella \emph{et al.}, Campos
-\emph{et al.}, Zheng \emph{et al.} and Ohno \emph{et al.} directly cite
-Chen \emph{et al.} when discussing functionalisation with PBASE
-\autocite{Cella2010,Campos2019,Zheng2016,Ohno2010}.
+is a aromatic, bifunctional molecule commonly used for tethering
+biomolecules to the carbon rings of graphene and carbon nanotubes. The
+optimised molecular structure of PBASE is shown in
+Figure~\ref{fig-pbase-structure}.
 
-However, despite these various methodologies appearing to possess a
-common ancestor, there is a large degree of variation in
+The non-covalent functionalisation of proteins onto a single-walled
+carbon nanotube using PBASE was first reported by Chen \emph{et al.} in
+2001 \autocite{Chen2001}. Two methods for protein functionalisation and
+immobilisation were successfully used, with the only differences being
+the solvent used to dissolve the PBASE powder (DMF, methanol) and the
+final concentration of the resulting solutions (6 mM, 1 mM
+respectively). The lower concentration may have been used for PBASE in
+methanol as PBASE powder appears to dissolve poorly in methanol at
+higher concentrations. Cella \emph{et al.}, Campos \emph{et al.}, Zheng
+\emph{et al.} and Ohno \emph{et al.} all directly cite Chen \emph{et
+al.} when discussing functionalisation with PBASE
+\autocite{Cella2010,Campos2019,Zheng2016,Ohno2010}. Other groups using
+PBASE for graphene or carbon nanotube functionalisation do not
+explicitly reference Chen \emph{et al.} in their methodology, but it is
+apparent they often draw on one of these two original methods. This
+common ancestry becomes apparent from the high frequency of methods
+detailing the use of 6 mM PBASE in DMF and 1 mM PBASE in methanol, as
+seen in Table~\ref{tbl-pbase-functionalisation}.
+
+However, despite this shared heritage, it is also apparent from
+Table~\ref{tbl-pbase-functionalisation} that there is a large degree of
+variation in the methods used for PBASE functionalisation. Various
+electrical characterisation, microscopy and spectroscopy techniques have
+been used to demonstrate successful functionalisation. However, there
+has historically been little justification provided for the exact
+parameters used in the procedure. As noted by Zhen \emph{et al.} and
+Hinnemo \emph{et al.}, there is more generally a lack of systematic
+research into formation of pyrene-derivative monolayers on graphene and
+other carbon nanomaterials, despite the wide use of this chemistry in
+the literature \autocite{Zhen2018,Hinnemo2017}.
+
+\begin{figure}
+
+\begin{minipage}[t]{\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/sigma_pbase_nmr.png}
+
+}
+
+}
+
+\subcaption{\label{fig-sigma-nmr}Sigma NMR}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/setareh_pbase_nmr.png}
+
+}
+
+}
+
+\subcaption{\label{fig-setareh-nmr}Setareh NMR}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/dmso_nmr.png}
+
+}
+
+}
+
+\subcaption{\label{fig-dmso-nmr}Blank (DMSO only) NMR}
+\end{minipage}%
+
+\caption{\label{fig-pbase-nmr}Comparison of NMR spectrum profiles}
+
+\end{figure}
 
 We purchased PBASE from two suppliers, Sigma-Aldrich and Setareh
 Biotech. Sigma recommends DMF and methanol as suitable solvents for
@@ -347,7 +413,9 @@ indicates methanol can be used for dissolving PBASE. The two suppliers
 have conflicting information for suitable storage of PBASE, with Sigma
 recommending room temperature storage while Setareh Biotech recommends
 storage of \(-5\) to \(-30 ^\circ \text{C}\) and protection from light
-and moisture.
+and moisture. Figure~\ref{fig-pbase-nmr} compares the shapes of NMR
+spectra of PBASE from each supplier dissolved in DMSO, alongside a blank
+DMSO spectrum.
 
 \newpage
 \KOMAoptions{paper=landscape,pagesize}
