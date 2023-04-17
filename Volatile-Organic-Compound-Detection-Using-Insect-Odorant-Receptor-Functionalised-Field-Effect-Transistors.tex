@@ -183,7 +183,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, boxrule=0pt, interior hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, frame hidden, enhanced]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, sharp corners, frame hidden, interior hidden, breakable, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -402,7 +402,8 @@ the literature \autocite{Zhen2018,Hinnemo2017}.
 \subcaption{\label{fig-dmso-nmr}Blank (DMSO only)}
 \end{minipage}%
 
-\caption{\label{fig-pbase-nmr}Comparison of NMR spectrum profiles}
+\caption{\label{fig-pbase-nmr}Comparison of NMR spectrum profiles
+(arbitrary units)}
 
 \end{figure}
 
@@ -495,12 +496,44 @@ See for more detailed results
 \chapter{Vapour Phase Sensing with Transistor
 Biosensors}\label{vapour-phase-sensing-with-transistor-biosensors}}
 
-\hypertarget{section}{%
-\section{}\label{section}}
+\hypertarget{testing-vapour-delivery-system}{%
+\section{Testing Vapour Delivery
+System}\label{testing-vapour-delivery-system}}
 
-What I found out.
+\hypertarget{system-description}{%
+\subsection{System Description}\label{system-description}}
 
-See for more detailed results
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\textwidth,height=\textheight]{./figures/ch7/chamber-manifold.png}
+
+}
+
+\caption{Vapour Delivery System - Schematic of device chamber and
+manifold}
+
+\end{figure}
+
+\hypertarget{temperature-and-humidity-indicator}{%
+\subsection{Temperature and Humidity
+Indicator}\label{temperature-and-humidity-indicator}}
+
+\hypertarget{photoionisation-detector}{%
+\subsection{Photoionisation Detector}\label{photoionisation-detector}}
+
+\hypertarget{bubbling-vapour}{%
+\subsubsection*{Bubbling Vapour}\label{bubbling-vapour}}
+\addcontentsline{toc}{subsubsection}{Bubbling Vapour}
+
+First year report: ``\,````First, a 200 sccm flow of N2 gas was sent
+through the dilution line to the device chamber until 1000 s. Then, the
+flow controller three-way valves were manually adjusted so that the same
+200 sccm flow was directed through 50 mL of EtOH analyte in the carrier
+line. This continued until 2200 s, where the valves were again manually
+adjusted so that 200 sccm clean N2 again flowed through the device
+chamber. The resulting current across the device channel was monitored
+over this time, and is shown in Figure 19. A response to EtOH exposure
+and removal is visible.''``\,''
 
 \bookmarksetup{startatroot}
 
@@ -526,10 +559,36 @@ Some results that wouldn't fit into the main thesis
 
 Something else
 
-\hypertarget{another-appendix-1}{%
-\chapter{Another appendix}\label{another-appendix-1}}
+\hypertarget{vapour-delivery-system}{%
+\chapter{Vapour Delivery System}\label{vapour-delivery-system}}
 
-Something else
+\hypertarget{technical-notes}{%
+\section{Technical Notes}\label{technical-notes}}
+
+Two LabView Virtual Instruments are used for the operation of the mass
+flow controllers and for monitoring vapour flow into the device chamber,
+as well as the temperature and humidity of the vapour delivery system's
+manifold.
+
+From Honours report: ``\,``\,'' Figure 12 gives the right side of the
+front panel of the LabView VI sample with vapour.VI, which letsus preset
+an autonomously-performed vapour sensing sequence. Each row in each
+array module corresponds to a different step in this sequence.
+The'howManySteps' module lets us set how many of these steps are
+performed. The `Durations Array' module determines the length of time in
+seconds each step is performed over. The `Carrier Flows Array' and
+`Dilution Flows Array' modules let us set the carrier flow and dilution
+flow, respectively, in standard cubic centimetres per minute (sccm)
+through the gas rig at each step. The carrier flow pushes analyte vapour
+into the vapour-sensing device chamber, while dilution flow is used to
+modify the flow behaviour of the analyte vapour entering the chamber.
+The vapour sensing sequence as depicted in Figure 12 was used for all
+vapour sensing runs in this investigation. At the end of the sequence,
+the data collected about the vapour sensing process was saved as an .lvm
+file. ``\,``\,''
+
+\hypertarget{future-improvements}{%
+\section{Future Improvements}\label{future-improvements}}
 
 
 \backmatter
