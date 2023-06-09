@@ -178,12 +178,12 @@
 \title{Volatile Organic Compound Detection Using Insect Odorant-Receptor
 Functionalised Field-Effect Transistors}
 \author{Eddyn Oswald Perkins Treacher}
-\date{Apr 2023}
+\date{Jun 2023}
 
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, sharp corners, frame hidden, interior hidden, breakable, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, sharp corners, enhanced, boxrule=0pt, frame hidden, interior hidden, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -246,10 +246,29 @@ Platforms}\label{carbon-nanotube-and-graphene-field-effect-transistors-as-biosen
 
 \bookmarksetup{startatroot}
 
-\hypertarget{fabrication}{%
-\chapter{Fabrication}\label{fabrication}}
+\hypertarget{sec-fabrication}{%
+\chapter{Fabrication of Carbon Nanotube Network and Graphene
+Field-Effect Transistors}\label{sec-fabrication}}
 
-Stuff I did to get the results.
+This chapter discusses the fabrication processes for both the carbon
+nanotube network and graphene transistors. Experimental optimisation of
+the transducer element is critical for biosensor work, and large numbers
+of transducers were required for testing various biosensor
+functionalisation processes. Therefore, these processes were developed
+to rapidly fabricate devices with reproducible device characteristics
+appropriate for biosensing work. Also outlined in this chapter are the
+characterisation techniques taken to test the quality and
+reproducibility of these fabrication processes.
+
+\hypertarget{deposition-of-carbon-nanotubes}{%
+\section{Deposition of Carbon
+Nanotubes}\label{deposition-of-carbon-nanotubes}}
+
+\hypertarget{solvent-based}{%
+\subsection{Solvent-Based}\label{solvent-based}}
+
+\hypertarget{surfactant-based}{%
+\subsection{Surfactant-Based}\label{surfactant-based}}
 
 \bookmarksetup{startatroot}
 
@@ -549,15 +568,29 @@ In summary, this book has no content whatsoever.
 \appendix
 \addcontentsline{toc}{part}{Appendices}
 
-\hypertarget{sec-more-results}{%
-\chapter{More results}\label{sec-more-results}}
+\hypertarget{sec-photolithography}{%
+\chapter{Photolithography}\label{sec-photolithography}}
 
-Some results that wouldn't fit into the main thesis
+This section details some of the standard photolithography procedures
+used in the device fabrication processes detailed in
+Chapter~\ref{sec-fabrication}. Photolithography was performed with both
+positive and negative photoresists (also known as ``resists'').
+Photolithography with the positive resist used here required a single
+softbake step, while with negative resists a second
 
-\hypertarget{another-appendix}{%
-\chapter{Another appendix}\label{another-appendix}}
+The nitrogen (\(\geq\) 99.99\%) and oxygen (99.7\%) used in
+photolithographic work was supplied by BOC Limited New Zealand.
+Deionised (DI) water was taken from a Synergy\(^\circledR\) UV Water
+Purification System. The DI water had a measured conductivity of
+\((1.4\pm0.1)\textrm{ } \mu \textrm{S cm}^{-1}\), compared to tap water
+with a measured conductivity of
+\((7.8\pm0.2)\textrm{ } \mu \textrm{S cm}^{-1}\).
 
-Something else
+\hypertarget{section}{%
+\section{}\label{section}}
+
+\hypertarget{sec-python}{%
+\chapter{Python Code for Data Analysis}\label{sec-python}}
 
 \hypertarget{vapour-delivery-system}{%
 \chapter{Vapour Delivery System}\label{vapour-delivery-system}}
@@ -565,27 +598,30 @@ Something else
 \hypertarget{technical-notes}{%
 \section{Technical Notes}\label{technical-notes}}
 
-Two LabView Virtual Instruments are used for the operation of the mass
-flow controllers and for monitoring vapour flow into the device chamber,
-as well as the temperature and humidity of the vapour delivery system's
-manifold.
+Two LabView Virtual Instruments (VIs) were adapted from pre-existing VIs
+for operating the mass flow controllers and monitoring vapour flow into
+the device chamber, as well as monitoring temperature and humidity in
+the vapour delivery system's manifold. These VIs were named ``\,'' A
+third VI was developed in parallel which combined the first two Virtual
+Instruments, alongside allowing the sequence of values to control the
+mass flow controllers.
 
 From Honours report: ``\,``\,'' Figure 12 gives the right side of the
 front panel of the LabView VI sample with vapour.VI, which letsus preset
 an autonomously-performed vapour sensing sequence. Each row in each
-array module corresponds to a different step in this sequence.
-The'howManySteps' module lets us set how many of these steps are
-performed. The `Durations Array' module determines the length of time in
-seconds each step is performed over. The `Carrier Flows Array' and
-`Dilution Flows Array' modules let us set the carrier flow and dilution
-flow, respectively, in standard cubic centimetres per minute (sccm)
-through the gas rig at each step. The carrier flow pushes analyte vapour
-into the vapour-sensing device chamber, while dilution flow is used to
-modify the flow behaviour of the analyte vapour entering the chamber.
-The vapour sensing sequence as depicted in Figure 12 was used for all
-vapour sensing runs in this investigation. At the end of the sequence,
-the data collected about the vapour sensing process was saved as an .lvm
-file. ``\,``\,''
+array module corresponds to a differennest step in this sequence. The
+`howManySteps' module lets us set how many of these steps are performed.
+The `Durations Array' module determines the length of time in seconds
+each step is performed over. The `Carrier Flows Array' and `Dilution
+Flows Array' modules let us set the carrier flow and dilution flow,
+respectively, in standard cubic centimetres per minute (sccm) through
+the gas rig at each step. The carrier flow pushes analyte vapour into
+the vapour-sensing device chamber, while dilution flow is used to modify
+the flow behaviour of the analyte vapour entering the chamber. The
+vapour sensing sequence as depicted in Figure 12 was used for all vapour
+sensing runs in this investigation. At the end of the sequence, the data
+collected about the vapour sensing process was saved as an .lvm file.
+``\,``\,''
 
 \hypertarget{future-improvements}{%
 \section{Future Improvements}\label{future-improvements}}
