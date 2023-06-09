@@ -183,7 +183,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, sharp corners, enhanced, boxrule=0pt, frame hidden, interior hidden, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, boxrule=0pt, sharp corners, borderline west={3pt}{0pt}{shadecolor}, interior hidden, enhanced, frame hidden]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -264,8 +264,26 @@ reproducibility of these fabrication processes.
 \section{Deposition of Carbon
 Nanotubes}\label{deposition-of-carbon-nanotubes}}
 
+4-inch \(p\)-type (B-doped) silicon wafers with a 300 nm SiO\(_2\) layer
+(WaferPro LLC) were used as a substrate for carbon nanotube network
+deposition.
+
 \hypertarget{solvent-based}{%
 \subsection{Solvent-Based}\label{solvent-based}}
+
+The solvent-based deposition process for the carbon nanotube network in
+the second fabrication protocol is as follows. 5 \(\mu\)g of carbon
+nanotube bucky paper (NanoIntegris, IsoNanotubes S-99) was dispersed in
+10 mL of dichlorobenzene (Sigma Aldrich) by ultrasonication until no
+particles were visible to the naked eye. The ultrasonic bath temperature
+was kept constant at 25\(^\circ\)C. A 10 mg solution of
+2-mercaptopyridine (99\%, Sigma-Aldrich) was dissolved in 1 ml ethanol
+and drop-cast over the cleaned SiO\(_2\)/Si surface for 20 minutes,
+followed by rinsing in ethanol to remove residual \(2\)-mercaptopyridine
+and drying with nitrogen. The substrates were then submerged into the
+CNT-DCB suspension for 2 hours, dipped into ethanol for 10 min to remove
+excess solvent and any unattached carbon nanotube bundles, and then
+dried with nitrogen.
 
 \hypertarget{surfactant-based}{%
 \subsection{Surfactant-Based}\label{surfactant-based}}
@@ -576,7 +594,7 @@ used in the device fabrication processes detailed in
 Chapter~\ref{sec-fabrication}. Photolithography was performed with both
 positive and negative photoresists (also known as ``resists'').
 Photolithography with the positive resist used here required a single
-softbake step, while with negative resists a second
+softbake step, while with negative resists a second \textcite{Microchem}
 
 The nitrogen (\(\geq\) 99.99\%) and oxygen (99.7\%) used in
 photolithographic work was supplied by BOC Limited New Zealand.
