@@ -1,6 +1,15 @@
+---
+keep-tex: true
+format: pdf
+---
+
 # Photolithography {#sec-photolithography}
 
-This section details some of the standard photolithography procedures used in the device fabrication processes detailed in @sec-fabrication. Photolithography was performed with both positive and negative photoresists (also known as "resists"). Photolithography with the positive resist used here required a single softbake step, while with negative resists a second @Microchem
+This section details some of the standard photolithography procedures used in the device fabrication processes detailed in @sec-fabrication. Photolithography was performed with both positive and negative photoresists, also referred to here as "resists". Photoresists are UV light-sensitive polymeric resins.  Positive resists made soluble in alkalines by UV light exposure, meaning exposed areas are removed in the development process. Conversely, negative resists are cross-linked by exposure and a post-exposure bake step. The unexposed areas of the negative resist are then removed in the development process. @fig-photolithography-types gives a visual representation of these differences.
+
+![A side-view comparison of generic photolithography processes for positive and negative resists. Photolithography with a positive resist requires a single softbake step before exposure, while for negative resists a second baking step is required after exposure [@Microchem] (Thicknesses not to scale).](figures/app1/positive-negative-photolithography.png){#fig-photolithography-types}
+
+Different photoresist types are optimised for specific use cases. The types used in this thesis are positive and negative AZ$^\circledR$ photoresists (AZ$^\circledR$ 1518, Microchem, Germany; AZ$^\circledR$ nLOF 2020, Microchem, Germany) and solid SU8 (GM 1060, Gersteltec, Switzerland). The AZ$^\circledR$ resists have a minimum film thickness of $1.5\textrm{ } \mu \textrm{m}$ [@Microchem], while the SU8 has a minimum film thickness of $5\textrm{ } \mu \textrm{m}$ [@SU8].
 
 The nitrogen ($\geq$ 99.99%) and oxygen (99.7%) used in photolithographic work was supplied by BOC Limited New Zealand. Deionised (DI) water was taken from a Synergy$^\circledR$ UV Water Purification System. The DI water had a measured conductivity of $(1.4\pm0.1)\textrm{ } \mu \textrm{S cm}^{-1}$, compared to tap water with a measured conductivity of $(7.8\pm0.2)\textrm{ } \mu \textrm{S cm}^{-1}$.
 

@@ -24,6 +24,8 @@ book:
      - app2-FET-analysis-software.qmd
      - app3-vapour-delivery-system.qmd
 bibliography: references.bib
+appendices:
+      style: "ieee"
 cite-method: biblatex
 biblatexoptions:
   - citestyle = ieee

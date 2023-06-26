@@ -183,7 +183,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, boxrule=0pt, sharp corners, borderline west={3pt}{0pt}{shadecolor}, interior hidden, enhanced, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, interior hidden, sharp corners, enhanced, borderline west={3pt}{0pt}{shadecolor}, frame hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -264,9 +264,10 @@ reproducibility of these fabrication processes.
 \section{Deposition of Carbon
 Nanotubes}\label{deposition-of-carbon-nanotubes}}
 
-4-inch \(p\)-type (B-doped) silicon wafers with a 300 nm SiO\(_2\) layer
-(WaferPro LLC) were used as a substrate for carbon nanotube network
-deposition.
+4-inch \(p\)-type (B-doped) silicon wafers with either a 100 nm or 300
+nm SiO\(_2\) layer (WaferPro LLC) were used as the substrate for carbon
+nanotube network deposition. A 100 nm SiO\(_2\) layer was the preferred
+option for the devices intended for backgated measurements.
 
 \hypertarget{solvent-based}{%
 \subsection{Solvent-Based}\label{solvent-based}}
@@ -287,6 +288,14 @@ dried with nitrogen.
 
 \hypertarget{surfactant-based}{%
 \subsection{Surfactant-Based}\label{surfactant-based}}
+
+\hypertarget{simple-dropcasting}{%
+\subsubsection*{Simple Dropcasting}\label{simple-dropcasting}}
+\addcontentsline{toc}{subsubsection}{Simple Dropcasting}
+
+\hypertarget{steam-assisted-method}{%
+\subsubsection*{Steam-assisted Method}\label{steam-assisted-method}}
+\addcontentsline{toc}{subsubsection}{Steam-assisted Method}
 
 \bookmarksetup{startatroot}
 
@@ -592,9 +601,38 @@ In summary, this book has no content whatsoever.
 This section details some of the standard photolithography procedures
 used in the device fabrication processes detailed in
 Chapter~\ref{sec-fabrication}. Photolithography was performed with both
-positive and negative photoresists (also known as ``resists'').
-Photolithography with the positive resist used here required a single
-softbake step, while with negative resists a second \textcite{Microchem}
+positive and negative photoresists, also referred to here as
+``resists''. Photoresists are UV light-sensitive polymeric resins.
+Positive resists made soluble in alkalines by UV light exposure, meaning
+exposed areas are removed in the development process. Conversely,
+negative resists are cross-linked by exposure and a post-exposure bake
+step. The unexposed areas of the negative resist are then removed in the
+development process. Figure~\ref{fig-photolithography-types} gives a
+visual representation of these differences.
+
+\begin{figure}
+
+{\centering \includegraphics{./figures/app1/positive-negative-photolithography.png}
+
+}
+
+\caption{\label{fig-photolithography-types}A side-view comparison of
+generic photolithography processes for positive and negative resists.
+Photolithography with a positive resist requires a single softbake step
+before exposure, while for negative resists a second baking step is
+required after exposure \autocite{Microchem} (Thicknesses not to
+scale).}
+
+\end{figure}
+
+Different photoresist types are optimised for specific use cases. The
+types used in this thesis are positive and negative AZ\(^\circledR\)
+photoresists (AZ\(^\circledR\) 1518, Microchem, Germany;
+AZ\(^\circledR\) nLOF 2020, Microchem, Germany) and solid SU8 (GM 1060,
+Gersteltec, Switzerland). The AZ\(^\circledR\) resists have a minimum
+film thickness of \(1.5\textrm{ } \mu \textrm{m}\) \autocite{Microchem},
+while the SU8 has a minimum film thickness of
+\(5\textrm{ } \mu \textrm{m}\) \autocite{SU8}.
 
 The nitrogen (\(\geq\) 99.99\%) and oxygen (99.7\%) used in
 photolithographic work was supplied by BOC Limited New Zealand.
