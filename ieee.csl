@@ -50,9 +50,15 @@
   </info>
   <locale xml:lang="en">
     <date form="text">
-      <date-part name="month" form="short" suffix=" "/>
-      <date-part name="day" form="numeric-leading-zeros" suffix=", "/>
-      <date-part name="year"/>
+      <date-part name="year">
+        <text variable="year" suffix="-"/>
+      </date-part>
+      <date-part name="month">
+        <text variable="month" form="numeric" suffix="-"/>
+      </date-part>
+      <date-part name="day">
+        <text variable="day" form="numeric"/>
+      </date-part>
     </date>
     <terms>
       <term name="chapter" form="short">ch.</term>

@@ -24,11 +24,10 @@ book:
      - app2-FET-analysis-software.qmd
      - app3-vapour-delivery-system.qmd
 bibliography: references.bib
-appendices:
-      style: "ieee"
 cite-method: biblatex
 biblatexoptions:
   - citestyle = ieee
+  - urldate = iso8601
 
 mainfont: Latin Modern Roman
 sansfont: Latin Modern Roman
@@ -75,10 +74,6 @@ format:
         \includegraphics[width=3in,height=1.5in]{figures/VUW-logo.png}\\
         \end{center}
         }
-      
-      
-
-       
 
 editor: visual
 
