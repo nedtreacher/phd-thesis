@@ -10,7 +10,7 @@ This section details some of the standard photolithography procedures used in th
 
 ![A side-view comparison of generic photolithography processes for positive and negative resists in the ideal case. Photolithography with a positive resist requires a single softbake step before exposure, while for negative resists a second baking step is required after exposure (Thicknesses shown not to scale).](figures/app1/positive-negative-photolithography.png){#fig-photolithography-types}
 
-Photolithography was performed using both positive and negative photoresists. Positive resists are made soluble in alkalines by UV light exposure, meaning exposed areas are removed in the development process. Conversely, negative resists are cross-linked by exposure and a post-exposure bake step. All photolithographic exposure was performed on a Karl Suss MJB3 Contact Aligner with a USHIO super-high pressure 350 W mercury lamp (USH-350DS, Japan). When performing lithography, the intensity reading from the aligner was 20.8 - 22.6 mW/cm$^2$ (Note however that an external photometer reading at 400 nm found an intensity output of 17.2 mW/cm$^2$ when the aligner read 21.0 mW/cm$^2$). The unexposed areas of the negative resist are then removed in the development process [@Microchemicals]. @fig-photolithography-types gives a visual representation of these differences. 
+Photolithography was performed using both positive and negative photoresists. Positive resists are made soluble in alkalines by UV light exposure, meaning exposed areas are removed in the development process. Conversely, negative resists are cross-linked by exposure and a post-exposure bake step. All photolithographic exposure was performed on a Karl Suss MJB3 Contact Aligner with a USHIO super-high pressure 350 W mercury lamp (USH-350DS, Japan). When performing lithography, the intensity reading from the aligner was 20.8 - 24.2 mW/cm$^2$ (Note however that an external photometer reading at 400 nm found an intensity output of 17.2 mW/cm$^2$ when the aligner read 21.0 mW/cm$^2$). The unexposed areas of the negative resist are then removed in the development process [@Microchemicals]. @fig-photolithography-types gives a visual representation of these differences. 
 
 ::: {#fig-photolithography-profiles layout="[[47.5,-5,47.5]]"}
 
@@ -21,7 +21,7 @@ Photolithography was performed using both positive and negative photoresists. Po
 Two different resist profiles seen for different types of photoresist. The undercut profile is ideal for thin-film metal deposition and subsequent patterned removal, known as "lift-off". 
 :::
 
-The specific photoresist selected for photolithography depends on the specific use case. The types used in this thesis are positive and negative AZ$^\circledR$ photoresists (AZ$^\circledR$ 1518, Microchemicals GmbH; AZ$^\circledR$ nLOF 2020, Microchemicals GmbH) and SU-8 (SU8-2150, Kayaku Advanced Materials [formerly Microchem]). The AZ$^\circledR$ resists used here have a minimum film thickness of $1.5\textrm{ } \mu \textrm{m}$ [@Microchemicals], while the SU8-2150 has a minimum film thickness of $0.5\textrm{ } \mu \textrm{m}$ []. Positive resists which have not been thermally crosslinked will soften at higher temperatures ($\gtrsim 100^\circ$C for AZ$^\circledR$ 1518), leading to a rounded profile. This is not the case for negative resists, which are more thermally stable [@Microchemicals]. Each resist therefore has a different cross-section profile, as shown in @fig-photolithography-profiles. 
+The specific photoresist selected for photolithography depends on the specific use case. The types used in this thesis are positive and negative AZ$^\circledR$ photoresists (AZ$^\circledR$ 1518, Microchemicals GmbH; AZ$^\circledR$ nLOF 2020, Microchemicals GmbH) and SU-8 (SU8-2150, Kayaku Advanced Materials, formerly Microchem). The AZ$^\circledR$ resists used here have a minimum film thickness of $1.5\textrm{ } \mu \textrm{m}$ [@Microchemicals], while the SU8-2150 has a minimum film thickness of $0.5\textrm{ } \mu \textrm{m}$ [@Kayaku]. Positive resists which have not been thermally crosslinked will soften at higher temperatures ($\gtrsim 100^\circ$C for AZ$^\circledR$ 1518), leading to a rounded profile. This is not the case for negative resists, which are more thermally stable [@Microchemicals]. Each resist therefore has a different cross-section profile, as shown in @fig-photolithography-profiles. 
 
 The negative resist profile is more suited to metal or metal oxide deposition and lift-off processes [@Microchemicals], though the process is more sensitive to error due to the extrarequiring more processing steps than positive resist. Finally, when it is suitably processed SU-8 is considered to be more biocompatible than other photoresists. It is especially biocompatible when chemically modified via processes such as isopropanol sonication and O$_2$ plasma treatment [@Chen2021].
 
@@ -29,19 +29,19 @@ The negative resist profile is more suited to metal or metal oxide deposition an
 
 ## AZ$^\circledR$ 1518 photoresist
 
-1. Spincoat the substrate at 4000 rotations per minute (rpm) for 1 minute at speed, with an initial acceleration of 500 rpm/s (notes: clean the substrate with acetone, isopropanol (IPA) and nitrogen before spincoating; use only the minimum amount of photoresist required to fully cover the wafer surface)
+1. Spincoat at a final speed of 4000 rotations per minute (rpm) for 1 minute, with an initial acceleration of 500 rpm/s (notes: clean the substrate with acetone, isopropanol (IPA) and nitrogen before spincoating; use only the minimum amount of photoresist required to fully cover the wafer surface; avoid any gaps or bubbles in the photoresist)
 
 2. Softbake 2-4 minutes at $95^\circ$C on the hotplate (2 min for individual devices, 4 min for a quarter wafer)
 
 3. Mask expose for 10-12 s (note: clean mask with acetone/IPA and N$_2$ dry before use)
 
-4. Develop with 3 parts AZ$^\circledR$ 326 (2.38 % TMAH metal-ion free developer, Microchem) in 1 part deionised (DI) water for 30-45 s (note: rinse for 10-15 s in one development solution, then perform the rest of the development in clean developer for a cleaner profile)
+4. Develop with 3 parts AZ$^\circledR$ 326 (2.38 % TMAH metal-ion free developer, Microchemicals GmbH) in 1 part deionised (DI) water for 30-45 s (note: rinse for 10-15 s in one development solution, then perform the rest of the development in clean developer for a cleaner profile)
 
 5. Rinse device for 30 s in DI water to remove excess developer, then dry under nitrogen
 
 ## AZ$^\circledR$ nLOF 2020 photoresist
 
-1. Spincoat at 3000 rotations per minute (rpm) for 1 minute at speed, with an initial acceleration of 500 rpm/s (note: clean the substrate with acetone, isopropanol (IPA) and nitrogen before spincoating)
+1. Spincoat at final speed of 3000 rotations per minute (rpm) for 1 minute, with an initial acceleration of 500 rpm/s (notes: clean the substrate with acetone, isopropanol (IPA) and nitrogen before spincoating; avoid any gaps or bubbles in the photoresist)
 
 2. Softbake for precisely 60 s at $110^\circ$C on the hotplate
 
@@ -53,13 +53,15 @@ The negative resist profile is more suited to metal or metal oxide deposition an
 
 6. Rinse device for 30 s in DI water to remove excess developer, then dry under nitrogen
 
-## GM 1060 SU-8 photoresist
+## SU8-2150 SU-8 photoresist
 
-1. Dissolve solid SU-8 in cyclopentanone (Sigma Aldrich, USA) by stirring 
+1. SU-8 was diluted in cyclopentanone until viscosity was low enough to spincoat on substrate and then sonicated at $50^\circ$C for 3-4 hours (Note: The dilution ratio used was ~1 part SU-8 to 5 parts cyclopentanone. However, the age of the SU-8 may mean that significant evaporation had occurred prior to use, and the amount of SU-8 actually present is underrepresented by this ratio)
 
-2. Softbake for 10 minutes at $95^\circ$C on the hotplate
+2. Spincoat first with a final speed of 500 rpm (acceleration 500 rpm/s) for 10 seconds, followed by spincoating at 4000 rpm (acceleration 7500 rpm/s) for 40 s. This gave a final thickness of $1\textrm{ } \mu \textrm{m}$.
 
-3. Mask expose for 6-10 s (note: clean mask with acetone/IPA and N$_2$ dry before use)
+3. Softbake for 10 minutes at $95^\circ$C on the hotplate
+    
+3. Mask expose for 6-8 s (note: clean mask with acetone/IPA and N$_2$ dry before use)
 
 4. Post-exposure bake for 10 minutes at $95^\circ$C on the hotplate to cross-link exposed resist
 
