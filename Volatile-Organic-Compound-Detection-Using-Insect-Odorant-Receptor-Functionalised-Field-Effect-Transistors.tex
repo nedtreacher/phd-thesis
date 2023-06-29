@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, sharp corners, frame hidden, breakable, enhanced, interior hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, enhanced, sharp corners, frame hidden, breakable, interior hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -635,14 +635,15 @@ photoresists. Positive resists are made soluble in alkalines by UV light
 exposure, meaning exposed areas are removed in the development process.
 Conversely, negative resists are cross-linked by exposure and a
 post-exposure bake step. All photolithographic exposure was performed on
-a Karl Suss MJB3 Contact Aligner with a USHIO SHP 350 W lamp (USH-350DS,
-Japan). When performing lithography, the intensity reading from the
-aligner was 20.8 - 22.6 mW/cm\(^2\) (Note however that an external
-photometer reading at 400 nm found an intensity output of 17.2
-mW/cm\(^2\) when the aligner read 21.0 mW/cm\(^2\)). The unexposed areas
-of the negative resist are then removed in the development process
-\autocite{Microchem}. Figure~\ref{fig-photolithography-types} gives a
-visual representation of these differences.
+a Karl Suss MJB3 Contact Aligner with a USHIO super-high pressure 350 W
+mercury lamp (USH-350DS, Japan). When performing lithography, the
+intensity reading from the aligner was 20.8 - 22.6 mW/cm\(^2\) (Note
+however that an external photometer reading at 400 nm found an intensity
+output of 17.2 mW/cm\(^2\) when the aligner read 21.0 mW/cm\(^2\)). The
+unexposed areas of the negative resist are then removed in the
+development process \autocite{Microchem}.
+Figure~\ref{fig-photolithography-types} gives a visual representation of
+these differences.
 
 \begin{figure}
 
@@ -720,7 +721,7 @@ photoresists. It is especially biocompatible when chemically modified
 via processes such as isopropanol sonication and O\(_2\) plasma
 treatment \autocite{Chen2021}.
 
-The step-by-step processes for each resist are detailed here in the
+The step-by-step processes for each resist are detailed in the
 subsequent sections.
 
 \hypertarget{azcircledr-1518-photoresist}{%
@@ -730,9 +731,11 @@ photoresist}{AZ\^{}\textbackslash circledR 1518 photoresist}}\label{azcircledr-1
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Spincoat at 4000 rotations per minute (rpm) for 1 minute (note: use
-  the minimum amount of photoresist required to fully cover the wafer
-  surface)
+  Spincoat the substrate at 4000 rotations per minute (rpm) for 1 minute
+  at speed, with an initial acceleration of 500 rpm/s (notes: clean the
+  substrate with acetone, isopropanol (IPA) and nitrogen before
+  spincoating; use only the minimum amount of photoresist required to
+  fully cover the wafer surface)
 \item
   Softbake 2-4 minutes at \(95^\circ\)C on the hotplate (2 min for
   individual devices, 4 min for a quarter wafer)
@@ -745,6 +748,36 @@ photoresist}{AZ\^{}\textbackslash circledR 1518 photoresist}}\label{azcircledr-1
   30-45 s (note: rinse for 10-15 s in one development solution, then
   perform the rest of the development in clean developer for a cleaner
   profile)
+\item
+  Rinse device for 30 s in DI water to remove excess developer, then dry
+  under nitrogen
+\end{enumerate}
+
+\hypertarget{azcircledr-nlof-2020-photoresist}{%
+\section{\texorpdfstring{AZ\(^\circledR\) nLOF 2020
+photoresist}{AZ\^{}\textbackslash circledR nLOF 2020 photoresist}}\label{azcircledr-nlof-2020-photoresist}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Spincoat at 3000 rotations per minute (rpm) for 1 minute at speed,
+  with an initial acceleration of 500 rpm/s (note: clean the substrate
+  with acetone, isopropanol (IPA) and nitrogen before spincoating)
+\item
+  Softbake for \emph{precisely} 60 s at \(110^\circ\)C on the hotplate
+\item
+  Mask expose for 2.7-3 s (note: clean mask with acetone/IPA and N\(_2\)
+  dry before use)
+\item
+  Post-exposure bake for \emph{precisely} 60 s at \(110^\circ\)C on the
+  hotplate to cross-link exposed resist
+\item
+  Develop with 3 parts AZ\(^\circledR\) 326 in 1 part DI water for 60-70
+  s (note: rinse for 30 s in one development solution, then perform the
+  rest of the development in clean developer for a cleaner profile)
+\item
+  Rinse device for 30 s in DI water to remove excess developer, then dry
+  under nitrogen
 \end{enumerate}
 
 \hypertarget{sec-python}{%
