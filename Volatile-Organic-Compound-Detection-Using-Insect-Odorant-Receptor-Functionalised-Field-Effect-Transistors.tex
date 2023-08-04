@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, interior hidden, sharp corners, enhanced, breakable, boxrule=0pt, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners, boxrule=0pt, enhanced, frame hidden, breakable]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -289,10 +289,9 @@ photolithography on all wafers fabricated between Aug 2021-Feb 2023,
 while devices fabricated before Aug 2021 and after Feb 2023 had
 alignment markers photolithography performed before the deposition of
 carbon nanotubes. The process order was first switched in Aug 2021 as
-successive deposition of carbon nanotubes onto many quarter wafers
-before the rate-limiting alignment markers step led to faster processing
-times. However, the order was switched back in Feb 2023 to minimise the
-exposure of carbon nanotubes to photolithographic chemical processes.
+this order led to faster processing times. However, the order was
+switched back in Feb 2023 to minimise the exposure of carbon nanotubes
+to photolithographic chemical processes.
 
 \hypertarget{solvent-based}{%
 \subsection{Solvent-Based}\label{solvent-based}}
@@ -301,57 +300,75 @@ The solvent-based deposition process for the carbon nanotube network in
 the second fabrication protocol is as follows. 10 mg of
 2-mercaptopyridine (99\%, Sigma-Aldrich) was dissolved in 1 ml ethanol
 by sonication until clear. Quarter wafers were sonicated in acetone for
-3 min, then plasma cleaned for 2 min at 50 W (300 mTorr) in a PE-50
-Compact Benchtop Plasma Cleaning System (Plasma Etch, Inc.). The cleaned
-SiO\(_2\)/Si surface was then coated with 2-mercaptopyridine for 10
-minutes, rinsed with ethanol to remove residual \(2\)-mercaptopyridine,
-and then nitrogen dried. Meanwhile, 5 \(\mu\)g of carbon nanotube bucky
-paper (NanoIntegris, IsoNanotubes S-99) was dispersed in 10 mL of
-dichlorobenzene (Sigma Aldrich) by ultrasonication until no particles
-were visible to the naked eye. During this time, the ultrasonic bath
-temperature was kept between 20 - 30 \(^\circ\)C or the buckypaper would
-not disperse successfully. The substrates were then placed into a dish
-with CNT-DCB suspension and left covered for 1 hour, dipped into ethanol
-for 10 min to remove excess solvent and any unattached carbon nanotube
-bundles, and then dried with nitrogen.
+3 min, then exposed to O\(_2\) plasma at 100 W for at least 2 min in a
+small plasma cleaner (Plasma Etch, Inc, PE-50 Compact Benchtop Plasma
+Cleaning System) or reactive ion etcher (Oxford Instruments, Plasmalab
+80 Plus). The cleaned SiO\(_2\)/Si surface was then coated with
+2-mercaptopyridine for 10 minutes, rinsed with ethanol to remove
+residual \(2\)-mercaptopyridine, and then nitrogen dried. Meanwhile, 5
+\(\mu\)g of carbon nanotube bucky paper (NanoIntegris, IsoNanotubes
+S-99) was dispersed in 10 mL of dichlorobenzene (Sigma Aldrich) by
+ultrasonication until no particles were visible to the naked eye. During
+this time, the ultrasonic bath temperature was kept between 20 - 30
+\(^\circ\)C or the buckypaper would not disperse successfully. The
+substrates were then placed into a dish with CNT-DCB suspension and left
+covered for 1 hour, dipped into ethanol for 10 min to remove excess
+solvent and any unattached carbon nanotube bundles, and then dried with
+nitrogen.
 
 \hypertarget{surfactant-based}{%
 \subsection{Surfactant-Based}\label{surfactant-based}}
+
+Two different approaches were used to attach the surfactant-dispersed
+CNTs. In both approaches, the quarter wafers were rinsed with ultrapure
+deionised water (DI water), acetone and IPA before being placed into a
+reactive ion etcher (Oxford Instruments, Plasmalab 80 Plus) and exposed
+to O\(_2\) plasma at 100 W for at least 2 min in a small plasma cleaner
+(Plasma Etch, Inc, PE-50 Compact Benchtop Plasma Cleaning System) or
+reactive ion etcher (Oxford Instruments, Plasmalab 80 Plus) to make the
+surface hydrophilic. 1 mL of poly-L-lysine (PLL) was immediately
+deposited onto each quarter wafer and left for 5 minutes. Then, the
+quarter wafers were rinsed for 30 s with DI water and dried with N\(_2\)
+gas. This process allows for the surface adhesion of semiconducting
+single carbon nanotubes suspended in surfactant.
 
 \hypertarget{simple-dropcasting}{%
 \subsubsection*{Simple Dropcasting}\label{simple-dropcasting}}
 \addcontentsline{toc}{subsubsection}{Simple Dropcasting}
 
-2 mL of IsoNanotubes-S 90\% or 99\% solution was decanted into a small
-bottle and sonicated for 5 s to break up bundles of CNTs. Place an even
-spread of 400 \(\mu\)L CNT solution across the centre of the devices on
-the PLL-functionalised quarter wafer, cover and leave for 10 minutes.
+2 mL of IsoNanotubes-S 90\% or 99\% solution (NanoIntegris) was decanted
+into a small bottle and sonicated for 5 s to break up bundles of CNTs.
+An even spread of 400 \(\mu\)L CNT solution was placed in the centre of
+the PLL-functionalised quarter wafer, covered and left for 10 minutes.
 The CNT solution was then rinsed off with DI water and IPA, and then the
 quarter wafer was dried with N\(_2\) gas. Next, the quarter wafer was
-annealed in a vacuum oven at 150\textdegree C for 1 hour. This method
+annealed in a vacuum oven at 150\(^\circ\) C for 1 hour. This method
 would often lead to an inhomogeneous spread of CNTs across the quarter
 wafer surface, detailed further in section
 Section~\ref{sec-AFM-characterisation}.
 
 \hypertarget{steam-assisted-method}{%
-\subsubsection*{Steam-assisted Method}\label{steam-assisted-method}}
-\addcontentsline{toc}{subsubsection}{Steam-assisted Method}
+\subsubsection*{Steam-Assisted Method}\label{steam-assisted-method}}
+\addcontentsline{toc}{subsubsection}{Steam-Assisted Method}
 
-2.5 mL of CNT dispersion was decanted into a small bottle and
-burst-sonicated once (on then off again) to break up bundles of CNTs. 75
-mL of 95\textdegree C water was then placed into a glass dish on a
-hotplate held at 95\textdegree C. After this, the PLL-functionalised
-quarter wafer was placed in the centre of a separate, high-walled glass
-dish and the CNT dispersion was spread across the surface, being careful
-not to get too close to the edges. The quarter wafer glass dish was then
-placed into the 95\textdegree C water dish without any of the CNT
-solution running off the side of the wafer, then both glass dishes were
-covered and left for 2 minutes. The CNT solution was then rinsed off
-with DI water and IPA, and then the quarter wafer was dried with N\(_2\)
-gas. As in the original method, the quarter wafer was then annealed in a
-vacuum oven at 150\textdegree C for 1 hour. This method gave an even
+2 mL of IsoNanotubes-S 90\% or 99\% solution (NanoIntegris) was decanted
+into a small bottle and burst-sonicated once (on then off again) to
+break up bundles of CNTs. 75 mL of 95\(^\circ\) C water was then placed
+into a glass dish on a hotplate held at 95\(^\circ\) C. After this, the
+PLL-functionalised quarter wafer was placed in the centre of an
+insulating surface on the same hotplate. The CNT dispersion was
+carefully spread across the surface of the wafer without spilling any
+over the wafer edges. The wafer on the insulating surface and glass dish
+were then left covered for 2 minutes to expose the wafer to steam from
+the glass dish. The use of an insulating surface meant that the wafer
+and CNT dispersion were not heated from below while exposed to steam.
+The CNT dispersion was then rinsed off the wafer with DI water, ethanol,
+acetone and IPA, and then the quarter wafer was dried with N\(_2\) gas.
+As in the original method, the quarter wafer was then annealed in a
+vacuum oven at 150\(^\circ\) C for 1 hour. This method gave an even
 spread of CNTs across the quarter wafer surface, leading to a greater
-consistency in performance between devices.
+consistency in performance between devices. Further details can be found
+in section Section~\ref{sec-AFM-characterisation}.
 
 \hypertarget{sec-fluorescence-characterisation}{%
 \section{Characterisation via Fluorescence
@@ -796,7 +813,7 @@ photoresist}{AZ\^{}\textbackslash circledR 1518 photoresist}}\label{azcircledr-1
   substrate with acetone, isopropanol (IPA) and nitrogen before
   spincoating; use only the minimum amount of photoresist required to
   fully cover the wafer surface; avoid any gaps or bubbles in the
-  photoresist). This gave
+  photoresist).
 \item
   Softbake 2-4 minutes at \(95^\circ\)C on the hotplate (2 min for
   individual devices, 4 min for a quarter wafer)
