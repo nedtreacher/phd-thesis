@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, breakable, sharp corners, frame hidden, interior hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, enhanced, boxrule=0pt, sharp corners, borderline west={3pt}{0pt}{shadecolor}, interior hidden, breakable]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -280,7 +280,7 @@ before June 2023, the protective photoresist layer was then removed by
 soaking the quarter-wafers in acetone for 15 minutes, then rinsed with
 isopropyl alcohol (IPA) and dried with N\(_2\) gas. However, for
 complete removal of photoresist, we found it was necessary to flood
-expose the device with the Karl Suss Aligner for 1 min and then place it
+expose the wafer with the Karl Suss Aligner for 1 min and then place it
 in AZ326 developer for 3 min, as discussed further in
 Section~\ref{sec-fluorescence-characterisation}.
 
@@ -370,9 +370,10 @@ gave an even spread of CNTs across the quarter wafer surface, leading to
 a greater consistency in performance between devices. Further details
 can be found in section Section~\ref{sec-AFM-characterisation}.
 
-\hypertarget{photolithography-for-carbon-nanotube-and-graphene-field-effect-transistors}{%
+\hypertarget{photolithography-for-carbon-nanotube-and-graphene-field-effect-transistor-fabrication}{%
 \section{Photolithography for Carbon Nanotube and Graphene Field-Effect
-Transistors}\label{photolithography-for-carbon-nanotube-and-graphene-field-effect-transistors}}
+Transistor
+Fabrication}\label{photolithography-for-carbon-nanotube-and-graphene-field-effect-transistor-fabrication}}
 
 \begin{figure}
 
@@ -388,10 +389,14 @@ skipped for graphene devices)}
 \end{figure}
 
 Photolithography was used to define eight channel regions on each device
-and subsequently to define metal contacts for each of these channels.
-Each channel region was 1000 \(\mu\)m in length and 100 \(\mu\)m in
-width. A schematic demonstrating these photolithography processes on a
-quarter wafer is shown in Figure~\ref{fig-qw-photolithography}.
+and subsequently to define metal contacts for each of these channels. A
+schematic demonstrating these photolithography processes on a quarter
+wafer is shown in Figure~\ref{fig-qw-photolithography}. Thermal
+evaporation was used when depositing chromium (Cr) and gold (Au), while
+electron beam evaporation was used when depositing titanium (Ti) and
+metal oxides (\emph{e.g.} Al\(_2\)O\(_3\)). Metal and metal oxide
+deposition was performed using an Angstrom Engineering Nex Dep 200
+evaporator
 
 Carbon nanotube devices were fabricated using the quarter wafer
 substrates discussed in Section~\ref{sec-dep-carbon-nanotubes}.
@@ -409,17 +414,28 @@ When not being used in photolithography, devices were stored in a vacuum
 desiccator to prevent the quality of the graphene deteriorating with
 exposure to air over time.
 
+From Jul 2023 onwards, after each photolithography step, quarter
+wafers/chips were flood exposed to UV light for 1 min and then placed in
+AZ326 developer for 3 min to ensure complete removal of photoresist
+residue (discussed in Section~\ref{sec-fluorescence-characterisation}).
+
 \hypertarget{alignment-markers}{%
 \subsection{Alignment Markers}\label{alignment-markers}}
 
-For carbon nanotube quarter wafers, markers were deposited either
-directly before or after carbon nanotube deposition (see
-Section~\ref{sec-dep-carbon-nanotubes} for discussion). For graphene
-devices, alignment markers were deposited directly after cleaving
-without
+Metal alignment markers were deposited in order to accurately align the
+device channels with device electrodes in subsequent photolithography
+steps. For carbon nanotube quarter wafers, alignment markers were
+deposited either directly before or after carbon nanotube deposition
+(see Section~\ref{sec-dep-carbon-nanotubes} for discussion). For
+graphene devices, alignment markers were deposited directly after
+cleaving using the protective photoresist layer spincoated prior to
+cleaving. AZ\(^\circledR\) 1518 was used for thi
 
 \hypertarget{channel-etching}{%
 \subsection{Channel Etching}\label{channel-etching}}
+
+Each channel region was 1000 \(\mu\)m in length and 100 \(\mu\)m in
+width.
 
 \hypertarget{sec-fluorescence-characterisation}{%
 \section{Characterisation via Fluorescence
@@ -842,13 +858,13 @@ photometer reading at 400 nm found an intensity output of 17.2
 mW/cm\(^2\) when the aligner read 21.0 mW/cm\(^2\)).
 
 In general, photolithography procedures should be performed under yellow
-lighting, as light wavelengths from 320-450 nm can promote photo
-reactions in the photoresist used. Aging of photoresist over time can
-also significantly affect the photolithography process, and therefore
-all processes should be re-optimised regularly over time to give the
-desired result \autocite{Microchemicals}. The range in processing times
-for some steps of the processes used here are largely due to the effects
-of aging on the photoresist.
+lighting, as light wavelengths from 320-450 nm can promote reactions in
+the photoresist used. Aging of photoresist over time can also
+significantly affect the photolithography process, and therefore all
+processes should be re-optimised regularly over time to give the desired
+result \autocite{Microchemicals}. The range in processing times for some
+steps of the processes used here are largely due to the effects of aging
+on the photoresist.
 
 The step-by-step processes for each resist are detailed in the
 subsequent sections.

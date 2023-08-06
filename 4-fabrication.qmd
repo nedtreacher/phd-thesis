@@ -11,7 +11,7 @@ The nitrogen ($\geq$ 99.99%) and oxygen (99.7%) used in fabrication work  was su
 
 ## Deposition of Carbon Nanotubes{#sec-dep-carbon-nanotubes}
 
-4-inch $p$-type (B-doped) silicon wafers with either a 100 nm or 300 nm SiO$_2$ layer (WaferPro LLC) were used as the substrate for carbon nanotube network deposition. A 100 nm SiO$_2$ layer was the preferred option for the devices intended for backgated measurements. Before deposition of carbon nanotubes, the wafers were spin-coated with AZ$^\circledR$ 1518 photoresist, placed photoresist-side down onto a cleanroom wipe, fixed in place using vacuum suction, then cleaved into quarters using a diamond-tipped scribe tool. For fabrication performed before June 2023, the protective photoresist layer was then removed by soaking the quarter-wafers in acetone for 15 minutes, then rinsed with isopropyl alcohol (IPA) and dried with N$_2$ gas. However, for complete removal of photoresist, we found it was necessary to flood expose the device with the Karl Suss Aligner for 1 min and then place it in AZ326 developer for 3 min, as discussed further in @sec-fluorescence-characterisation. 
+4-inch $p$-type (B-doped) silicon wafers with either a 100 nm or 300 nm SiO$_2$ layer (WaferPro LLC) were used as the substrate for carbon nanotube network deposition. A 100 nm SiO$_2$ layer was the preferred option for the devices intended for backgated measurements. Before deposition of carbon nanotubes, the wafers were spin-coated with AZ$^\circledR$ 1518 photoresist, placed photoresist-side down onto a cleanroom wipe, fixed in place using vacuum suction, then cleaved into quarters using a diamond-tipped scribe tool. For fabrication performed before June 2023, the protective photoresist layer was then removed by soaking the quarter-wafers in acetone for 15 minutes, then rinsed with isopropyl alcohol (IPA) and dried with N$_2$ gas. However, for complete removal of photoresist, we found it was necessary to flood expose the wafer with the Karl Suss Aligner for 1 min and then place it in AZ326 developer for 3 min, as discussed further in @sec-fluorescence-characterisation. 
 
 Carbon nanotubes were deposited before alignment markers photolithography on all wafers fabricated between Aug 2021-Feb 2023, while devices fabricated before Aug 2021 and after Feb 2023 had alignment markers photolithography performed before the deposition of carbon nanotubes. The process order was first switched in Aug 2021 as this order led to faster processing times. However, the order was switched back in Feb 2023 to minimise the exposure of carbon nanotubes to photolithographic chemical processes.
 
@@ -31,21 +31,25 @@ Two different approaches were used to attach the surfactant-dispersed CNTs. In b
 
 2 mL of IsoNanotubes-S 90% or 99% solution (NanoIntegris) was decanted into a small bottle and burst-sonicated once (on then off again) to break up bundles of CNTs. 75 mL of 95$^\circ$ C water was then placed into a glass dish on a hotplate held at 95$^\circ$ C. After this, the PLL-functionalised quarter wafer was placed in the centre of an insulating surface on the same hotplate. The CNT dispersion was carefully spread across the surface of the wafer without spilling any over the wafer edges. The wafer on the insulating surface and glass dish were then left under the same cover for 2 minutes to expose the wafer to steam from the glass dish. The use of an insulating surface meant that the wafer and CNT dispersion were not heated from below while exposed to steam. The CNT dispersion was then rinsed off the wafer with DI water, ethanol, acetone and IPA, and then the quarter wafer was dried with N$_2$ gas. As in the original method, the quarter wafer was then annealed in a vacuum oven at 150$^\circ$ C for 1 hour. This method gave an even spread of CNTs across the quarter wafer surface, leading to a greater consistency in performance between devices. Further details can be found in section @sec-AFM-characterisation.
 
-## Photolithography for Carbon Nanotube and Graphene Field-Effect Transistors
+## Photolithography for Carbon Nanotube and Graphene Field-Effect Transistor Fabrication
 
 ![The photolithographic processes used for fabrication of both carbon nanotube and graphene devices (graphene devices were fabricated individually for every step, step #2 skipped for graphene devices)](figures/ch4/photolithography-cycle.png){#fig-qw-photolithography width="90%"}
 
-Photolithography was used to define eight channel regions on each device and subsequently to define metal contacts for each of these channels. Each channel region was 1000 $\mu$m in length and 100 $\mu$m in width. A schematic demonstrating these photolithography processes on a quarter wafer is shown in @fig-qw-photolithography.
+Photolithography was used to define eight channel regions on each device and subsequently to define metal contacts for each of these channels. A schematic demonstrating these photolithography processes on a quarter wafer is shown in @fig-qw-photolithography. Thermal evaporation was used when depositing chromium (Cr) and gold (Au), while electron beam evaporation was used when depositing titanium (Ti) and metal oxides (*e.g.* Al$_2$O$_3$). Metal and metal oxide deposition was performed using an Angstrom Engineering Nex Dep 200 evaporator
 
 Carbon nanotube devices were fabricated using the quarter wafer substrates discussed in @sec-dep-carbon-nanotubes. 
 
 Graphene devices were fabricated using 300 nm SiO$_2$/p-type Si substrates covered with a monolayer of mechanically transferred CVD graphene (Advanced Chemical Supplier). This substrate was cleaved into equal-sized square chips before photolithography, with side length between 11.6 - 11.7 mm subject to variability in wafer size. The same cleaving process outlined in @sec-dep-carbon-nanotubes was used for cleaving the chips, but the photoresist was not rinsed off after cleaving. Devices were exposed to a brief burst of N$_2$ gas to remove any dust from the cleaving process from the surface of devices. When not being used in photolithography, devices were stored in a vacuum desiccator to prevent the quality of the graphene deteriorating with exposure to air over time.
 
+From Jul 2023 onwards, after each photolithography step, quarter wafers/chips were flood exposed to UV light for 1 min and then placed in AZ326 developer for 3 min to ensure complete removal of photoresist residue (discussed in @sec-fluorescence-characterisation). 
+
 ### Alignment Markers
 
-For carbon nanotube quarter wafers, markers were deposited either directly before or after carbon nanotube deposition (see @sec-dep-carbon-nanotubes for discussion). For graphene devices, alignment markers were deposited directly after cleaving without  
+Metal alignment markers were deposited in order to accurately align the device channels with device electrodes in subsequent photolithography steps.  For carbon nanotube quarter wafers, alignment markers were deposited either directly before or after carbon nanotube deposition (see @sec-dep-carbon-nanotubes for discussion). For graphene devices, alignment markers were deposited directly after cleaving using the protective photoresist layer spincoated prior to cleaving. AZ$^\circledR$ 1518 was used for thi
 
 ### Channel Etching
+
+Each channel region was 1000 $\mu$m in length and 100 $\mu$m in width.
 
 ##	Characterisation via Fluorescence Microscopy {#sec-fluorescence-characterisation}
 
