@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, sharp corners, enhanced, borderline west={3pt}{0pt}{shadecolor}, breakable, frame hidden, interior hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, breakable, sharp corners, frame hidden, interior hidden]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -393,10 +393,8 @@ Each channel region was 1000 \(\mu\)m in length and 100 \(\mu\)m in
 width. A schematic demonstrating these photolithography processes on a
 quarter wafer is shown in Figure~\ref{fig-qw-photolithography}.
 
-\hypertarget{graphene-device-fabrication}{%
-\subsection*{Graphene Device
-Fabrication}\label{graphene-device-fabrication}}
-\addcontentsline{toc}{subsection}{Graphene Device Fabrication}
+Carbon nanotube devices were fabricated using the quarter wafer
+substrates discussed in Section~\ref{sec-dep-carbon-nanotubes}.
 
 Graphene devices were fabricated using 300 nm SiO\(_2\)/p-type Si
 substrates covered with a monolayer of mechanically transferred CVD
@@ -404,10 +402,12 @@ graphene (Advanced Chemical Supplier). This substrate was cleaved into
 equal-sized square chips before photolithography, with side length
 between 11.6 - 11.7 mm subject to variability in wafer size. The same
 cleaving process outlined in Section~\ref{sec-dep-carbon-nanotubes} was
-used, but the photoresist was not rinsed off after cleaving. Devices
-were exposed to a brief burst of N\(_2\) gas to remove any dust from the
-cleaving process from the surface of devices. When not being used in
-photolithography,
+used for cleaving the chips, but the photoresist was not rinsed off
+after cleaving. Devices were exposed to a brief burst of N\(_2\) gas to
+remove any dust from the cleaving process from the surface of devices.
+When not being used in photolithography, devices were stored in a vacuum
+desiccator to prevent the quality of the graphene deteriorating with
+exposure to air over time.
 
 \hypertarget{alignment-markers}{%
 \subsection{Alignment Markers}\label{alignment-markers}}
@@ -730,19 +730,6 @@ In summary, this book has no content whatsoever.
 \hypertarget{sec-photolithography}{%
 \chapter{Photolithography}\label{sec-photolithography}}
 
-This section details some of the standard photolithography procedures
-used in the device fabrication processes detailed in
-Chapter~\ref{sec-fabrication}. Photoresists, also referred to here as
-``resists'', are UV light-sensitive polymeric resins used for
-photolithography. Photolithography procedures should be performed under
-yellow lighting, as light wavelengths from 320-450 nm can promote photo
-reactions in the photoresist used. Aging of photoresist over time can
-also significantly affect the photolithography process, and therefore
-all processes should be re-optimised regularly over time to give the
-desired result \autocite{Microchemicals}. The range in processing times
-for some steps of the processes used here are largely due to the effects
-of aging on the photoresist.
-
 \begin{figure}
 
 {\centering \includegraphics{./figures/app1/positive-negative-photolithography.png}
@@ -758,20 +745,18 @@ scale).}
 
 \end{figure}
 
-Photolithography was performed using both positive and negative
-photoresists. Positive resists are made soluble in alkalines by UV light
-exposure, meaning exposed areas are removed in the development process.
-Conversely, negative resists are cross-linked by exposure and a
-post-exposure bake step. All photolithographic exposure was performed on
-a Karl Suss MJB3 Contact Aligner with a USHIO super-high pressure 350 W
-mercury lamp (USH-350DS, Japan). When performing lithography, the
-intensity reading from the aligner was 20.8 - 24.2 mW/cm\(^2\) (Note
-however that an external photometer reading at 400 nm found an intensity
-output of 17.2 mW/cm\(^2\) when the aligner read 21.0 mW/cm\(^2\)). The
-unexposed areas of the negative resist are then removed in the
-development process \autocite{Microchemicals}.
-Figure~\ref{fig-photolithography-types} gives a visual representation of
-these differences.
+This section details some of the standard photolithography procedures
+used in the device fabrication processes detailed in
+Chapter~\ref{sec-fabrication}. Photoresists, also referred to here as
+``resists'', are UV light-sensitive polymeric resins used for
+photolithography. Both positive and negative photoresists were used in
+various fabrication processes. Positive resists are made soluble in
+alkalines by UV light exposure, meaning exposed areas are removed in the
+development process. Conversely, negative resists are cross-linked by
+exposure and a post-exposure bake step. The unexposed areas of the
+negative resist are then removed in the development process
+\autocite{Microchemicals}. Figure~\ref{fig-photolithography-types} gives
+a visual representation of these differences.
 
 \begin{figure}
 
@@ -848,6 +833,22 @@ processed SU-8 is considered to be more biocompatible than other
 photoresists. It is especially biocompatible when chemically modified
 via processes such as isopropanol sonication and O\(_2\) plasma
 treatment \autocite{Chen2021}.
+
+All photolithographic exposure was performed on a Karl Suss MJB3 Contact
+Aligner with a USHIO super-high pressure 350 W mercury lamp (USH-350DS,
+Japan). When performing lithography, the intensity reading from the
+aligner was 20.8 - 24.2 mW/cm\(^2\) (Note however that an external
+photometer reading at 400 nm found an intensity output of 17.2
+mW/cm\(^2\) when the aligner read 21.0 mW/cm\(^2\)).
+
+In general, photolithography procedures should be performed under yellow
+lighting, as light wavelengths from 320-450 nm can promote photo
+reactions in the photoresist used. Aging of photoresist over time can
+also significantly affect the photolithography process, and therefore
+all processes should be re-optimised regularly over time to give the
+desired result \autocite{Microchemicals}. The range in processing times
+for some steps of the processes used here are largely due to the effects
+of aging on the photoresist.
 
 The step-by-step processes for each resist are detailed in the
 subsequent sections.
