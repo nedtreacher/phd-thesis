@@ -17,7 +17,7 @@ Carbon nanotubes were deposited before alignment markers photolithography on all
 
 ### Solvent-Based
 
-The solvent-based deposition process for the carbon nanotube network in the second fabrication protocol is as follows. 10 mg of 2-mercaptopyridine (99%, Sigma-Aldrich) was dissolved in 1 ml ethanol by sonication until clear. Quarter wafers were sonicated in acetone for 3 min, then exposed to O$_2$ plasma at 100 W for at least 2 min in a small plasma cleaner (Plasma Etch, Inc, PE-50 Compact Benchtop Plasma Cleaning System) or reactive ion etcher (Oxford Instruments, Plasmalab 80 Plus) under 300 mTorr pressure. The cleaned SiO$_2$/Si surface was then coated with 2-mercaptopyridine for 10 minutes, rinsed with ethanol to remove residual $2$-mercaptopyridine, and then nitrogen dried. Meanwhile, 5 $\mu$ g of 99% semiconducting carbon nanotube bucky paper (NanoIntegris, IsoNanotubes S-99) was dispersed in 10 mL of anhydrous 1,2-dichlorobenzene (Sigma Aldrich) by ultrasonication until no particles were visible to the naked eye. During this time, the ultrasonic bath temperature was kept between 20 - 30 $^\circ$C or the buckypaper would not disperse successfully. The substrates were then placed into a dish with CNT-DCB suspension and left covered for 1 hour, dipped into ethanol for 10 min to remove residual solvent and any unattached carbon nanotube bundles, and then dried with nitrogen. 
+The solvent-based deposition process for the carbon nanotube network in the second fabrication protocol is as follows. 10 mg of 2-mercaptopyridine (99%, Sigma-Aldrich) was dissolved in 1 ml ethanol by sonication until clear. Quarter wafers were sonicated in acetone for 3 min, then exposed to O$_2$ plasma at 100 W for at least 2 min in a small plasma cleaner (Plasma Etch, Inc., PE-50 Compact Benchtop Plasma Cleaning System) or reactive ion etcher (Oxford Instruments, Plasmalab$^\circledR$ 80 Plus) under 300 mTorr pressure. The cleaned SiO$_2$/Si surface was then coated with 2-mercaptopyridine for 10 minutes, rinsed with ethanol to remove residual $2$-mercaptopyridine, and then nitrogen dried. Meanwhile, 5 $\mu$ g of 99% semiconducting carbon nanotube bucky paper (NanoIntegris, IsoNanotubes S-99) was dispersed in 10 mL of anhydrous 1,2-dichlorobenzene (Sigma Aldrich) by ultrasonication until no particles were visible to the naked eye. During this time, the ultrasonic bath temperature was kept between 20 - 30 $^\circ$C or the buckypaper would not disperse successfully. The substrates were then placed into a dish with CNT-DCB suspension and left covered for 1 hour, dipped into ethanol for 10 min to remove residual solvent and any unattached carbon nanotube bundles, and then dried with nitrogen. 
 
 ### Surfactant-Based
 
@@ -31,26 +31,56 @@ Two different approaches were used to attach the surfactant-dispersed CNTs. In b
 
 2 mL of IsoNanotubes-S 90% or 99% solution (NanoIntegris) was decanted into a small bottle and burst-sonicated once (on then off again) to break up bundles of CNTs. 75 mL of 95$^\circ$ C water was then placed into a glass dish on a hotplate held at 95$^\circ$ C. After this, the PLL-functionalised quarter wafer was placed in the centre of an insulating surface on the same hotplate. The CNT dispersion was carefully spread across the surface of the wafer without spilling any over the wafer edges. The wafer on the insulating surface and glass dish were then left under the same cover for 2 minutes to expose the wafer to steam from the glass dish. The use of an insulating surface meant that the wafer and CNT dispersion were not heated from below while exposed to steam. The CNT dispersion was then rinsed off the wafer with DI water, ethanol, acetone and IPA, and then the quarter wafer was dried with N$_2$ gas. As in the original method, the quarter wafer was then annealed in a vacuum oven at 150$^\circ$ C for 1 hour. This method gave an even spread of CNTs across the quarter wafer surface, leading to a greater consistency in performance between devices. Further details can be found in section @sec-AFM-characterisation.
 
-## Photolithography for Carbon Nanotube and Graphene Field-Effect Transistor Fabrication
+## Photolithography for Carbon Nanotube and Graphene Field-Effect Transistors
 
 ![The photolithographic processes used for fabrication of both carbon nanotube and graphene devices (graphene devices were fabricated individually for every step, step #2 skipped for graphene devices)](figures/ch4/photolithography-cycle.png){#fig-qw-photolithography width="90%"}
 
-Photolithography was used to define eight channel regions on each device and subsequently to define metal contacts for each of these channels. A schematic demonstrating these photolithography processes on a quarter wafer is shown in @fig-qw-photolithography. Thermal evaporation was used when depositing chromium (Cr) and gold (Au), while electron beam evaporation was used when depositing titanium (Ti) and metal oxides (*e.g.* Al$_2$O$_3$). Metal and metal oxide deposition was performed using an Angstrom Engineering Nex Dep 200 evaporator
+Photolithography was used to define eight channel regions on each device and subsequently to define metal contacts for each of these channels. A schematic demonstrating these photolithography processes on a quarter wafer is shown in @fig-qw-photolithography. 
+
+Thermal evaporation was used when depositing chromium (Cr-plated tungsten rods,  Kurt J. Lesker) and gold (Au wire, 99.99%, Regal Castings Ltd.), while electron beam evaporation was used when depositing titanium (Ti pieces, 99.99%, Kurt J. Lesker) and metal oxides (*e.g.* Al$_2$O$_3$ pieces, 99.99%, Kurt J. Lesker). Metal and metal oxide deposition was performed using an Angstrom Engineering Nexdep 200 Vacuum Deposition System. Deposition thickness was controlled using an Inficon Deposition Controller and electron beam power was provided by a Telemark TT-6 power supply. For metals, the chamber was initially evacuated to a pressure $5 \times 10^{-6}$ mTorr, while for metal oxides the chamber was initially evacuated to a pressure below $1 \times 10^{-5}$ mTorr. After evaporation, the chamber was cooled and vented with nitrogen.
 
 Carbon nanotube devices were fabricated using the quarter wafer substrates discussed in @sec-dep-carbon-nanotubes. 
 
-Graphene devices were fabricated using 300 nm SiO$_2$/p-type Si substrates covered with a monolayer of mechanically transferred CVD graphene (Advanced Chemical Supplier). This substrate was cleaved into equal-sized square chips before photolithography, with side length between 11.6 - 11.7 mm subject to variability in wafer size. The same cleaving process outlined in @sec-dep-carbon-nanotubes was used for cleaving the chips, but the photoresist was not rinsed off after cleaving. Devices were exposed to a brief burst of N$_2$ gas to remove any dust from the cleaving process from the surface of devices. When not being used in photolithography, devices were stored in a vacuum desiccator to prevent the quality of the graphene deteriorating with exposure to air over time.
+Graphene devices were fabricated using 300 nm SiO$_2$/p-type Si substrates covered with a monolayer of mechanically transferred CVD graphene (Advanced Chemical Supplier). This substrate was cleaved into equal-sized square chips before photolithography, with side length between 11.6 - 11.7 mm, subject to variability in wafer size. The same cleaving process outlined in @sec-dep-carbon-nanotubes was used for cleaving the chips, but the photoresist was not rinsed off after cleaving. Devices were exposed to a brief burst of N$_2$ gas to remove any dust from the cleaving process from the surface of devices. When not being used in photolithography, devices were stored in a vacuum desiccator to prevent the quality of the graphene deteriorating with exposure to air over time.
 
-From Jul 2023 onwards, after each photolithography step, quarter wafers/chips were flood exposed to UV light for 1 min and then placed in AZ326 developer for 3 min to ensure complete removal of photoresist residue (discussed in @sec-fluorescence-characterisation). 
+::: {#fig-dmso-damage layout="[[47.5,-5,47.5]]"}
 
-### Alignment Markers
+![Damage to gold electrode in channel region after DMSO lift-off](figures/ch4/apr-21-dmso-damage.png){#fig-overcut-profile}
 
-Metal alignment markers were deposited in order to accurately align the device channels with device electrodes in subsequent photolithography steps.  For carbon nanotube quarter wafers, alignment markers were deposited either directly before or after carbon nanotube deposition (see @sec-dep-carbon-nanotubes for discussion). For graphene devices, alignment markers were deposited directly after cleaving using the protective photoresist layer spincoated prior to cleaving. AZ$^\circledR$ 1518 was used for thi
+![Damage to graphene after DMSO lift-off](figures/ch4/may-21-dmso-damage.png){#fig-undercut-profile}
+
+Lift-off with dimethyl sulfoxide sometimes led to damage to regions where nanomaterials were present. It is possible that sometimes residual photoresist on the nanomaterial was crosslinked during electrode deposition, and then during lift-off was removed aggressively alongside attached nanomaterial by the DMSO. However, it is also possible that prolonged exposure to DMSO alone was sufficient to detach nanomaterial from the substrate. Therefore, acetone was the preferred agent for lift-off despite being less efficient than DMSO.
+:::
+
+ Dimethyl sulfoxide (DMSO) was sometimes used in lift-off processes instead of acetone between Jul 2021 and Feb 2023 because of its effectiveness as a photoresist stripping agent. However, it was abandoned due to some indications it was too aggressive for the devices being fabricated, as shown in @fig-dmso-damage and also as detailed in @sec-AFM-characterisation. From Jul 2023 onwards, after each photolithography step, quarter wafers/chips were flood exposed to UV light for 1 min and then placed in AZ326 developer for 3 min to ensure complete removal of photoresist residue (discussed in @sec-fluorescence-characterisation).
+
+### Alignment Markers{#sec-align}
+
+Metal alignment markers were deposited in order to accurately align the device channels with device electrodes in subsequent photolithography steps. These alignment markers were asymmetric to indicate the orientation of the device for subsequent photolithography steps and electrical characteristation. In later discussion, channel 1 is defined as the channel placed closest to the large, double square alignment marker. For carbon nanotube quarter wafers, alignment markers were deposited either directly before or after carbon nanotube deposition (see @sec-dep-carbon-nanotubes for discussion). For graphene devices, alignment markers were deposited directly after cleaving using the protective photoresist layer spincoated prior to cleaving. AZ$^\circledR$ 1518 was used for alignment marker photolithography. 
+
+For carbon nanotube devices made before Jun 2022, chromium was used as an adhesive layer for gold, while for all graphene devices and carbon nanotube devices made after Jun 2022, titanium was used as the adhesive layer. For chromium/gold depositions, a nominal 10 nm of chromium  was deposited followed by a nominal 100 nm Au layer. For titanium/gold depositions, a nominal 20 nm of titanium was deposited followed by a nominal 50 nm Au layer (for independent measurements of metal layer thickness, see @sec-electrodes). Devices were then soaked in acetone for at least 2 hours for photoresist lift-off, washed in IPA and dried with nitrogen. The use of titanium gave rise to a cleaner lift-off and improved gold adhesion. A thinner gold layer (50 nm nominal instead of 100 nm) proved to still be clearly visible but used less gold in the deposition process and led to a cleaner lift-off.
 
 ### Channel Etching
 
-Each channel region was 1000 $\mu$m in length and 100 $\mu$m in width.
+Eight channel features, each 1000 $\mu$m in length and 100 $\mu$m in width with a pitch of 1200 $\mu$m between them, were patterned using AZ$^\circledR$ 1518 photolithography on each carbon nanotube or graphene-covered substrate. Unwanted nanomaterial not covered with photoresist was then etched away with 200 W oxygen plasma at 600 mTorr using a reactive ion etcher or RIE (Plasmalab$^\circledR$ 80 Plus, Oxford Instruments). The etch time was 3 minutes for carbon nanotube quarter wafers, and 1 minute for graphene chips. The protective photoresist was then removed by soaking in acetone for at least 5 minutes.
+
+### Electrodes{#sec-electrodes}
+
+The source and drain electrodes for each channel were patterned using photolithography with either AZ$^\circledR$ 1518 photoresist (pre-Mar 2023) or AZ$^\circledR$ nLOF 2020 photoresist (post-Mar 2023). As with the alignment markers deposition (see @sec-align), before Jun 2022 10 nm of chromium was used for the gold adhesive layer, and after Jun 2022 20 nm of titanium was used. Good electronic contact could be made with electrodes with a nominal gold layer thickness of 60-100 nm (see @sec-electrical-characterisation), and a Au layer nominally 100 nm thick was most commonly used.
+
+Although AZ$^\circledR$ nLOF 2020 photolithography was more complex, it gave rise to more cleanly-defined electrodes with a more consistent height profile.
+
+
+
+### Encapsulation
+
+#### Photoresist encapsulation {.unnumbered}
+
+#### Metal oxide (ceramic) encapsulation {.unnumbered}
+
 
 ##	Characterisation via Fluorescence Microscopy {#sec-fluorescence-characterisation}
 
 ##	Characterisation via Atomic Force Microscopy {#sec-AFM-characterisation}
+
+##	Electrical Characterisation {#sec-electrical-characterisation}
