@@ -45,20 +45,22 @@ Graphene devices were fabricated using 300 nm SiO$_2$/p-type Si substrates cover
 
 ::: {#fig-dmso-damage layout="[[47.5,-5,47.5]]"}
 
-![Damage to gold electrode in channel region after DMSO lift-off](figures/ch4/apr-21-dmso-damage.png){#fig-overcut-profile}
+![Damage to gold electrode in channel region after DMSO lift-off](figures/ch4/apr-21-dmso-damage.png){#fig-electrode-dmso-damage}
 
-![Damage to graphene after DMSO lift-off](figures/ch4/may-21-dmso-damage.png){#fig-undercut-profile}
+![Damage to graphene (blue region) after DMSO lift-off](figures/ch4/may-21-dmso-damage.png){#fig-graphene-dmso-damage}
 
-Lift-off with dimethyl sulfoxide sometimes led to damage to regions where nanomaterials were present. It is possible that sometimes residual photoresist on the nanomaterial was crosslinked during electrode deposition, and then during lift-off was removed aggressively alongside attached nanomaterial by the DMSO. However, it is also possible that prolonged exposure to DMSO alone was sufficient to detach nanomaterial from the substrate. Therefore, acetone was the preferred agent for lift-off despite being less efficient than DMSO.
+Lift-off with dimethyl sulfoxide sometimes led to damage to regions where nanomaterials were present.
 :::
 
- Dimethyl sulfoxide (DMSO) was sometimes used in lift-off processes instead of acetone between Jul 2021 and Feb 2023 because of its effectiveness as a photoresist stripping agent. However, it was abandoned due to some indications it was too aggressive for the devices being fabricated, as shown in @fig-dmso-damage and also as detailed in @sec-AFM-characterisation. From Jul 2023 onwards, after each photolithography step, quarter wafers/chips were flood exposed to UV light for 1 min and then placed in AZ326 developer for 3 min to ensure complete removal of photoresist residue (discussed in @sec-fluorescence-characterisation).
+ Dimethyl sulfoxide (DMSO) was sometimes used in lift-off processes instead of acetone between Jul 2021 and Feb 2023 because of its effectiveness as a photoresist stripping agent. However, it was abandoned due to some indications it was too aggressive for the devices being fabricated, as shown in @fig-dmso-damage and also as detailed in @sec-AFM-characterisation. It is possible that heat from the electrodes deposition sometimes crosslinked residual photoresist on the nanomaterial, and then during lift-off was removed aggressively together with any attached nanomaterial by the DMSO. However, it is also possible that prolonged exposure to DMSO alone was sufficient to detach nanomaterial from the substrate. Therefore, acetone was the preferred agent for lift-off despite being a less efficient stripping agent than DMSO. 
+ 
+ From Jul 2023 onwards, after each photolithography step, quarter wafers/chips were flood exposed to UV light for 1 min and then placed in AZ326 developer for 3 min to ensure complete removal of photoresist residue (discussed in @sec-fluorescence-characterisation).
 
 ### Alignment Markers{#sec-align}
 
 Metal alignment markers were deposited in order to accurately align the device channels with device electrodes in subsequent photolithography steps. These alignment markers were asymmetric to indicate the orientation of the device for subsequent photolithography steps and electrical characteristation. In later discussion, channel 1 is defined as the channel placed closest to the large, double square alignment marker. For carbon nanotube quarter wafers, alignment markers were deposited either directly before or after carbon nanotube deposition (see @sec-dep-carbon-nanotubes for discussion). For graphene devices, alignment markers were deposited directly after cleaving using the protective photoresist layer spincoated prior to cleaving. AZ$^\circledR$ 1518 was used for alignment marker photolithography. 
 
-For carbon nanotube devices made before Jun 2022, chromium was used as an adhesive layer for gold, while for all graphene devices and carbon nanotube devices made after Jun 2022, titanium was used as the adhesive layer. For chromium/gold depositions, a nominal 10 nm of chromium  was deposited followed by a nominal 100 nm Au layer. For titanium/gold depositions, a nominal 20 nm of titanium was deposited followed by a nominal 50 nm Au layer (for independent measurements of metal layer thickness, see @sec-electrodes). Devices were then soaked in acetone for at least 2 hours for photoresist lift-off, washed in IPA and dried with nitrogen. The use of titanium gave rise to a cleaner lift-off and improved gold adhesion. A thinner gold layer (50 nm nominal instead of 100 nm) proved to still be clearly visible but used less gold in the deposition process and led to a cleaner lift-off.
+For carbon nanotube devices made before Jun 2022, chromium was used as an adhesive layer for gold, while for all graphene devices and carbon nanotube devices made after Jun 2022, titanium was used as the adhesive layer. For chromium/gold depositions, a nominal 10 nm of chromium  was deposited followed by a nominal 100 nm Au layer. For titanium/gold depositions, a nominal 20 nm of titanium was deposited followed by a nominal 50 nm Au layer (for independent measurements of metal layer thickness, see @sec-electrodes). Devices were then soaked in acetone for at least 2 hours for photoresist lift-off, washed in IPA and dried with nitrogen. The use of titanium gave rise to a cleaner lift-off and improved gold adhesion. Using a relatively thin gold layer (50 nm nominal instead of 100 nm) proved to still be clearly visible but to a cleaner lift-off.
 
 ### Channel Etching
 
@@ -66,7 +68,16 @@ Eight channel features, each 1000 $\mu$m in length and 100 $\mu$m in width with 
 
 ### Electrodes{#sec-electrodes}
 
-The source and drain electrodes for each channel were patterned using photolithography with either AZ$^\circledR$ 1518 photoresist (pre-Mar 2023) or AZ$^\circledR$ nLOF 2020 photoresist (post-Mar 2023). As with the alignment markers deposition (see @sec-align), before Jun 2022 10 nm of chromium was used for the gold adhesive layer, and after Jun 2022 20 nm of titanium was used. Good electronic contact could be made with electrodes with a nominal gold layer thickness of 60-100 nm (see @sec-electrical-characterisation), and a Au layer nominally 100 nm thick was most commonly used.
+::: {#fig-dektat-sticking-layer layout="[[47.5,-5,47.5]]"}
+
+![](figures/ch4/){#fig-}
+
+![](figures/ch4/){#fig-}
+
+Dektat profiles of 
+:::
+
+The source and drain electrodes for each channel were patterned using photolithography with either AZ$^\circledR$ 1518 photoresist (pre-Mar 2023) or AZ$^\circledR$ nLOF 2020 photoresist (post-Mar 2023). As with the alignment markers deposition (see @sec-align), before Jun 2022 10 nm of chromium was used for the gold adhesive layer, and after Jun 2022 20 nm of titanium was used. Good electronic contact could be made with electrodes with a nominal gold layer thickness of 60-100 nm (see @sec-electrical-characterisation), and a Au layer nominally 100 nm thick was most commonly used. Example height profiles of a chromium sticking layer device and a titanium sticking layer device taking using a Veeco Dektat 150 profiler are shown in @fig-dektat-sticking-layer.
 
 Although AZ$^\circledR$ nLOF 2020 photolithography was more complex, it gave rise to more cleanly-defined electrodes with a more consistent height profile. Using a Veeco Dektat 150 profiler
 
