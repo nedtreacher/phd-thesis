@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, boxrule=0pt, breakable, interior hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners, enhanced]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, boxrule=0pt, interior hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable, frame hidden]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -352,6 +352,54 @@ Section~\ref{sec-AFM-characterisation}.
 \subsubsection*{Steam-Assisted Method}\label{steam-assisted-method}}
 \addcontentsline{toc}{subsubsection}{Steam-Assisted Method}
 
+\begin{figure}
+
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch4/steaming-method-top.png}
+
+}
+
+}
+
+\subcaption{\label{fig-steaming-method-top}Steaming method setup no lid}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch4/steaming-method-side.png}
+
+}
+
+}
+
+\subcaption{\label{fig-steaming-method-side}Steaming method setup with
+lid}
+\end{minipage}%
+
+\caption{\label{fig-steaming-method}Steaming method setup from top and
+side view.}
+
+\end{figure}
+
 2 mL of IsoNanotubes-S 90\% or 99\% solution (NanoIntegris) was decanted
 into a small bottle and burst-sonicated once (on then off again) to
 break up bundles of CNTs. 75 mL of 95\(^\circ\) C water was then placed
@@ -363,13 +411,16 @@ over the wafer edges. The wafer on the insulating surface and glass dish
 were then left under the same cover for 2 minutes to expose the wafer to
 steam from the glass dish. The use of an insulating surface meant that
 the wafer and CNT dispersion were not heated from below while exposed to
-steam. The CNT dispersion was then rinsed off the wafer with DI water,
-ethanol, acetone and IPA, and then the quarter wafer was dried with
-N\(_2\) gas. As in the original method, the quarter wafer was then
-annealed in a vacuum oven at 150\(^\circ\) C for 1 hour. This method
-gave an even spread of CNTs across the quarter wafer surface, leading to
-a greater consistency in performance between devices. Further details
-can be found in section Section~\ref{sec-AFM-characterisation}.
+steam. The steam-assisted deposition setup is shown in
+Figure~\ref{fig-steaming-method}.
+
+The CNT dispersion was then rinsed off the wafer with DI water, ethanol,
+acetone and IPA, and then the quarter wafer was dried with N\(_2\) gas.
+As in the original method, the quarter wafer was then annealed in a
+vacuum oven at 150\(^\circ\) C for 1 hour. This method gave an even
+spread of CNTs across the quarter wafer surface, leading to a greater
+consistency in performance between devices. Further details can be found
+in Section~\ref{sec-AFM-characterisation}.
 
 \hypertarget{photolithography-for-carbon-nanotube-and-graphene-field-effect-transistors}{%
 \section{Photolithography for Carbon Nanotube and Graphene Field-Effect
@@ -498,7 +549,7 @@ Metal alignment markers were deposited in order to accurately align the
 device channels with device electrodes in subsequent photolithography
 steps. These alignment markers were asymmetric to indicate the
 orientation of the device for subsequent photolithography steps and
-electrical characteristation. In later discussion, channel 1 is defined
+electrical characterisation. In later discussion, channel 1 is defined
 as the channel placed closest to the large, double square alignment
 marker.
 
@@ -514,7 +565,7 @@ an adhesive layer for gold, while for all graphene devices and carbon
 nanotube devices made after Jun 2022, titanium was used as the adhesive
 layer. For chromium/gold depositions, a nominal 10 nm of chromium was
 deposited followed by a nominal 100 nm Au layer. For titanium/gold
-depositions, a nominal 20 nm of titanium was deposited followed by a
+depositions, a nominal 10-20 nm of titanium was deposited followed by a
 nominal 50 nm Au layer (for independent measurements of metal layer
 thickness, see Section~\ref{sec-electrodes}). Devices were then soaked
 in acetone for at least 2 hours for photoresist lift-off, washed in IPA
@@ -525,6 +576,17 @@ to a cleaner lift-off.
 
 \hypertarget{channel-etching}{%
 \subsection{Channel Etching}\label{channel-etching}}
+
+Eight channel features, each 1000 \(\mu\)m in length and 100 \(\mu\)m in
+width with a pitch of 1200 \(\mu\)m, were patterned using
+AZ\(^\circledR\) 1518 photolithography on each carbon nanotube or
+graphene-covered substrate. Unwanted nanomaterial not covered with
+photoresist was then etched away with 200 W oxygen plasma at 600 mTorr
+using a reactive ion etcher or RIE (Plasmalab\(^\circledR\) 80 Plus,
+Oxford Instruments). The etch time was 3 minutes for carbon nanotube
+quarter wafers, and 1 minute for graphene chips. The protective
+photoresist was then removed by soaking in acetone for at least 5
+minutes.
 
 \begin{figure}
 
@@ -576,36 +638,94 @@ steps.}
 
 \end{figure}
 
-Eight channel features, each 1000 \(\mu\)m in length and 100 \(\mu\)m in
-width with a pitch of 1200 \(\mu\)m, were patterned using
-AZ\(^\circledR\) 1518 photolithography on each carbon nanotube or
-graphene-covered substrate. Unwanted nanomaterial not covered with
-photoresist was then etched away with 200 W oxygen plasma at 600 mTorr
-using a reactive ion etcher or RIE (Plasmalab\(^\circledR\) 80 Plus,
-Oxford Instruments). The etch time was 3 minutes for carbon nanotube
-quarter wafers, and 1 minute for graphene chips. The protective
-photoresist was then removed by soaking in acetone for at least 5
-minutes.
-
 \hypertarget{sec-electrodes}{%
 \subsection{Electrodes}\label{sec-electrodes}}
+
+\begin{figure}
+
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch4/dektat_ti_cr_profile_comparison.png}
+
+}
+
+}
+
+\subcaption{\label{fig-dektat-adhesion-layer}Adhesion layer dektat}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch4/graphene-channel-electrodes.png}
+
+}
+
+}
+
+\subcaption{\label{fig-dektat-photoresist-used}Graphene channel after
+photolithographically defined electrodes deposition and liftoff}
+\end{minipage}%
+
+\caption{\label{fig-electrodes-dektat}Dektat height profiles taken
+between the source and drain electrodes across a channel from various
+quarter wafers with electrodes deposited using different approaches. For
+each quarter wafer, the profiles of three different channels are shown,
+selected from different locations across the quarter wafer surface.}
+
+\end{figure}
 
 The source and drain electrodes for each channel were patterned using
 photolithography with either AZ\(^\circledR\) 1518 photoresist (pre-Mar
 2023) or AZ\(^\circledR\) nLOF 2020 photoresist (post-Mar 2023). As with
 the alignment markers deposition (see Section~\ref{sec-align}), before
-Jun 2022 10 nm of chromium was used for the gold adhesive layer, and
-after Jun 2022 20 nm of titanium was used. Good electronic contact could
-be made with electrodes with a nominal gold layer thickness of 60-100 nm
-(see Section~\ref{sec-electrical-characterisation}), and a Au layer
-nominally 100 nm thick was most commonly used. Example height profiles
-of a chromium sticking layer device and a titanium sticking layer device
-taking using a Veeco Dektat 150 profiler are shown in
-\textbf{?@fig-dektat-sticking-layer}.
+Jun 2022 chromium was used for the gold adhesive layer, and after Jun
+2022 titanium was used. A 20 nm nominal titanium layer instead of 10 nm
+nominal was found to give better electrode adhesion, and devices after
+Feb 2023 were made using this thicker adhesion layer. Good electronic
+contact could be made with electrodes with a nominal gold layer
+thickness of 60-100 nm (see
+Section~\ref{sec-electrical-characterisation}), and a Au layer nominally
+100 nm thick was most commonly used.
 
-Although AZ\(^\circledR\) nLOF 2020 photolithography was more complex,
-it gave rise to more cleanly-defined electrodes with a more consistent
-height profile. Using a Veeco Dektat 150 profiler
+Example height profiles of chromium layer channels and a titanium layer
+channels taken using a Veeco Dektat 150 profiler are shown in
+Figure~\ref{fig-dektat-adhesion-layer}. AZ\(^\circledR\) 1518
+photoresist was used for photolithographic patterning. A 10 nm adhesion
+layer and 100 nm Au layer were used for both depositions to ensure a
+consistent comparison. From Figure~\ref{fig-dektat-adhesion-layer}, we
+find an measured Cr/Au electrode height of \(42\pm1\) nm and an measured
+Ti/Au electrode height of \(48\pm2\) nm, slightly less than half the
+respective heights stated on the Inficon Deposition Controller.
+
+Although using AZ\(^\circledR\) nLOF 2020 photolithography involves more
+processing steps, it gave rise to more cleanly-defined electrodes with a
+more consistent height profile. Often electrodes deposition using
+AZ\(^\circledR\) 1518 photoresist would lead to sharp vertical spikes
+along the edge of the electrode. These edge spikes or ``cat ears'' could
+partially or fully protrude through thin encapsulation materials such as
+SU8 and Al\(_2\)O\(_3\), leading to significant leakage currents from
+the electrodes into the FET top gate. This effect is due to the profile
+of positive resists being suboptimal for lift-off processes, as
+discussed in Appendix~\ref{sec-photolithography}. Using a Veeco Dektat
+150 profiler
 
 \hypertarget{encapsulation}{%
 \subsection{Encapsulation}\label{encapsulation}}
@@ -1029,14 +1149,20 @@ are more thermally stable \autocite{Microchemicals}. Each resist
 therefore has a different cross-section profile, as shown in
 Figure~\ref{fig-photolithography-profiles}.
 
-The negative resist profile is more suited to metal or metal oxide
-deposition and lift-off processes \autocite{Microchemicals}, though the
-process is more sensitive to error due to the extrarequiring more
-processing steps than positive resist. Finally, when it is suitably
-processed SU-8 is considered to be more biocompatible than other
-photoresists. It is especially biocompatible when chemically modified
-via processes such as isopropanol sonication and O\(_2\) plasma
-treatment \autocite{Chen2021}.
+If metal deposition is performed on a positive resist, some metal can
+collect on the outwardly-sloped sidewalls of the resist (see
+Figure~\ref{fig-photolithography-profiles}) which forms significant
+spikes on the edges of the deposited metal upon lift-off. On the other
+hand, metal cannot collect on top of the inwardly-sloped negative
+profile sidewalls, which avoids the formation of edge spikes. Therefore,
+the negative resist profile is more suited to metal or metal oxide
+deposition and lift-off processes, though the process is more sensitive
+to human error due to requiring more processing steps than positive
+resist \autocite{Microchemicals}. Finally, when it is suitably processed
+SU-8 is considered to be more biocompatible than other photoresists. It
+is especially biocompatible when chemically modified via processes such
+as isopropanol sonication and O\(_2\) plasma treatment
+\autocite{Chen2021}.
 
 All photolithographic exposure was performed on a Karl Suss MJB3 Contact
 Aligner with a USHIO super-high pressure 350 W mercury lamp (USH-350DS,
