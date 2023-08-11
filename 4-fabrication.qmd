@@ -31,11 +31,11 @@ Two different approaches were used to attach the surfactant-dispersed CNTs. In b
 
 ::: {#fig-steaming-method layout="[[47.5,-5,47.5]]"}
 
-![Steaming method setup no lid](figures/ch4/steaming-method-top.png){#fig-steaming-method-top}
+![Steam method setup without steam cover](figures/ch4/steaming-method-top.png){#fig-steaming-method-top}
 
-![Steaming method setup with lid](figures/ch4/steaming-method-side.png){#fig-steaming-method-side}
+![Steam method setup with steam cover](figures/ch4/steaming-method-side.png){#fig-steaming-method-side}
 
-Steam-assisted method setup, top and side view.
+Photographs of steam-assisted method setup (top and side view).
 :::
 
 2 mL of IsoNanotubes-S 90% or 99% solution (NanoIntegris) was decanted into a small bottle and burst-sonicated once (on then off again) to break up bundles of CNTs. 75 mL of 95$^\circ$ C water was then placed into a glass dish on a hotplate held at 95$^\circ$ C. After this, the PLL-functionalised quarter wafer was placed in the centre of an insulating surface on the same hotplate. The CNT dispersion was carefully spread across the surface of the wafer without spilling any over the wafer edges. The wafer on the insulating surface and glass dish were then left under the same cover for 2 minutes to expose the wafer to steam from the glass dish. The use of an insulating surface meant that the wafer and CNT dispersion were not heated from below while exposed to steam. The steam-assisted deposition setup is shown in @fig-steaming-method.
@@ -92,20 +92,20 @@ Microscope images of a graphene channel after plasma etch and electrodes photoli
 
 ::: {#fig-electrodes-dektat layout="[[47.5,-5,47.5]]"}
 
-![Adhesion layer dektat](figures/ch4/dektat_ti_cr_profile_comparison.png){#fig-dektat-adhesion-layer}
+![Comparison of channel height profile for the different adhesion layers used](figures/ch4/dektat_ti_cr_profile_comparison.png){#fig-dektat-adhesion-layer}
 
-![Graphene channel after photolithographically defined electrodes deposition and liftoff](figures/ch4/graphene-channel-electrodes.png){#fig-dektat-photoresist-used}
+![Comparison of channel height profile for the different photoresist types used](figures/ch4/dektat_1518nlof_profile_comparison.png){#fig-dektat-photoresist-used}
 
 Dektat height profiles taken between the source and drain electrodes across a channel from various quarter wafers with electrodes deposited using different approaches. For each quarter wafer, the profiles of three different channels are shown, selected from different locations across the quarter wafer surface.
 :::
 
 The source and drain electrodes for each channel were patterned using photolithography with either AZ$^\circledR$ 1518 photoresist (pre-Mar 2023) or AZ$^\circledR$ nLOF 2020 photoresist (post-Mar 2023). As with the alignment markers deposition (see @sec-align), before Jun 2022 chromium was used for the gold adhesive layer, and after Jun 2022 titanium was used. A 20 nm nominal titanium layer instead of 10 nm nominal was found to give better electrode adhesion, and devices after Feb 2023 were made using this thicker adhesion layer.  Good electronic contact could be made with electrodes with a nominal gold layer thickness of 60-100 nm (see @sec-electrical-characterisation), and a Au layer nominally 100 nm thick was most commonly used. 
 
-Example height profiles of chromium layer channels and a titanium layer channels taken using a Veeco Dektat 150 profiler are shown in @fig-dektat-adhesion-layer. AZ$^\circledR$ 1518 photoresist was used for photolithographic patterning. A 10 nm adhesion layer and 100 nm Au layer were used for both depositions to ensure a consistent comparison. From @fig-dektat-adhesion-layer, we find an measured Cr/Au electrode height of $42\pm1$ nm and an measured Ti/Au electrode height of $48\pm2$ nm, slightly less than half the respective heights stated on the Inficon Deposition Controller.
+Example height profiles of chromium layer channels and a titanium layer channels taken using a Veeco Dektat 150 profiler are shown in @fig-dektat-adhesion-layer. AZ$^\circledR$ 1518 photoresist was used here for photolithographic patterning. A 10 nm adhesion layer and 100 nm Au layer were used for both depositions to ensure a consistent comparison. From @fig-dektat-adhesion-layer, we find an measured Cr/Au electrode height of $42\pm1$ nm and an measured Ti/Au electrode height of $48\pm2$ nm, slightly less than half the respective heights stated on the Inficon Deposition Controller.
 
-Although using AZ$^\circledR$ nLOF 2020 photolithography involves more processing steps, it gave rise to more cleanly-defined electrodes with a more consistent height profile. Often electrodes deposition using AZ$^\circledR$ 1518 photoresist would lead to sharp vertical spikes along the edge of the electrode. These edge spikes or "cat ears" could partially or fully protrude through thin encapsulation materials such as SU8 and Al$_2$O$_3$, leading to significant leakage currents from the electrodes into the FET top gate. This effect is due to the profile of positive resists being suboptimal for lift-off processes, as discussed in @sec-photolithography.  Using a Veeco Dektat 150 profiler
+Although using AZ$^\circledR$ nLOF 2020 photolithography involves more processing steps, it gave rise to more cleanly-defined electrodes with a more consistent height profile. Often electrodes deposition using AZ$^\circledR$ 1518 photoresist would lead to sharp vertical spikes along the edge of the electrode. These edge spikes or "cat ears" could partially or fully protrude through thin encapsulation materials such as SU8 and Al$_2$O$_3$, leading to significant leakage currents from the electrodes into the FET top gate. This effect is due to the profile of positive resists being suboptimal for lift-off processes, as discussed in @sec-photolithography.  
 
-
+The height profiles corresponding to a wafer with electrodes fabricated using AZ$^\circledR$ 1518 and to a wafer with electrodes fabricated using AZ$^\circledR$ nLOF 2020 are shown in @fig-dektat-photoresist-used. A 20 nm titanium adhesion layer and 100 nm Au layer were used for both depositions to ensure a consistent comparison, resulting in a electrode height of $103\pm2$ nm for both wafers. The wafer which used AZ$^\circledR$ nLOF 2020 photoresist clearly has a more consistent electrode height profile across the wafer surface than the wafer which used AZ$^\circledR$ 1518 resist. The measured edge features for the AZ$^\circledR$ 1518 resist electrodes vary in size from 20 nm to 450 nm above the bulk electrode surface, whereas the edge features for the AZ$^\circledR$ nLOF 2020 resist do not exceed 14 nm in height.
 
 ### Encapsulation
 
