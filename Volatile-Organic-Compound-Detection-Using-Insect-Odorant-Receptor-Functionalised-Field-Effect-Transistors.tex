@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, sharp corners, frame hidden, interior hidden, enhanced]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners, boxrule=0pt, enhanced, breakable, interior hidden]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -191,7 +191,7 @@ Functionalised Field-Effect Transistors}
 \markboth{Acknowledgements}{Acknowledgements}
 
 \begin{verbatim}
-59265
+69577
 \end{verbatim}
 
 Rifat, Alex - vapour sensor Erica Cassie - FET sensing setup Rob Keyzers
@@ -271,15 +271,15 @@ Transducers}\label{carbon-nanotube-networks-graphene-as-biosensing-transducers}}
 \hypertarget{sensor-functionalisation}{%
 \subsection{Sensor Functionalisation}\label{sensor-functionalisation}}
 
-\hypertarget{sensing-methods}{%
-\subsection{Sensing Methods}\label{sensing-methods}}
+\hypertarget{sec-biosensor-methods}{%
+\subsection{Sensing Methods}\label{sec-biosensor-methods}}
 
-\hypertarget{sec-biosensor-aqueous}{%
-\subsubsection*{Aqueous Environment}\label{sec-biosensor-aqueous}}
+\hypertarget{aqueous-environment}{%
+\subsubsection*{Aqueous Environment}\label{aqueous-environment}}
 \addcontentsline{toc}{subsubsection}{Aqueous Environment}
 
-\hypertarget{sec-biosensor-vapour}{%
-\subsubsection*{Vapour Environment}\label{sec-biosensor-vapour}}
+\hypertarget{vapour-environment}{%
+\subsubsection*{Vapour Environment}\label{vapour-environment}}
 \addcontentsline{toc}{subsubsection}{Vapour Environment}
 
 \hypertarget{insect-odorant-receptors}{%
@@ -798,19 +798,28 @@ AZ\(^\circledR\) nLOF 2020 resist do not exceed 14 nm in height.
 
 Several different approaches were used for the encapsulation, or contact
 protection, of devices. The encapsulation of graphene and
-carbon-nanotube transistors for biosensing is essential \ldots{} as
-discussed in \textbf{?@sec-biosensor-aqueous}.
+carbon-nanotube transistors for biosensing is essential to passivate the
+electrodes and ensure only the nanomaterial region is active during
+biosensing, as discussed in Section~\ref{sec-biosensor-methods}.
+
+Before encapsulation photolithography the carbon-nanotube network
+quarter wafers were cleaved into individual 12 mm x 12 mm chips, using
+the cleaving process outlined in Section~\ref{sec-dep-carbon-nanotubes}.
+Cleaving the devices at this step simplified mask alignment and ensured
+consistent thickness across photoresist encapsulated devices.
 
 \hypertarget{photoresist-encapsulation}{%
 \subsubsection*{Photoresist
 encapsulation}\label{photoresist-encapsulation}}
 \addcontentsline{toc}{subsubsection}{Photoresist encapsulation}
 
-\hypertarget{metal-oxide-ceramic-encapsulation}{%
-\subsubsection*{Metal oxide (ceramic)
-encapsulation}\label{metal-oxide-ceramic-encapsulation}}
-\addcontentsline{toc}{subsubsection}{Metal oxide (ceramic)
-encapsulation}
+Two types of photoresist were trialled for encapsulation,
+AZ\(^\circledR\) 1518 and SU8-2150.
+
+\hypertarget{dielectric-encapsulation}{%
+\subsubsection*{Dielectric
+encapsulation}\label{dielectric-encapsulation}}
+\addcontentsline{toc}{subsubsection}{Dielectric encapsulation}
 
 \hypertarget{sec-fluorescence-characterisation}{%
 \section{Characterisation via Fluorescence
