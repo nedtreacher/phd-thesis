@@ -5,7 +5,6 @@ format: pdf
 
 ```{python}
 import re
-import shutil
 
 # Dictionary to map month abbreviations to numbers
 month_mapping = {
@@ -27,17 +26,22 @@ month_mapping = {
 with open("references.bib", "r", encoding="utf-8") as file:
     bib_content = file.read()
 
-# Replace month abbreviations with numbers using regex
-for month_abbrev, month_number in month_mapping.items():
-    pattern = f'\\b{month_abbrev}\\b'
-    replacement = month_number
-    bib_content = re.sub(pattern, replacement, bib_content, flags=re.IGNORECASE)
+# Replace month abbreviations with numbers using a single regex
+pattern_month = r'month\s*=\s*{([a-z]+)},'
+def replace_month(match):
+    month_abbrev = match.group(1)
+    month_number = month_mapping.get(month_abbrev, month_abbrev)
+    return f'month = {{{month_number}}},'
+
+modified_content = re.sub(pattern_month, replace_month, bib_content, flags=re.IGNORECASE)
+
+# Replace "%" with "\%" when not preceded by a backslash
+modified_content = re.sub(r'(?<!\\)%', r'\\%', modified_content)
 
 # Write the modified content back to the original .bib file with UTF-8 encoding
 with open("references.bib", "w", encoding="utf-8") as file:
-    file.write(bib_content)
+    file.write(modified_content)
 ```
-
 
 # Fabrication of Carbon Nanotube Network and Graphene Field-Effect Transistors {#sec-fabrication}
 
@@ -135,9 +139,7 @@ Microscope images of a graphene channel after plasma etch and electrodes photoli
 Dektat height profiles taken between the source and drain electrodes across a channel from various quarter wafers with electrodes deposited using different approaches. For each quarter wafer, the profiles of three different channels are shown, selected from different locations across the quarter wafer surface.
 :::
 
-The source and drain electrodes for each channel were patterned using photolithography with either AZ$^\circledR$ 1518 photoresist (pre-Mar 2023) or AZ$^\circledR$ nLOF 2020 photoresist (post-Mar 2023). To ensure the patterned areas were clean of photoresist after development, they were exposed to O$_2$ plasma at 50 W for 2-5 s or at 20 W for 25 s in the PE-50 plasma cleaner (Plasma Etch, Inc.) directly before being loaded into the thermal evaporator. 
-
-As with the alignment markers deposition (see @sec-align), before Jun 2022 chromium was used for the gold adhesive layer, and after Jun 2022 titanium was used. A 20 nm nominal titanium layer instead of 10 nm nominal was found to give better electrode adhesion, and devices after Feb 2023 were made using this thicker adhesion layer.  Good electronic contact could be made with electrodes with a nominal gold layer thickness of 60-100 nm (see @sec-electrical-characterisation), and a Au layer nominally 100 nm thick was most commonly used. 
+The source and drain electrodes for each channel were patterned using photolithography with either AZ$^\circledR$ 1518 photoresist (pre-Mar 2023) or AZ$^\circledR$ nLOF 2020 photoresist (post-Mar 2023). As with the alignment markers deposition (see @sec-align), before Jun 2022 chromium was used for the gold adhesive layer, and after Jun 2022 titanium was used. A 20 nm nominal titanium layer instead of 10 nm nominal was found to give better electrode adhesion, and devices after Feb 2023 were made using this thicker adhesion layer.  Good electronic contact could be made with electrodes with a nominal gold layer thickness of 60-100 nm (see @sec-electrical-characterisation), and a Au layer nominally 100 nm thick was most commonly used. 
 
 Example height profiles of chromium layer channels and a titanium layer channels taken using a Veeco Dektat 150 profiler are shown in @fig-dektat-adhesion-layer. AZ$^\circledR$ 1518 photoresist was used here for photolithographic patterning. A 10 nm adhesion layer and 100 nm Au layer were used for both depositions to ensure a consistent comparison. From @fig-dektat-adhesion-layer, we find an measured Cr/Au electrode height of $42\pm1$ nm and an measured Ti/Au electrode height of $48\pm2$ nm, slightly less than half the respective heights stated on the Inficon Deposition Controller.
 
