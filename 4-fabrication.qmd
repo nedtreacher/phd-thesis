@@ -149,18 +149,35 @@ The height profiles corresponding to a wafer with electrodes fabricated using AZ
 
 ### Encapsulation
 
-Several different approaches were used for the encapsulation, or contact protection, of devices. The encapsulation of graphene and carbon-nanotube transistors for biosensing is essential to passivate the electrodes and ensure only the nanomaterial region is active during biosensing, as discussed in @sec-biosensor-methods.
+Several different approaches were used for the encapsulation, or contact protection, of devices. The encapsulation of graphene and carbon-nanotube transistors for biosensing is essential to improve transistor characteristics, passivate the electrodes and ensure only the nanomaterial region is active during biosensing, as discussed in @sec-biosensor-methods.
 
 Before encapsulation photolithography the carbon-nanotube network quarter wafers were cleaved into individual 12 mm x 12 mm chips, using the cleaving process outlined in @sec-dep-carbon-nanotubes. Cleaving the devices at this step simplified mask alignment and ensured consistent thickness across photoresist encapsulated devices.
 
+::: {#fig-microscope-encapsulation layout="[[47.5,-5,47.5]]"}
+
+![Old mask](figures/ch4/encapsulation_old.png){#fig-encapsulation-old}
+
+![New mask](figures/ch4/encapsulation_new.png){#fig-encapsulation-new}
+
+Microscope images of a a carbon nanotube devices after encapsulation photolithography with hardbaked AZ$^\circledR$ 1518.
+:::
+
+New different photolithography masks were used for encapsulation photolithography in this work, with different exposed areas of active nanomaterial. The first mask was used for devices made before Jan 2023, and the second mask was used exclusively after Jan 2023.
+
 #### Photoresist encapsulation {.unnumbered}
 
-Two types of photoresist were trialled for encapsulation, AZ$^\circledR$ 1518 and SU8-2150. 
+Two types of photoresist were initially trialled for encapsulation, AZ$^\circledR$ 1518 and SU8-2150. Both AZ$^\circledR$ 1518 [@Thanihaichelvan2018; @Thanihaichelvan2019; @Shkodra2021] and SU-8 have been previously used for device encapsulation, with SU-8 noted for being particularly stable and biocompatible [@Lee2006; @Chen2021; @Albarghouthi2022]. A much thinner coating was achievable with SU-8 (see @)
 
 #### Dielectric encapsulation {.unnumbered}
 
 
 ##	Characterisation via Fluorescence Microscopy {#sec-fluorescence-characterisation}
+
+### Electrodes only
+
+### Encapsulated devices
+
+
 
 ##	Characterisation via Atomic Force Microscopy {#sec-AFM-characterisation}
 
