@@ -82,6 +82,8 @@ Photographs of steam-assisted method setup (top and side view).
 
 The CNT dispersion was then rinsed off the wafer with DI water, ethanol, acetone and IPA, and then the quarter wafer was dried with N$_2$ gas. As in the original method, the quarter wafer was then annealed in a vacuum oven at 150$^\circ$ C for 1 hour. This method gave an even spread of CNTs across the quarter wafer surface, leading to a greater consistency in performance between devices. Further details can be found in @sec-AFM-characterisation.
 
+##	Characterisation via Atomic Force Microscopy {#sec-AFM-characterisation}
+
 ## Photolithography for Carbon Nanotube and Graphene Field-Effect Transistors
 
 ![The photolithographic processes used for fabrication of both carbon nanotube and graphene devices (graphene devices were fabricated individually for every step, step #2 skipped for graphene devices)](figures/ch4/photolithography-cycle.png){#fig-qw-photolithography width="90%"}
@@ -139,7 +141,9 @@ Microscope images of a graphene channel after plasma etch and electrodes photoli
 Dektat height profiles taken between the source and drain electrodes across a channel from various quarter wafers with electrodes deposited using different approaches. For each quarter wafer, the profiles of three different channels are shown, selected from different locations across the quarter wafer surface.
 :::
 
-The source and drain electrodes for each channel were patterned using photolithography with either AZ$^\circledR$ 1518 photoresist (pre-Mar 2023) or AZ$^\circledR$ nLOF 2020 photoresist (post-Mar 2023). As with the alignment markers deposition (see @sec-align), before Jun 2022 chromium was used for the gold adhesive layer, and after Jun 2022 titanium was used. A 20 nm nominal titanium layer instead of 10 nm nominal was found to give better electrode adhesion, and devices after Feb 2023 were made using this thicker adhesion layer.  Good electronic contact could be made with electrodes with a nominal gold layer thickness of 60-100 nm (see @sec-electrical-characterisation), and a Au layer nominally 100 nm thick was most commonly used. 
+The source and drain electrodes for each channel were patterned using photolithography with either AZ$^\circledR$ 1518 photoresist (pre-Mar 2023) or AZ$^\circledR$ nLOF 2020 photoresist (post-Mar 2023). Before metal deposition, the developed photoresist pattern was exposed to O$_2$ plasma at 50 W for at least 2-5 s or at 20 W for 25 s in a PE-50 plasma cleaner (Plasma Etch, Inc.) to remove residual photoresist on the developed regions.
+
+As with the alignment markers deposition (see @sec-align), before Jun 2022 chromium was used for the gold adhesive layer, and after Jun 2022 titanium was used. A 20 nm nominal titanium layer instead of 10 nm nominal was found to give better electrode adhesion, and devices after Feb 2023 were made using this thicker adhesion layer.  Good electronic contact could be made with electrodes with a nominal gold layer thickness of 60-100 nm (see @sec-electrical-characterisation), and a Au layer nominally 100 nm thick was most commonly used. 
 
 Example height profiles of chromium layer channels and a titanium layer channels taken using a Veeco Dektat 150 profiler are shown in @fig-dektat-adhesion-layer. AZ$^\circledR$ 1518 photoresist was used here for photolithographic patterning. A 10 nm adhesion layer and 100 nm Au layer were used for both depositions to ensure a consistent comparison. From @fig-dektat-adhesion-layer, we find an measured Cr/Au electrode height of $42\pm1$ nm and an measured Ti/Au electrode height of $48\pm2$ nm, slightly less than half the respective heights stated on the Inficon Deposition Controller.
 
@@ -155,18 +159,27 @@ Before encapsulation photolithography the carbon-nanotube network quarter wafers
 
 ::: {#fig-microscope-encapsulation layout="[[47.5,-5,47.5]]"}
 
-![Old mask](figures/ch4/encapsulation_old.png){#fig-encapsulation-old}
+![Encapsulation with AZ$^\circledR$ 1518 using pre-2023 mask](figures/ch4/encapsulation_old.png){#fig-encapsulation-old}
 
-![New mask](figures/ch4/encapsulation_new.png){#fig-encapsulation-new}
+![Encapsulation with AZ$^\circledR$ 1518 using 2023 mask](figures/ch4/encapsulation_new.png){#fig-encapsulation-new}
 
-Microscope images of a a carbon nanotube devices after encapsulation photolithography with hardbaked AZ$^\circledR$ 1518.
+Microscope images of carbon nanotube devices after encapsulation photolithography with hardbaked AZ$^\circledR$ 1518.
 :::
 
-New different photolithography masks were used for encapsulation photolithography in this work, with different exposed areas of active nanomaterial. The first mask was used for devices made before Jan 2023, and the second mask was used exclusively after Jan 2023.
+::: {#fig-dektat-encapsulation layout="[[47.5,-5,47.5]]"}
+
+![AZ$^\circledR$ 1518 profile comparing pre-2023 mask and 2023 mask](figures/ch4/dektat_oldnewmask_profile_comparison.png.png){#fig-old-new-mask}
+
+![Encapsulation with AZ$^\circledR$ 1518 using 2023 mask](figures/ch4/encapsulation_new.png){#fig-encapsulation-new}
+
+Dektat of carbon nanotube devices after encapsulation photolithography using hardbaked AZ$^\circledR$ 1518 and SU-8 2150.
+:::
+
+New different photolithography masks were used for encapsulation photolithography in this work, with different exposed areas of active nanomaterial. The first mask was used for devices made before Jan 2023, and was designed to leave a region of 500 $\mu$m x 10 $\mu$m unencapsulated for each channel. The second mask was used exclusively after Jan 2023, and was designed to leave a region of 200 $\mu$m x 20 $\mu$m unencapsulated for each channel. This change was made to double the area of carbon nanotubes exposed to electrolyte while halving the area of SiO$_2$ dielectric exposed to electrolyte during aqueous sensing. A side-by-side microscope comparison of hardbaked AZ$^\circledR$ 1518 processed with each mask is given in @fig-microscope-encapsulation, while a Dektat profile comparison is given in
 
 #### Photoresist encapsulation {.unnumbered}
 
-Two types of photoresist were initially trialled for encapsulation, AZ$^\circledR$ 1518 and SU8-2150. Both AZ$^\circledR$ 1518 [@Thanihaichelvan2018; @Thanihaichelvan2019; @Shkodra2021] and SU-8 have been previously used for device encapsulation, with SU-8 noted for being particularly stable and biocompatible [@Lee2006; @Chen2021; @Albarghouthi2022]. A much thinner coating was achievable with SU-8 (see @)
+Two types of photoresist were initially trialled for encapsulation, AZ$^\circledR$ 1518 and SU8-2150. Both AZ$^\circledR$ 1518 [@Thanihaichelvan2018; @Thanihaichelvan2019; @Shkodra2021] and SU-8 have been previously used for device encapsulation, with SU-8 noted for being particularly stable and biocompatible [@Lee2006; @Chen2021; @Albarghouthi2022]. A much thinner coating was achievable with SU-8, as shown in 
 
 #### Dielectric encapsulation {.unnumbered}
 
@@ -177,8 +190,5 @@ Two types of photoresist were initially trialled for encapsulation, AZ$^\circled
 
 ### Encapsulated devices
 
-
-
-##	Characterisation via Atomic Force Microscopy {#sec-AFM-characterisation}
 
 ##	Electrical Characterisation {#sec-electrical-characterisation}

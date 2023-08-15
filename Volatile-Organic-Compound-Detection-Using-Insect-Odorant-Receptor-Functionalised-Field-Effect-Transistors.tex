@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, borderline west={3pt}{0pt}{shadecolor}, sharp corners, breakable, interior hidden, boxrule=0pt, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, enhanced, frame hidden, sharp corners, interior hidden, breakable]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -793,9 +793,10 @@ AZ\(^\circledR\) nLOF 2020 resist do not exceed 14 nm in height.
 
 Several different approaches were used for the encapsulation, or contact
 protection, of devices. The encapsulation of graphene and
-carbon-nanotube transistors for biosensing is essential to passivate the
-electrodes and ensure only the nanomaterial region is active during
-biosensing, as discussed in Section~\ref{sec-biosensor-methods}.
+carbon-nanotube transistors for biosensing is essential to improve
+transistor characteristics, passivate the electrodes and ensure only the
+nanomaterial region is active during biosensing, as discussed in
+Section~\ref{sec-biosensor-methods}.
 
 Before encapsulation photolithography the carbon-nanotube network
 quarter wafers were cleaved into individual 12 mm x 12 mm chips, using
@@ -803,13 +804,81 @@ the cleaving process outlined in Section~\ref{sec-dep-carbon-nanotubes}.
 Cleaving the devices at this step simplified mask alignment and ensured
 consistent thickness across photoresist encapsulated devices.
 
+\begin{figure}
+
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch4/encapsulation_old.png}
+
+}
+
+}
+
+\subcaption{\label{fig-encapsulation-old}Encapsulation with
+AZ\(^\circledR\) 1518 using pre-2023 mask}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch4/encapsulation_new.png}
+
+}
+
+}
+
+\subcaption{\label{fig-encapsulation-new}Encapsulation with
+AZ\(^\circledR\) 1518 using 2023 mask}
+\end{minipage}%
+
+\caption{\label{fig-microscope-encapsulation}Microscope images of carbon
+nanotube devices after encapsulation photolithography with hardbaked
+AZ\(^\circledR\) 1518.}
+
+\end{figure}
+
+New different photolithography masks were used for encapsulation
+photolithography in this work, with different exposed areas of active
+nanomaterial. The first mask was used for devices made before Jan 2023,
+and had an unencapsulated region of 500 \(\mu\)m x 10 \(\mu\)m for each
+channel. The second mask was used exclusively after Jan 2023, and had an
+unencapsulated region of 200 \(\mu\)m x 20 \(\mu\)m for each channel.
+This change was made to double the area of carbon nanotubes exposed to
+electrolyte while halving the area of SiO\(_2\) dielectric exposed to
+electrolyte during aqueous sensing. A side-by-side microscope comparison
+of hardbaked AZ\(^\circledR\) 1518 processed with each mask is given in
+Figure~\ref{fig-microscope-encapsulation}, while a Dektat profile
+comparison is given in
+
 \hypertarget{photoresist-encapsulation}{%
 \subsubsection*{Photoresist
 encapsulation}\label{photoresist-encapsulation}}
 \addcontentsline{toc}{subsubsection}{Photoresist encapsulation}
 
-Two types of photoresist were trialled for encapsulation,
-AZ\(^\circledR\) 1518 and SU8-2150.
+Two types of photoresist were initially trialled for encapsulation,
+AZ\(^\circledR\) 1518 and SU8-2150. Both AZ\(^\circledR\) 1518
+\autocite{Thanihaichelvan2018,Thanihaichelvan2019,Shkodra2021} and SU-8
+have been previously used for device encapsulation, with SU-8 noted for
+being particularly stable and biocompatible
+\autocite{Lee2006,Chen2021,Albarghouthi2022}. A much thinner coating was
+achievable with SU-8 (see )
 
 \hypertarget{dielectric-encapsulation}{%
 \subsubsection*{Dielectric
@@ -819,6 +888,12 @@ encapsulation}\label{dielectric-encapsulation}}
 \hypertarget{sec-fluorescence-characterisation}{%
 \section{Characterisation via Fluorescence
 Microscopy}\label{sec-fluorescence-characterisation}}
+
+\hypertarget{electrodes-only}{%
+\subsection{Electrodes only}\label{electrodes-only}}
+
+\hypertarget{encapsulated-devices}{%
+\subsection{Encapsulated devices}\label{encapsulated-devices}}
 
 \hypertarget{sec-AFM-characterisation}{%
 \section{Characterisation via Atomic Force
@@ -1060,8 +1135,8 @@ DMSO & CNTs & 10 & - & 1 & DI water & Lopez \textit{et al.}
 
 \bookmarksetup{startatroot}
 
-\hypertarget{results}{%
-\chapter{Results}\label{results}}
+\hypertarget{aqueous-sensing}{%
+\chapter{Aqueous sensing}\label{aqueous-sensing}}
 
 What I found out.
 
