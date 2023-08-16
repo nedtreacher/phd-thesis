@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, enhanced, frame hidden, sharp corners, interior hidden, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable, boxrule=0pt, sharp corners, frame hidden]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -468,6 +468,10 @@ spread of CNTs across the quarter wafer surface, leading to a greater
 consistency in performance between devices. Further details can be found
 in Section~\ref{sec-AFM-characterisation}.
 
+\hypertarget{sec-AFM-characterisation}{%
+\section{Characterisation via Atomic Force
+Microscopy}\label{sec-AFM-characterisation}}
+
 \hypertarget{photolithography-for-carbon-nanotube-and-graphene-field-effect-transistors}{%
 \section{Photolithography for Carbon Nanotube and Graphene Field-Effect
 Transistors}\label{photolithography-for-carbon-nanotube-and-graphene-field-effect-transistors}}
@@ -741,14 +745,19 @@ selected from different locations across the quarter wafer surface.}
 
 The source and drain electrodes for each channel were patterned using
 photolithography with either AZ\(^\circledR\) 1518 photoresist (pre-Mar
-2023) or AZ\(^\circledR\) nLOF 2020 photoresist (post-Mar 2023). As with
-the alignment markers deposition (see Section~\ref{sec-align}), before
-Jun 2022 chromium was used for the gold adhesive layer, and after Jun
-2022 titanium was used. A 20 nm nominal titanium layer instead of 10 nm
-nominal was found to give better electrode adhesion, and devices after
-Feb 2023 were made using this thicker adhesion layer. Good electronic
-contact could be made with electrodes with a nominal gold layer
-thickness of 60-100 nm (see
+2023) or AZ\(^\circledR\) nLOF 2020 photoresist (post-Mar 2023). Before
+metal deposition, the developed photoresist pattern was exposed to
+O\(_2\) plasma at 50 W for at least 2-5 s or at 20 W for 20-25 s in a
+PE-50 plasma cleaner (Plasma Etch, Inc.) to remove residual photoresist
+on the developed regions and ensure a clean lift-off.
+
+As with the alignment markers deposition (see Section~\ref{sec-align}),
+before Jun 2022 chromium was used for the gold adhesive layer, and after
+Jun 2022 titanium was used. A 20 nm nominal titanium layer instead of 10
+nm nominal was found to give better electrode adhesion, and devices
+after Feb 2023 were made using this thicker adhesion layer. Good
+electronic contact could be made with electrodes with a nominal gold
+layer thickness of 60-100 nm (see
 Section~\ref{sec-electrical-characterisation}), and a Au layer nominally
 100 nm thick was most commonly used.
 
@@ -854,23 +863,75 @@ AZ\(^\circledR\) 1518.}
 
 \end{figure}
 
-New different photolithography masks were used for encapsulation
+Two different photolithography masks were used for encapsulation
 photolithography in this work, with different exposed areas of active
 nanomaterial. The first mask was used for devices made before Jan 2023,
-and had an unencapsulated region of 500 \(\mu\)m x 10 \(\mu\)m for each
-channel. The second mask was used exclusively after Jan 2023, and had an
-unencapsulated region of 200 \(\mu\)m x 20 \(\mu\)m for each channel.
-This change was made to double the area of carbon nanotubes exposed to
-electrolyte while halving the area of SiO\(_2\) dielectric exposed to
-electrolyte during aqueous sensing. A side-by-side microscope comparison
-of hardbaked AZ\(^\circledR\) 1518 processed with each mask is given in
+and was designed to leave a region of 500 \(\mu\)m x 10 \(\mu\)m
+unencapsulated for each channel. The second mask was used exclusively
+after Jan 2023, and was designed to leave a region of 200 \(\mu\)m x 20
+\(\mu\)m unencapsulated for each channel. This change was made to double
+the area of carbon nanotubes exposed to electrolyte while halving the
+area of SiO\(_2\) dielectric exposed to electrolyte during aqueous
+sensing. A side-by-side microscope comparison of hardbaked
+AZ\(^\circledR\) 1518 processed with each mask is given in
 Figure~\ref{fig-microscope-encapsulation}, while a Dektat profile
-comparison is given in
+comparison is shown in Figure~\ref{fig-old-new-mask}.
 
 \hypertarget{photoresist-encapsulation}{%
 \subsubsection*{Photoresist
 encapsulation}\label{photoresist-encapsulation}}
 \addcontentsline{toc}{subsubsection}{Photoresist encapsulation}
+
+\begin{figure}
+
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch4/dektat_oldnewmask_profile_comparison.png}
+
+}
+
+}
+
+\subcaption{\label{fig-old-new-mask}AZ\(^\circledR\) 1518 profile
+comparing pre-2023 mask and mask used from 2023 onwards}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch4/dektat_1518SU8_profile_comparison.png}
+
+}
+
+}
+
+\subcaption{\label{fig-1518-SU8-encapsulation}Comparing photoresist
+encapsulation with AZ\(^\circledR\) 1518 and SU8-2150 (using pre-2023
+mask)}
+\end{minipage}%
+
+\caption{\label{fig-dektat-encapsulation}Dektat of carbon nanotube
+devices after encapsulation photolithography using hardbaked
+AZ\(^\circledR\) 1518 and SU-8 2150.}
+
+\end{figure}
 
 Two types of photoresist were initially trialled for encapsulation,
 AZ\(^\circledR\) 1518 and SU8-2150. Both AZ\(^\circledR\) 1518
@@ -878,7 +939,8 @@ AZ\(^\circledR\) 1518 and SU8-2150. Both AZ\(^\circledR\) 1518
 have been previously used for device encapsulation, with SU-8 noted for
 being particularly stable and biocompatible
 \autocite{Lee2006,Chen2021,Albarghouthi2022}. A much thinner coating was
-achievable with SU-8 (see )
+achievable with SU-8, as shown in
+Figure~\ref{fig-1518-SU8-encapsulation}.
 
 \hypertarget{dielectric-encapsulation}{%
 \subsubsection*{Dielectric
@@ -894,10 +956,6 @@ Microscopy}\label{sec-fluorescence-characterisation}}
 
 \hypertarget{encapsulated-devices}{%
 \subsection{Encapsulated devices}\label{encapsulated-devices}}
-
-\hypertarget{sec-AFM-characterisation}{%
-\section{Characterisation via Atomic Force
-Microscopy}\label{sec-AFM-characterisation}}
 
 \hypertarget{sec-electrical-characterisation}{%
 \section{Electrical
