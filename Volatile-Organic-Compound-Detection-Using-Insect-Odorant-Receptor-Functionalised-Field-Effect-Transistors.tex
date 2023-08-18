@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, frame hidden, enhanced, sharp corners, interior hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, sharp corners, borderline west={3pt}{0pt}{shadecolor}, frame hidden, boxrule=0pt, interior hidden, breakable]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -1107,14 +1107,14 @@ Microscopy}\label{sec-afm-characterisation}}
 
 Atomic force microscopy in this thesis was taken using a Nanosurf
 NaioAFM in dynamic force mode. Atomic force microscope (AFM) images
-could not be taken from the small channel region on the devices
-themselves, so were instead taken on a representative carbon nanotube or
-graphene film sample fabricated on the same wafer as the device being
-tested. Moisture adversely affected the AFM imaging process. Therefore,
-films functionalised with biological materials were washed with DI water
-and gently dried with N\(_2\) before atomic force microscope images were
-taken. The open source data analysis software Gwyddion (version 2.59)
-was used to analyse AFM images.
+could not be taken from the small exposed channel region on the
+encapsulated devices, so were instead taken on a representative carbon
+nanotube or graphene film sample fabricated on the same wafer as the
+device being tested. Moisture adversely affected the AFM imaging
+process. Therefore, films functionalised with biological materials were
+washed with DI water and gently dried with N\(_2\) before atomic force
+microscope images were taken. The open source data analysis software
+Gwyddion (version 2.59) was used to analyse AFM images.
 
 \hypertarget{sec-fluorescence-characterisation}{%
 \section{Characterisation via Fluorescence
@@ -1180,13 +1180,22 @@ measurements, a Rucker and Kolls with micromanipulators was used to
 contact the devices; when using the National Instruments NI-PXIe for
 liquid-gated measurements, a custom-made chip carrier with
 spring-loaded, pointed-tip, gold-coated pogo pins was used. Ag/AgCl
-standard electrodes were used as the liquid-gate electrode.
+standard electrodes were used as the liquid-gate electrode. The
+electrode was submerged in 80 \(\mu\)L of PBS buffer in a
+polydimethylsiloxane (PDMS) well with outer dimensions of 12 mm x 6 mm x
+6 mm.
 
 The Keysight 4156C Semiconductor Parameter Analyser and Keysight B1500A
 Semiconductor Device Analyser were also used for back-gated measurements
 of devices within the vapour delivery system device chamber. This
 chamber acted as a Faraday cage for another custom-made chip carrier
 with spring-loaded gold-coated pogo pins.
+
+Custom programs for National Instruments LabView 2017 were used for
+measurements from the Keysight 4156C Semiconductor Parameter Analyser
+and the National Instruments NI-PXIe. Keysight EasyEXPERT software was
+used for characterisation with the Keysight B1500A Semiconductor Device
+Analyser.
 
 Liquid-gated transfer characteristics of carbon nanotube FETs were
 measured at V\(_{\mathrm{ds}}\) = 100 mV and liquid-gated transfer
