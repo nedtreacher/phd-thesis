@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, interior hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners, enhanced, boxrule=0pt, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, frame hidden, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable, interior hidden]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -325,9 +325,11 @@ characterisation techniques taken to test the quality and
 reproducibility of these fabrication processes.
 
 The nitrogen (\(\geq\) 99.99\%) and oxygen (99.7\%) used in fabrication
-work was supplied by BOC Limited New Zealand. Deionised (DI) water was
-taken from a Synergy\(^\circledR\) UV Water Purification System. The DI
-water had a measured conductivity of
+work was supplied by BOC Limited New Zealand. All acetone and
+isopropanol used for wafer/device processing had a minimum 99.9\% purity
+(HPLC grade). Deionised (DI) water was taken from a
+Synergy\(^\circledR\) UV Water Purification System. The DI water had a
+measured conductivity of
 \((1.4\pm0.1)\textrm{ } \mu \textrm{S cm}^{-1}\), compared to tap water
 with a measured conductivity of
 \((7.8\pm0.2)\textrm{ } \mu \textrm{S cm}^{-1}\).
@@ -343,13 +345,14 @@ option for the devices intended for backgated measurements. Before
 deposition of carbon nanotubes, the wafers were spin-coated with
 AZ\(^\circledR\) 1518 photoresist, placed photoresist-side down onto a
 cleanroom wipe, fixed in place using vacuum suction, then cleaved into
-quarters using a diamond-tipped scribe tool. For fabrication performed
-before June 2023, the protective photoresist layer was then removed by
-soaking the quarter-wafers in acetone for 15 minutes, then rinsed with
-isopropyl alcohol (IPA) and dried with N\(_2\) gas. However, for
-complete removal of photoresist, we found it was necessary to flood
-expose the wafer with the Karl Suss Aligner for 1 min and then place it
-in AZ326 developer for 3 min, as discussed further in
+quarters using a diamond-tipped scribe tool.
+
+For fabrication performed before June 2023, the protective photoresist
+layer was then removed by soaking the quarter-wafers in acetone for 15
+minutes, then rinsed with isopropyl alcohol (IPA) and dried with N\(_2\)
+gas. However, for complete removal of photoresist, we found it was
+necessary to flood expose the wafer with the Karl Suss Aligner for 1 min
+and then place it in AZ326 developer for 3 min, as discussed further in
 Section~\ref{sec-photoresist-contamination}.
 
 Carbon nanotubes were deposited before alignment markers
@@ -374,16 +377,17 @@ Cleaning System) or reactive ion etcher (Oxford Instruments,
 Plasmalab\(^\circledR\) 80 Plus) under 300 mTorr pressure. The cleaned
 SiO\(_2\)/Si surface was then coated with 2-mercaptopyridine for 10
 minutes, rinsed with ethanol to remove residual \(2\)-mercaptopyridine,
-and then nitrogen dried. Meanwhile, 5 \(\mu\) g of 99\% semiconducting
-carbon nanotube bucky paper (NanoIntegris, IsoNanotubes S-99) was
-dispersed in 10 mL of anhydrous 1,2-dichlorobenzene (Sigma Aldrich) by
-ultrasonication until no particles were visible to the naked eye. During
-this time, the ultrasonic bath temperature was kept between 20 - 30
-\(^\circ\)C or the buckypaper would not disperse successfully. The
-substrates were then placed into a dish with CNT-DCB suspension and left
-covered for 1 hour, dipped into ethanol for 10 min to remove residual
-solvent and any unattached carbon nanotube bundles, and then dried with
-nitrogen.
+and then nitrogen dried.
+
+Meanwhile, 5 \(\mu\) g of 99\% semiconducting carbon nanotube bucky
+paper (NanoIntegris, IsoNanotubes S-99) was dispersed in 10 mL of
+anhydrous 1,2-dichlorobenzene (Sigma Aldrich) by ultrasonication until
+no particles were visible to the naked eye. During this time, the
+ultrasonic bath temperature was kept between 20 - 30 \(^\circ\)C or the
+buckypaper would not disperse successfully. The substrates were then
+placed into a dish with CNT-DCB suspension and left covered for 1 hour,
+dipped into ethanol for 10 min to remove residual solvent and any
+unattached carbon nanotube bundles, and then dried with nitrogen.
 
 \hypertarget{surfactant-based}{%
 \subsection{Surfactant-Based}\label{surfactant-based}}
@@ -397,7 +401,7 @@ to O\(_2\) plasma at 100 W for at least 2 min in a small plasma cleaner
 reactive ion etcher (Oxford Instruments, Plasmalab 80 Plus) under 300
 mTorr pressure to make the surface hydrophilic. 1 mL of poly-L-lysine
 (PLL) was immediately deposited onto each quarter wafer and left for 5
-minutes. Then, the quarter wafers were rinsed for 30 s with DI water and
+minutes. The quarter wafers were then rinsed for 30 s with DI water and
 dried with N\(_2\) gas. This process allows for the surface adhesion of
 semiconducting single carbon nanotubes suspended in surfactant.
 
@@ -511,7 +515,9 @@ skipped for graphene devices)}
 Photolithography was used to define eight channel regions on each device
 and subsequently to define metal contacts for each of these channels. A
 schematic demonstrating these photolithography processes on a quarter
-wafer is shown in Figure~\ref{fig-qw-photolithography}.
+wafer is shown in Figure~\ref{fig-qw-photolithography}. Masks for
+photolithography were designed in-house using LayoutEditor CAD software
+and patterned externally with a UV laser writer.
 
 Thermal evaporation was used when depositing chromium (Cr-plated
 tungsten rods, Kurt J. Lesker) and gold (Au wire, 99.99\%, Regal
@@ -523,7 +529,7 @@ Nexdep 200 Vacuum Deposition System. Deposition thickness was controlled
 using an Inficon Deposition Controller and electron beam power was
 provided by a Telemark TT-6 power supply. For metals, the chamber was
 initially evacuated to a pressure \(5 \times 10^{-6}\) mTorr, while for
-metal oxides the chamber was initially evacuated to a pressure below
+metal oxides the chamber was initially evacuated to a pressure of
 \(1 \times 10^{-5}\) mTorr. After evaporation, the chamber was cooled
 and vented with nitrogen.
 
@@ -611,8 +617,12 @@ resist, quarter wafers/chips placed in AZ326 or SU8 developer for 3 min
 to ensure complete removal of photoresist residue. For each step with
 positive resist, the same procedure was performed but with a flood
 exposure with UV light for 1 min before being placed in developer. The
-results of this process are discussed further in
-Section~\ref{sec-photoresist-contamination}.
+exception to this rule was for devices with an aluminium oxide layer
+present. Tetramethylammonium hydroxide (TMAH), the active ingredient of
+AZ\(^\circledR\) 326, etches through aluminium oxide and causes
+electrical shorts through the dielectric layer
+\autocite{Oh2011,Ali2021}. A further discussion showing the results of
+this process is given in Section~\ref{sec-photoresist-contamination}.
 
 \hypertarget{sec-align}{%
 \subsection{Alignment Markers}\label{sec-align}}
@@ -930,7 +940,7 @@ encapsulation}\label{photoresist-encapsulation}}
 
 }
 
-\subcaption{\label{fig-old-new-mask}AZ\(^\circledR\) 1518 profile
+\subcaption{\label{fig-old-new-mask}AZ\(^\circledR\) 1518 profiles
 comparing pre-2023 mask and mask used from 2023 onwards}
 \end{minipage}%
 %
@@ -950,15 +960,14 @@ comparing pre-2023 mask and mask used from 2023 onwards}
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch4/dektat_1518SU8_profile_comparison.png}
+\includegraphics{./figures/ch4/dektat_SU8_profile_comparison.png}
 
 }
 
 }
 
-\subcaption{\label{fig-1518-SU8-encapsulation}Comparing photoresist
-encapsulation with AZ\(^\circledR\) 1518 and SU8-2150 (using pre-2023
-mask)}
+\subcaption{\label{fig-SU8-encapsulation}SU-8 2150 profiles comparing
+pre-2023 mask and mask used from 2023 onwards}
 \end{minipage}%
 
 \caption{\label{fig-dektat-encapsulation}Dektat of carbon nanotube
@@ -989,18 +998,21 @@ consistent for the new, 2023 mask between devices than for the old
 pre-2023 mask.
 
 Compared to AZ\(^\circledR\) 1518, a relatively thin SU-8 encapsulation
-layer could be deposited, as seen in
-Figure~\ref{fig-1518-SU8-encapsulation}. Using the pre-2023 mask, the
-AZ\(^\circledR\) 1518 encapsulation layer had a height of 1.7 \(\pm\)
-0.2 \(\mu\)m, while the SU-8 encapsulation layer had a height of 730
-\(\pm\) 20 nm. The SU-8 also had less significant edge features than the
-AZ\(^\circledR\) 1518. However, the exposed region was reduced for the
-SU-8 encapsulation, with an width of only 3.6 \(\pm\) 0.5 \(\mu\)m.
+layer could be deposited, as seen in Figure~\ref{fig-SU8-encapsulation}.
+The AZ\(^\circledR\) 1518 encapsulation layer had a height of 1.7
+\(\pm\) 0.2 \(\mu\)m, while the SU-8 encapsulation layer had a height of
+680 \(\pm\) 20 nm. The SU-8 also had less significant edge features than
+the AZ\(^\circledR\) 1518. However, the exposed region was reduced for
+the SU-8 encapsulation relative to the AZ\(^\circledR\) 1518, with an
+width of only 3.6 \(\pm\) 0.5 \(\mu\)m for the pre-2023 mask.
 Photoresist development using SU-8 was significantly more time-sensitive
 than for the AZ\(^\circledR\) 1518. This meant when the development time
 was increased to create a wider encapsulation opening, it was difficult
 to avoid removing large areas of photoresist across the surface of the
-encapsulation.
+encapsulation. This meant using the new mask from 2023 was especially
+important for maximising the exposed channel region with SU-8 devices.
+Using the new mask from 2023 with the SU-8 resist gave a significantly
+improved exposed region width of 13.8 \(\pm\) 1.0 \(\mu\)m.
 
 \hypertarget{dielectric-encapsulation}{%
 \subsubsection*{Dielectric
@@ -1087,7 +1099,7 @@ comparable to that of the SU-8 encapsulation layer after lift-off.
 \section{Characterisation via Atomic Force
 Microscopy}\label{sec-afm-characterisation}}
 
-All atomic force microscopy in this thesis was taken using a Nanosurf
+Atomic force microscopy in this thesis was taken using a Nanosurf
 NaioAFM in dynamic force mode. Atomic force microscope (AFM) images
 could not be taken from the small channel region on the devices
 themselves, so were instead taken on a representative carbon nanotube or
@@ -1095,12 +1107,29 @@ graphene film sample fabricated on the same wafer as the device being
 tested. Moisture adversely affected the AFM imaging process. Therefore,
 films functionalised with biological materials were washed with DI water
 and gently dried with N\(_2\) before atomic force microscope images were
-taken. The SPM data analysis software Gwyddion (version 2.59) was used
-to analyse AFM images.
+taken. The open source data analysis software Gwyddion (version 2.59)
+was used to analyse AFM images.
 
 \hypertarget{sec-fluorescence-characterisation}{%
 \section{Characterisation via Fluorescence
 Microscopy}\label{sec-fluorescence-characterisation}}
+
+Fluorescence microscopy was taken using an Olympus BX63 fluorescence
+microscope controlled using cellSens imaging software. Microscope
+objectives used were all Olympus UPLSAPO/UPlanSApo, apochromat
+objectives which compensate for spherical and chromatic aberrations.
+Objectives had infinite aperture and a field number of 26.5. Filter
+cubes used included the Olympus FITC filter (excitation wavelength
+range: 467-498 nm, emission wavelength range: 513-556 nm), Texas Red
+(excitation wavelength range: 542-582 nm, emission wavelength range:
+604-644 nm) and GFP (excitation wavelength range: 604-644 nm, emission
+wavelength range: 502-538 nm). The ISO was kept at the lowest available
+setting, ISO200. All microscopy was performed in darkness with the
+screen turned away from the microscope. To ensure photobleaching did not
+adversely affect imaging, images were taken soon after initial exposure
+to fluorescence and taking repeated photos of the same region was
+avoided. Various useful and thourough introductions to fluorescence
+microscopy can be found online \autocite{Nikon,Zeiss}.
 
 \hypertarget{sec-electrical-characterisation}{%
 \section{Electrical
@@ -1568,12 +1597,12 @@ other photoresists \autocite{Albarghouthi2022}. It is especially
 biocompatible when chemically modified via processes such as isopropanol
 sonication and O\(_2\) plasma treatment \autocite{Chen2021}.
 
-All photolithographic exposure was performed on a Karl Suss MJB3 Contact
-Aligner with a USHIO super-high pressure 350 W mercury lamp (USH-350DS,
-Japan). When performing lithography, the intensity reading from the
-aligner was 20.8 - 24.2 mW/cm\(^2\) (Note however that an external
-photometer reading at 400 nm found an intensity output of 17.2
-mW/cm\(^2\) when the aligner read 21.0 mW/cm\(^2\)).
+All photolithographic exposure was performed using a Karl Suss MJB3
+Contact Aligner with a USHIO super-high pressure 350 W mercury lamp
+(USH-350DS, Japan). When performing photolithography, the intensity
+reading from the aligner was 20.8 - 24.2 mW/cm\(^2\) (Note however that
+an external photometer reading at 400 nm found an intensity output of
+17.2 mW/cm\(^2\) when the aligner read 21.0 mW/cm\(^2\)).
 
 In general, photolithography procedures should be performed under yellow
 lighting, as light wavelengths from 320-450 nm can promote reactions in
@@ -1611,7 +1640,8 @@ photoresist}{AZ\^{}\textbackslash circledR 1518 photoresist}}\label{azcircledr-1
   developer, Microchemicals GmbH) in 1 part deionised (DI) water for
   30-45 s (note: rinse for 10-15 s in one development solution, then
   perform the rest of the development in clean developer for a cleaner
-  profile)
+  profile; lightly agitate the solution throughout the development
+  process)
 \item
   Rinse device for 30 s in DI water to remove excess developer, then dry
   under nitrogen
@@ -1639,7 +1669,8 @@ photoresist}{AZ\^{}\textbackslash circledR nLOF 2020 photoresist}}\label{azcircl
 \item
   Develop with 3 parts AZ\(^\circledR\) 326 in 1 part DI water for 60-70
   s (note: rinse for 30 s in one development solution, then perform the
-  rest of the development in clean developer for a cleaner profile)
+  rest of the development in clean developer for a cleaner profile;
+  lightly agitate the solution throughout the development process)
 \item
   Rinse device for 30 s in DI water to remove excess developer, then dry
   under nitrogen
@@ -1672,7 +1703,8 @@ photoresist}{AZ\^{}\textbackslash circledR nLOF 2020 photoresist}}\label{azcircl
 \item
   Develop with SU-8 developer (Kayaku Advanced Materials, formerly
   Microchem) for 10-15 s, then clean in IPA for 30 s, repeat this step
-  once then dry under nitrogen
+  once then dry under nitrogen (note: lightly agitate the solution
+  throughout the development process)
 \end{enumerate}
 
 \hypertarget{sec-python}{%

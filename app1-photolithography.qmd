@@ -23,7 +23,7 @@ The specific photoresist selected for photolithography depends on the specific u
 
 If metal deposition is performed on a positive resist, some metal can collect on the outwardly-sloped sidewalls of the resist (see @fig-photolithography-profiles) which forms significant spikes on the edges of the deposited metal upon lift-off. On the other hand, metal cannot collect on top of the inwardly-sloped negative profile sidewalls, which avoids the formation of large edge spikes. Therefore, the negative resist profile is more suited to metal or metal oxide deposition and lift-off processes, though the process is more sensitive to human error due to requiring more processing steps than positive resist [@Microchemicals]. Finally, when it is suitably processed SU-8 is considered to be more stable and biocompatible than other photoresists [@Albarghouthi2022]. It is especially biocompatible when chemically modified via processes such as isopropanol sonication and O$_2$ plasma treatment [@Chen2021].
 
-All photolithographic exposure was performed on a Karl Suss MJB3 Contact Aligner with a USHIO super-high pressure 350 W mercury lamp (USH-350DS, Japan). When performing lithography, the intensity reading from the aligner was 20.8 - 24.2 mW/cm$^2$ (Note however that an external photometer reading at 400 nm found an intensity output of 17.2 mW/cm$^2$ when the aligner read 21.0 mW/cm$^2$). 
+All photolithographic exposure was performed using a Karl Suss MJB3 Contact Aligner with a USHIO super-high pressure 350 W mercury lamp (USH-350DS, Japan). When performing photolithography, the intensity reading from the aligner was 20.8 - 24.2 mW/cm$^2$ (Note however that an external photometer reading at 400 nm found an intensity output of 17.2 mW/cm$^2$ when the aligner read 21.0 mW/cm$^2$). 
 
 In general, photolithography procedures should be performed under yellow lighting, as light wavelengths from 320-450 nm can promote reactions in the photoresist used. Aging of photoresist over time can also significantly affect the photolithography process, and therefore all processes should be re-optimised regularly over time to give the desired result [@Microchemicals]. The range in processing times for some steps of the processes used here are largely due to the effects of aging on the photoresist. 
 
@@ -37,7 +37,7 @@ In general, photolithography procedures should be performed under yellow lightin
 
 3. Mask expose for 10-12 s (note: clean mask with acetone/IPA and N$_2$ dry before use)
 
-4. Develop with 3 parts AZ$^\circledR$ 326 (2.38 % TMAH metal-ion free developer, Microchemicals GmbH) in 1 part deionised (DI) water for 30-45 s (note: rinse for 10-15 s in one development solution, then perform the rest of the development in clean developer for a cleaner profile)
+4. Develop with 3 parts AZ$^\circledR$ 326 (2.38 % TMAH metal-ion free developer, Microchemicals GmbH) in 1 part deionised (DI) water for 30-45 s (note: rinse for 10-15 s in one development solution, then perform the rest of the development in clean developer for a cleaner profile; lightly agitate the solution throughout the development process)
 
 5. Rinse device for 30 s in DI water to remove excess developer, then dry under nitrogen
 
@@ -51,7 +51,7 @@ In general, photolithography procedures should be performed under yellow lightin
 
 4. Post-exposure bake for precisely 60 s at $110^\circ$C on the hotplate to cross-link exposed resist
 
-5. Develop with 3 parts AZ$^\circledR$ 326 in 1 part DI water for 60-70 s (note: rinse for 30 s in one development solution, then perform the rest of the development in clean developer for a cleaner profile)
+5. Develop with 3 parts AZ$^\circledR$ 326 in 1 part DI water for 60-70 s (note: rinse for 30 s in one development solution, then perform the rest of the development in clean developer for a cleaner profile; lightly agitate the solution throughout the development process)
 
 6. Rinse device for 30 s in DI water to remove excess developer, then dry under nitrogen
 
@@ -67,4 +67,4 @@ In general, photolithography procedures should be performed under yellow lightin
 
 4. Post-exposure bake for 10 minutes at $95^\circ$C on the hotplate to cross-link exposed resist
 
-5. Develop with SU-8 developer (Kayaku Advanced Materials, formerly Microchem) for 10-15 s, then clean in IPA for 30 s, repeat this step once then dry under nitrogen
+5. Develop with SU-8 developer (Kayaku Advanced Materials, formerly Microchem) for 10-15 s, then clean in IPA for 30 s, repeat this step once then dry under nitrogen (note: lightly agitate the solution throughout the development process)
