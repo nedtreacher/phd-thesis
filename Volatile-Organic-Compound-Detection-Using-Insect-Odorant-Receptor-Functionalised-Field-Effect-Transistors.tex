@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, frame hidden, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable, interior hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, frame hidden, enhanced, sharp corners, interior hidden]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -237,8 +237,8 @@ Transistors}\label{carbon-nanotube-and-graphene-field-effect-transistors}}
 \section{Ambipolar Field-Effect
 Transistors}\label{ambipolar-field-effect-transistors}}
 
-\hypertarget{gating}{%
-\subsection{Gating}\label{gating}}
+\hypertarget{sec-gating}{%
+\subsection{Gating}\label{sec-gating}}
 
 \hypertarget{back-gating}{%
 \subsubsection*{Back-gating}\label{back-gating}}
@@ -258,9 +258,9 @@ Transistors}\label{ambipolar-field-effect-transistors}}
 Biosensor
 Platforms}\label{carbon-nanotube-and-graphene-field-effect-transistors-as-biosensor-platforms}}
 
-\hypertarget{carbon-nanotube-networks-graphene-as-biosensing-transducers}{%
+\hypertarget{sec-biosensing-transducers}{%
 \section{Carbon Nanotube Networks \& Graphene as Biosensing
-Transducers}\label{carbon-nanotube-networks-graphene-as-biosensing-transducers}}
+Transducers}\label{sec-biosensing-transducers}}
 
 \hypertarget{biosensor-examples}{%
 \section{Biosensor Examples}\label{biosensor-examples}}
@@ -993,26 +993,30 @@ The exposed region clear of AZ \(^\circledR\) 1518 resist was
 \(6.8 \pm 0.3\) \(\mu\)m in width when using the old, pre-2023 mask,
 while the exposed region was \(16.6 \pm 0.4\) \(\mu\)m when using
 AZ\(^\circledR\) 1518 with the new mask from 2023, as seen in
-Figure~\ref{fig-old-new-mask}. As noted previously, the profile was more
-consistent for the new, 2023 mask between devices than for the old
-pre-2023 mask.
+Figure~\ref{fig-old-new-mask}. However, the exposed region was reduced
+for the SU-8 encapsulation relative to the AZ\(^\circledR\) 1518, with
+an width of only 3.6 \(\pm\) 0.5 \(\mu\)m for the pre-2023 mask, as seen
+in Figure~\ref{fig-SU8-encapsulation}. Photoresist development using
+SU-8 was significantly more time-sensitive than for the AZ\(^\circledR\)
+1518. This meant when the development time was increased to create a
+wider encapsulation opening, it was difficult to avoid removing large
+areas of photoresist across the surface of the encapsulation. This meant
+using the new mask from 2023 was especially important for maximising the
+exposed channel region of SU-8 devices. Using the new mask from 2023
+with the SU-8 resist gave a significantly improved width of 13.8 \(\pm\)
+1.0 \(\mu\)m for the exposed region.
 
-Compared to AZ\(^\circledR\) 1518, a relatively thin SU-8 encapsulation
-layer could be deposited, as seen in Figure~\ref{fig-SU8-encapsulation}.
-The AZ\(^\circledR\) 1518 encapsulation layer had a height of 1.7
-\(\pm\) 0.2 \(\mu\)m, while the SU-8 encapsulation layer had a height of
-680 \(\pm\) 20 nm. The SU-8 also had less significant edge features than
-the AZ\(^\circledR\) 1518. However, the exposed region was reduced for
-the SU-8 encapsulation relative to the AZ\(^\circledR\) 1518, with an
-width of only 3.6 \(\pm\) 0.5 \(\mu\)m for the pre-2023 mask.
-Photoresist development using SU-8 was significantly more time-sensitive
-than for the AZ\(^\circledR\) 1518. This meant when the development time
-was increased to create a wider encapsulation opening, it was difficult
-to avoid removing large areas of photoresist across the surface of the
-encapsulation. This meant using the new mask from 2023 was especially
-important for maximising the exposed channel region with SU-8 devices.
-Using the new mask from 2023 with the SU-8 resist gave a significantly
-improved exposed region width of 13.8 \(\pm\) 1.0 \(\mu\)m.
+A relatively thin SU-8 encapsulation layer could be deposited when
+compared to the AZ\(^\circledR\) 1518 encapsulation profile. The
+AZ\(^\circledR\) 1518 encapsulation layer had a average height of 1.7
+\(\pm\) 0.2 \(\mu\)m, while the SU-8 encapsulation layer had a average
+height of 680 \(\pm\) 20 nm. The SU-8 also had much less significant
+edge features than the AZ\(^\circledR\) 1518, regardless of the profiles
+of the source and drain electrodes.
+
+As noted previously, for both resists the overall profile was more
+consistent for the new, 2023 mask from device to device than for the old
+pre-2023 mask.
 
 \hypertarget{dielectric-encapsulation}{%
 \subsubsection*{Dielectric
@@ -1093,7 +1097,9 @@ chemical resistant, has a relatively high dielectric constant and is
 bio-compatible \autocite{Guarnieri2014,Albarghouthi2022,Kolodzey2000}.
 Figure~\ref{fig-dektat-dielectric-layer} shows the aluminium oxide
 successfully adhered to the electrodes and had a clean profile
-comparable to that of the SU-8 encapsulation layer after lift-off.
+comparable to that of the SU-8 encapsulation layer after lift-off. As
+noted earlier, aluminium oxide should not be subsequently exposed to its
+etchant TMAH.
 
 \hypertarget{sec-afm-characterisation}{%
 \section{Characterisation via Atomic Force
@@ -1135,10 +1141,88 @@ microscopy can be found online \autocite{Nikon,Zeiss}.
 \section{Electrical
 Characterisation}\label{sec-electrical-characterisation}}
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.9\textwidth,height=\textheight]{./figures/ch4/liquid-gate-schematic.png}
+
+}
+
+\caption{\label{fig-liquid-gate-schematic}Liquid-gated device schematic
+showing electrical connections to the three source measure units.
+V\(_{\mathrm{ds}}\) is applied between the source SMU (SMU 1) and the
+drain SMU (SMU 2), while V\(_{\mathrm{lg}}\) is applied between the gate
+SMU (SMU 3) and the drain SMU. The drain SMU is held at 0 V. Drain
+current I\(_{\mathrm{d}}\) is measured at the drain SMU, and gate
+leakage current I\(_{\mathrm{g}}\) is measured at the gate SMU.}
+
+\end{figure}
+
+Both back-gated and liquid-gated measurements were taken of carbon
+nanotube and graphene devices. Liquid-gated measurements were taken
+using the configuration shown in Figure~\ref{fig-liquid-gate-schematic}.
+Back-gated measurements were taken with a copper plane placed underneath
+the Si/SiO\(_2\) wafer and connected to SMU 3 instead of the reference
+electrode.
+
+All measurement setups used had the same basic configuration, with three
+source measure units (SMUs) attached to each of the source, drain and
+gate. The drain SMU was kept at a constant 0 V for all measurements.
+Voltage from the source and gate SMUs was either kept constant or
+varied, with only one SMU varied at a time. Three different measurement
+setups were used for taking these measurements, the Keysight
+(Agilent/HP) 4156C Semiconductor Parameter Analyser, the Keysight B1500A
+Semiconductor Device Analyser, and a National Instruments NI-PXIe
+modular measurement system with a 8 GB PXIe-8821 controller.
+
+When using the Keysight 4156C Semiconductor Parameter Analyser or
+Keysight B1500A Semiconductor Device Analyser for liquid-gated
+measurements, a Rucker and Kolls with micromanipulators was used to
+contact the devices; when using the National Instruments NI-PXIe for
+liquid-gated measurements, a custom-made chip carrier with
+spring-loaded, pointed-tip, gold-coated pogo pins was used. Ag/AgCl
+standard electrodes were used as the liquid-gate electrode.
+
+The Keysight 4156C Semiconductor Parameter Analyser and Keysight B1500A
+Semiconductor Device Analyser were also used for back-gated measurements
+of devices within the vapour delivery system device chamber. This
+chamber acted as a Faraday cage for another custom-made chip carrier
+with spring-loaded gold-coated pogo pins.
+
+Liquid-gated transfer characteristics of carbon nanotube FETs were
+measured at V\(_{\mathrm{ds}}\) = 100 mV and liquid-gated transfer
+characteristics of graphene FETs were measured at V\(_{\mathrm{ds}}\) =
+1 V, where V\(_{\mathrm{lg}}\) was swept between -0.5 V and 1 V in both
+the forward and reverse direction with a step size of 10 mV. Backgated
+transfer characteristics of carbon nanotube FETs were either measured at
+V\(_{\mathrm{ds}}\) = 100 mV or V\(_{\mathrm{ds}}\) = 1 V, where
+V\(_{\mathrm{bg}}\) was swept between -5 V and 5 V in the forward and
+reverse directions with a step size of 50 mV.
+
+Sensing measurements were performed with constant source-drain and gate
+voltages. The gate voltage used was chosen by locating the subthreshold
+region of the device transfer characteristics and choosing a voltage
+that fell within this region, usually V\(_{\mathrm{g}}\) = 0 V. The
+choice of gate voltage for sensing measurements is discussed further in
+Section~\ref{sec-biosensing-transducers} and
+Section~\ref{sec-dummy-sensing}.
+
+\hypertarget{summary}{%
+\section{Summary}\label{summary}}
+
 \bookmarksetup{startatroot}
 
-\hypertarget{section}{%
-\chapter{}\label{section}}
+\hypertarget{characteristics-of-pristine-carbon-nanotube-graphene-field-effect-transistors}{%
+\chapter{Characteristics of Pristine Carbon Nanotube \& Graphene Field
+Effect
+Transistors}\label{characteristics-of-pristine-carbon-nanotube-graphene-field-effect-transistors}}
+
+\hypertarget{carbon-nanotube-network-morphology}{%
+\section{Carbon Nanotube Network
+Morphology}\label{carbon-nanotube-network-morphology}}
+
+\hypertarget{sec-dummy-sensing}{%
+\section{Salt Concentration Sensing with Phosphate Buffered
+Saline}\label{sec-dummy-sensing}}
 
 \bookmarksetup{startatroot}
 
@@ -1472,8 +1556,8 @@ and removal is visible.''``\,''
 
 \bookmarksetup{startatroot}
 
-\hypertarget{summary}{%
-\chapter{Summary}\label{summary}}
+\hypertarget{summary-1}{%
+\chapter{Summary}\label{summary-1}}
 
 In summary, this book has no content whatsoever.
 
