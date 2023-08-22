@@ -16,7 +16,7 @@ This section details some of the standard photolithography procedures used in th
 
 ![Undercut profile of a negative resist](figures/app1/undercut-profile.png){#fig-undercut-profile}
 
-Two different resist profiles seen for different types of photoresist. The undercut profile is ideal for thin-film metal deposition and subsequent patterned removal, known as "lift-off". 
+Two different resist profiles seen for different types of photoresist. Each profile has had the central region of the substrate exposed to UV light prior to development.  The undercut profile is ideal for thin-film metal deposition and subsequent patterned removal, known as "lift-off". 
 :::
 
 The specific photoresist selected for photolithography depends on the specific use case. The types used in this thesis are positive and negative AZ$^\circledR$ photoresists (AZ$^\circledR$ 1518, Microchemicals GmbH; AZ$^\circledR$ nLOF 2020, Microchemicals GmbH) and SU-8 (SU8-2150, Kayaku Advanced Materials, formerly Microchem). The AZ$^\circledR$ resists used here have a minimum film thickness of $1.5\textrm{ } \mu \textrm{m}$ [@Microchemicals], while the SU8-2150 has a minimum film thickness of $0.5\textrm{ } \mu \textrm{m}$ [@Kayaku]. Positive resists which have not been thermally crosslinked will soften at higher temperatures ($\gtrsim 100^\circ$C for AZ$^\circledR$ 1518), leading to a rounded profile. This is not the case for negative resists, which are more thermally stable [@Microchemicals]. Each resist therefore has a different cross-section profile, as shown in @fig-photolithography-profiles. 
