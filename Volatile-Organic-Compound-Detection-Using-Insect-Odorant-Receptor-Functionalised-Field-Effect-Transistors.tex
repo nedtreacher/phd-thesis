@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, sharp corners, borderline west={3pt}{0pt}{shadecolor}, frame hidden, boxrule=0pt, interior hidden, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, breakable, frame hidden, interior hidden, enhanced, sharp corners]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -844,7 +844,7 @@ nanomaterial region is active during biosensing, as discussed in
 Section~\ref{sec-biosensor-methods}.
 
 Before encapsulation photolithography the carbon-nanotube network
-quarter wafers were cleaved into individual 12 mm x 12 mm chips, using
+quarter wafers were cleaved into individual 11 mm x 11 mm chips, using
 the cleaving process outlined in Section~\ref{sec-dep-carbon-nanotubes}.
 Cleaving the devices at this step simplified mask alignment and ensured
 consistent thickness across photoresist encapsulated devices.
@@ -1151,9 +1151,10 @@ Characterisation}\label{sec-electrical-characterisation}}
 showing electrical connections to the three source measure units.
 V\(_{\mathrm{ds}}\) is applied between the source SMU (SMU 1) and the
 drain SMU (SMU 2), while V\(_{\mathrm{lg}}\) is applied between the gate
-SMU (SMU 3) and the drain SMU. The drain SMU is held at 0 V. Drain
-current I\(_{\mathrm{d}}\) is measured at the drain SMU, and gate
-leakage current I\(_{\mathrm{g}}\) is measured at the gate SMU.}
+SMU (SMU 3) and the drain SMU. The drain SMU is held at 0 V or connected
+to a ground plane. Drain current I\(_{\mathrm{d}}\) is measured at the
+drain SMU, and gate leakage current I\(_{\mathrm{g}}\) is measured at
+the gate SMU.}
 
 \end{figure}
 
@@ -1164,15 +1165,17 @@ Back-gated measurements were taken with a copper plane placed underneath
 the Si/SiO\(_2\) wafer and connected to SMU 3 instead of the reference
 electrode.
 
-All measurement setups used had the same basic configuration, with three
-source measure units (SMUs) attached to each of the source, drain and
-gate. The drain SMU was kept at a constant 0 V for all measurements.
-Voltage from the source and gate SMUs was either kept constant or
-varied, with only one SMU varied at a time. Three different measurement
-setups were used for taking these measurements, the Keysight
-(Agilent/HP) 4156C Semiconductor Parameter Analyser, the Keysight B1500A
-Semiconductor Device Analyser, and a National Instruments NI-PXIe
-modular measurement system with a 8 GB PXIe-8821 controller.
+All measurement setups used had the same basic configuration, with two
+source measure units (SMUs) attached to the source and gate. Voltage
+from the source and gate SMUs was either kept constant or varied, with
+only one SMU varied at a time. Three different measurement setups were
+used for taking these measurements, the Keysight (Agilent/HP) 4156C
+Semiconductor Parameter Analyser, the Keysight B1500A Semiconductor
+Device Analyser, and a National Instruments NI-PXIe modular measurement
+system with a 8 GB PXIe-8821 controller and two NI-4138 source measure
+units. For measurements with the Keysight instruments, a third, drain
+SMU was attached and kept at a constant 0 V (as shown in
+Figure~\ref{fig-liquid-gate-schematic}).
 
 When using the Keysight 4156C Semiconductor Parameter Analyser or
 Keysight B1500A Semiconductor Device Analyser for liquid-gated
@@ -1213,10 +1216,27 @@ region of the device transfer characteristics and choosing a voltage
 that fell within this region, usually V\(_{\mathrm{g}}\) = 0 V. The
 choice of gate voltage for sensing measurements is discussed further in
 Section~\ref{sec-biosensing-transducers} and
-Section~\ref{sec-dummy-sensing}.
+Section~\ref{sec-dummy-sensing}. Using the NI-PXIe with the PXIe-2737
+module, eight-channel multiplexed current measurements could be taken in
+rapid succession. The sampling interval for each channel on the NI-PXIe
+was 1.8 s, with a 2 ms delay between switching and measuring for each
+channel per sample. The time between samples from each channel was set
+automatically by NI-PXIe, between 220-230 ms. The other measurement
+equipment used a 1 s sampling interval.
 
 \hypertarget{summary}{%
 \section{Summary}\label{summary}}
+
+A variety of approaches were trialled when depositing a carbon nanotube
+network for the fabrication of transistor devices, and the resultant
+morphology of these networks are discussed in the next chapter. Standard
+photolithographic methods were used to successfully fabricate carbon
+nanotube and graphene field effect transistor devices. A range of
+photolithography types and electrode/encapsulation materials were
+trialled to find the optimal device composition for sensing, also
+discussed in the next chapter. Atomic force microscopy, fluorescence
+microscopy and a variety of electrical measurement setups were used to
+characterise the devices.
 
 \bookmarksetup{startatroot}
 
@@ -1653,9 +1673,10 @@ resist}
 \end{minipage}%
 
 \caption{\label{fig-photolithography-profiles}Two different resist
-profiles seen for different types of photoresist. The undercut profile
-is ideal for thin-film metal deposition and subsequent patterned
-removal, known as ``lift-off''.}
+profiles seen for different types of photoresist. Each profile has had
+the central region of the substrate exposed to UV light prior to
+development. The undercut profile is ideal for thin-film metal
+deposition and subsequent patterned removal, known as ``lift-off''.}
 
 \end{figure}
 
