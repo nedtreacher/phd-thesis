@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, breakable, frame hidden, interior hidden, enhanced, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, frame hidden, interior hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, sharp corners, breakable]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -1177,6 +1177,55 @@ units. For measurements with the Keysight instruments, a third, drain
 SMU was attached and kept at a constant 0 V (as shown in
 Figure~\ref{fig-liquid-gate-schematic}).
 
+\begin{figure}
+
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch4/PDMS_dirty.png}
+
+}
+
+}
+
+\subcaption{\label{fig-PDMS_dirty}PDMS surface before sonication in IPA
+for 10 min}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch4/PDMS_clean.png}
+
+}
+
+}
+
+\subcaption{\label{fig-PDMS_clean}PDMS surface after sonication in IPA
+for 10 min}
+\end{minipage}%
+
+\caption{\label{fig-PDMS-clean}Polydimethylsiloxane (PDMS) surface
+before and after isopropanol (IPA) sonication for 10 minutes.}
+
+\end{figure}
+
 When using the Keysight 4156C Semiconductor Parameter Analyser or
 Keysight B1500A Semiconductor Device Analyser for liquid-gated
 measurements, a Rucker and Kolls with micromanipulators was used to
@@ -1186,7 +1235,10 @@ spring-loaded, pointed-tip, gold-coated pogo pins was used. Ag/AgCl
 standard electrodes were used as the liquid-gate electrode. The
 electrode was submerged in 80 \(\mu\)L of PBS buffer in a
 polydimethylsiloxane (PDMS) well with outer dimensions of 12 mm x 6 mm x
-6 mm.
+6 mm. This PDMS well was sonicated in isopropanol for 10 min and
+thoroughly N\(_2\) dried before use. The microscope images seen in
+Figure~\ref{fig-PDMS-clean} show the PDMS surface before and after this
+cleaning step.
 
 The Keysight 4156C Semiconductor Parameter Analyser and Keysight B1500A
 Semiconductor Device Analyser were also used for back-gated measurements
@@ -1218,11 +1270,14 @@ choice of gate voltage for sensing measurements is discussed further in
 Section~\ref{sec-biosensing-transducers} and
 Section~\ref{sec-dummy-sensing}. Using the NI-PXIe with the PXIe-2737
 module, eight-channel multiplexed current measurements could be taken in
-rapid succession. The sampling interval for each channel on the NI-PXIe
-was 1.8 s, with a 2 ms delay between switching and measuring for each
-channel per sample. The time between samples from each channel was set
-automatically by NI-PXIe, between 220-230 ms. The other measurement
-equipment used a 1 s sampling interval.
+rapid succession. An integration time of 200 or 400 ms was used for
+sampling with each channel, with the actual sampling rate set by the
+NI-PXIe. In practice this meant a sampling rate of 1.81 s (for 200 ms
+integration time) or 3.41 s (for 400 ms integration time) for any given
+channel. A 200 ms integration time meant the time between samples from
+successive channels varied between 220 ms - 230 ms, while a 400 ms
+integration time meant the time between samples stayed at 426 ms. The
+other Keysight equipment used a 1 s sampling interval.
 
 \hypertarget{summary}{%
 \section{Summary}\label{summary}}

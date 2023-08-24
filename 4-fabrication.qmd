@@ -223,7 +223,16 @@ Both back-gated and liquid-gated measurements were taken of carbon nanotube and 
 
 All measurement setups used had the same basic configuration, with two source measure units (SMUs) attached to the source and gate. Voltage from the source and gate SMUs was either kept constant or varied, with only one SMU varied at a time. Three different measurement setups were used for taking these measurements, the Keysight (Agilent/HP) 4156C Semiconductor Parameter Analyser, the Keysight B1500A Semiconductor Device Analyser, and a National Instruments NI-PXIe modular measurement system with a 8 GB PXIe-8821 controller and two NI-4138 source measure units. For measurements with the Keysight instruments, a third, drain SMU was attached and kept at a constant 0 V (as shown in @fig-liquid-gate-schematic).
 
-When using the Keysight 4156C Semiconductor Parameter Analyser or Keysight B1500A Semiconductor Device Analyser for liquid-gated measurements, a Rucker and Kolls with micromanipulators was used to contact the devices; when using the National Instruments NI-PXIe for liquid-gated measurements, a custom-made chip carrier with spring-loaded, pointed-tip, gold-coated pogo pins was used. Ag/AgCl standard electrodes were used as the liquid-gate electrode. The electrode was submerged in 80 $\mu$L of PBS buffer in a polydimethylsiloxane (PDMS) well with outer dimensions of 12 mm x 6 mm x 6 mm.
+::: {#fig-PDMS-clean layout="[[47.5,-5,47.5]]"}
+
+![PDMS surface before sonication in IPA for 10 min](figures/ch4/PDMS_dirty.png){#fig-PDMS_dirty}
+
+![PDMS surface after sonication in IPA for 10 min](figures/ch4/PDMS_clean.png){#fig-PDMS_clean}
+
+Polydimethylsiloxane (PDMS) surface before and after isopropanol (IPA) sonication for 10 minutes.
+:::
+
+When using the Keysight 4156C Semiconductor Parameter Analyser or Keysight B1500A Semiconductor Device Analyser for liquid-gated measurements, a Rucker and Kolls with micromanipulators was used to contact the devices; when using the National Instruments NI-PXIe for liquid-gated measurements, a custom-made chip carrier with spring-loaded, pointed-tip, gold-coated pogo pins was used. Ag/AgCl standard electrodes were used as the liquid-gate electrode. The electrode was submerged in 80 $\mu$L of PBS buffer in a polydimethylsiloxane (PDMS) well with outer dimensions of 12 mm x 6 mm x 6 mm. This PDMS well was sonicated in isopropanol for 10 min and thoroughly N$_2$ dried before use. The microscope images seen in @fig-PDMS-clean show the PDMS surface before and after this cleaning step.
 
 The Keysight 4156C Semiconductor Parameter Analyser and Keysight B1500A Semiconductor Device Analyser were also used for back-gated measurements of devices within the vapour delivery system device chamber. This chamber acted as a Faraday cage for another custom-made chip carrier with spring-loaded gold-coated pogo pins.
 
