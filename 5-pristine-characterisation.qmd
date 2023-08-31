@@ -42,6 +42,21 @@ with open("references.bib", "w", encoding="utf-8") as file:
 
 ##	Carbon Nanotube Network Morphology
 
-@fig- shows a side-by-side comparison of the surface morphology of carbon nanotube films fabricated using the methods described in @sec-dep-carbon-nanotubes. These images were collected using an atomic force microscope and processed in the manner described in @sec-afm-characterisation. 
+@fig-afm-morphology shows a side-by-side comparison of the surface morphology of carbon nanotube films fabricated using the methods described in @sec-dep-carbon-nanotubes. These images were collected using an atomic force microscope and processed in the manner described in @sec-afm-characterisation. They each show bundles of carbon nanotubes with a range of diameters and lengths, with each bundle containing one or multiple nanotubes. As discussed in previous works using solvent-based deposition techniques for depositing carbon nanotubes, multi-tube bundles form due to mutual attraction between nanotubes [@Zheng2017; @Thanihaichelvan2018; @Thanihaichelvan2019]. The diameter range provided by the supplier for the individual carbon nanotubes used is 1.2-1.7 nm, while the length range is 0.3-5.0 $\mu$m (Nanointegris). Figures @fig-steaming-network-90 and @fig-steaming-network-99 also show the presence of some non-nanotube contaminants on the substrate surface, which could be tiny amounts of residual photoresist. The presence of residual photoresist is discussed further in @sec-photoresist-contamination. 
+
+::: {#fig-afm-morphology layout="[[47.5,-5,47.5], [47.5,-5,47.5]]"}
+
+![Solvent-based deposition](figures/ch5/Ned_NTQ24_20220125_00235.png){#fig-bundled-network}
+
+![Dropcast surfactant-based deposition (90%-s)](figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2).png){#fig-dropcast-network}
+
+![Steam-assisted surfactant-based deposition (90%-s)](figures/ch5/Ned_NTQ21C1_W1_PBASEonly_20211116_00057.png){#fig-steaming-network-90}
+
+![Steam-assisted surfactant-based deposition (99%-s)](figures/ch5/Ned_NGQ14D2_W4_pristine_20220713_00567.png){#fig-steaming-network-99}
+
+Atomic force microscope images of carbon nanotube films deposited using various methods.
+:::
+
+The distribution of the deposited carbon nanotubes was modelled to quantatively understand the effect of the various methods used on the resulting network morphology. The diameter range of deposited single-walled carbon nanotubes can be modelled via a normal or Gaussian distribution [@Thanihaichelvan2018; @Liu2013; @Vobornik2023]. However, when we extract and bin the height profiles from the AFM images in @fig-afm-morphology, the histogram does not follow a normal distribution. The AFM histogram shape results from the SiO$_2$ substrate and carbon nanotubes both exhibiting some roughness, which is partially due to surface contamination by atmospheric contaminants. In the case of the surfactant-deposited networks, residual surfactant may also contribute to surface roughness [@Vobornik2023]. However, it has been shown that bare SiO$_2$ substrate has a surface roughness which can also be modelled with a normal distribution, with a height range of approximately $\pm$1 nm about the mean, which we set as 0 nm [@Velicky2015]. 
 
 ##	Salt Concentration Sensing with Phosphate Buffered Saline {#sec-dummy-sensing}

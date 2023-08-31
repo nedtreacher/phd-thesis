@@ -4,7 +4,7 @@
 
 The code used for general analysis of field-effect transistor devices in this thesis was written with Python 3.8.8. Contributors to the code used include Erica Cassie, Erica Happe, Marissa Dierkes and Leo Browning. The code is located on GitHub and the research group OneDrive, and is available on request.
 
-## Atomic Force Microscope Histogram Analysis
+## Atomic Force Microscope Histogram Analysis {#sec-histogram-analysis}
 
 The purpose of this code is to analyze atomic force microscope (AFM) images of carbon nanotube networks in .xyz file format. This code can return morphology statistics such as height distribution and carbon nanotube coverage/density. The SciPy optimize package is used to fit two or three normal distributions to the .xyz datasets from the AFM, with the number of normal distributions chosen depending on which gives a better quality fit. The .xyz data is initially sorted into bins with 0.15 nm size. The bin with the maximum number of counts is set at 0 nm, as this peak represents the mean of the surface roughness of the bare silicon. The fitting parameters $m_1$, $s_1$, $k_1$, $m_2$, $s_2$, $k_2$ (as well as $m_3$, $s_3$, $k_3$ for three normal distributions) are used in the objective function @eq-lin-combo-gaussian when optimising.
 
@@ -14,4 +14,4 @@ $${#eq-lin-combo-gaussian}
 
 These fitting parameters represent the mean (m), standard deviation (s) and amplitude (k) of each normal distribution. We can find the initial guess for these fitting parameters by using the histogram data to roughly approximate these values. $k_1$ is taken as the maximum y-value of the data being fitted, $m_1$ is set to zero and $s_1$ is taken as one-third of the difference between $m_1$ and the x-value of the first datapoint where the y-value is greater than 1% of $k_1$. We find the Gaussian given by these values, and subtract it from the existing dataset. We then take $k_2$ to be the maximum y-value of this modified dataset, and $m_1$ to be the x-value of the maximum y-value. $s_2$ is taken as the difference between $m_1$ and the x-value of the first datapoint where the y-value is greater than 60% of $k_2$. This process is repeated to find $k_3$ and $m_3$, and $s_3$ is one-third of the difference between $m_3$ and the x-value of the *last* datapoint where the y-value is greater than 1% of $k_3$. In this iterative manner, we find a reasonably good initial guess for our fit.
 
-Using the objective function with these fitting parameters in the scipy.optimize.curve_fit module, we receive optimised fitting parameters which gave an R-squared value of 0.999 or greater.
+Using the objective function with these fitting parameters in the scipy.optimize.curve_fit module, we receive optimised fitting parameters which gave an R-squared value of 0.98 or greater. By calculating the area under each of the normal distributions found from the fit, we can find the proportion of the surface covered by carbon nanotubes.

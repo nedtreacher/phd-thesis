@@ -12,9 +12,9 @@ format: pdf
 
 ::: {#fig-pbase-structure layout="[[47.5,-5,47.5]]"}
 
-![Hartree-Fock energy: -3427728.67 kJ/mol (9 s.f.)](figures/ch5/pbase_stable_1.png){#fig-pbase-stable-1}
+![Hartree-Fock energy: -3427728.67 kJ/mol (9 s.f.)](figures/ch6/pbase_stable_1.png){#fig-pbase-stable-1}
 
-![Hartree-Fock energy: -3427729.66 kJ/mol (9 s.f.)](figures/ch5/pbase_stable_2.png){#fig-pbase-stable-2}
+![Hartree-Fock energy: -3427729.66 kJ/mol (9 s.f.)](figures/ch6/pbase_stable_2.png){#fig-pbase-stable-2}
 
 Two conformations of PBASE molecule with geometry optimised via *ab initio* calculation (computed using Gaussian 16 [@g16]). The difference between computed Hartree-Fock energies is 1.0 kJ/mol, small enough that the existence of both molecular conformations is physically possible.
 :::
@@ -27,11 +27,11 @@ The non-covalent functionalisation of proteins onto a single-walled carbon nanot
 
 ::: {#fig-pbase-nmr layout-ncol=1}
 
-![Sigma PBASE in DMSO](figures/ch5/sigma_pbase_nmr.png){#fig-sigma-nmr}
+![Sigma PBASE in DMSO](figures/ch6/sigma_pbase_nmr.png){#fig-sigma-nmr}
 
-![Setareh PBASE in DMSO](figures/ch5/setareh_pbase_nmr.png){#fig-setareh-nmr}
+![Setareh PBASE in DMSO](figures/ch6/setareh_pbase_nmr.png){#fig-setareh-nmr}
 
- ![Blank (DMSO only)](figures/ch5/dmso_nmr.png){#fig-dmso-nmr}
+ ![Blank (DMSO only)](figures/ch6/dmso_nmr.png){#fig-dmso-nmr}
 
  Comparison of NMR spectrum profiles (arbitrary units)
 
@@ -68,19 +68,21 @@ knitr::kable(pbase_table,
 
 
 
+##	Functionalisation with Odorant Receptors on CNT network
+###	Varying CNT network fabrication approach {#sec-cnt-deposition-effects}
+###	Varying OR-nanodisc preparation process 
+###	Varying solvent used
+###	Other functionalisation approaches
+
+## Functionalisation with Odorant Receptors on graphene
 
 ## Verifying Pyrene Attachment to CNT network and graphene
 
-###	Rhodamine vs FITC
 ###	Photoresist contamination {#sec-photoresist-contamination}
+###	Raman Spectroscopy
 ###	Pyrene-PEG-FITC fluorescence microscopy
 #### Plasma clean comparison {.unnumbered}
 #### Surfactant comparison {.unnumbered}
 ###	Pyrene-PEG electrical characterisation
 
-##	Functionalisation with PBASE on CNT network
-###	Varying CNT network fabrication approach {#sec-cnt-deposition-effects}
-###	Varying OR-nanodisc preparation process 
-###	Varying solvent used
-###	Other functionalisation approaches
 

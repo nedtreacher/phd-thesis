@@ -174,12 +174,12 @@
 \title{Volatile Organic Compound Detection Using Insect Odorant-Receptor
 Functionalised Field-Effect Transistors}
 \author{Eddyn Oswald Perkins Treacher}
-\date{Aug 2023}
+\date{Sep 2023}
 
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, frame hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, breakable, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, interior hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, enhanced, boxrule=0pt, frame hidden]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -1306,6 +1306,132 @@ Transistors}\label{characteristics-of-pristine-carbon-nanotube-graphene-field-ef
 \section{Carbon Nanotube Network
 Morphology}\label{carbon-nanotube-network-morphology}}
 
+Figure~\ref{fig-afm-morphology} shows a side-by-side comparison of the
+surface morphology of carbon nanotube films fabricated using the methods
+described in Section~\ref{sec-dep-carbon-nanotubes}. These images were
+collected using an atomic force microscope and processed in the manner
+described in Section~\ref{sec-afm-characterisation}. They each show
+bundles of carbon nanotubes with a range of diameters and lengths, with
+each bundle containing one or multiple nanotubes. As discussed in
+previous works using solvent-based deposition techniques for depositing
+carbon nanotubes, multi-tube bundles form due to mutual attraction
+between nanotubes
+\autocite{Zheng2017,Thanihaichelvan2018,Thanihaichelvan2019}. The
+diameter range provided by the supplier for the individual carbon
+nanotubes used is 1.2-1.7 nm, while the length range is 0.3-5.0 \(\mu\)m
+(Nanointegris). Figures Figure~\ref{fig-steaming-network-90} and
+Figure~\ref{fig-steaming-network-99} also show the presence of some
+non-nanotube contaminants on the substrate surface, which could be tiny
+amounts of residual photoresist. The presence of residual photoresist is
+discussed further in Section~\ref{sec-photoresist-contamination}.
+
+\begin{figure}
+
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/Ned_NTQ24_20220125_00235.png}
+
+}
+
+}
+
+\subcaption{\label{fig-bundled-network}Solvent-based deposition}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2).png}
+
+}
+
+}
+
+\subcaption{\label{fig-dropcast-network}Dropcast surfactant-based
+deposition (90\%-s)}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/Ned_NTQ21C1_W1_PBASEonly_20211116_00057.png}
+
+}
+
+}
+
+\subcaption{\label{fig-steaming-network-90}Steam-assisted
+surfactant-based deposition (90\%-s)}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/Ned_NGQ14D2_W4_pristine_20220713_00567.png}
+
+}
+
+}
+
+\subcaption{\label{fig-steaming-network-99}Steam-assisted
+surfactant-based deposition (99\%-s)}
+\end{minipage}%
+
+\caption{\label{fig-afm-morphology}Atomic force microscope images of
+carbon nanotube films deposited using various methods.}
+
+\end{figure}
+
+The distribution of the deposited carbon nanotubes was modelled to
+quantatively understand the effect of the various methods used on the
+resulting network morphology. The diameter range of deposited
+single-walled carbon nanotubes can be modelled via a normal or Gaussian
+distribution \autocite{Thanihaichelvan2018,Liu2013,Vobornik2023}.
+However, when we extract and bin the height profiles from the AFM images
+in Figure~\ref{fig-afm-morphology}, the histogram does not follow a
+normal distribution. The AFM histogram shape results from the SiO\(_2\)
+substrate and carbon nanotubes both exhibiting some roughness, which is
+partially due to surface contamination by atmospheric contaminants. In
+the case of the surfactant-deposited networks, residual surfactant may
+also contribute to surface roughness \autocite{Vobornik2023}. However,
+it has been shown that bare SiO\(_2\) substrate has a surface roughness
+which can also be modelled with a normal distribution, with a height
+range of approximately \(\pm\) 1 nm about the mean
+\autocite{Velicky2015}.o
+
 \hypertarget{sec-dummy-sensing}{%
 \section{Salt Concentration Sensing with Phosphate Buffered
 Saline}\label{sec-dummy-sensing}}
@@ -1331,7 +1457,7 @@ Receptors}\label{functionalisation-of-carbon-nanotubes-and-graphene-with-odorant
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch5/pbase_stable_1.png}
+\includegraphics{./figures/ch6/pbase_stable_1.png}
 
 }
 
@@ -1357,7 +1483,7 @@ kJ/mol (9 s.f.)}
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch5/pbase_stable_2.png}
+\includegraphics{./figures/ch6/pbase_stable_2.png}
 
 }
 
@@ -1422,7 +1548,7 @@ the literature \autocite{Zhen2018,Hinnemo2017}.
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch5/sigma_pbase_nmr.png}
+\includegraphics{./figures/ch6/sigma_pbase_nmr.png}
 
 }
 
@@ -1437,7 +1563,7 @@ the literature \autocite{Zhen2018,Hinnemo2017}.
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch5/setareh_pbase_nmr.png}
+\includegraphics{./figures/ch6/setareh_pbase_nmr.png}
 
 }
 
@@ -1452,7 +1578,7 @@ the literature \autocite{Zhen2018,Hinnemo2017}.
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch5/dmso_nmr.png}
+\includegraphics{./figures/ch6/dmso_nmr.png}
 
 }
 
@@ -1540,36 +1666,9 @@ DMSO & CNTs & 10 & - & 1 & DI water & Lopez \textit{et al.}
 \newpage
 \KOMAoptions{paper=portrait,pagesize}
 
-\hypertarget{verifying-pyrene-attachment-to-cnt-network-and-graphene}{%
-\section{Verifying Pyrene Attachment to CNT network and
-graphene}\label{verifying-pyrene-attachment-to-cnt-network-and-graphene}}
-
-\hypertarget{rhodamine-vs-fitc}{%
-\subsection{Rhodamine vs FITC}\label{rhodamine-vs-fitc}}
-
-\hypertarget{sec-photoresist-contamination}{%
-\subsection{Photoresist
-contamination}\label{sec-photoresist-contamination}}
-
-\hypertarget{pyrene-peg-fitc-fluorescence-microscopy}{%
-\subsection{Pyrene-PEG-FITC fluorescence
-microscopy}\label{pyrene-peg-fitc-fluorescence-microscopy}}
-
-\hypertarget{plasma-clean-comparison}{%
-\subsubsection*{Plasma clean comparison}\label{plasma-clean-comparison}}
-\addcontentsline{toc}{subsubsection}{Plasma clean comparison}
-
-\hypertarget{surfactant-comparison}{%
-\subsubsection*{Surfactant comparison}\label{surfactant-comparison}}
-\addcontentsline{toc}{subsubsection}{Surfactant comparison}
-
-\hypertarget{pyrene-peg-electrical-characterisation}{%
-\subsection{Pyrene-PEG electrical
-characterisation}\label{pyrene-peg-electrical-characterisation}}
-
-\hypertarget{functionalisation-with-pbase-on-cnt-network}{%
-\section{Functionalisation with PBASE on CNT
-network}\label{functionalisation-with-pbase-on-cnt-network}}
+\hypertarget{functionalisation-with-odorant-receptors-on-cnt-network}{%
+\section{Functionalisation with Odorant Receptors on CNT
+network}\label{functionalisation-with-odorant-receptors-on-cnt-network}}
 
 \hypertarget{sec-cnt-deposition-effects}{%
 \subsection{Varying CNT network fabrication
@@ -1586,14 +1685,36 @@ process}\label{varying-or-nanodisc-preparation-process}}
 \subsection{Other functionalisation
 approaches}\label{other-functionalisation-approaches}}
 
-\bookmarksetup{startatroot}
+\hypertarget{functionalisation-with-odorant-receptors-on-graphene}{%
+\section{Functionalisation with Odorant Receptors on
+graphene}\label{functionalisation-with-odorant-receptors-on-graphene}}
 
-\hypertarget{aqueous-sensing}{%
-\chapter{Aqueous sensing}\label{aqueous-sensing}}
+\hypertarget{verifying-pyrene-attachment-to-cnt-network-and-graphene}{%
+\section{Verifying Pyrene Attachment to CNT network and
+graphene}\label{verifying-pyrene-attachment-to-cnt-network-and-graphene}}
 
-What I found out.
+\hypertarget{sec-photoresist-contamination}{%
+\subsection{Photoresist
+contamination}\label{sec-photoresist-contamination}}
 
-See for more detailed results
+\hypertarget{raman-spectroscopy}{%
+\subsection{Raman Spectroscopy}\label{raman-spectroscopy}}
+
+\hypertarget{pyrene-peg-fitc-fluorescence-microscopy}{%
+\subsection{Pyrene-PEG-FITC fluorescence
+microscopy}\label{pyrene-peg-fitc-fluorescence-microscopy}}
+
+\hypertarget{plasma-clean-comparison}{%
+\subsubsection*{Plasma clean comparison}\label{plasma-clean-comparison}}
+\addcontentsline{toc}{subsubsection}{Plasma clean comparison}
+
+\hypertarget{surfactant-comparison}{%
+\subsubsection*{Surfactant comparison}\label{surfactant-comparison}}
+\addcontentsline{toc}{subsubsection}{Surfactant comparison}
+
+\hypertarget{pyrene-peg-electrical-characterisation}{%
+\subsection{Pyrene-PEG electrical
+characterisation}\label{pyrene-peg-electrical-characterisation}}
 
 \bookmarksetup{startatroot}
 
@@ -1890,9 +2011,9 @@ include Erica Cassie, Erica Happe, Marissa Dierkes and Leo Browning. The
 code is located on GitHub and the research group OneDrive, and is
 available on request.
 
-\hypertarget{atomic-force-microscope-histogram-analysis}{%
+\hypertarget{sec-histogram-analysis}{%
 \section{Atomic Force Microscope Histogram
-Analysis}\label{atomic-force-microscope-histogram-analysis}}
+Analysis}\label{sec-histogram-analysis}}
 
 The purpose of this code is to analyze atomic force microscope (AFM)
 images of carbon nanotube networks in .xyz file format. This code can
@@ -1929,6 +2050,13 @@ one-third of the difference between \(m_3\) and the x-value of the
 \emph{last} datapoint where the y-value is greater than 1\% of \(k_3\).
 In this iterative manner, we find a reasonably good initial guess for
 our fit.
+
+Using the objective function with these fitting parameters in the
+scipy.optimize.curve\_fit module, we receive optimised fitting
+parameters which gave an R-squared value of 0.98 or greater. By
+calculating the area under each of the normal distributions found from
+the fit, we can find the proportion of the surface covered by carbon
+nanotubes.
 
 \hypertarget{vapour-delivery-system}{%
 \chapter{Vapour Delivery System}\label{vapour-delivery-system}}
