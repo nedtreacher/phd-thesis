@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, boxrule=0pt, sharp corners, interior hidden, breakable, frame hidden, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, frame hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, breakable, sharp corners]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -1238,7 +1238,9 @@ polydimethylsiloxane (PDMS) well with outer dimensions of 12 mm x 6 mm x
 6 mm. This PDMS well was sonicated in isopropanol for 10 min and
 thoroughly N\(_2\) dried before use. The microscope images seen in
 Figure~\ref{fig-PDMS-clean} show the PDMS surface before and after this
-cleaning step.
+cleaning step. The end of Ag/AgCl standard electrode to be submerged
+should be rinsed in DI water and left to sit in DI water for 15 minutes
+before sensing is performed.
 
 The Keysight 4156C Semiconductor Parameter Analyser and Keysight B1500A
 Semiconductor Device Analyser were also used for back-gated measurements
@@ -1878,6 +1880,55 @@ photoresist}{AZ\^{}\textbackslash circledR nLOF 2020 photoresist}}\label{azcircl
 
 \hypertarget{sec-python}{%
 \chapter{Python Code for Data Analysis}\label{sec-python}}
+
+\hypertarget{code-repository}{%
+\section{Code Repository}\label{code-repository}}
+
+The code used for general analysis of field-effect transistor devices in
+this thesis was written with Python 3.8.8. Contributors to the code used
+include Erica Cassie, Erica Happe, Marissa Dierkes and Leo Browning. The
+code is located on GitHub and the research group OneDrive, and is
+available on request.
+
+\hypertarget{atomic-force-microscope-histogram-analysis}{%
+\section{Atomic Force Microscope Histogram
+Analysis}\label{atomic-force-microscope-histogram-analysis}}
+
+The purpose of this code is to analyze atomic force microscope (AFM)
+images of carbon nanotube networks in .xyz file format. This code can
+return morphology statistics such as height distribution and carbon
+nanotube coverage/density. The SciPy optimize package is used to fit two
+or three normal distributions to the .xyz datasets from the AFM, with
+the number of normal distributions chosen depending on which gives a
+better quality fit. The .xyz data is initially sorted into bins with
+0.15 nm size. The bin with the maximum number of counts is set at 0 nm,
+as this peak represents the mean of the surface roughness of the bare
+silicon. The fitting parameters \(m_1\), \(s_1\), \(k_1\), \(m_2\),
+\(s_2\), \(k_2\) (as well as \(m_3\), \(s_3\), \(k_3\) for three normal
+distributions) are used in the objective function
+Equation~\ref{eq-lin-combo-gaussian} when optimising.
+
+\begin{equation}\protect\hypertarget{eq-lin-combo-gaussian}{}{
+f(x) = k_1\exp{\Bigg(-\frac{{(x-m_1)}^{2}}{{2s_1}^{2}}\Bigg)} + k_2\exp{\Bigg(-\frac{{(x-m_2)}^{2}}{{2s_2}^{2}}\Bigg)} + ...
+}\label{eq-lin-combo-gaussian}\end{equation}
+
+These fitting parameters represent the mean (m), standard deviation (s)
+and amplitude (k) of each normal distribution. We can find the initial
+guess for these fitting parameters by using the histogram data to
+roughly approximate these values. \(k_1\) is taken as the maximum
+y-value of the data being fitted, \(m_1\) is set to zero and \(s_1\) is
+taken as one-third of the difference between \(m_1\) and the x-value of
+the first datapoint where the y-value is greater than 1\% of \(k_1\). We
+find the Gaussian given by these values, and subtract it from the
+existing dataset. We then take \(k_2\) to be the maximum y-value of this
+modified dataset, and \(m_1\) to be the x-value of the maximum y-value.
+\(s_2\) is taken as the difference between \(m_1\) and the x-value of
+the first datapoint where the y-value is greater than 60\% of \(k_2\).
+This process is repeated to find \(k_3\) and \(m_3\), and \(s_3\) is
+one-third of the difference between \(m_3\) and the x-value of the
+\emph{last} datapoint where the y-value is greater than 1\% of \(k_3\).
+In this iterative manner, we find a reasonably good initial guess for
+our fit.
 
 \hypertarget{vapour-delivery-system}{%
 \chapter{Vapour Delivery System}\label{vapour-delivery-system}}
