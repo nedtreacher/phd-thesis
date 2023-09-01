@@ -46,17 +46,34 @@ with open("references.bib", "w", encoding="utf-8") as file:
 
 ::: {#fig-afm-morphology layout="[[47.5,-5,47.5], [47.5,-5,47.5]]"}
 
-![Solvent-based deposition](figures/ch5/Ned_NTQ24_20220125_00235.png){#fig-bundled-network}
+![Solvent based deposition](figures/ch5/Ned_NTQ24_20220125_00235.png){#fig-bundled-network}
 
-![Dropcast surfactant-based deposition (90%-s)](figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2).png){#fig-dropcast-network}
+![Dropcast surfactant based deposition (S-90%)](figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2).png){#fig-dropcast-network}
 
-![Steam-assisted surfactant-based deposition (90%-s)](figures/ch5/Ned_NTQ21C1_W1_PBASEonly_20211116_00057.png){#fig-steaming-network-90}
+![Steam-assisted surfactant based deposition (S-90%)](figures/ch5/Ned_NTQ21C1_W1_PBASEonly_20211116_00057.png){#fig-steaming-network-90}
 
-![Steam-assisted surfactant-based deposition (99%-s)](figures/ch5/Ned_NGQ14D2_W4_pristine_20220713_00567.png){#fig-steaming-network-99}
+![Steam-assisted surfactant based deposition (S-99%)](figures/ch5/Ned_NGQ14D2_W4_pristine_20220713_00567.png){#fig-steaming-network-99}
 
 Atomic force microscope images of carbon nanotube films deposited using various methods.
 :::
 
-The distribution of the deposited carbon nanotubes was modelled to quantatively understand the effect of the various methods used on the resulting network morphology. The diameter range of deposited single-walled carbon nanotubes can be modelled via a normal or Gaussian distribution [@Thanihaichelvan2018; @Liu2013; @Vobornik2023]. However, when we extract and bin the height profiles from the AFM images in @fig-afm-morphology, the histogram does not follow a normal distribution. The AFM histogram shape results from the SiO$_2$ substrate and carbon nanotubes both exhibiting some roughness, which is partially due to surface contamination by atmospheric contaminants. In the case of the surfactant-deposited networks, residual surfactant may also contribute to surface roughness [@Vobornik2023]. However, it has been shown that bare SiO$_2$ substrate has a surface roughness which can also be modelled with a normal distribution, with a height range of approximately $\pm$1 nm about the mean, which we set as 0 nm [@Velicky2015]. 
+The distribution of the deposited carbon nanotubes was modelled to quantatively understand the effect of the various methods used on the resulting network morphology. The diameter range of deposited single-walled carbon nanotubes can be modelled via a normal or Gaussian distribution [@Thanihaichelvan2018; @Liu2013; @Vobornik2023]. However, when we extract and bin the height profiles from the AFM images in @fig-afm-morphology, the histograms do not follow a normal distribution. The AFM histogram shape results from the SiO$_2$ substrate and carbon nanotubes both exhibiting some roughness, which is partially due to surface contamination by atmospheric contaminants. In the case of the surfactant-deposited networks, residual surfactant may also contribute to surface roughness [@Vobornik2023]. However, it has been shown that bare SiO$_2$ substrate has a surface roughness which can also be modelled with a normal distribution. This normal distribution has a height range of approximately \pm1 nm about the mean, which can be set as the reference or zero point for other height measurements [@Velicky2015]. As both the carbon nanotube and silicon dioxide background heights can each be modelled using a normal distribution, we assume that a linear combination of normal distributions can be used to model the AFM histograms in @fig-afm-morphology. 
+
+::: {#fig-afm-histograms layout="[[47.5,-5,47.5], [47.5,-5,47.5]]"}
+
+![Solvent based deposition](figures/ch5/Ned_NTQ24_20220125_00235_histogram.png){#fig-bundled-network-histogram}
+
+![Dropcast surfactant-based deposition (S-90%)](figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_histogram.png){#fig-dropcast-network-histogram}
+
+![Steam-assisted surfactant-based deposition (S-90%)](figures/ch5/Ned_NTQ21C1_W1_PBASEonly_20211116_00057_histogram.png){#fig-steaming-network-90-histogram}
+
+![Steam-assisted surfactant-based deposition (S-99%)](figures/ch5/Ned_NGQ14D2_W4_pristine_20220713_00567_histogram.png){#fig-steaming-network-99-histogram}
+
+Surface profile histograms extracted from the atomic force microscope images seen in @fig-afm-morphology, each fitted with a linear combination of normal distributions. The component normal distributions corresponding to each linear combination are also shown.
+:::
+
+By using the analysis discussed in @sec-histogram-analysis 
+
+
 
 ##	Salt Concentration Sensing with Phosphate Buffered Saline {#sec-dummy-sensing}

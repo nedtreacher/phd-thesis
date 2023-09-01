@@ -6,7 +6,9 @@ The code used for general analysis of field-effect transistor devices in this th
 
 ## Atomic Force Microscope Histogram Analysis {#sec-histogram-analysis}
 
-The purpose of this code is to analyze atomic force microscope (AFM) images of carbon nanotube networks in .xyz file format. This code can return morphology statistics such as height distribution and carbon nanotube coverage/density. The SciPy optimize package is used to fit two or three normal distributions to the .xyz datasets from the AFM, with the number of normal distributions chosen depending on which gives a better quality fit. The .xyz data is initially sorted into bins with 0.15 nm size. The bin with the maximum number of counts is set at 0 nm, as this peak represents the mean of the surface roughness of the bare silicon. The fitting parameters $m_1$, $s_1$, $k_1$, $m_2$, $s_2$, $k_2$ (as well as $m_3$, $s_3$, $k_3$ for three normal distributions) are used in the objective function @eq-lin-combo-gaussian when optimising.
+The purpose of this code is to return morphology statistics such as height distribution and carbon nanotube coverage/density from atomic force microscope (AFM) images of carbon nanotube networks. The code uses the SciPy optimize package to fit two or three normal distributions to .xyz datasets from AFM images processed in Gwyddion (see @sec-afm-characterisation). The number of normal distributions was chosen based on which gave a better quality fit to the .xyz data. It was originally designed by Erica Happe in Matlab, and adapted by Marissa Dierkes and myself for use in Python. 
+
+The .xyz data is initially sorted into bins with 0.15 nm size. The bin with the maximum number of counts is set at 0 nm, as this peak represents the mean of the surface roughness of the bare silicon. The fitting parameters $m_1$, $s_1$, $k_1$, $m_2$, $s_2$, $k_2$ (as well as $m_3$, $s_3$, $k_3$ for three normal distributions) are used in the objective function @eq-lin-combo-gaussian when optimising.
 
 $$
 f(x) = k_1\exp{\Bigg(-\frac{{(x-m_1)}^{2}}{{2s_1}^{2}}\Bigg)} + k_2\exp{\Bigg(-\frac{{(x-m_2)}^{2}}{{2s_2}^{2}}\Bigg)} + ...

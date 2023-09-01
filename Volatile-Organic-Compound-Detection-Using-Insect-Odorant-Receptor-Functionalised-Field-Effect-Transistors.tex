@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, interior hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, enhanced, boxrule=0pt, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}, breakable, enhanced, interior hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -1339,7 +1339,7 @@ discussed further in Section~\ref{sec-photoresist-contamination}.
 
 }
 
-\subcaption{\label{fig-bundled-network}Solvent-based deposition}
+\subcaption{\label{fig-bundled-network}Solvent based deposition}
 \end{minipage}%
 %
 \begin{minipage}[t]{0.05\linewidth}
@@ -1364,8 +1364,8 @@ discussed further in Section~\ref{sec-photoresist-contamination}.
 
 }
 
-\subcaption{\label{fig-dropcast-network}Dropcast surfactant-based
-deposition (90\%-s)}
+\subcaption{\label{fig-dropcast-network}Dropcast surfactant based
+deposition (S-90\%)}
 \end{minipage}%
 \newline
 \begin{minipage}[t]{0.47\linewidth}
@@ -1380,8 +1380,8 @@ deposition (90\%-s)}
 
 }
 
-\subcaption{\label{fig-steaming-network-90}Steam-assisted
-surfactant-based deposition (90\%-s)}
+\subcaption{\label{fig-steaming-network-90}Steam-assisted surfactant
+based deposition (S-90\%)}
 \end{minipage}%
 %
 \begin{minipage}[t]{0.05\linewidth}
@@ -1406,8 +1406,8 @@ surfactant-based deposition (90\%-s)}
 
 }
 
-\subcaption{\label{fig-steaming-network-99}Steam-assisted
-surfactant-based deposition (99\%-s)}
+\subcaption{\label{fig-steaming-network-99}Steam-assisted surfactant
+based deposition (S-99\%)}
 \end{minipage}%
 
 \caption{\label{fig-afm-morphology}Atomic force microscope images of
@@ -1421,7 +1421,7 @@ resulting network morphology. The diameter range of deposited
 single-walled carbon nanotubes can be modelled via a normal or Gaussian
 distribution \autocite{Thanihaichelvan2018,Liu2013,Vobornik2023}.
 However, when we extract and bin the height profiles from the AFM images
-in Figure~\ref{fig-afm-morphology}, the histogram does not follow a
+in Figure~\ref{fig-afm-morphology}, the histograms do not follow a
 normal distribution. The AFM histogram shape results from the SiO\(_2\)
 substrate and carbon nanotubes both exhibiting some roughness, which is
 partially due to surface contamination by atmospheric contaminants. In
@@ -1429,8 +1429,105 @@ the case of the surfactant-deposited networks, residual surfactant may
 also contribute to surface roughness \autocite{Vobornik2023}. However,
 it has been shown that bare SiO\(_2\) substrate has a surface roughness
 which can also be modelled with a normal distribution, with a height
-range of approximately \(\pm\) 1 nm about the mean
-\autocite{Velicky2015}.o
+range of approximately \pm1 nm about the mean, which we set as 0 nm
+\autocite{Velicky2015}. Therefore, we can assume that a better model for
+the AFM histograms is a linear combination of normal distributions.
+
+\begin{figure}
+
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/Ned_NTQ24_20220125_00235_histogram.png}
+
+}
+
+}
+
+\subcaption{\label{fig-bundled-network-histogram}Solvent based
+deposition}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_histogram.png}
+
+}
+
+}
+
+\subcaption{\label{fig-dropcast-network-histogram}Dropcast
+surfactant-based deposition (S-90\%)}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/Ned_NTQ21C1_W1_PBASEonly_20211116_00057_histogram.png}
+
+}
+
+}
+
+\subcaption{\label{fig-steaming-network-90-histogram}Steam-assisted
+surfactant-based deposition (S-90\%)}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/Ned_NGQ14D2_W4_pristine_20220713_00567_histogram.png}
+
+}
+
+}
+
+\subcaption{\label{fig-steaming-network-99-histogram}Steam-assisted
+surfactant-based deposition (S-99\%)}
+\end{minipage}%
+
+\caption{\label{fig-afm-histograms}Surface profile histograms extracted
+from the atomic force microscope images seen in
+Figure~\ref{fig-afm-morphology}, each fitted with a linear combination
+of normal distributions. The component normal distributions
+corresponding to each linear combination are also shown.}
+
+\end{figure}
+
+By using the analysis discussed in Section~\ref{sec-histogram-analysis}
 
 \hypertarget{sec-dummy-sensing}{%
 \section{Salt Concentration Sensing with Phosphate Buffered
@@ -2015,19 +2112,23 @@ available on request.
 \section{Atomic Force Microscope Histogram
 Analysis}\label{sec-histogram-analysis}}
 
-The purpose of this code is to analyze atomic force microscope (AFM)
-images of carbon nanotube networks in .xyz file format. This code can
-return morphology statistics such as height distribution and carbon
-nanotube coverage/density. The SciPy optimize package is used to fit two
-or three normal distributions to the .xyz datasets from the AFM, with
-the number of normal distributions chosen depending on which gives a
-better quality fit. The .xyz data is initially sorted into bins with
-0.15 nm size. The bin with the maximum number of counts is set at 0 nm,
-as this peak represents the mean of the surface roughness of the bare
-silicon. The fitting parameters \(m_1\), \(s_1\), \(k_1\), \(m_2\),
-\(s_2\), \(k_2\) (as well as \(m_3\), \(s_3\), \(k_3\) for three normal
-distributions) are used in the objective function
-Equation~\ref{eq-lin-combo-gaussian} when optimising.
+The purpose of this code is to return morphology statistics such as
+height distribution and carbon nanotube coverage/density from atomic
+force microscope (AFM) images of carbon nanotube networks. The code uses
+the SciPy optimize package to fit two or three normal distributions to
+.xyz datasets from AFM images processed in Gwyddion (see
+Section~\ref{sec-afm-characterisation}). The number of normal
+distributions was chosen based on which gave a better quality fit to the
+.xyz data. It was originally designed by Erica Happe in Matlab, and
+adapted by Marissa Dierkes and myself for use in Python.
+
+The .xyz data is initially sorted into bins with 0.15 nm size. The bin
+with the maximum number of counts is set at 0 nm, as this peak
+represents the mean of the surface roughness of the bare silicon. The
+fitting parameters \(m_1\), \(s_1\), \(k_1\), \(m_2\), \(s_2\), \(k_2\)
+(as well as \(m_3\), \(s_3\), \(k_3\) for three normal distributions)
+are used in the objective function Equation~\ref{eq-lin-combo-gaussian}
+when optimising.
 
 \begin{equation}\protect\hypertarget{eq-lin-combo-gaussian}{}{
 f(x) = k_1\exp{\Bigg(-\frac{{(x-m_1)}^{2}}{{2s_1}^{2}}\Bigg)} + k_2\exp{\Bigg(-\frac{{(x-m_2)}^{2}}{{2s_2}^{2}}\Bigg)} + ...
