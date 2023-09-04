@@ -1,6 +1,6 @@
 #	Characteristics of Pristine Carbon Nanotube & Graphene Field Effect Transistors
 
-```{python}
+```{python none}
 import re
 
 # Dictionary to map month abbreviations to numbers
@@ -42,7 +42,7 @@ with open("references.bib", "w", encoding="utf-8") as file:
 
 ##	Carbon Nanotube Network Morphology
 
-@fig-afm-morphology shows a side-by-side comparison of the surface morphology of carbon nanotube films fabricated using the methods described in @sec-dep-carbon-nanotubes. These images were collected using an atomic force microscope and processed in the manner described in @sec-afm-characterisation. They each show bundles of carbon nanotubes with a range of diameters and lengths, with each bundle containing one or multiple nanotubes. As discussed in previous works using solvent-based deposition techniques for depositing carbon nanotubes, multi-tube bundles form due to mutual attraction between nanotubes [@Zheng2017; @Thanihaichelvan2018; @Thanihaichelvan2019]. The diameter range provided by the supplier for the individual carbon nanotubes used is 1.2-1.7 nm, while the length range is 0.3-5.0 $\mu$m (Nanointegris). Figures @fig-steaming-network-90 and @fig-steaming-network-99 also show the presence of some non-nanotube contaminants on the substrate surface, which could be tiny amounts of residual photoresist. The presence of residual photoresist is discussed further in @sec-photoresist-contamination. 
+@fig-afm-morphology shows a side-by-side comparison of the surface morphology of carbon nanotube films fabricated using the methods described in @sec-dep-carbon-nanotubes. These images were collected using an atomic force microscope and processed in the manner described in @sec-afm-characterisation. They each show bundles of carbon nanotubes with a range of diameters and lengths, with each bundle containing one or multiple nanotubes. As discussed in previous works using solvent-based deposition techniques for depositing carbon nanotubes, multi-tube bundles form due to strong mutual attraction between nanotubes [@Zheng2017; @Thanihaichelvan2018; @Thanihaichelvan2019; @Nguyen2021]. However, when surfactants are present, they adsorb onto the carbon nanotubes and form a highly repulsive structure able to overcome the strong attraction between nanotubes. This repulsion then keeps the individual carbon nanotubes isolated [@Wenseleers2004; @Shimizu2013]. The diameter range provided by the supplier for the individual carbon nanotubes used is 1.2-1.7 nm, while the length range is 0.3-5.0 $\mu$m (Nanointegris).
 
 ::: {#fig-afm-morphology layout="[[47.5,-5,47.5], [47.5,-5,47.5]]"}
 
@@ -76,7 +76,8 @@ By using the analysis discussed in @sec-histogram-analysis, we find that a linea
 
 ```{r}
 #| label: tbl-circle-packing
-#| tbl-cap: Optimised ratio of 2D packed circle diameter to encompassing circle diameter, given to 3 s.f. (encompassing circle diameter = $d$, number of packed circles = $n$, approximate packed circle diameter = $d_n$)
+#| tbl-cap: Optimised ratio of 2D packed circle diameter to encompassing circle diameter, given to 3 s.f. (encompassing circle diameter = $d$, number of packed circles = $n$, approximate packed circle diameter = $d_n$).\\
+#|
 
 knitr::opts_chunk$set(echo = FALSE)
 library(knitr)
@@ -89,6 +90,10 @@ knitr::kable(circle_packing, col.names = NULL, format = "simple")
 ```
 
 @tbl-circle-packing shows the relationship between the diameter of a bundle and the constituent diameters of up to nine 2D packed carbon nanotubes within that bundle. The second distribution in @fig-bundled-network-histogram indicates the mean diameter of carbon nanotube bundles is 4.62 nm. Assuming an average carbon nanotube diameter of 1.45 nm, we find a $d_n$/$d$ packing ratio of 0.314, indicating an average bundle composition of $\sim$ 7 nanotubes in @fig-bundled-network-histogram.
+
+For the carbon nanotube networks deposited using surfactant, we notice that there are two non-SiO$_2$ distributions present. The mean of the second distribution, the left-most non-SiO$_2$ distribution, falls below the average height for a single carbon nanotube. This attribute indicates that the distribution either represents broken pieces of individual carbon nanotubes, residual surfactant or other atmospheric contamination resistant to acetone and isopropanol rinsing. This contamination distribution is significantly larger for the carbon nanotube devices which used steam in the deposition process. From @fig-steaming-network-90 and @fig-steaming-network-99, we also see that steam deposited devices have sparsely distributed $\sim$ 10 nm high features visible on their surface which are not present for the other films. These observations may be evidence of trapped water microdroplets on the surface from the steam, or could be from the steam causing surfactant to form persistent features on the surface. The size of this central peak may be useful for determining the extent of contamination in a carbon nanotube film.
+
+In @fig-afm-morphology, we see that carbon nanotubes deposited using surfactant form bundles which are significantly thinner than the bundles in the film deposited using solvent in @fig-bundled-network-histogram. 
 
 
 
