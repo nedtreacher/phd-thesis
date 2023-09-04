@@ -76,7 +76,7 @@ By using the analysis discussed in @sec-histogram-analysis, we find that a linea
 
 ```{r}
 #| label: tbl-circle-packing
-#| tbl-cap: Optimised diameter ratio of 2D packed circles to that of the encompassing circle, given to 3 s.f. (encompassing circle diameter = $d$, number of packed circles = $n$, approximate packed circle diameter = $d_n$)
+#| tbl-cap: Optimised ratio of 2D packed circle diameter to encompassing circle diameter, given to 3 s.f. (encompassing circle diameter = $d$, number of packed circles = $n$, approximate packed circle diameter = $d_n$)
 
 knitr::opts_chunk$set(echo = FALSE)
 library(knitr)
@@ -88,7 +88,7 @@ circle_packing <- circle_packing[rowSums(is.na(circle_packing)) == 0,]
 knitr::kable(circle_packing, col.names = NULL, format = "simple")
 ```
 
-@tbl-circle-packing shows the relationship between the diameter of a bundle and the constituent diameters of up to nine 2D packed carbon nanotubes within that bundle. The second distribution in @fig-bundled-network-histogram indicates the mean diameter of carbon nanotube bundles is 4.62 nm. Assuming an average carbon nanotube diameter of 1.45 nm, we find a $d_n$/$d$ ratio of 0.314, indicating an average bundle composition of $\sim$ 7 nanotubes in @fig-bundled-network-histogram.
+@tbl-circle-packing shows the relationship between the diameter of a bundle and the constituent diameters of up to nine 2D packed carbon nanotubes within that bundle. The second distribution in @fig-bundled-network-histogram indicates the mean diameter of carbon nanotube bundles is 4.62 nm. Assuming an average carbon nanotube diameter of 1.45 nm, we find a $d_n$/$d$ packing ratio of 0.314, indicating an average bundle composition of $\sim$ 7 nanotubes in @fig-bundled-network-histogram.
 
 
 
