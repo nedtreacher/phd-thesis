@@ -193,7 +193,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, enhanced, sharp corners, breakable, borderline west={3pt}{0pt}{shadecolor}, frame hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, sharp corners, frame hidden, boxrule=0pt, enhanced, breakable, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -422,7 +422,7 @@ surfactant-based deposition}
 }
 
 \subcaption{\label{fig-steaming-network-histogram}Steam-assisted
-surfactant-based deposition}
+dropcast surfactant-based deposition}
 \end{minipage}%
 %
 \begin{minipage}[t]{0.26\linewidth}
@@ -449,8 +449,8 @@ histograms corresponding to the AFM images in
 Figure~\ref{fig-afm-morphology} with an R-squared value of at least
 0.987. The first or left-most distribution for all three figures in
 Figure~\ref{fig-afm-histograms} corresponds to the SiO\(_2\) substrate
-roughness, centered at \$\sim\$0 nm and with a standard deviation of
-0.5-1.1 nm. For the carbon nanotube film deposited with solvent, the
+roughness, centered at \(\sim\) 0 nm and with a standard deviation of
+0.4-1.2 nm. For the carbon nanotube film deposited with solvent, the
 second distribution then corresponds to bundles of carbon nanotubes. If
 we model bundles as cylinders, and we assume the component nanotubes
 follow 2D packing and are of equal diameter, we can give an estimate the
@@ -488,7 +488,7 @@ packed carbon nanotubes within that bundle. The second distribution in
 Figure~\ref{fig-bundled-network-histogram} indicates the mean diameter
 of carbon nanotube bundles is 4.62 nm. Assuming an average carbon
 nanotube diameter of 1.45 nm, we find a \(d_n\)/\(d\) packing ratio of
-0.314, indicating an average bundle composition of \$\sim\$7 nanotubes
+0.314, indicating an average bundle composition of \(\sim\) 7 nanotubes
 in Figure~\ref{fig-bundled-network-histogram}.
 
 For the carbon nanotube networks deposited using surfactant in
@@ -500,11 +500,14 @@ that the distribution either represents broken pieces of individual
 carbon nanotubes, residual surfactant or other atmospheric contamination
 resistant to acetone and isopropanol rinsing. This contamination
 distribution is significantly larger for the carbon nanotube devices
-which used steam in the deposition process.
+which used steam in the deposition process. The presence of this
+contamination histogram distribution was consistently found for all
+sampled surfactant-deposited film AFM data, while not present for any of
+the sampled solvent-deposited films.
 
 From Figure~\ref{fig-steaming-network}, we also see that steam deposited
-devices have sparsely distributed \$\sim\$10 nm high features visible on
-their surface which are not present for the other films. These
+devices have sparsely distributed \(\sim\) 10 nm high features visible
+on their surface which are not present for the other films. These
 observations may be evidence of trapped water microdroplets on the
 surface from the steam, or could be from the steam causing surfactant to
 form persistent features on the surface. The size of this central peak
@@ -516,13 +519,53 @@ In Figure~\ref{fig-afm-morphology}, we see that carbon nanotubes
 deposited in a surfactant dispersion form bundles which are
 significantly thinner than the bundles in the film deposited using
 solvent. However, it appears despite the presence of surfactant, not all
-carbon nanotubes are deposited individually. This bundling may occur
-between carbon nanotubes during the deposition process.
+carbon nanotubes are deposited individually. Bundling may occur during
+the process of deposition onto the substrate, which could disrupt the
+repulsive forces from the surfactant coating and allow attractive forces
+to temporarily dominate. From the mean heights of surfactant-deposited
+films in Figure~\ref{fig-afm-histograms}, we find \(d_n\)/\(d\) packing
+ratios of 0.545 and 0.668 for
+Figure~\ref{fig-dropcast-network-histogram} and
+Figure~\ref{fig-steaming-network-histogram} respectively. By comparing
+these values to Table~\ref{tbl-circle-packing}, we find these films have
+an average bundle composition of \(\sim\) 1 nanotube, indicating the
+majority of carbon nanotubes deposited are successfully kept isolated by
+the surfactant.
+
+It is also important to consider that for all figures in
+Figure~\ref{fig-afm-morphology}, larger height measurements in the
+carbon nanotube histogram include surface contamination on the carbon
+nanotubes as well as bundle-bundle junctions. The histogram may also
+encompass broken nanotube pieces and some silicon oxide surface
+contamination at the low end of the range.
+
+\hypertarget{tbl-histogram-parameters}{}
+\begin{table}
+\caption{\label{tbl-histogram-parameters}The mean of histogram distributions across three different samples for
+carbon nanotube films deposited using various methods, along with the
+mean sample coverage with bundles and mean proportion of multitubed
+bundles present }\tabularnewline
+
+\centering
+\begin{tabular}{>{\raggedright\arraybackslash}p{2.4cm}ccccc}
+\toprule
+\multicolumn{1}{c}{\textbf{ }} & \multicolumn{3}{c}{\textbf{Distribution mean (nm)}} & \multicolumn{2}{c}{\textbf{ }} \\
+\cmidrule(l{3pt}r{3pt}){2-4}
+ & Silicon & Contaminant & Bundles & \% coverage & \% multi-tubed\\
+\midrule
+Solvent deposited & 0 ± 2 & — & 6 ± 4 & 40 ± 20 & 80 ± 20\\
+ &  &  &  &  \vphantom{1} & \\
+Surfactant deposited & 0 ± 1 & 1 ± 1 & 2 ± 2 & 30 ± 10 & 30 ± 30\\
+ &  &  &  &  & \\
+Surfactant deposited with steam & 0 ± 1 & 1 ± 1 & 2 ± 1 & 50 ± 10 & 20 ± 20\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 -steaming - better coverage!
 
 It is possible that the bundling of surfactant-dispersed carbon
-nanotubes occurs as a result of the coffee-ring effect
+nanotubes occurs due to the coffee-ring effect
 \autocite{Deegan1997,VanGaalen2021}. The coffee-ring effect refers to a
 build-up of dispersed solid forming around the edges of a dispersion
 evaporating on a surface. This process occurs due to the dispersion
@@ -822,7 +865,7 @@ our fit.
 
 Using the objective function with these fitting parameters in the
 scipy.optimize.curve\_fit module, we receive optimised fitting
-parameters which gave an R-squared value of 0.98 or greater. By
+parameters which gave an R-squared value of 0.96 or greater. By
 calculating the area under each of the normal distributions found from
 the fit, we can find the proportion of the surface covered by carbon
 nanotubes.

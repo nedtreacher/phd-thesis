@@ -1,3 +1,9 @@
+---
+keep-tex: true
+latex-output-dir: ../output
+format: pdf
+---
+
 #	Characteristics of Pristine Carbon Nanotube & Graphene Field Effect Transistors
 
 ```{python none}
@@ -89,15 +95,43 @@ knitr::kable(circle_packing, col.names = NULL, format = "simple")
 
 @tbl-circle-packing shows the relationship between the diameter of a bundle and the constituent diameters of up to nine 2D packed carbon nanotubes within that bundle. The second distribution in @fig-bundled-network-histogram indicates the mean diameter of carbon nanotube bundles is 4.62 nm. Assuming an average carbon nanotube diameter of 1.45 nm, we find a $d_n$/$d$ packing ratio of 0.314, indicating an average bundle composition of $\sim$ 7 nanotubes in @fig-bundled-network-histogram.
 
-For the carbon nanotube networks deposited using surfactant in @fig-afm-histograms, we notice that there are two non-SiO$_2$ distributions present. The mean of the second distribution, the left-most non-SiO$_2$ distribution, falls below the average height for a single carbon nanotube. This attribute indicates that the distribution either represents broken pieces of individual carbon nanotubes, residual surfactant or other atmospheric contamination resistant to acetone and isopropanol rinsing. This contamination distribution is significantly larger for the carbon nanotube devices which used steam in the deposition process.
+For the carbon nanotube networks deposited using surfactant in @fig-afm-histograms, we notice that there are two non-SiO$_2$ distributions present. The mean of the second distribution, the left-most non-SiO$_2$ distribution, falls below the average height for a single carbon nanotube. This attribute indicates that the distribution either represents broken pieces of individual carbon nanotubes, residual surfactant or other atmospheric contamination resistant to acetone and isopropanol rinsing. This contamination distribution is significantly larger for the carbon nanotube devices which used steam in the deposition process. The presence of this contamination histogram distribution was consistently found for all sampled surfactant-deposited film AFM data, while not present for any of the sampled solvent-deposited films.
 
 From @fig-steaming-network, we also see that steam deposited devices have sparsely distributed $\sim$ 10 nm high features visible on their surface which are not present for the other films. These observations may be evidence of trapped water microdroplets on the surface from the steam, or could be from the steam causing surfactant to form persistent features on the surface. The size of this central peak may be useful for determining the extent of contamination in a carbon nanotube film. Such contamination may or may not have implications for biosensing suitability.
 
-In @fig-afm-morphology, we see that carbon nanotubes deposited in a surfactant dispersion form bundles which are significantly thinner than the bundles in the film deposited using solvent. However, it appears despite the presence of surfactant, not all carbon nanotubes are deposited individually. Bundling may occur during the process of deposition onto the substrate, which could disrupt the repulsive forces from the surfactant coating and allow attractive forces to temporarily dominate. From the mean heights of surfactant-deposited films in @fig-afm-histograms, we find $d_n$/$d$ packing ratios of 0.545 and 0.668 for @fig-dropcast-network-histogram and @fig-steaming-network-histogram respectively. By comparing these values to @tbl-circle-packing, we find these films have an average bundle composition of $\sim$ 1 nanotube, indicating the majority of carbon nanotubes deposited are successfully kept isolated by the surfactant.
+In @fig-afm-morphology, we see that carbon nanotubes deposited in a surfactant dispersion form bundles which are significantly thinner than the bundles in the film deposited using solvent. However, it appears despite the presence of surfactant, not all carbon nanotubes are deposited individually. Bundling may occur during the process of deposition onto the substrate, which could disrupt the repulsive forces from the surfactant coating and allow attractive forces to temporarily dominate. From the mean heights of surfactant-deposited films in @fig-afm-histograms, we find $d_n$/$d$ packing ratios of 0.545 and 0.668 for @fig-dropcast-network-histogram and @fig-steaming-network-histogram respectively. By comparing these values to @tbl-circle-packing, we find these films have an average bundle composition of $\sim$ 1 nanotube, indicating the majority of carbon nanotubes deposited are successfully kept isolated by the surfactant. 
+
+It is also important to consider that for all figures in  @fig-afm-morphology, larger height measurements in the carbon nanotube histogram include surface contamination on the carbon nanotubes as well as bundle-bundle junctions. The histogram may also encompass broken nanotube pieces and some silicon oxide surface contamination at the low end of the range.
+
+```{r}
+#| label: setup
+#| include: false
+library(tidyverse)
+library(kableExtra)
+
+histogram_parameters <- read.csv("tables/ch5/histogram_parameters.csv", sep=",", check.names=FALSE)
+histogram_parameters <- histogram_parameters[rowSums(is.na(histogram_parameters)) == 0,]
+```
+
+```{r}
+#| tbl-cap: The mean of histogram distributions across three different samples for carbon nanotube films deposited using various methods, along with the mean sample coverage with bundles and mean proportion of multitubed bundles present
+#| label: tbl-histogram-parameters
+
+histogram_parameters %>% 
+  kable(
+    booktabs = TRUE, #LaTeX "booktabs formatting"
+    linesep = "", #no linespace
+    align = c(rep("l", 1), rep("c", 5)), #aligns col 1 left, all others center
+    col.names = c("", names(.)[-1]), #dataframe sets names of each column
+  ) %>%
+  add_header_above(c(" " = 1, "Distribution mean (nm)" = 3, " " = 2), bold = TRUE) %>% #rows 2,3,4 have a header "Distribution mean (nm)"
+  column_spec(1, width = "2.4cm") #first column is 2.4 cm wide
+
+```
 
 -steaming - better coverage!
 
-It is possible that the bundling of surfactant-dispersed carbon nanotubes occurs as a result of the coffee-ring effect [@Deegan1997; @VanGaalen2021]. The coffee-ring effect refers to a build-up of dispersed solid forming around the edges of a dispersion evaporating on a surface. This process occurs due to the dispersion edges being fixed by surface forces, leading to capillary flow outwards to replace liquid evaporating at the edges, bringing solid material along with it. The presence of vapour is known to disrupt this effect [@Bishop2020]. The 
+It is possible that the bundling of surfactant-dispersed carbon nanotubes occurs due to the coffee-ring effect [@Deegan1997; @VanGaalen2021]. The coffee-ring effect refers to a build-up of dispersed solid forming around the edges of a dispersion evaporating on a surface. This process occurs due to the dispersion edges being fixed by surface forces, leading to capillary flow outwards to replace liquid evaporating at the edges, bringing solid material along with it. The presence of vapour is known to disrupt this effect [@Bishop2020]. The 
 
 
 
