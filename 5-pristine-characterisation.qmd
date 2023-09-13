@@ -49,7 +49,7 @@ with open("references.bib", "w", encoding="utf-8") as file:
 
 ##	Carbon Nanotube Network Morphology
 
-@fig-afm-morphology shows a side-by-side comparison of the surface morphology of carbon nanotube films fabricated using the methods described in @sec-dep-carbon-nanotubes. These images were collected using an atomic force microscope and processed in the manner described in @sec-afm-characterisation. They each show bundles of carbon nanotubes with a range of diameters and lengths, with each bundle containing one or multiple nanotubes. As discussed in previous works using solvent-based deposition techniques for depositing carbon nanotubes, multi-tube bundles form due to strong mutual attraction between nanotubes [@Zheng2017; @Thanihaichelvan2018; @Thanihaichelvan2019; @Nguyen2021]. However, when surfactants are present, they adsorb onto the carbon nanotubes and form a highly repulsive structure able to overcome the strong attraction between nanotubes. This repulsion then keeps the individual carbon nanotubes isolated [@Wenseleers2004; @Shimizu2013]. The diameter range provided by the supplier for the individual carbon nanotubes used is 1.2-1.7 nm, while the length range is 0.3-5.0 $\mu$m (Nanointegris).
+@fig-afm-morphology shows a side-by-side comparison of the surface morphology of carbon nanotube films fabricated using the methods described in @sec-dep-carbon-nanotubes. These images were collected using an atomic force microscope and processed in the manner described in @sec-afm-characterisation. They each show bundles of carbon nanotubes with a range of diameters and lengths, with each bundle containing one or multiple nanotubes. As discussed in previous works using solvent-based deposition techniques for depositing carbon nanotubes, multi-tube bundles form due to strong mutual attraction between nanotubes [@Zheng2017; @Thanihaichelvan2018; @Thanihaichelvan2019; @Nguyen2021]. However, when surfactants are present, they adsorb onto the carbon nanotubes and form a highly repulsive structure able to overcome the strong attraction between nanotubes. This repulsion then keeps the individual carbon nanotubes isolated [@Wenseleers2004; @Shimizu2013]. The diameter range provided by the supplier for the individual carbon nanotubes used is $1.2-1.7$ nm, while the length range is $0.3-5.0$ $\mu$m (Nanointegris).
 
 ::: {#fig-afm-morphology layout="[[47.5,-5,47.5], [-26.25,47.5,-26.25]]"}
 
@@ -59,10 +59,10 @@ with open("references.bib", "w", encoding="utf-8") as file:
 
 ![Steam-assisted dropcast surfactant-based deposition](figures/ch5/Ned_NGQ14D2_W4_pristine_20220713_00567.png){#fig-steaming-network}
 
-2.5 $\mu$m x 2.5 $\mu$m atomic force microscope images of carbon nanotube films deposited using various methods. NOTE NEED TO ADD EXAMPLES OF SURFACTANT BASED DEPOSITION POST-ANNEALLING!!!
+2.5 $\mu$m $\times$ 2.5 $\mu$m atomic force microscope images of carbon nanotube films deposited using various methods. NOTE NEED TO ADD EXAMPLES OF SURFACTANT BASED DEPOSITION POST-ANNEALLING!!!
 :::
 
-The distribution of the deposited carbon nanotubes was modelled to quantatively understand the effect of the various methods used on the resulting network morphology. The diameter range of deposited single-walled carbon nanotubes can be modelled via a normal or Gaussian distribution [@Thanihaichelvan2018; @Liu2013; @Vobornik2023]. However, when we extract and bin the height profiles from the 2.5 $\mu$m x 2.5 $\mu$m AFM images in @fig-afm-morphology, the histograms do not follow a normal distribution. The AFM histogram shape results from the SiO$_2$ substrate and carbon nanotubes both exhibiting a degree of surface roughness, which is partially due to the presence of atmospheric contaminants. In the case of the surfactant-deposited networks, residual surfactant may also contribute to surface roughness [@Vobornik2023]. 
+The distribution of the deposited carbon nanotubes was modelled to quantatively understand the effect of the various methods used on the resulting network morphology. The diameter range of deposited single-walled carbon nanotubes can be modelled via a normal or Gaussian distribution [@Thanihaichelvan2018; @Liu2013; @Vobornik2023]. However, when we extract and bin the height profiles from the 2.5 $\mu$m $\times$ 2.5 $\mu$m AFM images in @fig-afm-morphology, the histograms do not follow a normal distribution. The AFM histogram shape results from the SiO$_2$ substrate and carbon nanotubes both exhibiting a degree of surface roughness, which is partially due to the presence of atmospheric contaminants. In the case of the surfactant-deposited networks, residual surfactant may also contribute to surface roughness [@Vobornik2023]. 
 
 It has been demonstrated that the surface roughness of a bare SiO$_2$ substrate can also be modelled with a normal distribution. This normal distribution has a spread of approximately \pm1 nm about the mean, which can be set as the reference or zero point for other height measurements [@Velicky2015]. As both the carbon nanotube and silicon dioxide background heights can each be modelled using a normal distribution, we therefore assume that a linear combination of normal distributions can be used to model the AFM histograms in @fig-afm-morphology. 
 
@@ -74,10 +74,10 @@ It has been demonstrated that the surface roughness of a bare SiO$_2$ substrate 
 
 ![Steam-assisted dropcast surfactant-based deposition ](figures/ch5/Ned_NGQ14D2_W4_pristine_20220713_00567_histogram.png){#fig-steaming-network-histogram}
 
-Surface profile histograms extracted from the 2.5 $\mu$m x 2.5 $\mu$m atomic force microscope images seen in @fig-afm-morphology, each fitted with a linear combination of normal distributions. The component normal distributions corresponding to each linear combination are also shown.
+Surface profile histograms extracted from the 2.5 $\mu$m $\times$ 2.5 $\mu$m atomic force microscope images seen in @fig-afm-morphology, each fitted with a linear combination of normal distributions. The component normal distributions corresponding to each linear combination are also shown.
 :::
 
-By using the analysis discussed in @sec-histogram-analysis, we find that a linear combination of normal distribution fits to all histograms corresponding to the AFM images in @fig-afm-morphology with an R-squared value of at least 0.987. The first or left-most distribution for all three figures in @fig-afm-histograms corresponds to the SiO$_2$ substrate roughness, centered at $\sim$ 0 nm and with a standard deviation of 0.4-1.2 nm. For the carbon nanotube film deposited with solvent, the second distribution then corresponds to bundles of carbon nanotubes. If we model bundles as cylinders, and we assume the component nanotubes follow 2D packing and are of equal diameter, we can give an estimate the mean bundle size in terms of number of nanotubes *n* [@Graham1998; @Thanihaichelvan2018; @Specht2023].
+By using the analysis discussed in @sec-histogram-analysis, we find that a linear combination of normal distribution fits to all histograms corresponding to the AFM images in @fig-afm-morphology with an R-squared value of at least 0.987. The first or left-most distribution for all three figures in @fig-afm-histograms corresponds to the SiO$_2$ substrate roughness, centered at $\sim$ 0 nm and with a standard deviation of $0.4-1.2$ nm. For the carbon nanotube film deposited with solvent, the second distribution then corresponds to bundles of carbon nanotubes. If we model bundles as cylinders, and we assume the component nanotubes follow 2D packing and are of equal diameter, we can give an estimate the mean bundle size in terms of number of nanotubes *n* [@Graham1998; @Thanihaichelvan2018; @Specht2023].
 
 ```{r}
 #| label: tbl-circle-packing
@@ -126,17 +126,46 @@ histogram_parameters %>%
 
 ```
 
-The distribution means corresponding to each type of deposition method, averaged across histogram fits from three 2.5 $\mu$m x 2.5 $\mu$m atomic force microscope images, are given in @tbl-histogram-parameters. The carbon nanotube bundle mean is given alongside the number of carbon nanotubes corresponding to the mean height according to 2D packing as given in @tbl-circle-packing and Thanihaichelvan *et al.* [@Thanihaichelvan2018]. 
+The distribution means corresponding to each type of deposition method, averaged across histogram fits from three 2.5 $\mu$m $\times$ 2.5 $\mu$m atomic force microscope images, are given in @tbl-histogram-parameters. The carbon nanotube bundle mean is given alongside the number of carbon nanotubes corresponding to the mean height according to 2D packing as given in @tbl-circle-packing and Thanihaichelvan *et al.* [@Thanihaichelvan2018]. 
 
 It is noticeable that the location of silicon and contamination distribution means are highly consistent between films. Also notable is a the large decrease in bundle size when surfactant is used in the deposition process. There is also a large standard deviation in mean bundle size seen for solvent deposited devices, corresponding to a wide range of bundle sizes present on the atomic force microscope images of the solvent-deposited films. 
 
 It is also important to consider that for all figures in  @fig-afm-morphology, larger height measurements in the carbon nanotube distribution include surface contamination on the carbon nanotubes as well as bundle-bundle junctions. The distribution may also encompass broken nanotube pieces and some silicon oxide surface contamination at the low end of the range. When considering the proportion of single-tube bundles relative to multi-tube bundles, we exclude heights from the carbon nanotube normal distribution below 1.2 nm, the minimum height of the supplied carbon nanotubes. We also exclude heights above double the distribution mean, to ignore bundle-bundle junctions and surface contamination. 
 
-We then compare the proportion of the curve below and above 2.9 nm, the minimum multi-tube bundle size for 1.45 nm diameter nanotubes. By doing so, we get a rough estimate of the proportion of single- to multi-tube bundles present on the surface. We can also compare the total area of the carbon nanotube distribution to the area of the other distributions to get an estimate of the surface coverage by bundles. These values, averaged across the histogram fits from three 2.5 $\mu$m x 2.5 $\mu$m atomic force microscope images, are given in @tbl-histogram-parameters. It should also be noted that nanotubes undergo some compression from the AFM tip, so these values are possibly underestimates. However, the mean values for surfactant-deposited films are in line with those previously found for IsoNanotubes-S deposited on silicon oxide using alternative analysis methods [@Vobornik2023].
+We then compare the proportion of the curve below and above 2.9 nm, the minimum multi-tube bundle size for 1.45 nm diameter nanotubes. By doing so, we get a rough estimate of the proportion of single- to multi-tube bundles present on the surface. We can also compare the total area of the carbon nanotube distribution to the area of the other distributions to get an estimate of the surface coverage by bundles. These values, averaged across the histogram fits from three 2.5 $\mu$m $\times$ 2.5 $\mu$m atomic force microscope images, are given in @tbl-histogram-parameters. It should also be noted that nanotubes undergo some compression from the AFM tip, so these values are possibly underestimates. However, the mean values for surfactant-deposited films are in line with those previously found for IsoNanotubes-S deposited on silicon oxide using alternative analysis methods [@Vobornik2023].
 
 In @fig-afm-morphology and @tbl-histogram-parameters, we see that carbon nanotubes deposited in a surfactant dispersion form bundles which are significantly less wide than the bundles in the film deposited using solvent. However, we also see that despite the presence of surfactant, not all surfactant-dispersed carbon nanotubes are deposited individually. Bundling may occur during the process of deposition onto the substrate, which could disrupt the repulsive forces from the surfactant coating and allow attractive forces to temporarily dominate. The 
 
 It is possible that the bundling of surfactant-dispersed carbon nanotubes occurs due to the coffee-ring effect [@Deegan1997; @VanGaalen2021]. The coffee-ring effect refers to a build-up of dispersed solid forming around the edges of a dispersion evaporating on a surface. This process occurs due to the dispersion edges being fixed by surface forces, leading to capillary flow outwards to replace liquid evaporating at the edges, bringing solid material along with it. The presence of vapour is known to disrupt this effect [@Bishop2020]. @tbl-histogram-parameters demonstrates that on average, the presence of steam reduces the number of nanotube bundles present and increases surface coverage, supporting the above hypothesis.
+
+##	Electrical Characteristics {#sec-pristine-electrical-characterisation}
+
+### Carbon Nanotubes
+
+Each carbon nanotube device fabricated was electrically characterised as described in @sec-electrical-characterisation. Figure @fig-pristine-cnt-characteristics displays multi-channel measurements of representative devices fabricated as described in @sec-fabrication. To ensure a consistent comparison, each device here was encapsulated with AZ$^\circledR$ 1518 encapsulation before measurements were taken. The channels which did not exhibit reliable transistor characteristics are not shown. These non-working channels were either short, due to metal remaining on the channel after lift-off, or were very low current, due to a very sparse carbon nanotube network. Devices shown here with a solvent-deposited carbon nanotube network were fabricated prior to Jan 2022; devices with a surfactant-deposited network without steam present were fabricated prior to Jun 2021; devices with a surfactant-deposited network without steam were fabricated prior to Sep 2022.
+
+Consistent subthreshold regime behaviour between channels is desirable for reliable multiplexed biosensing. 
+
+::: {#fig-pristine-cnt-characteristics layout="[[49,-2,49], [49,-2,49], [49,-2,49]]"}
+
+![Solvent-based deposition, back-gated](figures/ch5/NTQ25C7_pristine_TXLG02_220125_solvent_nogate.png){#fig-solvent-tx-bg}
+
+![Solvent-based deposition, aqueous-gated](figures/ch5/NTQ25C7_pristine_TXLG02_220125_solvent_gate.png){#fig-solvent-tx-tx-lg}
+
+![Dropcast surfactant-based deposition, back-gated](figures/ch5/NTQ5C3_pristine_TXLG01_210602_nosteam_nogate.png){#fig-surf-tx-bg}
+
+![Dropcast surfactant-based deposition, aqueous-gated](figures/ch5/NTQ5C3_pristine_TXLG01_210602_nosteam_gate.png){#fig-surf-tx-lg}
+
+![Steam-assisted dropcast surfactant-based deposition, back-gated](figures/ch5/Q18C6_steam_backgate.png){#fig-steam-tx-bg}
+
+![Steam-assisted dropcast surfactant-based deposition, aqueous-gated](figures/ch5/NTQ18C1_steam_gate.png){#fig-steam-tx-lg}
+
+Transfer characteristics of carbon nanotube networks deposited using various methods. 1XPBS was used as the buffer for the liquid-gated measurements here. Source-drain voltage used was $V_{ds} = 100 \textrm{mV}$, with a step size of either 10 or 20 mV used for the sweep.
+:::
+
+
+
+<!-- Figure comparing backgate with buffer and without buffer !--> 
 
 ##	Salt Concentration Sensing with Phosphate Buffered Saline {#sec-dummy-sensing}
 

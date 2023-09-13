@@ -23,9 +23,9 @@ The specific photoresist selected for photolithography depends on the specific u
 
 If metal deposition is performed on a positive resist, some metal can collect on the outwardly-sloped sidewalls of the resist (see @fig-photolithography-profiles) which forms significant spikes on the edges of the deposited metal upon lift-off. On the other hand, metal cannot collect on top of the inwardly-sloped negative profile sidewalls, which avoids the formation of large edge spikes. Therefore, the negative resist profile is more suited to metal or metal oxide deposition and lift-off processes, though the process is more sensitive to human error due to requiring more processing steps than positive resist [@Microchemicals]. Finally, when it is suitably processed SU-8 is considered to be more stable and biocompatible than other photoresists [@Albarghouthi2022]. It is especially biocompatible when chemically modified via processes such as isopropanol sonication and O$_2$ plasma treatment [@Chen2021].
 
-All photolithographic exposure was performed using a Karl Suss MJB3 Contact Aligner with a USHIO super-high pressure 350 W mercury lamp (USH-350DS, Japan). When performing photolithography, the intensity reading from the aligner was 20.8 - 24.2 mW/cm$^2$ (Note however that an external photometer reading at 400 nm found an intensity output of 17.2 mW/cm$^2$ when the aligner read 21.0 mW/cm$^2$). 
+All photolithographic exposure was performed using a Karl Suss MJB3 Contact Aligner with a USHIO super-high pressure 350 W mercury lamp (USH-350DS, Japan). When performing photolithography, the intensity reading from the aligner was $20.8-24.2$ mW/cm$^2$ (Note however that an external photometer reading at 400 nm found an intensity output of 17.2 mW/cm$^2$ when the aligner read 21.0 mW/cm$^2$). 
 
-In general, photolithography procedures should be performed under yellow lighting, as light wavelengths from 320-450 nm can promote reactions in the photoresist used. Aging of photoresist over time can also significantly affect the photolithography process, and therefore all processes should be re-optimised regularly over time to give the desired result [@Microchemicals]. The range in processing times for some steps of the processes used here are largely due to the effects of aging on the photoresist. 
+In general, photolithography procedures should be performed under yellow lighting, as light wavelengths from $320-450$ nm can promote reactions in the photoresist used. Aging of photoresist over time can also significantly affect the photolithography process, and therefore all processes should be re-optimised regularly over time to give the desired result [@Microchemicals]. The range in processing times for some steps of the processes used here are largely due to the effects of aging on the photoresist. 
 
  The step-by-step processes for each resist are detailed in the subsequent sections.
 
@@ -33,11 +33,11 @@ In general, photolithography procedures should be performed under yellow lightin
 
 1. Spincoat at a final speed of 4000 rotations per minute (rpm) for 1 minute, with an initial acceleration of 500 rpm/s (notes: clean the substrate with acetone, isopropanol (IPA) and nitrogen before spincoating; use only the minimum amount of photoresist required to fully cover the wafer surface; avoid any gaps or bubbles in the photoresist).
 
-2. Softbake 2-4 minutes at $95^\circ$C on the hotplate (2 min for individual devices, 4 min for a quarter wafer)
+2. Softbake $2-4$ minutes at $95^\circ$C on the hotplate (2 min for individual devices, 4 min for a quarter wafer)
 
-3. Mask expose for 10-12 s (note: clean mask with acetone/IPA and N$_2$ dry before use)
+3. Mask expose for $10-12$ s (note: clean mask with acetone/IPA and N$_2$ dry before use)
 
-4. Develop with 3 parts AZ$^\circledR$ 326 (2.38 % TMAH metal-ion free developer, Microchemicals GmbH) in 1 part deionised (DI) water for 30-45 s (note: rinse for 10-15 s in one development solution, then perform the rest of the development in clean developer for a cleaner profile; lightly agitate the solution throughout the development process)
+4. Develop with 3 parts AZ$^\circledR$ 326 (2.38 % TMAH metal-ion free developer, Microchemicals GmbH) in 1 part deionised (DI) water for $30-45$ s (note: rinse for $10-15$ s in one development solution, then perform the rest of the development in clean developer for a cleaner profile; lightly agitate the solution throughout the development process)
 
 5. Rinse device for 30 s in DI water to remove excess developer, then dry under nitrogen
 
@@ -47,24 +47,24 @@ In general, photolithography procedures should be performed under yellow lightin
 
 2. Softbake for precisely 60 s at $110^\circ$C on the hotplate
 
-3. Mask expose for 2.7-3 s (note: clean mask with acetone/IPA and N$_2$ dry before use)
+3. Mask expose for $2.7-3$ s (note: clean mask with acetone/IPA and N$_2$ dry before use)
 
 4. Post-exposure bake for precisely 60 s at $110^\circ$C on the hotplate to cross-link exposed resist
 
-5. Develop with 3 parts AZ$^\circledR$ 326 in 1 part DI water for 60-70 s (note: rinse for 30 s in one development solution, then perform the rest of the development in clean developer for a cleaner profile; lightly agitate the solution throughout the development process)
+5. Develop with 3 parts AZ$^\circledR$ 326 in 1 part DI water for $60-70$ s (note: rinse for 30 s in one development solution, then perform the rest of the development in clean developer for a cleaner profile; lightly agitate the solution throughout the development process)
 
 6. Rinse device for 30 s in DI water to remove excess developer, then dry under nitrogen
 
 ## SU8-2150 photoresist
 
-1. SU-8 was diluted in cyclopentanone until viscosity was low enough to spincoat on substrate and then sonicated at $50^\circ$C for 3-4 hours (Note: The dilution ratio used was ~1 part SU-8 to 5 parts cyclopentanone. However, the age of the SU-8 may mean that significant evaporation had occurred prior to use, and the amount of SU-8 actually present is underrepresented by this ratio)
+1. SU-8 was diluted in cyclopentanone until viscosity was low enough to spincoat on substrate and then sonicated at $50^\circ$C for $3-4$ hours (Note: The dilution ratio used was ~1 part SU-8 to 5 parts cyclopentanone. However, the age of the SU-8 may mean that significant evaporation had occurred prior to use, and the amount of SU-8 actually present is underrepresented by this ratio)
 
 2. Spincoat first with a final speed of 500 rpm (acceleration 500 rpm/s) for 10 seconds, followed by spincoating at 4000 rpm (acceleration 7500 rpm/s) for 40 s.
 
 3. Softbake for 10 minutes at $95^\circ$C on the hotplate
     
-3. Mask expose for 6-8 s (note: clean mask with acetone/IPA and N$_2$ dry before use)
+3. Mask expose for $6-8$ s (note: clean mask with acetone/IPA and N$_2$ dry before use)
 
 4. Post-exposure bake for 10 minutes at $95^\circ$C on the hotplate to cross-link exposed resist
 
-5. Develop with SU-8 developer (Kayaku Advanced Materials, formerly Microchem) for 10-15 s, then clean in IPA for 30 s, repeat this step once then dry under nitrogen (note: lightly agitate the solution throughout the development process)
+5. Develop with SU-8 developer (Kayaku Advanced Materials, formerly Microchem) for $10-15$ s, then clean in IPA for 30 s, repeat this step once then dry under nitrogen (note: lightly agitate the solution throughout the development process)
