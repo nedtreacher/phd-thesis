@@ -193,7 +193,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, enhanced, frame hidden, borderline west={3pt}{0pt}{shadecolor}, breakable, sharp corners, interior hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, sharp corners, interior hidden, frame hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -243,9 +243,8 @@ nanotubes and form a highly repulsive structure able to overcome the
 strong attraction between nanotubes. This repulsion then keeps the
 individual carbon nanotubes isolated
 \autocite{Wenseleers2004,Shimizu2013}. The diameter range provided by
-the supplier for the individual carbon nanotubes used is
-1.2\$--\(1.7 nm, while the length range is 0.3\)--\$5.0 \(\mu\)m
-(Nanointegris).
+the supplier for the individual carbon nanotubes used is \(1.2-1.7\) nm,
+while the length range is \(0.3-5.0\) \(\mu\)m (Nanointegris).
 
 \begin{figure}
 
@@ -280,6 +279,22 @@ the supplier for the individual carbon nanotubes used is
 
 \raisebox{-\height}{
 
+\includegraphics{./figures/ch5/Ned_NTQ24_20220125_00235_histogram_guess.png}
+
+}
+
+}
+
+\subcaption{\label{fig-bundled-network-histogram}Solvent based
+deposition histogram}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
 \includegraphics{./figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2).png}
 
 }
@@ -287,90 +302,6 @@ the supplier for the individual carbon nanotubes used is
 }
 
 \subcaption{\label{fig-dropcast-network}Dropcast surfactant-based
-deposition}
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.26\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{./figures/ch5/Ned_NGQ14D2_W4_pristine_20220713_00567.png}
-
-}
-
-}
-
-\subcaption{\label{fig-steaming-network}Steam-assisted dropcast
-surfactant-based deposition}
-\end{minipage}%
-%
-\begin{minipage}[t]{0.26\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-
-\caption{\label{fig-afm-morphology}2.5 \(\mu\)m x 2.5 \(\mu\)m atomic
-force microscope images of carbon nanotube films deposited using various
-methods. NOTE NEED TO ADD EXAMPLES OF SURFACTANT BASED DEPOSITION
-POST-ANNEALLING!!!}
-
-\end{figure}
-
-The distribution of the deposited carbon nanotubes was modelled to
-quantatively understand the effect of the various methods used on the
-resulting network morphology. The diameter range of deposited
-single-walled carbon nanotubes can be modelled via a normal or Gaussian
-distribution \autocite{Thanihaichelvan2018,Liu2013,Vobornik2023}.
-However, when we extract and bin the height profiles from the 2.5
-\(\mu\)m x 2.5 \(\mu\)m AFM images in Figure~\ref{fig-afm-morphology},
-the histograms do not follow a normal distribution. The AFM histogram
-shape results from the SiO\(_2\) substrate and carbon nanotubes both
-exhibiting a degree of surface roughness, which is partially due to the
-presence of atmospheric contaminants. In the case of the
-surfactant-deposited networks, residual surfactant may also contribute
-to surface roughness \autocite{Vobornik2023}.
-
-It has been demonstrated that the surface roughness of a bare SiO\(_2\)
-substrate can also be modelled with a normal distribution. This normal
-distribution has a spread of approximately \pm1 nm about the mean, which
-can be set as the reference or zero point for other height measurements
-\autocite{Velicky2015}. As both the carbon nanotube and silicon dioxide
-background heights can each be modelled using a normal distribution, we
-therefore assume that a linear combination of normal distributions can
-be used to model the AFM histograms in Figure~\ref{fig-afm-morphology}.
-
-\begin{figure}
-
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{./figures/ch5/Ned_NTQ24_20220125_00235_histogram.png}
-
-}
-
-}
-
-\subcaption{\label{fig-bundled-network-histogram}Solvent based
 deposition}
 \end{minipage}%
 %
@@ -390,17 +321,33 @@ deposition}
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_histogram.png}
+\includegraphics{./figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_histogram_guess.png}
 
 }
 
 }
 
 \subcaption{\label{fig-dropcast-network-histogram}Dropcast
-surfactant-based deposition}
+surfactant-based deposition histogram}
 \end{minipage}%
 \newline
-\begin{minipage}[t]{0.26\linewidth}
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/Ned_NGQ14D2_W4_pristine_20220713_00567.png}
+
+}
+
+}
+
+\subcaption{\label{fig-steaming-network}Steam-assisted dropcast
+surfactant-based deposition}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
 
 {\centering 
 
@@ -416,7 +363,7 @@ surfactant-based deposition}
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch5/Ned_NGQ14D2_W4_pristine_20220713_00567_histogram.png}
+\includegraphics{./figures/ch5/Ned_NGQ14D2_W4_pristine_20220713_00567_histogram_guess.png}
 
 }
 
@@ -425,33 +372,51 @@ surfactant-based deposition}
 \subcaption{\label{fig-steaming-network-histogram}Steam-assisted
 dropcast surfactant-based deposition}
 \end{minipage}%
-%
-\begin{minipage}[t]{0.26\linewidth}
 
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-
-\caption{\label{fig-afm-histograms}Surface profile histograms extracted
-from the 2.5 \(\mu\)m x 2.5 \(\mu\)m atomic force microscope images seen
-in Figure~\ref{fig-afm-morphology}, each fitted with a linear
-combination of normal distributions. The component normal distributions
-corresponding to each linear combination are also shown.}
+\caption{\label{fig-afm-morphology}2.5 \(\mu\)m \(\times\) 2.5 \(\mu\)m
+atomic force microscope (AFM) images of carbon nanotube films deposited
+using various methods, shown side-by-side with surface profile
+histograms extracted from the AFM profile. Each histogram is fitted with
+a linear combination of normal distributions. The component normal
+distributions corresponding to each linear combination are also shown.}
 
 \end{figure}
+
+The diameter range of deposited single-walled carbon nanotubes can be
+modelled via a normal or Gaussian distribution
+\autocite{Thanihaichelvan2018,Liu2013,Vobornik2023}. However, when we
+extract and bin the height profiles from the 2.5 \(\mu\)m \(\times\) 2.5
+\(\mu\)m AFM images, plotted in black in
+Figure~\ref{fig-afm-morphology}, the histograms do not follow a normal
+distribution. The reason for this result is that the carbon nanotubes do
+not lie perfectly level on a perfectly level silicon oxide substrate -
+the atomic force microscope histogram would only be a single normal
+distribution in this ideal case. In practice, the SiO\(_2\) substrate
+and carbon nanotube surface both have a degree of roughness, which may
+in part be due to the presence of atmospheric contaminants. In the case
+of the surfactant-deposited networks, residual surfactant may also
+contribute to surface roughness. Nanotubes can also undergo significant
+compression from the AFM tip in tapping mode \autocite{Vobornik2023}.
+Furthermore, nanotubes overlap and cross over each other, creating
+junctions with the combined height of the overlapping nanotubes.
+
+It has been demonstrated that the surface roughness of a bare SiO\(_2\)
+substrate can also be modelled with a normal distribution. This normal
+distribution has a spread of approximately \pm1 nm about the mean, which
+can be set as the reference or zero point for other height measurements
+\autocite{Velicky2015}. As both the carbon nanotube and silicon dioxide
+background heights can each be modelled using a normal distribution, we
+therefore assume that a linear combination of normal distributions can
+be used to model the AFM histograms in Figure~\ref{fig-afm-morphology}.
 
 By using the analysis discussed in Section~\ref{sec-histogram-analysis},
 we find that a linear combination of normal distribution fits to all
 histograms corresponding to the AFM images in
 Figure~\ref{fig-afm-morphology} with an R-squared value of at least
 0.987. The first or left-most distribution for all three figures in
-Figure~\ref{fig-afm-histograms} corresponds to the SiO\(_2\) substrate
+\textbf{?@fig-afm-histograms} corresponds to the SiO\(_2\) substrate
 roughness, centered at \(\sim\) 0 nm and with a standard deviation of
-0.4-1.2 nm. For the carbon nanotube film deposited with solvent, the
+\(0.4-1.2\) nm. For the carbon nanotube film deposited with solvent, the
 second distribution then corresponds to bundles of carbon nanotubes. If
 we model bundles as cylinders, and we assume the component nanotubes
 follow 2D packing and are of equal diameter, we can give an estimate the
@@ -493,7 +458,7 @@ nanotube diameter of 1.45 nm, we find a \(d\)/\(d_n\) packing ratio of
 in Figure~\ref{fig-bundled-network-histogram}.
 
 For the carbon nanotube networks deposited using surfactant in
-Figure~\ref{fig-afm-histograms}, we notice that there are two
+\textbf{?@fig-afm-histograms}, we notice that there are two
 non-SiO\(_2\) distributions present. The mean of the second
 distribution, the left-most non-SiO\(_2\) distribution, falls below the
 average height for a single carbon nanotube. This attribute indicates
@@ -544,8 +509,8 @@ Surfactant deposited with steam & 0.0 ± 0.5 & 1.3 ± 0.6 & 2.0 ± 1.2 (1) & 17 
 \end{table}
 
 The distribution means corresponding to each type of deposition method,
-averaged across histogram fits from three 2.5 \(\mu\)m x 2.5 \(\mu\)m
-atomic force microscope images, are given in
+averaged across histogram fits from three 2.5 \(\mu\)m \(\times\) 2.5
+\(\mu\)m atomic force microscope images, are given in
 Table~\ref{tbl-histogram-parameters}. The carbon nanotube bundle mean is
 given alongside the number of carbon nanotubes corresponding to the mean
 height according to 2D packing as given in
@@ -578,11 +543,9 @@ so, we get a rough estimate of the proportion of single- to multi-tube
 bundles present on the surface. We can also compare the total area of
 the carbon nanotube distribution to the area of the other distributions
 to get an estimate of the surface coverage by bundles. These values,
-averaged across the histogram fits from three 2.5 \(\mu\)m x 2.5
-\(\mu\)m atomic force microscope images, are given in
-Table~\ref{tbl-histogram-parameters}. It should also be noted that
-nanotubes undergo some compression from the AFM tip, so these values are
-possibly underestimates. However, the mean values for
+averaged across the histogram fits from three 2.5 \(\mu\)m \(\times\)
+2.5 \(\mu\)m atomic force microscope images, are given in
+Table~\ref{tbl-histogram-parameters}. However, the mean values for
 surfactant-deposited films are in line with those previously found for
 IsoNanotubes-S deposited on silicon oxide using alternative analysis
 methods \autocite{Vobornik2023}.
@@ -899,13 +862,13 @@ sonication and O\(_2\) plasma treatment \autocite{Chen2021}.
 All photolithographic exposure was performed using a Karl Suss MJB3
 Contact Aligner with a USHIO super-high pressure 350 W mercury lamp
 (USH-350DS, Japan). When performing photolithography, the intensity
-reading from the aligner was 20.8 - 24.2 mW/cm\(^2\) (Note however that
-an external photometer reading at 400 nm found an intensity output of
-17.2 mW/cm\(^2\) when the aligner read 21.0 mW/cm\(^2\)).
+reading from the aligner was \(20.8-24.2\) mW/cm\(^2\) (Note however
+that an external photometer reading at 400 nm found an intensity output
+of 17.2 mW/cm\(^2\) when the aligner read 21.0 mW/cm\(^2\)).
 
 In general, photolithography procedures should be performed under yellow
-lighting, as light wavelengths from 320-450 nm can promote reactions in
-the photoresist used. Aging of photoresist over time can also
+lighting, as light wavelengths from \(320-450\) nm can promote reactions
+in the photoresist used. Aging of photoresist over time can also
 significantly affect the photolithography process, and therefore all
 processes should be re-optimised regularly over time to give the desired
 result \autocite{Microchemicals}. The range in processing times for some
@@ -929,18 +892,18 @@ photoresist}{AZ\^{}\textbackslash circledR 1518 photoresist}}\label{azcircledr-1
   fully cover the wafer surface; avoid any gaps or bubbles in the
   photoresist).
 \item
-  Softbake 2-4 minutes at \(95^\circ\)C on the hotplate (2 min for
+  Softbake \(2-4\) minutes at \(95^\circ\)C on the hotplate (2 min for
   individual devices, 4 min for a quarter wafer)
 \item
-  Mask expose for 10-12 s (note: clean mask with acetone/IPA and N\(_2\)
-  dry before use)
+  Mask expose for \(10-12\) s (note: clean mask with acetone/IPA and
+  N\(_2\) dry before use)
 \item
   Develop with 3 parts AZ\(^\circledR\) 326 (2.38 \% TMAH metal-ion free
   developer, Microchemicals GmbH) in 1 part deionised (DI) water for
-  30-45 s (note: rinse for 10-15 s in one development solution, then
-  perform the rest of the development in clean developer for a cleaner
-  profile; lightly agitate the solution throughout the development
-  process)
+  \(30-45\) s (note: rinse for \(10-15\) s in one development solution,
+  then perform the rest of the development in clean developer for a
+  cleaner profile; lightly agitate the solution throughout the
+  development process)
 \item
   Rinse device for 30 s in DI water to remove excess developer, then dry
   under nitrogen
@@ -960,16 +923,17 @@ photoresist}{AZ\^{}\textbackslash circledR nLOF 2020 photoresist}}\label{azcircl
 \item
   Softbake for precisely 60 s at \(110^\circ\)C on the hotplate
 \item
-  Mask expose for 2.7-3 s (note: clean mask with acetone/IPA and N\(_2\)
-  dry before use)
+  Mask expose for \(2.7-3\) s (note: clean mask with acetone/IPA and
+  N\(_2\) dry before use)
 \item
   Post-exposure bake for precisely 60 s at \(110^\circ\)C on the
   hotplate to cross-link exposed resist
 \item
-  Develop with 3 parts AZ\(^\circledR\) 326 in 1 part DI water for 60-70
-  s (note: rinse for 30 s in one development solution, then perform the
-  rest of the development in clean developer for a cleaner profile;
-  lightly agitate the solution throughout the development process)
+  Develop with 3 parts AZ\(^\circledR\) 326 in 1 part DI water for
+  \(60-70\) s (note: rinse for 30 s in one development solution, then
+  perform the rest of the development in clean developer for a cleaner
+  profile; lightly agitate the solution throughout the development
+  process)
 \item
   Rinse device for 30 s in DI water to remove excess developer, then dry
   under nitrogen
@@ -982,7 +946,7 @@ photoresist}{AZ\^{}\textbackslash circledR nLOF 2020 photoresist}}\label{azcircl
 \def\labelenumi{\arabic{enumi}.}
 \item
   SU-8 was diluted in cyclopentanone until viscosity was low enough to
-  spincoat on substrate and then sonicated at \(50^\circ\)C for 3-4
+  spincoat on substrate and then sonicated at \(50^\circ\)C for \(3-4\)
   hours (Note: The dilution ratio used was \textasciitilde1 part SU-8 to
   5 parts cyclopentanone. However, the age of the SU-8 may mean that
   significant evaporation had occurred prior to use, and the amount of
@@ -994,15 +958,15 @@ photoresist}{AZ\^{}\textbackslash circledR nLOF 2020 photoresist}}\label{azcircl
 \item
   Softbake for 10 minutes at \(95^\circ\)C on the hotplate
 \item
-  Mask expose for 6-8 s (note: clean mask with acetone/IPA and N\(_2\)
-  dry before use)
+  Mask expose for \(6-8\) s (note: clean mask with acetone/IPA and
+  N\(_2\) dry before use)
 \item
   Post-exposure bake for 10 minutes at \(95^\circ\)C on the hotplate to
   cross-link exposed resist
 \item
   Develop with SU-8 developer (Kayaku Advanced Materials, formerly
-  Microchem) for 10-15 s, then clean in IPA for 30 s, repeat this step
-  once then dry under nitrogen (note: lightly agitate the solution
+  Microchem) for \(10-15\) s, then clean in IPA for 30 s, repeat this
+  step once then dry under nitrogen (note: lightly agitate the solution
   throughout the development process)
 \end{enumerate}
 

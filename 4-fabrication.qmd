@@ -169,7 +169,11 @@ The initial attempt at fabricating a dielectric encapsulation layer used silicon
 
 ##	Characterisation via Atomic Force Microscopy {#sec-afm-characterisation}
 
-Atomic force microscopy in this thesis was taken using a Nanosurf NaioAFM in dynamic force mode. Atomic force microscope (AFM) images could not be taken from the small exposed channel region on the encapsulated devices, so were instead taken on a representative carbon nanotube or graphene film sample fabricated on the same wafer as the device being tested. Moisture adversely affected the AFM imaging process. Therefore, films functionalised with biological materials were washed with DI water and gently dried with N$_2$ before atomic force microscope images were taken. The open source data analysis software Gwyddion (version 2.59) was used to analyse AFM images.
+Atomic force microscopy in this thesis was taken using a Nanosurf NaioAFM in dynamic force mode (also known as tapping mode, oscillating mode, acoustic AC mode or intermittent-contact mode). An ACLA probe (AppNano) was used with a tip diameter of 12 nm, height of $14-16$ $\um$m and a nominal cantilever spring constant of 58 N/m. All atomic force microscopy was performed with the Nanosurf NaioAFM on a stablising table under a Faraday cage to minimise mechanical and electromagnetic interference. A 256 $\times$ 256 pixel resolution was typically used. Imaging was performed in air at room temperature. 
+
+Atomic force microscope (AFM) images could not be taken from the small exposed channel region on the encapsulated devices, so were instead taken on a representative carbon nanotube or graphene film sample fabricated on the same wafer as the device being tested. Moisture adversely affected the AFM imaging process. Therefore, films functionalised with biological materials were washed with DI water and gently dried with N$_2$ before atomic force microscope images were taken. 
+
+The open source data analysis software Gwyddion (version 2.59) was used to analyse AFM images. This included levelling the background with the polynomial background removal function, removing scarring and zeroing the z-scale.
 
 ##	Characterisation via Fluorescence Microscopy {#sec-fluorescence-characterisation}
 
