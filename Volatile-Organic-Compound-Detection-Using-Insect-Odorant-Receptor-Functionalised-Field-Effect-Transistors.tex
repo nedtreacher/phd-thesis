@@ -193,7 +193,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, sharp corners, interior hidden, frame hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, sharp corners, breakable, boxrule=0pt, frame hidden]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -376,9 +376,11 @@ dropcast surfactant-based deposition}
 \caption{\label{fig-afm-morphology}2.5 \(\mu\)m \(\times\) 2.5 \(\mu\)m
 atomic force microscope (AFM) images of carbon nanotube films deposited
 using various methods, shown side-by-side with surface profile
-histograms extracted from the AFM profile. Each histogram is fitted with
-a linear combination of normal distributions. The component normal
-distributions corresponding to each linear combination are also shown.}
+histograms extracted from the AFM profile. Each histogram is shown
+alongside a linear combination of normal distributions \#1 and \#2,
+corresponding to the silicon and carbon nanotube distribution
+respectively. The counts remaining after \#1 and \#2 have been
+subtracted from the AFM histogram are shown in blue.}
 
 \end{figure}
 
@@ -402,18 +404,111 @@ junctions with the combined height of the overlapping nanotubes.
 
 It has been demonstrated that the surface roughness of a bare SiO\(_2\)
 substrate can also be modelled with a normal distribution. This normal
-distribution has a spread of approximately \pm1 nm about the mean, which
-can be set as the reference or zero point for other height measurements
-\autocite{Velicky2015}. As both the carbon nanotube and silicon dioxide
-background heights can each be modelled using a normal distribution, we
-therefore assume that a linear combination of normal distributions can
-be used to model the AFM histograms in Figure~\ref{fig-afm-morphology}.
+distribution can be set as the reference or zero point for other height
+measurements \autocite{Velicky2015}. As both the carbon nanotube and
+silicon dioxide background heights can each be modelled using a normal
+distribution, we make an initial assumption that a linear combination of
+normal distributions can be used to model the AFM histograms in
+Figure~\ref{fig-afm-morphology}. Using the process discussed in
+Section~\ref{sec-histogram-analysis}, we approximate the normal
+distributions corresponding to the silicon oxide substrate and carbon
+nanotube network, shown in Figure~\ref{fig-afm-morphology} as green and
+red curves respectively. The silicon oxide peak appears to fit more
+closely to the distribution with smaller carbon nanotube heights, which
+could be due to measurement of the silicon background being improved
+when feature height is smaller. We notice that the distribution for the
+carbon nanotube bundles decays to approximately zero before reaching 0
+nm, which is physically appropriate.
 
-By using the analysis discussed in Section~\ref{sec-histogram-analysis},
-we find that a linear combination of normal distribution fits to all
-histograms corresponding to the AFM images in
-Figure~\ref{fig-afm-morphology} with an R-squared value of at least
-0.987. The first or left-most distribution for all three figures in
+\begin{figure}
+
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/Ned_NTQ24_20220125_00235_half_histogram_fit.png}
+
+}
+
+}
+
+\subcaption{\label{fig-bundled-network-remainder}Solvent based
+deposition histogram}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_half_histogram_fit.png}
+
+}
+
+}
+
+\subcaption{\label{fig-dropcast-network-remainder}Dropcast
+surfactant-based deposition histogram}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.26\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/Ned_NGQ14D2_W4_pristine_20220713_00567_half_histogram_fit.png}
+
+}
+
+}
+
+\subcaption{\label{fig-steaming-network-remainder}Steam-assisted
+dropcast surfactant-based deposition}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.26\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-remaining-histogram}The counts remaining after \#1
+and \#2 have been subtracted from the AFM histogram are shown in blue.}
+
+\end{figure}
+
+By subtracting the modelled silicon and carbon nanotube normal
+distributions from the AFM histogram, we find a remaining
+
+The first or left-most distribution for all three figures in
 \textbf{?@fig-afm-histograms} corresponds to the SiO\(_2\) substrate
 roughness, centered at \(\sim\) 0 nm and with a standard deviation of
 \(0.4-1.2\) nm. For the carbon nanotube film deposited with solvent, the
@@ -986,70 +1081,48 @@ available on request.
 \section{Atomic Force Microscope Histogram
 Analysis}\label{sec-histogram-analysis}}
 
-The purpose of this code is to return morphology statistics such as
-height distribution and carbon nanotube coverage/density from atomic
-force microscope (AFM) images of carbon nanotube networks. The code uses
-the SciPy optimize package to fit two or three normal distributions to
-.xyz datasets from AFM images processed in Gwyddion (see
-\textbf{?@sec-afm-characterisation}). The number of normal distributions
-was chosen based on which gave a better quality fit to the .xyz data. It
-was originally designed by Erica Happe in Matlab, and adapted by Marissa
-Dierkes and myself for use in Python.
-
-The .xyz data is initially sorted into bins with 0.15 nm size. The bin
-with the maximum number of counts is set at 0 nm, as this peak
-represents the mean of the surface roughness of the bare silicon. The
-fitting parameters \(m_1\), \(s_1\), \(k_1\), \(m_2\), \(s_2\), \(k_2\)
-(as well as \(m_3\), \(s_3\), \(k_3\) for three normal distributions)
-are used in the objective function Equation~\ref{eq-lin-combo-gaussian}
-when optimising.
+The purpose of this code is to analyse atomic force microscope (AFM)
+images of carbon nanotube networks in .xyz format taken using an atomic
+force microscope and processed in Gwyddion (see
+\textbf{?@sec-afm-characterisation}). It was originally designed by
+Erica Happe in Matlab, and adapted by Marissa Dierkes and myself for use
+in Python.
 
 \begin{equation}\protect\hypertarget{eq-lin-combo-gaussian}{}{
 f(x) = k_1\exp{\Bigg(-\frac{{(x-m_1)}^{2}}{{2s_1}^{2}}\Bigg)} + k_2\exp{\Bigg(-\frac{{(x-m_2)}^{2}}{{2s_2}^{2}}\Bigg)} + ...
 }\label{eq-lin-combo-gaussian}\end{equation}
 
-These fitting parameters represent the mean (m), standard deviation (s)
-and amplitude (k) of each normal distribution. We can find the initial
-guess for these fitting parameters by using the histogram data to
-roughly approximate these values. \(k_1\) is taken as the maximum
-y-value of the data being fitted, \(m_1\) is set to zero and \(s_1\) is
+The .xyz data is initially sorted into bins with 0.15 nm size. The bin
+with the maximum number of counts is set at 0 nm, as this peak
+represents the mean of the surface roughness of the bare silicon. The
+parameters \(m_i\), \(s_i\), \(k_i\) (i = 1, 2, 3) are used with
+objective function Equation~\ref{eq-lin-combo-gaussian} to overlay the
+data with normal distributions. These fitting parameters represent the
+mean (m), standard deviation (s) and amplitude (k) of each normal
+distribution. We can make approximations of some of these fitting
+parameters using the histogram data.
+
+\(k_1\) is taken to be the maximum y-value of the data being fitted,
+\(m_1\) is set to zero (used as a point of reference) and \(s_1\) is
 taken as one-third of the difference between \(m_1\) and the x-value of
-the first datapoint where the y-value is greater than 1\% of \(k_1\). We
-find the Gaussian given by these values, and subtract it from the
-existing dataset. We then take \(k_2\) to be the maximum y-value of this
-modified dataset, and \(m_1\) to be the x-value of the maximum y-value.
-\(s_2\) is taken as the difference between \(m_1\) and the x-value of
-the first datapoint where the y-value is greater than 60\% of \(k_2\).
-This process is repeated to find \(k_3\) and \(m_3\), and \(s_3\) is
-one-third of the difference between \(m_3\) and the x-value of the
-\emph{last} datapoint where the y-value is greater than 1\% of \(k_3\).
-In this iterative manner, we find a reasonably good initial guess for
-our fit. The linear combination of distributions given by our initial
-guess of parameters is shown by the green dotted line in
-Figure~\ref{fig-scipy-gauss-fit}.
+the first datapoint where the y-value is greater than 1\% of \(k_1\)
+(approximating one standard deviation). We find the distribution given
+by these values using Equation~\ref{eq-lin-combo-gaussian}, and subtract
+it from the existing dataset.
 
-\begin{figure}
+Then, using the analysis technique outlined by Vobornik \emph{et al.}
+\autocite{Vobornik2023} in Gwyddion, we manually find estimates for the
+mean \(m_2\) and standard deviation \(s_2\) of the carbon nanotube
+bundle distribution. We then take \(k_2\) to be the maximum y-value of
+this modified dataset, and \(m_1\) to be the x-value of the maximum
+y-value. We then set \(k_2\) so that the height of the resulting
+distribution at one standard deviation matches the height of the .xyz
+data histogram. We take this distribution, and subtract it from the
+existing dataset.
 
-{\centering \includegraphics[width=0.6\textwidth,height=\textheight]{./figures/app2/Ned_NTQ5D12_pristine_00081_20210423_histogram_initialguess.png}
-
-}
-
-\caption{\label{fig-scipy-gauss-fit}Comparing the initial guess and the
-scipy.optimise fit to the input atomic force microscope histogram}
-
-\end{figure}
-
-Using the objective function with these fitting parameters in the
-scipy.optimize.curve\_fit module, we receive optimised fitting
-parameters which gave an R-squared value of 0.96 or greater. The linear
-combination of distributions corresponding to these optimised fitting
-parameters is shown with the orange dotted line in
-Figure~\ref{fig-scipy-gauss-fit}. By calculating the area under each of
-the normal distributions found from the fit, we can find the proportion
-of the surface covered by carbon nanotube bundles relative. The code
-also allows for discretely binning continuous data from fitted normal
-distributions and examining the proportion of counts above or below a
-particular height.
+The code also allows for discretely binning continuous data from fitted
+normal distributions and examining the proportion of counts above or
+below a particular height.
 
 \begin{equation}\protect\hypertarget{eq-lin-combo-exp-decay}{}{
 f(x) = k_1\exp{\Bigg(-\frac{t}{{\tau}_{1}}\Bigg)} + k_2\exp{\Bigg(-\frac{t}{{\tau}_{2}}\Bigg)} + ... + c

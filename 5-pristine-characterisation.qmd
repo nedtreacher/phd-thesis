@@ -70,9 +70,23 @@ with open("references.bib", "w", encoding="utf-8") as file:
 
 The diameter range of deposited single-walled carbon nanotubes can be modelled via a normal or Gaussian distribution [@Thanihaichelvan2018; @Liu2013; @Vobornik2023]. However, when we extract and bin the height profiles from the 2.5 $\mu$m $\times$ 2.5 $\mu$m AFM images, plotted in black in @fig-afm-morphology, the histograms do not follow a normal distribution. The reason for this result is that the carbon nanotubes do not lie perfectly level on a perfectly level silicon oxide substrate - the atomic force microscope histogram would only be a single normal distribution in this ideal case. In practice, the SiO$_2$ substrate and carbon nanotube surface both have a degree of roughness, which may in part be due to the presence of atmospheric contaminants. In the case of the surfactant-deposited networks, residual surfactant may also contribute to surface roughness. Nanotubes can also undergo significant compression from the AFM tip in tapping mode [@Vobornik2023]. Furthermore, nanotubes overlap and cross over each other, creating junctions with the combined height of the overlapping nanotubes.
 
-It has been demonstrated that the surface roughness of a bare SiO$_2$ substrate can also be modelled with a normal distribution. This normal distribution has a spread of approximately \pm1 nm about the mean, which can be set as the reference or zero point for other height measurements [@Velicky2015]. As both the carbon nanotube and silicon dioxide background heights can each be modelled using a normal distribution, we therefore assume that a linear combination of normal distributions can be used to model the AFM histograms in @fig-afm-morphology. 
+It has been demonstrated that the surface roughness of a bare SiO$_2$ substrate can also be modelled with a normal distribution. This normal distribution can be set as the reference or zero point for other height measurements [@Velicky2015]. As both the carbon nanotube and silicon dioxide background heights can each be modelled using a normal distribution, we make an initial assumption that a linear combination of normal distributions can be used to model the AFM histograms in @fig-afm-morphology. Using the process discussed in @sec-histogram-analysis, we approximate the normal distributions corresponding to the silicon oxide substrate and carbon nanotube network, shown in @fig-afm-morphology as green and red curves respectively. The silicon oxide peak appears to fit more closely to the distribution with smaller carbon nanotube heights, which could be due to measurement of the silicon background being improved when feature height is smaller. We notice that the distribution for the carbon nanotube bundles decays to approximately zero before reaching 0 nm, which is physically appropriate. 
 
-By using the analysis discussed in @sec-histogram-analysis, we find that a linear combination of normal distribution fits to all histograms corresponding to the AFM images in @fig-afm-morphology with an R-squared value of at least 0.987. The first or left-most distribution for all three figures in @fig-afm-histograms corresponds to the SiO$_2$ substrate roughness, centered at $\sim$ 0 nm and with a standard deviation of $0.4-1.2$ nm. For the carbon nanotube film deposited with solvent, the second distribution then corresponds to bundles of carbon nanotubes. If we model bundles as cylinders, and we assume the component nanotubes follow 2D packing and are of equal diameter, we can give an estimate the mean bundle size in terms of number of nanotubes *n* [@Graham1998; @Thanihaichelvan2018; @Specht2023].
+::: {#fig-remaining-histogram layout="[[47.5,-5,47.5], [-26.25,47.5,-26.25]]"}
+
+![Solvent based deposition histogram](figures/ch5/Ned_NTQ24_20220125_00235_half_histogram_fit.png){#fig-bundled-network-remainder}
+
+![Dropcast surfactant-based deposition histogram](figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_half_histogram_fit.png){#fig-dropcast-network-remainder}
+
+![Steam-assisted dropcast surfactant-based deposition ](figures/ch5/Ned_NGQ14D2_W4_pristine_20220713_00567_half_histogram_fit.png){#fig-steaming-network-remainder}
+
+
+The counts remaining after #1 and #2 have been subtracted from the AFM histogram are shown in blue.
+:::
+
+By subtracting the modelled silicon and carbon nanotube normal distributions from the AFM histogram, we find a remaining 
+
+The first or left-most distribution for all three figures in @fig-afm-histograms corresponds to the SiO$_2$ substrate roughness, centered at $\sim$ 0 nm and with a standard deviation of $0.4-1.2$ nm. For the carbon nanotube film deposited with solvent, the second distribution then corresponds to bundles of carbon nanotubes. If we model bundles as cylinders, and we assume the component nanotubes follow 2D packing and are of equal diameter, we can give an estimate the mean bundle size in terms of number of nanotubes *n* [@Graham1998; @Thanihaichelvan2018; @Specht2023].
 
 ```{r}
 #| label: tbl-circle-packing
