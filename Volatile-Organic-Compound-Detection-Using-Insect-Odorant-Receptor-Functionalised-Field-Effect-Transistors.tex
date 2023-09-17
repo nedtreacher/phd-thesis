@@ -193,7 +193,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, sharp corners, breakable, boxrule=0pt, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, borderline west={3pt}{0pt}{shadecolor}, enhanced, interior hidden, frame hidden, boxrule=0pt, sharp corners]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -397,10 +397,9 @@ distribution in this ideal case. In practice, the SiO\(_2\) substrate
 and carbon nanotube surface both have a degree of roughness, which may
 in part be due to the presence of atmospheric contaminants. In the case
 of the surfactant-deposited networks, residual surfactant may also
-contribute to surface roughness. Nanotubes can also undergo significant
-compression from the AFM tip in tapping mode \autocite{Vobornik2023}.
-Furthermore, nanotubes overlap and cross over each other, creating
-junctions with the combined height of the overlapping nanotubes.
+contribute to surface roughness \autocite{Vobornik2023}. Furthermore,
+nanotubes overlap and cross over each other, creating junctions with the
+combined height of the overlapping nanotubes.
 
 It has been demonstrated that the surface roughness of a bare SiO\(_2\)
 substrate can also be modelled with a normal distribution. This normal
@@ -417,7 +416,7 @@ red curves respectively. The silicon oxide peak appears to fit more
 closely to the distribution with smaller carbon nanotube heights, which
 could be due to measurement of the silicon background being improved
 when feature height is smaller. We notice that the distribution for the
-carbon nanotube bundles decays to approximately zero before reaching 0
+carbon nanotube bundles drops to approximately zero before reaching 0
 nm, which is physically appropriate.
 
 \begin{figure}
@@ -501,21 +500,35 @@ dropcast surfactant-based deposition}
 \end{minipage}%
 
 \caption{\label{fig-remaining-histogram}The counts remaining after \#1
-and \#2 have been subtracted from the AFM histogram are shown in blue.}
+and \#2 have been subtracted from the AFM histogram are shown in black.
+The counts have been overlaid with half a normal distribution.}
 
 \end{figure}
 
 By subtracting the modelled silicon and carbon nanotube normal
-distributions from the AFM histogram, we find a remaining
+distributions from the AFM histogram, we find a remaining distribution
+spread roughly between 0 nm and the mean of the carbon nanotube bundle
+distribution. Interestingly, the peak of the carbon nanotube
+distribution occurs at a height approximately 2.5\(\times\) the height
+corresponding to the peak of the remaining distribution. It is also
+apparent that the remaining distribution consistently follows a normal
+distribution after a sharp rise to maximum, as shown in
+Figure~\ref{fig-remaining-histogram}. This distribution appears to
+correspond to surface roughness due to the presence of contaminants, or
+possibly to broken pieces of individual nanotubes with various
+lengths.Contaminants could be residual surfactant or other atmospheric
+contamination resistant to acetone and isopropanol rinsing. Such
+contamination may or may not have implications for biosensing
+suitability, but surfactant contamination could certainly have negative
+effects on biological elements sensitive to surfactant. The area of this
+central peak may be useful for determining the extent of contamination
+on a carbon nanotube film, discussed further in
+\textbf{?@sec-contamination}.
 
-The first or left-most distribution for all three figures in
-\textbf{?@fig-afm-histograms} corresponds to the SiO\(_2\) substrate
-roughness, centered at \(\sim\) 0 nm and with a standard deviation of
-\(0.4-1.2\) nm. For the carbon nanotube film deposited with solvent, the
-second distribution then corresponds to bundles of carbon nanotubes. If
-we model bundles as cylinders, and we assume the component nanotubes
-follow 2D packing and are of equal diameter, we can give an estimate the
-mean bundle size in terms of number of nanotubes \emph{n}
+If we model carbon nanotube bundles as cylinders, and we assume the
+component nanotubes follow 2D packing and are of equal diameter, we can
+give an estimate the mean bundle size for each deposition type in terms
+of number of nanotubes \emph{n}
 \autocite{Graham1998,Thanihaichelvan2018,Specht2023}.
 
 \hypertarget{tbl-circle-packing}{}
@@ -545,60 +558,34 @@ s.f. (encompassing circle diameter = \(d\), number of packed circles =
 
 Table~\ref{tbl-circle-packing} shows the relationship between the
 diameter of a bundle and the constituent diameters of up to nine 2D
-packed carbon nanotubes within that bundle. The second distribution in
-Figure~\ref{fig-bundled-network-histogram} indicates the mean diameter
-of carbon nanotube bundles is 4.62 nm. Assuming an average carbon
-nanotube diameter of 1.45 nm, we find a \(d\)/\(d_n\) packing ratio of
-3.19, indicating an average bundle composition of \(\sim\) 7 nanotubes
-in Figure~\ref{fig-bundled-network-histogram}.
-
-For the carbon nanotube networks deposited using surfactant in
-\textbf{?@fig-afm-histograms}, we notice that there are two
-non-SiO\(_2\) distributions present. The mean of the second
-distribution, the left-most non-SiO\(_2\) distribution, falls below the
-average height for a single carbon nanotube. This attribute indicates
-that the distribution either represents broken pieces of individual
-carbon nanotubes, residual surfactant or other atmospheric contamination
-resistant to acetone and isopropanol rinsing. This contamination
-distribution is significantly larger for the carbon nanotube devices
-which used steam in the deposition process. The presence of this
-contamination histogram distribution was consistently found for all
-sampled surfactant-deposited film AFM data, while not present for any of
-the sampled solvent-deposited films.
-
-From Figure~\ref{fig-steaming-network}, we also see that steam deposited
-devices have sparsely distributed \(\sim\) 10 nm high features visible
-on their surface which are not present for the other films. These
-observations may be evidence of trapped water microdroplets on the
-surface from the steam, or could be from the steam causing surfactant to
-form persistent features on the surface. The size of this central peak
-may be useful for determining the extent of contamination in a carbon
-nanotube film, discussed further in \textbf{?@sec-contamination}. Such
-contamination may or may not have implications for biosensing
-suitability, but surfactant contamination could certainly have negative
-effects on biological elements sensitive to surfactant.
+packed carbon nanotubes within that bundle. Assuming an average carbon
+nanotube diameter of 1.45 \(\pm\) 0.25 nm, we can use the \(d\)/\(d_n\)
+packing ratios to obtain an estimate of the number of nanotubes in the
+mean bundle size for each deposition. These estimates are shown in
+Table~\ref{tbl-histogram-parameters}. Also shown is an estimate of the
+ratio of single-tube bundles to multi-tube bundles taken from the carbon
+nanotube histogram for each deposition.
 
 \hypertarget{tbl-histogram-parameters}{}
 \begin{table}
-\caption{\label{tbl-histogram-parameters}The mean of histogram distributions across three different samples for
-carbon nanotube films deposited using various methods, along with the
-mean sample coverage with bundles and mean proportion of multitubed
-bundles present. The mean of the carbon nanotube bundle distribution is
-shown with an estimate of the number of nanotubes that could pack into
-the mean bundle size via 2D packing. }\tabularnewline
+\caption{\label{tbl-histogram-parameters}The mean of histogram distributions for carbon nanotube films deposited
+using various methods. The mean of the carbon nanotube bundle
+distribution is shown alongside an estimate of the number of nanotubes
+that could pack into the mean bundle size via 2D packing. Also shown is
+the estimated proportion of multi-tubed bundles present. }\tabularnewline
 
 \centering
 \begin{tabular}{>{\raggedright\arraybackslash}p{2cm}ccccc}
 \toprule
 \multicolumn{1}{c}{\textbf{ }} & \multicolumn{3}{c}{\textbf{Distribution Mean (nm)}} & \multicolumn{2}{c}{\textbf{Bundle Attributes}} \\
 \cmidrule(l{3pt}r{3pt}){2-4} \cmidrule(l{3pt}r{3pt}){5-6}
- & Silicon & Contaminant & Bundles (tubes) & \% multi-tube & \% coverage\\
+ & Silicon & Bundles & Contaminant & No. tubes & \% multi-tube\\
 \midrule
-Solvent deposited & 0.1 ± 2.3 & — & 6.2 ± 3.7 (13) & 78 ± 16 & 35 ± 21\\
+Solvent deposited & 0.0 ± 1.4 & 8.8 ± 4.0 & 3.6 ± 3.8 & 28 ± 37 & 95\%\\
  &  &  &  &  \vphantom{1} & \\
-Surfactant deposited & 0.0 ± 0.4 & 1.0 ± 0.4 & 2.0 ± 1.8 (1) & 27 ± 25 & 31 ± 9\\
+Surfactant deposited & 0.0 ± 0.6 & 5.1 ± 1.4 & 2.0 ± 1.5 & 8  ± 8 & 94\%\\
  &  &  &  &  & \\
-Surfactant deposited with steam & 0.0 ± 0.5 & 1.3 ± 0.6 & 2.0 ± 1.2 (1) & 17 ± 17 & 50 ± 11\\
+Surfactant deposited with steam & 0.0 ± 0.5 & 3.2 ± 1.1 & 1.2 ± 0.9 & 3 ± 4 & 60\%\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -1122,7 +1109,10 @@ existing dataset.
 
 The code also allows for discretely binning continuous data from fitted
 normal distributions and examining the proportion of counts above or
-below a particular height.
+below a particular height. 2.9 nm is roughly where 2 bundles with
+average size 1.45 nm can start to be present, and is used as an estimate
+of the boundary value between single-tube bundle diameters and
+multi-tube bundle diameters.
 
 \begin{equation}\protect\hypertarget{eq-lin-combo-exp-decay}{}{
 f(x) = k_1\exp{\Bigg(-\frac{t}{{\tau}_{1}}\Bigg)} + k_2\exp{\Bigg(-\frac{t}{{\tau}_{2}}\Bigg)} + ... + c

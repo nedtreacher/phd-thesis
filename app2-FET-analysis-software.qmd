@@ -18,7 +18,7 @@ $k_1$ is taken to be the maximum y-value of the data being fitted, $m_1$ is set 
 
 Then, using the analysis technique outlined by Vobornik *et al.* [@Vobornik2023] in Gwyddion, we manually find estimates for the mean $m_2$ and standard deviation $s_2$ of the carbon nanotube bundle distribution. We then take $k_2$ to be the maximum y-value of this modified dataset, and $m_1$ to be the x-value of the maximum y-value. We then set $k_2$ so that the height of the resulting distribution at one standard deviation matches the height of the .xyz data histogram. We take this distribution, and subtract it from the existing dataset. 
 
-The code also allows for discretely binning continuous data from fitted normal distributions and examining the proportion of counts above or below a particular height.
+The code also allows for discretely binning continuous data from fitted normal distributions and examining the proportion of counts above or below a particular height. 2.9 nm is roughly where 2 bundles with average size 1.45 nm can start to be present, and is used as an estimate of the boundary value between single-tube bundle diameters and multi-tube bundle diameters.
 
 
 $$
