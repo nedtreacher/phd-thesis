@@ -193,7 +193,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, borderline west={3pt}{0pt}{shadecolor}, enhanced, interior hidden, frame hidden, boxrule=0pt, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, sharp corners, boxrule=0pt, frame hidden, breakable]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -559,12 +559,12 @@ s.f. (encompassing circle diameter = \(d\), number of packed circles =
 Table~\ref{tbl-circle-packing} shows the relationship between the
 diameter of a bundle and the constituent diameters of up to nine 2D
 packed carbon nanotubes within that bundle. Assuming an average carbon
-nanotube diameter of 1.45 \(\pm\) 0.25 nm, we can use the \(d\)/\(d_n\)
+nanotube diameter of 1.45 \(\pm\) 0.13 nm, we can use the \(d\)/\(d_n\)
 packing ratios to obtain an estimate of the number of nanotubes in the
-mean bundle size for each deposition. These estimates are shown in
-Table~\ref{tbl-histogram-parameters}. Also shown is an estimate of the
-ratio of single-tube bundles to multi-tube bundles taken from the carbon
-nanotube histogram for each deposition.
+mean bundle size for each deposition \autocite{Specht2023}. These
+estimates are shown in Table~\ref{tbl-histogram-parameters}. Also shown
+is an estimate of the ratio of single-tube bundles to multi-tube bundles
+taken from the carbon nanotube histogram for each deposition.
 
 \hypertarget{tbl-histogram-parameters}{}
 \begin{table}
@@ -579,33 +579,24 @@ the estimated proportion of multi-tubed bundles present. }\tabularnewline
 \toprule
 \multicolumn{1}{c}{\textbf{ }} & \multicolumn{3}{c}{\textbf{Distribution Mean (nm)}} & \multicolumn{2}{c}{\textbf{Bundle Attributes}} \\
 \cmidrule(l{3pt}r{3pt}){2-4} \cmidrule(l{3pt}r{3pt}){5-6}
- & Silicon & Bundles & Contaminant & No. tubes & \% multi-tube\\
+ & Silicon & Bundles & Contaminant & Mean no. tubes & \% multi-tube\\
 \midrule
-Solvent deposited & 0.0 ± 1.4 & 8.8 ± 4.0 & 3.6 ± 3.8 & 28 ± 37 & 95\%\\
+Solvent deposited & 0.0 ± 1.4 & 8.8 ± 4.0 & 3.6 ± 3.8 & 28 ± 34 & \textasciitilde{}95\%\\
  &  &  &  &  \vphantom{1} & \\
-Surfactant deposited & 0.0 ± 0.6 & 5.1 ± 1.4 & 2.0 ± 1.5 & 8  ± 8 & 94\%\\
+Surfactant deposited & 0.0 ± 0.6 & 5.1 ± 1.4 & 2.0 ± 1.5 & 8  ± 7 & \textasciitilde{}94\%\\
  &  &  &  &  & \\
-Surfactant deposited with steam & 0.0 ± 0.5 & 3.2 ± 1.1 & 1.2 ± 0.9 & 3 ± 4 & 60\%\\
+Surfactant deposited with steam & 0.0 ± 0.5 & 3.2 ± 1.1 & 1.2 ± 0.9 & 3 ± 2 & \textasciitilde{}60\%\\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The distribution means corresponding to each type of deposition method,
-averaged across histogram fits from three 2.5 \(\mu\)m \(\times\) 2.5
-\(\mu\)m atomic force microscope images, are given in
-Table~\ref{tbl-histogram-parameters}. The carbon nanotube bundle mean is
-given alongside the number of carbon nanotubes corresponding to the mean
-height according to 2D packing as given in
-Table~\ref{tbl-circle-packing} and Thanihaichelvan \emph{et al.}
-\autocite{Thanihaichelvan2018}.
-
-It is noticeable that the location of silicon and contamination
-distribution means are highly consistent between films. Also notable is
-a the large decrease in bundle size when surfactant is used in the
-deposition process. There is also a large standard deviation in mean
-bundle size seen for solvent deposited devices, corresponding to a wide
-range of bundle sizes present on the atomic force microscope images of
-the solvent-deposited films.
+It is noticeable that the location of contamination distribution means
+are highly consistent between films. Also notable is a the large
+decrease in bundle size when surfactant is used in the deposition
+process. There is also a large standard deviation in mean bundle size
+seen for solvent deposited devices, corresponding to a wide range of
+bundle sizes present on the atomic force microscope images of the
+solvent-deposited films.
 
 It is also important to consider that for all figures in
 Figure~\ref{fig-afm-morphology}, larger height measurements in the

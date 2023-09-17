@@ -103,7 +103,7 @@ circle_packing <- circle_packing[rowSums(is.na(circle_packing)) == 0,]
 knitr::kable(circle_packing, col.names = NULL, format = "simple")
 ```
 
-@tbl-circle-packing shows the relationship between the diameter of a bundle and the constituent diameters of up to nine 2D packed carbon nanotubes within that bundle. Assuming an average carbon nanotube diameter of 1.45 $\pm$ 0.25 nm, we can use the $d$/$d_n$ packing ratios to obtain an estimate of the number of nanotubes in the mean bundle size for each deposition [@Specht2023]. These estimates are shown in @tbl-histogram-parameters. Also shown is an estimate of the ratio of single-tube bundles to multi-tube bundles taken from the carbon nanotube histogram for each deposition.
+@tbl-circle-packing shows the relationship between the diameter of a bundle and the constituent diameters of up to nine 2D packed carbon nanotubes within that bundle. Assuming an average carbon nanotube diameter of 1.45 $\pm$ 0.13 nm, we can use the $d$/$d_n$ packing ratios to obtain an estimate of the number of nanotubes in the mean bundle size for each deposition [@Specht2023]. These estimates are shown in @tbl-histogram-parameters. Also shown is an estimate of the ratio of single- to multi-tube bundles for each deposition, found by comparing the proportion of each carbon nanotube curve below and above 2.9 nm, the minimum multi-tube bundle size for 1.45 nm diameter nanotubes.
 
 ```{r}
 #| label: setup
@@ -116,7 +116,7 @@ histogram_parameters <- histogram_parameters[rowSums(is.na(histogram_parameters)
 ```
 
 ```{r}
-#| tbl-cap: The mean of histogram distributions for carbon nanotube films deposited using various methods. The mean of the carbon nanotube bundle distribution is shown alongside an estimate of the number of nanotubes that could pack into the mean bundle size via 2D packing. Also shown is the estimated proportion of multi-tubed bundles present.
+#| tbl-cap: The mean of histogram distributions for carbon nanotube films deposited using various methods, along with estimates of the mean number of nanotubes and the proportion of multi-tubed bundles present.
 #| label: tbl-histogram-parameters
 
 histogram_parameters %>% 
@@ -131,15 +131,9 @@ histogram_parameters %>%
 
 ```
 
-It is noticeable that the location of contamination distribution means are highly consistent between films. Also notable is a the large decrease in bundle size when surfactant is used in the deposition process. There is also a large standard deviation in mean bundle size seen for solvent deposited devices, corresponding to a wide range of bundle sizes present on the atomic force microscope images of the solvent-deposited films. 
+When surfactant is used in the deposition process, both the carbon nanotube bundle diameter mean and standard deviation are small compared to the mean and standard deviation of solvent deposited films. However, despite the presence of surfactant, it is apparent both from @fig-afm-morphology and @tbl-histogram-parameters that not all surfactant-dispersed carbon nanotubes are deposited individually. Bundling may occur during the process of deposition onto the substrate, which could disrupt the repulsive forces from the surfactant coating and allow attractive forces to temporarily dominate. 
 
-It is also important to consider that for all figures in  @fig-afm-morphology, larger height measurements in the carbon nanotube distribution include surface contamination on the carbon nanotubes as well as bundle-bundle junctions. The distribution may also encompass broken nanotube pieces and some silicon oxide surface contamination at the low end of the range. When considering the proportion of single-tube bundles relative to multi-tube bundles, we exclude heights from the carbon nanotube normal distribution below 1.2 nm, the minimum height of the supplied carbon nanotubes. We also exclude heights above double the distribution mean, to ignore bundle-bundle junctions and surface contamination. 
-
-We then compare the proportion of the curve below and above 2.9 nm, the minimum multi-tube bundle size for 1.45 nm diameter nanotubes. By doing so, we get a rough estimate of the proportion of single- to multi-tube bundles present on the surface. We can also compare the total area of the carbon nanotube distribution to the area of the other distributions to get an estimate of the surface coverage by bundles. These values, averaged across the histogram fits from three 2.5 $\mu$m $\times$ 2.5 $\mu$m atomic force microscope images, are given in @tbl-histogram-parameters. However, the mean values for surfactant-deposited films are in line with those previously found for IsoNanotubes-S deposited on silicon oxide using alternative analysis methods [@Vobornik2023].
-
-In @fig-afm-morphology and @tbl-histogram-parameters, we see that carbon nanotubes deposited in a surfactant dispersion form bundles which are significantly less wide than the bundles in the film deposited using solvent. However, we also see that despite the presence of surfactant, not all surfactant-dispersed carbon nanotubes are deposited individually. Bundling may occur during the process of deposition onto the substrate, which could disrupt the repulsive forces from the surfactant coating and allow attractive forces to temporarily dominate. The 
-
-It is possible that the bundling of surfactant-dispersed carbon nanotubes occurs due to the coffee-ring effect [@Deegan1997; @VanGaalen2021]. The coffee-ring effect refers to a build-up of dispersed solid forming around the edges of a dispersion evaporating on a surface. This process occurs due to the dispersion edges being fixed by surface forces, leading to capillary flow outwards to replace liquid evaporating at the edges, bringing solid material along with it. The presence of vapour is known to disrupt this effect [@Bishop2020]. @tbl-histogram-parameters demonstrates that on average, the presence of steam reduces the number of nanotube bundles present and increases surface coverage, supporting the above hypothesis.
+It is possible that the bundling of surfactant-dispersed carbon nanotubes occurs due to the coffee-ring effect [@Deegan1997; @VanGaalen2021]. The coffee-ring effect refers to a build-up of dispersed solid forming around the edges of a dispersion evaporating on a surface. This process occurs due to the dispersion edges being fixed by surface forces, leading to capillary flow outwards to replace liquid evaporating at the edges, bringing solid material along with it. The presence of vapour is known to disrupt this effect [@Bishop2020].
 
 ##	Electrical Characteristics {#sec-pristine-electrical-characterisation}
 

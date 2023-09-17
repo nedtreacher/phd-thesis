@@ -20,7 +20,6 @@ Then, using the analysis technique outlined by Vobornik *et al.* [@Vobornik2023]
 
 The code also allows for discretely binning continuous data from fitted normal distributions and examining the proportion of counts above or below a particular height. 2.9 nm is roughly where 2 bundles with average size 1.45 nm can start to be present, and is used as an estimate of the boundary value between single-tube bundle diameters and multi-tube bundle diameters.
 
-
 $$
 f(x) = k_1\exp{\Bigg(-\frac{t}{{\tau}_{1}}\Bigg)} + k_2\exp{\Bigg(-\frac{t}{{\tau}_{2}}\Bigg)} + ... + c
 $${#eq-lin-combo-exp-decay}
