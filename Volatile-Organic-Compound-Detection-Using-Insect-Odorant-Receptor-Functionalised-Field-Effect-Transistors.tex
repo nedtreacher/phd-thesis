@@ -193,7 +193,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, sharp corners, boxrule=0pt, frame hidden, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, interior hidden, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, breakable, enhanced, sharp corners]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -499,9 +499,10 @@ dropcast surfactant-based deposition}
 
 \end{minipage}%
 
-\caption{\label{fig-remaining-histogram}The counts remaining after \#1
-and \#2 have been subtracted from the AFM histogram are shown in black.
-The counts have been overlaid with half a normal distribution.}
+\caption{\label{fig-remaining-histogram}The counts which remain after
+\#1 and \#2 have been subtracted from the AFM histogram are shown in
+black. The counts have been overlaid with half a Gaussian distribution,
+manually fitted.}
 
 \end{figure}
 
@@ -563,16 +564,16 @@ nanotube diameter of 1.45 \(\pm\) 0.13 nm, we can use the \(d\)/\(d_n\)
 packing ratios to obtain an estimate of the number of nanotubes in the
 mean bundle size for each deposition \autocite{Specht2023}. These
 estimates are shown in Table~\ref{tbl-histogram-parameters}. Also shown
-is an estimate of the ratio of single-tube bundles to multi-tube bundles
-taken from the carbon nanotube histogram for each deposition.
+is an estimate of the ratio of single- to multi-tube bundles for each
+deposition, found by comparing the proportion of each carbon nanotube
+curve below and above 2.9 nm, the minimum multi-tube bundle size for
+1.45 nm diameter nanotubes.
 
 \hypertarget{tbl-histogram-parameters}{}
 \begin{table}
 \caption{\label{tbl-histogram-parameters}The mean of histogram distributions for carbon nanotube films deposited
-using various methods. The mean of the carbon nanotube bundle
-distribution is shown alongside an estimate of the number of nanotubes
-that could pack into the mean bundle size via 2D packing. Also shown is
-the estimated proportion of multi-tubed bundles present. }\tabularnewline
+using various methods, along with estimates of the mean number of
+nanotubes and the proportion of multi-tubed bundles present. }\tabularnewline
 
 \centering
 \begin{tabular}{>{\raggedright\arraybackslash}p{2cm}ccccc}
@@ -590,49 +591,15 @@ Surfactant deposited with steam & 0.0 ± 0.5 & 3.2 ± 1.1 & 1.2 ± 0.9 & 3 ± 2 
 \end{tabular}
 \end{table}
 
-It is noticeable that the location of contamination distribution means
-are highly consistent between films. Also notable is a the large
-decrease in bundle size when surfactant is used in the deposition
-process. There is also a large standard deviation in mean bundle size
-seen for solvent deposited devices, corresponding to a wide range of
-bundle sizes present on the atomic force microscope images of the
-solvent-deposited films.
-
-It is also important to consider that for all figures in
-Figure~\ref{fig-afm-morphology}, larger height measurements in the
-carbon nanotube distribution include surface contamination on the carbon
-nanotubes as well as bundle-bundle junctions. The distribution may also
-encompass broken nanotube pieces and some silicon oxide surface
-contamination at the low end of the range. When considering the
-proportion of single-tube bundles relative to multi-tube bundles, we
-exclude heights from the carbon nanotube normal distribution below 1.2
-nm, the minimum height of the supplied carbon nanotubes. We also exclude
-heights above double the distribution mean, to ignore bundle-bundle
-junctions and surface contamination.
-
-We then compare the proportion of the curve below and above 2.9 nm, the
-minimum multi-tube bundle size for 1.45 nm diameter nanotubes. By doing
-so, we get a rough estimate of the proportion of single- to multi-tube
-bundles present on the surface. We can also compare the total area of
-the carbon nanotube distribution to the area of the other distributions
-to get an estimate of the surface coverage by bundles. These values,
-averaged across the histogram fits from three 2.5 \(\mu\)m \(\times\)
-2.5 \(\mu\)m atomic force microscope images, are given in
-Table~\ref{tbl-histogram-parameters}. However, the mean values for
-surfactant-deposited films are in line with those previously found for
-IsoNanotubes-S deposited on silicon oxide using alternative analysis
-methods \autocite{Vobornik2023}.
-
-In Figure~\ref{fig-afm-morphology} and
-Table~\ref{tbl-histogram-parameters}, we see that carbon nanotubes
-deposited in a surfactant dispersion form bundles which are
-significantly less wide than the bundles in the film deposited using
-solvent. However, we also see that despite the presence of surfactant,
-not all surfactant-dispersed carbon nanotubes are deposited
+When surfactant is used in the deposition process, both the carbon
+nanotube bundle diameter mean and standard deviation are small compared
+to the mean and standard deviation of solvent deposited films. However,
+despite the presence of surfactant, it is apparent both from
+Figure~\ref{fig-afm-morphology} and Table~\ref{tbl-histogram-parameters}
+that not all surfactant-dispersed carbon nanotubes are deposited
 individually. Bundling may occur during the process of deposition onto
 the substrate, which could disrupt the repulsive forces from the
 surfactant coating and allow attractive forces to temporarily dominate.
-The
 
 It is possible that the bundling of surfactant-dispersed carbon
 nanotubes occurs due to the coffee-ring effect
@@ -642,10 +609,7 @@ evaporating on a surface. This process occurs due to the dispersion
 edges being fixed by surface forces, leading to capillary flow outwards
 to replace liquid evaporating at the edges, bringing solid material
 along with it. The presence of vapour is known to disrupt this effect
-\autocite{Bishop2020}. Table~\ref{tbl-histogram-parameters} demonstrates
-that on average, the presence of steam reduces the number of nanotube
-bundles present and increases surface coverage, supporting the above
-hypothesis.
+\autocite{Bishop2020}.
 
 \hypertarget{sec-pristine-electrical-characterisation}{%
 \section{Electrical
@@ -653,25 +617,6 @@ Characteristics}\label{sec-pristine-electrical-characterisation}}
 
 \hypertarget{carbon-nanotubes}{%
 \subsection{Carbon Nanotubes}\label{carbon-nanotubes}}
-
-Each carbon nanotube device fabricated was electrically characterised as
-described in \textbf{?@sec-electrical-characterisation}. Figure
-Figure~\ref{fig-pristine-cnt-characteristics} displays multi-channel
-measurements of representative devices fabricated as described in
-\textbf{?@sec-fabrication}. To ensure a consistent comparison, each
-device here was encapsulated with AZ\(^\circledR\) 1518 encapsulation
-before measurements were taken. The channels which did not exhibit
-reliable transistor characteristics are not shown. These non-working
-channels were either short, due to metal remaining on the channel after
-lift-off, or were very low current, due to a very sparse carbon nanotube
-network. Devices shown here with a solvent-deposited carbon nanotube
-network were fabricated prior to Jan 2022; devices with a
-surfactant-deposited network without steam present were fabricated prior
-to Jun 2021; devices with a surfactant-deposited network without steam
-were fabricated prior to Sep 2022.
-
-Consistent subthreshold regime behaviour between channels is desirable
-for reliable multiplexed biosensing.
 
 \begin{figure}
 
@@ -681,7 +626,7 @@ for reliable multiplexed biosensing.
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch5/NTQ25C7_pristine_TXLG02_220125_solvent_nogate.png}
+\includegraphics{./figures/ch5/NTQ22C2_solvent_backgate.png}
 
 }
 
@@ -707,7 +652,7 @@ back-gated}
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch5/NTQ25C7_pristine_TXLG02_220125_solvent_gate.png}
+\includegraphics{./figures/ch5/NTQ24C8_pristine_TXLG01_220211_solvent_gate.png}
 
 }
 
@@ -723,7 +668,7 @@ aqueous-gated}
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch5/NTQ5C3_pristine_TXLG01_210602_nosteam_nogate.png}
+\includegraphics{./figures/ch5/Q5C10_nosteam_backgate.png}
 
 }
 
@@ -804,10 +749,46 @@ surfactant-based deposition, aqueous-gated}
 \caption{\label{fig-pristine-cnt-characteristics}Transfer
 characteristics of carbon nanotube networks deposited using various
 methods. 1XPBS was used as the buffer for the liquid-gated measurements
-here. Source-drain voltage used was \(V_{ds} = 100 \textrm{mV}\), with a
-step size of either 10 or 20 mV used for the sweep.}
+here. The source-drain voltage used for all sweeps was
+\(V_{ds} = 100 \textrm{mV}\). A step size of 20 mV was used for the
+liquid-gated sweeps, while a step size of 100 mV was used for the
+backgated sweeps.}
 
 \end{figure}
+
+Each carbon nanotube device fabricated was electrically characterised as
+described in \textbf{?@sec-electrical-characterisation}. Figure
+Figure~\ref{fig-pristine-cnt-characteristics} displays multi-channel
+measurements of representative devices fabricated as described in
+\textbf{?@sec-fabrication}. To ensure a consistent comparison, each
+device here was encapsulated with AZ\(^\circledR\) 1518 encapsulation
+before measurements were taken. The channels which did not exhibit
+reliable transistor characteristics are not shown. These `non-working'
+channels were either shorted, due to metal remaining on the channel
+after lift-off, or were very low current, due to a very sparse carbon
+nanotube network. Devices shown here with a solvent-deposited carbon
+nanotube network were fabricated prior to Jan 2022; devices with a
+surfactant-deposited network without steam present were fabricated prior
+to Jun 2021; devices with a surfactant-deposited network without steam
+were fabricated prior to Sep 2022.
+
+When backgated, devices exhibited \emph{p}-type transistor behaviour
+with significant hysteresis and negligible gate current leakage. The
+devices fabricated with a solvent-based deposition were switched off at
+a lower voltage than the devices which used surfactant during
+deposition.
+
+When the devices were liquid-gated with 1XPBS electrolyte buffer, they
+exhibited ambipolar characteristics with significantly less hysteresis
+than when backgated. When appropriately configured, leakage current
+across the liquid gate consistently only became significant above
+\(V_g \simeq 0.5\) V. Devices which used carbon nanotube films deposited
+in surfactant with steam present had significantly less
+channel-to-channel variation in electrical characteristics than for
+devices fabricated using other approaches.
+
+Consistent subthreshold regime behaviour between channels is desirable
+for reliable multiplexed biosensing.
 
 \hypertarget{sec-dummy-sensing}{%
 \section{Salt Concentration Sensing with Phosphate Buffered

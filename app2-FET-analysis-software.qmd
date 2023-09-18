@@ -20,6 +20,10 @@ Then, using the analysis technique outlined by Vobornik *et al.* [@Vobornik2023]
 
 The code also allows for discretely binning continuous data from fitted normal distributions and examining the proportion of counts above or below a particular height. 2.9 nm is roughly where 2 bundles with average size 1.45 nm can start to be present, and is used as an estimate of the boundary value between single-tube bundle diameters and multi-tube bundle diameters.
 
+## Field-Effect Transistor Analysis {#sec-field-effect-transistor-analysis}
+
+The purpose of this code is to analyse electrical measurements taken of field-effect transistor (FET) devices. Electrical measurements were either taken from the Keysight 4156C Semiconductor Parameter Analyser, National Instruments NI-PXIe or Keysight B1500A Semiconductor Device Analyser as discussed in @sec-electrical-characterisation; the code is able to analyse data taken from all three measurement setups. The code consists of three related but independent modules: the first analyses and plots sensing data from the FET devices, the second analyses and plots transfer characteristics from multiple channels across a device, and the third compares individual channel characteristics before and after a modification of some type. These modules were designed collaboratively by myself and Erica Cassie over GitHub using the Sourcetree Git GUI.
+
 $$
 f(x) = k_1\exp{\Bigg(-\frac{t}{{\tau}_{1}}\Bigg)} + k_2\exp{\Bigg(-\frac{t}{{\tau}_{2}}\Bigg)} + ... + c
 $${#eq-lin-combo-exp-decay}
