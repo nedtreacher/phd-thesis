@@ -151,9 +151,9 @@ It is possible that the bundling of surfactant-dispersed carbon nanotubes occurs
 
 ![Steam-assisted dropcast surfactant-based deposition, back-gated](figures/ch5/Q18C6_steam_backgate.png){#fig-steam-tx-bg}
 
-![Steam-assisted dropcast surfactant-based deposition, liquid-gated](figures/ch5/NTQ18C1_steam_gate.png){#fig-steam-tx-lg}
+![Steam-assisted dropcast surfactant-based deposition, liquid-gated](figures/ch5/NTQ31C6_pristine_TXLG01_230330_steam_gate.png){#fig-steam-tx-lg}
 
-Transfer characteristics of carbon nanotube networks deposited using various methods. 1XPBS was used as the buffer for the liquid-gated measurements here. The source-drain voltage used for all sweeps was $V_{ds} = 100 \textrm{mV}$. A step size of 20 mV was used for the liquid-gated sweeps, while a step size of 100 mV was used for the backgated sweeps.
+Transfer characteristics of carbon nanotube networks deposited using various methods. 1XPBS was used as the buffer for the liquid-gated measurements here. The source-drain voltage used for all sweeps was $V_{ds} = 100 \textrm{mV}$. A step size of 20 mV was used for the liquid-gated sweeps, while a step size of 100 mV was used for the backgated sweeps. Each sweep was taken from a separate device. Devices with a 100 nm SiO$_2$ layer were used for backgated measurements, and devices with a 300 nm SiO$_2$ layer were used for liquid gated measurements.
 :::
 
 Each carbon nanotube device fabricated was electrically characterised as described in @sec-electrical-characterisation, and electrical data was analysed using the Python code discussed in @sec-field-effect-transistor-analysis. 
@@ -162,9 +162,24 @@ Figure @fig-pristine-cnt-characteristics displays multi-channel measurements of 
 
 When backgated, devices exhibited *p*-type transistor behaviour with significant hysteresis and negligible gate current leakage. The devices fabricated with a solvent-based deposition were switched off at a lower voltage than the devices which used surfactant during deposition.
 
-When the devices were liquid-gated with 1XPBS electrolyte buffer, they exhibited ambipolar characteristics with significantly less hysteresis than when backgated. When devices were appropriately configured, leakage current across the liquid gate consistently only became significant at gate voltages above  $\sim$ 0.5 V. Devices which used carbon nanotube films deposited in surfactant with steam present had significantly less channel-to-channel variation in electrical characteristics than for devices fabricated using other approaches. The consistent channel-to-channel electrical properties of these steam-deposited devices matches the consistent morphology of the films used to make them, as seen in @sec-pristine-morphology. Being able to achieve consistent subthreshold regime behaviour between channels on the same device is a desirable device attribute for reliable real-time multiplexed biosensing. 
+When the devices were liquid-gated with 1XPBS electrolyte buffer, they exhibited ambipolar characteristics, commonly observed in carbon nanotube network FETs [@Kauffman2008; @Heller2009; @JongYu2009; @Derenskyi2014; @Thanihaichelvan2018; @Albarghouthi2022]. Devices generally exhibited significantly less hysteresis than in the backgated case. When devices were appropriately configured, leakage current did not exceed $\sim 1 \times 10^-7$ V across the sweep. The devices which used carbon nanotube films deposited in surfactant with steam present had significantly less channel-to-channel variation in electrical characteristics than the devices fabricated using other approaches. The consistent channel-to-channel electrical properties of these steam-deposited devices matches the consistent morphology of the films used to make them, as seen in @sec-pristine-morphology. Being able to achieve consistent subthreshold regime behaviour between channels on the same device is a desirable attribute for reliable real-time multiplexed biosensing.
+
+A summary of key parameters of pristine liquid-gated devices is shown in @fig-sweep-parameters. The full dataset consists of three sets of 21 liquid-gated transfer characteristics of working channels, with each set corresponding to the use of a particular method of carbon nanotube network deposition in the device fabrication. Measurements from at least three devices are included in each set. Channels from surfactant-deposited film devices usually showed a larger on-off ratio and subthreshold slope than those from solvent-deposited devices. When the transistor is gated in the subthreshold range, a larger on-off ratio and subthreshold slope results in a larger change in conductance in response to changes in the transfer characteristic curve. Therefore, a larger on-off ratio and subthreshold slope is desirable for improved sensor performance [@Kauffman2008; @Heller2009]. The larger on-off ratio and subthreshold slope is likely a result of the reduced bundling discussed in @sec-pristine-morphology. Carbon nanotube pathways across the channel with a lower degree of bundling will have a lower number of component metallic tubes,  [@Thanihaichelvan2018].
+
+When steam is used for surfactant deposition of films, the resulting devices showed much more consistent 
+All channels characterised had a positive threshold voltage. The threshold voltage was largest and most consistent for steam-assisted surfactant-deposited films.
+
+::: {#fig-sweep-parameters layout="[[47.5,-5,47.5], [-26.25,47.5,-26.25]]"}
+
+![](figures/ch5/onoff.png){#fig-on-off-ratio}
+
+![](figures/ch5/threshold_V.png){#fig-threshold-voltage}
+
+![](figures/ch5/SS.png){#fig-subthreshold-slope}
 
 
+These boxplots illustrate the statistical distribution of (a) the on-off ratio, (b) the threshold voltage and (c) the subthreshold slope of liquid-gated transistor channels corresponding to each type of carbon nanotube film deposition. For each deposition type, measurements were taken from 21 channels of at least three separate devices. The boxes indicate the 25th and 75th percentile of the distribution.
+:::
 
 
 

@@ -193,7 +193,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, interior hidden, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, breakable, enhanced, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, frame hidden, enhanced, breakable, sharp corners, interior hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -220,12 +220,12 @@ Effect
 Transistors}\label{characteristics-of-pristine-carbon-nanotube-graphene-field-effect-transistors}}
 
 \begin{verbatim}
-103704
+113250
 \end{verbatim}
 
-\hypertarget{carbon-nanotube-network-morphology}{%
+\hypertarget{sec-pristine-morphology}{%
 \section{Carbon Nanotube Network
-Morphology}\label{carbon-nanotube-network-morphology}}
+Morphology}\label{sec-pristine-morphology}}
 
 Figure~\ref{fig-afm-morphology} shows a side-by-side comparison of the
 surface morphology of carbon nanotube films fabricated using the methods
@@ -659,7 +659,7 @@ back-gated}
 }
 
 \subcaption{\label{fig-solvent-tx-tx-lg}Solvent-based deposition,
-aqueous-gated}
+liquid-gated}
 \end{minipage}%
 \newline
 \begin{minipage}[t]{0.49\linewidth}
@@ -701,7 +701,7 @@ back-gated}
 }
 
 \subcaption{\label{fig-surf-tx-lg}Dropcast surfactant-based deposition,
-aqueous-gated}
+liquid-gated}
 \end{minipage}%
 \newline
 \begin{minipage}[t]{0.49\linewidth}
@@ -736,14 +736,14 @@ surfactant-based deposition, back-gated}
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch5/NTQ18C1_steam_gate.png}
+\includegraphics{./figures/ch5/NTQ31C6_pristine_TXLG01_230330_steam_gate.png}
 
 }
 
 }
 
 \subcaption{\label{fig-steam-tx-lg}Steam-assisted dropcast
-surfactant-based deposition, aqueous-gated}
+surfactant-based deposition, liquid-gated}
 \end{minipage}%
 
 \caption{\label{fig-pristine-cnt-characteristics}Transfer
@@ -752,25 +752,31 @@ methods. 1XPBS was used as the buffer for the liquid-gated measurements
 here. The source-drain voltage used for all sweeps was
 \(V_{ds} = 100 \textrm{mV}\). A step size of 20 mV was used for the
 liquid-gated sweeps, while a step size of 100 mV was used for the
-backgated sweeps.}
+backgated sweeps. Each sweep was taken from a separate device. Devices
+with a 100 nm SiO\(_2\) layer were used for backgated measurements, and
+devices with a 300 nm SiO\(_2\) layer were used for liquid gated
+measurements.}
 
 \end{figure}
 
 Each carbon nanotube device fabricated was electrically characterised as
-described in \textbf{?@sec-electrical-characterisation}. Figure
-Figure~\ref{fig-pristine-cnt-characteristics} displays multi-channel
-measurements of representative devices fabricated as described in
-\textbf{?@sec-fabrication}. To ensure a consistent comparison, each
-device here was encapsulated with AZ\(^\circledR\) 1518 encapsulation
-before measurements were taken. The channels which did not exhibit
-reliable transistor characteristics are not shown. These `non-working'
-channels were either shorted, due to metal remaining on the channel
-after lift-off, or were very low current, due to a very sparse carbon
-nanotube network. Devices shown here with a solvent-deposited carbon
-nanotube network were fabricated prior to Jan 2022; devices with a
-surfactant-deposited network without steam present were fabricated prior
-to Jun 2021; devices with a surfactant-deposited network without steam
-were fabricated prior to Sep 2022.
+described in \textbf{?@sec-electrical-characterisation}, and electrical
+data was analysed using the Python code discussed in
+Section~\ref{sec-field-effect-transistor-analysis}.
+
+Figure Figure~\ref{fig-pristine-cnt-characteristics} displays
+multi-channel measurements of representative devices fabricated as
+described in \textbf{?@sec-fabrication}. To ensure a consistent
+comparison, each device here was encapsulated with AZ\(^\circledR\) 1518
+encapsulation before measurements were taken. The channels which did not
+exhibit reliable transistor characteristics are not shown. These
+`non-working' channels were either shorted, due to metal remaining on
+the channel after lift-off, or were very low current, due to a very
+sparse carbon nanotube network. Devices shown here with a
+solvent-deposited carbon nanotube network were fabricated prior to Jan
+2022; devices with a surfactant-deposited network without steam present
+were fabricated prior to Jun 2021; devices with a surfactant-deposited
+network without steam were fabricated prior to Sep 2022.
 
 When backgated, devices exhibited \emph{p}-type transistor behaviour
 with significant hysteresis and negligible gate current leakage. The
@@ -779,16 +785,108 @@ a lower voltage than the devices which used surfactant during
 deposition.
 
 When the devices were liquid-gated with 1XPBS electrolyte buffer, they
-exhibited ambipolar characteristics with significantly less hysteresis
-than when backgated. When appropriately configured, leakage current
-across the liquid gate consistently only became significant above
-\(V_g \simeq 0.5\) V. Devices which used carbon nanotube films deposited
-in surfactant with steam present had significantly less
-channel-to-channel variation in electrical characteristics than for
-devices fabricated using other approaches.
+exhibited ambipolar characteristics, commonly observed in carbon
+nanotube network FETs
+\autocite{Kauffman2008,JongYu2009,Derenskyi2014,Thanihaichelvan2018,Albarghouthi2022}.
+Devices showed significantly less hysteresis than in the backgated case.
+When devices were appropriately configured, leakage current across the
+liquid gate consistently only became significant at gate voltages above
+\(\sim\) 0.5 V. Devices which used carbon nanotube films deposited in
+surfactant with steam present had significantly less channel-to-channel
+variation in electrical characteristics than for devices fabricated
+using other approaches. The consistent channel-to-channel electrical
+properties of these steam-deposited devices matches the consistent
+morphology of the films used to make them, as seen in
+Section~\ref{sec-pristine-morphology}. Being able to achieve consistent
+subthreshold regime behaviour between channels on the same device is a
+desirable attribute for reliable real-time multiplexed biosensing.
 
-Consistent subthreshold regime behaviour between channels is desirable
-for reliable multiplexed biosensing.
+\begin{figure}
+
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/onoff.png}
+
+}
+
+}
+
+\subcaption{\label{fig-on-off-ratio}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/threshold_V.png}
+
+}
+
+}
+
+\subcaption{\label{fig-threshold-voltage}}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.26\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/SS.png}
+
+}
+
+}
+
+\subcaption{\label{fig-subthreshold-slope}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.26\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-sweep-parameters}These boxplots illustrate the
+statistical distribution of (a) the on-off ratio, (b) the threshold
+voltage and (c) the subthreshold slope of liquid-gated transistor
+channels corresponding to each type of carbon nanotube film deposition.
+For each deposition type, measurements were taken from 21 channels of at
+least three separate devices. The boxes indicate the 25th and 75th
+percentile of the distribution.}
+
+\end{figure}
 
 \hypertarget{sec-dummy-sensing}{%
 \section{Salt Concentration Sensing with Phosphate Buffered
@@ -1085,6 +1183,24 @@ below a particular height. 2.9 nm is roughly where 2 bundles with
 average size 1.45 nm can start to be present, and is used as an estimate
 of the boundary value between single-tube bundle diameters and
 multi-tube bundle diameters.
+
+\hypertarget{sec-field-effect-transistor-analysis}{%
+\section{Field-Effect Transistor
+Analysis}\label{sec-field-effect-transistor-analysis}}
+
+The purpose of this code is to analyse electrical measurements taken of
+field-effect transistor (FET) devices. Electrical measurements were
+either taken from the Keysight 4156C Semiconductor Parameter Analyser,
+National Instruments NI-PXIe or Keysight B1500A Semiconductor Device
+Analyser as discussed in \textbf{?@sec-electrical-characterisation}; the
+code is able to analyse data taken from all three measurement setups.
+The code consists of three related but independent modules: the first
+analyses and plots sensing data from the FET devices, the second
+analyses and plots transfer characteristics from channels across a
+device, and the third compares individual channel characteristics before
+and after a modification or after each of several modifications. These
+modules were designed collaboratively by myself and Erica Cassie over
+GitHub using the Sourcetree Git GUI.
 
 \begin{equation}\protect\hypertarget{eq-lin-combo-exp-decay}{}{
 f(x) = k_1\exp{\Bigg(-\frac{t}{{\tau}_{1}}\Bigg)} + k_2\exp{\Bigg(-\frac{t}{{\tau}_{2}}\Bigg)} + ... + c
