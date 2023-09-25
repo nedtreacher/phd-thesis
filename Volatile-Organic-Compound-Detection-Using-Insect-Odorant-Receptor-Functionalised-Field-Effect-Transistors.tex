@@ -193,7 +193,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, sharp corners, borderline west={3pt}{0pt}{shadecolor}, interior hidden, breakable, enhanced, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, enhanced, sharp corners, frame hidden, interior hidden, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -570,7 +570,12 @@ estimates are shown in Table~\ref{tbl-histogram-parameters}. Also shown
 is an estimate of the ratio of single- to multi-tube bundles for each
 deposition, found by comparing the proportion of each carbon nanotube
 curve below and above 2.9 nm, the minimum multi-tube bundle size for
-1.45 nm diameter nanotubes.
+1.45 nm diameter nanotubes. It should be noted that the force of the
+atomic force microscope tip may cause some degree of nanotube bundle
+compression, leading to a systematic underestimate of nanotube height
+\autocite{Vobornik2023}. The relative proportion of multi-tube bundles
+shown in Table~\ref{tbl-histogram-parameters} should therefore be
+treated as a lower-limit estimate of the true proportion.
 
 \hypertarget{tbl-histogram-parameters}{}
 \begin{table}
@@ -608,14 +613,14 @@ the substrate, which could disrupt the repulsive forces from the
 surfactant coating and allow attractive forces to temporarily dominate.
 
 It is possible that the bundling of surfactant-dispersed carbon
-nanotubes occurs due to the coffee-ring effect
-\autocite{Deegan1997,VanGaalen2021}. The coffee-ring effect refers to a
-build-up of dispersed solid forming around the edges of a dispersion
-evaporating on a surface. This process occurs due to the dispersion
-edges being fixed by surface forces, leading to capillary flow outwards
-to replace liquid evaporating at the edges, bringing solid material
-along with it. The presence of vapour is known to disrupt this capillary
-effect \autocite{Bishop2020}.
+nanotubes is a consequence of dynamics introduced by the coffee-ring
+effect \autocite{Deegan1997,VanGaalen2021}. The coffee-ring effect
+refers to a build-up of dispersed solid forming around the edges of a
+dispersion evaporating on a surface. This process occurs due to the
+dispersion edges being fixed by surface forces, leading to capillary
+flow outwards to replace liquid evaporating at the edges, bringing solid
+material along with it. The presence of vapour is known to disrupt this
+capillary effect \autocite{Bishop2020}.
 
 \hypertarget{sec-pristine-electrical-characterisation}{%
 \section{Electrical
@@ -1044,13 +1049,13 @@ device due to the presence of water \autocite{Conseil2014}.
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch5/JG098_pristine_TXLG01_5mVstep_220920_norinse_1.png}
+\includegraphics{./figures/ch5/JG098_pristine_TXLG01_5mVstep_220920_norinse.png}
 
 }
 
 }
 
-\subcaption{\label{fig-on-off-ratio}}
+\subcaption{\label{fig-graphene-transfer-1}}
 \end{minipage}%
 %
 \begin{minipage}[t]{0.05\linewidth}
@@ -1069,16 +1074,31 @@ device due to the presence of water \autocite{Conseil2014}.
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch5/JG098_pristine_TXLG02_5mVstep_1hr1XPBS_220921_2.png}
+\includegraphics{./figures/ch5/JGQ00D6_pristine_TXLG01_5mVstep_220914_norinse.png}
 
 }
 
 }
 
-\subcaption{\label{fig-subthreshold-slope}}
+\subcaption{\label{fig-graphene-transfer-2}}
 \end{minipage}%
 \newline
-\begin{minipage}[t]{0.26\linewidth}
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/JG098_pristine_TXLG01_5mVstep_220920_norinse.png}
+
+}
+
+}
+
+\subcaption{\label{fig-x-voltage}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
 
 {\centering 
 
@@ -1094,32 +1114,23 @@ device due to the presence of water \autocite{Conseil2014}.
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch5/JG098_pristine_TXLG03_5mVstep_rinse1_220921_3.png}
+\includegraphics{./figures/ch5/JG098_pristine_TXLG01_5mVstep_220920_norinse.png}
 
 }
 
 }
 
-\subcaption{\label{fig-threshold-voltage}}
-\end{minipage}%
-%
-\begin{minipage}[t]{0.26\linewidth}
-
-{\centering 
-
-~
-
-}
-
+\subcaption{\label{fig-y-voltage}}
 \end{minipage}%
 
 \caption{\label{fig-pristine-graphene}These liquid-gated transfer sweeps
-show the transfer characteristics of a single AZ\(^\circledR\) 1518
-encapsulated graphene device (a) upon initial exposure to 1XPBS, (b)
-after being coated in 1XPBS for 1 hour, (c) after the device was rinsed
-and buffer in the well was replaced with new 1XPBS. This procedure was
-followed to examine the impact of 1XPBS on the electrical behaviour of
-the graphene devices.}
+show the transfer characteristics of the channels from two
+AZ\(^\circledR\) 1518 encapsulated graphene devices upon initial
+exposure to 1XPBS in (a) and (b). (b) and (e) after being coated in
+1XPBS for 1 hour, and (c) and (f) after the device was rinsed and buffer
+in the well was replaced with new 1XPBS. This procedure was followed to
+examine the impact of 1XPBS on the electrical behaviour of the graphene
+devices. The device in (d-f)}
 
 \end{figure}
 
@@ -1138,7 +1149,7 @@ each from two devices. }\tabularnewline
 \centering
 \begin{tabular}{lccc}
 \toprule
- & 1XPBS: Initial & 1XPBS: After 1 hr  & 1XPBS: Replaced\\
+ & 1XPBS: Initial & 1XPBS: After 1 hr & 1XPBS: Rinse\\
 \midrule
 On-Off Ratio (arb.) & 5.1 ± 0.3 & 5.0 ± 0.7 & 5.0 ± 0.6\\
 Dirac Point Voltage (V) & 0.28 ± 0.04 & 0.31 ± 0.03 & 0.28 ± 0.02\\
@@ -1158,12 +1169,9 @@ Device channels were measured on exposure to 1XPBS, after exposure to
 replaced in the well. Table~\ref{tbl-graphene-parameters} shows that the
 on-off ratio and Dirac point voltage of graphene device were highly
 consistent before and after exposure to 1XPBS, indicating the presence
-of 1XPBS had minimal impact on these key parameters.
-
-\hypertarget{double-minima-and-rinsing}{%
-\subsubsection*{Double Minima and
-Rinsing}\label{double-minima-and-rinsing}}
-\addcontentsline{toc}{subsubsection}{Double Minima and Rinsing}
+of 1XPBS had minimal impact on these key parameters. Exposure to 1XPBS
+does not appear to impact the appearance of double-minima when
+double-minima are present.
 
 \hypertarget{sec-dummy-sensing}{%
 \section{Salt Concentration Sensing with Phosphate Buffered

@@ -196,15 +196,18 @@ There is also a significant increase in current leakage to the backgate for larg
 
 ### Graphene
 
-::: {#fig-pristine-graphene layout="[[47.5,-5,47.5], [-26.25,47.5,-26.25]]"}
+::: {#fig-pristine-graphene layout="[[47.5,-5,47.5], [47.5,-5,47.5]]"}
 
-![](figures/ch5/JG098_pristine_TXLG01_5mVstep_220920_norinse_1.png){#fig-on-off-ratio}
+![](figures/ch5/JG098_pristine_TXLG01_5mVstep_220920_norinse.png){#fig-graphene-transfer-1}
 
-![](figures/ch5/JG098_pristine_TXLG02_5mVstep_1hr1XPBS_220921_2.png){#fig-subthreshold-slope}
+![](figures/ch5/JGQ00D6_pristine_TXLG01_5mVstep_220914_norinse.png){#fig-graphene-transfer-2}
 
-![](figures/ch5/JG098_pristine_TXLG03_5mVstep_rinse1_220921_3.png){#fig-threshold-voltage}
+![](figures/ch5/JG098_pristine_TXLG01_5mVstep_220920_norinse.png){#fig-x-voltage}
 
-These liquid-gated transfer sweeps show the transfer characteristics of a single AZ$^\circledR$ 1518 encapsulated graphene device (a) upon initial exposure to 1XPBS, (b) after being coated in 1XPBS for 1 hour, (c) after the device was rinsed and buffer in the well was replaced with new 1XPBS. This procedure was followed to examine the impact of 1XPBS on the electrical behaviour of the graphene devices.
+![](figures/ch5/JG098_pristine_TXLG01_5mVstep_220920_norinse.png){#fig-y-voltage}
+
+These liquid-gated transfer sweeps show the transfer characteristics of the channels from two AZ$^\circledR$ 1518 encapsulated graphene devices upon initial exposure to 1XPBS in (a) and (b).
+(b) and (e) after being coated in 1XPBS for 1 hour, and (c) and (f) after the device was rinsed and buffer in the well was replaced with new 1XPBS. This procedure was followed to examine the impact of 1XPBS on the electrical behaviour of the graphene devices. The device in (d-f)
 :::
 
 Graphene devices were electrically characterised in the manner described in @sec-electrical-characterisation and analysed using the Python code discussed in @sec-field-effect-transistor-analysis. 
@@ -232,9 +235,7 @@ graphene_device_parameters %>%
     escape = FALSE)
 ```
 
-@fig-pristine-graphene shows liquid-gated transfer characteristics of a single graphene device with three working channels. This device was fabricated prior to Jun 2021. This device exhibits the ambipolar characteristics typical of liquid-gated graphene devices [@Heller2009a;@Heller2010; @Xia2010; @Kireev2017]. As with the carbon nanotube network devices, leakage current remained below $\sim$ 1 $\times$ $10^{-7}$ V across both the forward and reverse sweep. Device channels were measured on exposure to 1XPBS, after exposure to 1XPBS for one hour and after the device surface was rinsed and 1XPBS was replaced in the well. @tbl-graphene-parameters shows that the on-off ratio and Dirac point voltage of graphene device were highly consistent before and after exposure to 1XPBS, indicating the presence of 1XPBS had minimal impact on these key parameters.  
-
-#### Double Minima and Rinsing {.unnumbered}
+@fig-pristine-graphene shows liquid-gated transfer characteristics of a single graphene device with three working channels. This device was fabricated prior to Jun 2021. This device exhibits the ambipolar characteristics typical of liquid-gated graphene devices [@Heller2009a;@Heller2010; @Xia2010; @Kireev2017]. As with the carbon nanotube network devices, leakage current remained below $\sim$ 1 $\times$ $10^{-7}$ V across both the forward and reverse sweep. Device channels were measured on exposure to 1XPBS, after exposure to 1XPBS for one hour and after the device surface was rinsed and 1XPBS was replaced in the well. @tbl-graphene-parameters shows that the on-off ratio and Dirac point voltage of graphene device were highly consistent before and after exposure to 1XPBS, indicating the presence of 1XPBS had minimal impact on these key parameters. Exposure to 1XPBS does not appear to impact the appearance of double-minima when double-minima are present. 
 
 ##	Salt Concentration Sensing with Phosphate Buffered Saline {#sec-dummy-sensing}
 
