@@ -202,15 +202,22 @@ There is also a significant increase in current leakage to the backgate for larg
 
 ![](figures/ch5/JGQ00D6_pristine_TXLG01_5mVstep_220914_norinse.png){#fig-graphene-transfer-2}
 
-![](figures/ch5/JG098_pristine_TXLG01_5mVstep_220920_norinse.png){#fig-x-voltage}
+![](figures/ch5/JG098_pristine_transfer_sweep_comparison.png){#fig-graphene-transfer-comparison-1}
 
-![](figures/ch5/JG098_pristine_TXLG01_5mVstep_220920_norinse.png){#fig-y-voltage}
+![](figures/ch5/JGQ00D6_pristine_transfer_sweep_comparison.png){#fig-graphene-transfer-comparison-2}
 
-These liquid-gated transfer sweeps show the transfer characteristics of the channels from two AZ$^\circledR$ 1518 encapsulated graphene devices upon initial exposure to 1XPBS in (a) and (b).
-(b) and (e) after being coated in 1XPBS for 1 hour, and (c) and (f) after the device was rinsed and buffer in the well was replaced with new 1XPBS. This procedure was followed to examine the impact of 1XPBS on the electrical behaviour of the graphene devices. The device in (d-f)
+These figures show liquid-gated transfer characteristics of channels from two AZ$^\circledR$ 1518 encapsulated graphene devices. In (a) and (b), the characteristics of working device channels upon initial exposure to 1XPBS are displayed alongside gate current. The transfer characteristics of channel 1 in (a) and channel 5 in (b) after various degrees of exposure to 1XPBS are shown in (c) and (d) respectively.
 :::
 
 Graphene devices were electrically characterised in the manner described in @sec-electrical-characterisation and analysed using the Python code discussed in @sec-field-effect-transistor-analysis. 
+
+@fig-pristine-graphene shows the liquid-gated transfer characteristics of two graphene devices. These devices were fabricated prior to Jun 2021. Both devices exhibit the ambipolar characteristics typical of liquid-gated graphene devices [@Heller2009a;@Heller2010; @Xia2010; @Kireev2017]. As with the carbon nanotube network devices, leakage current remained below $\sim$ 1 $\times$ $10^{-7}$ V across both the forward and reverse sweep. Hysteresis between the forward and reverse sweep results from charge traps within and on the surface of the SiO$_{2}$ dielectric [@Bartolomeo2011]. The major Dirac point for these devices is slightly to the right of V$_{\textrm{Dirac}}$ \approxeq$ 0 V, which indicates $p$-doping of the channel. This slight $p$-doping is likely a result of a adsorption of oxygen and water from the air and residue resist from photolithography [@Cheng2011; @Shin2012; @Kireev2017].
+
+Some devices exhibited a double-minima feature, indicating the presence of two Dirac points. This effect arises due to doping of graphene by the metal contacts. In shorter length channels, metal doping affects the entire channel length, leading to a consistent Fermi level and a single Dirac point. However, for longer channel lengths like ours, the doping effect from metal contact no longer reaches the entire channel, leading to a difference in Fermi level between the graphene in the channel and graphene under the metal contact. The difference in Fermi levels results in the presence of a second Dirac point [@Bartolomeo2011; @Feng2014; @Peng2018]. The global minimum of the transfer characteristic can be referred to as the 'major' Dirac point.
+
+@fig-pristine-graphene also shows the effect of 1XPBS on the graphene channels. The channels were measured on exposure to 1XPBS, after exposure to 1XPBS for one hour, and after the device surface was rinsed and 1XPBS was replaced in the well one time, two times and three times successively. A slight leftward shift of the major Dirac point was observed, which Kireev *et al.* speculate is due to gate current having an annealing effect on the channel and removing $p$-dopant from the graphene surface [@Kireev2017].  Kireev *et al.* found that continued liquid-gated sweeping reduced the size of the second Dirac point, and suggested that it was related removal of atmospheric contaminants from the graphene surface [@Kireev2017]. When this occurs, it may be due to the removal of contaminants improving contact between the metal and graphene surface, and thus increasing metal doping and consistency of the Fermi level across the channel.
+
+@tbl-graphene-parameters shows the on-off ratio and major Dirac point voltage of the graphene devices. Apart from the previously-mentioned slight leftward shift of the major Dirac point, these values were highly consistent before and after exposure to 1XPBS.
 
 ```{r}
 #| label: setup2
@@ -223,7 +230,7 @@ graphene_device_parameters <- graphene_device_parameters[rowSums(is.na(graphene_
 ```
 
 ```{r}
-#| tbl-cap: Average on-off ratio and Dirac point for AZ® 1518 encapsulated liquid-gated graphene transistor channels at various stages of exposure to 1XPBS. Electrical characteristics were taken of 6 channels total, 3 each from two devices.
+#| tbl-cap: Average on-off ratio and major Dirac point voltage for AZ® 1518 encapsulated liquid-gated graphene transistor channels at various stages of exposure to 1XPBS. Electrical characteristics were taken of 6 channels total, three channels from each of two devices.
 #| label: tbl-graphene-parameters
 
 graphene_device_parameters %>% 
@@ -235,8 +242,8 @@ graphene_device_parameters %>%
     escape = FALSE)
 ```
 
-@fig-pristine-graphene shows liquid-gated transfer characteristics of a single graphene device with three working channels. This device was fabricated prior to Jun 2021. This device exhibits the ambipolar characteristics typical of liquid-gated graphene devices [@Heller2009a;@Heller2010; @Xia2010; @Kireev2017]. As with the carbon nanotube network devices, leakage current remained below $\sim$ 1 $\times$ $10^{-7}$ V across both the forward and reverse sweep. Device channels were measured on exposure to 1XPBS, after exposure to 1XPBS for one hour and after the device surface was rinsed and 1XPBS was replaced in the well. @tbl-graphene-parameters shows that the on-off ratio and Dirac point voltage of graphene device were highly consistent before and after exposure to 1XPBS, indicating the presence of 1XPBS had minimal impact on these key parameters. Exposure to 1XPBS does not appear to impact the appearance of double-minima when double-minima are present. 
-
 ##	Salt Concentration Sensing with Phosphate Buffered Saline {#sec-dummy-sensing}
 
 -nLOF2020 resist being used leads to devices with less drift!!
+
+-low pass filter??
