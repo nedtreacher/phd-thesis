@@ -68,9 +68,9 @@ with open("references.bib", "w", encoding="utf-8") as file:
 2.5 $\mu$m $\times$ 2.5 $\mu$m atomic force microscope (AFM) images of carbon nanotube films deposited using various methods, shown side-by-side with surface profile histograms extracted from the AFM profile. Each histogram is shown alongside a linear combination of normal distributions #1 and #2, corresponding to the silicon and carbon nanotube distribution respectively. The counts remaining after #1 and #2 have been subtracted from the AFM histogram are shown in blue.
 :::
 
-The diameter range of deposited single-walled carbon nanotubes can be modelled via a normal or Gaussian distribution [@Thanihaichelvan2018; @Liu2013; @Vobornik2023]. However, when we extract and bin the height profiles from the 2.5 $\mu$m $\times$ 2.5 $\mu$m AFM images, plotted in black in @fig-afm-morphology, the histograms do not follow a normal distribution. The reason for this result is that the carbon nanotubes do not lie perfectly level on a perfectly level silicon oxide substrate - the atomic force microscope histogram would only be a single normal distribution in this ideal case. In practice, the SiO$_2$ substrate and carbon nanotube surface both have a degree of roughness, which may in part be due to the presence of atmospheric contaminants. In the case of the surfactant-deposited networks, residual surfactant may also contribute to surface roughness [@Vobornik2023]. Furthermore, nanotubes overlap and cross over each other, creating junctions with the combined height of the overlapping nanotubes.
+The diameter range of deposited single-walled carbon nanotubes can be modelled via a normal or Gaussian distribution [@LeMieux2008; @Liu2013; @Thanihaichelvan2018;  @Vobornik2023]. However, when we extract and bin the height profiles from the 2.5 $\mu$m $\times$ 2.5 $\mu$m AFM images, plotted in black in @fig-afm-morphology, the histograms do not follow a normal distribution. The reason for this result is that the carbon nanotubes do not lie perfectly level on a perfectly level silicon oxide substrate - the atomic force microscope histogram would only be a single normal distribution in this ideal case. In practice, the SiO$_2$ substrate and carbon nanotube surface both have a degree of roughness, which may in part be due to the presence of atmospheric contaminants. In the case of the surfactant-deposited networks, residual surfactant may also contribute to surface roughness [@Vobornik2023]. Furthermore, nanotubes overlap and cross over each other, creating junctions with the combined height of the overlapping nanotubes.
 
-It has been demonstrated that the surface roughness of a bare SiO$_2$ substrate can also be modelled with a normal distribution. This normal distribution can be set as the reference or zero point for other height measurements [@Velicky2015]. As both the carbon nanotube and silicon dioxide background heights can each be modelled using a normal distribution, we make an initial assumption that a linear combination of normal distributions can be used to model the AFM histograms in @fig-afm-morphology. Using the process discussed in @sec-histogram-analysis, we approximate the normal distributions corresponding to the silicon oxide substrate and carbon nanotube network, shown in @fig-afm-morphology as green and red curves respectively. The silicon oxide peak appears to fit more closely to the distribution with smaller carbon nanotube heights, which could be due to measurement of the silicon background being improved when feature height is smaller. We notice that the distribution for the carbon nanotube bundles drops to approximately zero before reaching 0 nm, which is physically appropriate. 
+It has been demonstrated that the surface roughness of a bare SiO$_2$ substrate can also be modelled with a normal distribution. This normal distribution can be set as the reference or zero point for other height measurements [@Velicky2015]. As both the carbon nanotube and silicon dioxide background heights can each be modelled using a normal distribution, we make an initial assumption that a linear combination of normal distributions can be used to model the AFM histograms in @fig-afm-morphology. Using the process discussed in @sec-histogram-analysis, we approximate the normal distributions corresponding to the silicon oxide substrate and carbon nanotube network, shown in @fig-afm-morphology as green and red curves respectively. The silicon oxide peak appears to fit more closely to the distribution with smaller carbon nanotube heights, which could be due to measurement of the silicon background being improved when feature height is smaller. We notice that the distribution for the carbon nanotube bundles drops to approximately zero before reaching 0 nm, which is physically appropriate.
 
 ::: {#fig-remaining-histogram layout="[[47.5,-5,47.5], [-26.25,47.5,-26.25]]"}
 
@@ -84,7 +84,7 @@ It has been demonstrated that the surface roughness of a bare SiO$_2$ substrate 
 The counts which remain after #1 and #2 have been subtracted from the AFM histogram are shown in black. The counts have been overlaid with half a Gaussian distribution, manually fitted.
 :::
 
-By subtracting the modelled silicon and carbon nanotube normal distributions from the AFM histogram, we find a remaining distribution spread roughly between 0 nm and the mean of the carbon nanotube bundle distribution. Interestingly, the peak of the carbon nanotube distribution occurs at a height approximately 2.5$\times$ the height corresponding to the peak of the remaining distribution. It is also apparent that the remaining distribution consistently follows a normal distribution after a sharp rise to maximum, as shown in @fig-remaining-histogram. This distribution appears to correspond to surface roughness due to the presence of contaminants, or possibly to broken pieces of individual nanotubes with various lengths.Contaminants could be residual surfactant or other atmospheric contamination resistant to acetone and isopropanol rinsing. Such contamination may or may not have implications for biosensing suitability, but surfactant contamination could certainly have negative effects on biological elements sensitive to surfactant. The area of this central peak may be useful for determining the extent of contamination on a carbon nanotube film, discussed further in @sec-contamination.
+By subtracting the modelled silicon and carbon nanotube normal distributions from the AFM histogram, we find a remaining distribution spread roughly between 0 nm and the mean of the carbon nanotube bundle distribution. Interestingly, the peak of the carbon nanotube distribution occurs at a height approximately 2.5$\times$ the height corresponding to the peak of the remaining distribution. It is also apparent that the remaining distribution consistently follows a normal distribution after a sharp rise to maximum, as shown in @fig-remaining-histogram. This distribution appears to correspond to surface roughness due to the presence of contaminants, or possibly to broken pieces of individual nanotubes with various lengths. Contaminants could be residual surfactant or other atmospheric contamination resistant to acetone and isopropanol rinsing. Such contamination may or may not have implications for biosensing suitability, but surfactant contamination could certainly have negative effects on biological elements sensitive to surfactant. The area of this central peak may be useful for determining the extent of contamination on a carbon nanotube film, discussed further in @sec-contamination.
 
 If we model carbon nanotube bundles as cylinders, and we assume the component nanotubes follow 2D packing and are of equal diameter, we can give an estimate the mean bundle size for each deposition type in terms of number of nanotubes *n* [@Graham1998; @Thanihaichelvan2018; @Specht2023].
 
@@ -103,7 +103,7 @@ circle_packing <- circle_packing[rowSums(is.na(circle_packing)) == 0,]
 knitr::kable(circle_packing, col.names = NULL, format = "simple")
 ```
 
-@tbl-circle-packing shows the relationship between the diameter of a bundle and the constituent diameters of up to nine 2D packed carbon nanotubes within that bundle. Assuming an average carbon nanotube diameter of 1.45 $\pm$ 0.13 nm, we can use the $d$/$d_n$ packing ratios to obtain an estimate of the number of nanotubes in the mean bundle size for each deposition [@Specht2023]. These estimates are shown in @tbl-histogram-parameters. Also shown is an estimate of the ratio of single- to multi-tube bundles for each deposition, found by comparing the proportion of each carbon nanotube curve below and above 2.9 nm, the minimum multi-tube bundle size for 1.45 nm diameter nanotubes.
+@tbl-circle-packing shows the relationship between the diameter of a bundle and the constituent diameters of up to nine 2D packed carbon nanotubes within that bundle. Assuming an average carbon nanotube diameter of 1.45 nm, we can use the $d$/$d_n$ packing ratios to obtain an estimate of the number of nanotubes in the mean bundle size for each deposition [@Specht2023].  We can also give an approximate range which this estimate falls within using the provided range of individual carbon nanotube diameters ($1.2-1.7$ nm) and the 95% confidence interval of the mean bundle size ($2\sigma$). These estimates are shown in @tbl-histogram-parameters. Also shown is an estimate of the ratio of single- to multi-tube bundles for each deposition, found by comparing the proportion of each carbon nanotube curve below and above 2.9 nm, the minimum multi-tube bundle size for 1.45 nm diameter nanotubes. It should be noted that the force of the atomic force microscope tip may cause some degree of nanotube bundle compression, leading to a systematic underestimate of nanotube height [@Vobornik2023]. The relative proportion of multi-tube bundles shown in @tbl-histogram-parameters should therefore be treated as a lower-limit estimate of the true proportion. 
 
 ```{r}
 #| label: setup
@@ -116,7 +116,7 @@ histogram_parameters <- histogram_parameters[rowSums(is.na(histogram_parameters)
 ```
 
 ```{r}
-#| tbl-cap: The mean of histogram distributions for carbon nanotube films deposited using various methods, along with estimates of the mean number of nanotubes and the proportion of multi-tubed bundles present.
+#| tbl-cap: The mean of histogram distributions for carbon nanotube films deposited using various methods, alongside estimates for the number of nanotubes present per bundle (within a 95% confidence interval) and the proportion of multi-tubed bundles present across the network. The value in brackets corresponds to an estimate for the number of nanotubes present in the mean bundle size.
 #| label: tbl-histogram-parameters
 
 histogram_parameters %>% 
@@ -133,7 +133,7 @@ histogram_parameters %>%
 
 When surfactant is used in the deposition process, both the carbon nanotube bundle diameter mean and standard deviation are small compared to the mean and standard deviation of solvent deposited films. However, despite the presence of surfactant, it is apparent both from @fig-afm-morphology and @tbl-histogram-parameters that not all surfactant-dispersed carbon nanotubes are deposited individually. Bundling may occur during the process of deposition onto the substrate, which could disrupt the repulsive forces from the surfactant coating and allow attractive forces to temporarily dominate. 
 
-It is possible that the bundling of surfactant-dispersed carbon nanotubes occurs due to the coffee-ring effect [@Deegan1997; @VanGaalen2021]. The coffee-ring effect refers to a build-up of dispersed solid forming around the edges of a dispersion evaporating on a surface. This process occurs due to the dispersion edges being fixed by surface forces, leading to capillary flow outwards to replace liquid evaporating at the edges, bringing solid material along with it. The presence of vapour is known to disrupt this effect [@Bishop2020].
+It is possible that the bundling of surfactant-dispersed carbon nanotubes is a consequence of dynamics introduced by the coffee-ring effect [@Deegan1997; @VanGaalen2021]. The coffee-ring effect refers to a build-up of dispersed solid forming around the edges of a dispersion evaporating on a surface. This process occurs due to the dispersion edges being fixed by surface forces, leading to capillary flow outwards to replace liquid evaporating at the edges, bringing solid material along with it. The presence of vapour is known to disrupt this capillary effect [@Bishop2020].
 
 ##	Electrical Characteristics {#sec-pristine-electrical-characterisation}
 
@@ -143,7 +143,7 @@ It is possible that the bundling of surfactant-dispersed carbon nanotubes occurs
 
 ![Solvent-based deposition, back-gated](figures/ch5/NTQ22C2_solvent_backgate.png){#fig-solvent-tx-bg}
 
-![Solvent-based deposition, liquid-gated](figures/ch5/NTQ24C8_pristine_TXLG01_220211_solvent_gate.png){#fig-solvent-tx-tx-lg}
+![Solvent-based deposition, liquid-gated](figures/ch5/NTQ24C8_pristine_TXLG01_220211_solvent_gate.png){#fig-solvent-tx-lg}
 
 ![Dropcast surfactant-based deposition, back-gated](figures/ch5/Q5C10_nosteam_backgate.png){#fig-surf-tx-bg}
 
@@ -153,38 +153,88 @@ It is possible that the bundling of surfactant-dispersed carbon nanotubes occurs
 
 ![Steam-assisted dropcast surfactant-based deposition, liquid-gated](figures/ch5/NTQ31C6_pristine_TXLG01_230330_steam_gate.png){#fig-steam-tx-lg}
 
-Transfer characteristics of carbon nanotube networks deposited using various methods. 1XPBS was used as the buffer for the liquid-gated measurements here. The source-drain voltage used for all sweeps was $V_{ds} = 100 \textrm{mV}$. A step size of 20 mV was used for the liquid-gated sweeps, while a step size of 100 mV was used for the backgated sweeps. Each sweep was taken from a separate device. Devices with a 100 nm SiO$_2$ layer were used for backgated measurements, and devices with a 300 nm SiO$_2$ layer were used for liquid gated measurements.
+Transfer characteristics of AZ$^\circledR$ 1518 encapsulated field-effect transistors with carbon nanotube network channels deposited using various methods. 1XPBS was used as the buffer for the liquid-gated measurements here. The source-drain voltage used for all sweeps was $V_{ds} = 100 \textrm{mV}$. A step size of 20 mV was used for the liquid-gated sweeps, while a step size of 100 mV was used for the backgated sweeps. Each pair of sweeps was taken from a separate device. Devices with a 100 nm SiO$_2$ layer were used for backgated measurements, and devices with a 300 nm SiO$_2$ layer were used for liquid gated measurements.
 :::
 
 Each carbon nanotube device fabricated was electrically characterised as described in @sec-electrical-characterisation, and electrical data was analysed using the Python code discussed in @sec-field-effect-transistor-analysis. 
 
-Figure @fig-pristine-cnt-characteristics displays multi-channel measurements of representative devices fabricated as described in @sec-fabrication. To ensure a consistent comparison, each device here was encapsulated with AZ$^\circledR$ 1518 encapsulation before measurements were taken. The channels which did not exhibit reliable transistor characteristics are not shown. These 'non-working' channels were either shorted, due to metal remaining on the channel after lift-off, or were very low current, due to a very sparse carbon nanotube network. Devices shown here with a solvent-deposited carbon nanotube network were fabricated prior to Jan 2022; devices with a surfactant-deposited network without steam present were fabricated prior to Jun 2021; devices with a surfactant-deposited network without steam were fabricated prior to Sep 2022.
+@fig-pristine-cnt-characteristics displays multi-channel measurements of representative devices fabricated as described in @sec-fabrication. To ensure a consistent comparison, each device here was encapsulated with AZ$^\circledR$ 1518 encapsulation before measurements were taken. The channels which did not exhibit reliable transistor characteristics are not shown. These 'non-working' channels were either shorted, due to metal remaining on the channel after lift-off, or were very low current, due to a very sparse carbon nanotube network. Devices shown here with a solvent-deposited carbon nanotube network were fabricated prior to Jan 2022; devices with a surfactant-deposited network without steam present were fabricated prior to Jun 2021; devices with a surfactant-deposited network without steam were fabricated prior to Sep 2022.
 
-When backgated, devices exhibited *p*-type transistor behaviour with significant hysteresis and negligible gate current leakage. The devices fabricated with a solvent-based deposition were switched off at a lower voltage than the devices which used surfactant during deposition.
-
-When the devices were liquid-gated with 1XPBS electrolyte buffer, they exhibited ambipolar characteristics, commonly observed in carbon nanotube network FETs [@Kauffman2008; @Heller2009; @JongYu2009; @Derenskyi2014; @Thanihaichelvan2018; @Albarghouthi2022]. Devices generally exhibited significantly less hysteresis than in the backgated case. When devices were appropriately configured, leakage current did not exceed $\sim 1 \times 10^-7$ V across the sweep. The devices which used carbon nanotube films deposited in surfactant with steam present had significantly less channel-to-channel variation in electrical characteristics than the devices fabricated using other approaches. The consistent channel-to-channel electrical properties of these steam-deposited devices matches the consistent morphology of the films used to make them, as seen in @sec-pristine-morphology. Being able to achieve consistent subthreshold regime behaviour between channels on the same device is a desirable attribute for reliable real-time multiplexed biosensing.
-
-A summary of key parameters of pristine liquid-gated devices is shown in @fig-sweep-parameters. The full dataset consists of three sets of 21 liquid-gated transfer characteristics of working channels, with each set corresponding to the use of a particular method of carbon nanotube network deposition in the device fabrication. Measurements from at least three devices are included in each set. Channels from surfactant-deposited film devices usually showed a larger on-off ratio and subthreshold slope than those from solvent-deposited devices. When the transistor is gated in the subthreshold range, a larger on-off ratio and subthreshold slope results in a larger change in conductance in response to changes in the transfer characteristic curve. Therefore, a larger on-off ratio and subthreshold slope is desirable for improved sensor performance [@Kauffman2008; @Heller2009]. The larger on-off ratio and subthreshold slope is likely a result of the reduced bundling discussed in @sec-pristine-morphology. Carbon nanotube pathways across the channel with a lower degree of bundling will have a lower number of component metallic tubes,  [@Thanihaichelvan2018].
-
-When steam is used for surfactant deposition of films, the resulting devices showed much more consistent 
-All channels characterised had a positive threshold voltage. The threshold voltage was largest and most consistent for steam-assisted surfactant-deposited films.
+When backgated, devices exhibited *p*-type transistor behaviour with significant hysteresis and negligible gate current leakage. The presence of hysteresis can be explained by the presence of charge traps on the surface of the silicon dioxide and at interfaces between the silicon dioxide and carbon nanotubes [@Lee2007; @Ha2014]. The devices fabricated with a solvent-based deposition were switched off at a lower voltage than the devices which used surfactant during deposition.
 
 ::: {#fig-sweep-parameters layout="[[47.5,-5,47.5], [-26.25,47.5,-26.25]]"}
 
-![](figures/ch5/onoff.png){#fig-on-off-ratio}
-
-![](figures/ch5/threshold_V.png){#fig-threshold-voltage}
+![](figures/ch5/onoff_CNT.png){#fig-on-off-ratio}
 
 ![](figures/ch5/SS.png){#fig-subthreshold-slope}
 
+![](figures/ch5/threshold_V.png){#fig-threshold-voltage}
 
-These boxplots illustrate the statistical distribution of (a) the on-off ratio, (b) the threshold voltage and (c) the subthreshold slope of liquid-gated transistor channels corresponding to each type of carbon nanotube film deposition. For each deposition type, measurements were taken from 21 channels of at least three separate devices. The boxes indicate the 25th and 75th percentile of the distribution.
+These boxplots illustrate the statistical distribution of (a) the on-off ratio, (b) the subthreshold slope, and (c) the threshold voltage of AZ$^\circledR$ 1518 encapsulated liquid-gated transistor channels corresponding to each type of carbon nanotube film deposition. For each deposition type, electrical characteristics were taken of 21 channels of at least three separate devices. The boxes indicate the 25th and 75th percentile of the distribution.
 :::
 
+When the devices were liquid-gated with 1XPBS electrolyte, they exhibited ambipolar characteristics, commonly observed in carbon nanotube network FETs [@Kauffman2008; @Heller2009; @JongYu2009; @Derenskyi2014; @Thanihaichelvan2018; @Albarghouthi2022]. Devices generally exhibited significantly less hysteresis than in the backgated case. When devices were appropriately configured, leakage current did not exceed $\sim 1 \times 10^{-7}$ V across the forward and reverse sweep. The devices shown which used carbon nanotube films deposited in surfactant with steam present had significantly less channel-to-channel variation in electrical characteristics than the devices fabricated using other approaches. A summary of key parameters of pristine liquid-gated devices is shown in @fig-sweep-parameters. The full dataset consists of three sets of 21 liquid-gated transfer characteristics of working channels, with each set corresponding to the use of a particular method of carbon nanotube network deposition in the device fabrication. Measurements from at least three devices are included in each set. Each entry in the summary corresponds to the average of the specific parameter in the forward and reverse sweep direction.
 
+Channels from surfactant-deposited film devices usually showed a larger on-off ratio and subthreshold slope than those from solvent-deposited devices. When the transistor is gated in the subthreshold range, a larger on-off ratio and subthreshold slope results in a larger change in conductance in response to changes in the transfer characteristic curve. Therefore, a larger on-off ratio and subthreshold slope is desirable for improved sensor performance [@Kauffman2008; @Heller2009; @Gao2010]. The larger on-off ratio for surfactant-deposited film devices is likely a result of the reduced bundling of nanotubes, as discussed in @sec-pristine-morphology. Carbon nanotube pathways across the channel with a lower degree of bundling will have a lower number of component metallic tubes in the network, which increases the on-off ratio [@LeMieux2008; @Rouhi2011;@Thanihaichelvan2018]. The effect of metallic nanotubes increasing the off current of a device channel is illustrated by channel 1 in @fig-solvent-tx-lg. The larger subthreshold slope is likely due to increased mobility from a denser nanotube network in surfactant-deposited films [@Rouhi2011], as seen in @fig-afm-morphology.
 
+When steam is used for surfactant deposition of films, the resulting devices showed highly consistent channel-to-channel electrical properties. As the carbon nanotube films on these devices are relatively dense, as seen in @fig-afm-morphology, we know that the network is well above the percolation threshold. As many carbon nanotube pathways connect across the channel in parallel, small variations in the network morphology have less of an impact on the overall channel behaviour [@Thanihaichelvan2018]. We also see from @tbl-histogram-parameters that the range of bundle sizes is relatively low in the steam-deposited films used in these devices. The low range of bundle sizes means the semiconducting-metallic nanotube ratio is far more consistent for these devices, leading to more consistent electrical device characteristics. Being able to achieve consistent subthreshold regime behaviour between channels on the same device is a desirable attribute for reliable real-time multiplexed biosensing [@Kauffman2008; @Heller2009; @Gao2010].
 
-<!-- Figure comparing backgate with buffer and without buffer !--> 
+All channels characterised had a positive threshold voltage ($V_{th}$). The threshold voltage was largest and most consistent for steam-assisted surfactant-deposited films. The marked increase in $V_{th}$ for channel measurements from surfactant-deposited devices with steam present relative to other channel measurements indicates $p$-doping of the carbon nanotubes has occurred [@Heller2008; @Thanihaichelvan2018]. It is highly likely the dopant is present due to the steam deposition, and may be related to the large contamination peak for steam-deposited films seen in @fig-afm-morphology and @fig-remaining-histogram. One possibility is that this dopant is residual surfactant, which can $p$-dope carbon nanotubes and lead to enhanced $p$-doping from adsorped oxygen and water [@Kane2014; @Nonoguchi2018]. We have seen that steam prevents bundling of carbon nanotubes during deposition. This effect is likely due to persistence of the surfactant keeping nanotubes separate during this process. Presence of surfactant may also explain the lowered subthreshold slope and therefore mobility of the surfactant-deposited devices with steam relative to the surfactant-deposited devices without steam. The analysis by Kane *et al.* shows that the thermal annealling at 150$^\circ$C used in this work to remove residual surfactant is likely inadequate for this purpose [@Kane2014].
+
+::: {#fig-buffer-effect-on-backgate layout="[[47.5,-5,47.5]]"}
+
+![](figures/ch5/Q35C3_nobuffer.png){#fig-no-buffer}
+
+![](figures/ch5/Q35C3_buffer.png){#fig-50uL-buffer}
+
+Backgated transfer sweeps were taken of an single unencapsulated device with a 300 nm SiO$_2$ layer and steam assisted surfactant-deposited carbon nanotube network channels before and after being covered in $50 \mu$L 1XPBS electrolyte.
+:::
+
+@fig-buffer-effect-on-backgate shows the behaviour of an unencapsulated backgated device with a 300 nm SiO$_2$ layer before and after being covered by 50 $\mu$L of 1XPBS (phosphate buffered saline). The on-off ratio and hysteresis of the channels increase significantly. The presence of water increases hysteresis through introducing charge traps at the silicon dioxide surface around the carbon nanotubes and at the surface of the nanotubes themselves [@Kim2003; @Lee2007; @Ha2014]. The use of alternative transistor dielectrics and/or device functionalisation could potentially be used to reduce this hysteresis, as the time variation in threshold voltage due to hysteresis is unwanted for biosensing work [@Lee2007; @Ha2014].  The electrical double layer formed by the electrolyte at the surface of the carbon nanotubes will also have contributed to the observed change in electrical properties, as it screens surface charge present on the surface around the nanotubes [@Heller2010].
+
+There is also a significant increase in current leakage to the backgate for larger applied voltages, despite the electrolyte having no visible physical contact with the silicon backgate or copper plane. This leakage current may simply be due to an increase in relative humidity around the device due to the presence of water [@Conseil2014].
+
+### Graphene
+
+::: {#fig-pristine-graphene layout="[[47.5,-5,47.5], [-26.25,47.5,-26.25]]"}
+
+![](figures/ch5/JG098_pristine_TXLG01_5mVstep_220920_norinse_1.png){#fig-on-off-ratio}
+
+![](figures/ch5/JG098_pristine_TXLG02_5mVstep_1hr1XPBS_220921_2.png){#fig-subthreshold-slope}
+
+![](figures/ch5/JG098_pristine_TXLG03_5mVstep_rinse1_220921_3.png){#fig-threshold-voltage}
+
+These liquid-gated transfer sweeps show the transfer characteristics of a single AZ$^\circledR$ 1518 encapsulated graphene device (a) upon initial exposure to 1XPBS, (b) after being coated in 1XPBS for 1 hour, (c) after the device was rinsed and buffer in the well was replaced with new 1XPBS. This procedure was followed to examine the impact of 1XPBS on the electrical behaviour of the graphene devices.
+:::
+
+Graphene devices were electrically characterised in the manner described in @sec-electrical-characterisation and analysed using the Python code discussed in @sec-field-effect-transistor-analysis. 
+
+```{r}
+#| label: setup2
+#| include: false
+library(tidyverse)
+library(kableExtra)
+
+graphene_device_parameters <- read.csv("tables/ch5/graphene_device_parameters.csv", sep=",")
+graphene_device_parameters <- graphene_device_parameters[rowSums(is.na(graphene_device_parameters)) == 0,]
+```
+
+```{r}
+#| tbl-cap: Average on-off ratio and Dirac point for AZ® 1518 encapsulated liquid-gated graphene transistor channels at various stages of exposure to 1XPBS. Electrical characteristics were taken of 6 channels total, 3 each from two devices.
+#| label: tbl-graphene-parameters
+
+graphene_device_parameters %>% 
+  kable(
+    booktabs = TRUE, #LaTeX "booktabs formatting"
+    linesep = "", #no linespace
+    align = c(rep("l", 1), rep("c", 5)), #aligns col 1 left, all others center
+    col.names = c("", "1XPBS: Initial", "1XPBS: After 1 hr", "1XPBS: Rinse"), 
+    escape = FALSE)
+```
+
+@fig-pristine-graphene shows liquid-gated transfer characteristics of a single graphene device with three working channels. This device was fabricated prior to Jun 2021. This device exhibits the ambipolar characteristics typical of liquid-gated graphene devices [@Heller2009a;@Heller2010; @Xia2010; @Kireev2017]. As with the carbon nanotube network devices, leakage current remained below $\sim$ 1 $\times$ $10^{-7}$ V across both the forward and reverse sweep. Device channels were measured on exposure to 1XPBS, after exposure to 1XPBS for one hour and after the device surface was rinsed and 1XPBS was replaced in the well. @tbl-graphene-parameters shows that the on-off ratio and Dirac point voltage of graphene device were highly consistent before and after exposure to 1XPBS, indicating the presence of 1XPBS had minimal impact on these key parameters.  
+
+#### Double Minima and Rinsing {.unnumbered}
 
 ##	Salt Concentration Sensing with Phosphate Buffered Saline {#sec-dummy-sensing}
 
