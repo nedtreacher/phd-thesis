@@ -135,9 +135,9 @@ When surfactant is used in the deposition process, both the carbon nanotube bund
 
 It is possible that the bundling of surfactant-dispersed carbon nanotubes is a consequence of dynamics introduced by the coffee-ring effect [@Deegan1997; @VanGaalen2021]. The coffee-ring effect refers to a build-up of dispersed solid forming around the edges of a dispersion evaporating on a surface. This process occurs due to the dispersion edges being fixed by surface forces, leading to capillary flow outwards to replace liquid evaporating at the edges, bringing solid material along with it. The presence of vapour is known to disrupt this capillary effect [@Bishop2020].
 
-##	Electrical Characteristics {#sec-pristine-electrical-characterisation}
+## Electrical Characteristics of Pristine Devices {#sec-pristine-electrical-characterisation}
 
-### Carbon Nanotubes
+### Carbon Nanotube Network Devices
 
 ::: {#fig-pristine-cnt-characteristics layout="[[49,-2,49], [49,-2,49], [49,-2,49]]"}
 
@@ -194,7 +194,7 @@ Backgated transfer sweeps were taken of an single unencapsulated device with a 3
 
 There is also a significant increase in current leakage to the backgate for larger applied voltages, despite the electrolyte having no visible physical contact with the silicon backgate or copper plane. This leakage current may simply be due to an increase in relative humidity around the device due to the presence of water [@Conseil2014].
 
-### Graphene
+### Graphene Devices
 
 ::: {#fig-pristine-graphene layout="[[47.5,-5,47.5], [47.5,-5,47.5]]"}
 
@@ -215,9 +215,7 @@ Graphene devices were electrically characterised in the manner described in @sec
 
 Some devices exhibited a double-minima feature, indicating the presence of two Dirac points. This effect arises due to doping of graphene by the metal contacts. In shorter length channels, metal doping affects the entire channel length, leading to a consistent Fermi level and a single Dirac point. However, for longer channel lengths like ours, the doping effect from metal contact no longer reaches the entire channel, leading to a difference in Fermi level between the graphene in the channel and graphene under the metal contact. The difference in Fermi levels results in the presence of a second Dirac point [@Bartolomeo2011; @Feng2014; @Peng2018]. The global minimum of the transfer characteristic can be referred to as the 'major' Dirac point.
 
-@fig-pristine-graphene also shows the effect of 1XPBS on the graphene channels. The channels were measured on exposure to 1XPBS, after exposure to 1XPBS for one hour, and after the device surface was rinsed and 1XPBS was replaced in the well one time, two times and three times successively. A slight leftward shift of the major Dirac point was observed, which Kireev *et al.* speculate is due to gate current having an annealing effect on the channel and removing $p$-dopant from the graphene surface [@Kireev2017].  Kireev *et al.* found that continued liquid-gated sweeping reduced the size of the second Dirac point, and suggested that it was related removal of atmospheric contaminants from the graphene surface [@Kireev2017]. When this occurs, it may be due to the removal of contaminants improving contact between the metal and graphene surface, and thus increasing metal doping and consistency of the Fermi level across the channel.
-
-@tbl-graphene-parameters shows the on-off ratio and major Dirac point voltage of the graphene devices. Apart from the previously-mentioned slight leftward shift of the major Dirac point, these values were highly consistent before and after exposure to 1XPBS.
+@fig-pristine-graphene also shows the effect of 1XPBS on the graphene channels. The channels were measured on exposure to 1XPBS, after exposure to 1XPBS for one hour, and after the device surface was rinsed and 1XPBS was replaced in the well one time, two times and three times successively. A slight leftward shift of the major Dirac point was observed, which Kireev *et al.* speculate is due to gate current having an annealing effect on the channel and removing $p$-dopant from the graphene surface [@Kireev2017]. Kireev *et al.* also found that continuing to perform liquid-gated sweeps reduced the size of the second Dirac point, and suggested that it was related removal of atmospheric contaminants from the graphene surface [@Kireev2017]. When this occurs, it may be due to the removal of contaminants improving contact between the metal and graphene surface, and thus increasing metal doping and consistency of the Fermi level across the channel.
 
 ```{r}
 #| label: setup2
@@ -242,7 +240,49 @@ graphene_device_parameters %>%
     escape = FALSE)
 ```
 
+@tbl-graphene-parameters shows the on-off ratio and major Dirac point voltage of the graphene devices. Apart from the previously-mentioned slight leftward shift of the major Dirac point, these values were highly consistent before and after exposure to 1XPBS.
+
 ##	Salt Concentration Sensing with Phosphate Buffered Saline {#sec-dummy-sensing}
+
+### Control Series and Baseline Drift
+
+The total interval for the control series was 1800 s, with 20$\mu$L 1XPBS additions at 100 s, 200 s and 300 s, and 20$\mu$L subtractions at 400 s, 500 s and 600 s. Devices were left untouched over the next 1200 s to allow the current level to settle. @fig-transfer-sweep shows the transfer sweep of a single channel of a steam-assisted surfactant-deposited device encapsulated with SU8, fabricated after Jun 2023. The threshold voltage of the channel is $V_{\textrm{th}}$ = 140 mV, and the voltage corresponding to minimum current is $V_{\textrm{gap}}$ = 310 mV. The variable symbol V$_{\textrm{gap}}$ denotes the center of the transistor bandgap, has been labeled in this manner to be consistent with previous work [@Heller2009].
+
+::: {#fig-salt-conc-control-series-SU8 layout="[[45,-5,50], [-25,50,-25]]"}
+
+![](figures/ch5/Q2C10ch8custom.png){#fig-transfer-sweep}
+
+![](figures/ch5/Q2C10_with_fitted_curves.png){#fig-linear-fit}
+
+![](figures/ch5/Q2C10_with_fitted curves_exp.png){#fig-exp-fit}
+
+These figures show The linear fits in (b) had R squared values of 0.78 and 0.70 for the traces with gate voltage $V_{\textrm{lg}}-V_{\textrm{gap}}$ = $-200$ mV and $V_{\textrm{lg}}-V_{\textrm{gap}}$ = $-150$ mV respectively. The exponential fits in (c) had R squared values of 0.71 and 0.93 for the $V_{\textrm{lg}}-V_{\textrm{gap}}$ = $-200$ mV and $V_{\textrm{lg}}-V_{\textrm{gap}}$ = $-150$ mV traces respectively.
+:::
+
+@fig-linear-fit shows two control series performed using the same channel on different days, with a different gate voltage used during each series. In both series, there is no clear stepwise response to any addition or subtraction of 1XPBS, as expected. Linear fits were performed on each control series from $1200-1800$ s. The gradient of the $V_{\textrm{lg}}-V_{\textrm{gap}}$ = $-200$ mV gated control series was $m_{1} = -0.95\pm0.02$ pA/s, while the gradient of the $V_{\textrm{lg}}-V_{\textrm{gap}}$ = $-150$ mV gated control series was $m_{2} = -0.69\pm0.02$ pA/s. The equations for the two linear fits were proportional to each other, with $m_{2}t + $b_{2} = (0.73 \pm 0.03)\times m_{1}t + b_{1}$.
+
+When the linear fits were subtracted from the raw data, the remaining dataset exhibited an exponential decay for each control series. @fig-exp-fit shows exponential fits to the remaining curve from $0-1200$ s. Both exponentials have a characteristic time constant of $\tau = 300 \pm 20$ s, indicating the rate of decay is independent of the gate voltage used to gate the transistor. As both exponentials decay to zero, they are therefore also proportional to each other, with $a_{2}\exp(-t/\tau) = (2.39\pm0.05)\times a_{1}\exp(-t/\tau)$. The $V_{\textrm{lg}}-V_{\textrm{gap}}$ = $-200$ mV measurement was performed 3 days after the $V_{\textrm{lg}}-V_{\textrm{gap}}$ = $-150$ mV measurement. It is possible that the amplitude of the exponential term is history dependent and reduced by continuous measurement.
+
+::: {#fig-salt-conc-control-series-AZ1518 layout="[[40,-5,55], [-22.5,55,-22.5]]"}
+
+![](figures/ch5/Q31C1_absolute_values_without_gate_current.png){#fig-transfer-sweep-AZ1518}
+
+![](figures/ch5/Q31C1_with_fitted_curves.png){#fig-linear-fit-AZ1518}
+
+![](figures/ch5/Q31C1_with_fitted_curves_exp.png){#fig-exp-fit-AZ1518}
+
+These figures show The linear fits in (b) had R squared values of 0.96 and  for Device 1 and Device 2 respectively. The exponential fits in (c) had R squared values of    for the $V_{\textrm{lg}}-V_{\textrm{gap}}$ = $-200$ mV and $V_{\textrm{lg}}-V_{\textrm{gap}}$ = $-150$ mV traces respectively.
+:::
+
+@fig-transfer-sweep-AZ1518 shows channel transfer characteristics from two different steam-assisted surfactant-deposited, AZ$^\circledR$ 1518 encapsulated devices fabricated in different device batches. Device 1, with the channel characteristic curve shown in green, was fabricated in Mar 2023. Device 2, with the channel characteristic curve shown in purple, was fabricated after Jun 2023. Device 2 was rinsed with AZ$^\circledR$ 326 developer and annealed at $150^\circ$C before measurement. When taking control series measurements, the devices were gated so that the current level for each control series would be as similar as possible, as illustrated by the dotted lines in @fig-transfer-sweep-AZ1518.
+
+As in @fig-linear-fit, linear fits were performed on each control series from $1200-1800$ s, shown in @fig-linear-fit-AZ1518. The gradient of the control series corresponding to Device 1 was $m_{1} = -8.2\pm0.1$ pA/s, while the gradient of the control series corresponding to Device 2 was $m_{2} = -6.6\pm0.2$. Again, the equations for the two linear fits were proportional to each other, where $m_{2}t + b_{2} = (0.81 \pm 0.03)\times m_{1}t + b_{1}$, despite being different channels from a different device batch.
+
+As with the SU8 device, subtracting the linear fit resulted in a a dataset which could be fitted with an exponential function. @fig-exp-fit-AZ1518 shows exponential fits from $0-1200$ s to the AZ$^\circledR$ 1518 devices. Both exponentials have a characteristic time constant of $\tau = 300 \pm 20$ s, indicating the rate of decay is independent of the gate voltage used to gate the transistor. As both exponentials decay to zero, they are therefore also proportional to each other, with $a_{2}\exp(-t/\tau) = (2.39\pm0.05)\times a_{1}\exp(-t/\tau)$. The $V_{\textrm{lg}}-V_{\textrm{gap}}$ = $-200$ mV measurement was performed 3 days after the $V_{\textrm{lg}}-V_{\textrm{gap}}$ = $-150$ mV measurement. It is possible that the amplitude ratio is history dependent, where the amplitude of the initial decay curve of the channel is reduced with each subsequent control series.
+
+From this analysis it appears that the baseline drift for the liquid-gated carbon nanotube devices can be modelled as a combination of a exponential, linear and constant term. The linear term appears to be consistent between channels of a particular device type, 
+
+### Sensing Series
 
 -nLOF2020 resist being used leads to devices with less drift!!
 
