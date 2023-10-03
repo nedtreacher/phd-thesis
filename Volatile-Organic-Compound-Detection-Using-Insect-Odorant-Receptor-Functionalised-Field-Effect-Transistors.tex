@@ -193,7 +193,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, interior hidden, borderline west={3pt}{0pt}{shadecolor}, breakable, enhanced, boxrule=0pt, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, breakable, sharp corners, frame hidden, interior hidden, enhanced, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -1270,7 +1270,7 @@ Effect
 Transistors}\label{characteristics-of-pristine-carbon-nanotube-graphene-field-effect-transistors}}
 
 \begin{verbatim}
-148124
+153879
 \end{verbatim}
 
 \hypertarget{sec-pristine-morphology}{%
@@ -1942,21 +1942,22 @@ When the devices were liquid-gated with 1XPBS electrolyte, they
 exhibited ambipolar characteristics, commonly observed in carbon
 nanotube network FETs
 \autocite{Kauffman2008,Heller2009,JongYu2009,Derenskyi2014,Thanihaichelvan2018,Albarghouthi2022}.
+When devices were appropriately configured, leakage current did not
+exceed \(\sim 1 \times 10^{-7}\) V across the forward and reverse sweep.
 Devices generally exhibited significantly less hysteresis than in the
-backgated case. When devices were appropriately configured, leakage
-current did not exceed \(\sim 1 \times 10^{-7}\) V across the forward
-and reverse sweep. The devices shown which used carbon nanotube films
-deposited in surfactant with steam present had significantly less
-channel-to-channel variation in electrical characteristics than the
-devices fabricated using other approaches. A summary of key parameters
-of pristine liquid-gated devices is shown in
-Figure~\ref{fig-sweep-parameters}. The full dataset consists of three
-sets of 21 liquid-gated transfer characteristics of working channels,
-with each set corresponding to the use of a particular method of carbon
-nanotube network deposition in the device fabrication. Measurements from
-at least three devices are included in each set. Each entry in the
-summary corresponds to the average of the specific parameter in the
-forward and reverse sweep direction.
+backgated case. The devices shown which used carbon nanotube films
+deposited in surfactant with steam present showed the least hysteresis,
+which is largely due to the relatively small diameter of the bundles in
+these films \autocite{Pop2009}. These devices also showed significantly
+less channel-to-channel variation in electrical characteristics more
+generally. A summary of key parameters of pristine liquid-gated devices
+is shown in Figure~\ref{fig-sweep-parameters}. The full dataset consists
+of three sets of 21 liquid-gated transfer characteristics of working
+channels, with each set corresponding to the use of a particular method
+of carbon nanotube network deposition in the device fabrication.
+Measurements from at least three devices are included in each set. Each
+entry in the summary corresponds to the average of the specific
+parameter in the forward and reverse sweep direction.
 
 Channels from surfactant-deposited film devices usually showed a larger
 on-off ratio and subthreshold slope than those from solvent-deposited
@@ -2073,15 +2074,15 @@ after being covered by 50 \(\mu\)L of 1XPBS (phosphate buffered saline).
 The on-off ratio and hysteresis of the channels increase significantly.
 The presence of water increases hysteresis through introducing charge
 traps at the silicon dioxide surface around the carbon nanotubes and at
-the surface of the nanotubes themselves
-\autocite{Kim2003,Lee2007,Ha2014}. The use of alternative transistor
-dielectrics and/or device functionalisation could potentially be used to
-reduce this hysteresis, as the time variation in threshold voltage due
-to hysteresis is unwanted for biosensing work \autocite{Lee2007,Ha2014}.
-The electrical double layer formed by the electrolyte at the surface of
-the carbon nanotubes will also have contributed to the observed change
-in electrical properties, as it screens surface charge present on the
-surface around the nanotubes \autocite{Heller2010}.
+the surface of the nanotubes themselves. The use of alternative
+transistor dielectrics and/or device functionalisation could potentially
+be used to reduce this hysteresis, as the time variation in threshold
+voltage due to hysteresis is unwanted for biosensing work
+\autocite{Kim2003,Lee2007,Franklin2012,Ha2014}. The electrical double
+layer formed by the electrolyte at the surface of the carbon nanotubes
+will also have contributed to the observed change in electrical
+properties, as it screens surface charge present on the surface around
+the nanotubes \autocite{Heller2010}.
 
 There is also a significant increase in current leakage to the backgate
 for larger applied voltages, despite the electrolyte having no visible
@@ -2199,7 +2200,7 @@ nanotube network devices, leakage current remained below \(\sim\) 1
 Hysteresis between the forward and reverse sweep results from charge
 traps within and on the surface of the SiO\(_{2}\) dielectric
 \autocite{Bartolomeo2011}. The major Dirac point for these devices is
-slightly to the right of V\(_{\textrm{Dirac}}\) \approxeq\$ 0 V, which
+slightly to the right of V\(_{\textrm{Dirac}} \approxeq\) 0 V, which
 indicates \(p\)-doping of the channel. This slight \(p\)-doping is
 likely a result of a adsorption of oxygen and water from the air and
 residue resist from photolithography
@@ -2354,12 +2355,16 @@ been labeled in this manner to be consistent with previous work
 
 \end{minipage}%
 
-\caption{\label{fig-salt-conc-control-series-SU8}These figures show The
-linear fits in (b) had R squared values of 0.78 and 0.70 for the traces
-with gate voltage \(V_{\textrm{lg}}-V_{\textrm{gap}}\) = \(-200\) mV and
-\(V_{\textrm{lg}}-V_{\textrm{gap}}\) = \(-150\) mV respectively. The
-exponential fits in (c) had R squared values of 0.71 and 0.93 for the
+\caption{\label{fig-salt-conc-control-series-SU8}The two gate voltages
+used during the control series in (b) are marked on the transfer
+characteristic in (a), where the transfer curve axis has been scaled so
+as to be centered around the minimum of the reverse sweep. The linear
+fits to the control series in (b) from 1200 s onwards had R squared
+values of 0.78 and 0.70 for the traces with gate voltage
 \(V_{\textrm{lg}}-V_{\textrm{gap}}\) = \(-200\) mV and
+\(V_{\textrm{lg}}-V_{\textrm{gap}}\) = \(-150\) mV respectively. The
+exponential fits in (c) from \(0-1200\) s had R squared values of 0.71
+and 0.93 for the \(V_{\textrm{lg}}-V_{\textrm{gap}}\) = \(-200\) mV and
 \(V_{\textrm{lg}}-V_{\textrm{gap}}\) = \(-150\) mV traces respectively.}
 
 \end{figure}
@@ -2386,9 +2391,9 @@ decay to zero, they are therefore also proportional to each other, with
 \(a_{2}\exp(-t/\tau) = (2.39\pm0.05)\times a_{1}\exp(-t/\tau)\). The
 \(V_{\textrm{lg}}-V_{\textrm{gap}}\) = \(-200\) mV measurement was
 performed 3 days after the \(V_{\textrm{lg}}-V_{\textrm{gap}}\) =
-\(-150\) mV measurement. It is possible that the amplitude ratio is
-history dependent, where the amplitude of the initial decay curve of the
-channel is reduced with each subsequent control series.
+\(-150\) mV measurement. It is possible that the amplitude of the
+exponential term is history dependent and reduced by continuous
+measurement.
 
 \begin{figure}
 
@@ -2467,25 +2472,37 @@ channel is reduced with each subsequent control series.
 
 \end{minipage}%
 
-\caption{\label{fig-salt-conc-control-series-AZ1518}These figures show
-The linear fits in (b) had R squared values of 0.96 and for Device 1 and
-Device 2 respectively. The exponential fits in (c) had R squared values
-of for the \(V_{\textrm{lg}}-V_{\textrm{gap}}\) = \(-200\) mV and
-\(V_{\textrm{lg}}-V_{\textrm{gap}}\) = \(-150\) mV traces respectively.}
+\caption{\label{fig-salt-conc-control-series-AZ1518}The absolute-value
+transfer characteristics for the channels from Device 1 and Device 2
+used in the control series in (b) are shown in (a), coloured green and
+purple respectively. The transfer curve axis has been scaled so as to be
+centered around the minimum of the reverse sweep, or in the case of
+Device 2, the centre point between the voltages where current drops to
+zero in the reverse sweep. The gate voltages used for each device during
+the control series in (b) are marked on the transfer characteristics in
+(a) in the same colour as their corresponding device. The linear fits to
+the control series in (b) from 1200 s onwards had R squared values of
+0.96 and 0.67, and the exponential fits in (c) from \(0-1200\) s had R
+squared values of 0.94 and 0.92 for Devices 1 \& 2 respectively.}
 
 \end{figure}
 
 Figure~\ref{fig-transfer-sweep-AZ1518} shows channel transfer
 characteristics from two different steam-assisted surfactant-deposited,
 AZ\(^\circledR\) 1518 encapsulated devices fabricated in different
-device batches. Device 1, with the channel characteristic curve shown in
-green, was fabricated in Mar 2023. Device 2, with the channel
-characteristic curve shown in purple, was fabricated after Jun 2023.
-Device 2 was rinsed with AZ\(^\circledR\) 326 developer and annealed at
-\(150^\circ\)C before measurement. When taking control series
-measurements, the devices were gated so that the current level for each
-control series would be as similar as possible, as illustrated by the
-dotted lines in Figure~\ref{fig-transfer-sweep-AZ1518}.
+device batches. The central feature in the transfer characteristic in
+device 2 represents absolute-value measurements of `negative current'.
+These are unphysical measurements which come from equipment error and
+can be treated as zero current passing through the channel, and
+therefore V\(_{\textrm{gap}}\) is located in the center of this region.
+Device 1, with the channel characteristic curve shown in green, was
+fabricated in Mar 2023. Device 2, with the channel characteristic curve
+shown in purple, was fabricated after Jun 2023. Device 2 was rinsed with
+AZ\(^\circledR\) 326 developer and annealed at \(150^\circ\)C before
+measurement. When taking control series measurements, the devices were
+gated so that the current level for each control series would be as
+similar as possible, as illustrated by the dotted lines in
+Figure~\ref{fig-transfer-sweep-AZ1518}.
 
 As in Figure~\ref{fig-linear-fit}, linear fits were performed on each
 control series from \(1200-1800\) s, shown in
@@ -2498,29 +2515,28 @@ were proportional to each other, where
 different channels from a different device batch.
 
 As with the SU8 device, subtracting the linear fit resulted in a a
-dataset which could be fitted with an exponential function.
+dataset which followed an exponential trend.
 Figure~\ref{fig-exp-fit-AZ1518} shows exponential fits from \(0-1200\) s
-to the AZ\(^\circledR\) 1518 devices. Both exponentials have a
-characteristic time constant of \(\tau = 300 \pm 20\) s, indicating the
-rate of decay is independent of the gate voltage used to gate the
-transistor. As both exponentials decay to zero, they are therefore also
-proportional to each other, with
-\(a_{2}\exp(-t/\tau) = (2.39\pm0.05)\times a_{1}\exp(-t/\tau)\). The
-\(V_{\textrm{lg}}-V_{\textrm{gap}}\) = \(-200\) mV measurement was
-performed 3 days after the \(V_{\textrm{lg}}-V_{\textrm{gap}}\) =
-\(-150\) mV measurement. It is possible that the amplitude ratio is
-history dependent, where the amplitude of the initial decay curve of the
-channel is reduced with each subsequent control series.
+to the remaining curves from the AZ\(^\circledR\) 1518 devices. The time
+constants for these exponentials were dissimilar, with a time constant
+of \(\tau = 141 \pm 3\) s for Device 1 and a time constant of
+\(\tau = 408 \pm 11\) s for Device 2. The exponential amplitudes had
+opposite sign.
 
 From this analysis it appears that the baseline drift for the
 liquid-gated carbon nanotube devices can be modelled as a combination of
 a exponential, linear and constant term. The linear term appears to be
-consistent between channels of a particular device type,
+consistent across channels of a particular device type, with the size of
+this term increasing with increased current across the channel. The time
+constant of the exponential term appears to be intrinsic to the channel
+being measured. It is not clear what decides the amplitude of the
+exponential term, but there is some indication it may be
+history-dependent. Realtime rapid exponential decay followed by slower
+baseline drift has been observed previously for parallel arrangements of
+carbon nanotubes in air, which \autocite{Noyce2019}
 
 \hypertarget{sensing-series}{%
 \subsection{Sensing Series}\label{sensing-series}}
-
--nLOF2020 resist being used leads to devices with less drift!!
 
 -low pass filter??
 
