@@ -193,7 +193,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, breakable, sharp corners, frame hidden, interior hidden, enhanced, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, boxrule=0pt, sharp corners, breakable, borderline west={3pt}{0pt}{shadecolor}, interior hidden, enhanced]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -1228,18 +1228,20 @@ Before the sensing process, 200 \(\mu\)L of PBS was added to the PDMS
 well and 100-120 \(\mu\)L of PBS was removed. This initial step was
 performed to wet the sides of the PDMS well, and check that the
 attachment of the PDMS well to the device would not unseal when larger
-volumes of PBS were added during sensing. From Feb 2022 onwards, a 1800
-s control series was performed as part of each sensing experiment to
-test for unwanted responses to PBS and to allow baseline drift to
-settle. 20 \(\mu\)L additions of PBS were added to the PDMS well at 100
-s, 200 s and 300 s, and 20 \(\mu\)L of PBS were removed from the PDMS
-well at 400 s, 500 s and 600 s. Immediately after the control series, a
-sensing sequence was performed as part of the same continuous
-measurement set. Most commonly, this would consist of a final PBS
-addition at 2100 s, then analyte additions every 300 s after that. The
-experimental series was set to finish at 4000 s. The exact timings,
-analyte concentrations and gate voltage used in a given sensing sequence
-is discussed alongside the relevant experimental results.
+volumes of PBS were added during sensing. Before any sensing
+measurement, a transfer characteristic curve was taken of the
+liquid-gated device. From Feb 2022 onwards, a 1800 s control series was
+performed as part of each sensing experiment to test for unwanted
+responses to PBS and to allow baseline drift to settle. 20 \(\mu\)L
+additions of PBS were added to the PDMS well at 100 s, 200 s and 300 s,
+and 20 \(\mu\)L of PBS were removed from the PDMS well at 400 s, 500 s
+and 600 s. Immediately after the control series, a sensing sequence was
+performed as part of the same continuous measurement set. Most commonly,
+this would consist of a final PBS addition at 2100 s, then analyte
+additions every 300 s after that. The experimental series was set to
+finish at 4000 s. The exact timings, analyte concentrations and gate
+voltage used in a given sensing sequence are discussed alongside the
+relevant experimental results.
 
 \hypertarget{vapour-sensing}{%
 \subsubsection*{Vapour Sensing}\label{vapour-sensing}}
@@ -1270,7 +1272,7 @@ Effect
 Transistors}\label{characteristics-of-pristine-carbon-nanotube-graphene-field-effect-transistors}}
 
 \begin{verbatim}
-153879
+158862
 \end{verbatim}
 
 \hypertarget{sec-pristine-morphology}{%
@@ -1643,11 +1645,11 @@ present in the mean bundle size. }\tabularnewline
 \cmidrule(l{3pt}r{3pt}){2-4} \cmidrule(l{3pt}r{3pt}){5-6}
  & Silicon & Bundles & Contaminant & Tubes/Bundle & \% Multi-Tube\\
 \midrule
-Solvent deposited & 0.0 ± 1.4 & 8.8 ± 4.0 & 3.6 ± 3.8 & 1–162 (28) & \textasciitilde{}95\%\\
+Solvent deposited & 0.0 ± 1.4 & 8.8 ± 4.0 & 3.6 ± 3.8 & 1–162 (28) & > 95\%\\
  &  &  &  &  \vphantom{1} & \\
-Surfactant deposited & 0.0 ± 0.6 & 5.1 ± 1.4 & 2.0 ± 1.5 & 2–34 (8) & \textasciitilde{}94\%\\
+Surfactant deposited & 0.0 ± 0.6 & 5.1 ± 1.4 & 2.0 ± 1.5 & 1–34 (8) & > 94\%\\
  &  &  &  &  & \\
-Surfactant deposited with steam & 0.0 ± 0.5 & 3.2 ± 1.1 & 1.2 ± 0.9 & 1–15 (3) & \textasciitilde{}60\%\\
+Surfactant deposited with steam & 0.0 ± 0.5 & 3.2 ± 1.1 & 1.2 ± 0.9 & 1–15 (3) & > 60\%\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -1843,12 +1845,12 @@ were fabricated prior to Sep 2022.
 
 When backgated, devices exhibited \emph{p}-type transistor behaviour
 with significant hysteresis and negligible gate current leakage. The
-presence of hysteresis can be explained by the presence of charge traps
-on the surface of the silicon dioxide and at interfaces between the
-silicon dioxide and carbon nanotubes \autocite{Lee2007,Ha2014}. The
-devices fabricated with a solvent-based deposition were switched off at
-a lower voltage than the devices which used surfactant during
-deposition.
+presence of hysteresis can be explained by the presence of defects or
+charge traps within and on the surface of the silicon dioxide and at
+interfaces between the silicon dioxide and carbon nanotubes
+\autocite{Lee2007,Lee2012,Ha2014}. The devices fabricated with a
+solvent-based deposition were switched off at a lower voltage than the
+devices which used surfactant during deposition.
 
 \begin{figure}
 
@@ -2197,8 +2199,8 @@ typical of liquid-gated graphene devices
 \autocite{Heller2009a,Heller2010,Xia2010,Kireev2017}. As with the carbon
 nanotube network devices, leakage current remained below \(\sim\) 1
 \(\times\) \(10^{-7}\) V across both the forward and reverse sweep.
-Hysteresis between the forward and reverse sweep results from charge
-traps within and on the surface of the SiO\(_{2}\) dielectric
+Hysteresis between the forward and reverse sweep is caused by trapping
+of charge within and on the surface of the SiO\(_{2}\) dielectric
 \autocite{Bartolomeo2011}. The major Dirac point for these devices is
 slightly to the right of V\(_{\textrm{Dirac}} \approxeq\) 0 V, which
 indicates \(p\)-doping of the channel. This slight \(p\)-doping is
@@ -2223,16 +2225,19 @@ graphene channels. The channels were measured on exposure to 1XPBS,
 after exposure to 1XPBS for one hour, and after the device surface was
 rinsed and 1XPBS was replaced in the well one time, two times and three
 times successively. A slight leftward shift of the major Dirac point was
-observed, which Kireev \emph{et al.} speculate is due to gate current
-having an annealing effect on the channel and removing \(p\)-dopant from
-the graphene surface \autocite{Kireev2017}. Kireev \emph{et al.} also
-found that continuing to perform liquid-gated sweeps reduced the size of
-the second Dirac point, and suggested that it was related removal of
-atmospheric contaminants from the graphene surface
-\autocite{Kireev2017}. When this occurs, it may be due to the removal of
-contaminants improving contact between the metal and graphene surface,
-and thus increasing metal doping and consistency of the Fermi level
-across the channel.
+observed. This effect is possibly a result of gate bias stress, where
+successive transfer sweeps introduce charge traps to the graphene layer
+and alters the current level at a given gate voltage
+\autocite{Bargaoui2018,Noyce2019}. Kireev \emph{et al.} found that a
+series of liquid-gated sweeps also reduced the size of the second Dirac
+point, and suggested that it indicated the gate current was removing
+atmospheric contaminants from the graphene surface via current annealing
+\autocite{Kireev2017}. This could be explained as the removal of
+contaminants causing improved contact between the metal and graphene
+surface, and thus increasing metal doping and consistency of the Fermi
+level across the channel. If the contaminants removed are \(p\)-dopants,
+then this effect could also explain the leftward shift of the major
+Dirac point.
 
 \hypertarget{tbl-graphene-parameters}{}
 \begin{table}
@@ -2261,9 +2266,9 @@ these values were highly consistent before and after exposure to 1XPBS.
 \section{Salt Concentration Sensing with Phosphate Buffered
 Saline}\label{sec-dummy-sensing}}
 
-\hypertarget{control-series-and-baseline-drift}{%
+\hypertarget{sec-baseline-drift}{%
 \subsection{Control Series and Baseline
-Drift}\label{control-series-and-baseline-drift}}
+Drift}\label{sec-baseline-drift}}
 
 The total interval for the control series was 1800 s, with 20\(\mu\)L
 1XPBS additions at 100 s, 200 s and 300 s, and 20\(\mu\)L subtractions
@@ -2372,28 +2377,58 @@ and 0.93 for the \(V_{\textrm{lg}}-V_{\textrm{gap}}\) = \(-200\) mV and
 Figure~\ref{fig-linear-fit} shows two control series performed using the
 same channel on different days, with a different gate voltage used
 during each series. In both series, there is no clear stepwise response
-to any addition or subtraction of 1XPBS, as expected. Linear fits were
-performed on each control series from \(1200-1800\) s. The gradient of
-the \(V_{\textrm{lg}}-V_{\textrm{gap}}\) = \(-200\) mV gated control
-series was \(m_{1} = -0.95\pm0.02\) pA/s, while the gradient of the
+to any addition or subtraction of 1XPBS, as expected. We see that the
+current has a period of rapid decay followed by slower baseline drift,
+which has been observed previously for parallel arrangements of single
+carbon nanotubes in air or vacuum \autocite{Lin2006,Noyce2019}. This
+effect results from changes in the occupancy of charge traps in and
+around the substrate and carbon nanotubes. The magnitude of baseline
+drift is lower for our devices than for those characterised by Noyce
+\emph{et al.}, which may be a result of numerous device and setup
+differences which affect the presence of charge traps. These differences
+include the use of an electrolyte, the use of a network of carbon
+nanotubes instead of single nanotubes, the channel length used, the use
+of a 300 nm instead of 90 nm SiO\(_2\) layer, and the use of an
+asymmetric, liquid-gated transfer sweep over a shorter voltage range to
+characterise devices before each control series was measured
+\autocite{Noyce2019}.
+
+As a first approximation to the longer time constant exponentials
+discussed by Noyce \emph{et al.}, linear fits were performed on each
+control series from \(1200-1800\) s. The gradient of the
+\(V_{\textrm{lg}}-V_{\textrm{gap}}\) = \(-200\) mV gated control series
+was \(m_{1} = -0.95\pm0.02\) pA/s, while the gradient of the
 \(V_{\textrm{lg}}-V_{\textrm{gap}}\) = \(-150\) mV gated control series
 was \(m_{2} = -0.69\pm0.02\) pA/s. The equations for the two linear fits
 were proportional to each other, with \$m\_\{2\}t +
-\(b_{2} = (0.73 \pm 0.03)\times m_{1}t + b_{1}\).
+\(b_{2} = (0.73 \pm 0.03)\times m_{1}t + b_{1}\). This indicates a
+relationship between the voltage used to gate the devices and the degree
+of longer-term baseline drift. This effect is likely a consequence of
+gate bias stress, where gating introduces charge traps to the channel
+over time and reduces drain current. The more negative the applied bias,
+the larger the amplitude of the longer-term drift
+\autocite{Bargaoui2018}.
 
-When the linear fits were subtracted from the raw data, the remaining
-dataset exhibited an exponential decay for each control series.
-Figure~\ref{fig-exp-fit} shows exponential fits to the remaining curve
-from \(0-1200\) s. Both exponentials have a characteristic time constant
-of \(\tau = 300 \pm 20\) s, indicating the rate of decay is independent
-of the gate voltage used to gate the transistor. As both exponentials
-decay to zero, they are therefore also proportional to each other, with
+When the longer-term linear fits were subtracted from the raw data, the
+remaining dataset followed a exponential decay trend for both control
+series. Figure~\ref{fig-exp-fit} shows exponential fits to the remaining
+curve from \(0-1200\) s. Both exponentials had a characteristic time
+constant of \(\tau = 300 \pm 20\) s, indicating this rate of decay is
+independent of the gate voltage used to gate the transistor. They are
+therefore also proportional to each other, with
 \(a_{2}\exp(-t/\tau) = (2.39\pm0.05)\times a_{1}\exp(-t/\tau)\). The
 \(V_{\textrm{lg}}-V_{\textrm{gap}}\) = \(-200\) mV measurement was
 performed 3 days after the \(V_{\textrm{lg}}-V_{\textrm{gap}}\) =
-\(-150\) mV measurement. It is possible that the amplitude of the
-exponential term is history dependent and reduced by continuous
-measurement.
+\(-150\) mV measurement. It seems that the amplitude of the exponential
+term is history dependent and reduced with each subsequent control
+series. This behaviour is unlike that of the devices characterised by
+Noyce \emph{et al.}, where the amplitude of the initial decay
+exponential remained the same after a initial reset gate sweep. It
+therefore appears that the sweep performed on these devices before
+measurement is insufficient to redistribute charges in trap states and
+reset the baseline drift, which could be a consequence of being
+liquid-gated instead of back-gated, being asymmetric or being over a
+shorter voltage range \autocite{Noyce2019}.
 
 \begin{figure}
 
@@ -2497,12 +2532,12 @@ can be treated as zero current passing through the channel, and
 therefore V\(_{\textrm{gap}}\) is located in the center of this region.
 Device 1, with the channel characteristic curve shown in green, was
 fabricated in Mar 2023. Device 2, with the channel characteristic curve
-shown in purple, was fabricated after Jun 2023. Device 2 was rinsed with
-AZ\(^\circledR\) 326 developer and annealed at \(150^\circ\)C before
-measurement. When taking control series measurements, the devices were
-gated so that the current level for each control series would be as
-similar as possible, as illustrated by the dotted lines in
-Figure~\ref{fig-transfer-sweep-AZ1518}.
+shown in purple, was fabricated after Jun 2023. Device 2 was flood
+exposed, rinsed with AZ\(^\circledR\) 326 developer and annealed at
+\(150^\circ\)C before measurement. When taking control series
+measurements, the devices were gated so that the current level for each
+control series would be as similar as possible, as illustrated by the
+dotted lines in Figure~\ref{fig-transfer-sweep-AZ1518}.
 
 As in Figure~\ref{fig-linear-fit}, linear fits were performed on each
 control series from \(1200-1800\) s, shown in
@@ -2512,7 +2547,9 @@ gradient of the control series corresponding to Device 2 was
 \(m_{2} = -6.6\pm0.2\). Again, the equations for the two linear fits
 were proportional to each other, where
 \(m_{2}t + b_{2} = (0.81 \pm 0.03)\times m_{1}t + b_{1}\), despite being
-different channels from a different device batch.
+different channels from a different device batch. This result indicates
+that gate bias stress has the same effect on baseline drift on channels
+of different devices fabricated in the same manner.
 
 As with the SU8 device, subtracting the linear fit resulted in a a
 dataset which followed an exponential trend.
@@ -2521,24 +2558,231 @@ to the remaining curves from the AZ\(^\circledR\) 1518 devices. The time
 constants for these exponentials were dissimilar, with a time constant
 of \(\tau = 141 \pm 3\) s for Device 1 and a time constant of
 \(\tau = 408 \pm 11\) s for Device 2. The exponential amplitudes had
-opposite sign.
+opposite sign, with the first indicating an increase in net positive
+trapped charge and the latter indicating an increase in net negative
+trapped charge. It appears the difference in processing between the
+devices has changed the net charge of the traps initially present when
+measuring the control series.
 
 From this analysis it appears that the baseline drift for the
-liquid-gated carbon nanotube devices can be modelled as a combination of
-a exponential, linear and constant term. The linear term appears to be
-consistent across channels of a particular device type, with the size of
-this term increasing with increased current across the channel. The time
-constant of the exponential term appears to be intrinsic to the channel
-being measured. It is not clear what decides the amplitude of the
-exponential term, but there is some indication it may be
-history-dependent. Realtime rapid exponential decay followed by slower
-baseline drift has been observed previously for parallel arrangements of
-carbon nanotubes in air, which \autocite{Noyce2019}
+liquid-gated carbon nanotube devices can be accurately approximated as a
+combination of a exponential, linear and constant term. The linear term
+appears to be consistent across channels of a particular device type,
+with the size of this term increasing with increasingly negative gate
+bias. The time constant of the exponential term appears to be intrinsic
+to the channel being measured.
 
 \hypertarget{sensing-series}{%
 \subsection{Sensing Series}\label{sensing-series}}
 
--low pass filter??
+\hypertarget{tbl-salt-conc-series}{}
+\begin{table}
+\caption{\label{tbl-salt-conc-series}This table shows the times at which 20 µL additions were made to the
+PDMS well, with 300 s between each addition. The concentration in the
+well after each addition and the change in concentration after each
+addition are also shown. The well contained 80 µL of 1X PBS at 1800 s. }\tabularnewline
+
+\centering
+\begin{tabular}{lcccccc}
+\toprule
+\multicolumn{1}{c}{ } & \multicolumn{1}{c}{1X PBS Addition} & \multicolumn{5}{c}{DI Water Additions} \\
+\cmidrule(l{3pt}r{3pt}){2-2} \cmidrule(l{3pt}r{3pt}){3-7}
+Time (s) & 2100 & 2400 & 2700 & 3000 & 3300 & 3600\\
+Final PBS volume (µL) & 100 & 120 & 140 & 160 & 180 & 200\\
+Final PBS concentration & 1X & 0.83X & 0.71X & 0.63X & 0.56X & 0.50X\\
+Δ PBS concentration & 0 & -0.17X & -0.12X & -0.09X & -0.07X & -0.06X\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+A salt concentration sensing series were performed from 1800 s onwards,
+directly after the control series. Salt concentration testing was done
+to confirm the fabricated devices were sensitive to small environmental
+changes in their pristine state, to check for spurious signals, and to
+ensure gate current leakage or other confounding factors were not
+contributing to sensing responses. The PDMS well contained 80 \(\mu\)L
+1X PBS at 1800 s. During the series, successive additions of deionised
+water were made to reduce the concentration of PBS in the well. An
+initial 1X PBS addition was performed at 2100s, to confirm no changes
+occurred during the control series that would interfere with sensing.
+All additions to the well in the sensing series and resulting changes to
+the PBS concentration in the well are shown in
+Table~\ref{tbl-salt-conc-series}.
+
+\begin{figure}
+
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/NTQ31C1_pristine_saltconc_sample_230324.png}
+
+}
+
+}
+
+\subcaption{\label{fig-salt-conc-no-norm}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/NTQ31C1_pristine_saltconc_sample_230324_detrend_trunc_arrows_normalised.png}
+
+}
+
+}
+
+\subcaption{\label{fig-salt-conc-detrend}}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/NTQ31C1_pristine_saltconc_sample_230324_filtered_detrend_trunc_arrows_normalised_(2).png}
+
+}
+
+}
+
+\subcaption{\label{fig-salt-conc-detrend-filter}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/NTQ31C1_mean_simple_difference_before_and_after_step_filtered_concentrations.png}
+
+}
+
+}
+
+\subcaption{\label{fig-salt-conc-signal}}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/NTQ31C1_pristine_saltconc_sample_230324_detrend_trunc_arrows_normalised_2.png}
+
+}
+
+}
+
+\subcaption{\label{fig-salt-conc-detrend-2}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/NTQ31C1_pristine_saltconc_sample_230324_filtered_detrend_trunc_arrows_normalised.png}
+
+}
+
+}
+
+\subcaption{\label{fig-salt-conc-detrend-filter-2}}
+\end{minipage}%
+
+\caption{\label{fig-salt-conc-sensing}Various visualisations of a
+multiplexed salt concentration sensing series taken from a single
+device. In (a), the raw current measurements for each channel are shown
+alongside gate current. The same measurements after despiking, removal
+of baseline drift and normalisation to initial current are shown in (b).
+The signal changes in (b)}
+
+\end{figure}
+
+Figure~\ref{fig-salt-conc-no-norm} shows a multiplexed salt
+concentration sensing series from the channels of a single
+AZ\(^\circledR\) 1518 encapsulated device, measured with the NI-PXIe.
+The gate voltage used was 0.0 V; this meant current measurements were
+well above the magnitude of the subthreshold device current. Gate
+current measurements did not exceed 1 nA for the SU8 encapsulated
+devices, and did not exceed 10 nA for the AZ\(^\circledR\) 1518 devices.
+At each of the deionised water addition times, the current traces for at
+least two out of six channels showed a sharp, transient increase in
+current followed by a return to an increased baseline. This baseline
+follows the downwards drift discussed in
+Section~\ref{sec-baseline-drift}. It is well established that changing
+the salt concentration of the liquid gate has an electrostatic gating
+effect on the carbon nanotubes or graphene, and changes the transfer
+characteristics of the channel. This shift in transfer characteristic
+means we observe a realtime signal response to each addition
+\autocite{Heller2009,Heller2010,Kireev2017}.
+
+Following the discussion in Section~\ref{sec-baseline-drift}, we can
+subtract the linear term approximating baseline drift (\(m\times t\))
+for each channel from the data in Figure~\ref{fig-salt-conc-no-norm} to
+account for the downward drift. The mean current level just before 1800
+s then becomes roughly constant. We then normalise each channel relative
+to their initial mean current level \(I_{0}\). We also remove artifacts
+resulting from PXIe-2737 module lag, single datapoints which fall well
+below the current level of the datapoints immediately before and after.
+This uses an interquartile range filter, as discussed in
+Section~\ref{sec-field-effect-transistor-analysis}. This results
+
+\hypertarget{signal-to-noise-ratio}{%
+\subsubsection*{Signal-to-Noise Ratio}\label{signal-to-noise-ratio}}
+\addcontentsline{toc}{subsubsection}{Signal-to-Noise Ratio}
+
+\begin{figure}
+
+\begin{minipage}[t]{0.25\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/saltconc_initial_additions.png}
+
+}
+
+}
+
+\subcaption{\label{fig-salt-conc-SNR}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.25\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-salt-conc-SNR}The}
+
+\end{figure}
 
 \appendix
 \addcontentsline{toc}{part}{Appendices}
@@ -2840,17 +3084,105 @@ either taken from the Keysight 4156C Semiconductor Parameter Analyser,
 National Instruments NI-PXIe or Keysight B1500A Semiconductor Device
 Analyser as discussed in Section~\ref{sec-electrical-characterisation};
 the code is able to analyse data taken from all three measurement
-setups. The code consists of three related but independent modules: the
-first analyses and plots sensing data from the FET devices, the second
-analyses and plots transfer characteristics from channels across a
-device, and the third compares individual channel characteristics before
-and after a modification or after each of several modifications. These
-modules were designed collaboratively by myself and Erica Cassie over
-GitHub using the Sourcetree Git GUI.
+setups. The main Python file in the code base consists of three related
+but independent modules: the first analyses and plots sensing data from
+the FET devices, the second analyses and plots transfer characteristics
+from channels across a device, and the third compares individual channel
+characteristics before and after a modification or after each of several
+modifications. The code base also features a separate config file and
+style sheet which govern the behaviour of the main code. The code base
+was designed collaboratively by myself and Erica Cassie over GitHub
+using the Sourcetree Git GUI.
 
-\begin{equation}\protect\hypertarget{eq-lin-combo-exp-decay}{}{
-f(x) = k_1\exp{\Bigg(-\frac{t}{{\tau}_{1}}\Bigg)} + k_2\exp{\Bigg(-\frac{t}{{\tau}_{2}}\Bigg)} + ... + c
-}\label{eq-lin-combo-exp-decay}\end{equation}
+The first of the three modules is for processing sensing datasets. This
+module takes sensing measurements and analyses them, then outputs a plot
+of the raw data, alongside multiple plots which have been modified in
+various ways. It can also fit exponential and linear trendlines to
+regions of the sensing data, as well as find the signal change per
+analyte addition, and returns spreadsheets containing the results of
+these analyses. Modified plots include normalised plots (type of
+normalisation can be set in config file), plots with fitted curves,
+plots with the linear baseline drift removed, plots of signal with
+analyte addition, ``despiked'' plots and ``filtered'' plots. It is
+possible to add annotations to any of these plots using the config file,
+and it is possible to produce a plot with a combination of these
+modifications.
+
+The scipy.optimize.curve\_fit module is used to fit linear and
+exponential curves to regions of interest of the sensing data. Initial
+parameters for the scipy.optimize.curve\_fit module are chosen by
+approximating fitting parameters in a similar manner to the approach in
+Section~\ref{sec-histogram-analysis}. For a linear fit \(mt + b\), the
+parameters are simply set as \(m=1\) and \(b=0\). For an exponential fit
+\(a\exp{(-t/\tau)} + c\), \(c\) is set as the final current measurement
+of the region of interest and \(a\) is set as the initial current
+measurement minus \(c\). Then, \(\tau\) is set as the time where current
+has dropped to \(e^{-1}a + c\).
+
+``Despiked'' plots have had spurious datapoints removed through the use
+of an interquartile range rolling filter. The window size of the rolling
+filter used was 40 datapoints, and datapoints in each window with a
+z-score above \(\pm 3\) were removed from the plotted/processed data.
+``Filtered'' plots had noise reduced using a moving median filter. The
+moving median filter is more effective at removing noise than a simple
+moving average, and has advantages over other filters (such as the
+Savitzky-Golay filter) when removing noise from data with sharp edges.
+Median filtering can also be used for baseline drift compensation,
+though this approach was not used in this thesis \autocite{Stone2011}.
+The moving median filter used had a window of 40 datapoints.
+
+Plots of signal with analyte addition were constructed from current data
+after first removing baseline drift and applying a moving median filter.
+A simple difference calculation between the mean of the filtered current
+before an addition and the mean of the filtered current after the
+addition was performed for each addition. These differences were then
+normalised relative to the initial current. The signal with analyte
+addition give reasonably consistent results regardless of whether
+baseline drift was removed from the data, as shown in \textcite{fig} .
+We can therefore be confident that robust signal with analyte addition
+plots are robust even in the presence of significant drift.
+
+\begin{figure}
+
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/app2/NTQ31C1_mean_simple_difference_before_and_after_step_filtered_concentrations.png}
+
+}
+
+}
+
+\subcaption{\label{fig-spaa-no-detrend}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/app2/NTQ31C1_mean_simple_difference_before_and_after_step_filtered_concentrations_detrend.png}
+
+}
+
+}
+
+\subcaption{\label{fig-spaa-detrend}}
+\end{minipage}%
+
+\caption{\label{fig-spaa-plot-comparison}A comparison of signal with
+analyte addition plots taken from the same salt concentration sensing
+dataset (the same dataset as used in
+Figure~\ref{fig-salt-conc-sensing}). In (a), a simple difference
+calculation performed on filtered data was used, while in (b) the same
+calculation was performed on filtered data with the baseline drift
+removed, the method used in the body of the thesis.}
+
+\end{figure}
 
 \hypertarget{vapour-delivery-system}{%
 \chapter{Vapour Delivery System}\label{vapour-delivery-system}}

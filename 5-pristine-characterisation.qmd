@@ -244,7 +244,7 @@ graphene_device_parameters %>%
 
 ##	Salt Concentration Sensing with Phosphate Buffered Saline {#sec-dummy-sensing}
 
-### Control Series and Baseline Drift
+### Control Series and Baseline Drift {#sec-baseline-drift}
 
 The total interval for the control series was 1800 s, with 20$\mu$L 1XPBS additions at 100 s, 200 s and 300 s, and 20$\mu$L subtractions at 400 s, 500 s and 600 s. Devices were left untouched over the next 1200 s to allow the current level to settle. @fig-transfer-sweep shows the transfer sweep of a single channel of a steam-assisted surfactant-deposited device encapsulated with SU8, fabricated after Jun 2023. The threshold voltage of the channel is $V_{\textrm{th}}$ = 140 mV, and the voltage corresponding to minimum current is $V_{\textrm{gap}}$ = 310 mV. The variable symbol V$_{\textrm{gap}}$ denotes the center of the transistor bandgap, has been labeled in this manner to be consistent with previous work [@Heller2009].
 
@@ -276,14 +276,70 @@ When the longer-term linear fits were subtracted from the raw data, the remainin
 The absolute-value transfer characteristics for the channels from Device 1 and Device 2 used in the control series in (b) are shown in (a), coloured green and purple respectively. The transfer curve axis has been scaled so as to be centered around the minimum of the reverse sweep, or in the case of Device 2, the centre point between the voltages where current drops to zero in the reverse sweep. The gate voltages used for each device during the control series in (b) are marked on the transfer characteristics in (a) in the same colour as their corresponding device. The linear fits to the control series in (b) from 1200 s onwards had R squared values of 0.96 and 0.67, and the exponential fits in (c) from $0-1200$ s had R squared values of 0.94 and 0.92 for Devices 1 & 2 respectively.
 :::
 
-@fig-transfer-sweep-AZ1518 shows channel transfer characteristics from two different steam-assisted surfactant-deposited, AZ$^\circledR$ 1518 encapsulated devices fabricated in different device batches. The central feature in the transfer characteristic in device 2 represents absolute-value measurements of 'negative current'. These are unphysical measurements which come from equipment error and can be treated as zero current passing through the channel, and therefore V$_{\textrm{gap}}$ is located in the center of this region. Device 1, with the channel characteristic curve shown in green, was fabricated in Mar 2023. Device 2, with the channel characteristic curve shown in purple, was fabricated after Jun 2023. Device 2 was rinsed with AZ$^\circledR$ 326 developer and annealed at $150^\circ$C before measurement. When taking control series measurements, the devices were gated so that the current level for each control series would be as similar as possible, as illustrated by the dotted lines in @fig-transfer-sweep-AZ1518.
+@fig-transfer-sweep-AZ1518 shows channel transfer characteristics from two different steam-assisted surfactant-deposited, AZ$^\circledR$ 1518 encapsulated devices fabricated in different device batches. The central feature in the transfer characteristic in device 2 represents absolute-value measurements of 'negative current'. These are unphysical measurements which come from equipment error and can be treated as zero current passing through the channel, and therefore V$_{\textrm{gap}}$ is located in the center of this region. Device 1, with the channel characteristic curve shown in green, was fabricated in Mar 2023. Device 2, with the channel characteristic curve shown in purple, was fabricated after Jun 2023. Device 2 was flood exposed, rinsed with AZ$^\circledR$ 326 developer and annealed at $150^\circ$C before measurement. When taking control series measurements, the devices were gated so that the current level for each control series would be as similar as possible, as illustrated by the dotted lines in @fig-transfer-sweep-AZ1518.
 
 As in @fig-linear-fit, linear fits were performed on each control series from $1200-1800$ s, shown in @fig-linear-fit-AZ1518. The gradient of the control series corresponding to Device 1 was $m_{1} = -8.2\pm0.1$ pA/s, while the gradient of the control series corresponding to Device 2 was $m_{2} = -6.6\pm0.2$. Again, the equations for the two linear fits were proportional to each other, where $m_{2}t + b_{2} = (0.81 \pm 0.03)\times m_{1}t + b_{1}$, despite being different channels from a different device batch. This result indicates that gate bias stress has the same effect on baseline drift on channels of different devices fabricated in the same manner.
 
 As with the SU8 device, subtracting the linear fit resulted in a a dataset which followed an exponential trend. @fig-exp-fit-AZ1518 shows exponential fits from $0-1200$ s to the remaining curves from the AZ$^\circledR$ 1518 devices. The time constants for these exponentials were dissimilar, with a time constant of $\tau = 141 \pm 3$ s for Device 1 and a time constant of $\tau = 408 \pm 11$ s for Device 2.
-The exponential amplitudes had opposite sign. 
+The exponential amplitudes had opposite sign, with the first indicating an increase in net positive trapped charge and the latter indicating an increase in net negative trapped charge. It appears the difference in processing between the devices has changed the net charge of the traps initially present when measuring the control series.
 
 From this analysis it appears that the baseline drift for the liquid-gated carbon nanotube devices can be accurately approximated as a combination of a exponential, linear and constant term. The linear term appears to be consistent across channels of a particular device type, with the size of this term increasing with increasingly negative gate bias. The time constant of the exponential term appears to be intrinsic to the channel being measured. 
 
-### Sensing Series and Signal-to-Noise Ratio
+### Sensing Series
 
+```{r}
+#| label: setup3
+#| include: false
+library(tidyverse)
+library(kableExtra)
+
+salt_conc_series <- read.csv("tables/ch5/salt-conc-series.csv", sep=",")
+salt_conc_series <- salt_conc_series[rowSums(is.na(salt_conc_series)) == 0,]
+```
+
+```{r}
+#| tbl-cap: This table shows the times at which 20 µL additions were made to the PDMS well, with 300 s between each addition. The concentration in the well after each addition and the change in concentration after each addition are also shown. The well contained 80 µL of 1X PBS at 1800 s.
+#| label: tbl-salt-conc-series
+
+salt_conc_series %>% 
+  kable(
+    booktabs = TRUE, #LaTeX "booktabs formatting"
+    linesep = "",    #no linespace
+    align = c(rep("l", 1), rep("c", 6)), #aligns col 1 left, all others center
+    col.names = NULL #removes csv column names
+  ) %>%
+  add_header_above(c(" " = 1, "1X PBS Addition" = 1, "DI Water Additions" = 5), bold = FALSE)
+```
+
+A salt concentration sensing series were performed from 1800 s onwards, directly after the control series. Salt concentration testing was done to confirm the fabricated devices were sensitive to small environmental changes in their pristine state, to check for spurious signals, and to ensure gate current leakage or other confounding factors were not contributing to sensing responses. The PDMS well contained 80 $\mu$L 1X PBS at 1800 s. During the series, successive additions of deionised water were made to reduce the concentration of PBS in the well. An initial 1X PBS addition was performed at 2100s, to confirm no changes occurred during the control series that would interfere with sensing. All additions to the well in the sensing series and resulting changes to the PBS concentration in the well are shown in @tbl-salt-conc-series. 
+
+::: {#fig-salt-conc-sensing layout="[[50,50], [50,50], [50,50]]"}
+
+![](figures/ch5/NTQ31C1_pristine_saltconc_sample_230324.png){#fig-salt-conc-no-norm}
+
+![](figures/ch5/NTQ31C1_pristine_saltconc_sample_230324_detrend_trunc_arrows_normalised.png){#fig-salt-conc-detrend}
+
+![](figures/ch5/NTQ31C1_pristine_saltconc_sample_230324_filtered_detrend_trunc_arrows_normalised_(2).png){#fig-salt-conc-detrend-filter}
+
+![](figures/ch5/NTQ31C1_mean_simple_difference_before_and_after_step_filtered_concentrations.png){#fig-salt-conc-signal}
+
+![](figures/ch5/NTQ31C1_pristine_saltconc_sample_230324_detrend_trunc_arrows_normalised_2.png){#fig-salt-conc-detrend-2}
+
+![](figures/ch5/NTQ31C1_pristine_saltconc_sample_230324_filtered_detrend_trunc_arrows_normalised.png){#fig-salt-conc-detrend-filter-2}
+
+Various visualisations of a multiplexed salt concentration sensing series taken from a single device. In (a), the raw current measurements for each channel are shown alongside gate current. The same measurements after despiking, removal of baseline drift and normalisation to initial current are shown in (b), (c) shows the data in (b) after being processed with a moving median filter, and (d) shows the signal changes . 
+:::
+
+@fig-salt-conc-no-norm shows a multiplexed salt concentration sensing series from the channels of a single AZ$^\circledR$ 1518 encapsulated device, measured with the NI-PXIe. The gate voltage used was 0.0 V; this meant current measurements were well above the magnitude of the subthreshold device current. Gate current measurements did not exceed 1 nA for the SU8 encapsulated devices, and did not exceed 10 nA for the AZ$^\circledR$ 1518 devices. At each of the deionised water addition times, the current traces for at least two out of six channels showed a sharp, transient increase in current followed by a return to an increased baseline. This baseline follows the downwards drift discussed in @sec-baseline-drift. It is well established that changing the salt concentration of the liquid gate has an electrostatic gating effect on the carbon nanotubes or graphene, and changes the transfer characteristics of the channel. This shift in transfer characteristic means we observe a realtime signal response to each addition [@Heller2009; @Heller2010; @Kireev2017].
+
+Following the discussion in @sec-baseline-drift, we can subtract the linear term approximating baseline drift ($m\times t$) for each channel from the data in @fig-salt-conc-no-norm to account for the downward drift. The mean current level just before 1800 s then becomes roughly constant. We then normalise each channel relative to their initial mean current level $I_{0}$. We also remove artifacts resulting from PXIe-2737 module lag, single datapoints which fall well below the current level of the datapoints immediately before and after. This uses an interquartile range filter, as discussed in @sec-field-effect-transistor-analysis. This results
+
+
+#### Signal-to-Noise Ratio {.unnumbered}
+
+::: {#fig-salt-conc-SNR layout="[[-25,50,-25]]"}
+
+![](figures/ch5/saltconc_initial_additions.png){#fig-salt-conc-SNR}
+
+The
+:::
