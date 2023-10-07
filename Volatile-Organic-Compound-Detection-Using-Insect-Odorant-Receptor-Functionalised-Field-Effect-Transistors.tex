@@ -193,7 +193,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, boxrule=0pt, sharp corners, breakable, borderline west={3pt}{0pt}{shadecolor}, interior hidden, enhanced]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, boxrule=0pt, interior hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners, breakable, frame hidden]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -2705,8 +2705,12 @@ Table~\ref{tbl-salt-conc-series}.
 multiplexed salt concentration sensing series taken from a single
 device. In (a), the raw current measurements for each channel are shown
 alongside gate current. The same measurements after despiking, removal
-of baseline drift and normalisation to initial current are shown in (b).
-The signal changes in (b)}
+of baseline drift and normalisation to initial current are shown in (b),
+(c) shows the data in (b) after being processed with a moving median
+filter, and (d) shows the signal changes in (c). If normalised so that
+the size of signal change is measured relative to the final instead of
+initial current, (b) and (c) appear as shown in (e) and (f)
+respectively.}
 
 \end{figure}
 
@@ -3138,9 +3142,10 @@ before an addition and the mean of the filtered current after the
 addition was performed for each addition. These differences were then
 normalised relative to the initial current. The signal with analyte
 addition give reasonably consistent results regardless of whether
-baseline drift was removed from the data, as shown in \textcite{fig} .
-We can therefore be confident that robust signal with analyte addition
-plots are robust even in the presence of significant drift.
+baseline drift was removed from the data, as shown in
+\textbf{?@fig-fig-spaa-plot-comparison}. We can therefore be confident
+that robust signal with analyte addition plots are robust even in the
+presence of significant drift.
 
 \begin{figure}
 

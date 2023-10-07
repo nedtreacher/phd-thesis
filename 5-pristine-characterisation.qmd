@@ -327,13 +327,14 @@ A salt concentration sensing series were performed from 1800 s onwards, directly
 
 ![](figures/ch5/NTQ31C1_pristine_saltconc_sample_230324_filtered_detrend_trunc_arrows_normalised.png){#fig-salt-conc-detrend-filter-2}
 
-Various visualisations of a multiplexed salt concentration sensing series taken from a single device. In (a), the raw current measurements for each channel are shown alongside gate current. The same measurements after despiking, removal of baseline drift and normalisation to initial current are shown in (b), (c) shows the data in (b) after being processed with a moving median filter, and (d) shows the signal changes . 
+Various visualisations of a multiplexed salt concentration sensing series taken from a single device. In (a), the raw current measurements for each channel are shown alongside gate current. The same measurements after despiking, removal of baseline drift and normalisation to initial current are shown in (b), (c) shows the data in (b) after being processed with a moving median filter, and (d) shows the signal changes in (c). If normalised so that the size of signal change is measured relative to the final instead of initial current, (b) and (c) appear as shown in (e) and (f) respectively.
 :::
 
 @fig-salt-conc-no-norm shows a multiplexed salt concentration sensing series from the channels of a single AZ$^\circledR$ 1518 encapsulated device, measured with the NI-PXIe. The gate voltage used was 0.0 V; this meant current measurements were well above the magnitude of the subthreshold device current. Gate current measurements did not exceed 1 nA for the SU8 encapsulated devices, and did not exceed 10 nA for the AZ$^\circledR$ 1518 devices. At each of the deionised water addition times, the current traces for at least two out of six channels showed a sharp, transient increase in current followed by a return to an increased baseline. This baseline follows the downwards drift discussed in @sec-baseline-drift. It is well established that changing the salt concentration of the liquid gate has an electrostatic gating effect on the carbon nanotubes or graphene, and changes the transfer characteristics of the channel. This shift in transfer characteristic means we observe a realtime signal response to each addition [@Heller2009; @Heller2010; @Kireev2017].
 
 Following the discussion in @sec-baseline-drift, we can subtract the linear term approximating baseline drift ($m\times t$) for each channel from the data in @fig-salt-conc-no-norm to account for the downward drift. The mean current level just before 1800 s then becomes roughly constant. We then normalise each channel relative to their initial mean current level $I_{0}$. We also remove artifacts resulting from PXIe-2737 module lag, single datapoints which fall well below the current level of the datapoints immediately before and after. This uses an interquartile range filter, as discussed in @sec-field-effect-transistor-analysis. This results
 
+(e) and (f) account for the difference in drift between channels, show they are consistent when drift accounted for
 
 #### Signal-to-Noise Ratio {.unnumbered}
 
