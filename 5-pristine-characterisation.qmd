@@ -287,6 +287,7 @@ From this analysis it appears that the baseline drift for the liquid-gated carbo
 
 ### Sensing Series
 
+A salt concentration sensing series were performed from 1800 s onwards, directly after the control series. Salt concentration testing was done to confirm the fabricated devices were sensitive to small environmental changes in their pristine state, to check for spurious signals, and to ensure gate current leakage or other confounding factors were not contributing to sensing responses. The PDMS well contained 80 $\mu$L 1X PBS at 1800 s. During the series, successive additions of deionised water were made to reduce the concentration of PBS in the well. An initial 1X PBS addition was performed at 2100s, to confirm no changes occurred during the control series that would interfere with sensing. All additions to the well in the sensing series and resulting changes to the PBS concentration in the well are shown in @tbl-salt-conc-series. 
 ```{r}
 #| label: setup3
 #| include: false
@@ -311,9 +312,7 @@ salt_conc_series %>%
   add_header_above(c(" " = 1, "1X PBS Addition" = 1, "DI Water Additions" = 5), bold = FALSE)
 ```
 
-A salt concentration sensing series were performed from 1800 s onwards, directly after the control series. Salt concentration testing was done to confirm the fabricated devices were sensitive to small environmental changes in their pristine state, to check for spurious signals, and to ensure gate current leakage or other confounding factors were not contributing to sensing responses. The PDMS well contained 80 $\mu$L 1X PBS at 1800 s. During the series, successive additions of deionised water were made to reduce the concentration of PBS in the well. An initial 1X PBS addition was performed at 2100s, to confirm no changes occurred during the control series that would interfere with sensing. All additions to the well in the sensing series and resulting changes to the PBS concentration in the well are shown in @tbl-salt-conc-series. 
-
-::: {#fig-salt-conc-sensing layout="[[50,50], [50,50], [50,50]]"}
+::: {#fig-salt-conc-sensing layout="[[50,50], [50,50], [-25,50,-25]]"}
 
 ![](figures/ch5/NTQ31C1_pristine_saltconc_sample_230324.png){#fig-salt-conc-no-norm}
 
@@ -323,16 +322,28 @@ A salt concentration sensing series were performed from 1800 s onwards, directly
 
 ![](figures/ch5/NTQ31C1_mean_simple_difference_before_and_after_step_filtered_concentrations.png){#fig-salt-conc-signal}
 
-![](figures/ch5/NTQ31C1_pristine_saltconc_sample_230324_detrend_trunc_arrows_normalised_2.png){#fig-salt-conc-detrend-2}
+![](figures/ch5/salt_conc_box_plot.png){#fig-salt-conc-box-plot}
 
-![](figures/ch5/NTQ31C1_pristine_saltconc_sample_230324_filtered_detrend_trunc_arrows_normalised.png){#fig-salt-conc-detrend-filter-2}
-
-Various visualisations of a multiplexed salt concentration sensing series taken from a single device. In (a), the raw current measurements for each channel are shown alongside gate current. The same measurements after despiking, removal of baseline drift and normalisation to initial current are shown in (b), (c) shows the data in (b) after being processed with a moving median filter, and (d) shows the signal changes in (c). If normalised so that the size of signal change is measured relative to the final instead of initial current, (b) and (c) appear as shown in (e) and (f) respectively.
+Various visualisations of a multiplexed salt concentration sensing series taken from a single device. In (a), the raw current measurements for each channel are shown alongside gate current. The same measurements after despiking, removal of baseline drift and normalisation to initial current are shown in (b), (c) shows the data in (b) after being processed with a moving median filter, and (d) shows the signal changes in (c). The signal data in (d) is shown in box plot format in (e) alongside a fit to the median change in signal for each addition. The R squared value for the fit was 0.86.
 :::
 
 @fig-salt-conc-no-norm shows a multiplexed salt concentration sensing series from the channels of a single AZ$^\circledR$ 1518 encapsulated device, measured with the NI-PXIe. The gate voltage used was 0.0 V; this meant current measurements were well above the magnitude of the subthreshold device current. Gate current measurements did not exceed 1 nA for the SU8 encapsulated devices, and did not exceed 10 nA for the AZ$^\circledR$ 1518 devices. At each of the deionised water addition times, the current traces for at least two out of six channels showed a sharp, transient increase in current followed by a return to an increased baseline. This baseline follows the downwards drift discussed in @sec-baseline-drift. It is well established that changing the salt concentration of the liquid gate has an electrostatic gating effect on the carbon nanotubes or graphene, and changes the transfer characteristics of the channel. This shift in transfer characteristic means we observe a realtime signal response to each addition [@Heller2009; @Heller2010; @Kireev2017].
 
-Following the discussion in @sec-baseline-drift, we can subtract the linear term approximating baseline drift ($m\times t$) for each channel from the data in @fig-salt-conc-no-norm to account for the downward drift. The mean current level just before 1800 s then becomes roughly constant. We then normalise each channel relative to their initial mean current level $I_{0}$. We also remove artifacts resulting from PXIe-2737 module lag, single datapoints which fall well below the current level of the datapoints immediately before and after. This uses an interquartile range filter, as discussed in @sec-field-effect-transistor-analysis. This results
+Following the discussion in @sec-baseline-drift, we can subtract the linear term approximating baseline drift ($mt$) for each channel from the data in @fig-salt-conc-no-norm to account for the downward drift. The mean current level just before 1800 s then becomes roughly constant. We then normalise each channel relative to their initial mean current level $I_{0}$. We also remove artifacts resulting from PXIe-2737 module lag, single datapoints which fall well below the current level of the immediately preceding and succeeding datapoints. This 'despike' process uses an interquartile range filter, as discussed in @sec-field-effect-transistor-analysis. The resulting dataset is shown in @fig-salt-conc-detrend. This figure shows that the signal-to-noise ratio remains roughly similar across all channels of the device. However, the behaviour of the initial transient increase with each addition is highly variable across channels and between additions for a single channel.
+
+As measurement of the highly variable initial transient is not useful for robust sensing purposes, we can apply a moving median filter to the dataset, discussed further in @sec-field-effect-transistor-analysis. The filtered data is shown in @fig-salt-conc-detrend-filter. Noise and initial transients are removed completely, while the clearly defined step to a new current baseline is retained. Using the realtime data in @fig-salt-conc-detrend-filter, a plot of signal against addition can be created using the method described in @sec-field-effect-transistor-analysis, shown in @fig-salt-conc-signal. This presentation of the data allows us to see the increase at each step relative to $I_{0}$. 
+
+Intriguingly, even though the largest change in PBS concentration occurred at the first deionised water addition (see @tbl-salt-conc-series), there was very little signal change across all channels, while a relatively large change occurred at the second addition. The threshold shift due to electrostatic gating should be proportional to the logarithm of final salt concentration, and therefore proportional to signal change in the linear on-regime [@Heller2010]. @fig-salt-conc-box-plot shows the signal change in terms of this logarithmic relationship. We see that the median values of the first two additions do not line up well with the overall logarithmic trend. Insufficient mixing with existing solution of a specific addition in the tightly enclosed PDMS well environment may be responsible for this result. Subsequent additions may be more likely to cause mixing, leading to the change in concentration at the surface of the channel being more similar to the change in concentration in the bulk of the solution in the well.
+
+::: {#fig-salt-conc-sensing-2 layout="[50,50]"}
+
+![](figures/ch5/NTQ31C1_pristine_saltconc_sample_230324_detrend_trunc_arrows_normalised_2.png){#fig-salt-conc-detrend-2}
+
+![](figures/ch5/NTQ31C1_pristine_saltconc_sample_230324_filtered_detrend_trunc_arrows_normalised.png){#fig-salt-conc-detrend-filter-2}
+
+If normalised so that the size of signal change is measured relative to the final instead of initial current, (b) and (c) appear as shown in (e) and (f) respectively.
+:::
+
 
 (e) and (f) account for the difference in drift between channels, show they are consistent when drift accounted for
 

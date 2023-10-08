@@ -193,7 +193,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, boxrule=0pt, interior hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners, breakable, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable, boxrule=0pt, interior hidden, sharp corners, frame hidden]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -2575,6 +2575,20 @@ to the channel being measured.
 \hypertarget{sensing-series}{%
 \subsection{Sensing Series}\label{sensing-series}}
 
+A salt concentration sensing series were performed from 1800 s onwards,
+directly after the control series. Salt concentration testing was done
+to confirm the fabricated devices were sensitive to small environmental
+changes in their pristine state, to check for spurious signals, and to
+ensure gate current leakage or other confounding factors were not
+contributing to sensing responses. The PDMS well contained 80 \(\mu\)L
+1X PBS at 1800 s. During the series, successive additions of deionised
+water were made to reduce the concentration of PBS in the well. An
+initial 1X PBS addition was performed at 2100s, to confirm no changes
+occurred during the control series that would interfere with sensing.
+All additions to the well in the sensing series and resulting changes to
+the PBS concentration in the well are shown in
+Table~\ref{tbl-salt-conc-series}.
+
 \hypertarget{tbl-salt-conc-series}{}
 \begin{table}
 \caption{\label{tbl-salt-conc-series}This table shows the times at which 20 µL additions were made to the
@@ -2594,20 +2608,6 @@ Final PBS concentration & 1X & 0.83X & 0.71X & 0.63X & 0.56X & 0.50X\\
 \bottomrule
 \end{tabular}
 \end{table}
-
-A salt concentration sensing series were performed from 1800 s onwards,
-directly after the control series. Salt concentration testing was done
-to confirm the fabricated devices were sensitive to small environmental
-changes in their pristine state, to check for spurious signals, and to
-ensure gate current leakage or other confounding factors were not
-contributing to sensing responses. The PDMS well contained 80 \(\mu\)L
-1X PBS at 1800 s. During the series, successive additions of deionised
-water were made to reduce the concentration of PBS in the well. An
-initial 1X PBS addition was performed at 2100s, to confirm no changes
-occurred during the control series that would interfere with sensing.
-All additions to the well in the sensing series and resulting changes to
-the PBS concentration in the well are shown in
-Table~\ref{tbl-salt-conc-series}.
 
 \begin{figure}
 
@@ -2671,6 +2671,117 @@ Table~\ref{tbl-salt-conc-series}.
 \subcaption{\label{fig-salt-conc-signal}}
 \end{minipage}%
 \newline
+\begin{minipage}[t]{0.25\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/salt_conc_box_plot.png}
+
+}
+
+}
+
+\subcaption{\label{fig-salt-conc-box-plot}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.25\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-salt-conc-sensing}Various visualisations of a
+multiplexed salt concentration sensing series taken from a single
+device. In (a), the raw current measurements for each channel are shown
+alongside gate current. The same measurements after despiking, removal
+of baseline drift and normalisation to initial current are shown in (b),
+(c) shows the data in (b) after being processed with a moving median
+filter, and (d) shows the signal changes in (c). The signal data in (d)
+is shown in box plot format in (e) alongside a fit to the median change
+in signal for each addition. The R squared value for the fit was 0.86.}
+
+\end{figure}
+
+Figure~\ref{fig-salt-conc-no-norm} shows a multiplexed salt
+concentration sensing series from the channels of a single
+AZ\(^\circledR\) 1518 encapsulated device, measured with the NI-PXIe.
+The gate voltage used was 0.0 V; this meant current measurements were
+well above the magnitude of the subthreshold device current. Gate
+current measurements did not exceed 1 nA for the SU8 encapsulated
+devices, and did not exceed 10 nA for the AZ\(^\circledR\) 1518 devices.
+At each of the deionised water addition times, the current traces for at
+least two out of six channels showed a sharp, transient increase in
+current followed by a return to an increased baseline. This baseline
+follows the downwards drift discussed in
+Section~\ref{sec-baseline-drift}. It is well established that changing
+the salt concentration of the liquid gate has an electrostatic gating
+effect on the carbon nanotubes or graphene, and changes the transfer
+characteristics of the channel. This shift in transfer characteristic
+means we observe a realtime signal response to each addition
+\autocite{Heller2009,Heller2010,Kireev2017}.
+
+Following the discussion in Section~\ref{sec-baseline-drift}, we can
+subtract the linear term approximating baseline drift (\(mt\)) for each
+channel from the data in Figure~\ref{fig-salt-conc-no-norm} to account
+for the downward drift. The mean current level just before 1800 s then
+becomes roughly constant. We then normalise each channel relative to
+their initial mean current level \(I_{0}\). We also remove artifacts
+resulting from PXIe-2737 module lag, single datapoints which fall well
+below the current level of the immediately preceding and succeeding
+datapoints. This `despike' process uses an interquartile range filter,
+as discussed in Section~\ref{sec-field-effect-transistor-analysis}. The
+resulting dataset is shown in Figure~\ref{fig-salt-conc-detrend}. This
+figure shows that the signal-to-noise ratio remains roughly similar
+across all channels of the device. However, the behaviour of the initial
+transient increase with each addition is highly variable across channels
+and between additions for a single channel.
+
+As measurement of the highly variable initial transient is not useful
+for robust sensing purposes, we can apply a moving median filter to the
+dataset, discussed further in
+Section~\ref{sec-field-effect-transistor-analysis}. The filtered data is
+shown in Figure~\ref{fig-salt-conc-detrend-filter}. Noise and initial
+transients are removed completely, while the clearly defined step to a
+new current baseline is retained. Using the realtime data in
+Figure~\ref{fig-salt-conc-detrend-filter}, a plot of signal against
+addition can be created using the method described in
+Section~\ref{sec-field-effect-transistor-analysis}, shown in
+Figure~\ref{fig-salt-conc-signal}. This presentation of the data allows
+us to see the increase at each step relative to \(I_{0}\).
+
+Intriguingly, even though the largest change in PBS concentration
+occurred at the first deionised water addition (see
+Table~\ref{tbl-salt-conc-series}), there was very little signal change
+across all channels. In contrast, the signal changes at all other
+addition times were fairly consistent, despite each addition causing a
+lower change in concentration than the ones before. The threshold shift
+due to electrostatic gating should be proportional to the logarithm of
+final salt concentration, and therefore proportional to signal change in
+the linear on-regime \autocite{Heller2010}. This relationship cannot
+sufficiently explain the very large response Insufficient mixing with
+existing solution of a specific addition in the tightly enclosed PDMS
+well environment may result in a reduced response. Subsequent additions
+may be more likely to cause mixing, leading to a greater change in
+concentration at the surface of the channel and a larger response.
+
+\begin{figure}
+
 \begin{minipage}[t]{0.50\linewidth}
 
 {\centering 
@@ -2701,47 +2812,20 @@ Table~\ref{tbl-salt-conc-series}.
 \subcaption{\label{fig-salt-conc-detrend-filter-2}}
 \end{minipage}%
 
-\caption{\label{fig-salt-conc-sensing}Various visualisations of a
-multiplexed salt concentration sensing series taken from a single
-device. In (a), the raw current measurements for each channel are shown
-alongside gate current. The same measurements after despiking, removal
-of baseline drift and normalisation to initial current are shown in (b),
-(c) shows the data in (b) after being processed with a moving median
-filter, and (d) shows the signal changes in (c). If normalised so that
-the size of signal change is measured relative to the final instead of
-initial current, (b) and (c) appear as shown in (e) and (f)
-respectively.}
+\caption{\label{fig-salt-conc-sensing-2}If normalised so that the size
+of signal change is measured relative to the final instead of initial
+current, (b) and (c) appear as shown in (e) and (f) respectively.}
 
 \end{figure}
 
-Figure~\ref{fig-salt-conc-no-norm} shows a multiplexed salt
-concentration sensing series from the channels of a single
-AZ\(^\circledR\) 1518 encapsulated device, measured with the NI-PXIe.
-The gate voltage used was 0.0 V; this meant current measurements were
-well above the magnitude of the subthreshold device current. Gate
-current measurements did not exceed 1 nA for the SU8 encapsulated
-devices, and did not exceed 10 nA for the AZ\(^\circledR\) 1518 devices.
-At each of the deionised water addition times, the current traces for at
-least two out of six channels showed a sharp, transient increase in
-current followed by a return to an increased baseline. This baseline
-follows the downwards drift discussed in
-Section~\ref{sec-baseline-drift}. It is well established that changing
-the salt concentration of the liquid gate has an electrostatic gating
-effect on the carbon nanotubes or graphene, and changes the transfer
-characteristics of the channel. This shift in transfer characteristic
-means we observe a realtime signal response to each addition
-\autocite{Heller2009,Heller2010,Kireev2017}.
-
-Following the discussion in Section~\ref{sec-baseline-drift}, we can
-subtract the linear term approximating baseline drift (\(m\times t\))
-for each channel from the data in Figure~\ref{fig-salt-conc-no-norm} to
-account for the downward drift. The mean current level just before 1800
-s then becomes roughly constant. We then normalise each channel relative
-to their initial mean current level \(I_{0}\). We also remove artifacts
-resulting from PXIe-2737 module lag, single datapoints which fall well
-below the current level of the datapoints immediately before and after.
-This uses an interquartile range filter, as discussed in
-Section~\ref{sec-field-effect-transistor-analysis}. This results
+\begin{enumerate}
+\def\labelenumi{(\alph{enumi})}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  and (f) account for the difference in drift between channels, show
+  they are consistent when drift accounted for
+\end{enumerate}
 
 \hypertarget{signal-to-noise-ratio}{%
 \subsubsection*{Signal-to-Noise Ratio}\label{signal-to-noise-ratio}}
@@ -3099,17 +3183,18 @@ was designed collaboratively by myself and Erica Cassie over GitHub
 using the Sourcetree Git GUI.
 
 The first of the three modules is for processing sensing datasets. This
-module takes sensing measurements and analyses them, then outputs a plot
-of the raw data, alongside multiple plots which have been modified in
-various ways. It can also fit exponential and linear trendlines to
-regions of the sensing data, as well as find the signal change per
-analyte addition, and returns spreadsheets containing the results of
-these analyses. Modified plots include normalised plots (type of
-normalisation can be set in config file), plots with fitted curves,
-plots with the linear baseline drift removed, plots of signal with
-analyte addition, ``despiked'' plots and ``filtered'' plots. It is
-possible to add annotations to any of these plots using the config file,
-and it is possible to produce a plot with a combination of these
+module imports sensing measurements in .csv format and analyses them,
+then outputs a plot of the raw data, alongside multiple plots which have
+been modified in various ways. It can also fit exponential and linear
+trendlines to regions of the sensing data, as well as find the signal
+change per analyte addition, and returns spreadsheets containing the
+results of these analyses. These spreadsheets include the standard
+deviation for all included parameters. Modified plots include normalised
+plots (type of normalisation can be set in config file), plots with
+fitted curves, plots with the linear baseline drift removed, plots of
+signal with analyte addition, ``despiked'' plots and ``filtered'' plots.
+It is possible to add annotations to any of these plots using the config
+file, and it is possible to produce a plot with a combination of these
 modifications.
 
 The scipy.optimize.curve\_fit module is used to fit linear and
@@ -3130,16 +3215,17 @@ z-score above \(\pm 3\) were removed from the plotted/processed data.
 ``Filtered'' plots had noise reduced using a moving median filter. The
 moving median filter is more effective at removing noise than a simple
 moving average, and has advantages over other filters (such as the
-Savitzky-Golay filter) when removing noise from data with sharp edges.
-Median filtering can also be used for baseline drift compensation,
-though this approach was not used in this thesis \autocite{Stone2011}.
-The moving median filter used had a window of 40 datapoints.
+Savitzky-Golay filter) when removing noise from data with sharp edges,
+as is the case for sensing data. Median filtering can also be used for
+baseline drift compensation, though this approach was not used in this
+thesis \autocite{Stone2011}. The moving median filter used had a window
+of 40 datapoints.
 
 Plots of signal with analyte addition were constructed from current data
 after first removing baseline drift and applying a moving median filter.
 A simple difference calculation between the mean of the filtered current
 before an addition and the mean of the filtered current after the
-addition was performed for each addition. These differences were then
+addition was performed at each addition. These differences were then
 normalised relative to the initial current. The signal with analyte
 addition give reasonably consistent results regardless of whether
 baseline drift was removed from the data, as shown in
@@ -3188,6 +3274,22 @@ calculation was performed on filtered data with the baseline drift
 removed, the method used in the body of the thesis.}
 
 \end{figure}
+
+The second module imports transfer measurements in .csv format and
+creates combined and individual plots of the eight channels on a single
+device. In combined plots, channels which are non-working, due to being
+shorted or non-conducting, are removed via setting a maximum and minimum
+possible on-current in the config file. Various parameters from the
+transfer characteristics are saved as a spreadsheet along with standard
+error. These parameters include on current, off current, subthreshold
+slope and threshold voltage for the carbon nanotube devices, and on
+current, off current and major Dirac point voltage for graphene devices.
+The device type being analysed can be set in the config file.
+
+The third module imports several transfer measurements in .csv format
+and allows for comparison of the same channel before and after some
+modification. It also calculates the shift in either threshold voltage
+or major Dirac voltage of the device.
 
 \hypertarget{vapour-delivery-system}{%
 \chapter{Vapour Delivery System}\label{vapour-delivery-system}}
