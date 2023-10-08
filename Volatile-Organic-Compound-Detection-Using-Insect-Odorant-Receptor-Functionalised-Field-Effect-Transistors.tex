@@ -193,7 +193,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable, boxrule=0pt, interior hidden, sharp corners, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, borderline west={3pt}{0pt}{shadecolor}, sharp corners, interior hidden, breakable, frame hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -2768,17 +2768,18 @@ us to see the increase at each step relative to \(I_{0}\).
 Intriguingly, even though the largest change in PBS concentration
 occurred at the first deionised water addition (see
 Table~\ref{tbl-salt-conc-series}), there was very little signal change
-across all channels. In contrast, the signal changes at all other
-addition times were fairly consistent, despite each addition causing a
-lower change in concentration than the ones before. The threshold shift
-due to electrostatic gating should be proportional to the logarithm of
-final salt concentration, and therefore proportional to signal change in
-the linear on-regime \autocite{Heller2010}. This relationship cannot
-sufficiently explain the very large response Insufficient mixing with
-existing solution of a specific addition in the tightly enclosed PDMS
-well environment may result in a reduced response. Subsequent additions
-may be more likely to cause mixing, leading to a greater change in
-concentration at the surface of the channel and a larger response.
+across all channels, while a relatively large change occurred at the
+second addition. The logarithm of final salt concentration has
+previously been shown to be proportional to conductance change in the
+linear on-regime \autocite{Heller2010}.
+Figure~\ref{fig-salt-conc-box-plot} shows the signal change presented in
+terms of this logarithmic relationship. We see that the median values of
+the first two additions do not line up well with the overall logarithmic
+trend. Insufficient mixing in the tightly enclosed PDMS well environment
+for the first few additions may be responsible for this result.
+Subsequent additions may be more likely to cause adequate mixing,
+leading to the change in concentration at the surface of the channel
+being more representative of the overall concentration in the well.
 
 \begin{figure}
 
@@ -2814,9 +2815,17 @@ concentration at the surface of the channel and a larger response.
 
 \caption{\label{fig-salt-conc-sensing-2}If normalised so that the size
 of signal change is measured relative to the final instead of initial
-current, (b) and (c) appear as shown in (e) and (f) respectively.}
+current,
+Figure~\ref{fig-salt-conc-detrend}, Figure~\ref{fig-salt-conc-detrend-filter}
+become (e) and (f) respectively.}
 
 \end{figure}
+
+In Figure~\ref{fig-salt-conc-detrend} and
+Figure~\ref{fig-salt-conc-detrend-filter}, we see that from roughly the
+second deionised water addition onwards, the drift behaviour of
+individual channels begin to significantly diverge from each other.\\
+An alternative way of presenting the signal
 
 \begin{enumerate}
 \def\labelenumi{(\alph{enumi})}
