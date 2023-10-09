@@ -30,13 +30,13 @@ The scipy.optimize.curve_fit module is used to fit linear and exponential curves
 
 "Despiked" plots have had spurious datapoints removed through the use of an interquartile range rolling filter. The window size of the rolling filter used was 40 datapoints, and datapoints in each window with a z-score above $\pm 3$ were removed from the plotted/processed data. "Filtered" plots had noise reduced using a moving median filter. The moving median filter is more effective at removing noise than a simple moving average, and has advantages over other filters (such as the Savitzky-Golay filter) when removing noise from data with sharp edges, as is the case for sensing data. Median filtering can also be used for baseline drift compensation, though this approach was not used in this thesis [@Stone2011]. The moving median filter used had a window of 40 datapoints. 
 
-Plots of signal with analyte addition were constructed from current data after first removing baseline drift and applying a moving median filter. A simple difference calculation between the mean of the filtered current before an addition and the mean of the filtered current after the addition was performed at each addition. These differences were then normalised relative to the initial current. The signal with analyte addition give reasonably consistent results regardless of whether baseline drift was removed from the data, as shown in @fig-fig-spaa-plot-comparison. We can therefore be confident that robust signal with analyte addition plots are robust even in the presence of significant drift.
+Plots of signal with analyte addition were constructed from current data after first removing baseline drift and applying a moving median filter. A simple difference calculation between the mean of the filtered current before an addition and the mean of the filtered current after the addition was performed at each addition. These differences were then normalised relative to the initial current. The signal with analyte addition give reasonably consistent results regardless of whether baseline drift was removed from the data, as shown in @fig-spaa-plot-comparison. We can therefore be confident that robust signal with analyte addition plots are robust even in the presence of significant drift.
 
 ::: {#fig-spaa-plot-comparison layout="[50,50]"}
 
-![](figures/app2/NTQ31C1_mean_simple_difference_before_and_after_step_filtered_concentrations.png){#fig-spaa-no-detrend}
+![](figures/app1/NTQ31C1_mean_simple_difference_before_and_after_step_filtered_concentrations.png){#fig-spaa-no-detrend}
 
-![](figures/app2/NTQ31C1_mean_simple_difference_before_and_after_step_filtered_concentrations_detrend.png){#fig-spaa-detrend}
+![](figures/app1/NTQ31C1_mean_simple_difference_before_and_after_step_filtered_concentrations_detrend.png){#fig-spaa-detrend}
 
 A comparison of signal with analyte addition plots taken from the same salt concentration sensing dataset (the same dataset as used in @fig-salt-conc-sensing). In (a), a simple difference calculation performed on filtered data was used, while in (b) the same calculation was performed on filtered data with the baseline drift removed, the method used in the body of the thesis. 
 :::
