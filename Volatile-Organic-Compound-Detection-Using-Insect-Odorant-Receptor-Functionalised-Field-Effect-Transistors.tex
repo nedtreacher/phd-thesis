@@ -193,7 +193,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, borderline west={3pt}{0pt}{shadecolor}, sharp corners, interior hidden, breakable, frame hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, frame hidden, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, sharp corners, enhanced, interior hidden]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -2002,11 +2002,11 @@ All channels characterised had a positive threshold voltage
 steam-assisted surfactant-deposited films. The marked increase in
 \(V_{th}\) for channel measurements from surfactant-deposited devices
 with steam present relative to other channel measurements indicates
-\(p\)-doping of the carbon nanotubes has occurred
-\autocite{Heller2008,Thanihaichelvan2018}. It is highly likely the
-dopant is present due to the steam deposition, and may be related to the
-large contamination peak for steam-deposited films seen in
-Figure~\ref{fig-afm-morphology} and
+\(p\)-doping of the carbon nanotubes has
+occurred\autocite{Kang2005,Heller2008,Thanihaichelvan2018}. It is highly
+likely the dopant is present due to the steam deposition, and may be
+related to the large contamination peak for steam-deposited films seen
+in Figure~\ref{fig-afm-morphology} and
 Figure~\ref{fig-remaining-histogram}. One possibility is that this
 dopant is residual surfactant, which can \(p\)-dope carbon nanotubes and
 lead to enhanced \(p\)-doping from adsorped oxygen and water
@@ -2263,8 +2263,11 @@ previously-mentioned slight leftward shift of the major Dirac point,
 these values were highly consistent before and after exposure to 1XPBS.
 
 \hypertarget{sec-dummy-sensing}{%
-\section{Salt Concentration Sensing with Phosphate Buffered
+\section{Real-Time Salt Concentration Sensing with Phosphate Buffered
 Saline}\label{sec-dummy-sensing}}
+
+All devices analysed in this section were fabricated using
+steam-assisted, surfactant-deposited carbon nanotube network films.
 
 \hypertarget{sec-baseline-drift}{%
 \subsection{Control Series and Baseline
@@ -2341,7 +2344,7 @@ been labeled in this manner to be consistent with previous work
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch5/Q2C10_with_fitted curves_exp.png}
+\includegraphics{./figures/ch5/Q2C10_with_fitted_curves_exp.png}
 
 }
 
@@ -2386,11 +2389,11 @@ around the substrate and carbon nanotubes. The magnitude of baseline
 drift is lower for our devices than for those characterised by Noyce
 \emph{et al.}, which may be a result of numerous device and setup
 differences which affect the presence of charge traps. These differences
-include the use of an electrolyte, the use of a network of carbon
-nanotubes instead of single nanotubes, the channel length used, the use
-of a 300 nm instead of 90 nm SiO\(_2\) layer, and the use of an
-asymmetric, liquid-gated transfer sweep over a shorter voltage range to
-characterise devices before each control series was measured
+include liquid-gating instead of back-gated, the use of a network of
+carbon nanotubes instead of single nanotubes, a different channel
+length, the use of a 300 nm instead of 90 nm SiO\(_2\) layer, and the
+use of an asymmetric, liquid-gated transfer sweep over a shorter voltage
+range to characterise devices before each control series was measured
 \autocite{Noyce2019}.
 
 As a first approximation to the longer time constant exponentials
@@ -2400,13 +2403,13 @@ control series from \(1200-1800\) s. The gradient of the
 was \(m_{1} = -0.95\pm0.02\) pA/s, while the gradient of the
 \(V_{\textrm{lg}}-V_{\textrm{gap}}\) = \(-150\) mV gated control series
 was \(m_{2} = -0.69\pm0.02\) pA/s. The equations for the two linear fits
-were proportional to each other, with \$m\_\{2\}t +
-\(b_{2} = (0.73 \pm 0.03)\times m_{1}t + b_{1}\). This indicates a
-relationship between the voltage used to gate the devices and the degree
-of longer-term baseline drift. This effect is likely a consequence of
-gate bias stress, where gating introduces charge traps to the channel
-over time and reduces drain current. The more negative the applied bias,
-the larger the amplitude of the longer-term drift
+were proportional to each other, with
+\(m_{2}t + b_{2} = (0.73 \pm 0.03)\times (m_{1}t + b_{1})\). This
+indicates a relationship between the voltage used to gate the devices
+and the degree of longer-term baseline drift. This effect is likely a
+consequence of gate bias stress, where gating introduces charge traps to
+the channel over time and reduces drain current. The more negative the
+applied bias, the larger the amplitude of the longer-term drift
 \autocite{Bargaoui2018}.
 
 When the longer-term linear fits were subtracted from the raw data, the
@@ -2546,10 +2549,10 @@ corresponding to Device 1 was \(m_{1} = -8.2\pm0.1\) pA/s, while the
 gradient of the control series corresponding to Device 2 was
 \(m_{2} = -6.6\pm0.2\). Again, the equations for the two linear fits
 were proportional to each other, where
-\(m_{2}t + b_{2} = (0.81 \pm 0.03)\times m_{1}t + b_{1}\), despite being
-different channels from a different device batch. This result indicates
-that gate bias stress has the same effect on baseline drift on channels
-of different devices fabricated in the same manner.
+\(m_{2}t + b_{2} = (0.81 \pm 0.03)\times (m_{1}t + b_{1})\), despite
+being different channels from a different device batch. This result
+indicates that gate bias stress has the same effect on baseline drift on
+channels of different devices fabricated in the same manner.
 
 As with the SU8 device, subtracting the linear fit resulted in a a
 dataset which followed an exponential trend.
@@ -2566,14 +2569,14 @@ measuring the control series.
 
 From this analysis it appears that the baseline drift for the
 liquid-gated carbon nanotube devices can be accurately approximated as a
-combination of a exponential, linear and constant term. The linear term
-appears to be consistent across channels of a particular device type,
-with the size of this term increasing with increasingly negative gate
-bias. The time constant of the exponential term appears to be intrinsic
-to the channel being measured.
+combination of a exponential and linear term. The linear term appears to
+be consistent across channels of a particular device type, with the size
+of this term increasing with increasingly negative gate bias. The time
+constant of the exponential term appears to be intrinsic to the channel
+being measured.
 
-\hypertarget{sensing-series}{%
-\subsection{Sensing Series}\label{sensing-series}}
+\hypertarget{sec-salt-conc-series}{%
+\subsection{Sensing Series}\label{sec-salt-conc-series}}
 
 A salt concentration sensing series were performed from 1800 s onwards,
 directly after the control series. Salt concentration testing was done
@@ -2777,9 +2780,9 @@ terms of this logarithmic relationship. We see that the median values of
 the first two additions do not line up well with the overall logarithmic
 trend. Insufficient mixing in the tightly enclosed PDMS well environment
 for the first few additions may be responsible for this result.
-Subsequent additions may be more likely to cause adequate mixing,
-leading to the change in concentration at the surface of the channel
-being more representative of the overall concentration in the well.
+Subsequent additions may improve mixing in the well, leading to the
+change in concentration at the surface of the channel being more
+representative of the overall concentration in the well.
 
 \begin{figure}
 
@@ -2815,26 +2818,45 @@ being more representative of the overall concentration in the well.
 
 \caption{\label{fig-salt-conc-sensing-2}If normalised so that the size
 of signal change is measured relative to the final instead of initial
-current,
-Figure~\ref{fig-salt-conc-detrend}, Figure~\ref{fig-salt-conc-detrend-filter}
-become (e) and (f) respectively.}
+current, Figure~\ref{fig-salt-conc-detrend} and
+Figure~\ref{fig-salt-conc-detrend-filter} can be shown as (e) and (f)
+respectively.}
 
 \end{figure}
 
 In Figure~\ref{fig-salt-conc-detrend} and
-Figure~\ref{fig-salt-conc-detrend-filter}, we see that from roughly the
-second deionised water addition onwards, the drift behaviour of
-individual channels begin to significantly diverge from each other.\\
-An alternative way of presenting the signal
+Figure~\ref{fig-salt-conc-detrend-filter}, we see that the drift
+behaviour of individual channels begin to significantly diverge from one
+another from roughly the second deionised water addition onwards. This
+deviation from the baseline drift subtracted from the raw data occurs
+either because the linear fit is only a first-order approximation which
+weakens with time, or because the additions themselves affect the drift
+behaviour. Displaying the data as discrete signal changes, as in
+Figure~\ref{fig-salt-conc-signal}, is one way of excluding these
+deviations (see Section~\ref{sec-field-effect-transistor-analysis}). An
+alternative way of presenting the signal changes, by normalising
+relative to both \(I_{0}\) and the final current reading, is shown in
+Figure~\ref{fig-salt-conc-sensing-2}. This approach is useful for
+comparing unaccounted-for drift behaviour as well as the initial
+transient responses to additions between the channels of a multiplexed
+device.
 
-\begin{enumerate}
-\def\labelenumi{(\alph{enumi})}
-\setcounter{enumi}{4}
-\tightlist
-\item
-  and (f) account for the difference in drift between channels, show
-  they are consistent when drift accounted for
-\end{enumerate}
+Figure~\ref{fig-salt-conc-detrend-2} demonstrates that the transient
+increases are consistently largest for channels in the center of the
+device, and smaller for those on the device edges (channels 1 \& 2).
+This spatially-dependent behaviour may indicate responses are determined
+by the location of placement of the water additions along the surface of
+the electrolyte in the well. From
+Figure~\ref{fig-salt-conc-detrend-filter-2}, where the transient
+responses are largely filtered out, we see clearly that the signal
+response relative to drift is highly consistent between channels. This
+result demonstrates that once unaccounted-for drift behaviour is
+removed, the signal size in response to each addition is highly
+consistent between channels. Slight deviations from the overall trend,
+such as for channels 5, 6 and 7 at deionised water addition 2, and for
+channels 5 and 6 at deionised water addition 5, are likely due to the
+large transient spikes at these channels not being completely filtered
+out by the median filter.
 
 \hypertarget{signal-to-noise-ratio}{%
 \subsubsection*{Signal-to-Noise Ratio}\label{signal-to-noise-ratio}}
@@ -2842,17 +2864,7 @@ An alternative way of presenting the signal
 
 \begin{figure}
 
-\begin{minipage}[t]{0.25\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.55\linewidth}
 
 {\centering 
 
@@ -2867,7 +2879,7 @@ An alternative way of presenting the signal
 \subcaption{\label{fig-salt-conc-SNR}}
 \end{minipage}%
 %
-\begin{minipage}[t]{0.25\linewidth}
+\begin{minipage}[t]{0.05\linewidth}
 
 {\centering 
 
@@ -2876,10 +2888,126 @@ An alternative way of presenting the signal
 }
 
 \end{minipage}%
+%
+\begin{minipage}[t]{0.40\linewidth}
 
-\caption{\label{fig-salt-conc-SNR}The}
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch5/Q2C10ch8custom.png}
+
+}
+
+}
+
+\subcaption{\label{fig-transfer-sweep-2}}
+\end{minipage}%
+
+\caption{\label{fig-salt-conc-SNR}The signal-to-noise ratio of the first
+deionised water addition for the traces seen in
+Figure~\ref{fig-salt-conc-control-series-SU8} are shown in (a). For
+convenience, the transfer characteristics of the three channels in
+Figure~\ref{fig-salt-conc-control-series-SU8}, showing the two gate
+voltages used for measurements of a single SU8-encapsulated channel, are
+shown again in (b).}
 
 \end{figure}
+
+To compare signal-to-noise ratio between different gate currents and
+device configurations, the initial additions post-1800 s from the
+current traces in Figure~\ref{fig-salt-conc-control-series-SU8} that
+were discussed earlier in Section~\ref{sec-baseline-drift} are shown in
+Figure~\ref{fig-salt-conc-SNR}. Previous work on the signal-to-noise
+ratio for liquid-gated, encapsulated carbon nanotube devices suggests
+that gating devices close to \(V_{gap}\) should give the largest
+signal-to-noise ratio for salt concentration additions
+\autocite{Heller2009}. However, as shown by
+Figure~\ref{fig-salt-conc-control-series-SU8}, this relationship was not
+consistently observed. This discrepancy could be a result of the use of
+a network of carbon nanotubes rather than a single nanotube; gating may
+have less of an impact on noise when a network morphology is used.
+Alternatively, it could be a result of a lack of mixing in our static
+well setup leading to inconsistent signal sizes with concentration
+change. Heller \emph{et al.} used a flow cell during their
+signal-to-ratio work \autocite{Heller2009}.
+
+\hypertarget{conclusion}{%
+\section{Conclusion}\label{conclusion}}
+
+To ensure fabricated transistors were suitable for biosensing purposes,
+the morphology and electrical properties of the pristine carbon nanotube
+and graphene transistors were investigated.
+
+The morphology of the carbon nanotube networks were found to have a
+significant impact on the electrical characteristics of the devices,
+which was determined through comparison of the height profile of the
+carbon nanotube network and the key electrical parameters of a range of
+carbon nanotube devices. When networks were highly bundled (\(>90\) \%),
+there was a large range of carbon nanotube bundle diameters present in
+the network. This large variation in the size of conducting pathways
+resulted in a wide range of on-off ratios and threshold voltages for the
+liquid-gated devices created using these carbon nanotube films. In
+contrast, devices using films fabricated with a relatively low
+percentage of bundling (\(<75\) \%) showed highly consistent on-off
+ratios and threshold voltages, along with low hysteresis, due to the
+relatively consistent bundle diameters and high density of these
+networks. These low-bundling networks were found to have a mean bundle
+distribution height of \(3.2 \pm 1.1\) nm. When performing multiplexed
+sensing, consistent channel behaviour is highly desirable since
+comparing sensing behaviour between channels is more straightforward.
+
+However, atomic force microscope images of low bundling networks also
+indicated that these networks have the most contamination present on the
+surface of the film relative to carbon nanotubes. This is possibly the
+cause of the increased threshold voltage of devices with films deposited
+with steam present relative to those using films fabricated without
+steam. The steam deposition may introduce \(p\)-dopants to the carbon
+nanotubes, which could be due to surfactant left over from the
+deposition process. Since the presence of surfactant could negatively
+impact biosensing, techniques to remove contaminants should be explored
+in more detail. Thermal annealing of carbon nanotube films at high
+temperature is one approach that could be taken to resolve this issue.
+The presence of electrolyte on the surface of a backgated transistor was
+also found to significantly adversely affect its electrical
+characteristics.
+
+Constant voltage real-time measurements of the carbon nanotube devices
+had a characteristic drift that could be modelled using a exponential
+and linear term. The linear term of baseline drift appeared to be
+characteristic to the type of device measured, where the equation of the
+trendline for linear drift was proportionally related between channels
+fabricated in the same manner. An increase in device current level
+therefore meant an increase in the degree of linear drift. The time
+constant of the exponential term appeared to be characteristic to the
+particular channel used, with a time constant of \(\tau = 300 \pm 20\) s
+for the SU8-encapsulated channel characteristed, and time constants of
+\(\tau = 141 \pm 3\) s and \(\tau = 408 \pm 11\) s for the
+AZ\(^\circledR\) 1518 devices characterised.
+
+Salt concentration sensing series indicated that the carbon nanotube
+transistor devices were highly sensitive to environmental changes and
+therefore suitable for sensing work. Successive additions of deionised
+water to the 1X PBS present in the well gave signal responses of up to
+2.5\% above control. The signal response was found to be proportional to
+the logarithm of concentration, giving a fit to the median response
+sizes with an R squared value of 0.86. Deviations from this trend can
+possibly be explained by the enclosed sensing environment preventing
+sufficient mixing of electrolyte concentrations within the PDMS well. It
+was also seen that the relative signal size to baseline drift was highly
+consistent between channels. This is a promising result when it comes to
+ensuring consistent multiplexin, but it remains to be seen if this
+behaviour carries over to sensing with biofunctionalised devices.
+
+Graphene devices were often found to possess a double-minima feature,
+which appears to be the result of a lack of doping from the metal
+contacts in the center of the device channels. These double Dirac points
+are unlikely to have an significant effect on the sensing behaviour of
+graphene devices. The graphene device characteristics were found to be
+consistent after 1 hour exposure to 1X PBS with minimal drift, with an
+on-off ratio of 5 and major Dirac point voltage of 0.3 V. There was some
+indications from the transfer characteristics that \(p\)-dopants were
+present on the graphene surface.
 
 \appendix
 \addcontentsline{toc}{part}{Appendices}
