@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, interior hidden, breakable, enhanced, frame hidden, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, sharp corners, enhanced, interior hidden, frame hidden, breakable]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -314,13 +314,14 @@ negative AZ\(^\circledR\) photoresists (AZ\(^\circledR\) 1518,
 Microchemicals GmbH; AZ\(^\circledR\) nLOF 2020, Microchemicals GmbH)
 and SU-8 (SU8-2150, Kayaku Advanced Materials, formerly Microchem). The
 AZ\(^\circledR\) resists used here have a minimum film thickness of
-\(1.5 \mu \textrm{m}\) \autocite{Microchemicals}, while the SU8-2150 has
-a minimum film thickness of \(0.5 \mu \textrm{m}\) \autocite{Kayaku}.
-Positive resists which have not been thermally crosslinked will soften
-at higher temperatures (\(\gtrsim 100^\circ\)C for AZ\(^\circledR\)
-1518), leading to a rounded profile. This is not the case for negative
-resists, which are more thermally stable \autocite{Microchemicals}. Each
-resist therefore has a different cross-section profile, as shown in
+\(1.5\textrm{ } \mu \textrm{m}\) \autocite{Microchemicals}, while the
+SU8-2150 has a minimum film thickness of
+\(0.5\textrm{ } \mu \textrm{m}\) \autocite{Kayaku}. Positive resists
+which have not been thermally crosslinked will soften at higher
+temperatures (\(\gtrsim 100^\circ\)C for AZ\(^\circledR\) 1518), leading
+to a rounded profile. This is not the case for negative resists, which
+are more thermally stable \autocite{Microchemicals}. Each resist
+therefore has a different cross-section profile, as shown in
 Figure~\ref{fig-photolithography-profiles}.
 
 If metal deposition is performed on a positive resist, some metal can
@@ -461,8 +462,8 @@ Field-Effect Transistors}\label{sec-qw-processing}}
 
 \caption{\label{fig-qw-photolithography}The photolithographic processes
 used for fabrication of both carbon nanotube and graphene devices
-(graphene devices were fabricated individually for every step, step \#2
-skipped for graphene devices)}
+(graphene devices were fabricated individually for every step. Step \#2
+is passed over for graphene devices).}
 
 \end{figure}
 
@@ -488,8 +489,20 @@ metal oxides the chamber was initially evacuated to a pressure of
 and vented with nitrogen.
 
 Carbon nanotube network field-effect transistors were fabricated using
-the quarter wafer substrates discussed in
-Section~\ref{sec-dep-carbon-nanotubes}.
+4-inch \(p\)-type (B-doped) silicon wafers with either a 100 nm or 300
+nm SiO\(_2\) layer (WaferPro LLC) as the substrate. Devices intended for
+backgated measurements were fabricated with a 100 nm SiO\(_2\) layer.
+Before photolithographic processing, the wafers were spin-coated with
+AZ\(^\circledR\) 1518 photoresist, placed photoresist-side down onto a
+cleanroom wipe, fixed in place using vacuum suction, then cleaved into
+quarters using a diamond-tipped scribe tool. For fabrication performed
+before June 2023, the protective photoresist layer was then removed by
+soaking the quarter-wafers in acetone for 15 minutes, then rinsed with
+isopropyl alcohol (IPA) and dried with N\(_2\) gas. However, for
+complete removal of photoresist, we found it was necessary to flood
+expose the wafer with the Karl Suss Aligner for 1 min and then place it
+in AZ326 developer for 3 min, as discussed further in
+\textbf{?@sec-photoresist-contamination}.
 
 Graphene field-effect transistors were fabricated using 300 nm
 SiO\(_2\)/p-type Si substrates covered with a monolayer of mechanically
@@ -613,6 +626,151 @@ and dried with nitrogen. The use of titanium gave rise to a cleaner
 lift-off and improved gold adhesion. Using a relatively thin gold layer
 (50 nm nominal instead of 100 nm) proved to still be clearly visible but
 to a cleaner lift-off.
+
+\hypertarget{sec-dep-carbon-nanotubes}{%
+\subsection{Deposition of Carbon
+Nanotubes}\label{sec-dep-carbon-nanotubes}}
+
+Carbon nanotubes were deposited before alignment markers
+photolithography on all wafers fabricated between Aug \(2021-\)Feb 2023,
+while devices fabricated before Aug 2021 and after Feb 2023 had
+alignment markers photolithography performed before the deposition of
+carbon nanotubes. The process order was first switched in Aug 2021 as
+this order led to faster processing times. However, the order was
+switched back in Feb 2023 to minimise the exposure of carbon nanotubes
+to photolithographic chemical processes.
+
+\hypertarget{solvent-based}{%
+\subsubsection*{Solvent-Based}\label{solvent-based}}
+\addcontentsline{toc}{subsubsection}{Solvent-Based}
+
+The solvent-based deposition process for the carbon nanotube network in
+the second fabrication protocol is as follows. 10 mg of
+2-mercaptopyridine (99\%, Sigma-Aldrich) was dissolved in 1 ml ethanol
+by sonication until clear. Quarter wafers were sonicated in acetone for
+3 min, then exposed to O\(_2\) plasma at 100 W for at least 2 min in a
+small plasma cleaner (Plasma Etch, Inc., PE-50 Compact Benchtop Plasma
+Cleaning System) or reactive ion etcher (Oxford Instruments,
+Plasmalab\(^\circledR\) 80 Plus) under 300 mTorr pressure. The cleaned
+SiO\(_2\)/Si surface was then coated with 2-mercaptopyridine for 10
+minutes, rinsed with ethanol to remove residual \(2\)-mercaptopyridine,
+and then nitrogen dried.
+
+Meanwhile, 5 \(\mu\) g of 99\% semiconducting carbon nanotube bucky
+paper (NanoIntegris, IsoNanotubes S-99) was dispersed in 10 mL of
+anhydrous 1,2-dichlorobenzene (Sigma Aldrich) by ultrasonication until
+no particles were visible to the naked eye. During this time, the
+ultrasonic bath temperature was kept between \(20-30\)\(^\circ\)C or the
+buckypaper would not disperse successfully. The substrates were then
+placed into a dish with CNT-DCB suspension and left covered for 1 hour,
+dipped into ethanol for 10 min to remove residual solvent and any
+unattached carbon nanotube bundles, and then dried with nitrogen.
+
+\hypertarget{surfactant-based}{%
+\subsubsection*{Surfactant-Based}\label{surfactant-based}}
+\addcontentsline{toc}{subsubsection}{Surfactant-Based}
+
+Two different approaches were used to attach the surfactant-dispersed
+carbon nanotubes (CNTs), the first a simple drop-casting method and the
+second performed in the presence of steam. In both approaches, the
+quarter wafers were rinsed with ultrapure deionised water (DI water),
+acetone and IPA before being placed into a reactive ion etcher (Oxford
+Instruments, Plasmalab 80 Plus) and exposed to O\(_2\) plasma at 100 W
+for at least 2 min in a small plasma cleaner (Plasma Etch, Inc, PE-50
+Compact Benchtop Plasma Cleaning System) or reactive ion etcher (Oxford
+Instruments, Plasmalab 80 Plus) under 300 mTorr pressure to make the
+surface hydrophilic. 1 mL of poly-L-lysine (PLL) was immediately
+deposited onto each quarter wafer and left for 5 minutes. The quarter
+wafers were then rinsed for 30 s with DI water and dried with N\(_2\)
+gas. This process allows for the surface adhesion of semiconducting
+single carbon nanotubes suspended in surfactant. The composition of the
+surfactant used in the dispersion is proprietary to NanoIntegris.
+
+For carbon nanotube network films deposited in surfactant without steam
+present, 2 mL of IsoNanotubes-S 90\% or 99\% dispersion (NanoIntegris)
+was decanted into a small bottle and sonicated for 5 s to break up
+bundles of CNTs. An even spread of 400 \(\mu\)L carbon nanotube
+dispersion was placed in the centre of the PLL-functionalised quarter
+wafer, covered and left for 10 minutes. The dispersion was then rinsed
+off with DI water and IPA, and the quarter wafer was dried with N\(_2\)
+gas. Next, the quarter wafer was annealed in a vacuum oven at
+150\(^\circ\) C for 1 hour to remove residual surfactant. This method
+would often lead to an inhomogeneous spread of CNTs across the quarter
+wafer surface, detailed further in section
+\textbf{?@sec-cnt-deposition-effects}.
+
+\begin{figure}
+
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch4/steaming-method-top.png}
+
+}
+
+}
+
+\subcaption{\label{fig-steaming-method-top}Steam method setup without
+steam cover}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch4/steaming-method-side.png}
+
+}
+
+}
+
+\subcaption{\label{fig-steaming-method-side}Steam method setup with
+steam cover}
+\end{minipage}%
+
+\caption{\label{fig-steaming-method}Photographs of steam-assisted method
+setup (top and side view).}
+
+\end{figure}
+
+For carbon nanotube network films deposited in surfactant in the
+presence of steam, 2 mL of IsoNanotubes-S 90\% or 99\% dispersion
+(NanoIntegris) was decanted into a small bottle and burst-sonicated once
+(on then off again) to break up bundles of carbon nanotubes. 75 mL of
+95\(^\circ\) C water was then placed into a glass dish on a hotplate
+held at 95\(^\circ\) C. After this, the PLL-functionalised quarter wafer
+was placed in the centre of an insulating surface on the same hotplate.
+The carbon nanotube dispersion was carefully spread across the surface
+of the wafer without spilling any over the wafer edges. The wafer on the
+insulating surface and glass dish were then left under the same cover
+for 2 minutes to expose the wafer to steam from the glass dish. The use
+of an insulating surface meant that the wafer and dispersion were not
+heated from below while exposed to steam. The steam-assisted deposition
+setup is shown in Figure~\ref{fig-steaming-method}.
+
+The carbon nanotube dispersion was then rinsed off the wafer with DI
+water, ethanol, acetone and IPA, and then the quarter wafer was dried
+with N\(_2\) gas. As in the original method, the quarter wafer was then
+annealed in a vacuum oven at 150\(^\circ\) C for 1 hour to remove
+residual surfactant. This method gave an even spread of CNTs across the
+quarter wafer surface, leading to a greater consistency in performance
+between devices. Further details can be found in
+\textbf{?@sec-cnt-deposition-effects}.
 
 \hypertarget{channel-etching}{%
 \subsection{Channel Etching}\label{channel-etching}}
@@ -1064,170 +1222,6 @@ successfully adhered to the electrodes and had a clean profile
 comparable to that of the SU-8 encapsulation layer after lift-off. As
 noted earlier, aluminium oxide should not be subsequently exposed to its
 etchant TMAH.
-
-\hypertarget{sec-dep-carbon-nanotubes}{%
-\section{Deposition of Carbon
-Nanotubes}\label{sec-dep-carbon-nanotubes}}
-
-4-inch \(p\)-type (B-doped) silicon wafers with either a 100 nm or 300
-nm SiO\(_2\) layer (WaferPro LLC) were used as the substrate for carbon
-nanotube network deposition. Devices intended for backgated measurements
-were fabricated with a 100 nm SiO\(_2\) layer. Before deposition of
-carbon nanotubes, the wafers were spin-coated with AZ\(^\circledR\) 1518
-photoresist, placed photoresist-side down onto a cleanroom wipe, fixed
-in place using vacuum suction, then cleaved into quarters using a
-diamond-tipped scribe tool.
-
-For fabrication performed before June 2023, the protective photoresist
-layer was then removed by soaking the quarter-wafers in acetone for 15
-minutes, then rinsed with isopropyl alcohol (IPA) and dried with N\(_2\)
-gas. However, for complete removal of photoresist, we found it was
-necessary to flood expose the wafer with the Karl Suss Aligner for 1 min
-and then place it in AZ326 developer for 3 min, as discussed further in
-\textbf{?@sec-photoresist-contamination}.
-
-Carbon nanotubes were deposited before alignment markers
-photolithography on all wafers fabricated between Aug \(2021-\)Feb 2023,
-while devices fabricated before Aug 2021 and after Feb 2023 had
-alignment markers photolithography performed before the deposition of
-carbon nanotubes. The process order was first switched in Aug 2021 as
-this order led to faster processing times. However, the order was
-switched back in Feb 2023 to minimise the exposure of carbon nanotubes
-to photolithographic chemical processes.
-
-\hypertarget{solvent-based}{%
-\subsection{Solvent-Based}\label{solvent-based}}
-
-The solvent-based deposition process for the carbon nanotube network in
-the second fabrication protocol is as follows. 10 mg of
-2-mercaptopyridine (99\%, Sigma-Aldrich) was dissolved in 1 ml ethanol
-by sonication until clear. Quarter wafers were sonicated in acetone for
-3 min, then exposed to O\(_2\) plasma at 100 W for at least 2 min in a
-small plasma cleaner (Plasma Etch, Inc., PE-50 Compact Benchtop Plasma
-Cleaning System) or reactive ion etcher (Oxford Instruments,
-Plasmalab\(^\circledR\) 80 Plus) under 300 mTorr pressure. The cleaned
-SiO\(_2\)/Si surface was then coated with 2-mercaptopyridine for 10
-minutes, rinsed with ethanol to remove residual \(2\)-mercaptopyridine,
-and then nitrogen dried.
-
-Meanwhile, 5 \(\mu\) g of 99\% semiconducting carbon nanotube bucky
-paper (NanoIntegris, IsoNanotubes S-99) was dispersed in 10 mL of
-anhydrous 1,2-dichlorobenzene (Sigma Aldrich) by ultrasonication until
-no particles were visible to the naked eye. During this time, the
-ultrasonic bath temperature was kept between \(20-30\)\(^\circ\)C or the
-buckypaper would not disperse successfully. The substrates were then
-placed into a dish with CNT-DCB suspension and left covered for 1 hour,
-dipped into ethanol for 10 min to remove residual solvent and any
-unattached carbon nanotube bundles, and then dried with nitrogen.
-
-\hypertarget{surfactant-based}{%
-\subsection{Surfactant-Based}\label{surfactant-based}}
-
-Two different approaches were used to attach the surfactant-dispersed
-CNTs. The composition of the surfactant used in the dispersion is
-proprietary to NanoIntegris. In both approaches, the quarter wafers were
-rinsed with ultrapure deionised water (DI water), acetone and IPA before
-being placed into a reactive ion etcher (Oxford Instruments, Plasmalab
-80 Plus) and exposed to O\(_2\) plasma at 100 W for at least 2 min in a
-small plasma cleaner (Plasma Etch, Inc, PE-50 Compact Benchtop Plasma
-Cleaning System) or reactive ion etcher (Oxford Instruments, Plasmalab
-80 Plus) under 300 mTorr pressure to make the surface hydrophilic. 1 mL
-of poly-L-lysine (PLL) was immediately deposited onto each quarter wafer
-and left for 5 minutes. The quarter wafers were then rinsed for 30 s
-with DI water and dried with N\(_2\) gas. This process allows for the
-surface adhesion of semiconducting single carbon nanotubes suspended in
-surfactant.
-
-\hypertarget{simple-dropcasting}{%
-\subsubsection*{Simple Dropcasting}\label{simple-dropcasting}}
-\addcontentsline{toc}{subsubsection}{Simple Dropcasting}
-
-2 mL of IsoNanotubes-S 90\% or 99\% solution (NanoIntegris) was decanted
-into a small bottle and sonicated for 5 s to break up bundles of CNTs.
-An even spread of 400 \(\mu\)L CNT solution was placed in the centre of
-the PLL-functionalised quarter wafer, covered and left for 10 minutes.
-The CNT solution was then rinsed off with DI water and IPA, and then the
-quarter wafer was dried with N\(_2\) gas. Next, the quarter wafer was
-annealed in a vacuum oven at 150\(^\circ\) C for 1 hour to remove
-residual surfactant. This method would often lead to an inhomogeneous
-spread of CNTs across the quarter wafer surface, detailed further in
-section \textbf{?@sec-cnt-deposition-effects}.
-
-\hypertarget{steam-assisted-method}{%
-\subsubsection*{Steam-Assisted Method}\label{steam-assisted-method}}
-\addcontentsline{toc}{subsubsection}{Steam-Assisted Method}
-
-\begin{figure}
-
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{./figures/ch4/steaming-method-top.png}
-
-}
-
-}
-
-\subcaption{\label{fig-steaming-method-top}Steam method setup without
-steam cover}
-\end{minipage}%
-%
-\begin{minipage}[t]{0.05\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{./figures/ch4/steaming-method-side.png}
-
-}
-
-}
-
-\subcaption{\label{fig-steaming-method-side}Steam method setup with
-steam cover}
-\end{minipage}%
-
-\caption{\label{fig-steaming-method}Photographs of steam-assisted method
-setup (top and side view).}
-
-\end{figure}
-
-2 mL of IsoNanotubes-S 90\% or 99\% solution (NanoIntegris) was decanted
-into a small bottle and burst-sonicated once (on then off again) to
-break up bundles of CNTs. 75 mL of 95\(^\circ\) C water was then placed
-into a glass dish on a hotplate held at 95\(^\circ\) C. After this, the
-PLL-functionalised quarter wafer was placed in the centre of an
-insulating surface on the same hotplate. The CNT dispersion was
-carefully spread across the surface of the wafer without spilling any
-over the wafer edges. The wafer on the insulating surface and glass dish
-were then left under the same cover for 2 minutes to expose the wafer to
-steam from the glass dish. The use of an insulating surface meant that
-the wafer and CNT dispersion were not heated from below while exposed to
-steam. The steam-assisted deposition setup is shown in
-Figure~\ref{fig-steaming-method}.
-
-The CNT dispersion was then rinsed off the wafer with DI water, ethanol,
-acetone and IPA, and then the quarter wafer was dried with N\(_2\) gas.
-As in the original method, the quarter wafer was then annealed in a
-vacuum oven at 150\(^\circ\) C for 1 hour to remove residual surfactant.
-This method gave an even spread of CNTs across the quarter wafer
-surface, leading to a greater consistency in performance between
-devices. Further details can be found in
-\textbf{?@sec-cnt-deposition-effects}.
 
 \hypertarget{sec-afm-characterisation}{%
 \section{Characterisation via Atomic Force
