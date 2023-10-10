@@ -56,6 +56,8 @@ The nitrogen ($\geq$ 99.99%) and oxygen (99.7%) used in fabrication work  was su
 
 This section details some of the standard photolithography procedures used in the quarter wafer processing detailed in @sec-qw-processing. Photoresists, also referred to here as "resists", are UV light-sensitive polymeric resins used for photolithography. Both positive and negative photoresists were used in various fabrication processes. Positive resists are made soluble in alkalines by UV light exposure, meaning exposed areas are removed in the development process. Conversely, negative resists are cross-linked by exposure and a post-exposure bake step. The unexposed areas of the negative resist are then removed in the development process [@Microchemicals]. @fig-photolithography-types gives a visual representation of these differences. 
 
+The specific photoresist selected for photolithography depends on the specific use case. The types used in this thesis are positive and negative AZ$^\circledR$ photoresists (AZ$^\circledR$ 1518, Microchemicals GmbH; AZ$^\circledR$ nLOF 2020, Microchemicals GmbH) and SU-8 (SU8-2150, Kayaku Advanced Materials, formerly Microchem). The AZ$^\circledR$ resists used here have a minimum film thickness of $1.5\textrm{ } \mu \textrm{m}$ [@Microchemicals], while the SU8-2150 has a minimum film thickness of $0.5\textrm{ } \mu \textrm{m}$ [@Kayaku]. Positive resists which have not been thermally crosslinked will soften at higher temperatures ($\gtrsim 100^\circ$C for AZ$^\circledR$ 1518), leading to a rounded profile. This is not the case for negative resists, which are more thermally stable [@Microchemicals]. Each resist therefore has a different cross-section profile, as shown in @fig-photolithography-profiles. 
+
 ::: {#fig-photolithography-profiles layout="[[47.5,-5,47.5]]"}
 
 ![](figures/ch4/overcut-profile.png){#fig-overcut-profile}
@@ -64,8 +66,6 @@ This section details some of the standard photolithography procedures used in th
 
 The overcut profile of a positive resist pattern is shown in (a). The undercut profile in (b) is ideal for thin-film metal deposition and subsequent patterned removal, known as "lift-off". Each profile has had the central region of the substrate exposed to UV light prior to development.
 :::
-
-The specific photoresist selected for photolithography depends on the specific use case. The types used in this thesis are positive and negative AZ$^\circledR$ photoresists (AZ$^\circledR$ 1518, Microchemicals GmbH; AZ$^\circledR$ nLOF 2020, Microchemicals GmbH) and SU-8 (SU8-2150, Kayaku Advanced Materials, formerly Microchem). The AZ$^\circledR$ resists used here have a minimum film thickness of $1.5\textrm{ } \mu \textrm{m}$ [@Microchemicals], while the SU8-2150 has a minimum film thickness of $0.5\textrm{ } \mu \textrm{m}$ [@Kayaku]. Positive resists which have not been thermally crosslinked will soften at higher temperatures ($\gtrsim 100^\circ$C for AZ$^\circledR$ 1518), leading to a rounded profile. This is not the case for negative resists, which are more thermally stable [@Microchemicals]. Each resist therefore has a different cross-section profile, as shown in @fig-photolithography-profiles. 
 
 If metal deposition is performed on a positive resist, some metal can collect on the outwardly-sloped sidewalls of the resist (see @fig-photolithography-profiles) which forms significant spikes on the edges of the deposited metal upon lift-off. On the other hand, metal cannot collect on top of the inwardly-sloped negative profile sidewalls, which avoids the formation of large edge spikes. Therefore, the negative resist profile is more suited to metal or metal oxide deposition and lift-off processes, though the process is more sensitive to human error due to requiring more processing steps than positive resist [@Microchemicals]. Finally, when it is suitably processed SU-8 is considered to be more stable and biocompatible than other photoresists [@Albarghouthi2022]. It is especially biocompatible when chemically modified via processes such as isopropanol sonication and O$_2$ plasma treatment [@Chen2021].
 
@@ -129,8 +129,6 @@ Graphene field-effect transistors were fabricated using 300 nm SiO$_2$/p-type Si
  
 From Jul 2023 onwards, after each photolithography step using negative resist, quarter wafers/chips were placed in AZ$^\circledR$ 326 or SU8 developer for 3 min to ensure complete removal of photoresist residue. For each step with positive resist, the same procedure was performed but with a flood exposure with UV light for 1 min before being placed in developer. The exception to this rule was for devices with an aluminium oxide layer present. Tetramethylammonium hydroxide (TMAH), the active ingredient of AZ$^\circledR$ 326, etches through aluminium oxide and causes electrical shorts through the dielectric layer [@Oh2011; @Ali2021]. A further discussion showing the results of this process is given in @sec-photoresist-contamination. 
 
-@fig-qw-device-photo shows a completed quarter-wafer of carbon nanotube field-effect transistors shown next to two individual devices. Partial (unusable) devices at the edges of the wafer have been cleaved off so that only a square of nine devices remains. The schematic in @fig-device-schematic labels the component parts of the individual FET device after the full photolithographic process is completed.
-
 ::: {#fig-field-effect-transistor layout="[[-25,50,-25],[47.5,-5,47.5]]"}
 
 ![](figures/ch4/IMG_0845.jpg){#fig-qw-device-photo}
@@ -141,6 +139,8 @@ From Jul 2023 onwards, after each photolithography step using negative resist, q
 
  A finished quarter-wafer with the unusable edges cleaved off is shown in (a), while an individual carbon nanotube field-effect transistor device is shown in (b). The component parts of the field-effect transistor are labelled on device cross-section and channel top view schematics in (c).
 :::
+
+@fig-qw-device-photo shows a completed quarter-wafer of carbon nanotube field-effect transistors, where partial (unusable) devices at the edges of the wafer have been cleaved off so that only a square of nine devices remains. An individual FET device after the completed fabrication process is shown in @fig-single-device-photo, and @fig-device-schematic shows cross-section and top view schematics of the completed device with the component parts labelled.
 
 ### Alignment Markers{#sec-align}
 
@@ -156,7 +156,7 @@ Carbon nanotubes were deposited before the alignment markers photolithography st
 
 The solvent-based deposition process for the carbon nanotube network in the second fabrication protocol is as follows. 10 mg of 2-mercaptopyridine (99%, Sigma-Aldrich) was dissolved in 1 ml ethanol by sonication until clear. Quarter wafers were sonicated in acetone for 3 min, then exposed to O$_2$ plasma at 100 W for at least 2 min in a small plasma cleaner (Plasma Etch, Inc., PE-50 Compact Benchtop Plasma Cleaning System) or reactive ion etcher (Oxford Instruments, Plasmalab$^\circledR$ 80 Plus) under 300 mTorr pressure. The cleaned SiO$_2$/Si surface was then coated with 2-mercaptopyridine for 10 minutes, rinsed with ethanol to remove residual $2$-mercaptopyridine, and then nitrogen dried. 
 
-Meanwhile, 5 $\mu$ g of 99% semiconducting carbon nanotube bucky paper (NanoIntegris, IsoNanotubes S-99) was dispersed in 10 mL of anhydrous 1,2-dichlorobenzene (DCB, Sigma Aldrich) by ultrasonication until no particles were visible to the naked eye. During this time, the ultrasonic bath temperature was kept between $20-30$$^\circ$C or the buckypaper would not disperse successfully. The substrates were then placed into a dish with CNT-DCB suspension and left covered for 1 hour, dipped into ethanol for 10 min to remove residual solvent and any unattached carbon nanotube bundles, and then dried with nitrogen. 
+Meanwhile, 5 $\mu$g of 99% semiconducting carbon nanotube bucky paper (NanoIntegris, IsoNanotubes S-99) was dispersed in 10 mL of anhydrous 1,2-dichlorobenzene (DCB, Sigma Aldrich) by ultrasonication until no particles were visible to the naked eye. During this time, the ultrasonic bath temperature was kept between $20-30^\circ$C or the buckypaper would not disperse successfully. The substrates were then placed into a dish with CNT-DCB suspension and left covered for 1 hour, dipped into ethanol for 10 min to remove residual solvent and any unattached carbon nanotube bundles, and then dried with nitrogen. 
 
 #### Surfactant-Based {.unnumbered}
 
@@ -187,23 +187,10 @@ Eight channel features, each 1000 $\mu$m in length and 100 $\mu$m in width with 
 
 ![](figures/ch4/graphene-channel-electrodes.png){#fig-graphene-channel-electrodes}
 
-(a) shows a graphene channel after the plasma etch step and (b) shows another graphene channel after the metal electrode deposition and liftoff step.
+A graphene channel after the plasma etch step is shown in (a), and (b) shows another graphene channel after the metal electrode deposition and liftoff step.
 :::
 
 ### Source and Drain Electrodes {#sec-electrodes}
-
-::: {#fig-electrodes-dektat layout="[[47.5,-5,47.5]]"}
-
-![Comparison of channel height profile for the different adhesion layers used (AZ$^\circledR$ 1518 photolithography used for all profiles)](figures/ch4/dektat_ti_cr_profile_comparison.png){#fig-dektat-adhesion-layer}
-
-![Comparison of channel height profile for the different photoresist types used (titanium adhesion layer used for all profiles)](figures/ch4/dektat_1518nlof_profile_comparison.png){#fig-dektat-photoresist-used}
-
-Dektat height profiles taken between the source and drain electrodes across a channel from various quarter wafers with electrodes deposited using different approaches. For each quarter wafer, the profiles of three different channels are shown, selected from different locations across the quarter wafer surface.
-:::
-
-The source and drain electrodes for each channel were patterned using photolithography with either AZ$^\circledR$ 1518 photoresist (pre-Mar 2023) or AZ$^\circledR$ nLOF 2020 photoresist (post-Mar 2023). Before metal deposition, the developed photoresist pattern was exposed to O$_2$ plasma at 50 W for up to 5 s or at 20 W for $20-25$ s in a PE-50 plasma cleaner (Plasma Etch, Inc.) to remove residual photoresist on the developed regions and ensure a clean lift-off. After metal deposition, wafers/devices were soaked in acetone for at least 2 hours for photoresist lift-off, washed in IPA and dried with nitrogen.
-
-As with the alignment markers deposition (see @sec-align), before Jun 2022 chromium was used for the gold adhesion layer, and after Jun 2022 titanium was used. Adhesion layers are required to stick metals such as gold and platinum to silicon dioxide [@Guarnieri2014]. A 20 nm nominal titanium layer instead of 10 nm nominal was found to give better electrode adhesion, and devices after Feb 2023 were made using this thicker adhesion layer.  Good electronic contact could be made with electrodes with a nominal gold layer thickness of $60-100$ nm, and a Au layer nominally 100 nm thick was most commonly used. 
 
 ::: {#fig-dmso-damage layout="[[47.5,-5,47.5]]"}
 
@@ -214,13 +201,30 @@ As with the alignment markers deposition (see @sec-align), before Jun 2022 chrom
 Damage to the gold electrode in the graphene channel region after dimethyl sulfoxide lift-off is shown in (a), while (b) shows damage to a graphene film (blue-green region) after dimethyl sulfoxide lift-off.
 :::
 
+::: {#fig-electrodes-dektat layout="[[47.5,-5,47.5], [47.5,-5,47.5]]"}
+
+![](figures/ch4/dektat_cr_electrodes.png){#fig-dektat-cr}
+
+![](figures/ch4/dektat_ti_electrodes.png){#fig-dektat-ti}
+
+![](figures/ch4/dektat_1518_electrode_profile.png){#fig-dektat-AZ1518-electrode}
+
+![](figures/ch4/dektat_nlof_electrode_profile_2.png){#fig-dektat-nLOF-electrode}
+
+The Dektat height profile measurements for source and drain electrodes taken at different locations on four different quarter wafers are shown here. Chromium was used as an adhesion layer for the wafer in (a), while titanium was used as the adhesion layer in (b) and (c). AZ$^\circledR$ 1518 photolithography was used for patterning before metal deposition on both quarter wafers, which led to the formation of edge features or "cat ears", with (c) illustrating the full height of these features. In comparison, (d) shows the profile of electrodes from a quarter wafer patterned with AZ$^\circledR$ nLOF2020, where edge features are greatly reduced.
+:::
+
+The source and drain electrodes for each channel were patterned using photolithography with either AZ$^\circledR$ 1518 photoresist (pre-Mar 2023) or AZ$^\circledR$ nLOF 2020 photoresist (post-Mar 2023). Before metal deposition, the developed photoresist pattern was exposed to O$_2$ plasma at 50 W for up to 5 s or at 20 W for $20-25$ s in a PE-50 plasma cleaner (Plasma Etch, Inc.) to remove residual photoresist on the developed regions and ensure a clean lift-off. After metal deposition, wafers/devices were soaked in acetone for at least 2 hours for photoresist lift-off, washed in IPA and dried with nitrogen.
+
+As with the alignment markers deposition (see @sec-align), before Jun 2022 chromium was used for the gold adhesion layer, and after Jun 2022 titanium was used. Adhesion layers are required to stick metals such as gold and platinum to silicon dioxide [@Guarnieri2014]. A 20 nm nominal titanium layer instead of 10 nm nominal was found to give better electrode adhesion, and devices after Feb 2023 were made using this thicker adhesion layer.  Good electronic contact could be made with electrodes with a nominal gold layer thickness of $60-100$ nm, and a Au layer nominally 100 nm thick was most commonly used. 
+
 Dimethyl sulfoxide (DMSO) was sometimes used in electrodes lift-off instead of acetone between Jul 2021 and Feb 2023 because of its effectiveness as a photoresist stripping agent. However, it was abandoned due to some indications it was unsuitable for the devices being fabricated, as shown in @fig-dmso-damage and also as detailed in @sec-cnt-deposition-effects. It is possible that heat from the electrodes deposition sometimes crosslinked residual photoresist on the nanomaterial, and then during lift-off was removed together with any attached nanomaterial by the DMSO. However, it is also possible that prolonged exposure to DMSO alone was sufficient to detach nanomaterial from the substrate. Therefore, acetone was the preferred agent for lift-off despite being a less efficient stripping agent than DMSO. 
 
-Example height profiles of chromium layer channels and a titanium layer channels taken using a Veeco Dektat 150 profiler are shown in @fig-dektat-adhesion-layer. AZ$^\circledR$ 1518 photoresist was used here for photolithographic patterning. A 10 nm adhesion layer and 100 nm Au layer were used for both depositions to ensure a consistent comparison. From @fig-dektat-adhesion-layer, we find an measured Cr/Au electrode height of $42\pm1$ nm and an measured Ti/Au electrode height of $48\pm2$ nm, slightly less than half the respective heights stated on the Inficon Deposition Controller.
+Example height profiles of quarter wafer channels taken using a Veeco Dektat 150 profiler are shown in @fig-electrodes-dektat. AZ$^\circledR$ 1518 photoresist was used in @fig-dektat-cr and @fig-dektat-ti for photolithographic patterning. A 10 nm adhesion layer and 100 nm Au layer were used for each quarter wafers to ensure a consistent comparison. From these figures, we find an measured Cr/Au electrode height of $42\pm1$ nm and an measured Ti/Au electrode height of $48\pm2$ nm, slightly less than half the respective heights stated on the Inficon Deposition Controller.
 
-Although using AZ$^\circledR$ nLOF 2020 photolithography involves more processing steps, it gave rise to more cleanly-defined electrodes with a more consistent height profile. Often electrodes deposition using AZ$^\circledR$ 1518 photoresist would lead to sharp vertical spikes along the edge of the electrode. These edge spikes or "cat ears" could partially or fully protrude through thin encapsulation materials such as SU8 and Al$_2$O$_3$, leading to significant leakage currents from the electrodes into the FET top gate. This effect is due to the profile of positive resists being suboptimal for lift-off processes, as discussed in @sec-photolithography.  
+Although using AZ$^\circledR$ nLOF 2020 photolithography involves more processing steps, it gave rise to more cleanly-defined electrodes with a more consistent height profile. Often electrode deposition using AZ$^\circledR$ 1518 photoresist would lead to sharp vertical spikes along the edge of the electrode, as seen in @fig-dektat-AZ1518-electrode. These edge spikes or "cat ears" can partially or fully protrude through thin encapsulation materials such as SU8 and Al$_2$O$_3$, leading to significant leakage currents from the electrodes into the FET top gate. This effect is due to the profile of positive resists being suboptimal for lift-off processes, as discussed in @sec-photolithography.  
 
-The height profiles corresponding to a wafer with electrodes fabricated using AZ$^\circledR$ 1518 and to a wafer with electrodes fabricated using AZ$^\circledR$ nLOF 2020 are shown in @fig-dektat-photoresist-used. A 20 nm titanium adhesion layer and 100 nm Au layer were used for both depositions to ensure a consistent comparison, resulting in a measured electrode height of $103\pm2$ nm for both wafers. The wafer which used AZ$^\circledR$ nLOF 2020 photoresist clearly has a more consistent electrode height profile across the wafer surface than the wafer which used AZ$^\circledR$ 1518 resist. The measured edge features for the AZ$^\circledR$ 1518 resist electrodes vary in size from 20 nm to 450 nm above the bulk electrode surface, whereas the edge features for the AZ$^\circledR$ nLOF 2020 resist do not exceed 14 nm in height.
+The height profile corresponding to a wafer with electrodes fabricated using AZ$^\circledR$ nLOF 2020 is shown in @fig-dektat-nLOF-electrode. A 20 nm titanium adhesion layer and 100 nm Au layer were used for both  @fig-dektat-AZ1518-electrode and  @fig-dektat-nLOF-electrode to ensure a consistent comparison, resulting in a measured electrode height of $103\pm2$ nm for both wafers. By comparing these figures, we see AZ$^\circledR$ nLOF 2020 photoresist has a more consistent electrode height profile across the wafer surface than the wafer which used AZ$^\circledR$ 1518 resist. The measured edge features for the AZ$^\circledR$ 1518 resist electrodes vary in size from 20 nm to 450 nm above the bulk electrode surface, whereas the edge features for the AZ$^\circledR$ nLOF 2020 resist do not exceed 14 nm in height.
 
 ### Encapsulation{#sec-encapsulation}
 
@@ -243,22 +247,26 @@ A side-by-side microscope comparison of hardbaked AZ$^\circledR$ 1518 processed 
 
 #### Photoresist encapsulation {.unnumbered}
 
-::: {#fig-dektat-encapsulation layout="[[47.5,-5,47.5]]"}
+::: {#fig-dektat-encapsulation layout="[[47.5,-5,47.5],[47.5,-5,47.5]]"}
 
-![AZ$^\circledR$ 1518 profiles comparing pre-2023 mask and mask used from 2023 onwards](figures/ch4/dektat_oldnewmask_profile_comparison.png){#fig-old-new-mask}
+![](figures/ch4/dektat_AZ1518_oldmask.png){#fig-AZ1518-old}
 
-![SU-8 2150 profiles comparing pre-2023 mask and mask used from 2023 onwards](figures/ch4/dektat_SU8_profile_comparison.png){#fig-SU8-encapsulation}
+![](figures/ch4/dektat_AZ1518_newmask.png){#fig-AZ1518-new}
 
-Dektat of carbon nanotube devices after encapsulation photolithography using hardbaked AZ$^\circledR$ 1518 and SU-8 2150, taken from various devices.
+![](figures/ch4/dektat_SU8_newmask.png){#fig-SU8-new}
+
+![](figures/ch4/dektat_SU8_oldmask.png){#fig-SU8-old}
+
+Dektat of carbon nanotube devices after encapsulation photolithography using hardbaked AZ$^\circledR$ 1518 and SU-8 2150, taken from various devices. (a) and (c) show photolithography performed with the old, pre-2023 mask, using AZ$^\circledR$ 1518 and SU-8 2150 respectively. (b) and (d) show photolithography performed with the new mask from 2023 onwards, using AZ$^\circledR$ 1518 and SU-8 2150 respectively.
 :::
 
 Two types of photoresist were initially trialled for encapsulation of carbon nanotube network devices, AZ$^\circledR$ 1518 and SU8-2150. Both AZ$^\circledR$ 1518 [@Thanihaichelvan2018; @Thanihaichelvan2019; @Shkodra2021] and SU-8 have been previously used for device encapsulation, with SU-8 noted for being particularly stable and biocompatible [@Lee2006; @Chen2021; @Albarghouthi2022]. 
 
 Once developed, the photoresist pattern was exposed to O$_2$ plasma at 50 W for up to 5 s or at 20 W for $20-25$ s to remove excess photoresist from the encapsulation opening. Devices were then hardbaked at 200$^\circ$C for 1 hour to fully crosslink the encapsulation layer. This crosslinking ensured subsequent device exposure to solvent did not remove the photoresist encapsulation.
 
- The exposed region clear of AZ $^\circledR$ 1518 resist was $6.8 \pm 0.3$ $\mu$m in width when using the old, pre-2023 mask, while the exposed region was $16.6 \pm 0.4$ $\mu$m when using AZ$^\circledR$ 1518 with the new mask from 2023, as seen in @fig-old-new-mask. However, the exposed region was reduced for the SU-8 encapsulation relative to the AZ$^\circledR$ 1518, with an width of only 3.6 $\pm$ 0.5 $\mu$m for the pre-2023 mask, as seen in @fig-SU8-encapsulation. Photoresist development using SU-8 was significantly more time-sensitive than for the AZ$^\circledR$ 1518. This meant when the development time was increased to create a wider encapsulation opening, it was difficult to avoid removing large areas of photoresist across the surface of the encapsulation. This meant using the new mask from 2023 was especially important for maximising the exposed channel region of SU-8 devices. Using the new mask from 2023 with the SU-8 resist gave a significantly improved width of 13.8 $\pm$ 1.0 $\mu$m for the exposed region.
+ The exposed region clear of AZ $^\circledR$ 1518 resist was $6.8 \pm 0.3$ $\mu$m in width when using the old, pre-2023 mask, while the exposed region was $16.6 \pm 0.4$ $\mu$m when using AZ$^\circledR$ 1518 with the new mask from 2023, as seen in @fig-AZ1518-old and @fig-AZ1518-new. However, the exposed region was reduced for the SU-8 encapsulation relative to the AZ$^\circledR$ 1518, with an width of only 3.6 $\pm$ 0.5 $\mu$m for the pre-2023 mask, as seen in @fig-SU8-old. Photoresist development using SU-8 was significantly more time-sensitive than for the AZ$^\circledR$ 1518. This meant when the development time was increased to create a wider encapsulation opening, it was difficult to avoid removing large areas of photoresist across the entire surface of the encapsulation. This meant using the new mask from 2023 was especially important for maximising the exposed channel region of SU-8 devices. From @fig-SU8-new, we see the new mask from 2023 with the SU-8 resist gave a significantly improved width of 13.8 $\pm$ 1.0 $\mu$m for the exposed region.
 
-A relatively thin SU-8 encapsulation layer could be deposited when compared to the AZ$^\circledR$ 1518 encapsulation profile. The AZ$^\circledR$ 1518 encapsulation layer had a average height of 1.7 $\pm$ 0.2 $\mu$m, while the SU-8 encapsulation layer had a average height of 680 $\pm$ 20 nm. The SU-8 also had much less significant edge features than the AZ$^\circledR$ 1518, regardless of the profiles of the source and drain electrodes.  
+A relatively thin SU-8 encapsulation layer could be deposited when compared to the AZ$^\circledR$ 1518 encapsulation profile. From @fig-dektat-encapsulation, we see that the AZ$^\circledR$ 1518 encapsulation layer had a average height of 1.7 $\pm$ 0.2 $\mu$m, while the SU-8 encapsulation layer had a average height of 680 $\pm$ 20 nm. The SU-8 also had much less significant edge features than the AZ$^\circledR$ 1518, regardless of the profiles of the source and drain electrodes.  
 
 As noted previously, for both resists the overall profile was more consistent for the new, 2023 mask from device to device than for the old pre-2023 mask. 
 
@@ -266,18 +274,20 @@ AZ$^\circledR$ 1518 encapsulation was used for all graphene devices fabricated.
 
 #### Dielectric encapsulation {.unnumbered}
 
-::: {#fig-dektat-dielectric-layer layout="[[47.5,-5,47.5]]"}
-
-![Profile comparison of dielectric materials used for encapsulation](figures/ch4/Dielectric_Profile_comparison.png){#fig-dielectric-comparison}
-
-![Microscope image of channel with aluminium oxide encapsulation](figures/ch4/al2o3_encapsulation.png){#fig-al2o3-encapsulation}
-
-Dektat and microscope image of a device encapsulated with aluminium oxide.
-:::
-
 Another approach taken was encapsulation of electrode channels with a dielectric metal oxide/ceramic layer. A electron beam deposition process was used to deposit a $100-150$ nm nominal metal oxide layer on devices patterned with the 2023 mask using AZ$^\circledR$ nLOF 2020 photoresist. As in @sec-electrodes, the developed photoresist pattern was exposed to O$_2$ plasma at 50 W for up to 5 s or at 20 W for $20-25$ s in a PE-50 plasma cleaner (Plasma Etch, Inc.) before ceramic deposition. Before May 2023, devices were left in TechniStrip$^\circledR$ MLO 07 (MicroChemicals) for $5-10$ min for lift-off. However, due to concerns over the impact of the constituent chemical DMSO on the nanomaterial region (see @fig-dmso-damage), the lift-off process was altered from May 2023 onwards. After May 2023, devices were soaked in acetone for at least 4 hours and sonicated in clean acetone for $30-60$ s to lift-off the photoresist, then washed in IPA and dried with nitrogen. 
 
-The initial attempt at fabricating a dielectric encapsulation layer used silicon dioxide as the dielectric. However, silicon dioxide adheres poorly to gold without an metallic adhesive layer present, as shown in @fig-dielectric-comparison. Aluminium oxide was chosen as an alternative as it sticks well to bulk electrode materials, is heat and chemical resistant, has a relatively high dielectric constant and is bio-compatible [@Guarnieri2014; @Albarghouthi2022; @Kolodzey2000]. @fig-dektat-dielectric-layer shows the aluminium oxide successfully adhered to the electrodes and had a clean profile comparable to that of the SU-8 encapsulation layer after lift-off.  As noted earlier, aluminium oxide should not be subsequently exposed to its etchant TMAH.
+::: {#fig-dektat-dielectric-layer layout="[[50,-5,45]]"}
+
+![](figures/ch4/Dielectric_Profile_comparison.png){#fig-dielectric-comparison}
+
+![](figures/ch4/al2o3_encapsulation.png){#fig-al2o3-encapsulation}
+
+A profile comparison of dielectric materials used for encapsulation is shown in (a), alongside a microscope image of a device encapsulated with aluminium oxide in (b). Note that the layer thicknesses in (a) were from initial tests of the process and are used for illustrative purposes. 
+:::
+
+The initial attempt at fabricating a dielectric encapsulation layer used silicon dioxide as the dielectric. However, silicon dioxide adheres poorly to gold without an metallic adhesive layer present, as shown in @fig-dielectric-comparison. Aluminium oxide was chosen as an alternative as it sticks well to bulk electrode materials, is heat and chemical resistant, has a relatively high dielectric constant and is bio-compatible [@Guarnieri2014; @Albarghouthi2022; @Kolodzey2000]. @fig-dektat-dielectric-layer shows the aluminium oxide successfully adhered to the electrodes and had a clean profile comparable to that of the SU-8 encapsulation layer after lift-off.
+
+Unfortunately, when aluminium oxide layers which were thicker than $\sim$ 100 nm were deposited, there was found to be a significant drop in current relative to the unencapsulated device. This drop was signficant enough to make devices unsuitable for sensing. Meanwhile, devices with encapsulation $\sim$ 100 nm thick had significant gate current leakage through the encapsulation layer when liquid-gated. This leakage was present even when AZ$^\circledR$ nLOF 2020 was used for electrode patterning to avoid edge spikes (as discussed in @sec-electrodes). Furthermore, aluminium oxide should not be subsequently exposed to its etchant TMAH, meaning it was difficult to completely remove residual photoresist from device channels after encapsulation. Possible future approaches to ceramic encapsulation are discussed in @sec-future-work.
 
 ##	Characterisation via Atomic Force Microscopy {#sec-afm-characterisation}
 
@@ -289,7 +299,7 @@ The open source data analysis software Gwyddion (version 2.59) was used to analy
 
 ##	Characterisation via Fluorescence Microscopy {#sec-fluorescence-characterisation}
 
-Fluorescence microscopy was taken using an Olympus BX63 fluorescence microscope controlled using cellSens imaging software. Microscope objectives used were all Olympus UPLSAPO/UPlanSApo, apochromat objectives which compensate for spherical and chromatic aberrations. Objectives had infinite aperture and a field number of 26.5. Filter cubes used included the Olympus FITC filter (excitation wavelength range: $467-498$ nm, emission wavelength range: $513-556$ nm), Texas Red (excitation wavelength range: $542-582$  nm, emission wavelength range: $604-644$ nm) and GFP (excitation wavelength range: $604-644$ nm, emission wavelength range: $502-538$ nm). The ISO was kept at the lowest available setting, ISO200. All microscopy was performed in darkness with the screen turned away from the microscope. To ensure photobleaching did not adversely affect imaging, images were taken soon after initial exposure to fluorescence and taking repeated photos of the same region was avoided. Various useful and thourough introductions to fluorescence microscopy can be found online [@Nikon; @Zeiss].
+Fluorescence microscopy was performed using an Olympus BX63 fluorescence microscope controlled using cellSens imaging software. Microscope objectives used were all Olympus UPLSAPO/UPlanSApo, apochromat objectives which compensate for spherical and chromatic aberrations. Objectives had infinite aperture and a field number of 26.5. Filter cubes used included the Olympus FITC filter (excitation wavelength range: $467-498$ nm, emission wavelength range: $513-556$ nm), Texas Red (excitation wavelength range: $542-582$  nm, emission wavelength range: $604-644$ nm) and GFP (excitation wavelength range: $604-644$ nm, emission wavelength range: $502-538$ nm). The ISO was kept at the lowest available setting, ISO200. All microscopy was performed in darkness with the screen turned away from the microscope. To ensure photobleaching did not adversely affect imaging, images were taken soon after initial exposure to fluorescence and taking repeated photos of the same region was avoided. Various useful and thorough introductions to fluorescence microscopy can be found online [@Nikon; @Zeiss].
 
 ##	Electrical Characterisation {#sec-electrical-characterisation}
 
@@ -297,7 +307,7 @@ Fluorescence microscopy was taken using an Olympus BX63 fluorescence microscope 
 
 Both back-gated and liquid-gated measurements were taken of carbon nanotube and graphene devices. Liquid-gated measurements were taken using the configuration shown in @fig-liquid-gate-schematic.  Back-gated measurements were taken with a copper plane placed underneath the Si/SiO$_2$ wafer and connected to SMU 3 instead of the reference electrode.
 
-All measurement setups used had the same basic configuration, with two source measure units (SMUs) attached to the source and gate. Voltage from the source and gate SMUs was either kept constant or varied, with only one SMU varied at a time. Three different measurement setups were used for taking these measurements, the Keysight (Agilent/HP) 4156C Semiconductor Parameter Analyser, the Keysight B1500A Semiconductor Device Analyser, and a National Instruments NI-PXIe modular measurement system with a 8 GB PXIe-8821 controller and two NI-4138 source measure units. For measurements with the Keysight instruments, a third, drain SMU was attached and kept at a constant 0 V (as shown in @fig-liquid-gate-schematic).
+All measurement setups used had the same basic configuration, with two source measure units (SMUs) attached to the source and gate. Voltage from the source and gate SMUs was either kept constant or varied, with only one SMU varied at a time. Three different measurement setups were used for taking these measurements, the Agilent (Keysight/HP) 4156C Semiconductor Parameter Analyser, the Keysight B1500A Semiconductor Device Analyser, and a National Instruments NI-PXIe modular measurement system with a 8 GB PXIe-8821 controller and two NI-4138 source measure units. For measurements with the Keysight instruments, a third, drain SMU was attached and kept at a constant 0 V (as shown in @fig-liquid-gate-schematic).
 
 ::: {#fig-PDMS-clean layout="[[-25,50,-25], [47.5,-5,47.5]]"}
 
@@ -307,14 +317,14 @@ All measurement setups used had the same basic configuration, with two source me
 
 ![](figures/ch4/PDMS_clean.png){#fig-PDMS_clean}
 
-A carbon nanotube field-effect transistor device with a polydimethylsiloxane (PDMS) 'well' placed on the device surface is seen in (a), followed by microscope images of the PDMS surface before (b) and after (c) isopropanol (IPA) sonication for 10 minutes.
+A carbon nanotube field-effect transistor device with a polydimethylsiloxane (PDMS) 'well' placed on the device surface is seen in (a), followed by microscope images of the surface of a well before (b) and after (c) isopropanol (IPA) sonication for 10 minutes.
 :::
 
-When using the Keysight 4156C Semiconductor Parameter Analyser or Keysight B1500A Semiconductor Device Analyser for liquid-gated measurements, a Rucker and Kolls with micromanipulators was used to contact the devices; when using the National Instruments NI-PXIe for liquid-gated measurements, a custom-made chip carrier with spring-loaded, pointed-tip, gold-coated pogo pins was used. Ag/AgCl standard electrodes were used as the liquid-gate electrode. The electrode was submerged in 80 $\mu$L of PBS buffer in a polydimethylsiloxane (PDMS) 'well' $-$ a flexible structure used to contain the electrolyte solution $-$ with outer dimensions of 12 mm $\times$ 6 mm $\times$ 6 mm. This PDMS well was sonicated in isopropanol for 10 min and thoroughly N$_2$ dried before use. The microscope images seen in @fig-PDMS-clean show the PDMS surface before and after this cleaning step. The end of Ag/AgCl standard electrode to be submerged should be rinsed in DI water and left to sit in DI water for 15 minutes before characterisation is performed.
+When using the Agilent 4156C Semiconductor Parameter Analyser or Keysight B1500A Semiconductor Device Analyser for liquid-gated measurements, a Rucker and Kolls with micromanipulators was used to contact the devices; when using the National Instruments NI-PXIe for liquid-gated measurements, a custom-made chip carrier with spring-loaded, pointed-tip, gold-coated pogo pins was used. Ag/AgCl standard electrodes were used as the liquid-gate electrode. The electrode was submerged in 80 $\mu$L of PBS buffer in a polydimethylsiloxane (PDMS) 'well' $-$ a flexible structure used to contain the electrolyte solution $-$ with outer dimensions of 12 mm $\times$ 6 mm $\times$ 6 mm. This PDMS well was sonicated in isopropanol for 10 min and thoroughly N$_2$ dried before use. The microscope images seen in @fig-PDMS-clean show the PDMS surface before and after this cleaning step. The end of Ag/AgCl standard electrode to be submerged should be rinsed in DI water and left to sit in DI water for 15 minutes before characterisation is performed.
 
-The Keysight 4156C Semiconductor Parameter Analyser and Keysight B1500A Semiconductor Device Analyser were also used for back-gated measurements of devices within the vapour delivery system device chamber. This chamber acted as a Faraday cage for another custom-made chip carrier with spring-loaded gold-coated pogo pins, able to contact four channel electrode pairs at once. The silicon back of the device was pressed by the pins against a copper block, connected to the gate SMU.
+The Agilent 4156C Semiconductor Parameter Analyser and Keysight B1500A Semiconductor Device Analyser were also used for back-gated measurements of devices within the vapour delivery system device chamber. When the lid of this chamber was tightly sealed, it acted a Faraday cage for another custom-made chip carrier with spring-loaded gold-coated pogo pins, able to contact four channel electrode pairs at once. The silicon back of the device was pressed by the pins against a copper block, connected to the gate SMU.
 
-Custom programs for National Instruments LabView 2017 were used for measurements from the Keysight 4156C Semiconductor Parameter Analyser and the National Instruments NI-PXIe. Keysight EasyEXPERT software was used for characterisation with the Keysight B1500A Semiconductor Device Analyser.
+Custom programs for National Instruments LabView 2017 were used for measurements from the Agilent 4156C Semiconductor Parameter Analyser and the National Instruments NI-PXIe. Keysight EasyEXPERT software was used for characterisation with the Keysight B1500A Semiconductor Device Analyser.
 
 Liquid-gated transfer characteristics of carbon nanotube FETs were measured at V$_{\mathrm{ds}}$ = 100 mV and liquid-gated transfer characteristics of graphene FETs were measured at V$_{\mathrm{ds}}$ = 1 V, where V$_{\mathrm{lg}}$ was swept between -0.5 V and 1 V in both the forward and reverse direction with a step size of either 10 or 20 mV. Backgated transfer characteristics of carbon nanotube FETs were either measured at V$_{\mathrm{ds}}$ = 100 mV or V$_{\mathrm{ds}}$ = 1 V, where V$_{\mathrm{bg}}$ was swept between -5 V and 5 V or -10 V and 10 V in the forward and reverse directions with a step size of 50 mV or 100 mV.
 
@@ -322,13 +332,15 @@ Liquid-gated transfer characteristics of carbon nanotube FETs were measured at V
 
 A liquid-gated setup was used for aqueous-phase sensing and a back-gated setup in the vapour delivery system was used for vapour-phase sensing, as described above.
 
-Sensing measurements were performed with constant source-drain and gate voltages. The gate voltage used was chosen by locating the subthreshold region of the device transfer characteristics and choosing a voltage that fell within this region, usually V$_{\mathrm{g}}$ = 0 V.
+Sensing measurements were performed with constant source-drain and gate voltages. The gate voltage used was chosen by locating the subthreshold region of the device transfer characteristics and choosing a voltage that fell within this region, usually V$_{\mathrm{g}} = $ 0 V. 
 
 Using the NI-PXIe with the PXIe-2737 module, eight-channel multiplexed current measurements could be taken in rapid succession. An integration time of 200 or 400 ms was used for sampling with each channel, with the actual sampling rate set by the NI-PXIe. In practice this meant a sampling rate of 1.81 s (for 200 ms integration time) or 3.41 s (for 400 ms integration time) for any given channel. A 200 ms integration time meant the time between samples from successive channels varied between $220 ms-230$ ms, while a 400 ms integration time meant the time between samples was consistently 426 ms. The Keysight equipment used a constant 1 s sampling interval.
 
 #### Aqueous Sensing {.unnumbered}
 
-Before the sensing process, 200 $\mu$L of PBS was added to the PDMS well and 100-120 $\mu$L of PBS was removed. This initial step was performed to wet the sides of the PDMS well, and check that the attachment of the PDMS well to the device would not unseal when larger volumes of PBS were added during sensing. Before any sensing measurement, a transfer characteristic curve was taken of the liquid-gated device. From Feb 2022 onwards, a 1800 s control series was performed as part of each sensing experiment to test for unwanted responses to PBS and to allow baseline drift to settle. 20 $\mu$L additions of PBS were added to the PDMS well at 100 s, 200 s and 300 s, and 20 $\mu$L of PBS were removed from the PDMS well at 400 s, 500 s and 600 s. Immediately after the control series, a sensing sequence was performed as part of the same continuous measurement set. Most commonly, this would consist of a final PBS addition at 2100 s, then analyte additions every 300 s after that. The experimental series was set to finish at 4000 s. The exact timings, analyte concentrations and gate voltage used in a given sensing sequence are discussed alongside the relevant experimental results.
+Before the sensing process, 200 $\mu$L of PBS was added to the PDMS well and 100-120 $\mu$L of PBS was removed. This initial step was performed to wet the sides of the PDMS well, and check that the attachment of the PDMS well to the device would not unseal when larger volumes of PBS were added during sensing. Before any sensing measurement, a transfer characteristic curve was taken of the liquid-gated device.
+
+From Feburary 2022 onwards, the standard sensing addition series used comprised of a control series and an analyte sensing series. The initial amount of buffered electrolyte in the well was 100$\mu$L, unless specified otherwise. The total interval for the control series was 1800 s. Electrolyte additions of 20$\mu$L were made at 100 s, 200 s and 300 s, while electrolyte subtractions of 20$\mu$L were made at 400 s, 500 s and 600 s. The control series was performed as part of each sensing experiment to test for unwanted responses to electrolyte and to allow baseline drift to settle. Immediately after the control series, a sensing sequence was performed as part of the same continuous measurement set. An initial electrolyte addition was performed at 2100s, to confirm no changes occurred during the control series that would interfere with sensing. Unless specified otherwise, five analyte additions were then made with a time spacing of 300 s, at 2400 s, 2700 s, 3000 s, 3300 s and 3600 s. The experimental series was set to finish at 4000 s. The exact timings, analyte concentrations and gate voltage used in a given sensing sequence are discussed alongside the relevant experimental results.
 
 #### Vapour Sensing {.unnumbered}
 
