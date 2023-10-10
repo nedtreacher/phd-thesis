@@ -332,7 +332,7 @@ Liquid-gated transfer characteristics of carbon nanotube FETs were measured at V
 
 A liquid-gated setup was used for aqueous-phase sensing and a back-gated setup in the vapour delivery system was used for vapour-phase sensing, as described above.
 
-Sensing measurements were performed with constant source-drain and gate voltages. The gate voltage used was chosen by locating the subthreshold region of the device transfer characteristics and choosing a voltage that fell within this region, usually V$_{\mathrm{g}} = $ 0 V. 
+Sensing measurements were performed with constant source-drain and gate voltages. The gate voltage used was chosen by locating the subthreshold region of the device transfer characteristics and choosing a voltage that fell within this region, usually V$_{\mathrm{g}}$ = 0 V. 
 
 Using the NI-PXIe with the PXIe-2737 module, eight-channel multiplexed current measurements could be taken in rapid succession. An integration time of 200 or 400 ms was used for sampling with each channel, with the actual sampling rate set by the NI-PXIe. In practice this meant a sampling rate of 1.81 s (for 200 ms integration time) or 3.41 s (for 400 ms integration time) for any given channel. A 200 ms integration time meant the time between samples from successive channels varied between $220 ms-230$ ms, while a 400 ms integration time meant the time between samples was consistently 426 ms. The Keysight equipment used a constant 1 s sampling interval.
 

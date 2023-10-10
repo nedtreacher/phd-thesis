@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, interior hidden, breakable, frame hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, sharp corners, boxrule=0pt, enhanced, frame hidden]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -1497,7 +1497,7 @@ All measurement setups used had the same basic configuration, with two
 source measure units (SMUs) attached to the source and gate. Voltage
 from the source and gate SMUs was either kept constant or varied, with
 only one SMU varied at a time. Three different measurement setups were
-used for taking these measurements, the Keysight (Agilent/HP) 4156C
+used for taking these measurements, the Agilent (Keysight/HP) 4156C
 Semiconductor Parameter Analyser, the Keysight B1500A Semiconductor
 Device Analyser, and a National Instruments NI-PXIe modular measurement
 system with a 8 GB PXIe-8821 controller and two NI-4138 source measure
@@ -1590,7 +1590,7 @@ minutes.}
 
 \end{figure}
 
-When using the Keysight 4156C Semiconductor Parameter Analyser or
+When using the Agilent 4156C Semiconductor Parameter Analyser or
 Keysight B1500A Semiconductor Device Analyser for liquid-gated
 measurements, a Rucker and Kolls with micromanipulators was used to
 contact the devices; when using the National Instruments NI-PXIe for
@@ -1607,18 +1607,19 @@ surface before and after this cleaning step. The end of Ag/AgCl standard
 electrode to be submerged should be rinsed in DI water and left to sit
 in DI water for 15 minutes before characterisation is performed.
 
-The Keysight 4156C Semiconductor Parameter Analyser and Keysight B1500A
+The Agilent 4156C Semiconductor Parameter Analyser and Keysight B1500A
 Semiconductor Device Analyser were also used for back-gated measurements
-of devices within the vapour delivery system device chamber. This
-chamber acted as a Faraday cage for another custom-made chip carrier
-with spring-loaded gold-coated pogo pins, able to contact four channel
-electrode pairs at once. The silicon back of the device was pressed by
-the pins against a copper block, connected to the gate SMU.
+of devices within the vapour delivery system device chamber. When the
+lid of this chamber was tightly sealed, it acted a Faraday cage for
+another custom-made chip carrier with spring-loaded gold-coated pogo
+pins, able to contact four channel electrode pairs at once. The silicon
+back of the device was pressed by the pins against a copper block,
+connected to the gate SMU.
 
 Custom programs for National Instruments LabView 2017 were used for
-measurements from the Keysight 4156C Semiconductor Parameter Analyser
-and the National Instruments NI-PXIe. Keysight EasyEXPERT software was
-used for characterisation with the Keysight B1500A Semiconductor Device
+measurements from the Agilent 4156C Semiconductor Parameter Analyser and
+the National Instruments NI-PXIe. Keysight EasyEXPERT software was used
+for characterisation with the Keysight B1500A Semiconductor Device
 Analyser.
 
 Liquid-gated transfer characteristics of carbon nanotube FETs were
@@ -1665,18 +1666,26 @@ performed to wet the sides of the PDMS well, and check that the
 attachment of the PDMS well to the device would not unseal when larger
 volumes of PBS were added during sensing. Before any sensing
 measurement, a transfer characteristic curve was taken of the
-liquid-gated device. From Feb 2022 onwards, a 1800 s control series was
-performed as part of each sensing experiment to test for unwanted
-responses to PBS and to allow baseline drift to settle. 20 \(\mu\)L
-additions of PBS were added to the PDMS well at 100 s, 200 s and 300 s,
-and 20 \(\mu\)L of PBS were removed from the PDMS well at 400 s, 500 s
-and 600 s. Immediately after the control series, a sensing sequence was
-performed as part of the same continuous measurement set. Most commonly,
-this would consist of a final PBS addition at 2100 s, then analyte
-additions every 300 s after that. The experimental series was set to
-finish at 4000 s. The exact timings, analyte concentrations and gate
-voltage used in a given sensing sequence are discussed alongside the
-relevant experimental results.
+liquid-gated device.
+
+From Feburary 2022 onwards, the standard sensing addition series used
+comprised of a control series and an analyte sensing series. The initial
+amount of buffered electrolyte in the well was 100\(\mu\)L, unless
+specified otherwise. The total interval for the control series was 1800
+s. Electrolyte additions of 20\(\mu\)L were made at 100 s, 200 s and 300
+s, while electrolyte subtractions of 20\(\mu\)L were made at 400 s, 500
+s and 600 s. The control series was performed as part of each sensing
+experiment to test for unwanted responses to electrolyte and to allow
+baseline drift to settle. Immediately after the control series, a
+sensing sequence was performed as part of the same continuous
+measurement set. An initial electrolyte addition was performed at 2100s,
+to confirm no changes occurred during the control series that would
+interfere with sensing. Unless specified otherwise, five analyte
+additions were then made with a time spacing of 300 s, at 2400 s, 2700
+s, 3000 s, 3300 s and 3600 s. The experimental series was set to finish
+at 4000 s. The exact timings, analyte concentrations and gate voltage
+used in a given sensing sequence are discussed alongside the relevant
+experimental results.
 
 \hypertarget{vapour-sensing}{%
 \subsubsection*{Vapour Sensing}\label{vapour-sensing}}
