@@ -62,7 +62,7 @@ This section details some of the standard photolithography procedures used in th
 
 ![](figures/ch4/undercut-profile.png){#fig-undercut-profile}
 
-(a) shows the overcut profile of a positive resist. The undercut profile in (b) is ideal for thin-film metal deposition and subsequent patterned removal, known as "lift-off". Each profile has had the central region of the substrate exposed to UV light prior to development.
+The overcut profile of a positive resist pattern is shown in (a). The undercut profile in (b) is ideal for thin-film metal deposition and subsequent patterned removal, known as "lift-off". Each profile has had the central region of the substrate exposed to UV light prior to development.
 :::
 
 The specific photoresist selected for photolithography depends on the specific use case. The types used in this thesis are positive and negative AZ$^\circledR$ photoresists (AZ$^\circledR$ 1518, Microchemicals GmbH; AZ$^\circledR$ nLOF 2020, Microchemicals GmbH) and SU-8 (SU8-2150, Kayaku Advanced Materials, formerly Microchem). The AZ$^\circledR$ resists used here have a minimum film thickness of $1.5\textrm{ } \mu \textrm{m}$ [@Microchemicals], while the SU8-2150 has a minimum film thickness of $0.5\textrm{ } \mu \textrm{m}$ [@Kayaku]. Positive resists which have not been thermally crosslinked will soften at higher temperatures ($\gtrsim 100^\circ$C for AZ$^\circledR$ 1518), leading to a rounded profile. This is not the case for negative resists, which are more thermally stable [@Microchemicals]. Each resist therefore has a different cross-section profile, as shown in @fig-photolithography-profiles. 
@@ -73,7 +73,7 @@ All photolithographic exposure was performed using a Karl Suss MJB3 Contact Alig
 
 In general, photolithography procedures should be performed under yellow lighting, as light wavelengths from $320-450$ nm can promote reactions in the photoresist used. Aging of photoresist over time can also significantly affect the photolithography process, and therefore all processes should be re-optimised regularly over time to give the desired result [@Microchemicals]. The range in processing times for some steps of the processes used here are largely due to the effects of aging on the photoresist. 
 
- The step-by-step processes for each resist are detailed in the subsequent sections.
+The step-by-step processes for each resist are detailed in the subsequent sections.
 
 ### AZ$^\circledR$ 1518 photoresist
 
@@ -129,11 +129,17 @@ Graphene field-effect transistors were fabricated using 300 nm SiO$_2$/p-type Si
  
 From Jul 2023 onwards, after each photolithography step using negative resist, quarter wafers/chips were placed in AZ$^\circledR$ 326 or SU8 developer for 3 min to ensure complete removal of photoresist residue. For each step with positive resist, the same procedure was performed but with a flood exposure with UV light for 1 min before being placed in developer. The exception to this rule was for devices with an aluminium oxide layer present. Tetramethylammonium hydroxide (TMAH), the active ingredient of AZ$^\circledR$ 326, etches through aluminium oxide and causes electrical shorts through the dielectric layer [@Oh2011; @Ali2021]. A further discussion showing the results of this process is given in @sec-photoresist-contamination. 
 
-::: {#fig-dektat-dielectric-layer layout="[-5,90,-5]"}
+@fig-qw-device-photo shows a completed quarter-wafer of carbon nanotube field-effect transistors shown next to two individual devices. Partial (unusable) devices at the edges of the wafer have been cleaved off so that only a square of nine devices remains. The schematic in @fig-device-schematic labels the component parts of the individual FET device after the full photolithographic process is completed.
 
-![](figures/ch4/){#fig-device-schematic}
+::: {#fig-field-effect-transistor layout="[[-25,50,-25],[47.5,-5,47.5]]"}
 
-Dektat and microscope image of a device encapsulated with aluminium oxide.
+![](figures/ch4/IMG_0845.jpg){#fig-qw-device-photo}
+
+![](figures/ch4/IMG_0845_2.jpg){#fig-single-device-photo}
+
+![](figures/ch4/fet-schematic.png){#fig-device-schematic}
+
+ A finished quarter-wafer with the unusable edges cleaved off is shown in (a), while an individual carbon nanotube field-effect transistor device is shown in (b). The component parts of the field-effect transistor are labelled on device cross-section and channel top view schematics in (c).
 :::
 
 ### Alignment Markers{#sec-align}
@@ -205,7 +211,7 @@ As with the alignment markers deposition (see @sec-align), before Jun 2022 chrom
 
 ![](figures/ch4/may-21-dmso-damage.png){#fig-graphene-dmso-damage}
 
-(a) shows damage to the gold electrode in the graphene channel region after dimethyl sulfoxide lift-off, while (b) shows damage to a graphene film (blue-green region) after dimethyl sulfoxide lift-off.
+Damage to the gold electrode in the graphene channel region after dimethyl sulfoxide lift-off is shown in (a), while (b) shows damage to a graphene film (blue-green region) after dimethyl sulfoxide lift-off.
 :::
 
 Dimethyl sulfoxide (DMSO) was sometimes used in electrodes lift-off instead of acetone between Jul 2021 and Feb 2023 because of its effectiveness as a photoresist stripping agent. However, it was abandoned due to some indications it was unsuitable for the devices being fabricated, as shown in @fig-dmso-damage and also as detailed in @sec-cnt-deposition-effects. It is possible that heat from the electrodes deposition sometimes crosslinked residual photoresist on the nanomaterial, and then during lift-off was removed together with any attached nanomaterial by the DMSO. However, it is also possible that prolonged exposure to DMSO alone was sufficient to detach nanomaterial from the substrate. Therefore, acetone was the preferred agent for lift-off despite being a less efficient stripping agent than DMSO. 
@@ -293,13 +299,15 @@ Both back-gated and liquid-gated measurements were taken of carbon nanotube and 
 
 All measurement setups used had the same basic configuration, with two source measure units (SMUs) attached to the source and gate. Voltage from the source and gate SMUs was either kept constant or varied, with only one SMU varied at a time. Three different measurement setups were used for taking these measurements, the Keysight (Agilent/HP) 4156C Semiconductor Parameter Analyser, the Keysight B1500A Semiconductor Device Analyser, and a National Instruments NI-PXIe modular measurement system with a 8 GB PXIe-8821 controller and two NI-4138 source measure units. For measurements with the Keysight instruments, a third, drain SMU was attached and kept at a constant 0 V (as shown in @fig-liquid-gate-schematic).
 
-::: {#fig-PDMS-clean layout="[[47.5,-5,47.5]]"}
+::: {#fig-PDMS-clean layout="[[-25,50,-25], [47.5,-5,47.5]]"}
 
-![PDMS surface before sonication in IPA for 10 min](figures/ch4/PDMS_dirty.png){#fig-PDMS_dirty}
+![](figures/ch4/IMG_0845_3.jpg){#fig-PDMS-device-photo}
 
-![PDMS surface after sonication in IPA for 10 min](figures/ch4/PDMS_clean.png){#fig-PDMS_clean}
+![](figures/ch4/PDMS_dirty.png){#fig-PDMS_dirty}
 
-Polydimethylsiloxane (PDMS) surface before and after isopropanol (IPA) sonication for 10 minutes.
+![](figures/ch4/PDMS_clean.png){#fig-PDMS_clean}
+
+A carbon nanotube field-effect transistor device with a polydimethylsiloxane (PDMS) 'well' placed on the device surface is seen in (a), followed by microscope images of the PDMS surface before (b) and after (c) isopropanol (IPA) sonication for 10 minutes.
 :::
 
 When using the Keysight 4156C Semiconductor Parameter Analyser or Keysight B1500A Semiconductor Device Analyser for liquid-gated measurements, a Rucker and Kolls with micromanipulators was used to contact the devices; when using the National Instruments NI-PXIe for liquid-gated measurements, a custom-made chip carrier with spring-loaded, pointed-tip, gold-coated pogo pins was used. Ag/AgCl standard electrodes were used as the liquid-gate electrode. The electrode was submerged in 80 $\mu$L of PBS buffer in a polydimethylsiloxane (PDMS) 'well' $-$ a flexible structure used to contain the electrolyte solution $-$ with outer dimensions of 12 mm $\times$ 6 mm $\times$ 6 mm. This PDMS well was sonicated in isopropanol for 10 min and thoroughly N$_2$ dried before use. The microscope images seen in @fig-PDMS-clean show the PDMS surface before and after this cleaning step. The end of Ag/AgCl standard electrode to be submerged should be rinsed in DI water and left to sit in DI water for 15 minutes before characterisation is performed.

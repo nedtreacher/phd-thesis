@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, borderline west={3pt}{0pt}{shadecolor}, breakable, interior hidden, boxrule=0pt, enhanced, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners, enhanced, breakable, boxrule=0pt, frame hidden]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -297,37 +297,12 @@ a visual representation of these differences.
 
 \subcaption{\label{fig-undercut-profile}}
 \end{minipage}%
-\newline
-\begin{minipage}[t]{0.47\linewidth}
 
-{\centering 
-
-\begin{enumerate}
-\def\labelenumi{(\alph{enumi})}
-\tightlist
-\item
-  shows the overcut profile of a positive resist. The undercut profile
-  in (b) is ideal for thin-film metal deposition and subsequent
-  patterned removal, known as ``lift-off''. Each profile has had the
-  central region of the substrate exposed to UV light prior to
-  development.
-\end{enumerate}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.05\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-
-\caption{\label{fig-photolithography-profiles}\textbf{?(caption)}}
+\caption{\label{fig-photolithography-profiles}The overcut profile of a
+positive resist pattern is shown in (a). The undercut profile in (b) is
+ideal for thin-film metal deposition and subsequent patterned removal,
+known as ``lift-off''. Each profile has had the central region of the
+substrate exposed to UV light prior to development.}
 
 \end{figure}
 
@@ -554,6 +529,99 @@ ingredient of AZ\(^\circledR\) 326, etches through aluminium oxide and
 causes electrical shorts through the dielectric layer
 \autocite{Oh2011,Ali2021}. A further discussion showing the results of
 this process is given in \textbf{?@sec-photoresist-contamination}.
+
+Figure~\ref{fig-qw-device-photo} shows a completed quarter-wafer of
+carbon nanotube field-effect transistors shown next to two individual
+devices. Partial (unusable) devices at the edges of the wafer have been
+cleaved off so that only a square of nine devices remains. The schematic
+in Figure~\ref{fig-device-schematic} labels the component parts of the
+individual FET device after the full photolithographic process is
+completed.
+
+\begin{figure}
+
+\begin{minipage}[t]{0.25\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch4/IMG_0845.jpg}
+
+}
+
+}
+
+\subcaption{\label{fig-qw-device-photo}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.25\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch4/IMG_0845_2.jpg}
+
+}
+
+}
+
+\subcaption{\label{fig-single-device-photo}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch4/fet-schematic.png}
+
+}
+
+}
+
+\subcaption{\label{fig-device-schematic}}
+\end{minipage}%
+
+\caption{\label{fig-field-effect-transistor}The component parts of the
+field-effect transistor are labelled in the schematic in (a). A finished
+quarter-wafer with the unusable edges cleaved off is shown in (b), while
+an individual carbon nanotube field-effect transistor device is shown in
+(c).}
+
+\end{figure}
 
 \hypertarget{sec-align}{%
 \subsection{Alignment Markers}\label{sec-align}}
@@ -1387,6 +1455,41 @@ Figure~\ref{fig-liquid-gate-schematic}).
 
 \begin{figure}
 
+\begin{minipage}[t]{0.25\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch4/IMG_0845_3.jpg}
+
+}
+
+}
+
+\subcaption{\label{fig-PDMS-device-photo}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.25\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
 \begin{minipage}[t]{0.47\linewidth}
 
 {\centering 
@@ -1399,8 +1502,7 @@ Figure~\ref{fig-liquid-gate-schematic}).
 
 }
 
-\subcaption{\label{fig-PDMS_dirty}PDMS surface before sonication in IPA
-for 10 min}
+\subcaption{\label{fig-PDMS_dirty}}
 \end{minipage}%
 %
 \begin{minipage}[t]{0.05\linewidth}
@@ -1425,12 +1527,14 @@ for 10 min}
 
 }
 
-\subcaption{\label{fig-PDMS_clean}PDMS surface after sonication in IPA
-for 10 min}
+\subcaption{\label{fig-PDMS_clean}}
 \end{minipage}%
 
-\caption{\label{fig-PDMS-clean}Polydimethylsiloxane (PDMS) surface
-before and after isopropanol (IPA) sonication for 10 minutes.}
+\caption{\label{fig-PDMS-clean}A carbon nanotube field-effect transistor
+device with a polydimethylsiloxane (PDMS) `well' placed on the device
+surface is seen in (a), followed by microscope images of the PDMS
+surface before (b) and after (c) isopropanol (IPA) sonication for 10
+minutes.}
 
 \end{figure}
 
@@ -1442,7 +1546,8 @@ liquid-gated measurements, a custom-made chip carrier with
 spring-loaded, pointed-tip, gold-coated pogo pins was used. Ag/AgCl
 standard electrodes were used as the liquid-gate electrode. The
 electrode was submerged in 80 \(\mu\)L of PBS buffer in a
-polydimethylsiloxane (PDMS) well with outer dimensions of 12 mm
+polydimethylsiloxane (PDMS) `well' \(-\) a flexible structure used to
+contain the electrolyte solution \(-\) with outer dimensions of 12 mm
 \(\times\) 6 mm \(\times\) 6 mm. This PDMS well was sonicated in
 isopropanol for 10 min and thoroughly N\(_2\) dried before use. The
 microscope images seen in Figure~\ref{fig-PDMS-clean} show the PDMS
