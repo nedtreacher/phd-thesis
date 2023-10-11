@@ -137,7 +137,7 @@ From Jul 2023 onwards, after each photolithography step using negative resist, q
 
 ![](figures/ch4/fet-schematic.png){#fig-device-schematic}
 
- A finished quarter-wafer with the unusable edges cleaved off is shown in (a), while an individual carbon nanotube field-effect transistor device is shown in (b). The component parts of the field-effect transistor are labelled on device cross-section and channel top view schematics in (c).
+ A finished quarter-wafer with the unusable edges cleaved off is shown in (a), while an individual carbon nanotube field-effect transistor device is shown in (b). Note the double alignment markers feature in the top left corner of (b), indicating channel 1. The component parts of the field-effect transistor are labelled on device cross-section and channel top view schematics in (c).
 :::
 
 @fig-qw-device-photo shows a completed quarter-wafer of carbon nanotube field-effect transistors, where partial (unusable) devices at the edges of the wafer have been cleaved off so that only a square of nine devices remains. An individual FET device after the completed fabrication process is shown in @fig-single-device-photo, and @fig-device-schematic shows cross-section and top view schematics of the completed device with the component parts labelled.
@@ -179,8 +179,6 @@ The carbon nanotube dispersion was then rinsed off the wafer with DI water, etha
 
 ### Channel Etching
 
-Eight channel features, each 1000 $\mu$m in length and 100 $\mu$m in width with a pitch of 1200 $\mu$m, were patterned using AZ$^\circledR$ 1518 photolithography on each carbon nanotube or graphene-covered substrate. Unwanted nanomaterial not covered with photoresist was then etched away with 200 W oxygen plasma at 600 mTorr using a reactive ion etcher or RIE (Plasmalab$^\circledR$ 80 Plus, Oxford Instruments). The etch time was 3 minutes for carbon nanotube quarter wafers, and 1 minute for graphene chips. The protective photoresist was then removed by soaking in acetone for at least 5 minutes.
-
 ::: {#fig-microscope-graphene-channel layout="[[47.5,-5,47.5]]"}
 
 ![](figures/ch4/channel-area.png){#fig-graphene-channel-etch}
@@ -189,6 +187,8 @@ Eight channel features, each 1000 $\mu$m in length and 100 $\mu$m in width with 
 
 A graphene channel after the plasma etch step is shown in (a), and (b) shows another graphene channel after the metal electrode deposition and liftoff step.
 :::
+
+Eight channel features, each 1000 $\mu$m in length and 100 $\mu$m in width with a pitch of 1200 $\mu$m, were patterned using AZ$^\circledR$ 1518 photolithography on each carbon nanotube or graphene-covered substrate. Unwanted nanomaterial not covered with photoresist was then etched away with 200 W oxygen plasma at 600 mTorr using a reactive ion etcher or RIE (Plasmalab$^\circledR$ 80 Plus, Oxford Instruments). The etch time was 3 minutes for carbon nanotube quarter wafers, and 1 minute for graphene chips. The protective photoresist was then removed by soaking in acetone for at least 5 minutes.
 
 ### Source and Drain Electrodes {#sec-electrodes}
 
@@ -214,7 +214,7 @@ Damage to the gold electrode in the graphene channel region after dimethyl sulfo
 The Dektat height profile measurements for source and drain electrodes taken at different locations on four different quarter wafers are shown here. A 10 nm adhesion layer and 100 nm Au layer were used for the wafers in (a) and (b), with chromium as the adhesion layer for (a) and titanium for (b). A 20 nm titanium adhesion layer and 100 nm Au layer were used for both (c) and (d). AZ$^\circledR$ 1518 photolithography was used for patterning before metal deposition in (a)-(c), which led to the formation of edge features or "cat ears", with (c) illustrating the full height of these features. In comparison, (d) shows the profile of electrodes from a quarter wafer patterned with AZ$^\circledR$ nLOF2020, where edge features are greatly reduced.
 :::
 
-The source and drain electrodes for each channel were patterned using photolithography with either AZ$^\circledR$ 1518 photoresist (pre-Mar 2023) or AZ$^\circledR$ nLOF 2020 photoresist (post-Mar 2023). Before metal deposition, the developed photoresist pattern was exposed to O$_2$ plasma at 50 W for up to 5 s or at 20 W for $20-25$ s in a PE-50 plasma cleaner (Plasma Etch, Inc.) to remove residual photoresist on the developed regions and ensure a clean lift-off. After metal deposition, wafers/devices were soaked in acetone for at least 2 hours for photoresist lift-off, washed in IPA and dried with nitrogen.
+The source and drain electrodes for each channel were patterned using photolithography with either AZ$^\circledR$ 1518 photoresist (pre-Mar 2023) or AZ$^\circledR$ nLOF 2020 photoresist (post-Mar 2023). Before metal deposition, the developed photoresist pattern was exposed to O$_2$ plasma at 50 W for up to 5 s or at 20 W for $20-25$ s in a PE-50 plasma cleaner (Plasma Etch, Inc.) to remove residual photoresist on the developed regions and ensure a clean lift-off. After metal, wafers/devices were soaked in acetone for at least 2 hours for photoresist lift-off, washed in IPA and dried with nitrogen.
 
 As with the alignment markers deposition (see @sec-align), before Jun 2022 chromium was used for the gold adhesion layer, and after Jun 2022 titanium was used. Adhesion layers are required to stick metals such as gold and platinum to silicon dioxide [@Guarnieri2014]. A 20 nm nominal titanium layer instead of 10 nm nominal was found to give better electrode adhesion, and devices after Feb 2023 were made using this thicker adhesion layer.  Good electronic contact could be made with electrodes with a nominal gold layer thickness of $60-100$ nm, and a Au layer nominally 100 nm thick was most commonly used. 
 
