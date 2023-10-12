@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, breakable, sharp corners, frame hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable, boxrule=0pt, interior hidden, sharp corners]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -206,14 +206,50 @@ and
 Graphene}\label{verifying-non-covalent-functionalisation-of-carbon-nanotubes-and-graphene}}
 
 \begin{verbatim}
-159862
+167902
 \end{verbatim}
 
-In this chapter,
+In previous chapters, we have discussed methods of fabricating carbon
+nanotube and graphene devices and then shown that they can be operated
+effectively as chemical sensors. However, to detect specific chemical
+traces while ignoring others (`specific sensing'), the devices require
+chemical modification, often called `functionalisation'. Instead of
+responding to stimuli themselves, the sensing signal is picked up by
+attached receptors. The devices then act as passive transducers for the
+received signal. Receptors previously used with carbon nanotube and
+graphene devices include aptamers and a range of proteins, including
+odorant receptors. A common approach to attaching receptors to the
+transducer involves the use of a linker molecule to tether the receptor
+to the transducer. Verifying that this linker molecule is bridging
+between the transducer and the receptor element is important for a
+complete understanding of the behaviour of these sensors. This
+verification involves providing evidence for effective attachment of
+linker molecule to the transducing device channel, then showing
+successful tethering of odorant receptors and other biomolecules to the
+attached linker molecule.
 
-\hypertarget{non-covalent-functionalisation-and-linker-molecules}{%
-\section{Non-Covalent Functionalisation and Linker
-molecules}\label{non-covalent-functionalisation-and-linker-molecules}}
+This chapter therefore takes some time to explore the attachment of
+linker molecules to carbon nanotube and graphene device channels, using
+methods such as Raman spectroscopy, fluorescence microscopy and
+electrical characterisation. Linker molecules used are discussed in
+detail, and numerous hurdles to successful functionalisation via linker
+molecules are identified and addressed.
+
+\hypertarget{non-covalent-functionalisation-linker-molecules}{%
+\section{Non-Covalent Functionalisation \& Linker
+Molecules}\label{non-covalent-functionalisation-linker-molecules}}
+
+Linker molecules may be attached via covalent or non-covalent bonding to
+carbon nanomaterials, such as carbon nanotubes and graphene.
+Non-covalent binding is weaker than covalent binding. However, the
+advantage of non-covalent binding is that it disrupts the structure of
+the nanomaterial less than covalent bonding does, and therefore has less
+of a negative impact on the electrical properties of the transducer
+\autocite{DiCrescenzo2014}. For example, one group found covalent
+bonding of diazonium linker caused a \(\sim 50 %
+\) drop in channel mobility \autocite{Lerner2014}. In particular, this
+thesis discusses \(\pi-\pi\) bonding, a particular strong type of
+non-covalent bonding.
 
 \hypertarget{pyrenebutanoic-acid-n-hydroxysuccinimide-ester-pbase}{%
 \subsection{1-Pyrenebutanoic acid N-hydroxysuccinimide ester
@@ -264,8 +300,8 @@ kJ/mol (9 s.f.)}
 \end{minipage}%
 
 \caption{\label{fig-pbase-structure}Two conformations of PBASE molecule
-with geometry optimised via \emph{ab initio} calculation (computed using
-Gaussian 16 \autocite{g16}). The difference between computed
+with geometry optimised via \emph{ab initio} calculations (computed
+using Gaussian 16 \autocite{g16}). The difference between computed
 Hartree-Fock energies is 1.0 kJ/mol, small enough that the existence of
 both molecular conformations is physically possible.}
 
@@ -298,7 +334,7 @@ common ancestry becomes apparent from the high frequency of methods
 detailing the use of 6 mM PBASE in DMF and 1 mM PBASE in methanol, as
 seen in Table~\ref{tbl-pbase-functionalisation}.
 
-However, despite this shared heritage, it is also apparent from
+However, it is also apparent from
 Table~\ref{tbl-pbase-functionalisation} that there is a large degree of
 variation in the methods used for PBASE functionalisation. Various
 electrical characterisation, microscopy and spectroscopy techniques have
@@ -360,16 +396,17 @@ the literature \autocite{Zhen2018,Hinnemo2017}.
 \caption{\label{fig-pbase-nmr}\(^{1}\)H Nuclear Magnetic Resonance (NMR)
 spectra, performed with DMSO-d\(_6\) used as the NMR solvent. (a) and
 (b) show NMR spectrum for commercially purchased PBASE, from
-Sigma-Aldrich and Setareh Biotech respectively. (c) shows the blank
-spectrum taken with only DMSO-d\(_6\) present .}
+Sigma-Aldrich and Setareh Biotech respectively, while (c) shows the
+blank spectrum taken with only DMSO-d\(_6\) present (spectra taken by
+Jennie Ramirez-Garcia).}
 
 \end{figure}
 
 We purchased PBASE from two suppliers, Sigma-Aldrich and Setareh
-Biotech. Sigma recommends DMF and methanol as suitable solvents for
+Biotech. Sigma recommended DMF and methanol as suitable solvents for
 dissolving PBASE alongside chloroform and DMSO. Setareh Biotech
-indicates methanol can be used for dissolving PBASE. The two suppliers
-have conflicting information for suitable storage of PBASE, with Sigma
+indicated methanol can be used for dissolving PBASE. The two suppliers
+had conflicting information for suitable storage of PBASE, with Sigma
 recommending room temperature storage while Setareh Biotech recommends
 storage of \(-5\) to \(-30 ^\circ \text{C}\) and protection from light
 and moisture. Figure~\ref{fig-pbase-nmr} compares the shapes of NMR
@@ -411,6 +448,7 @@ DMF & CNTs & 5 & Immersed & 1 & PBS & Maehashi \textit{et al.}
 \textit{et al.} \cite{Nekrasov2021} \\
 & & 5 & Immersed & 1 & DMF, DI water & Hwang \textit{et al.}
 \cite{Hwang2016} \\
+& & 5 & Immersed & 3 & DMF & Hao \textit{et al.} \cite{Hao2020} \\
 & & 6 & 6 \(\mu\)L droplet & 2 & DMF, DI water & Nur Nasufiya
 \textit{et al.} \cite{NurNasyifa2020} \\
 & & 10 & 10 \(\mu\)L droplet & 2 & DMF, DI water & Campos
