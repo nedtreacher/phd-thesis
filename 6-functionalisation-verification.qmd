@@ -44,10 +44,15 @@ with open("references.bib", "w", encoding="utf-8") as file:
     file.write(modified_content)
 ```
 
-
 # Verifying Non-Covalent Functionalisation of Carbon Nanotubes and Graphene
 
-## Linker molecules
+In previous chapters, we have discussed methods of fabricating carbon nanotube and graphene devices and then shown that they can be operated effectively as chemical sensors. However, to detect specific chemical traces while ignoring others ('specific sensing'), the devices require chemical modification, often called 'functionalisation'. Instead of responding to stimuli themselves, the sensing signal is picked up by attached receptors. The devices then act as passive transducers for the received signal. Receptors previously used with carbon nanotube and graphene devices include aptamers and a range of proteins, including odorant receptors. A common approach to attaching receptors to the transducer involves the use of a linker molecule to tether the receptor to the transducer. Verifying that this linker molecule is mediating between the transducer and the receptor elements is important for understanding the behaviour of this type of sensor. This verification involves providing evidence for effective attachment of linker molecule to the transducing device channel, then showing successful tethering of odorant receptors and other biomolecules to the attached linker molecule.
+
+This chapter therefore takes some time to explore the attachment of linker molecules to carbon nanotube and graphene device channels, using methods such as Raman spectroscopy, fluorescence microscopy and electrical characterisation. Linker molecules used are discussed in detail, and numerous hurdles to successful functionalisation via linker molecules are identified and addressed.
+
+## Non-Covalent Functionalisation and Linker Molecules
+
+in a minimally invasive manner,rather than attaching the receptor element to the transducer directly. This is  preserve the electrical properties of the transducer,
 
 ### 1-Pyrenebutanoic acid N-hydroxysuccinimide ester (PBASE)
 
@@ -57,7 +62,7 @@ with open("references.bib", "w", encoding="utf-8") as file:
 
 ![Hartree-Fock energy: -3427729.66 kJ/mol (9 s.f.)](figures/ch6/pbase_stable_2.png){#fig-pbase-stable-2}
 
-Two conformations of PBASE molecule with geometry optimised via *ab initio* calculation (computed using Gaussian 16 [@g16]). The difference between computed Hartree-Fock energies is 1.0 kJ/mol, small enough that the existence of both molecular conformations is physically possible.
+Two conformations of PBASE molecule with geometry optimised via *ab initio* calculations (computed using Gaussian 16 [@g16]). The difference between computed Hartree-Fock energies is 1.0 kJ/mol, small enough that the existence of both molecular conformations is physically possible.
 :::
 
 1-Pyrenebutanoic acid N-hydroxysuccinimide ester (variously known commercially and in the literature as 1-Pyrenebutyric acid N-hydroxysuccinimide ester, PBASE, PBSE, PASE, Pyr-NHS, PyBASE, PANHS) is a aromatic, bifunctional molecule commonly used for tethering biomolecules to the carbon rings of graphene and carbon nanotubes. The optimised molecular structure of PBASE is shown in @fig-pbase-structure. 
@@ -68,14 +73,13 @@ The non-covalent functionalisation of proteins onto a single-walled carbon nanot
 
 ::: {#fig-pbase-nmr layout-ncol=1}
 
-![Sigma PBASE in DMSO](figures/ch6/sigma_pbase_nmr.png){#fig-sigma-nmr}
+![](figures/ch6/modified_sigma_pbase_nmr.png){#fig-sigma-nmr}
 
-![Setareh PBASE in DMSO](figures/ch6/setareh_pbase_nmr.png){#fig-setareh-nmr}
+![](figures/ch6/modified_setareh_pbase_nmr.png){#fig-setareh-nmr}
 
- ![Blank (DMSO only)](figures/ch6/dmso_nmr.png){#fig-dmso-nmr}
+![](figures/ch6/modified_dmso_nmr.png){#fig-dmso-nmr}
 
- Comparison of NMR spectrum profiles (arbitrary units)
-
+$^{1}$H Nuclear Magnetic Resonance (NMR) spectra, performed with DMSO-d$_6$ used as the NMR solvent. (a) and (b) show NMR spectrum for commercially purchased PBASE, from Sigma-Aldrich and Setareh Biotech respectively, while (c) shows the blank spectrum taken with only DMSO-d$_6$ present (spectra taken by Jennie Ramirez-Garcia).
 :::
 
 We purchased PBASE from two suppliers, Sigma-Aldrich and Setareh Biotech. Sigma recommends DMF and methanol as suitable solvents for dissolving PBASE alongside chloroform and DMSO. Setareh Biotech indicates methanol can be used for dissolving PBASE. The two suppliers have conflicting information for suitable storage of PBASE, with Sigma recommending room temperature storage while Setareh Biotech recommends storage of  $-5$ to $-30 ^\circ \text{C}$ and protection from light and moisture. @fig-pbase-nmr compares the shapes of NMR spectra of PBASE from each supplier dissolved in DMSO, alongside a blank DMSO spectrum.
