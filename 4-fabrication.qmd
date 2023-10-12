@@ -3,47 +3,6 @@ keep-tex: true
 format: pdf
 ---
 
-```{python}
-#| echo: false
-import re
-
-# Dictionary to map month abbreviations to numbers
-month_mapping = {
-    "jan": "1",
-    "feb": "2",
-    "mar": "3",
-    "apr": "4",
-    "may": "5",
-    "jun": "6",
-    "jul": "7",
-    "aug": "8",
-    "sep": "9",
-    "oct": "10",
-    "nov": "11",
-    "dec": "12"
-}
-
-# Read the content of the original .bib file with UTF-8 encoding
-with open("references.bib", "r", encoding="utf-8") as file:
-    bib_content = file.read()
-
-# Replace month abbreviations with numbers using a single regex
-pattern_month = r'month\s*=\s*{([a-z]+)},'
-def replace_month(match):
-    month_abbrev = match.group(1)
-    month_number = month_mapping.get(month_abbrev, month_abbrev)
-    return f'month = {{{month_number}}},'
-
-modified_content = re.sub(pattern_month, replace_month, bib_content, flags=re.IGNORECASE)
-
-# Replace "%" with "\%" when not preceded by a backslash
-modified_content = re.sub(r'(?<!\\)%', r'\\%', modified_content)
-
-# Write the modified content back to the original .bib file with UTF-8 encoding
-with open("references.bib", "w", encoding="utf-8") as file:
-    file.write(modified_content)
-```
-
 # Fabrication of Carbon Nanotube Network and Graphene Field-Effect Transistors {#sec-fabrication}
 
 This chapter discusses the fabrication processes for both the carbon nanotube network and graphene field-effect transistors (FETs). Experimental optimisation of the transducer element is critical for biosensor work, and large numbers of transducers were required for testing various biosensor functionalisation processes. Therefore, these processes were developed to rapidly fabricate devices with reproducible device characteristics appropriate for biosensing work. Also outlined in this chapter are the characterisation techniques taken to test the quality and reproducibility of these fabrication processes. 
@@ -129,15 +88,15 @@ Graphene field-effect transistors were fabricated using 300 nm SiO$_2$/p-type Si
  
 From Jul 2023 onwards, after each photolithography step using negative resist, quarter wafers/chips were placed in AZ$^\circledR$ 326 or SU8 developer for 3 min to ensure complete removal of photoresist residue. For each step with positive resist, the same procedure was performed but with a flood exposure with UV light for 1 min before being placed in developer. The exception to this rule was for devices with an aluminium oxide layer present. Tetramethylammonium hydroxide (TMAH), the active ingredient of AZ$^\circledR$ 326, etches through aluminium oxide and causes electrical shorts through the dielectric layer [@Oh2011; @Ali2021]. A further discussion showing the results of this process is given in @sec-photoresist-contamination. 
 
-::: {#fig-field-effect-transistor layout="[[-25,50,-25],[47.5,-5,47.5]]"}
+::: {#fig-field-effect-transistor layout="[[47.5,-5,47.5]]"}
 
 ![](figures/ch4/IMG_0845.jpg){#fig-qw-device-photo}
 
-![](figures/ch4/IMG_0845_2.jpg){#fig-single-device-photo}
+<!-- ![](figures/ch4/IMG_0845_2.jpg){#fig-single-device-photo}-->
 
 ![](figures/ch4/fet-schematic.png){#fig-device-schematic}
 
- A finished quarter-wafer with the unusable edges cleaved off is shown in (a), while an individual carbon nanotube field-effect transistor device is shown in (b). Note the double alignment markers feature in the top left corner of (b), indicating channel 1. The component parts of the field-effect transistor are labelled on device cross-section and channel top view schematics in (c).
+ A finished quarter-wafer with the unusable edges cleaved off is shown in (a). Note the double alignment markers feature in the bottom left corner of each device in (a), indicating channel 1 'CH1'. The component parts of the field-effect transistor are labelled on device cross-section and channel top view schematics in (b).
 :::
 
 @fig-qw-device-photo shows a completed quarter-wafer of carbon nanotube field-effect transistors, where partial (unusable) devices at the edges of the wafer have been cleaved off so that only a square of nine devices remains. An individual FET device after the completed fabrication process is shown in @fig-single-device-photo, and @fig-device-schematic shows cross-section and top view schematics of the completed device with the component parts labelled.
