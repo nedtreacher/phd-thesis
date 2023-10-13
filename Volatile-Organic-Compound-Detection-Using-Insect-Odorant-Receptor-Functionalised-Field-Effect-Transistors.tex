@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable, boxrule=0pt, interior hidden, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, frame hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}, breakable, enhanced, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -206,7 +206,7 @@ and
 Graphene}\label{verifying-non-covalent-functionalisation-of-carbon-nanotubes-and-graphene}}
 
 \begin{verbatim}
-167902
+173228
 \end{verbatim}
 
 In previous chapters, we have discussed methods of fabricating carbon
@@ -241,15 +241,45 @@ Molecules}\label{non-covalent-functionalisation-linker-molecules}}
 
 Linker molecules may be attached via covalent or non-covalent bonding to
 carbon nanomaterials, such as carbon nanotubes and graphene.
-Non-covalent binding is weaker than covalent binding. However, the
-advantage of non-covalent binding is that it disrupts the structure of
-the nanomaterial less than covalent bonding does, and therefore has less
-of a negative impact on the electrical properties of the transducer
-\autocite{DiCrescenzo2014}. For example, one group found covalent
-bonding of diazonium linker caused a \(\sim 50 %
-\) drop in channel mobility \autocite{Lerner2014}. In particular, this
-thesis discusses \(\pi-\pi\) bonding, a particular strong type of
-non-covalent bonding.
+Non-covalent bonding is weaker than covalent bonding. However,
+non-covalent bonding has the advantage of having a smaller impact on the
+structure of a nanomaterial than covalent bonding, and therefore having
+less of a negative effect on the electrical properties of the transducer
+\autocite{Long2012,DiCrescenzo2014}. For example, one group found
+covalent bonding of diazonium linker caused a \(\sim 50\)\% drop in
+graphene channel mobility \autocite{Lerner2014}. In comparison, only a
+\(\sim 5\)\% drop in mobility was seen for attachment of a mixture of
+linkers containing pyrene to a graphene channel via non-covalent \(\pi\)
+stacking \autocite{Thodkar2021}.
+
+\(\pi\) stacking or \(\pi-\pi\) interaction is often used to describe a
+particularly strong type of non-covalent bonding which occurs due to
+dispersion forces between unsaturated polycyclic molecules. It has been
+argued that this label is unhelpfully specific and a misrepresentation
+of what can be simply classed as a type of Van Der Waals bonding.
+However, as the use of the term is widespread in the literature it is
+also used here for ease of reference. Carbon nanotubes and graphene
+consist of a network of atoms attached to each other by sp\(^{2}\)
+hybrid orbitals in a polycyclic structure. They are therefore able to
+interact with linker molecules with aromatic moieties, such as pyrene.
+Figure~\ref{fig-pi-interaction-cnt} is a visual demonstration of the
+relationship between the pyrene-based linker molecule with the
+transducer and receptor elements. \(\pi-\pi\) stacking with pyrene is
+the bonding mechanism underlying all the functionalisation processes in
+this thesis.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\textwidth,height=\textheight]{./figures/ch6/pyrene-cnt.png}
+
+}
+
+\caption{\label{fig-pi-interaction-cnt}Attachment of pyrene-based linker
+molecule pyrene-X and receptor Y to a carbon nanotube, representing the
+transducer element of a field-effect transistor. Source: Adapted from
+\autocite{Carbonnanotube}.}
+
+\end{figure}
 
 \hypertarget{pyrenebutanoic-acid-n-hydroxysuccinimide-ester-pbase}{%
 \subsection{1-Pyrenebutanoic acid N-hydroxysuccinimide ester
@@ -269,8 +299,7 @@ non-covalent bonding.
 
 }
 
-\subcaption{\label{fig-pbase-stable-1}Hartree-Fock energy: -3427728.67
-kJ/mol (9 s.f.)}
+\subcaption{\label{fig-pbase-stable-1}}
 \end{minipage}%
 %
 \begin{minipage}[t]{0.05\linewidth}
@@ -295,15 +324,18 @@ kJ/mol (9 s.f.)}
 
 }
 
-\subcaption{\label{fig-pbase-stable-2}Hartree-Fock energy: -3427729.66
-kJ/mol (9 s.f.)}
+\subcaption{\label{fig-pbase-stable-2}}
 \end{minipage}%
 
 \caption{\label{fig-pbase-structure}Two conformations of PBASE molecule
 with geometry optimised via \emph{ab initio} calculations (computed
-using Gaussian 16 \autocite{g16}). The difference between computed
-Hartree-Fock energies is 1.0 kJ/mol, small enough that the existence of
-both molecular conformations is physically possible.}
+using Gaussian 16 \autocite{g16}). White balls correspond to hydrogen,
+grey to carbon, red to oxygen and blue to nitrogen. The conformation in
+(a) has a Hartree-Fock energy of -3427728.67 kJ/mol, while the
+conformation in (b) has a Hartree-Fock energy of -3427729.66 kJ/mol. The
+difference between computed Hartree-Fock energies is 1.0 kJ/mol, small
+enough that the existence of both molecular conformations is physically
+possible.}
 
 \end{figure}
 
@@ -312,7 +344,7 @@ commercially and in the literature as 1-Pyrenebutyric acid
 N-hydroxysuccinimide ester, PBASE, PBSE, PASE, Pyr-NHS, PyBASE, PANHS)
 is a aromatic, bifunctional molecule commonly used for tethering
 biomolecules to the carbon rings of graphene and carbon nanotubes. The
-optimised molecular structure of PBASE is shown in
+molecular structure of PBASE is shown in
 Figure~\ref{fig-pbase-structure}.
 
 The non-covalent functionalisation of proteins onto a single-walled
