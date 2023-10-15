@@ -75,18 +75,9 @@ The non-covalent functionalisation of proteins onto a single-walled carbon nanot
 
  However, it is also apparent from @tbl-pbase-functionalisation that there is a large degree of variation in the methods used for PBASE functionalisation. Various electrical characterisation, microscopy and spectroscopy techniques have been used to demonstrate successful functionalisation. However, until recently there has been little  justification provided for the selection of a particular procedure. In fact, there is a notable lack of systematic research into formation of pyrene-derivative monolayers on graphene and other carbon nanomaterials, despite the wide use of this chemistry for sensors the literature [@Hinnemo2017; @Zhen2018]. This is surprising given that, for example, the sensitivity of aptamer functionalised graphene devices is considered to be closely related to the density of functionalised aptamer on the graphene channel [@Hao2020]. Detailed investigation of suitable PBASE functionalisation parameters has only been undertaken for graphene-based devices [@Zhen2018; @Hao2020]. Importantly, Hao *et al.* determine that acheiving a highly dense surface coverage of PBASE results in more sensitive aptameric sensing [@Hao2020].
 
-::: {#fig-pbase-nmr layout-ncol=1}
+We purchased PBASE from two suppliers, Sigma-Aldrich and Setareh Biotech. Sigma recommended DMF and methanol as suitable solvents for dissolving PBASE, alongside chloroform and dimethyl sulfoxide (DMSO). Setareh Biotech indicated methanol can be used for dissolving PBASE. The two suppliers had conflicting information for suitable storage of PBASE, with Sigma recommending room temperature storage while Setareh Biotech recommends storage of  $-5$ to $-30 ^\circ \text{C}$ and protection from light and moisture. 
 
-![](figures/ch6/modified_sigma_pbase_nmr.png){#fig-sigma-nmr}
-
-![](figures/ch6/modified_setareh_pbase_nmr.png){#fig-setareh-nmr}
-
-![](figures/ch6/modified_dmso_nmr.png){#fig-dmso-nmr}
-
-$^{1}$H Nuclear Magnetic Resonance (NMR) spectra, performed with DMSO-d$_6$ used as the NMR solvent. (a) and (b) show NMR spectrum for commercially purchased PBASE, from Sigma-Aldrich and Setareh Biotech respectively, while (c) shows the blank spectrum taken with only DMSO-d$_6$ present (spectra taken by Jennie Ramirez-Garcia).
-:::
-
-We purchased PBASE from two suppliers, Sigma-Aldrich and Setareh Biotech. Sigma recommended DMF and methanol as suitable solvents for dissolving PBASE, alongside chloroform and dimethyl sulfoxide (DMSO). Setareh Biotech indicated methanol can be used for dissolving PBASE. The two suppliers had conflicting information for suitable storage of PBASE, with Sigma recommending room temperature storage while Setareh Biotech recommends storage of  $-5$ to $-30 ^\circ \text{C}$ and protection from light and moisture. @fig-pbase-nmr compares the shapes of NMR spectra of PBASE from each supplier when dissolved in deuterated DMSO, alongside a blank deuterated DMSO spectrum. 
+@fig-pbase-nmr compares the shapes of hydrogen nuclear magnetic resonance (NMR) spectra of PBASE from each supplier when dissolved in deuterated DMSO, alongside a blank deuterated DMSO spectrum. We see both PBASE samples possess characteristic features between $2.1-2.2$ ppm, $2.8-2.9$ ppm, and $3.4-3.5$ ppm. The chemical shift feature at 2.50 ppm represents the deuterated DMSO solvent, while the single peak between $3.3-3.4$ ppm represents the water present in the sample. By comparing the area of these peaks, we can estimate the amount of water originally present in the PBASE sample. The H$_{2}$O:DMSO ratio is 1:7 in the blank spectrum, but approximatley $\sim$ 1:3 in the provided samples, possibly indicating the introduction of water to the PBASE during production or storage. However, DMSO is strongly hygroscopic and slight differences in DMSO storage time and environmental humidity during sample preparation may have influenced this result [@Lebel1962]. Other impurities are also seen on both PBASE spectra, though their small size indicates they make up only a small percentage of each sample.
 
 \newpage
 \KOMAoptions{paper=landscape,pagesize}
@@ -115,7 +106,20 @@ knitr::kable(pbase_table,
 \newpage
 \KOMAoptions{paper=portrait,pagesize}
 
-## Verifying Pyrene Attachment to CNT network and graphene
+::: {#fig-pbase-nmr layout-ncol=1}
+
+![](figures/ch6/modified_sigma_pbase_nmr.png){#fig-sigma-nmr}
+
+![](figures/ch6/modified_setareh_pbase_nmr.png){#fig-setareh-nmr}
+
+![](figures/ch6/modified_dmso_nmr.png){#fig-dmso-nmr}
+
+$^{1}$H Nuclear Magnetic Resonance (NMR) spectra, performed with DMSO-d$_6$ used as the NMR solvent. (a) and (b) show NMR spectrum for commercially purchased PBASE, from Sigma-Aldrich and Setareh Biotech respectively, while (c) shows the blank spectrum taken with only DMSO-d$_6$ present (spectra taken by Jennie Ramirez-Garcia).
+:::
+
+### Other Pyrene-Based Linkers
+
+## Verifying Pyrene Attachment to CNT network and Graphene
 
 ###	Photoresist contamination {#sec-photoresist-contamination}
 ###	Raman Spectroscopy
