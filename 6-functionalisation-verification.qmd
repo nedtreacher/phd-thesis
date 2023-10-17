@@ -85,7 +85,7 @@ knitr::kable(pbase_table,
 \newpage
 \KOMAoptions{paper=portrait,pagesize}
 
-### 1-Pyrenebutanoic acid N-hydroxysuccinimide ester (PBASE)
+### 1-Pyrenebutanoic acid N-hydroxysuccinimide ester (PBASE) {#sec-PBASE}
 
 ::: {#fig-pbase-structure layout="[[47.5,-5,47.5]]"}
 
@@ -115,15 +115,21 @@ $^{1}$H Nuclear Magnetic Resonance (NMR) spectra, performed with DMSO-d$_6$ used
  
 Zhen *et al.*, Wang *et al.* and Mishyn *et al.* claim that carefully tuning the surface concentration of PBASE is required to avoid multilayer coverage of the graphene surface, as this negatively impacts sensing. Mishyn *et al.* use cyclic voltammetry to demonstrate that less receptor attachment to the graphene surface occurs when multiple layers of PBASE are present. However, neither group lends further support to their claim by performing analyte sensing using their functionalised graphene devices [@Zhen2018; @Mishyn2022]. In contrast, Hao *et al.* find that maximising surface coverage of PBASE results in more sensitive aptameric sensing, thus drawing the opposite conclusion [@Hao2020]. The inconsistency in these recent findings mean more work is needed to understand the PBASE functionalisation process to achieve optimal biosensor sensitivity. It may also be the case that a specific functionalisation process is required for optimal sensitivity with the use of a specific type of receptor.
 
-Once fastened to a bioreceptor via an amide or imide bond, the attachment to the linker molecule is not easily broken. However, prior to any functionalisation processes taking place, the NHS ester may react with any water present (hydrolysis), especially at high pH. This reaction converts PBASE to 1-Pyrenebutyric acid (PBA), leaving it unavailable to react further with amine groups [@Hermanson2013-3; @Hermanson2013-5; @Mishyn2022]. If the full functionalisation process is performed within a few hours, with a high concentration of bioreceptor used at close to neutral pH, competing hydrolysis should not have an significantly adverse impact on the functionalisation process [@Hermanson2013-3]. However, if PBASE is exposed to water during storage over a significant length of time, the presence of 1-Ethyl-3-(3-dimethylaminopropyl)carbodiimide (EDC) and N-Hydroxysuccinimide (NHS) is required to restore the NHS ester and enable the substitution reaction to take place (see discussion of EDC in @sec-other-linkers).
+Once fastened to a bioreceptor via an amide or imide bond, the attachment to the linker molecule is not easily broken. However, prior to use in functionalisation processes, the NHS ester may react with any water present (hydrolysis). This reaction converts PBASE to 1-pyrenebutyric acid (PBA), leaving it unavailable to react further with amine groups [@Hermanson2013-3; @Hermanson2013-5; @Mishyn2022]. If the amine group functionalisation is performed within a $\sim$ 1 hour period, with a high concentration of bioreceptor used at close to neutral pH, competing hydrolysis should not have an overly adverse impact on the functionalisation process [@Hermanson2013-3]. However, if PBASE is exposed to water during storage over a significant length of time, the presence of 1-Ethyl-3-(3-dimethylaminopropyl)carbodiimide (EDC) and N-Hydroxysuccinimide (NHS) is required in the reaction vessel to restore the NHS ester and enable the substitution reaction to take place (see discussion of EDC in @sec-other-linkers).
 
 We purchased PBASE from two suppliers, Sigma-Aldrich and Setareh Biotech. Sigma recommended DMF and methanol as suitable solvents for dissolving PBASE, alongside chloroform and dimethyl sulfoxide (DMSO). Setareh Biotech indicated methanol can be used for dissolving PBASE. The two suppliers had conflicting information for suitable storage of PBASE, with Sigma recommending room temperature storage while Setareh Biotech recommends storage of  $-5$ to $-30 ^\circ \text{C}$ and protection from light and moisture. Given the long travel time of the PBASE samples under uncertain storage conditions, we used nuclear magnetic resonance (NMR) spectroscopy to verify the purity of the PBASE as recieved from each supplier. In light of the negative effect of water on PBASE, in particular we wanted to find out if any water was present in the samples.
 
 @fig-pbase-nmr compares the shapes of hydrogen  (NMR) spectra of PBASE from each supplier when dissolved in deuterated DMSO, alongside a blank deuterated DMSO spectrum. We see both PBASE samples possess characteristic chemical shift features between $2.1-2.2$ ppm, $2.8-2.9$ ppm, and $3.4-3.5$ ppm. The feature at 2.50 ppm represents the deuterated DMSO solvent, while the single peak between $3.3-3.4$ ppm represents the water present in the sample. By comparing the area of these peaks, we can estimate the amount of water originally present in the PBASE sample. The H$_{2}$O:DMSO ratio is 1:7 in the blank spectrum, but $\sim$ 1:3 in the provided samples, possibly indicating the introduction of water to the PBASE during production or storage. However, DMSO is strongly hygroscopic and slight differences in DMSO storage time, as well as differences in  humidity during sample preparation, may have had a significant impact on this result [@Lebel1962]. Other impurities are also seen on both PBASE spectra, though their small size indicates they make up only a small percentage of each sample.
 
+Solvent
+
 ### Other Pyrene-Based Linkers {#sec-other-linkers}
 
 #### 1-Pyrenebutyric Acid (PBA) with EDC/NHS {.unnumbered}
+
+Another linker molecule that can be used to attach receptor molecules to a carbon nanotube or graphene channel is 1-pyrenebutyric acid (PBA). As with PBASE, the pyrene group of PBA has a $pi$ interaction with the carbon rings of the channel surface. As mentioned in @sec-PBASE, it is possible to convert the carboxylic acid group of PBA using 1-Ethyl-3-(3-dimethylaminopropyl)carbodiimide (EDC) and N-Hydroxysuccinimide (NHS) into a reactive NHS group, forming molecules of PBASE. As described earlier, the attached PBASE can then form amide or imide bonds with proteins or aptamers.
+
+More relaible re hdyolysis but problem is it introduces more variables (see table)
 
 #### Pyrene-PEG-NTA {.unnumbered}
 
