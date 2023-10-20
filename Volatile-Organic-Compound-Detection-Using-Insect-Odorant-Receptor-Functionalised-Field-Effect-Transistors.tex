@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, interior hidden, sharp corners, frame hidden, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, interior hidden, enhanced, breakable, frame hidden, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -206,7 +206,7 @@ and
 Graphene}\label{verifying-non-covalent-functionalisation-of-carbon-nanotubes-and-graphene}}
 
 \begin{verbatim}
-229961
+231772
 \end{verbatim}
 
 In previous chapters, we have discussed methods of fabricating carbon
@@ -555,9 +555,9 @@ impact on the functionalisation process \autocite{Hermanson2013-3}.
 However, if PBASE is exposed to water during storage over a significant
 length of time, the presence of
 1-Ethyl-3-(3-dimethylaminopropyl)carbodiimide (EDC) and
-N-Hydroxysuccinimide (NHS) is required in the reaction vessel to restore
-the NHS ester and enable the substitution reaction to take place (see
-discussion of EDC in Section~\ref{sec-other-linkers}).
+N-Hydroxysuccinimide (NHS) can be used to restore the NHS ester and
+enable the substitution reaction to take place (see discussion of EDC in
+Section~\ref{sec-other-linkers}).
 
 We purchased PBASE from two suppliers, Sigma-Aldrich and Setareh
 Biotech. Sigma recommended DMF and methanol as suitable solvents for
@@ -592,7 +592,7 @@ significant impact on this result \autocite{Lebel1962}. Other impurities
 are also seen on both PBASE spectra, though their small size indicates
 they make up only a small percentage of each sample. Note that Strack
 \emph{et al.} recommend leaving frozen PBASE at room temperature for 15
-minutes before opening to prevent teh introduction of condensation
+minutes before opening to prevent the introduction of condensation
 \autocite{Strack2013}.
 
 \begin{figure}
@@ -728,6 +728,38 @@ electrical control measurements are required for an understanding of
 electronic changes occuring during the functionalisation process, in the
 manner of Besteman \emph{et al.} \autocite{Besteman2003}.
 
+\hypertarget{sec-other-linkers}{%
+\subsection{Other Pyrene-Based Linkers}\label{sec-other-linkers}}
+
+\hypertarget{pyrenebutyric-acid-pba-with-edcnhs}{%
+\subsubsection*{1-Pyrenebutyric Acid (PBA) with
+EDC/NHS}\label{pyrenebutyric-acid-pba-with-edcnhs}}
+\addcontentsline{toc}{subsubsection}{1-Pyrenebutyric Acid (PBA) with
+EDC/NHS}
+
+Another linker molecule that can be used to attach receptor molecules to
+a carbon nanotube or graphene channel is 1-pyrenebutyric acid (PBA). As
+with PBASE, the pyrene group of PBA has a \(\pi\) interaction with the
+carbon rings of the channel surface. It is possible to react PBA with
+1-ethyl-3-(3-dimethylaminopropyl) carbodiimide hydrochloride (EDC or
+EDAC) to form an \emph{O}-acylisourea intermediate, which can then react
+with an amine group on a biomolecule and form an amide bond
+\autocite{Hermanson2013-4,Sehgal1994}. The water solubility of EDC means
+that, unlike PBASE, it is possible to functionalise with EDC dissolved
+in water rather than in an organic solvent. However, like PBASE, EDC and
+the \emph{O}-acylisourea intermediate are prone to hydrolysis,
+especially in acidic conditions. Therefore, like PBASE, it should be
+stored at −20\(^\circ\)C, and warmed to room temperature to prevent
+condensation build-up, since exposure to condensation will hydrolyse the
+reagent \autocite{Hermanson2013-4}. Furthermore, N-Hydroxysuccinimide
+(NHS) or N-hydroxysulfosuccinimide (sulfo-NHS) can
+
+As mentioned in Section~\ref{sec-PBASE}, it is possible to convert the
+carboxylic acid group of PBA into a reactive NHS group using
+1-ethyl-3-(3-dimethylaminopropyl) carbodiimide hydrochloride (EDC or
+EDAC), forming molecules of PBASE. As described earlier, the attached
+PBASE can then form amide or imide bonds with proteins or aptamers.
+
 \newpage
 \KOMAoptions{paper=landscape,pagesize}
 
@@ -776,34 +808,6 @@ DMSO & Graphene & 5 & 1 & 50 & 50 & 90 & Fenzl \textit{et al.}
 
 \newpage
 \KOMAoptions{paper=portrait,pagesize}
-
-\hypertarget{sec-other-linkers}{%
-\subsection{Other Pyrene-Based Linkers}\label{sec-other-linkers}}
-
-\hypertarget{pyrenebutyric-acid-pba-with-edcnhs}{%
-\subsubsection*{1-Pyrenebutyric Acid (PBA) with
-EDC/NHS}\label{pyrenebutyric-acid-pba-with-edcnhs}}
-\addcontentsline{toc}{subsubsection}{1-Pyrenebutyric Acid (PBA) with
-EDC/NHS}
-
-Another linker molecule that can be used to attach receptor molecules to
-a carbon nanotube or graphene channel is 1-pyrenebutyric acid (PBA). As
-with PBASE, the pyrene group of PBA has a \(\pi\) interaction with the
-carbon rings of the channel surface. As mentioned in
-Section~\ref{sec-PBASE}, it is possible to convert the carboxylic acid
-group of PBA into a reactive NHS group using
-1-ethyl-3-(3-dimethylaminopropyl) carbodiimide hydrochloride (EDC or
-EDAC), forming molecules of PBASE. As described earlier, the attached
-PBASE can then form amide or imide bonds with proteins or aptamers. The
-water solubility of EDC means that it is possible to functionalise with
-EDC in water rather than an organic solvent. However, like PBASE, EDC is
-prone to hydrolysis, especially in acidic conditions. Therefore, like
-PBASE, it should be stored at −20\(^\circ\)C, and warmed to room
-temperature to prevent condensation build-up, as exposure to
-condensation will result in hydrolysis and decomposition of the reagent
-with repeated thawing cycles \autocite{Hermanson2013-4}.
-
-and N-Hydroxysuccinimide (NHS)
 
 More relaible re hdyolysis but problem is it introduces more variables
 (see table)
