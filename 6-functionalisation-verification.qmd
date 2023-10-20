@@ -63,7 +63,7 @@ $\pi$ stacking or $\pi-\pi$ interaction is often used to describe a type of non-
 
 ```{r}
 #| label: tbl-pbase-functionalisation
-#| tbl-cap: Comparison of PBASE functionalisation processes used for immobilisation of proteins and aptamers onto carbon nanotubes and graphene. Experimentally optimised variables are marked with a star (*).
+#| tbl-cap: Comparison of PBASE functionalisation processes used for immobilisation of proteins and aptamers onto carbon nanotubes and graphene. Experimentally optimised variables are marked with a star (*). Blank entries indicate there was no mention of the parameter in a particular paper.
 
 knitr::opts_chunk$set(echo = FALSE)
 library(knitr)
@@ -96,9 +96,9 @@ knitr::kable(pbase_table,
 Two conformations of PBASE molecule with geometry optimised via *ab initio* calculations (computed using Gaussian 16 [@g16]). White balls correspond to hydrogen, grey to carbon, red to oxygen and blue to nitrogen. The conformation in (a) has a Hartree-Fock energy of -3427728.67 kJ/mol, while the conformation in (b) has a Hartree-Fock energy of -3427729.66 kJ/mol. The difference between computed Hartree-Fock energies is 1.0 kJ/mol, small enough that the existence of both molecular conformations is physically feasible.
 :::
 
-1-Pyrenebutanoic acid N-hydroxysuccinimide ester (variously known commercially and in the literature as 1-Pyrenebutyric acid N-hydroxysuccinimide ester, PBASE, PBSE, PASE, Pyr-NHS, PyBASE, PANHS) is a aromatic, bifunctional molecule commonly used for tethering biomolecules to the carbon rings of graphene and carbon nanotubes. The molecular structure of PBASE is shown in @fig-pbase-structure. The pyrene moiety, seen at the bottom of the molecular structure, non-covalently bonds to the carbon rings of the carbon nanotube and graphene surface. An N-hydroxysuccinimide (NHS) ester group is found at the top of the molecular structure, attached to the rest of the molecule via a O-C bond. The NHS ester group is highly reactive with amine groups; it can undergo a nucleophilic substitution reaction with amines attached to proteins or aptamers, tethering these biomolecules via an amide or imide bond [@Chen2001; @Hermanson2013-16; @Hermanson2013-3; @Mishyn2022].
+1-Pyrenebutanoic acid N-hydroxysuccinimide ester (variously known commercially and in the literature as 1-Pyrenebutyric acid N-hydroxysuccinimide ester, PBASE, PBSE, PASE, Pyr-NHS, PyBASE, PANHS) is a aromatic, bifunctional molecule commonly used for tethering biomolecules to the carbon rings of graphene and carbon nanotubes. The molecular structure of PBASE is shown in @fig-pbase-structure. Two locally stable molecular conformations were found to exist, a straight (@fig-pbase-stable-1) and bent (@fig-pbase-stable-2)  structure. Similar locally stable structures have previously been computed for PBASE attached to graphene [@Oishi2022]. The pyrene moiety, seen at the bottom of the molecular structure, non-covalently bonds to the carbon rings of the carbon nanotube and graphene surface. An N-hydroxysuccinimide (NHS) ester group is found at the top of the molecular structure, attached to the rest of the molecule via a O-C bond. The NHS ester group is highly reactive with amine groups; it can undergo a nucleophilic substitution reaction with amines attached to proteins or aptamers, tethering these biomolecules via an amide or imide bond [@Chen2001; @Hermanson2013-16; @Hermanson2013-3; @Mishyn2022].
 
-The non-covalent functionalisation of proteins onto a single-walled carbon nanotube using PBASE was first reported by Chen *et al.* in 2001 [@Chen2001]. Two methods for protein functionalisation and immobilisation were successfully used, with the only differences being the solvent used to dissolve the PBASE powder (DMF, methanol) and the final concentration of the resulting solutions (6 mM, 1 mM respectively). The lower concentration may have been used for PBASE in methanol as PBASE powder appears to dissolve poorly in methanol at higher concentrations. Several groups directly cite Chen *et al.* when discussing functionalisation with PBASE [@Cella2010; @Campos2019; @Zheng2016; @Ohno2010]. Other groups using PBASE for graphene or carbon nanotube functionalisation do not explicitly reference Chen *et al.* in their methodology, but it is apparent they often draw on one of these two original methods. This common ancestry becomes apparent from the high frequency of methods detailing the use of 6 mM PBASE in dimethylformamide (DMF) and 1 mM PBASE in methanol, as seen in @tbl-pbase-functionalisation.
+The non-covalent functionalisation of proteins onto a single-walled carbon nanotube using PBASE was first reported by Chen *et al.* in 2001 [@Chen2001]. Two methods for protein functionalisation and immobilisation were successfully used, with the only differences being the solvent used to dissolve the PBASE powder (DMF, methanol) and the final concentration of the resulting solutions (6 mM, 1 mM respectively). The lower concentration may have been used for PBASE in methanol as PBASE powder appears to dissolve poorly in methanol at higher concentrations. Several groups directly cite Chen *et al.* when discussing functionalisation with PBASE [@Besteman2003; @Cella2010; @Campos2019; @Zheng2016; @Ohno2010]. Other groups using PBASE for graphene or carbon nanotube functionalisation do not explicitly reference Chen *et al.* in their methodology, but it is apparent they often draw on one of these two original methods. This common ancestry becomes apparent from the high frequency of methods detailing the use of 6 mM PBASE in dimethylformamide (DMF) and 1 mM PBASE in methanol, as seen in @tbl-pbase-functionalisation.
 
 ::: {#fig-pbase-nmr layout-ncol=1}
 
@@ -117,23 +117,79 @@ Zhen *et al.*, Wang *et al.* and Mishyn *et al.* claim that carefully tuning the
 
 Once fastened to a bioreceptor via an amide or imide bond, the attachment to the linker molecule is not easily broken. However, prior to use in functionalisation processes, the NHS ester may react with any water present (hydrolysis). This reaction converts PBASE to 1-pyrenebutyric acid (PBA), leaving it unavailable to react further with amine groups [@Hermanson2013-3; @Hermanson2013-5; @Mishyn2022]. If the amine group functionalisation is performed within a $\sim$ 1 hour period, with a high concentration of bioreceptor used at close to neutral pH, competing hydrolysis should not have an overly adverse impact on the functionalisation process [@Hermanson2013-3]. However, if PBASE is exposed to water during storage over a significant length of time, the presence of 1-Ethyl-3-(3-dimethylaminopropyl)carbodiimide (EDC) and N-Hydroxysuccinimide (NHS) is required in the reaction vessel to restore the NHS ester and enable the substitution reaction to take place (see discussion of EDC in @sec-other-linkers).
 
-We purchased PBASE from two suppliers, Sigma-Aldrich and Setareh Biotech. Sigma recommended DMF and methanol as suitable solvents for dissolving PBASE, alongside chloroform and dimethyl sulfoxide (DMSO). Setareh Biotech indicated methanol can be used for dissolving PBASE. The two suppliers had conflicting information for suitable storage of PBASE, with Sigma recommending room temperature storage while Setareh Biotech recommends storage of  $-5$ to $-30 ^\circ \text{C}$ and protection from light and moisture. Given the long travel time of the PBASE samples under uncertain storage conditions, we used nuclear magnetic resonance (NMR) spectroscopy to verify the purity of the PBASE as recieved from each supplier. In light of the negative effect of water on PBASE, in particular we wanted to find out if any water was present in the samples.
+We purchased PBASE from two suppliers, Sigma-Aldrich and Setareh Biotech. Sigma recommended DMF and methanol as suitable solvents for dissolving PBASE, alongside chloroform and dimethyl sulfoxide (DMSO). Setareh Biotech indicated methanol can be used for dissolving PBASE. The two suppliers had conflicting information for suitable storage of PBASE, with Sigma recommending room temperature storage while Setareh Biotech recommends storage of $-5$ to $-30 ^\circ \text{C}$ and protection from light and moisture. Given the long travel time of the PBASE samples under uncertain storage conditions, we used nuclear magnetic resonance (NMR) spectroscopy to verify the purity of the PBASE as recieved from each supplier. In light of the negative effect of water on PBASE, in particular we wanted to find out if any water was present in the samples.
 
-@fig-pbase-nmr compares the shapes of hydrogen  (NMR) spectra of PBASE from each supplier when dissolved in deuterated DMSO, alongside a blank deuterated DMSO spectrum. We see both PBASE samples possess characteristic chemical shift features between $2.1-2.2$ ppm, $2.8-2.9$ ppm, and $3.4-3.5$ ppm. The feature at 2.50 ppm represents the deuterated DMSO solvent, while the single peak between $3.3-3.4$ ppm represents the water present in the sample. By comparing the area of these peaks, we can estimate the amount of water originally present in the PBASE sample. The H$_{2}$O:DMSO ratio is 1:7 in the blank spectrum, but $\sim$ 1:3 in the provided samples, possibly indicating the introduction of water to the PBASE during production or storage. However, DMSO is strongly hygroscopic and slight differences in DMSO storage time, as well as differences in  humidity during sample preparation, may have had a significant impact on this result [@Lebel1962]. Other impurities are also seen on both PBASE spectra, though their small size indicates they make up only a small percentage of each sample.
+@fig-pbase-nmr compares the shapes of hydrogen  (NMR) spectra of PBASE from each supplier when dissolved in deuterated DMSO, alongside a blank deuterated DMSO spectrum. We see both PBASE samples possess characteristic chemical shift features between $2.1-2.2$ ppm, $2.8-2.9$ ppm, and $3.4-3.5$ ppm. These chemical shifts roughly correspond to those seen in previous NMR spectra for PBASE [@NMR2]. The feature at 2.50 ppm represents the deuterated DMSO solvent, while the single peak between $3.3-3.4$ ppm represents the water present in the sample. By comparing the area of these peaks, we can estimate the amount of water originally present in the PBASE sample. The H$_{2}$O:DMSO ratio is 1:7 in the blank spectrum, but $\sim$ 1:3 in the provided samples, possibly indicating the introduction of water to the PBASE during production or storage. However, DMSO is strongly hygroscopic and slight differences in DMSO storage time, as well as differences in  humidity during sample preparation, may have had a significant impact on this result [@Lebel1962]. Other impurities are also seen on both PBASE spectra, though their small size indicates they make up only a small percentage of each sample. Note that Strack *et al.* recommend leaving frozen PBASE at room temperature for 15 minutes before opening to prevent teh introduction of condensation [@Strack2013].
 
-Solvent
+::: {#fig-PBASE-vs-solvent-only layout="[[50,50],[50,50]]"}
+
+![](figures/ch6/Q23D5_ch4_MeOHonly.png){#fig-meoh-only-tx}
+
+![](figures/ch6/Q23D12_ch1_DMSOonly.png){#fig-dmso-only-tx}
+
+![](figures/ch6/Q2C6_ch2_MeOHPBASE.png){#fig-meoh-pbase-tx}
+
+![](figures/ch6/Q23D7_ch8_DMSOPBASE.png){#fig-dmso-pbase-tx}
+
+The change in the electrical transfer characteristics of carbon nanotube transistors after being submerged in solvent for one hour and then rinsed thoroughly is demonstrated in (a) and (b), where the solvents used are methanol (MeOH) and dimethyl sulfoxide (DMSO) respectively. The change in characteristics of similar transistor channels after being submerged in these same solvents for one hour along with 1 mM PBASE then rinsed are shown in (c) and (d) respectively. Threshold voltages for each transfer characteristic are also shown.
+:::
+
+The electrical characteristics of the carbon nanotube or graphene transistor are often used to verify successful functionalisation and make a statement about the effect of chemical modification on the channel. However, this verification usually does not account for the effect of the solvent on the transistor channel. @fig-meoh-only-tx and @fig-dmso-only-tx show that by exposing a carbon nanotube network channel to solvents commonly used in PBASE functionalisation processes (@tbl-pbase-functionalisation), such as methanol (MeOH) or dimethyl sulfoxide (DMSO), a significant negative shift in channel threshold voltage occurs even after thorough rinsing with deionised water. Besteman *et al.* reported observing a similar effect from prolonged exposure of a single carbon nanotube to dimethylformamide (DMF) [@Besteman2003]. It appears that the carbon nanotubes have adsorped solvent which persists even after device cleaning. From the shape of the change in the transfer curve, it seems the residual polar solvent molecules capacitively gate the channel [@Artyukhin2006; @Heller2008]. 
+
+In contrast, previous work has shown that $\pi$-stacking carbon nanotube network to PBASE does not significantly affect the channel gating and therefore the channel threshold voltage [@Besteman2003; @Murugathas2019b]. Murugathas *et al.* observed a slight increase in channel conductance after PBASE functionalisation. In @fig-PBASE-vs-solvent-only, we also observe a slight increase in channel conductance post-functionalisation for both @fig-meoh-pbase-tx and @fig-dmso-pbase-tx relative to the solvent only case in @fig-meoh-only-tx and @fig-dmso-only-tx. This result indicates that the presence of PBASE molecules increases channel conductance due to additional pathways provided by the presence of PBASE [@Heller2008; @Murugathas2019b].
+
+Capactive gating results from dense coverage of adsorped molecules on the carbon nanotube surface which have a low permittivity relative to the surrounding electrolyte [@Heller2008]. The relative permittivity of MeOH and DMSO are $\sim$ 33 [@Mohsen-Nia2010] and $\sim$ 47 [@Hunger2010] respectively, which are both much lower than $\sim$ 80, the relative permittivity of phosphate buffer saline [@Salmanzadeh2013]. From @fig-meoh-only-tx and @fig-dmso-only-tx, we find the average threshold shift values resulting from exposure to each solvent were $\Delta$V = $-0.18 \pm 0.03$ V and $\Delta$V = $-0.17 \pm 0.02$ for MeOH and DMSO respectively. The threshold voltage shift in @fig-meoh-pbase-tx and @fig-dmso-pbase-tx are comparatively small - this is likely due to the effect of increased conductance from the PBASE competing with the gating effect from the residual solvent.
+
+This example illustrates why the use of electrical characteristics when making conclusions around a successful functionalisation process should individually take into account each substance used in the process. The qualitative presence of a change in characteristics (or lack of one) over the full process is not sufficient to make conclusive remarks about the electrical changes due to functionalisation. A full set of electrical control measurements are required for an understanding of electronic changes occuring during the functionalisation process, in the manner of Besteman *et al.* [@Besteman2003].
+
+\newpage
+\KOMAoptions{paper=landscape,pagesize}
+
+\
+\
+\
+
+
+```{r}
+#| label: tbl-pba-functionalisation
+#| tbl-cap: Comparison of 1-pyrenebutyric acid (PBA) functionalisation processes used for immobilisation of proteins and aptamers onto carbon nanotubes and graphene. 1-ethyl-3-(3-dimethylaminopropyl) carbodiimide hydrochloride (EDC) and NHS were co-mingled in buffer/electrolyte solution or DI water in each process - some papers used N-hydroxysulfosuccinimide instead of N-hydroxysuccinimide, and both compounds are abbreviated to NHS in this table. $^†$PEG or PEG pyrene were used to reduce non-specific binding. $^{††}$Several pyrene-based linkers were compared and PBA was found to give an optimal result. 
+
+knitr::opts_chunk$set(echo = FALSE)
+library(knitr)
+
+pba_table <- read.csv("tables/ch6/pba_table.csv", sep=",")
+pba_table <- pba_table[rowSums(is.na(pba_table)) == 0,]
+
+knitr::kable(pba_table, 
+            col.names = c("Solvent",
+                           "Channel",
+                           "PBA (mM)",
+                           "PBA Time (hr)",
+                           "EDC (mM)",
+                           "NHS (mM)",
+                           "EDC/NHS Time (hr)",
+                           "References"), 
+            format = "simple")
+    
+```
+
+\newpage
+\KOMAoptions{paper=portrait,pagesize}
 
 ### Other Pyrene-Based Linkers {#sec-other-linkers}
 
 #### 1-Pyrenebutyric Acid (PBA) with EDC/NHS {.unnumbered}
 
-Another linker molecule that can be used to attach receptor molecules to a carbon nanotube or graphene channel is 1-pyrenebutyric acid (PBA). As with PBASE, the pyrene group of PBA has a $pi$ interaction with the carbon rings of the channel surface. As mentioned in @sec-PBASE, it is possible to convert the carboxylic acid group of PBA using 1-Ethyl-3-(3-dimethylaminopropyl)carbodiimide (EDC) and N-Hydroxysuccinimide (NHS) into a reactive NHS group, forming molecules of PBASE. As described earlier, the attached PBASE can then form amide or imide bonds with proteins or aptamers.
+Another linker molecule that can be used to attach receptor molecules to a carbon nanotube or graphene channel is 1-pyrenebutyric acid (PBA). As with PBASE, the pyrene group of PBA has a $\pi$ interaction with the carbon rings of the channel surface. As mentioned in @sec-PBASE, it is possible to convert the carboxylic acid group of PBA into a reactive NHS group using 1-ethyl-3-(3-dimethylaminopropyl) carbodiimide hydrochloride (EDC or EDAC), forming molecules of PBASE. As described earlier, the attached PBASE can then form amide or imide bonds with proteins or aptamers. The water solubility of EDC means that it is possible to functionalise with EDC in water rather than an organic solvent. However, like PBASE, EDC is prone to hydrolysis, especially in acidic conditions. Therefore, like PBASE, it should be stored at −20$^\circ$C, and warmed to room temperature to prevent condensation build-up, as exposure to condensation will result in hydrolysis and decomposition of the reagent with repeated thawing cycles [@Hermanson2013-4].
+
+and N-Hydroxysuccinimide (NHS)
+
+
 
 More relaible re hdyolysis but problem is it introduces more variables (see table)
 
-#### Pyrene-PEG-NTA {.unnumbered}
+#### Pyrene-PEG-NTA and Pyrene-PEG-Biotin {.unnumbered}
 
-#### Pyrene-PEG-Biotin {.unnumbered}
 
 ## Verifying Pyrene Attachment to CNT network and Graphene
 
