@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, interior hidden, enhanced, breakable, frame hidden, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, frame hidden, sharp corners, interior hidden, enhanced]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -206,7 +206,7 @@ and
 Graphene}\label{verifying-non-covalent-functionalisation-of-carbon-nanotubes-and-graphene}}
 
 \begin{verbatim}
-231772
+240962
 \end{verbatim}
 
 In previous chapters, we have discussed methods of fabricating carbon
@@ -548,16 +548,15 @@ to use in functionalisation processes, the NHS ester may react with any
 water present (hydrolysis). This reaction converts PBASE to
 1-pyrenebutyric acid (PBA), leaving it unavailable to react further with
 amine groups \autocite{Hermanson2013-3,Hermanson2013-5,Mishyn2022}. If
-the amine group functionalisation is performed within a \(\sim\) 1 hour
+the amine group functionalisation is performed within a \$\sim\$1 hour
 period, with a high concentration of bioreceptor used at close to
-neutral pH, competing hydrolysis should not have an overly adverse
+neutral pH, competing hydrolysis should not have a significantly adverse
 impact on the functionalisation process \autocite{Hermanson2013-3}.
 However, if PBASE is exposed to water during storage over a significant
 length of time, the presence of
-1-Ethyl-3-(3-dimethylaminopropyl)carbodiimide (EDC) and
-N-Hydroxysuccinimide (NHS) can be used to restore the NHS ester and
-enable the substitution reaction to take place (see discussion of EDC in
-Section~\ref{sec-other-linkers}).
+1-Ethyl-3-(3-dimethylaminopropyl)carbodiimide (EDC) can be used to
+restore the NHS ester and enable the substitution reaction to take place
+(see discussion of PBA/EDC in Section~\ref{sec-other-linkers}).
 
 We purchased PBASE from two suppliers, Sigma-Aldrich and Setareh
 Biotech. Sigma recommended DMF and methanol as suitable solvents for
@@ -603,7 +602,7 @@ minutes before opening to prevent the introduction of condensation
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch6/Q23D5_ch4_MeOHonly.png}
+\includegraphics{./figures/ch6/Q23D5_ch1_MeOHonly.png}
 
 }
 
@@ -648,7 +647,7 @@ minutes before opening to prevent the introduction of condensation
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch6/Q23D7_ch8_DMSOPBASE.png}
+\includegraphics{./figures/ch6/Q23D7_ch3_DMSOPBASE.png}
 
 }
 
@@ -696,27 +695,27 @@ observed a slight increase in channel conductance after PBASE
 functionalisation. In Figure~\ref{fig-PBASE-vs-solvent-only}, we also
 observe a slight increase in channel conductance post-functionalisation
 for both Figure~\ref{fig-meoh-pbase-tx} and
-Figure~\ref{fig-dmso-pbase-tx} relative to the solvent only case in
-Figure~\ref{fig-meoh-only-tx} and Figure~\ref{fig-dmso-only-tx}. This
-result indicates that the presence of PBASE molecules increases channel
-conductance due to additional pathways provided by the presence of PBASE
-\autocite{Heller2008,Murugathas2019b}.
+Figure~\ref{fig-dmso-pbase-tx} relative to the solvent-only case in
+Figure~\ref{fig-meoh-only-tx} and Figure~\ref{fig-dmso-only-tx}. It
+appears that the presence of PBASE molecules increases channel mobility
+and therefore conductance \autocite{Heller2008}.
 
 Capactive gating results from dense coverage of adsorped molecules on
 the carbon nanotube surface which have a low permittivity relative to
 the surrounding electrolyte \autocite{Heller2008}. The relative
 permittivity of MeOH and DMSO are \(\sim\) 33 \autocite{Mohsen-Nia2010}
 and \(\sim\) 47 \autocite{Hunger2010} respectively, which are both much
-lower than \(\sim\) 80, the relative permittivity of phosphate buffer
-saline \autocite{Salmanzadeh2013}. From Figure~\ref{fig-meoh-only-tx}
-and Figure~\ref{fig-dmso-only-tx}, we find the average threshold shift
-values resulting from exposure to each solvent were \(\Delta\)V =
-\(-0.18 \pm 0.03\) V and \(\Delta\)V = \(-0.17 \pm 0.02\) for MeOH and
-DMSO respectively. The threshold voltage shift in
-Figure~\ref{fig-meoh-pbase-tx} and Figure~\ref{fig-dmso-pbase-tx} are
-comparatively small - this is likely due to the effect of increased
-conductance from the PBASE competing with the gating effect from the
-residual solvent.
+lower than the relative permittivity of phosphate buffer saline,
+\(\sim\) 80 \autocite{Salmanzadeh2013}. From
+Figure~\ref{fig-meoh-only-tx} and Figure~\ref{fig-dmso-only-tx}, we find
+the average threshold shift values resulting from exposure to each
+solvent were \(\Delta\)V = \(-0.15 \pm 0.03\) V and \(\Delta\)V =
+\(-0.15 \pm 0.01\) for MeOH and DMSO respectively. The threshold voltage
+shifts in Figure~\ref{fig-meoh-pbase-tx} and
+Figure~\ref{fig-dmso-pbase-tx} from the pristine are small compared with
+the devices exposed to solvent only - this is likely due to the effect
+of increased conductance from the PBASE competing with the gating effect
+from the residual solvent.
 
 This example illustrates why the use of electrical characteristics when
 making conclusions around a successful functionalisation process should
@@ -731,6 +730,10 @@ manner of Besteman \emph{et al.} \autocite{Besteman2003}.
 \hypertarget{sec-other-linkers}{%
 \subsection{Other Pyrene-Based Linkers}\label{sec-other-linkers}}
 
+Alongside PBASE, there are a wide range of other pyrene-based linker
+molecules used for modification of carbon nanotubes and graphene. A few
+of these linkers are examined further below.
+
 \hypertarget{pyrenebutyric-acid-pba-with-edcnhs}{%
 \subsubsection*{1-Pyrenebutyric Acid (PBA) with
 EDC/NHS}\label{pyrenebutyric-acid-pba-with-edcnhs}}
@@ -744,21 +747,52 @@ carbon rings of the channel surface. It is possible to react PBA with
 1-ethyl-3-(3-dimethylaminopropyl) carbodiimide hydrochloride (EDC or
 EDAC) to form an \emph{O}-acylisourea intermediate, which can then react
 with an amine group on a biomolecule and form an amide bond
-\autocite{Hermanson2013-4,Sehgal1994}. The water solubility of EDC means
+\autocite{Sehgal1994,Hermanson2013-4}. The water solubility of EDC means
 that, unlike PBASE, it is possible to functionalise with EDC dissolved
 in water rather than in an organic solvent. However, like PBASE, EDC and
 the \emph{O}-acylisourea intermediate are prone to hydrolysis,
 especially in acidic conditions. Therefore, like PBASE, it should be
 stored at −20\(^\circ\)C, and warmed to room temperature to prevent
 condensation build-up, since exposure to condensation will hydrolyse the
-reagent \autocite{Hermanson2013-4}. Furthermore, N-Hydroxysuccinimide
-(NHS) or N-hydroxysulfosuccinimide (sulfo-NHS) can
+reagent \autocite{Hermanson2013-4}. Furthermore, by adding
+N-Hydroxysuccinimide (NHS) or N-hydroxysulfosuccinimide (sulfo-NHS) to
+the reaction vessel, PBASE is formed as an active intermediate, which is
+less prone to hydrolysis and increases the PBA/EDC reaction yield
+\autocite{Sehgal1994,Hermanson2013-4,Hermanson2013-14}.
 
-As mentioned in Section~\ref{sec-PBASE}, it is possible to convert the
-carboxylic acid group of PBA into a reactive NHS group using
-1-ethyl-3-(3-dimethylaminopropyl) carbodiimide hydrochloride (EDC or
-EDAC), forming molecules of PBASE. As described earlier, the attached
-PBASE can then form amide or imide bonds with proteins or aptamers.
+From Table~\ref{tbl-pbase-functionalisation} and
+Table~\ref{tbl-pba-functionalisation}, we see that PBASE is more widely
+used for non-covalent functionalisation than PBA/EDC. As was the case
+for PBASE, there are a wide range of process variables used for the
+functionalisation process, with little justification used for variables
+chosen. Also notable is the frequent use of polyethylene glycol (PEG) or
+pyrene-PEG for prevention of non-specific binding (see
+\textbf{?@sec-non-specific-binding} for further discussion of NSB).
+Despite being less widely useS, Mishyn \emph{et al.} state a preference
+for the use of PBA/EDC over PBASE, as they found it was less prone to
+hydrolysis and gave a larger reaction yield when binding ferrocene to
+graphene \autocite{Mishyn2022}. A potential downside of using PBA/EDC
+for protein immobilisation is that EDC has numerous ways of interacting
+with proteins, and not all of these are necessarily desirable. The
+addition of NHS may also cause processing issues, such as precipitation
+of the reaction compound \autocite{Hermanson2013-4}. The greater range
+of process variables involved in the functionalisation also adds to the
+complexity of accurately reproducing past results.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{./figures/ch6/NTQ24C10_ch2_PBA.png}
+
+}
+
+\caption{\label{fig-pba-threshold-shift}Electrical transfer
+characteristics of a carbon nanotube transistor before
+functionalisation, after being submerged in DMSO containing 5 mM PBA for
+1 hour, after being submerged in 1XPBS containing 20 mM EDC and 40 mM
+NHS for 30 min, then after being submerged in fresh 1XPBS for 1 hour.
+Threshold voltages for each transfer characteristic are also shown.}
+
+\end{figure}
 
 \newpage
 \KOMAoptions{paper=landscape,pagesize}
@@ -809,14 +843,52 @@ DMSO & Graphene & 5 & 1 & 50 & 50 & 90 & Fenzl \textit{et al.}
 \newpage
 \KOMAoptions{paper=portrait,pagesize}
 
-More relaible re hdyolysis but problem is it introduces more variables
-(see table)
+Figure~\ref{fig-pba-threshold-shift} shows the transfer characteristics
+of a carbon nanotube transistor at various stages of a PBA/EDC
+functionalisation, where a excess of N-hydroxysuccinimide (NHS) was
+added alongside EDC. The PBA was dissolved in DMSO, and the device
+channels were exposed to this solution for 1 hour. Subsequently, it was
+rinsed with 1XPBS and exposed to 20 mM EDC and 40 mM NHS in 1XPBS
+electrolyte for 30 minutes. We can compare
+Figure~\ref{fig-pba-threshold-shift} to
+Figure~\ref{fig-PBASE-vs-solvent-only} for a better understanding of the
+result of both the PBASE and PBA/EDC functionalisation methods. The
+threshold shift with the addition of 5 mM PBA in DMSO for 1 hour is
+equivalent to the shift seen when only DMSO is added, \(\Delta\)V =
+-0.15 V. The lack of a significant threshold shift is a result of pyrene
+having a neutral charge state, and any contributions from the charged
+carboxyl group being screened from the carbon nanotube sidewalls by
+surrounding water molecules \autocite{Lerner2012}. However, as in the
+case of the addition of PBASE, there also appears to be an increase in
+hole mobility, which may be due to the pyrene groups increasing
+connectivity within the carbon nanotube network
+\autocite{Murugathas2019b}. When EDC/NHS is added, a further increase in
+mobility of channel holes is seen \autocite{Heller2008}.
 
-\hypertarget{pyrene-peg-nta-and-pyrene-peg-biotin}{%
-\subsubsection*{Pyrene-PEG-NTA and
-Pyrene-PEG-Biotin}\label{pyrene-peg-nta-and-pyrene-peg-biotin}}
-\addcontentsline{toc}{subsubsection}{Pyrene-PEG-NTA and
-Pyrene-PEG-Biotin}
+\hypertarget{pyrene-nta-and-pyrene-biotin}{%
+\subsubsection*{Pyrene-NTA and
+Pyrene-Biotin}\label{pyrene-nta-and-pyrene-biotin}}
+\addcontentsline{toc}{subsubsection}{Pyrene-NTA and Pyrene-Biotin}
+
+Through chemical coupling/conjugation, it is possible to replace the NHS
+ester group on PBASE with other groups that can undergo binding
+reactions with proteins. For example, PBASE can be modified with
+N\(\alpha\),N\(\alpha\)-Bis(carboxymethyl)-L-lysine hydrate (also known
+as N-(5-Amino-1-carboxypentyl)iminodiacetic acid, AB-NTA) to produce
+pyrene-nitrilotriacetic acid (pyrene-NTA). The attached NTA group is
+able to chelate with metal ions such as Cu\(^{2+}\) or Ni\(^{2+}\),
+which then can then coordinate with polyhistidine-tags attached to a
+protein \autocite{Holzinger2011,Amano2016}. This functionalisation
+procedure was successfully used with mammalian odorant receptors
+attached via Ni\(^{2+}\) to a single carbon nanotube to detect eugenol
+vapour in real-time \autocite{Goldsmith2011}.
+
+It is also possible to attach polyethylene glycol (PEG) chains to a
+pyrene group and modify them with reactive groups such as biotin to
+attach proteins for biosensing \autocite{Hermanson2013-18,Meran2018}.
+Once modified with PEG, pyrene linkers are also more water soluble,
+making it possible to perform a full functionalisation procedure
+exclusively in aqueous solution \autocite{Hermanson2013-18}.
 
 \hypertarget{verifying-pyrene-attachment-to-cnt-network-and-graphene}{%
 \section{Verifying Pyrene Attachment to CNT network and
