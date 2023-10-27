@@ -20,6 +20,12 @@ Then, using the analysis technique outlined by Vobornik *et al.* [@Vobornik2023]
 
 The code also allows for discretely binning continuous data from fitted normal distributions and examining the proportion of counts above or below a particular height. 2.9 nm is roughly where 2 bundles with average size 1.45 nm can start to be present, and is used as an estimate of the boundary value between single-tube bundle diameters and multi-tube bundle diameters.
 
+## Raman Spectroscopy Analysis {#sec-raman-analysis}
+
+The purpose of this code is to analyse a series of Raman spectra taken at different points on a single film (see @sec-raman-characterisation).
+
+Data is imported in a tab-delimited text file, and the baseline region between 1400 and 1500 cm$^{-1}$ is set as zero amplitude for data collected from each film location. The data from each location is then normalised to the D-peak (the maximum point on the D-peak, which lies between 1300 and 1400 cm$^{-1}$, is set equal to unity). Using these datasets, plots of normalised intensity relative to the D-peak comparing each location can be created. The ratio I$^{D}$/I$_{G}$ can be found by taking the inverse of the maximum point on the G-peak of these normalised plots. A plot of the average intensity across all locations measured can also be created. 
+
 ## Field-Effect Transistor Analysis {#sec-field-effect-transistor-analysis}
 
 The purpose of this code is to analyse electrical measurements taken of field-effect transistor (FET) devices. Electrical measurements were either taken from the Keysight 4156C Semiconductor Parameter Analyser, National Instruments NI-PXIe or Keysight B1500A Semiconductor Device Analyser as discussed in @sec-electrical-characterisation; the code is able to analyse data taken from all three measurement setups. The main Python file in the code base consists of three related but independent modules: the first analyses and plots sensing data from the FET devices, the second analyses and plots transfer characteristics from channels across a device, and the third compares individual channel characteristics before and after a modification or after each of several modifications. The code base also features a separate config file and style sheet which govern the behaviour of the main code. The code base was designed collaboratively by myself and Erica Cassie over GitHub using the Sourcetree Git GUI.

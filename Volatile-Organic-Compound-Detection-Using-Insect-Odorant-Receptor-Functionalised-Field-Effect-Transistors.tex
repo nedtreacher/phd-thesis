@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, enhanced, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, frame hidden, interior hidden, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, frame hidden, boxrule=0pt, sharp corners, breakable, borderline west={3pt}{0pt}{shadecolor}, interior hidden]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -609,9 +609,6 @@ they make up only a small percentage of each sample. Note that Strack
 minutes before opening to prevent the introduction of condensation
 \autocite{Strack2013}.
 
-\hypertarget{raman-spectroscopy}{%
-\subsection{Raman Spectroscopy}\label{raman-spectroscopy}}
-
 \hypertarget{electrical-characterisation}{%
 \subsection{Electrical
 Characterisation}\label{electrical-characterisation}}
@@ -885,6 +882,12 @@ connectivity within the carbon nanotube network
 \autocite{Murugathas2019b}. When EDC/NHS is added, a further increase in
 mobility of channel holes is seen \autocite{Heller2008}.
 
+\hypertarget{raman-spectroscopy}{%
+\subsection{Raman Spectroscopy}\label{raman-spectroscopy}}
+
+For further understanding of the attachment of pyrene-group linker
+molecules to a carbon nanotube network film,
+
 \hypertarget{verifying-attachment-of-peglyated-pyrene-based-linkers}{%
 \section{Verifying Attachment of PEGlyated Pyrene-Based
 Linkers}\label{verifying-attachment-of-peglyated-pyrene-based-linkers}}
@@ -1015,6 +1018,23 @@ below a particular height. 2.9 nm is roughly where 2 bundles with
 average size 1.45 nm can start to be present, and is used as an estimate
 of the boundary value between single-tube bundle diameters and
 multi-tube bundle diameters.
+
+\hypertarget{sec-raman-analysis}{%
+\section{Raman Spectroscopy Analysis}\label{sec-raman-analysis}}
+
+The purpose of this code is to analyse a series of Raman spectra taken
+at different points on a single film (see
+\textbf{?@sec-raman-characterisation}).
+
+Data is imported in a tab-delimited text file, and the baseline region
+between 1400 and 1500 cm\(^{-1}\) is set as zero amplitude for data
+collected from each film location. The data from each location is then
+normalised to the D-peak (the maximum point on the D-peak, which lies
+between 1300 and 1400 cm\(^{-1}\), is set equal to unity). Using these
+datasets, plots of normalised intensity relative to the D-peak comparing
+each location can be created. The ratio I\(^{D}\)/I\(_{G}\) can be found
+by taking the inverse of the maximum point on the G-peak of these
+normalised plots.
 
 \hypertarget{sec-field-effect-transistor-analysis}{%
 \section{Field-Effect Transistor

@@ -7,6 +7,8 @@ format: pdf
 
 ##	Carbon Nanotube Network Morphology {#sec-pristine-morphology}
 
+### Atomic Force Microscopy
+
 @fig-afm-morphology shows a side-by-side comparison of the surface morphology of carbon nanotube films fabricated using the methods described in @sec-dep-carbon-nanotubes. These images were collected using an atomic force microscope and processed in the manner described in @sec-afm-characterisation. They each show bundles of carbon nanotubes with a range of diameters and lengths, with each bundle containing one or multiple nanotubes. As discussed in previous works using solvent-based deposition techniques for depositing carbon nanotubes, multi-tube bundles form due to strong mutual attraction between nanotubes [@Zheng2017; @Murugathas2018; @Murugathas2019a; @Nguyen2021]. However, when surfactants are present, they adsorb onto the carbon nanotubes and form a highly repulsive structure able to overcome the strong attraction between nanotubes. This repulsion then keeps the individual carbon nanotubes isolated [@Wenseleers2004; @Gavrel2013; @Hermanson2013-16; @Shimizu2013; @DiCrescenzo2014]. The diameter range provided by the supplier for the individual carbon nanotubes used is $1.2-1.7$ nm, while the length range is $0.3-5.0$ $\mu$m (Nanointegris).
 
 ::: {#fig-afm-morphology layout="[[47.5,-5,47.5], [47.5,-5,47.5], [47.5,-5,47.5]]"}
@@ -94,6 +96,8 @@ histogram_parameters %>%
 When surfactant is used in the deposition process, both the carbon nanotube bundle diameter mean and standard deviation are small compared to the mean and standard deviation of solvent deposited films. However, despite the presence of surfactant, it is apparent both from @fig-afm-morphology and @tbl-histogram-parameters that not all surfactant-dispersed carbon nanotubes are deposited individually. Bundling may occur during the process of deposition onto the substrate, which could disrupt the repulsive forces from the surfactant coating and allow attractive forces to temporarily dominate. 
 
 It is possible that the bundling of surfactant-dispersed carbon nanotubes is a consequence of dynamics introduced by the coffee-ring effect [@Deegan1997; @VanGaalen2021]. The coffee-ring effect refers to a build-up of dispersed solid forming around the edges of a dispersion evaporating on a surface. This process occurs due to the dispersion edges being fixed by surface forces, leading to capillary flow outwards to replace liquid evaporating at the edges, bringing solid material along with it. The presence of vapour is known to disrupt this capillary effect [@Bishop2020].
+
+### Raman Spectroscopy {#sec-pristine-raman}
 
 ## Electrical Characteristics of Pristine Devices {#sec-pristine-electrical-characterisation}
 
