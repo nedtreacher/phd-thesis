@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, frame hidden, boxrule=0pt, sharp corners, breakable, borderline west={3pt}{0pt}{shadecolor}, interior hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, enhanced, frame hidden, interior hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, sharp corners]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -693,8 +693,8 @@ make a statement about the effect of chemical modification on the
 channel. However, this verification usually does not account for the
 effect of the solvent on the transistor channel.
 Figure~\ref{fig-meoh-only-tx} and Figure~\ref{fig-dmso-only-tx} show
-that by exposing a carbon nanotube network channel to solvents commonly
-used in PBASE functionalisation processes
+that by exposing a steam-deposited carbon nanotube network channel to
+solvents commonly used in PBASE functionalisation processes
 (Table~\ref{tbl-pbase-functionalisation}), such as methanol (MeOH) or
 dimethyl sulfoxide (DMSO), a significant negative shift in channel
 threshold voltage occurs even after thorough rinsing with deionised
@@ -711,13 +711,14 @@ nanotube network to PBASE does not significantly affect the channel
 gating and therefore the channel threshold voltage
 \autocite{Besteman2003,Murugathas2019b}. Murugathas \emph{et al.}
 observed a slight increase in channel conductance after PBASE
-functionalisation. In Figure~\ref{fig-PBASE-vs-solvent-only}, we also
-observe a slight increase in channel conductance post-functionalisation
-for both Figure~\ref{fig-meoh-pbase-tx} and
-Figure~\ref{fig-dmso-pbase-tx} relative to the solvent-only case in
-Figure~\ref{fig-meoh-only-tx} and Figure~\ref{fig-dmso-only-tx}. It
-appears that the presence of PBASE molecules increases channel mobility
-and therefore conductance \autocite{Heller2008}.
+functionalisation when functionalising devices with solvent-deposited
+CNT films. In Figure~\ref{fig-PBASE-vs-solvent-only}, we also observe a
+slight increase in channel conductance post-functionalisation for both
+Figure~\ref{fig-meoh-pbase-tx} and Figure~\ref{fig-dmso-pbase-tx}
+relative to the solvent-only case in Figure~\ref{fig-meoh-only-tx} and
+Figure~\ref{fig-dmso-only-tx}. It appears that the presence of PBASE
+molecules increases channel mobility and therefore conductance
+\autocite{Heller2008}.
 
 Capactive gating results from dense coverage of adsorped molecules on
 the carbon nanotube surface which have a low permittivity relative to
@@ -863,10 +864,11 @@ Threshold voltages for each transfer characteristic are also shown.}
 Figure~\ref{fig-pba-threshold-shift} shows the transfer characteristics
 of a carbon nanotube transistor at various stages of a PBA/EDC
 functionalisation, where a excess of N-hydroxysuccinimide (NHS) was
-added alongside EDC. The PBA was dissolved in DMSO, and the device
-channels were exposed to this solution for 1 hour. Subsequently, it was
-rinsed with 1XPBS and exposed to 20 mM EDC and 40 mM NHS in 1XPBS
-electrolyte for 30 minutes. We can compare
+added alongside EDC. The device used was fabricated in Jan 2022, where
+the carbon nanotubes were solvent-deposited. The PBA was dissolved in
+DMSO, and the device channels were exposed to this solution for 1 hour.
+Subsequently, it was rinsed with 1XPBS and exposed to 20 mM EDC and 40
+mM NHS in 1XPBS electrolyte for 30 minutes. We can compare
 Figure~\ref{fig-pba-threshold-shift} to
 Figure~\ref{fig-PBASE-vs-solvent-only} for a better understanding of the
 result of both the PBASE and PBA/EDC functionalisation methods. The
@@ -885,8 +887,22 @@ mobility of channel holes is seen \autocite{Heller2008}.
 \hypertarget{raman-spectroscopy}{%
 \subsection{Raman Spectroscopy}\label{raman-spectroscopy}}
 
-For further understanding of the attachment of pyrene-group linker
-molecules to a carbon nanotube network film,
+Raman spectroscopy was also used to verify the attachment of
+pyrene-group linker molecules to a carbon nanotube network film. The
+carbon nanotube films used for verifying pyrene attachment were
+solvent-deposited, as highly-bundled devices were found to give a better
+optical signal-to-noise ratio, as discussed in
+\textbf{?@sec-pristine-raman}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{./figures/ch6/Ned_Raman_bundled.png}
+
+}
+
+\caption{\label{fig-raman-pbase-pba}Raman spectral shift.}
+
+\end{figure}
 
 \hypertarget{verifying-attachment-of-peglyated-pyrene-based-linkers}{%
 \section{Verifying Attachment of PEGlyated Pyrene-Based
@@ -1034,7 +1050,8 @@ between 1300 and 1400 cm\(^{-1}\), is set equal to unity). Using these
 datasets, plots of normalised intensity relative to the D-peak comparing
 each location can be created. The ratio I\(^{D}\)/I\(_{G}\) can be found
 by taking the inverse of the maximum point on the G-peak of these
-normalised plots.
+normalised plots. A plot of the average intensity across all locations
+measured can also be created.
 
 \hypertarget{sec-field-effect-transistor-analysis}{%
 \section{Field-Effect Transistor
