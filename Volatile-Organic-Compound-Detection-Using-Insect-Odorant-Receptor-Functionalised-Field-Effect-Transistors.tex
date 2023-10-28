@@ -179,7 +179,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, enhanced, frame hidden, interior hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, breakable, boxrule=0pt, frame hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners, enhanced]}{\end{tcolorbox}}\fi
 
 \mainmatter
 \bookmarksetup{startatroot}
@@ -206,7 +206,7 @@ and
 Graphene}\label{verifying-non-covalent-functionalisation-of-carbon-nanotubes-and-graphene}}
 
 \begin{verbatim}
-250855
+255304
 \end{verbatim}
 
 In previous chapters, we have discussed methods of fabricating carbon
@@ -823,7 +823,7 @@ the reaction vessel, PBASE is formed as an active intermediate, which is
 less prone to hydrolysis and increases the PBA/EDC reaction yield
 \autocite{Sehgal1994,Hermanson2013-4,Hermanson2013-14}.
 
-From Table~\ref{tbl-pbase-functionalisation} and
+From comparing Table~\ref{tbl-pbase-functionalisation} and
 Table~\ref{tbl-pba-functionalisation}, we see that PBASE is more widely
 used for non-covalent functionalisation than PBA/EDC. As was the case
 for PBASE, there are a wide range of process variables used for the
@@ -887,22 +887,87 @@ mobility of channel holes is seen \autocite{Heller2008}.
 \hypertarget{raman-spectroscopy}{%
 \subsection{Raman Spectroscopy}\label{raman-spectroscopy}}
 
+\begin{figure}
+
+\begin{minipage}[t]{0.53\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch6/Ned_Raman_bundled.png}
+
+}
+
+}
+
+\subcaption{\label{fig-raman-pbase-pba}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{./figures/ch6/comparison_raman.png}
+
+}
+
+}
+
+\subcaption{\label{fig-raman-comparison}}
+\end{minipage}%
+
+\caption{\label{fig-linker-raman}Each spectrum shown in (a) corresponds
+to the average intensity across nine Raman spectra at different
+locations across a selection of chemically-modified carbon nanotube
+films. Each spectrum has been normalised so that I\(_D\) = 1 (D-peak
+maximum is unity). (b) shows the distribution of D-band peak to G-band
+peak ratio (I\(_D\)/I\(_G\)) calculated for each of the nine locations
+on each film.}
+
+\end{figure}
+
 Raman spectroscopy was also used to verify the attachment of
 pyrene-group linker molecules to a carbon nanotube network film. The
 carbon nanotube films used for verifying pyrene attachment were
 solvent-deposited, as highly-bundled devices were found to give a better
 optical signal-to-noise ratio, as discussed in
-\textbf{?@sec-pristine-raman}.
+\textbf{?@sec-pristine-raman}. Droplets of DMSO solution were placed on
+three (solvent-deposited) carbon nanotube films taken from the same
+wafer. The DMSO solution on one film contained 5mM PBA, the solution on
+another film contained 5 mM PBASE, and the DMSO on the final film
+contained no linker molecule. After incubation for 1 hour, films were
+rinsed for 15 s with DMSO, then for 15 s with IPA to remove excess DMSO
+while avoiding hydrolysis of the PBASE. Raman spectroscopy was performed
+on the films in the manner outlined in
+\textbf{?@sec-raman-characterisation}. The PBA-exposed film was further
+exposed to 20 mM EDC and 40 mM NHS in 1XPBS electrolyte for 30 minutes,
+and a second Raman spectra was taken for this film. The average
+intensity of Raman shift for each film measurement set is shown in
+Figure~\ref{fig-raman-pbase-pba}. The distribution of I\(_D\)/I\(_G\)
+ratio across all nine Raman spectra from each film measurement set is
+shown in Figure~\ref{fig-raman-comparison}.
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{./figures/ch6/Ned_Raman_bundled.png}
-
-}
-
-\caption{\label{fig-raman-pbase-pba}Raman spectral shift.}
-
-\end{figure}
+There is a \(\sim 3 \times\) increase in the intensity ratio
+I\(_D\)/I\(_G\) for both the films modified with PBASE and PBA compared
+to the film which was only exposed to DMSO, indicating surface
+modification of the carbon nanotubes. Previous works have found that a
+change in the intensity ratio indicates successful \(\pi\)-stacking on
+the carbon nanotube surface \autocite{Wei2010,Lan2013}. Wei \emph{et
+al.} found functionalisation with PBASE altered the ratio by a factor of
+\(\sim 1.5 \times\), an increase, while Lan \emph{et al.} found that
+functionalisation with PBA altered the ratio by a factor of
+\(\sim 0.8 \times\), a decrease. The reason for the difference between
+results is not clear, but may result from the significant differences in
+the pristine composition and morphology of carbon nanotube networks used
+in each publication. We see from Figure~\ref{fig-raman-comparison} that
+across all scan locations, the increase in I\(_D\)/I\(_G\) for both PBA
+and PBASE is within the same range. Furthermore, after further
+functionalisation of the PBA-modified film with EDC/NHS, subsequent
+Raman measurements of the film are not signficantly different to before
+adding the EDC/NHS. These results indicate that the
 
 \hypertarget{verifying-attachment-of-peglyated-pyrene-based-linkers}{%
 \section{Verifying Attachment of PEGlyated Pyrene-Based
