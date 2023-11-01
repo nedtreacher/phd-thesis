@@ -184,8 +184,13 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, frame hidden, interior hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, breakable, frame hidden, interior hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}, enhanced]}{\end{tcolorbox}}\fi
 
+\renewcommand*\contentsname{Table of contents}
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
 \mainmatter
 \bookmarksetup{startatroot}
 
@@ -211,7 +216,7 @@ and
 Graphene}\label{verifying-non-covalent-functionalisation-of-carbon-nanotubes-and-graphene}}
 
 \begin{verbatim}
-269428
+272688
 \end{verbatim}
 
 In previous chapters, we have discussed methods of fabricating carbon
@@ -990,13 +995,17 @@ PEGylation}\label{pyrene-nta-pyrene-biotin-and-pegylation}}
 
 Through chemical coupling/conjugation, it is possible to replace the NHS
 ester group on PBASE with other groups that can undergo binding
-reactions with proteins. For example, PBASE can be modified with
-N\(\alpha\),N\(\alpha\)-Bis(carboxymethyl)-L-lysine hydrate (also known
-as N-(5-Amino-1-carboxypentyl)iminodiacetic acid, AB-NTA) to produce
-pyrene-nitrilotriacetic acid (pyrene-NTA). The attached NTA group is
-able to chelate with metal ions such as Cu\(^{2+}\) or Ni\(^{2+}\),
-which then can then coordinate with polyhistidine-tags attached to a
-protein \autocite{Holzinger2011,Amano2016}. Functionalisation using the
+reactions with proteins. These groups do not suffer the same drawback of
+being readily hydrolysed as PBASE does. For example, PBASE can be
+modified with N\(\alpha\),N\(\alpha\)-Bis(carboxymethyl)-L-lysine
+hydrate (also known as N-(5-Amino-1-carboxypentyl)iminodiacetic acid,
+AB-NTA) to produce pyrene-nitrilotriacetic acid (pyrene-NTA). The
+attached NTA group is able to chelate with metal ions such as
+Cu\(^{2+}\) or Ni\(^{2+}\), which then can then coordinate with
+polyhistidine-tags attached to a protein
+\autocite{Holzinger2011,Amano2016,Chang2017}. Use of Cu\(^{2+}\) ions
+over Ni\(^{2+}\) gives stronger histidine bonding and less non-specific
+adsorption \autocite{Chang2017}. Functionalisation using the
 NTA-Ni\(^{2+}\) chemistry was successfully used to attach mammalian
 odorant receptors to a single carbon nanotube for detection of eugenol
 vapour in real-time \autocite{Goldsmith2011}. Pyrene-biotin (pyrene
@@ -1365,7 +1374,7 @@ was not oxygen plasma cleaned before functionalisation, while the
 graphene film in (b) was oxygen plasma cleaned at 5 W for 15 s at 300
 mTorr pressure immediately before functionalisation. Insets show a 10
 \(\mu\)L droplet placed on an unencapsulated carbon nanotube device
-before (a) and after (b) the same plasma clean procedure.}
+before (a) and after (b) the same oxygen plasma treatment procedure.}
 
 \end{figure}
 
@@ -1409,11 +1418,11 @@ itself did not significantly alter device conductance. Initial
 functionalisation in solvent was therefore preferred, as it did not
 require a plasma cleaning step for successful attachment.
 
-\hypertarget{interactions-between-substrate-and-pyrene}{%
+\hypertarget{interactions-between-substrate-and-pyrene-peg}{%
 \subsubsection*{Interactions between Substrate and
-Pyrene}\label{interactions-between-substrate-and-pyrene}}
+Pyrene-PEG}\label{interactions-between-substrate-and-pyrene-peg}}
 \addcontentsline{toc}{subsubsection}{Interactions between Substrate and
-Pyrene}
+Pyrene-PEG}
 
 \begin{figure}
 
@@ -1535,8 +1544,11 @@ thorough cleaning process are shown in Figure~\ref{fig-PPF-PBS-20X} and
 Figure~\ref{fig-PPF-PBS-40X}. The majority of pyrene-PEG-FITC has been
 removed in regions with no graphene, but has remained where graphene is
 present, indicating specific, \(\pi\)-stacking interaction is taking
-place between the pyrene-PEG-FITC and graphene. od \#\#\# Electrical
-Characterisation with Pyrene-PEG
+place between the pyrene-PEG-FITC and graphene.
+
+\hypertarget{electrical-characterisation-with-pyrene-peg}{%
+\subsection{Electrical Characterisation with
+Pyrene-PEG}\label{electrical-characterisation-with-pyrene-peg}}
 
 \begin{figure}
 
@@ -1576,22 +1588,212 @@ of pyrene means there is no significant Dirac shift when the plasma
 treated devices are successfully functionalised with pyrene-PEG
 \autocite{Lerner2012}. Interestingly, however, when the devices are not
 plasma treated before functionalisation, there is a significant Dirac
-shfit at higher concentrations of pyrene-PEG. As we expect little or no
+shift at higher concentrations of pyrene-PEG. As we expect little or no
 graphene surface coverage to result from aqueous functionalisation
 without a plasma pre-treatment, as demonstrated in
 Section~\ref{sec-PPF-fluorescence-characterisation}, we can therefore
-assume this shift is due to attachment of pyrene-PEG to the silicon
-dioxide surrounding the channel. Changes to the SiO\(_2\) surface
-chemistry have previously been shown to influence the doping of
-monolayer graphene. It appears that pyrene-PEG is altering the SiO\(_2\)
-surface, influencing the doping of the graphene channel and causing a
-Dirac point shift \autocite{Shi2009}. This change appears to be
-irreversible, as rinsing off pyrene-PEG from the SiO\(_2\) surface with
-surfactant appears to have little effect on the Dirac voltage.
+assume this shift is due to attachment of pyrene-PEG to the small region
+of silicon dioxide not covered by encapsulation which borders the
+channel. Furthermore,
+Section~\ref{sec-PPF-fluorescence-characterisation} shows us that even
+after plasma treatment, the SiO\(_2\) surface will still interact with
+pyrene-PEG upon functionalisation. Oxygen plasma treatment is known to
+make the graphene layer permeable to water, and therefore it is likely
+the SiO\(_2\) surface below the graphene is also coated with pyrene-PEG
+after plasma treatment \autocite{Surwade2015}. Therefore, it appears the
+Dirac shift results from a difference in pyrene-PEG surface coverage
+when comparing the SiO\(_2\) surface next to the graphene channel and
+the SiO\(_2\) below the graphene channel. The physical mechanism linking
+these two factors is currently unclear.
 
 \hypertarget{sec-linker-receptor-attachment}{%
 \section{Verifying Linker-Receptor
 Attachment}\label{sec-linker-receptor-attachment}}
+
+\hypertarget{functionalisation-with-gfp-or-nanodiscs-using-pbase}{%
+\subsection{Functionalisation with GFP-OR Nanodiscs using
+PBASE}\label{functionalisation-with-gfp-or-nanodiscs-using-pbase}}
+
+To verify the formation of amide (or imide) bonds between PBASE and the
+odorant receptors (ORs) contained within nanodiscs, a fluorescent
+biomarker was directly attached to the odorant receptors for detection
+with fluorescence microscopy. The biomarker used was the \emph{Aequorea
+victoria} green fluorescent protein (GFP).
+
+\begin{figure}
+
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/modified_GFPOR_PBASE_10sexposure_40X_mediumcontrast_ch1_231019_2.png}
+
+}
+
+}
+
+\subcaption{\label{fig-PBASE-GFP-OR-ch1}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/modified_GFPOR_PBASE_10sexposure_40X_mediumcontrast_ch2_231019.png}
+
+}
+
+}
+
+\subcaption{\label{fig-PBASE-GFP-OR-ch2}}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/modified_GFPOR_PBASE_10sexposure_40X_mediumcontrast_ch3_231019.png}
+
+}
+
+}
+
+\subcaption{\label{fig-PBASE-GFP-OR-ch3}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/modified_GFPOR_PBASE_10sexposure_40X_mediumcontrast_ch6_231019.png}
+
+}
+
+}
+
+\subcaption{\label{fig-PBASE-GFP-OR-ch6}}
+\end{minipage}%
+
+\caption{\label{fig-PBASE-GFP-ORs}Fluorescence images of an
+unencapsulated carbon nanotube network channel after functionalisation
+with 1 mM PBASE in methanol, followed by 10 \(\mu\)L:2 mL GFP-OR43b
+nanodiscs. Images were taken using an GFP filter and a 10 s exposure
+time, where (a) is channel 1 of the device, (b) is channel 2, (c) is
+channel 3 and (d) is channel 6.}
+
+\end{figure}
+
+The functionalisation of unencapsulated carbon nanotube devices
+(steam-deposited, fabricated after June 2023) with PBASE and GFP-OR
+Nanodiscs was performed as follows:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  The device was vacuum annealed for 1 hour at 150\(^\circ\)C.
+\item
+  The device was exposed to UV light for 1 minute, placed in
+  AZ\(^\circledR\) 326 developer for 3 minutes, then rinsed with
+  acetone, isopropanol and nitrogen dried (Note: Steps 1 \& 2 were added
+  to ensure any residual photoresist on the channel was removed before
+  functionalisation, see subsequent discussion).
+\item
+  1 mM PBASE (Setareh Biotech) in methanol prepared by fully dissolving
+  2 mg PBASE in 5 mL methanol by vortex mixing at 1000 rpm in a dark
+  room (Note: PBASE was stored at -4\(^\circ\)C for 18 months prior to
+  use, and was thawed under vacuum for 15 minutes in dark conditions
+  before opening)
+\item
+  The device was then rinsed with methanol, fully submerged in \(\sim\)
+  1 mL of PBASE in methanol solution and left covered with parafilm for
+  1 hour, then rinsed with methanol for 15 s, rinsed with DI water for
+  15 s and nitrogen dried to remove residual PBASE.
+\item
+  The device was left dry and in darkness while collecting the GFP-OR
+  nanodiscs from the -80\(^\circ\)C freezer.
+\item
+  10 \(\mu\)L GFP-OR nanodiscs (batch number ND-GFP-OR43b-0002, prepared
+  12 months earlier) was diluted in 2 mL 1XPBS (Note: The full 2 mL was
+  used to flush out the nanodisc vial when preparing the nanodisc
+  solution, with successive additions and subtractions of 50 \(\mu\)L
+  1XPBS into and from the vial).
+\item
+  The device was submerged in the GFP-OR43b nanodisc solution and left
+  covered with parafilm for 1 hour, then rinsed with 1XPBS for 15 s.
+\item
+  For fluorescence microscopy, the device was briefly rinsed with DI
+  water and nitrogen dried to remove salt residue from the 1XPBS.
+\end{enumerate}
+
+Fluorescence images of the unencapsulated carbon nanotube devices
+successfully functionalised with GFP-OR43b nanodiscs using PBASE are
+shown in Figure~\ref{fig-PBASE-GFP-ORs}.
+
+The dark regions are the gold electrodes, and the bright green region is
+the graphene channel. It is noticable that some variation in
+fluorescence is seen between channels, indicating the quality of
+functionalisation may vary across the channels of a device. Some of the
+difficulties encountered when investigating functionalisation with
+pyrene-PEG-FITC are outlined below.
+
+The reasons underlying the steps used for the PBASE functionalisation
+process are outlined in the following sections.
+
+Attachment of GFP-OR nanodiscs to silicon dioxide provides further
+evidence that the hydrophobic pyrene is weakly bonding to the silicon
+dioxide surface.
+
+\hypertarget{photoresist-contamination-1}{%
+\subsubsection*{Photoresist
+Contamination}\label{photoresist-contamination-1}}
+\addcontentsline{toc}{subsubsection}{Photoresist Contamination}
+
+\hypertarget{marangoni-flow-and-coffee-ring-effect}{%
+\subsubsection*{Marangoni Flow and Coffee-Ring
+Effect}\label{marangoni-flow-and-coffee-ring-effect}}
+\addcontentsline{toc}{subsubsection}{Marangoni Flow and Coffee-Ring
+Effect}
+
+\hypertarget{functionalisation-with-gfp-or-nanodiscs-using-pyrene-peg-nta}{%
+\subsection{Functionalisation with GFP-OR Nanodiscs using
+Pyrene-PEG-NTA}\label{functionalisation-with-gfp-or-nanodiscs-using-pyrene-peg-nta}}
+
+Verifies that ORs are attaching, not just nanodiscs (empty nanodiscs
+also have NH2 group)
+
+\hypertarget{interactions-between-substrate-and-pyrene-peg-1}{%
+\subsubsection*{Interactions between Substrate and
+Pyrene-PEG}\label{interactions-between-substrate-and-pyrene-peg-1}}
+\addcontentsline{toc}{subsubsection}{Interactions between Substrate and
+Pyrene-PEG}
 
 \cleardoublepage
 \phantomsection
