@@ -214,7 +214,7 @@ There is a $\sim 3 \times$ increase in the intensity ratio I$_D$/I$_G$ for both 
 
 ### Pyrene-NTA, Pyrene-Biotin and PEGylation
 
-Through chemical coupling/conjugation, it is possible to replace the NHS ester group on PBASE with other groups that can undergo binding reactions with proteins. For example, PBASE can be modified with N$\alpha$,N$\alpha$-Bis(carboxymethyl)-L-lysine hydrate (also known as N-(5-Amino-1-carboxypentyl)iminodiacetic acid, AB-NTA) to produce pyrene-nitrilotriacetic acid (pyrene-NTA). The attached NTA group is able to chelate with metal ions such as Cu$^{2+}$ or Ni$^{2+}$, which then can then coordinate with polyhistidine-tags attached to a protein [@Holzinger2011; @Amano2016]. Functionalisation using the NTA-Ni$^{2+}$ chemistry was successfully used to attach mammalian odorant receptors to a single carbon nanotube for detection of eugenol vapour in real-time [@Goldsmith2011]. Pyrene-biotin (pyrene butanol biotin ester) can also be produced for attaching avidin or strepavidin [@Holzinger2011]. As avidin and strepavidin are tetrameric, they can be attached to both pyrene-biotin and biotinylated avi-tagged proteins simultaneously via strong non-covalent bonding, therefore linking the transducer and receptor [@Star2003a; @Dundas2013; @Hermanson2013-11; @Fairhead2015]. As the presence of his-tags and avi-tags on proteins can be readily controlled, these methods offer improved specificity and directionality over the traditional amide bonding seen earlier.
+Through chemical coupling/conjugation, it is possible to replace the NHS ester group on PBASE with other groups that can undergo binding reactions with proteins. These groups do not suffer the same drawback of being readily hydrolysed as PBASE does. For example, PBASE can be modified with N$\alpha$,N$\alpha$-Bis(carboxymethyl)-L-lysine hydrate (also known as N-(5-Amino-1-carboxypentyl)iminodiacetic acid, AB-NTA) to produce pyrene-nitrilotriacetic acid (pyrene-NTA). The attached NTA group is able to chelate with metal ions such as Cu$^{2+}$ or Ni$^{2+}$, which then can then coordinate with polyhistidine-tags attached to a protein [@Holzinger2011; @Amano2016; @Chang2017]. Use of Cu$^{2+}$ ions over Ni$^{2+}$ gives stronger histidine bonding and less non-specific adsorption [@Chang2017]. Functionalisation using the NTA-Ni$^{2+}$ chemistry was successfully used to attach mammalian odorant receptors to a single carbon nanotube for detection of eugenol vapour in real-time [@Goldsmith2011]. Pyrene-biotin (pyrene butanol biotin ester) can also be produced for attaching avidin or strepavidin [@Holzinger2011]. As avidin and strepavidin are tetrameric, they can be attached to both pyrene-biotin and biotinylated avi-tagged proteins simultaneously via strong non-covalent bonding, therefore linking the transducer and receptor [@Star2003a; @Dundas2013; @Hermanson2013-11; @Fairhead2015]. As the presence of his-tags and avi-tags on proteins can be readily controlled, these methods offer improved specificity and directionality over the traditional amide bonding seen earlier.
 
 It is also possible to attach polyethylene glycol (PEG) chains to a pyrene group and modify them with reactive groups such as NTA and biotin to attach proteins in the   manner outlined in the previous paragraph [@Hermanson2013-18; @Meran2018]. Once modified with PEG, the water solubility of pyrene linkers increases, making it possible to perform a full functionalisation procedure exclusively in aqueous solution [@Hermanson2013-18]. By setting the length of the PEG chain, the size of the linker molecule can be controlled - selection of a short chain is important for ensuring attached receptors remain within the Debye length of the transducer [@Shkodra2021]. Functionalisation of a graphene transducer with pyrene-PEG-biotin has previously been used to bind streptavidin to a graphene field-effect transistor device [@Miki2019]. The PEGlyated linkers used in the following sections were purchased pre-prepared. Pyrene-PEG-NTA (2 kDa) was purchased from Nanocs, while pyrene-PEG-FITC (2 kDa, 10 kDa), pyrene-PEG-rhodamine (3.4 kDa), mPEG-Pyrene (Pyrene-PEG, 10 kDa) and pyrene-PEG-biotin (10 kDa) were purchased from Creative PEGworks.
 
@@ -254,7 +254,6 @@ Fluorescence images of the unencapsulated graphene devices successfully function
 Fluorescence images of an unencapsulated graphene channel after functionalisation with 1 mM pyrene-PEG-FITC in ethanol, taken using an FITC filter and a 1 s exposure time, where (a) is channel 2 of the device and (b) is channel 7.
 :::
 
-
 #### Photoresist Contamination {.unnumbered}
 
 ::: {#fig-FITC-SU8 layout="[[47.5,-5,47.5], [47.5,-5,47.5]]"}
@@ -280,14 +279,14 @@ An early difficulty encountered when characterising Pyrene-PEG-FITC attachment (
 
 ![](figures/ch6/modified_NGW8D7_edgechannel_lowerexposuretime_221108.png){#fig-attachment-post-plasma}
 
-Fluorescence images of a 1000 $\mu$m $\times$ 100 $\mu$m graphene channel after functionalisation with 1 mM pyrene-PEG-rhodamine in 1XPBS, taken using an Texas Red filter and a 1.8 s exposure time. The graphene film in (a) was not oxygen plasma cleaned before functionalisation, while the graphene film in (b) was oxygen plasma cleaned at 5 W for 15 s at 300 mTorr pressure immediately before functionalisation. Insets show a 10 $\mu$L droplet placed on an unencapsulated carbon nanotube device before (a) and after (b) the same plasma clean procedure.
+Fluorescence images of a 1000 $\mu$m $\times$ 100 $\mu$m graphene channel after functionalisation with 1 mM pyrene-PEG-rhodamine in 1XPBS, taken using an Texas Red filter and a 1.8 s exposure time. The graphene film in (a) was not oxygen plasma cleaned before functionalisation, while the graphene film in (b) was oxygen plasma cleaned at 5 W for 15 s at 300 mTorr pressure immediately before functionalisation. Insets show a 10 $\mu$L droplet placed on an unencapsulated carbon nanotube device before (a) and after (b) the same oxygen plasma treatment procedure.
 :::
 
 A second obstacle encountered when verifying the attachment of pyrene-based linker was the hydrophobicity of carbon nanotubes and graphene. As seen in @fig-no-attachment, when a graphene film was submerged in 1XPBS solution containing pyrene-PEG-rhodamine (PPR), the graphene would neither interact with the pyrene or the rhodamine. Instead, we see that the pyrene-PEG-rhodamine interacted exclusively with the surrounding silicon dioxide substrate. We assume that this occurs due to the highly hydrophobic graphene surface repelling surrounding solution, preventing $\pi$-stacking from occurring. However this hydrophobicity is not intrinsic to graphene (or to carbon nanotubes), and instead results from a hydrocarbonaceous layer which forms on the graphene (or carbon nanotube) surface when exposed to air [@Ashraf2014; @Stando2019]. Treatment with oxygen plasma at 5 W for 15 s has previously been found to remove this hydrocarbonaceous layer, restoring the intrinsic hydrophilicity of graphene [@Shin2010]. Furthermore, storing the graphene surface in DI water rather than air prevents the reemergence of the hydrocarbon layer [@Ashraf2014].
 
 Treatment of an unencapsulated carbon nanotube network device at 5 W for 15 s at 300 mTorr greatly reduced the contact angle of a water droplet placed on the device surface, shown inset in @fig-hydrophobicity before and after plasma treatment. A graphene film was then functionalised with pyrene-PEG-rhodamine in 1XPBS in the same manner as for the film in @fig-no-attachment, except with the same plasma treatment performed on the film less than 1 minute before functionalisation. The result is shown in @fig-attachment-post-plasma. We see that the graphene now interacts with the pyrene-PEG-rhodamine. These results both indicate that the plasma treatment is increasing the hydrophilicity of the device surface, improving the ability of pyrene-PEG-rhodamine to $\pi$-stack with graphene. The disadvantage of this procedure is that the plasma cleaning introduces defects to the graphene surface which may be undesirable for device electrical behaviour. It was often found that devices functionalised in this manner had their conductance drop significantly after functionalisation, even though plasma treatment itself did not significantly alter device conductance. Initial functionalisation in solvent was therefore preferred, as it did not require a plasma cleaning step for successful attachment.
 
-#### Interactions between Substrate and Pyrene {.unnumbered}
+#### Interactions between Substrate and Pyrene-PEG {.unnumbered}
 
 ::: {#fig-silicon-dioxide-interaction layout="[47.5,-5,47.5]"}
 
@@ -304,15 +303,68 @@ The 1000 $\mu$m $\times$ 100 $\mu$m graphene film in image (a) was functionalise
 
 
 Another issue that arose when verifying surface functionalisation is that pyrene-PEG interacts with silicon dioxide, making it difficult to discern whether the pyrene group is interacting in a specific manner with the graphene or carbon nanotube film. This can be seen for pyrene-PEG-rhodamine in @fig-hydrophobicity, and also for pyrene-PEG-FITC in @fig-FITC-silicon-dioxide. It was confirmed that pyrene-PEG was interacting with silicon dioxide rather than residual photoresist or nanomaterial by performing a pyrene-PEG-rhodamine functionalisation on pristine silicon dioxide, shown in @fig-rhodamine-silicon-dioxide. The supplier suggested that we thoroughly rinse the surface with surfactant to remove weakly-bound pyrene-PEG-FITC attached to the silicon dioxide, while preserving the pyrene-PEG-FITC strongly attached via $\pi$-stacking to the graphene or carbon nanotube film [@CreativePEGworks2022]. The following process was then used to remove pyrene-PEG-FITC from the silicon dioxide: the film was rinsed with DI water for 30 s, then placed in m-CNT dispersion solution (NanoIntegris) for 5 minutes at 70$^\circ$C while agitating with a pipette, and finally rinsed with DI water, ethanol, acetone, IPA and nitrogen dried. The results of this thorough cleaning process are shown in @fig-PPF-PBS-20X and @fig-PPF-PBS-40X. The majority of pyrene-PEG-FITC has been removed in regions with no graphene, but has remained where graphene is present, indicating specific, $\pi$-stacking interaction is taking place between the pyrene-PEG-FITC and graphene.
-od
+
 ### Electrical Characterisation with Pyrene-PEG
 
 ![(Major) Dirac voltage shifts of graphene field-effect transistors after functionalisation with various concentrations of pyrene-PEG dissolved in 1XPBS, as well as after being cleaned with m-surfactant solution. Measurements corresponding to each concentration are of three different device channels from a single device measured four times, where the device was rinsed with 1XPBS between each measurement.](figures/ch6/Dirac_shift_comparisons_mPEGpyrene.png){#fig-pypeg-dirac-shift width="55%"}
 
 @fig-pypeg-dirac-shift compares the electrical characteristics of graphene transistor channels before and after functionalisation with various concentrations of pyrene-PEG, showing the magnitude in shift of the (major) Dirac point. Graphene devices used were fabricated before Nov 2022. 2 mM Pyrene-PEG was dissolved in 1XPBS using a vortex mixer for 10 min at 1000 rpm until fully dissolved, then diluted in series to 1 mM, 0.1 mM, and 0.01 mM in 1XPBS. Plasma treated devices were treated with 5W oxygen plasma for 15 s at 350 mTorr before functionalisation. 2 $\mu$L solution was placed on each device channel for 1 hour, covered with a glass dish and in the presence of wet tecwipes to keep the environment humid. Devices were then rinsed in 1XPBS for 30 s before measurements were taken. Surfactant rinsing involved placing functionalised devices in m-CNT dispersion solution for 5 minutes at 70$^\circ$C, periodically agitating the solution with a pipette, then rinsing the devices with DI water, ethanol, acetone, IPA and finally nitrogen drying them.
 
-As in the case of PBASE and PBA on carbon nanotubes, the neutral charge of pyrene means there is no significant Dirac shift when the plasma treated devices are successfully functionalised with pyrene-PEG [@Lerner2012]. Interestingly, however, when the devices are not plasma treated before functionalisation, there is a significant Dirac shfit at higher concentrations of pyrene-PEG. As we expect little or no graphene surface coverage to result from aqueous functionalisation without a plasma pre-treatment, as demonstrated in @sec-PPF-fluorescence-characterisation, we can therefore assume this shift is due to attachment of pyrene-PEG to the silicon dioxide surrounding the channel. Changes to the SiO$_2$ surface chemistry have previously been shown to influence the doping of monolayer graphene [@Shi2009]. It appears that on devices which have not been plasma treated, pyrene-PEG is altering the SiO$_2$ surface surrounding the channel, influencing the doping of the graphene channel and causing a Dirac point shift. This change appears to be irreversible, as rinsing off pyrene-PEG from the SiO$_2$ surface with surfactant appears to have little effect on the Dirac voltage.
+As in the case of PBASE and PBA on carbon nanotubes, the neutral charge of pyrene means there is no significant Dirac shift when the plasma treated devices are successfully functionalised with pyrene-PEG [@Lerner2012]. Interestingly, however, when the devices are not plasma treated before functionalisation, there is a significant Dirac shift at higher concentrations of pyrene-PEG. As we expect little or no graphene surface coverage to result from aqueous functionalisation without a plasma pre-treatment, as demonstrated in @sec-PPF-fluorescence-characterisation, we can therefore assume this shift is due to attachment of pyrene-PEG to the small region of silicon dioxide not covered by encapsulation which borders the channel. Furthermore, @sec-PPF-fluorescence-characterisation shows us that even after plasma treatment, the SiO$_2$ surface will still interact with pyrene-PEG upon functionalisation. Oxygen plasma treatment is known to make the graphene layer permeable to water, and therefore it is likely the SiO$_2$ surface below the graphene is also coated with pyrene-PEG after plasma treatment [@Surwade2015]. Therefore, it appears the Dirac shift results from a difference in pyrene-PEG surface coverage when comparing the SiO$_2$ surface next to the graphene channel and the SiO$_2$ below the graphene channel. The physical mechanism linking these two factors is currently unclear.
 
 ## Verifying Linker-Receptor Attachment {#sec-linker-receptor-attachment}
 
+### Functionalisation with GFP-OR Nanodiscs using PBASE
 
+To verify the formation of amide (or imide) bonds between PBASE and the odorant receptors (ORs) contained within nanodiscs, a fluorescent biomarker was directly attached to the odorant receptors for detection with fluorescence microscopy. The biomarker used was the *Aequorea victoria* green fluorescent protein (GFP).
+
+::: {#fig-PBASE-GFP-ORs layout="[47.5,-5,47.5]"}
+
+![](figures/ch6/modified_GFPOR_PBASE_10sexposure_40X_mediumcontrast_ch1_231019_2.png){#fig-PBASE-GFP-OR-ch1}
+
+![](figures/ch6/modified_GFPOR_PBASE_10sexposure_40X_mediumcontrast_ch2_231019.png){#fig-PBASE-GFP-OR-ch2}
+
+![](figures/ch6/modified_GFPOR_PBASE_10sexposure_40X_mediumcontrast_ch3_231019.png){#fig-PBASE-GFP-OR-ch3}
+
+![](figures/ch6/modified_GFPOR_PBASE_10sexposure_40X_mediumcontrast_ch6_231019.png){#fig-PBASE-GFP-OR-ch6}
+
+Fluorescence images of an unencapsulated carbon nanotube network channel after functionalisation with 1 mM PBASE in methanol, followed by 10 $\mu$L:2 mL GFP-OR43b nanodiscs. Images were taken using an GFP filter and a 10 s exposure time, where (a) is channel 1 of the device, (b) is channel 2, (c) is channel 3 and (d) is channel 6.
+:::
+
+The functionalisation of unencapsulated carbon nanotube devices (steam-deposited, fabricated after June 2023) with PBASE and GFP-OR Nanodiscs was performed as follows:
+
+1. The device was vacuum annealed for 1 hour at 150$^\circ$C.
+
+2. The device was exposed to UV light for 1 minute, placed in AZ$^\circledR$ 326 developer for 3 minutes, then rinsed with acetone, isopropanol and nitrogen dried (Note: Steps 1 & 2 were added to ensure any residual photoresist on the channel was removed before functionalisation, see subsequent discussion).
+
+3. 1 mM PBASE (Setareh Biotech) in methanol prepared by fully dissolving 2 mg PBASE in 5 mL methanol by vortex mixing at 1000 rpm in a dark room (Note: PBASE was stored at -4$^\circ$C for 18 months prior to use, and was thawed under vacuum for 15 minutes in dark conditions before opening)
+
+4. The device was then rinsed with methanol, fully submerged in $\sim$ 1 mL of PBASE in methanol solution and left covered with parafilm for 1 hour, then rinsed with methanol for 15 s, rinsed with DI water for 15 s and nitrogen dried to remove residual PBASE.
+
+5. The device was left dry and in darkness while collecting the GFP-OR nanodiscs from the -80$^\circ$C freezer.
+
+6. 10 $\mu$L GFP-OR nanodiscs (batch number ND-GFP-OR43b-0002, prepared 12 months earlier) was diluted in 2 mL 1XPBS (Note: The full 2 mL was used to flush out the nanodisc vial when preparing the nanodisc solution, with successive additions and subtractions of 50 $\mu$L 1XPBS into and from the vial).
+
+7. The device was submerged in the GFP-OR43b nanodisc solution and left covered with parafilm for 1 hour, then rinsed with 1XPBS for 15 s.
+
+8. For fluorescence microscopy, the device was briefly rinsed with DI water and nitrogen dried to remove salt residue from the 1XPBS.
+
+Fluorescence images of the unencapsulated carbon nanotube devices successfully functionalised with GFP-OR43b nanodiscs using PBASE are shown in @fig-PBASE-GFP-ORs. 
+
+
+
+The dark regions are the gold electrodes, and the bright green region is the graphene channel. It is noticable that some variation in fluorescence is seen between channels, indicating the quality of functionalisation may vary across the channels of a device. Some of the difficulties encountered when investigating functionalisation with pyrene-PEG-FITC are outlined below.
+
+The reasons underlying the steps used for the PBASE functionalisation process are outlined in the following sections.
+
+Attachment of GFP-OR nanodiscs to silicon dioxide provides further evidence that the hydrophobic pyrene is weakly bonding to the silicon dioxide surface.
+
+#### Photoresist Contamination {.unnumbered}
+
+#### Marangoni Flow and Coffee-Ring Effect {.unnumbered}
+
+### Functionalisation with GFP-OR Nanodiscs using Pyrene-PEG-NTA
+
+Verifies that ORs are attaching, not just nanodiscs (empty nanodiscs also have NH2 group)
+
+#### Interactions between Substrate and Pyrene-PEG {.unnumbered}
