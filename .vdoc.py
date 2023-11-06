@@ -6,8 +6,6 @@
 #
 #
 #
-#
-#
 #| echo: false
 import re
 
@@ -46,6 +44,28 @@ modified_content = re.sub(r'(?<!\\)%', r'\\%', modified_content)
 # Write the modified content back to the original .bib file with UTF-8 encoding
 with open("references.bib", "w", encoding="utf-8") as file:
     file.write(modified_content)
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
+#
 #
 #
 #

@@ -184,7 +184,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, interior hidden, sharp corners, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, enhanced, interior hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners, frame hidden, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -214,10 +214,6 @@ chemistry
 \chapter{Verifying Non-Covalent Functionalisation of Carbon Nanotubes
 and
 Graphene}\label{verifying-non-covalent-functionalisation-of-carbon-nanotubes-and-graphene}}
-
-\begin{verbatim}
-274809
-\end{verbatim}
 
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
@@ -265,8 +261,8 @@ However, non-covalent bonding has the advantage of having less of an
 impact on the structure of a nanomaterial than covalent bonding, meaning
 non-covalent bonding is less likely to negatively affect the electrical
 properties of the transducer
-\autocite{Long2012,DiCrescenzo2014,Wang2020,Mishyn2022}. For example,
-one group found covalent bonding of diazonium linker caused a
+\autocite{Long2012,DiCrescenzo2014,Wang2020,Khan2021,Mishyn2022}. For
+example, one group found covalent bonding of diazonium linker caused a
 \(\sim 50\)\% drop in graphene channel mobility \autocite{Lerner2014}.
 In comparison, only a \(\sim 5\)\% drop in mobility was seen for
 attachment of a mixture of linkers containing pyrene to a graphene
@@ -742,22 +738,28 @@ lower than the relative permittivity of phosphate buffer saline,
 \(\sim\) 80 \autocite{Shkodra2021}. From Figure~\ref{fig-meoh-only-tx}
 and Figure~\ref{fig-dmso-only-tx}, we find the average threshold shift
 values resulting from exposure to each solvent were \(\Delta\)V =
-\(-0.15 \pm 0.03\) V and \(\Delta\)V = \(-0.15 \pm 0.01\) for MeOH and
+\(-0.15 \pm 0.03\) V and \(\Delta\)V = \(-0.15 \pm 0.01\) V for MeOH and
 DMSO respectively. The threshold voltage shifts in
 Figure~\ref{fig-meoh-pbase-tx} and Figure~\ref{fig-dmso-pbase-tx} from
 the pristine are small compared with the devices exposed to solvent only
 - this is likely due to the effect of increased conductance from the
 PBASE competing with the gating effect from the residual solvent.
 
-This example illustrates why the use of electrical characteristics when
-making conclusions around a successful functionalisation process should
-individually take into account each substance used in the process. The
-qualitative presence of a change in characteristics (or lack of one)
-over the full process is not sufficient to make conclusive remarks about
-the electrical changes due to functionalisation. A full set of
-electrical control measurements are required for an understanding of
-electronic changes occuring during the functionalisation process, in the
-manner of Besteman \emph{et al.} \autocite{Besteman2003}.
+The absorption of organic solvent by the carbon nanotube network has
+unknown but potentially negative implications for biosensor
+functionalisation. Use of organic solvents in functionalisation can also
+attack the encapsulation layer of devices, promoting gate current
+leakage. In light of these issues, recent work has begun to explore
+alternative aqueous-based methods for functionalisation of biosensors
+\autocite{Khan2021}. The discussion here also illustrates the importance
+of considering each substance used when electrical characterising a
+device to verify if functionalisation has worked. The qualitative
+presence of a change in characteristics (or lack of one) over the full
+process is not sufficient to make conclusive remarks regarding
+successful functionalisation. A full set of electrical control
+measurements are required for an understanding of electronic changes
+occuring during the functionalisation process, in the manner of Besteman
+\emph{et al.} \autocite{Besteman2003}.
 
 \newpage
 \KOMAoptions{paper=landscape,pagesize}
@@ -845,7 +847,7 @@ functionalisation process, with little justification used for variables
 chosen. Also notable is the frequent use of polyethylene glycol (PEG) or
 pyrene-PEG for prevention of non-specific binding (see
 \textbf{?@sec-non-specific-binding} for further discussion of NSB).
-Despite being less widely useS, Mishyn \emph{et al.} state a preference
+Despite being less widely used, Mishyn \emph{et al.} state a preference
 for the use of PBA/EDC over PBASE, as they found it was less prone to
 hydrolysis and gave a larger reaction yield when binding ferrocene to
 graphene \autocite{Mishyn2022}. A potential downside of using PBA/EDC
@@ -907,7 +909,7 @@ pyrene attachment were solvent-deposited, as highly-bundled devices were
 found to give a better optical signal-to-noise ratio, as discussed in
 \textbf{?@sec-pristine-raman}. Droplets of DMSO solution were placed on
 three (solvent-deposited) carbon nanotube films taken from the same
-wafer. The DMSO solution on one film contained 5mM PBA, the solution on
+wafer. The DMSO solution on one film contained 5 mM PBA, the solution on
 another film contained 5 mM PBASE, and the DMSO on the final film
 contained no linker molecule. After incubation for 1 hour, films were
 rinsed for 15 s with DMSO, then for 15 s with IPA to remove excess DMSO
@@ -1142,14 +1144,14 @@ performed as follows:
 \end{enumerate}
 
 Fluorescence images of the unencapsulated graphene devices successfully
-functionalised with pyrene-PEG-FITC are shown in
-Figure~\ref{fig-FITC-EtOH}. The dark regions are the gold electrodes,
-and the bright green region is the graphene channel. It is noticable
-that some variation in fluorescence is seen between channels, indicating
-the quality of functionalisation may vary across the channels of a
-device. Some of the difficulties encountered when investigating
-functionalisation with pyrene-PEG-FITC are outlined in
-Section~\ref{sec-impediments}.
+functionalised with pyrene-PEG-FITC, showing up bright green against a
+dark background, are shown in Figure~\ref{fig-FITC-EtOH}. The dark
+regions are the gold electrodes, and the bright green region is the
+graphene channel. It is noticable that some variation in fluorescence is
+seen between channels, indicating the quality of functionalisation may
+vary across the channels of a device. Some of the difficulties
+encountered when investigating functionalisation with pyrene-PEG-FITC
+are outlined in Section~\ref{sec-impediments}.
 
 \begin{figure}
 
@@ -1994,10 +1996,9 @@ Figure~\ref{fig-PBASE-GFP-OR-0.1mM} shows that a lowered concentration
 of PBASE leads to a channel region with no visible fluorescence (with a
 10 s exposure time). This indicates that the PBASE solution used to
 incubate the device must be sufficiently concentrated for odorant
-receptors to interact with the channel region, indicating that a
-specific interaction is occurring between PBASE and the GFP-OR43b in
-Figure~\ref{fig-PBASE-GFP-ORs}. Further evidence for successful
-functionalisation is provided in Section~\ref{sec-pyrene-interactions}.
+receptors to interact with the channel region. As discussed in
+Section~\ref{sec-pyrene-interactions}, this indicates that a specific
+interaction is occurring between PBASE and the GFP-OR43b.
 
 \hypertarget{sec-NTA-functionalisation}{%
 \subsection{Functionalisation using
@@ -2005,46 +2006,6 @@ Pyrene-PEG-NTA}\label{sec-NTA-functionalisation}}
 
 \begin{figure}
 
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch6/GFPOR_Ni2+_DFQ3C3_20sexposure_40X_mediumcontrast_ch6_231018.png}
-
-}
-
-}
-
-\subcaption{\label{fig-OR-GFP-surfactant-1}}
-\end{minipage}%
-%
-\begin{minipage}[t]{0.05\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch6/GFPOR_Ni2+_DFQ3C3_20sexposure_40X_mediumcontrast_ch7_231018.png}
-
-}
-
-}
-
-\subcaption{\label{fig-OR-GFP-surfactant-2}}
-\end{minipage}%
-\newline
 \begin{minipage}[t]{0.47\linewidth}
 
 {\centering 
@@ -2085,16 +2046,11 @@ Pyrene-PEG-NTA}\label{sec-NTA-functionalisation}}
 \subcaption{\label{fig-PPN-GFP-OR-2}}
 \end{minipage}%
 
-\caption{\label{fig-OR-GFP-surfactant}Image (a) and (b) show
-fluorescence images of an unencapsulated carbon nanotube channel after
-functionalisation with 1 \(\mu\)L/mL GFP-OR43b nanodiscs in 1XPBS using
-pyrene-PEG-NTA linker. Images (c) and (d) also shows channels
-functionalised with 1 \(\mu\)L/mL GFP-OR43b, but where the device was
-rinsed with surfactant after pyrene-PEG-NTA attachment. Image (c) is
-device channel 6 and image (d) is device channel 7. Images (a) and (b)
-were taken using a 10 s exposure time, while (c) and (d) were taken
-using a 20 s exposure time. (b)-(d) have been brightened by 40\% for
-visual clarity. All images were taken using a GFP filter.}
+\caption{\label{fig-OR-GFP-PPN}Image (a) and (b) show fluorescence
+images of a carbon nanotube channel after functionalisation with 1
+\(\mu\)L/mL GFP-OR43b nanodiscs in 1XPBS using pyrene-PEG-NTA. (b) has
+been brightened by 40\% for visual clarity. Both images were taken using
+a GFP filter and 10 s exposure time.}
 
 \end{figure}
 
@@ -2112,7 +2068,7 @@ nanotube network.
 
 The following procedure was used to functionalise unencapsulated carbon
 nanotube devices (steam-deposited, fabricated after June 2023) with
-pyrene-PEG-NTA and GFP-OR Nanodiscs:
+pyrene-PEG-NTA and GFP-OR nanodiscs:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -2163,7 +2119,7 @@ pyrene-PEG-NTA and GFP-OR Nanodiscs:
 
 Fluorescence images of the unencapsulated carbon nanotube devices
 successfully functionalised with GFP-OR43b nanodiscs using
-Pyrene-PEG-NTA are shown in \textbf{?@fig-PPN-GFP-ORs}. Similar
+Pyrene-PEG-NTA are shown in Figure~\ref{fig-PPN-GFP-OR-1}-b. Similar
 non-specific attachment to the silicon dioxide as in
 Section~\ref{sec-PBASE-GFP-OR-attachment} is seen, but there is clear
 attachment of green fluorescent protein-modified odorant receptors in
@@ -2173,47 +2129,88 @@ functionalisation process. The minimum measured channel resistance
 increased from 560 k\(\Omega\) to 790 k\(\Omega\), indicating the
 functionalisation process tends to decrease channel conductance.
 
-Surfactant rinsing was used to verify the specific attachment of
-GFP-OR43b nanodiscs to the Pyrene-PEG-NTA, in the same manner as
-outlined in Section~\ref{sec-PBASE-GFP-OR-attachment}.
-Figure~\ref{fig-OR-GFP-surfactant} shows fluorescence microscope images
-of the device after functionalisation with GFP-OR43b.
-
 \hypertarget{sec-conclusions}{%
 \section{Conclusions}\label{sec-conclusions}}
 
 It has been well-established in the literature that the \(\pi\)-stacking
 reaction mechanism between pyrene-based linkers and graphene and carbon
-nanotube network field-effect transistors can be used for the successful
-biosensor creation. Three types of linker molecules were investigated
-here: 1-Pyrenebutanoic acid N-hydroxysuccinimide ester (PBASE),
-1-pyrenebutyric acid (PBA) and the PEGlyated linker molecule
-pyrene-PEG-NTA (PPN). Despite the wide use of 1-pyrenebutanoic acid
-N-hydroxysuccinimide ester and 1-pyrenebutyric acid for
-functionalisation of biosensors, there is significant variation in the
-methods used for attachment of linker molecules to a transistor channel.
-The most common methods, using 6 mM PBASE dissolved in dimethylformamide
-or 1 mM PBASE in methanol, originate from the first documented use of
-PBASE for functionalisation of carbon nanotube biosensors. In the last 6
-years, more research has been done into optimising the PBASE methodology
-for graphene devices, but there is still disagreement in the literature
-over whether minimising or maximising PBASE coverage on a graphene
-device channel is desirable for sensing
-\autocite{Zhen2018,Hao2020,Wang2020,Mishyn2022}. Recent reports have
-also highlighted concerns around the impact hydrolysis on the
-availability of PBASE for functionalisation \autocite{Mishyn2022}.
+nanotube network field-effect transistors can be used to create working
+biosensors. The previous use of various linker molecules for biosensor
+functionalisation was investigated. Despite the wide use of
+1-pyrenebutanoic acid N-hydroxysuccinimide ester (PBASE) and
+1-pyrenebutyric acid (PBA) for functionalisation of biosensors, we found
+there was significant variation in the methods used for attachment of
+linker molecules to a transistor channel. The most common methods, using
+6 mM PBASE dissolved in dimethylformamide or 1 mM PBASE in methanol,
+stem directly from the first documented use of PBASE for
+functionalisation of carbon nanotube biosensors. In the last 6 years,
+more research has been done into optimising the PBASE methodology for
+graphene devices, but there is still disagreement in the literature over
+whether minimising or maximising PBASE coverage on a graphene device
+channel is desirable for sensing. Due to disagreement in the literature
+around suitable non-covalent methods for biosensor functionalisation,
+several steps were taken to identify a rapid and simple method for
+verifying successful functionalisation, and to locate any potential
+barriers to a successful functionalisation.
 
-First, it was verified that the pyrene groups of the linker molecules of
+First, we compared the advantages and disadvantages of the various
+linker molecules under investigation. The use of hydrogen NMR gave
+indications that water was present in PBASE samples prepared in DMSO.
+Concerns around the impact of the hydrolysis of PBASE on
+functionalisation mean that the presence of water is strongly
+undesirable. An alternative functionalisation approach less prone to
+hydrolysis is the reaction of PBA with EDC in the presence of NHS.
+However, this process has its own disadvantages, such as undesirable
+protein interactions and the increased amount of steps and process
+variables involved. Pyrene-NTA is also less prone to hydrolysis than
+PBASE but unlike PBASE or PBA/EDC interacts with a specific protein tag,
+the histidine tag. PEGlyation of the pyrene-NTA linker also means that
+the entire functionalisation process can be performed in aqueous
+solution, avoiding the introduction of non-organic solvents. This
+approach is desirable, since the non-aqueous solvents traditionally used
+for functionalisation may have negative impacts on device behaviour. For
+example, carbon nanotube device channel transfer characteristics were
+found to undergo a significant shift of \(\Delta V = -0.15 \pm 0.02\)
+when exposed to DMSO or MeOH for 1 hour.
+
+Next, we verified that the pyrene groups of the linker molecules of
 interest were attaching successfully to either carbon nanotubes or
-graphene when methanol or dimethyl sulfoxide were used as solvents.
-Hydrogen NMR gave indications that some water was present in PBASE
-samples prepared in DMSO, which may have been introduced during storage
-and handling of the samples or simply
+graphene. Raman spectroscopy showed that incubating a highly-bundled
+carbon nanotube film in 5 mM PBASE or PBA in DMSO for 1 hour increased
+I\(_D\)/I\(_G\) by a factor of \(\sim 3\) relative to the DMSO-only
+case. Incubating a steam-deposited carbon nanotube device in a 1 mM
+concentration of PBASE in methanol or DMSO for 1 hour was found to cause
+a significant increase in device on-current relative to the solvent-only
+case, and a similar increase in on-current was seen for 5 mM PBA in DMSO
+relative to the DMSO-only case. When a PBA-functionalised device was
+placed in aqueous solution with 20 mM EDC and 40 mM NHS for 30 minutes,
+a further increase in on-current was seen. Fluorescence microscopy was
+used to demonstrate the successful attachment of pyrene-PEG to graphene
+using an attached FITC probe, where immersing a graphene film in 1 mM
+pyrene-PEG in ethanol led to the channels becoming brightly fluorescent
+relative to the background using a 1 s exposure time. Pyrene-PEG was
+found to have little impact on the Dirac voltage of successfully
+functionalised graphene devices.
 
-two were identified which showed successful functionalisation of odorant
-receptors onto transducer devices using appropriate linker molecules. A
-range of potential obstacles to successful functionalisation were also
-identified using fluorescence microscopy.
+Finally, we verified that the linkers were successfully attaching the
+odorant receptors to the device channels with fluorescence microscopy.
+Various obstacles to successful functionalisation were encountered and
+addressed. Photoresist contamination was addressed with exposure and
+development steps before functionalisation (no exposure for SU8
+encapsulated devices). Hydrophobicity of graphene films was addressed by
+plasma treatment before functionalisation in aqueous solution. A
+surfactant rinse was used to distinguish between weak substrate-linker
+interaction and \(\pi\)-stacking between linker and the channel.
+Finally, coffee-ring distribution of linker was addressed by always
+submerging the device in linker when functionalising. Once these issues
+were addressed, two processes were identified which could be
+demonstrated to be successful using fluorescence microscopy. The first
+used an initial submersion in 1 mM PBASE in methanol for 1 hour, then
+submersion in 10 \(\mu\)L mL\(^{-1}\) OR43b nanodiscs in 1XPBS for 1
+hour. The second used a submersion in 1 \(\mu\)L pyrene-PEG-NTA in
+ethanol for 15 minutes, then submersion in 10 mM CuSO\(_4\) in 1XPBS for
+1 hour, then submersion in 1 \(\mu\)L mL\(^{-1}\) OR43b nanodiscs in
+1XPBS for 30 minutes.
 
 \cleardoublepage
 \phantomsection
