@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, boxrule=0pt, interior hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, sharp corners, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, borderline west={3pt}{0pt}{shadecolor}, enhanced, sharp corners, interior hidden, boxrule=0pt, frame hidden]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -240,8 +240,32 @@ A range of methods were followed to fabricate carbon nanotube network
 and graphene field-effect transistors for biosensor use. This chapter
 therefore looks to use the characterisation techniques outlined in the
 previous chapter to compare and contrast the device channel morphologies
-and electrical characteristics of devices fabricated using various
-methods.
+and electrical characteristics resulting from various methods.
+
+The three carbon nanotube film types used for devices were the
+solvent-deposited, surfactant-deposited and steam-assisted
+surfactant-deposited (steam-deposited) films discussed in the previous
+chapter. Atomic force microscopy and Raman spectroscopy was performed on
+the carbon nanotube networks to identify the distribution of carbon
+nanotube diameters and the defects present on the carbon nanotube
+networks. Electrical characterisation was then used to see how the
+morphology of each film type affects the performance of the completed
+devices. Both back-gated and liquid-gated transfer characteristics were
+compared, as well as key parameters taken from the liquid-gated
+characteristics. The electrical behaviour of liquid-gated graphene
+devices was also examined, as well as the impact of water on the
+performance of back-gated devices for vapour sensing use.
+
+Finally, as a control measurement for liquid-gated sensing and to verify
+the behaviour of the pristine device as a sensor, a salt concentration
+sensing series was performed with a steam-deposited carbon nanotube
+network device. The device characteristics were taken and device drift
+was examined and modelled. The sensing series was performed by
+successively diluting 1XPBS electrolyte in the polydimethylsiloxane
+`well' (electrolyte container) while passing a current through the
+device, and measuring the current response to dilutions. Various filters
+were applied to the collected data to better understand the signal
+change.
 
 \hypertarget{sec-pristine-morphology}{%
 \section{Carbon Nanotube Network
@@ -657,6 +681,56 @@ capillary effect \autocite{Bishop2020}.
 
 \hypertarget{sec-pristine-raman}{%
 \subsection{Raman Spectroscopy}\label{sec-pristine-raman}}
+
+\begin{figure}
+
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch5/raman_bundled.png}
+
+}
+
+}
+
+\subcaption{\label{fig-solvent-deposited}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch5/raman_singletubes.png}
+
+}
+
+}
+
+\subcaption{\label{fig-surfactant-deposited}}
+\end{minipage}%
+
+\caption{\label{fig-pristine-raman}A series of nine Raman spectra at
+different locations across a 10 \(\mu\)m \(\times\) 50 \(\mu\)m carbon
+nanotube film region, with (a) showing spectra from a film deposited in
+solvent and (b) showing spectra from a film deposited in surfactant with
+steam present.}
+
+\end{figure}
 
 \hypertarget{sec-pristine-electrical-characterisation}{%
 \section{Electrical Characteristics of Pristine
