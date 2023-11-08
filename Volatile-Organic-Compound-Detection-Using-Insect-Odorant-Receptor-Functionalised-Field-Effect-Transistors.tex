@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, frame hidden, enhanced, interior hidden, breakable, sharp corners, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, interior hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, sharp corners, frame hidden, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -433,20 +433,21 @@ surfactant with steam present.}
 
 The diameter range of deposited single-walled carbon nanotubes can be
 modelled via a normal or Gaussian distribution
-\autocite{LeMieux2008,Liu2013,Vobornik2023}. However, when we extract
-and bin the height profiles from the 2.5 \(\mu\)m \(\times\) 2.5
+\autocite{LeMieux2008,Liu2013,Vobornik2023}. However, when we directly
+extract and bin the height profiles from the 2.5 \(\mu\)m \(\times\) 2.5
 \(\mu\)m AFM images, plotted in black in
 Figure~\ref{fig-afm-morphology}, the histograms do not follow a normal
-distribution. The reason for this result is that the carbon nanotubes do
-not lie perfectly level on a perfectly level silicon oxide substrate -
-the atomic force microscope histogram would only be a single normal
-distribution in this ideal case. In practice, the SiO\(_2\) substrate
-and carbon nanotube surface both have a degree of roughness. To find the
-surface roughness corresponding to each deposition type, silicon dioxide
-substrates were modified using the same processes as in
-Figure~\ref{fig-afm-morphology} but without carbon nanotubes present in
-the solutions used. 2.5 \(\mu\)m \(\times\) 2.5 \(\mu\)m AFM images of
-the resulting surfaces are shown in Figure~\ref{fig-afm-substrate}.
+distribution. One factor influencing this result is the surface
+roughness of the silicon dioxide substrate. The carbon nanotubes do not
+lie perfectly level on a perfectly level silicon oxide substrate. In
+practice, both the SiO\(_2\) substrate and the surface of the carbon
+nanotubes both have a degree of roughness. To find the contribution of
+surface roughness to the height profile histogram corresponding to each
+network deposition method, silicon dioxide substrates were modified
+using the same processes as in Figure~\ref{fig-afm-morphology} but
+without carbon nanotubes present in the solutions used. 2.5 \(\mu\)m
+\(\times\) 2.5 \(\mu\)m AFM images of the modified surfaces are shown in
+Figure~\ref{fig-afm-substrate}.
 
 \begin{figure}
 
@@ -581,10 +582,7 @@ substrate in (c) and (d) was exposed to surfactant, and the substrate in
 
 In Figure~\ref{fig-afm-substrate}, we see that each substrate surface
 has a roughness that follows a normal distribution with some degree of
-skewness. The skew is likely introduced by slight distortion of the
-atomic force microscope image, as the roughness of a clean SiO\(_2\)
-surface should follow a normal distribution \autocite{Velicky2015}.
-Figure~\ref{fig-sio2-histogram} and
+skewness. Figure~\ref{fig-sio2-histogram} and
 Figure~\ref{fig-surfactant-histogram} are negatively skewed
 distributions. The fitted skew-normal distribution in
 Figure~\ref{fig-sio2-histogram} has a skew parameter \(\alpha\) (or
@@ -593,38 +591,28 @@ scale parameter \(\omega\) of 0.5 nm, while in
 Figure~\ref{fig-surfactant-histogram} \(\alpha = -2.2\), \(\xi = 2.2\)
 nm and \(\omega = 0.5\) nm. \(\xi\) and \(\omega\) correspond to the
 mean and standard deviation of the skew-free normal distribution when
-\(\alpha\) is set equal to zero \autocite{Azzalini1999}. The
+\(\alpha\) is set equal to zero \autocite{Azzalini1999}. The close
 correspondence between \(\xi\) and \(\omega\) for these distributions
-but not \(\alpha\) further implies that the skewness is an imaging or
+but not \(\alpha\) implies that the skewness is a variable imaging or
 processing artifact rather than a physical property of the surface.
+Without distortion, the roughness of a clean SiO\(_2\) surface should
+follow a normal distribution \autocite{Velicky2015}.
 
 However, Figure~\ref{fig-steamed-surfactant-histogram} has a pronounced
 positive skew with a long tail, which appears to result from the
 contribution of residual surfactant to surface roughness
-\autocite{Vobornik2023}. To determine the contribution of the
-surfactant, we fit a skew-normal distribution to the curve, but only
-letting \(\alpha\) vary with fixed values of \(\xi = 2.2\) nm and
-\(\omega = 0.5\) nm. The result is shown in
+\autocite{Vobornik2023}. Attempting to fit a skew-normal distribution to
+this histogram fails when all three variables are allowed to vary due to
+the presence of the tail. Instead, we fix \(\xi\) and \(\omega\) at 2.2
+nm and 0.5 nm respectively to mimic the silicon dioxide distributions
+previously obtained, and only \(\alpha\) is allowed to vary during the
+fitting process. The result is shown in
 Figure~\ref{fig-steamed-surfactant-histogram}. The fitted distribution
-has an \(\alpha\) of -2.4.
-
-Furthermore, nanotubes overlap and cross over each other, creating
-junctions with the combined height of the overlapping nanotubes.
-
-As both the carbon nanotube and silicon dioxide background heights can
-each be modelled using a normal distribution, we make an initial
-assumption that a linear combination of normal distributions can be used
-to model the AFM histograms in Figure~\ref{fig-afm-morphology}. Using
-the process discussed in Section~\ref{sec-histogram-analysis}, we
-approximate the normal distributions corresponding to the silicon oxide
-substrate and carbon nanotube network, shown in
-Figure~\ref{fig-afm-morphology} as green and red curves respectively.
-The silicon oxide peak appears to fit more closely to the distribution
-with smaller carbon nanotube heights, which could be due to measurement
-of the silicon background being improved when feature height is smaller.
-We notice that the distribution for the carbon nanotube bundles drops to
-approximately zero before reaching 0 nm, which is physically
-appropriate.
+has an \(\alpha\) of -2.4. The distribution closely fits the negative
+tail of the histogram, but deviates slightly from the positive tail due
+to the presence of surfactant. Since this deviation is small, the
+quality of the fit is still reasonably high, with an R-squared value of
+0.98.
 
 \begin{figure}
 
@@ -634,14 +622,13 @@ appropriate.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch5/Ned_NTQ24_20220125_00235_half_histogram_fit.png}
+\includegraphics{figures/ch5/NTQ24_20220125_00235_cnt_histogram.png}
 
 }
 
 }
 
-\subcaption{\label{fig-bundled-network-remainder}Solvent based
-deposition histogram}
+\subcaption{\label{fig-solvent-cnt-histogram}}
 \end{minipage}%
 %
 \begin{minipage}[t]{0.05\linewidth}
@@ -660,17 +647,31 @@ deposition histogram}
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_half_histogram_fit.png}
+\includegraphics{figures/ch5/Ned_SiO2_00351_20231016_histogram_initialguess.png}
 
 }
 
 }
 
-\subcaption{\label{fig-dropcast-network-remainder}Dropcast
-surfactant-based deposition histogram}
+\subcaption{\label{fig-sio2-histogram}}
 \end{minipage}%
 \newline
-\begin{minipage}[t]{0.26\linewidth}
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch5/NTQ8C7_w4_pristine_cnt_histogram.png}
+
+}
+
+}
+
+\subcaption{\label{fig-surfactant-cnt-histogram}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
 
 {\centering 
 
@@ -686,17 +687,64 @@ surfactant-based deposition histogram}
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch5/Ned_NGQ14D2_W4_pristine_20220713_00567_half_histogram_fit.png}
+\includegraphics{figures/ch5/Ned_SiO2_s_surfactant_nosteam_00355_20231016.png}
 
 }
 
 }
 
-\subcaption{\label{fig-steaming-network-remainder}Steam-assisted
-dropcast surfactant-based deposition}
+\subcaption{\label{fig-surfactant-histogram}}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch5/NT14D2_W4_pristine_cnt_histogram.png}
+
+}
+
+}
+
+\subcaption{\label{fig-steamed-surfactant-cnt-histogram}}
 \end{minipage}%
 %
-\begin{minipage}[t]{0.26\linewidth}
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch5/Ned_SiO2_s_surfactant_steam_00357_20231016_histogram_initialguess.png}
+
+}
+
+}
+
+\subcaption{\label{fig-steamed-surfactant-histogram}}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
 
 {\centering 
 
@@ -706,19 +754,98 @@ dropcast surfactant-based deposition}
 
 \end{minipage}%
 
-\caption{\label{fig-remaining-histogram}The counts which remain after
-\#1 and \#2 have been subtracted from the AFM histogram are shown in
-black. The counts have been overlaid with half a Gaussian distribution,
-manually fitted.}
+\caption{\label{fig-cnt-histogram}Histogram height distributions with
+corresponding KDE plots collected via the morphology analysis method
+outlined by Vobornik \emph{et al.} \autocite{Vobornik2023} are shown on
+the left, . The substrate in (a) and (b) was exposed to solvent, the
+substrate in (c) and (d) was exposed to surfactant, and the substrate in
+(e) and (f) was exposed to surfactant with steam present.}
 
 \end{figure}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.35\textwidth,height=\textheight]{figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_mask.png}
+
+}
+
+\caption{\label{fig-mask}An AFM image with a height threshold defined so
+that the carbon nanotube bundles present, shaded blue, are excluded from
+the height measurements. The average height of the unshaded regions of
+the image can then be used as an estimate of the measured substrate
+height.}
+
+\end{figure}
+
+Using the morphology analysis technique outlined by Vobornik \emph{et
+al.} \autocite{Vobornik2023}, we collected five successive diameter
+measurements of 30 carbon nanotube bundles using Gwyddion. Measurements
+were not taken at bundle junctions. A height threshold `mask' was
+defined in Gwyddion to determine average substrate height, as shown in
+Figure~\ref{fig-mask}. This background value was subtracted from our
+diameter measurements to determine the actual bundle height. The means
+of the solvent-deposited, surfactant-deposited and steam-assisted
+surfactant-deposited bundle diameter histograms are \(8.8 \pm 4.0\) nm,
+\(4.2 \pm 1.8\) nm and \(3.3 \pm 1.0\) nm respectively. We see that an
+increased maximum feature height leads to an increased mean background
+height, and by examining the AFM images in
+Figure~\ref{fig-afm-morphology} we see that this may be due to deep
+artifacts on the surface of the substrate in the vicinity of large
+features. The average of the five height-adjusted values for each carbon
+nanotube bundle was then calculated, and these 30 averages were sorted
+into six equal-sized bins. The binned bundle diameter measurements,
+alongside estimated probability density, are shown in
+Figure~\ref{fig-cnt-histogram}.
+
+We notice from Figure~\ref{fig-cnt-histogram} that each histogram
+appears to follow a positively skewed normal distribution, different to
+the skew-free normal distribution we expect from previous works
+\autocite{LeMieux2008,Liu2013,Vobornik2023}. The skew is likely another
+artifact from imaging the network with the atomic force microscope. The
+force of the atomic force microscope tip is known to cause larger
+bundles to undergo some degree of compression, and the resulting
+systematic underestimation of their height may be responsible for the
+distribution skewness \autocite{Vobornik2023}. The fitted skew-normal
+distribution in Figure~\ref{fig-solvent-cnt-histogram} has
+\(\alpha = 2.7\), \(\xi = 4.3\) nm, \(\omega = 5.9\) nm, the
+distribution in Figure~\ref{fig-surfactant-cnt-histogram} has
+\(\alpha = 2.4\), \(\xi = 2.2\) nm, \(\omega = 2.6\) n, and the
+distribution in Figure~\ref{fig-steamed-surfactant-cnt-histogram} has
+\(\alpha = 3.6\), \(\xi = 2.2\) nm and \(\omega = 1.5\) nm.
+
+We then take \(k_2\) to be the maximum y-value of this modified dataset,
+and \(m_1\) to be the x-value of the maximum y-value. We then set
+\(k_2\) so that the height of the resulting distribution at one standard
+deviation matches the height of the .xyz data histogram. We take this
+distribution, and subtract it from the existing dataset.
+
+, we approximate the normal distributions corresponding to the silicon
+oxide substrate and carbon nanotube network, shown in
+Figure~\ref{fig-afm-morphology} as green and red curves respectively.
+The silicon oxide peak appears to fit more closely to the distribution
+with smaller carbon nanotube heights, which could be due to measurement
+of the silicon background being improved when feature height is smaller.
+We notice that the distribution for the carbon nanotube bundles drops to
+approximately zero before reaching 0 nm, which is physically
+appropriate.
+
+We use a similar process for analysing the contribution of the substrate
+roughness for the histograms in Figure~\ref{fig-afm-morphology}.
+
+Furthermore, nanotubes overlap and cross over each other, creating
+junctions with the combined height of the overlapping nanotubes.
+
+As both the carbon nanotube and silicon dioxide background heights can
+each be modelled using a normal distribution, we make an initial
+assumption that a linear combination of normal distributions can be used
+to model the AFM histograms in Figure~\ref{fig-afm-morphology}.
 
 By subtracting the modelled silicon and carbon nanotube normal
 distributions from the AFM histogram, we find a remaining distribution
 spread roughly between 0 nm and the mean of the carbon nanotube bundle
 distribution. It is also apparent that the remaining distribution
 consistently follows a half-normal distribution after a sharp rise to
-maximum, as shown in Figure~\ref{fig-remaining-histogram}. The full
+maximum, as shown in \textbf{?@fig-remaining-histogram}. The full
 histogram profile therefore appears to be a linear combination of normal
 and half-normal distributions. This combination could be modelled
 mathematically in order to rapidly extract key parameters from atomic
@@ -786,12 +913,9 @@ estimates are shown in Table~\ref{tbl-histogram-parameters}. Also shown
 is an estimate of the ratio of single- to multi-tube bundles for each
 deposition, found by comparing the proportion of each carbon nanotube
 curve below and above 2.9 nm, the minimum multi-tube bundle size for
-1.45 nm diameter nanotubes. It should be noted that the force of the
-atomic force microscope tip may cause some degree of nanotube bundle
-compression, leading to a systematic underestimate of nanotube height
-\autocite{Vobornik2023}. The relative proportion of multi-tube bundles
-shown in Table~\ref{tbl-histogram-parameters} should therefore be
-treated as a lower-limit estimate of the true proportion.
+1.45 nm diameter nanotubes. The relative proportion of multi-tube
+bundles shown in Table~\ref{tbl-histogram-parameters} should therefore
+be treated as a lower-limit estimate of the true proportion.
 
 \hypertarget{tbl-histogram-parameters}{}
 \begin{table}
@@ -1223,19 +1347,19 @@ network relative to networks deposited via alternative processes
 \autocite{Kang2005,Heller2008,Murugathas2018}. It is highly likely the
 dopant is present due to the steam deposition, and may be related to the
 large contamination peak for steam-deposited films seen in
-Figure~\ref{fig-afm-morphology} and
-Figure~\ref{fig-remaining-histogram}. One possibility is that this
-dopant is residual surfactant, which can \(p\)-dope carbon nanotubes as
-well as enhancing \(p\)-doping from adsorped oxygen and water
-\autocite{Kane2014,Nonoguchi2018}. We have seen that steam prevents
-bundling of carbon nanotubes during deposition. This effect is likely
-due to persistence of the surfactant keeping nanotubes separate during
-this process. Presence of surfactant may also explain the lowered
-subthreshold slope and therefore mobility of the surfactant-deposited
-devices with steam relative to the surfactant-deposited devices without
-steam. The analysis by Kane \emph{et al.} shows that the thermal
-annealling at 150\(^\circ\)C used in this work to remove residual
-surfactant is likely inadequate for this purpose \autocite{Kane2014}.
+Figure~\ref{fig-afm-morphology} and \textbf{?@fig-remaining-histogram}.
+One possibility is that this dopant is residual surfactant, which can
+\(p\)-dope carbon nanotubes as well as enhancing \(p\)-doping from
+adsorped oxygen and water \autocite{Kane2014,Nonoguchi2018}. We have
+seen that steam prevents bundling of carbon nanotubes during deposition.
+This effect is likely due to persistence of the surfactant keeping
+nanotubes separate during this process. Presence of surfactant may also
+explain the lowered subthreshold slope and therefore mobility of the
+surfactant-deposited devices with steam relative to the
+surfactant-deposited devices without steam. The analysis by Kane
+\emph{et al.} shows that the thermal annealling at 150\(^\circ\)C used
+in this work to remove residual surfactant is likely inadequate for this
+purpose \autocite{Kane2014}.
 
 \begin{figure}
 
