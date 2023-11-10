@@ -6,23 +6,11 @@ The code used for general analysis of field-effect transistor devices in this th
 
 ## Atomic Force Microscope Histogram Analysis {#sec-histogram-analysis}
 
-The purpose of this code is to analyse atomic force microscope (AFM) images of carbon nanotube networks in .xyz format taken using an atomic force microscope and processed in Gwyddion (see @sec-afm-characterisation). It was originally designed by Erica Happe in Matlab, and adapted by Marissa Dierkes and myself for use in Python. 
-
-$$
-f(x) = k_1\exp{\Bigg(-\frac{{(x-m_1)}^{2}}{{2s_1}^{2}}\Bigg)} + k_2\exp{\Bigg(-\frac{{(x-m_2)}^{2}}{{2s_2}^{2}}\Bigg)} + ...
-$${#eq-lin-combo-gaussian}
-
-The .xyz data is initially sorted into bins with 0.15 nm size. The bin with the maximum number of counts is set at 0 nm, as this peak represents the mean of the surface roughness of the bare silicon. The parameters $m_i$, $s_i$, $k_i$ (i = 1, 2, 3) are used with objective function @eq-lin-combo-gaussian to overlay the data with normal distributions. These fitting parameters represent the mean (m), standard deviation (s) and amplitude (k) of each normal distribution. We can make approximations of some of these fitting parameters using the histogram data. 
-
-$k_1$ is taken to be the maximum y-value of the data being fitted, $m_1$ is set to zero (used as a point of reference) and $s_1$ is taken as one-third of the difference between $m_1$ and the x-value of the first datapoint where the y-value is greater than 1% of $k_1$ (approximating one standard deviation). We find the distribution given by these values using @eq-lin-combo-gaussian, and subtract it from the existing dataset. 
-
-The code also allows for discretely binning continuous data from fitted normal distributions and examining the proportion of counts above or below a particular height. 2.9 nm is roughly where 2 bundles with average size 1.45 nm can start to be present, and is used as an estimate of the boundary value between single-tube bundle diameters and multi-tube bundle diameters.
+The purpose of this code is to analyse atomic force microscope (AFM) images of carbon nanotube networks in .xyz format taken using an atomic force microscope and processed in Gwyddion (see @sec-afm-characterisation). It was originally designed by Erica Happe in Matlab, and adapted by Marissa Dierkes and myself for use in Python. The code imports the .xyz data and sorts it into bins 0.15 nm in size for processing. To perform skew-normal distribution fits, both *scipy.optimize.curve_fit* and *scipy.stats.skewnorm* modules are used in this code.
 
 ## Raman Spectroscopy Analysis {#sec-raman-analysis}
 
-The purpose of this code is to analyse a series of Raman spectra taken at different points on a single film (see @sec-raman-characterisation).
-
-Data is imported in a tab-delimited text file, and the baseline region between 1400 and 1500 cm$^{-1}$ is set as zero amplitude for data collected from each film location. The data from each location is then normalised to the D-peak (the maximum point on the D-peak, which lies between 1300 and 1400 cm$^{-1}$, is set equal to unity). Using these datasets, plots of normalised intensity relative to the D-peak comparing each location can be created. The ratio I$^{D}$/I$_{G}$ can be found by taking the inverse of the maximum point on the G-peak of these normalised plots. A plot of the average intensity across all locations measured can also be created. 
+The purpose of this code is to analyse a series of Raman spectra taken at different points on a single film (see @sec-raman-characterisation). Data is imported in a series of tab-delimited text files, with the low wavenumber spectrum (100 cm$^{-1} - 650$ cm$^{-1}$) and high wavenumber spectrum (1300 cm$^{-1} - 1650$ cm$^{-1}$) imported in separate datafiles for each scan location.
 
 ## Field-Effect Transistor Analysis {#sec-field-effect-transistor-analysis}
 

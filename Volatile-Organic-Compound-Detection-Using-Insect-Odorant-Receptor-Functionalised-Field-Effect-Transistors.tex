@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, interior hidden, sharp corners, breakable, enhanced, frame hidden, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, boxrule=0pt, interior hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, enhanced, frame hidden]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -720,7 +720,7 @@ Figure~\ref{fig-mask}. This background value was subtracted from our
 diameter measurements to determine the actual bundle height. The means
 of the solvent-deposited, surfactant-deposited and steam-assisted
 surfactant-deposited bundle diameter histograms are \(8.8 \pm 4.0\) nm,
-\(4.2 \pm 1.8\) nm and \(3.3 \pm 1.0\) nm respec tively. We see that an
+\(4.2 \pm 1.8\) nm and \(3.3 \pm 1.0\) nm respectively. We see that an
 increased maximum feature height leads to an increased mean background
 height, and by examining the AFM images in
 Figure~\ref{fig-afm-morphology} we see that this may be due to deep
@@ -857,8 +857,8 @@ to residual surfactant pooling and attaching to the substrate surface.
 These results may both be explained by the presence of steam enabling
 surfactant to follow carbon nanotubes to the substrate surface, which
 keeps them from bundling during the attachment process. The unwanted
-persistence of surfactant means that further vacuum annealing may be
-required for robust biosensors \autocite{Kane2014}.
+persistence of surfactant means that higher temperature vacuum annealing
+may be required for robust biosensors \autocite{Kane2014}.
 
 \hypertarget{sec-pristine-raman}{%
 \subsection{Raman Spectroscopy}\label{sec-pristine-raman}}
@@ -871,7 +871,7 @@ required for robust biosensors \autocite{Kane2014}.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch5/raman_bundled.png}
+\includegraphics{figures/ch5/bundled_raman.png}
 
 }
 
@@ -896,7 +896,7 @@ required for robust biosensors \autocite{Kane2014}.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch5/raman_singletubes.png}
+\includegraphics{figures/ch5/singletube_raman.png}
 
 }
 
@@ -904,14 +904,71 @@ required for robust biosensors \autocite{Kane2014}.
 
 \subcaption{\label{fig-surfactant-deposited}}
 \end{minipage}%
+\newline
+\begin{minipage}[t]{0.33\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.35\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch5/comparison-raman.png}
+
+}
+
+}
+
+\subcaption{\label{fig-dg-peak-comparison}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.33\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
 
 \caption{\label{fig-pristine-raman}A series of nine Raman spectra at
 different locations across a 10 \(\mu\)m \(\times\) 50 \(\mu\)m carbon
 nanotube film region, spaced at least 10 \(\mu\)m apart, with (a)
 showing spectra from a film deposited in solvent and (b) showing spectra
-from a film deposited in surfactant with steam present.}
+from a film deposited in surfactant with steam present. (c) shows the
+spread of the D-peak/G-peak spectral ratios corresponding to each film.}
 
 \end{figure}
+
+Raman spectra were collected from a solvent-deposited carbon nanotube
+film and a steam-assisted surfactant-deposited film, both on silicon
+dioxide, in the manner described in
+\textbf{?@sec-raman-characterisation}. These spectra were then processed
+using the Python script mentioned in Section~\ref{sec-raman-analysis}.
+For each location, spectra over two wavenumber ranges were collected.
+The silicon peak, found in the first range between 100 cm\(^{-1}\) and
+210 cm\(^{-1}\), was used to normalise the second spectrum between 1250
+cm\(^{-1}\) and 1735 cm\(^{-1}\). The silicon-peak normalised spectra
+are shown in Figure~\ref{fig-pristine-raman}.
+
+and the baseline region between 1400 and 1500 cm\(^{-1}\) is set as zero
+amplitude for data collected from each film location. The data from each
+location is then normalised to the D-peak (the maximum point on the
+D-peak, which lies between 1300 and 1400 cm\(^{-1}\), is set equal to
+unity). Using these datasets, plots of normalised intensity relative to
+the D-peak comparing each location can be created. The ratio
+I\(^{D}\)/I\(_{G}\) can be found by taking the inverse of the maximum
+point on the G-peak of these normalised plots. A plot of the average
+intensity across all locations measured can also be created.
 
 \hypertarget{sec-pristine-electrical-characterisation}{%
 \section{Electrical Characteristics of Pristine
@@ -2274,54 +2331,21 @@ images of carbon nanotube networks in .xyz format taken using an atomic
 force microscope and processed in Gwyddion (see
 \textbf{?@sec-afm-characterisation}). It was originally designed by
 Erica Happe in Matlab, and adapted by Marissa Dierkes and myself for use
-in Python.
-
-\begin{equation}\protect\hypertarget{eq-lin-combo-gaussian}{}{
-f(x) = k_1\exp{\Bigg(-\frac{{(x-m_1)}^{2}}{{2s_1}^{2}}\Bigg)} + k_2\exp{\Bigg(-\frac{{(x-m_2)}^{2}}{{2s_2}^{2}}\Bigg)} + ...
-}\label{eq-lin-combo-gaussian}\end{equation}
-
-The .xyz data is initially sorted into bins with 0.15 nm size. The bin
-with the maximum number of counts is set at 0 nm, as this peak
-represents the mean of the surface roughness of the bare silicon. The
-parameters \(m_i\), \(s_i\), \(k_i\) (i = 1, 2, 3) are used with
-objective function Equation~\ref{eq-lin-combo-gaussian} to overlay the
-data with normal distributions. These fitting parameters represent the
-mean (m), standard deviation (s) and amplitude (k) of each normal
-distribution. We can make approximations of some of these fitting
-parameters using the histogram data.
-
-\(k_1\) is taken to be the maximum y-value of the data being fitted,
-\(m_1\) is set to zero (used as a point of reference) and \(s_1\) is
-taken as one-third of the difference between \(m_1\) and the x-value of
-the first datapoint where the y-value is greater than 1\% of \(k_1\)
-(approximating one standard deviation). We find the distribution given
-by these values using Equation~\ref{eq-lin-combo-gaussian}, and subtract
-it from the existing dataset.
-
-The code also allows for discretely binning continuous data from fitted
-normal distributions and examining the proportion of counts above or
-below a particular height. 2.9 nm is roughly where 2 bundles with
-average size 1.45 nm can start to be present, and is used as an estimate
-of the boundary value between single-tube bundle diameters and
-multi-tube bundle diameters.
+in Python. The code imports the .xyz data and sorts it into bins 0.15 nm
+in size for processing. To perform skew-normal distribution fits, both
+\emph{scipy.optimize.curve\_fit} and \emph{scipy.stats.skewnorm} modules
+are used in this code.
 
 \hypertarget{sec-raman-analysis}{%
 \section{Raman Spectroscopy Analysis}\label{sec-raman-analysis}}
 
 The purpose of this code is to analyse a series of Raman spectra taken
 at different points on a single film (see
-\textbf{?@sec-raman-characterisation}).
-
-Data is imported in a tab-delimited text file, and the baseline region
-between 1400 and 1500 cm\(^{-1}\) is set as zero amplitude for data
-collected from each film location. The data from each location is then
-normalised to the D-peak (the maximum point on the D-peak, which lies
-between 1300 and 1400 cm\(^{-1}\), is set equal to unity). Using these
-datasets, plots of normalised intensity relative to the D-peak comparing
-each location can be created. The ratio I\(^{D}\)/I\(_{G}\) can be found
-by taking the inverse of the maximum point on the G-peak of these
-normalised plots. A plot of the average intensity across all locations
-measured can also be created.
+\textbf{?@sec-raman-characterisation}). Data is imported in a series of
+tab-delimited text files, with the low wavenumber spectrum (100
+cm\(^{-1} - 210\) cm\(^{-1}\)) and high wavenumber spectrum (1250
+cm\(^{-1} - 1735\) cm\(^{-1}\)) imported in separate datafiles for each
+scan location.
 
 \hypertarget{sec-field-effect-transistor-analysis}{%
 \section{Field-Effect Transistor
