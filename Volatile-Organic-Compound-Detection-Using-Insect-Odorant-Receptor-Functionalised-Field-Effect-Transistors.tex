@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, boxrule=0pt, interior hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, enhanced, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, interior hidden, boxrule=0pt, frame hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -230,7 +230,7 @@ Effect
 Transistors}\label{characteristics-of-pristine-carbon-nanotube-graphene-field-effect-transistors}}
 
 \begin{verbatim}
-280656
+293626
 \end{verbatim}
 
 \hypertarget{introduction}{%
@@ -268,8 +268,8 @@ were applied to the collected data to better understand the signal
 change.
 
 \hypertarget{sec-pristine-morphology}{%
-\section{Carbon Nanotube Network
-Morphology}\label{sec-pristine-morphology}}
+\section{Carbon Nanotube Network Morphology and
+Composition}\label{sec-pristine-morphology}}
 
 \hypertarget{atomic-force-microscopy}{%
 \subsection{Atomic Force Microscopy}\label{atomic-force-microscopy}}
@@ -600,14 +600,15 @@ follow a normal distribution \autocite{Velicky2015}.
 
 However, Figure~\ref{fig-steamed-surfactant-histogram} has a pronounced
 positive skew with a long tail. The tail appears to result from the
-contribution of residual surfactant to surface morphology, observed in
-Figure~\ref{fig-steamed-surfactant} and discussed elsewhere in the
-literature \autocite{Vobornik2023}. Attempting to fit a skew-normal
-distribution to this histogram fails when all three variables are
-allowed to vary due to the presence of the tail. Instead, we fix \(\xi\)
-and \(\omega\) at 2.2 nm and 0.5 nm respectively to mimic the silicon
-dioxide distributions previously obtained, and only \(\alpha\) is
-allowed to vary during the fitting process. The result is shown in
+contribution of residual surfactant aggregates to surface morphology,
+observed in Figure~\ref{fig-steamed-surfactant} and recently discussed
+elsewhere in the literature \autocite{Christensen2022,Vobornik2023}.
+Attempting to fit a skew-normal distribution to this histogram fails
+when all three variables are allowed to vary due to the presence of the
+tail. Instead, we fix \(\xi\) and \(\omega\) at 2.2 nm and 0.5 nm
+respectively to mimic the silicon dioxide distributions previously
+obtained, and only \(\alpha\) is allowed to vary during the fitting
+process. The result is shown in
 Figure~\ref{fig-steamed-surfactant-histogram}. The fitted distribution
 has an \(\alpha\) of -2.4. The distribution closely fits the negative
 tail of the histogram, but deviates slightly from the positive tail due
@@ -777,25 +778,6 @@ s.f. (encompassing circle diameter = \(d\), number of packed circles =
 \text{3.00} & \text{3.30} & 3.61 \\
 \end{longtable}
 
-\hypertarget{tbl-histogram-parameters}{}
-\begin{table}
-\caption{\label{tbl-histogram-parameters}The mean of histogram distributions for carbon nanotube films deposited
-using various methods, alongside estimates for the number of nanotubes
-present per mean bundle and the estimated proportion of multi-tubed
-bundles present across the network. }\tabularnewline
-
-\centering
-\begin{tabular}{>{\raggedright\arraybackslash}p{4cm}>{\centering\arraybackslash}p{3cm}>{\centering\arraybackslash}p{3cm}>{\centering\arraybackslash}p{3cm}}
-\toprule
- & Mean Bundle Diameter (nm) & Tubes per Average Bundle & \% Multi-Tube Bundles\\
-\midrule
-Solvent deposited & 8.8 ± 4.0 & 28 & > 96\%\\
-Surfactant deposited & 4.2 ± 1.8 & 5 & > 75\%\\
-Surfactant deposited with steam & 3.3 ± 1.0 & 3 & > 65\%\\
-\bottomrule
-\end{tabular}
-\end{table}
-
 If we model carbon nanotube bundles as cylinders, and we assume the
 component nanotubes follow 2D packing and are of equal diameter, we can
 state the mean bundle size for each deposition type in terms of number
@@ -818,6 +800,25 @@ Table~\ref{tbl-histogram-parameters} should be interpreted as
 lower-limit estimates of the size and relative proportion of bundles,
 recalling that the distribution skewness indicates underestimation of
 the true bundle height.
+
+\hypertarget{tbl-histogram-parameters}{}
+\begin{table}
+\caption{\label{tbl-histogram-parameters}The mean of histogram distributions for carbon nanotube films deposited
+using various methods, alongside estimates for the number of nanotubes
+present per mean bundle and the estimated proportion of multi-tubed
+bundles present across the network. }\tabularnewline
+
+\centering
+\begin{tabular}{>{\raggedright\arraybackslash}p{4cm}>{\centering\arraybackslash}p{3cm}>{\centering\arraybackslash}p{3cm}>{\centering\arraybackslash}p{3cm}}
+\toprule
+ & Mean Bundle Diameter (nm) & Tubes per Average Bundle & \% Multi-Tube Bundles\\
+\midrule
+Solvent deposited & 8.8 ± 4.0 & 28 & > 96\%\\
+Surfactant deposited & 4.2 ± 1.8 & 5 & > 75\%\\
+Surfactant deposited with steam & 3.3 ± 1.0 & 3 & > 65\%\\
+\bottomrule
+\end{tabular}
+\end{table}
 
 Both the carbon nanotube bundle diameter mean and standard deviation are
 small for surfactant-deposited films when compared to the mean and
@@ -949,26 +950,54 @@ spread of the D-peak/G-peak spectral ratios corresponding to each film.}
 
 \end{figure}
 
-Raman spectra were collected from a solvent-deposited carbon nanotube
-film and a steam-assisted surfactant-deposited film, both on silicon
-dioxide, in the manner described in
-\textbf{?@sec-raman-characterisation}. These spectra were then processed
-using the Python script mentioned in Section~\ref{sec-raman-analysis}.
-For each location, spectra over two wavenumber ranges were collected.
-The silicon peak, found in the first range between 100 cm\(^{-1}\) and
-210 cm\(^{-1}\), was used to normalise the second spectrum between 1250
-cm\(^{-1}\) and 1735 cm\(^{-1}\). The silicon-peak normalised spectra
-are shown in Figure~\ref{fig-pristine-raman}.
+Raman spectroscopy was also used to analyse and compare the deposited
+carbon nanotube networks. Raman spectra were collected from a
+solvent-deposited carbon nanotube film and a steam-assisted
+surfactant-deposited film, both on silicon dioxide, in the manner
+described in \textbf{?@sec-raman-characterisation}. These spectra were
+then processed using the Python script mentioned in
+Section~\ref{sec-raman-analysis}. For each location, spectra over two
+wavenumber ranges were collected. A peak corresponding to the silicon
+dioxide substrate, found in the range between 100 cm\(^{-1}\) and 650
+cm\(^{-1}\), was used as a reference peak for the normalisation of
+intensities across the range between 1300 cm\(^{-1}\) and 1650
+cm\(^{-1}\). These normalised spectra are shown in
+Figure~\ref{fig-pristine-raman}. In all spectra, a D-band comprising a
+single D-peak is observed at \(\sim\) 1320 cm\(^{-1}\), and a G-band
+comprising two G-peaks, G\(^-\) and G\(^+\) is observed between \(\sim\)
+1525 cm\(^{-1}\) and \(\sim\) 1650 cm\(^{-1}\). These features are
+characteristic of networks of semiconducting carbon nanotubes
+\autocite{Dresselhaus2005,King2014}.
 
-and the baseline region between 1400 and 1500 cm\(^{-1}\) is set as zero
-amplitude for data collected from each film location. The data from each
-location is then normalised to the D-peak (the maximum point on the
-D-peak, which lies between 1300 and 1400 cm\(^{-1}\), is set equal to
-unity). Using these datasets, plots of normalised intensity relative to
-the D-peak comparing each location can be created. The ratio
-I\(^{D}\)/I\(_{G}\) can be found by taking the inverse of the maximum
-point on the G-peak of these normalised plots. A plot of the average
-intensity across all locations measured can also be created.
+Closer inspection of the D peak and G peaks can give us important
+information about network composition. G\(^-\) is a minor peak found at
+\(\sim\) 1570 cm\(^{-1}\), while G\(^+\) is a larger feature at \(\sim\)
+1590 cm\(^{-1}\). The G\(^+\) feature describes the in-plane vibration
+of carbon bonds along the length of the carbon nanotubes, while the
+G\(^-\) feature describes the in-plane vibration of bonds about the
+nanotube circumference \autocite{King2014,Swiniarski2021}. The splitting
+between the wavenumber location of the G\(^-\) and G\(^+\) local maxima
+is lower in Figure~\ref{fig-surfactant-deposited} than in
+Figure~\ref{fig-solvent-deposited}, indicating more metallic nanotubes
+are present in the surfactant-deposited network
+\autocite{Swiniarski2021}. The D-peak gives an indication of the defects
+present in the carbon nanotube atomic structure. We notice that the size
+of the normalised D-peak is much lower in
+Figure~\ref{fig-solvent-deposited} than in
+Figure~\ref{fig-surfactant-deposited}, indicating the solvent deposition
+process introduces less defects to the carbon nanotubes than
+surfactant-mediated deposition. These defects are likely introduced
+through the introduction of charge impurites by surfactant aggregates
+present around the carbon nanotubes \autocite{Christensen2022}.
+
+The data from each location is then normalised to the D-peak (the
+maximum point on the D-peak, which lies between 1300 and 1400
+cm\(^{-1}\), is set equal to unity). Using these datasets, plots of
+normalised intensity relative to the D-peak comparing each location can
+be created. The ratio I\(_{D}\)/I\(_{G}\) can be found by taking the
+inverse of the maximum point on the G-peak of these normalised plots. A
+plot of the average intensity across all locations measured can also be
+created.
 
 \hypertarget{sec-pristine-electrical-characterisation}{%
 \section{Electrical Characteristics of Pristine
@@ -1305,11 +1334,12 @@ large contamination peak for steam-deposited films seen in
 Figure~\ref{fig-afm-morphology} and \textbf{?@fig-remaining-histogram}.
 One possibility is that this dopant is residual surfactant, which can
 \(p\)-dope carbon nanotubes as well as enhancing \(p\)-doping from
-adsorped oxygen and water \autocite{Kane2014,Nonoguchi2018}. We have
-seen that steam prevents bundling of carbon nanotubes during deposition.
-This effect is likely due to persistence of the surfactant keeping
-nanotubes separate during this process. Presence of surfactant may also
-explain the lowered subthreshold slope and therefore mobility of the
+adsorped oxygen and water
+\autocite{Kane2014,Nonoguchi2018,Christensen2022}. We have seen that
+steam prevents bundling of carbon nanotubes during deposition. This
+effect is likely due to persistence of the surfactant keeping nanotubes
+separate during this process. Presence of surfactant may also explain
+the lowered subthreshold slope and therefore mobility of the
 surfactant-deposited devices with steam relative to the
 surfactant-deposited devices without steam. The analysis by Kane
 \emph{et al.} shows that the thermal annealling at 150\(^\circ\)C used
@@ -2343,8 +2373,8 @@ The purpose of this code is to analyse a series of Raman spectra taken
 at different points on a single film (see
 \textbf{?@sec-raman-characterisation}). Data is imported in a series of
 tab-delimited text files, with the low wavenumber spectrum (100
-cm\(^{-1} - 210\) cm\(^{-1}\)) and high wavenumber spectrum (1250
-cm\(^{-1} - 1735\) cm\(^{-1}\)) imported in separate datafiles for each
+cm\(^{-1} - 650\) cm\(^{-1}\)) and high wavenumber spectrum (1300
+cm\(^{-1} - 1650\) cm\(^{-1}\)) imported in separate datafiles for each
 scan location.
 
 \hypertarget{sec-field-effect-transistor-analysis}{%
