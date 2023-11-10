@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, interior hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, sharp corners, frame hidden, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, interior hidden, sharp corners, breakable, enhanced, frame hidden, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -230,7 +230,7 @@ Effect
 Transistors}\label{characteristics-of-pristine-carbon-nanotube-graphene-field-effect-transistors}}
 
 \begin{verbatim}
-279135
+280656
 \end{verbatim}
 
 \hypertarget{introduction}{%
@@ -431,13 +431,13 @@ surfactant with steam present.}
 
 \end{figure}
 
-The diameter range of deposited single-walled carbon nanotubes can be
-modelled via a normal or Gaussian distribution
-\autocite{LeMieux2008,Liu2013,Vobornik2023}. However, when we directly
-extract and bin the height profiles from the 2.5 \(\mu\)m \(\times\) 2.5
-\(\mu\)m AFM images, plotted in black in
-Figure~\ref{fig-afm-morphology}, the histograms do not follow a normal
-distribution. One factor influencing this result is the surface
+It has previously been demonstrated that the diameter range of deposited
+single-walled carbon nanotubes can be modelled via a normal or Gaussian
+distribution \autocite{LeMieux2008,Liu2013,Vobornik2023}. However, when
+we directly extract and bin the height profiles from the 2.5 \(\mu\)m
+\(\times\) 2.5 \(\mu\)m AFM images, plotted in black in
+Figure~\ref{fig-afm-morphology}, we obtain histograms which do not
+follow a normal distribution. One reason for this result is the surface
 roughness of the silicon dioxide substrate. The carbon nanotubes do not
 lie perfectly level on a perfectly level silicon oxide substrate. In
 practice, both the SiO\(_2\) substrate and the surface of the carbon
@@ -599,20 +599,23 @@ Without distortion, the roughness of a clean SiO\(_2\) surface should
 follow a normal distribution \autocite{Velicky2015}.
 
 However, Figure~\ref{fig-steamed-surfactant-histogram} has a pronounced
-positive skew with a long tail, which appears to result from the
-contribution of residual surfactant to surface roughness
-\autocite{Vobornik2023}. Attempting to fit a skew-normal distribution to
-this histogram fails when all three variables are allowed to vary due to
-the presence of the tail. Instead, we fix \(\xi\) and \(\omega\) at 2.2
-nm and 0.5 nm respectively to mimic the silicon dioxide distributions
-previously obtained, and only \(\alpha\) is allowed to vary during the
-fitting process. The result is shown in
+positive skew with a long tail. The tail appears to result from the
+contribution of residual surfactant to surface morphology, observed in
+Figure~\ref{fig-steamed-surfactant} and discussed elsewhere in the
+literature \autocite{Vobornik2023}. Attempting to fit a skew-normal
+distribution to this histogram fails when all three variables are
+allowed to vary due to the presence of the tail. Instead, we fix \(\xi\)
+and \(\omega\) at 2.2 nm and 0.5 nm respectively to mimic the silicon
+dioxide distributions previously obtained, and only \(\alpha\) is
+allowed to vary during the fitting process. The result is shown in
 Figure~\ref{fig-steamed-surfactant-histogram}. The fitted distribution
 has an \(\alpha\) of -2.4. The distribution closely fits the negative
 tail of the histogram, but deviates slightly from the positive tail due
 to the presence of surfactant. Since this deviation is small, the
 quality of the fit is still reasonably high, with an R-squared value of
-0.98.
+0.98. Surfactant contamination could have negative effects on both
+sensitivity of carbon nanotubes and also could damage attached
+biological elements.
 
 \begin{figure}
 
@@ -622,13 +625,13 @@ quality of the fit is still reasonably high, with an R-squared value of
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch5/NTQ24_20220125_00235_cnt_histogram.png}
+\includegraphics{figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_mask.png}
 
 }
 
 }
 
-\subcaption{\label{fig-solvent-cnt-histogram}}
+\subcaption{\label{fig-mask}}
 \end{minipage}%
 %
 \begin{minipage}[t]{0.05\linewidth}
@@ -647,13 +650,13 @@ quality of the fit is still reasonably high, with an R-squared value of
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch5/Ned_SiO2_00351_20231016_histogram_initialguess.png}
+\includegraphics{figures/ch5/NTQ24_20220125_00235_cnt_histogram.png}
 
 }
 
 }
 
-\subcaption{\label{fig-sio2-histogram}}
+\subcaption{\label{fig-solvent-cnt-histogram}}
 \end{minipage}%
 \newline
 \begin{minipage}[t]{0.47\linewidth}
@@ -687,21 +690,6 @@ quality of the fit is still reasonably high, with an R-squared value of
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch5/Ned_SiO2_s_surfactant_nosteam_00355_20231016.png}
-
-}
-
-}
-
-\subcaption{\label{fig-surfactant-histogram}}
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
 \includegraphics{figures/ch5/NT14D2_W4_pristine_cnt_histogram.png}
 
 }
@@ -710,70 +698,16 @@ quality of the fit is still reasonably high, with an R-squared value of
 
 \subcaption{\label{fig-steamed-surfactant-cnt-histogram}}
 \end{minipage}%
-%
-\begin{minipage}[t]{0.05\linewidth}
 
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch5/Ned_SiO2_s_surfactant_steam_00357_20231016_histogram_initialguess.png}
-
-}
-
-}
-
-\subcaption{\label{fig-steamed-surfactant-histogram}}
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.05\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-
-\caption{\label{fig-cnt-histogram}Histogram height distributions with
-corresponding KDE plots collected via the morphology analysis method
-outlined by Vobornik \emph{et al.} \autocite{Vobornik2023} are shown on
-the left, . The substrate in (a) and (b) was exposed to solvent, the
-substrate in (c) and (d) was exposed to surfactant, and the substrate in
-(e) and (f) was exposed to surfactant with steam present.}
-
-\end{figure}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.35\textwidth,height=\textheight]{figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_mask.png}
-
-}
-
-\caption{\label{fig-mask}An AFM image with a height threshold defined so
-that the carbon nanotube bundles present, shaded blue, are excluded from
-the height measurements. The average height of the unshaded regions of
-the image can then be used as an estimate of the measured substrate
-height.}
+\caption{\label{fig-cnt-histogram}An masked AFM image is shown in (a),
+where the masked carbon nanotube bundles are shaded blue. The mask sets
+a height threshold so that masked features are excluded from the height
+dataset. Histogram height distributions with corresponding KDE plots
+collected via the morphology analysis method outlined by Vobornik
+\emph{et al.} \autocite{Vobornik2023} are shown in (b)-(d). The
+substrate in (b) was exposed to solvent, the substrate in (c) was
+exposed to surfactant, and the substrate in (d) was exposed to
+surfactant with steam present.}
 
 \end{figure}
 
@@ -786,7 +720,7 @@ Figure~\ref{fig-mask}. This background value was subtracted from our
 diameter measurements to determine the actual bundle height. The means
 of the solvent-deposited, surfactant-deposited and steam-assisted
 surfactant-deposited bundle diameter histograms are \(8.8 \pm 4.0\) nm,
-\(4.2 \pm 1.8\) nm and \(3.3 \pm 1.0\) nm respectively. We see that an
+\(4.2 \pm 1.8\) nm and \(3.3 \pm 1.0\) nm respec tively. We see that an
 increased maximum feature height leads to an increased mean background
 height, and by examining the AFM images in
 Figure~\ref{fig-afm-morphology} we see that this may be due to deep
@@ -809,69 +743,12 @@ distribution skewness \autocite{Vobornik2023}. The fitted skew-normal
 distribution in Figure~\ref{fig-solvent-cnt-histogram} has
 \(\alpha = 2.7\), \(\xi = 4.3\) nm, \(\omega = 5.9\) nm, the
 distribution in Figure~\ref{fig-surfactant-cnt-histogram} has
-\(\alpha = 2.4\), \(\xi = 2.2\) nm, \(\omega = 2.6\) n, and the
+\(\alpha = 2.4\), \(\xi = 2.2\) nm, \(\omega = 2.6\) nm, and the
 distribution in Figure~\ref{fig-steamed-surfactant-cnt-histogram} has
-\(\alpha = 3.6\), \(\xi = 2.2\) nm and \(\omega = 1.5\) nm.
-
-We then take \(k_2\) to be the maximum y-value of this modified dataset,
-and \(m_1\) to be the x-value of the maximum y-value. We then set
-\(k_2\) so that the height of the resulting distribution at one standard
-deviation matches the height of the .xyz data histogram. We take this
-distribution, and subtract it from the existing dataset.
-
-, we approximate the normal distributions corresponding to the silicon
-oxide substrate and carbon nanotube network, shown in
-Figure~\ref{fig-afm-morphology} as green and red curves respectively.
-The silicon oxide peak appears to fit more closely to the distribution
-with smaller carbon nanotube heights, which could be due to measurement
-of the silicon background being improved when feature height is smaller.
-We notice that the distribution for the carbon nanotube bundles drops to
-approximately zero before reaching 0 nm, which is physically
+\(\alpha = 3.6\), \(\xi = 2.2\) nm and \(\omega = 1.5\) nm. We notice
+that the probability density for the carbon nanotube bundle histogram
+drops to approximately zero at or before 0 nm, as is physically
 appropriate.
-
-We use a similar process for analysing the contribution of the substrate
-roughness for the histograms in Figure~\ref{fig-afm-morphology}.
-
-Furthermore, nanotubes overlap and cross over each other, creating
-junctions with the combined height of the overlapping nanotubes.
-
-As both the carbon nanotube and silicon dioxide background heights can
-each be modelled using a normal distribution, we make an initial
-assumption that a linear combination of normal distributions can be used
-to model the AFM histograms in Figure~\ref{fig-afm-morphology}.
-
-By subtracting the modelled silicon and carbon nanotube normal
-distributions from the AFM histogram, we find a remaining distribution
-spread roughly between 0 nm and the mean of the carbon nanotube bundle
-distribution. It is also apparent that the remaining distribution
-consistently follows a half-normal distribution after a sharp rise to
-maximum, as shown in \textbf{?@fig-remaining-histogram}. The full
-histogram profile therefore appears to be a linear combination of normal
-and half-normal distributions. This combination could be modelled
-mathematically in order to rapidly extract key parameters from atomic
-force microscope images, but this approach is outside of the scope of
-this thesis \autocite{Alruwaili2022}.
-
-The half-normal distribution could correspond to surface roughness due
-to the presence of contaminants. These contaminants could be residual
-surfactant or other atmospheric contamination resistant to acetone and
-isopropanol rinsing. Such contamination may or may not have implications
-for biosensing suitability, but surfactant contamination could certainly
-have negative effects on biological elements sensitive to surfactant.
-The area of this central peak may be useful for determining the extent
-of contamination on a carbon nanotube film, discussed further in
-\textbf{?@sec-contamination}. Interestingly, the peak of the carbon
-nanotube distribution occurs at a height approximately 2.5\(\times\) the
-height corresponding to the peak of the half-normal distribution. This
-may imply there is a relationship between the distributions, which could
-mean the contaminant corresponds to broken pieces of individual
-nanotubes with various lengths.
-
-If we model carbon nanotube bundles as cylinders, and we assume the
-component nanotubes follow 2D packing and are of equal diameter, we can
-give an estimate the mean bundle size for each deposition type in terms
-of number of nanotubes \emph{n}
-\autocite{Graham1998,Murugathas2018,Specht2023}.
 
 \hypertarget{tbl-circle-packing}{}
 \begin{longtable}[]{@{}
@@ -900,58 +777,57 @@ s.f. (encompassing circle diameter = \(d\), number of packed circles =
 \text{3.00} & \text{3.30} & 3.61 \\
 \end{longtable}
 
+\hypertarget{tbl-histogram-parameters}{}
+\begin{table}
+\caption{\label{tbl-histogram-parameters}The mean of histogram distributions for carbon nanotube films deposited
+using various methods, alongside estimates for the number of nanotubes
+present per mean bundle and the estimated proportion of multi-tubed
+bundles present across the network. }\tabularnewline
+
+\centering
+\begin{tabular}{>{\raggedright\arraybackslash}p{4cm}>{\centering\arraybackslash}p{3cm}>{\centering\arraybackslash}p{3cm}>{\centering\arraybackslash}p{3cm}}
+\toprule
+ & Mean Bundle Diameter (nm) & Tubes per Average Bundle & \% Multi-Tube Bundles\\
+\midrule
+Solvent deposited & 8.8 ± 4.0 & 28 & > 96\%\\
+Surfactant deposited & 4.2 ± 1.8 & 5 & > 75\%\\
+Surfactant deposited with steam & 3.3 ± 1.0 & 3 & > 65\%\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+If we model carbon nanotube bundles as cylinders, and we assume the
+component nanotubes follow 2D packing and are of equal diameter, we can
+state the mean bundle size for each deposition type in terms of number
+of nanotubes \emph{n} \autocite{Graham1998,Murugathas2018,Specht2023}.
 Table~\ref{tbl-circle-packing} shows the relationship between the
 diameter of a bundle and the constituent diameters of up to nine 2D
 packed carbon nanotubes within that bundle. Assuming an average carbon
 nanotube diameter of 1.45 nm, we can use the \(d\)/\(d_n\) packing
 ratios to obtain an estimate of the number of nanotubes in the mean
-bundle size for each deposition \autocite{Specht2023}. We can also give
-an approximate range which this estimate falls within using the provided
-range of individual carbon nanotube diameters (\(1.2-1.7\) nm) and the
-95\% confidence interval of the mean bundle size (\(2\sigma\)). These
-estimates are shown in Table~\ref{tbl-histogram-parameters}. Also shown
-is an estimate of the ratio of single- to multi-tube bundles for each
-deposition, found by comparing the proportion of each carbon nanotube
-curve below and above 2.9 nm, the minimum multi-tube bundle size for
-1.45 nm diameter nanotubes. The relative proportion of multi-tube
-bundles shown in Table~\ref{tbl-histogram-parameters} should therefore
-be treated as a lower-limit estimate of the true proportion.
+bundle size for each deposition \autocite{Specht2023}. These estimates
+are shown in Table~\ref{tbl-histogram-parameters}. Also shown in
+Table~\ref{tbl-histogram-parameters} is an estimate of the ratio of
+single- to multi-tube bundles for each deposition. This estimate was
+obtained by taking the integral of each distribution with a lower bound
+of 2.9 nm, the minimum multi-tube bundle size for 1.45 nm diameter
+nanotubes. As the area under the curve represents the probability a
+bundle will have a particular diameter, this integral should give a good
+estimate of the relative proportion of multi-tube bundles.
+Table~\ref{tbl-histogram-parameters} should be interpreted as
+lower-limit estimates of the size and relative proportion of bundles,
+recalling that the distribution skewness indicates underestimation of
+the true bundle height.
 
-\hypertarget{tbl-histogram-parameters}{}
-\begin{table}
-\caption{\label{tbl-histogram-parameters}The mean of histogram distributions for carbon nanotube films deposited
-using various methods, alongside estimates for the number of nanotubes
-present per bundle (within a 95\% confidence interval) and the
-proportion of multi-tubed bundles present across the network. The value
-in brackets corresponds to an estimate for the number of nanotubes
-present in the mean bundle size. }\tabularnewline
-
-\centering
-\begin{tabular}{>{\raggedright\arraybackslash}p{2cm}ccccc}
-\toprule
-\multicolumn{1}{c}{\textbf{ }} & \multicolumn{3}{c}{\textbf{Distribution Mean (nm)}} & \multicolumn{2}{c}{\textbf{Bundle Attributes}} \\
-\cmidrule(l{3pt}r{3pt}){2-4} \cmidrule(l{3pt}r{3pt}){5-6}
- & Silicon & Bundles & Contaminant & Tubes/Bundle & \% Multi-Tube\\
-\midrule
-Solvent deposited & 0.0 ± 1.4 & 8.8 ± 4.0 & 3.6 ± 3.8 & 1–162 (28) & > 95\%\\
- &  &  &  &  \vphantom{1} & \\
-Surfactant deposited & 0.0 ± 0.6 & 5.1 ± 1.4 & 2.0 ± 1.5 & 1–34 (8) & > 94\%\\
- &  &  &  &  & \\
-Surfactant deposited with steam & 0.0 ± 0.5 & 3.2 ± 1.1 & 1.2 ± 0.9 & 1–15 (3) & > 60\%\\
-\bottomrule
-\end{tabular}
-\end{table}
-
-When surfactant is used in the deposition process, both the carbon
-nanotube bundle diameter mean and standard deviation are small compared
-to the mean and standard deviation of solvent deposited films. However,
-despite the presence of surfactant, it is apparent both from
+Both the carbon nanotube bundle diameter mean and standard deviation are
+small for surfactant-deposited films when compared to the mean and
+standard deviation of solvent-deposited films. However, despite the
+presence of surfactant, it is apparent both from
 Figure~\ref{fig-afm-morphology} and Table~\ref{tbl-histogram-parameters}
 that not all surfactant-dispersed carbon nanotubes are deposited
 individually. Bundling may occur during the process of deposition onto
 the substrate, which could disrupt the repulsive forces from the
 surfactant coating and allow attractive forces to temporarily dominate.
-
 It is possible that the bundling of surfactant-dispersed carbon
 nanotubes is a consequence of dynamics introduced by the coffee-ring
 effect \autocite{Deegan1997,VanGaalen2021}. The coffee-ring effect
@@ -960,7 +836,29 @@ dispersion evaporating on a surface. This process occurs due to the
 dispersion edges being fixed by surface forces, leading to capillary
 flow outwards to replace liquid evaporating at the edges, bringing solid
 material along with it. The presence of vapour is known to disrupt this
-capillary effect \autocite{Bishop2020}.
+capillary effect \autocite{Bishop2020}, which may explain why mean
+bundle diameter is lower for the films deposited in surfactant with
+steam present relative to films deposited in surfactant without steam.
+
+From this discussion, we can conclude that the histograms shown in
+Figure~\ref{fig-afm-morphology} are linear combinations of skewed normal
+distributions corresponding to both the substrate surface, with a
+negative skew, and the carbon nanotube bundles, with a positive skew. X
+and Y junctions between overlapping nanotubes may also form a similarly
+skewed normal distribution as part of the full histogram
+\autocite{Murugathas2018}. The complete linear combination could be
+modelled mathematically in order to rapidly extract key parameters from
+atomic force microscope images \autocite{Marchenko2010}, but
+implementing this approach is outside of the scope of this thesis. The
+prevalence of carbon nanotube bundling on the surface is lowered by the
+presence of surfactant during deposition. Introducing steam when
+depositing with surfactant lowers bundling even further, but also leads
+to residual surfactant pooling and attaching to the substrate surface.
+These results may both be explained by the presence of steam enabling
+surfactant to follow carbon nanotubes to the substrate surface, which
+keeps them from bundling during the attachment process. The unwanted
+persistence of surfactant means that further vacuum annealing may be
+required for robust biosensors \autocite{Kane2014}.
 
 \hypertarget{sec-pristine-raman}{%
 \subsection{Raman Spectroscopy}\label{sec-pristine-raman}}
@@ -2399,16 +2297,6 @@ the first datapoint where the y-value is greater than 1\% of \(k_1\)
 (approximating one standard deviation). We find the distribution given
 by these values using Equation~\ref{eq-lin-combo-gaussian}, and subtract
 it from the existing dataset.
-
-Then, using the analysis technique outlined by Vobornik \emph{et al.}
-\autocite{Vobornik2023} in Gwyddion, we manually find estimates for the
-mean \(m_2\) and standard deviation \(s_2\) of the carbon nanotube
-bundle distribution. We then take \(k_2\) to be the maximum y-value of
-this modified dataset, and \(m_1\) to be the x-value of the maximum
-y-value. We then set \(k_2\) so that the height of the resulting
-distribution at one standard deviation matches the height of the .xyz
-data histogram. We take this distribution, and subtract it from the
-existing dataset.
 
 The code also allows for discretely binning continuous data from fitted
 normal distributions and examining the proportion of counts above or
