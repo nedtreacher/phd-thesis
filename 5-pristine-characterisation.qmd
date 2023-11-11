@@ -248,11 +248,11 @@ Transfer measurements were taken to determine whether backgated measurements cou
 
 ![](figures/ch5/JGQ00D6_pristine_TXLG01_5mVstep_220914_norinse.png){#fig-graphene-transfer-2}
 
-![](figures/ch5/JG098_pristine_transfer_sweep_comparison.png){#fig-graphene-transfer-comparison-1}
+![](figures/ch5/JG098_ch1_absolute_values_with_gate_current.png){#fig-graphene-transfer-comparison-1}
 
-![](figures/ch5/JGQ00D6_pristine_transfer_sweep_comparison.png){#fig-graphene-transfer-comparison-2}
+![](figures/ch5/JGQ00D6_ch3_absolute_values_with_gate_current.png){#fig-graphene-transfer-comparison-2}
 
-These figures show liquid-gated transfer characteristics of channels from two AZ$^\circledR$ 1518 encapsulated graphene devices. In (a) and (b), the characteristics of working device channels upon initial exposure to 1XPBS are displayed alongside gate current. The transfer characteristics of channel 1 in (a) and channel 5 in (b) after various degrees of exposure to 1XPBS are shown in (c) and (d) respectively.
+These figures show liquid-gated transfer characteristics of channels from two AZ$^\circledR$ 1518 encapsulated graphene devices. The characteristics of working device channels upon initial exposure to 1XPBS are shown in (a) and (b). The transfer characteristics of channel 1 in (a) and channel 5 in (b) after various degrees of exposure to 1XPBS are shown in (c) and (d) respectively, with each transfer sweep numbered in the order the sweeps were taken. The dashed lines correspond to measurements of gate leakage current.
 :::
 
 Graphene field-effect transistor devices were electrically characterised in the manner described in @sec-electrical-characterisation and analysed using the Python code discussed in @sec-field-effect-transistor-analysis. 
@@ -290,11 +290,9 @@ graphene_device_parameters %>%
 
 ##	Real-Time Salt Concentration Sensing with Phosphate Buffered Saline {#sec-dummy-sensing}
 
-All devices analysed in this section were fabricated using steam-assisted, surfactant-deposited carbon nanotube network films.
-
 ### Control Series and Baseline Drift {#sec-baseline-drift}
 
-The total interval for the control series was 1800 s, with 20$\mu$L 1XPBS additions at 100 s, 200 s and 300 s, and 20$\mu$L subtractions at 400 s, 500 s and 600 s. Devices were left untouched over the next 1200 s to allow the current level to settle. @fig-transfer-sweep shows the transfer sweep of a single channel of a steam-assisted surfactant-deposited device encapsulated with SU8, fabricated after Jun 2023. The threshold voltage of the channel is $V_{\textrm{th}}$ = 140 mV, and the voltage corresponding to minimum current is $V_{\textrm{gap}}$ = 310 mV. The variable symbol V$_{\textrm{gap}}$ denotes the center of the transistor bandgap, has been labeled in this manner to be consistent with previous work [@Heller2009].
+To verify the sensitivity of the fabricated devices and therefore verify their suitability for sensing, control measurements replicating a typical sensing experiment were taken with a pristine device. To test device sensitivity without first functionalising the channels, the response to successive dilutions of liquid-gate electrolyte was measured. A device with a steam-assisted, surfactant-deposited carbon nanotube network was used due to the high electrical consistency between channels as discussed previously. The total interval for the control series was 1800 s, with 20$\mu$L 1XPBS additions at 100 s, 200 s and 300 s, and 20$\mu$L subtractions at 400 s, 500 s and 600 s. The device was left untouched over the next 1200 s to allow the current level to settle. @fig-transfer-sweep shows the transfer sweeps of the six working channels of a steam-assisted surfactant-deposited device encapsulated with AZ$^\circledR$ 1518, fabricated in Mar 2023 and measured using the PXIe. The threshold voltage of the channels are $V_{\textrm{th}}$ = .
 
 ::: {#fig-salt-conc-control-series-SU8 layout="[[45,-5,50], [-25,50,-25]]"}
 
