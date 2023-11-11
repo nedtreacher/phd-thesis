@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, interior hidden, boxrule=0pt, frame hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, breakable, interior hidden, sharp corners, frame hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -230,7 +230,7 @@ Effect
 Transistors}\label{characteristics-of-pristine-carbon-nanotube-graphene-field-effect-transistors}}
 
 \begin{verbatim}
-293626
+297337
 \end{verbatim}
 
 \hypertarget{introduction}{%
@@ -271,8 +271,8 @@ change.
 \section{Carbon Nanotube Network Morphology and
 Composition}\label{sec-pristine-morphology}}
 
-\hypertarget{atomic-force-microscopy}{%
-\subsection{Atomic Force Microscopy}\label{atomic-force-microscopy}}
+\hypertarget{sec-pristine-AFM}{%
+\subsection{Atomic Force Microscopy}\label{sec-pristine-AFM}}
 
 Figure~\ref{fig-afm-morphology} shows a side-by-side comparison of the
 surface morphology of carbon nanotube films fabricated using the methods
@@ -946,7 +946,8 @@ different locations across a 10 \(\mu\)m \(\times\) 50 \(\mu\)m carbon
 nanotube film region, spaced at least 10 \(\mu\)m apart, with (a)
 showing spectra from a film deposited in solvent and (b) showing spectra
 from a film deposited in surfactant with steam present. (c) shows the
-spread of the D-peak/G-peak spectral ratios corresponding to each film.}
+spread of the D-peak/G\(^+\)-peak spectral ratios corresponding to each
+film.}
 
 \end{figure}
 
@@ -981,23 +982,31 @@ is lower in Figure~\ref{fig-surfactant-deposited} than in
 Figure~\ref{fig-solvent-deposited}, indicating more metallic nanotubes
 are present in the surfactant-deposited network
 \autocite{Swiniarski2021}. The D-peak gives an indication of the defects
-present in the carbon nanotube atomic structure. We notice that the size
-of the normalised D-peak is much lower in
-Figure~\ref{fig-solvent-deposited} than in
-Figure~\ref{fig-surfactant-deposited}, indicating the solvent deposition
-process introduces less defects to the carbon nanotubes than
-surfactant-mediated deposition. These defects are likely introduced
-through the introduction of charge impurites by surfactant aggregates
-present around the carbon nanotubes \autocite{Christensen2022}.
+present in the carbon nanotube atomic structure
+\autocite{King2014,Swiniarski2021}. We notice that the size of the
+normalised D-peak is much lower in Figure~\ref{fig-solvent-deposited}
+than in Figure~\ref{fig-surfactant-deposited}, indicating the solvent
+deposition process introduces less defects to the carbon nanotubes than
+surfactant-mediated deposition.
 
-The data from each location is then normalised to the D-peak (the
-maximum point on the D-peak, which lies between 1300 and 1400
-cm\(^{-1}\), is set equal to unity). Using these datasets, plots of
-normalised intensity relative to the D-peak comparing each location can
-be created. The ratio I\(_{D}\)/I\(_{G}\) can be found by taking the
-inverse of the maximum point on the G-peak of these normalised plots. A
-plot of the average intensity across all locations measured can also be
-created.
+It is also possible to compare the relative magnitude of the D-peak and
+G\(^+\)-peak intensity to quantify carbon nanotube structural disorder,
+which disrupts in-plane lattice vibration
+\autocite{Dresselhaus2005,King2014}. Figure~\ref{fig-dg-peak-comparison}
+gives a summary of the ratios between the D-peak and G\(^+\)-peak across
+all nine positions for the solvent-deposited and surfactant-deposited
+film. It is immediately observed that I\(_{D}\)/I\(_{G}\) is
+significantly larger for the steam-assisted, surfactant-deposited films
+than for the solvent-deposited films. This is a further indication of
+the presence of defects across the steam-deposited network. These
+defects are likely introduced through the introduction of charge
+impurites by surfactant aggregates present around the carbon nanotubes
+\autocite{Christensen2022}. However, we also notice that the range of
+values for the I\(_{D}\)/I\(_{G}\) ratio is lower for the
+steam-deposited network. This spatially homogeneous vibrational
+behaviour implies the steam-deposited network is more evenly distributed
+than the solvent-deposited network, which matches the discussion in
+Section~\ref{sec-pristine-morphology}.
 
 \hypertarget{sec-pristine-electrical-characterisation}{%
 \section{Electrical Characteristics of Pristine
@@ -1015,56 +1024,13 @@ Devices}\label{carbon-nanotube-network-devices}}
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch5/NTQ22C2_solvent_backgate.png}
-
-}
-
-}
-
-\subcaption{\label{fig-solvent-tx-bg}Solvent-based deposition,
-back-gated}
-\end{minipage}%
-%
-\begin{minipage}[t]{0.02\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.49\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
 \includegraphics{figures/ch5/NTQ24C8_pristine_TXLG01_220211_solvent_gate.png}
 
 }
 
 }
 
-\subcaption{\label{fig-solvent-tx-lg}Solvent-based deposition,
-liquid-gated}
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.49\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch5/Q5C10_nosteam_backgate.png}
-
-}
-
-}
-
-\subcaption{\label{fig-surf-tx-bg}Dropcast surfactant-based deposition,
-back-gated}
+\subcaption{\label{fig-solvent-tx-lg}}
 \end{minipage}%
 %
 \begin{minipage}[t]{0.02\linewidth}
@@ -1077,6 +1043,21 @@ back-gated}
 
 \end{minipage}%
 %
+\begin{minipage}[t]{0.49\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch5/NTQ22C2_solvent_backgate.png}
+
+}
+
+}
+
+\subcaption{\label{fig-solvent-tx-bg}}
+\end{minipage}%
+\newline
 \begin{minipage}[t]{0.49\linewidth}
 
 {\centering 
@@ -1089,24 +1070,7 @@ back-gated}
 
 }
 
-\subcaption{\label{fig-surf-tx-lg}Dropcast surfactant-based deposition,
-liquid-gated}
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.49\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch5/Q18C6_steam_backgate.png}
-
-}
-
-}
-
-\subcaption{\label{fig-steam-tx-bg}Steam-assisted dropcast
-surfactant-based deposition, back-gated}
+\subcaption{\label{fig-surf-tx-lg}}
 \end{minipage}%
 %
 \begin{minipage}[t]{0.02\linewidth}
@@ -1125,57 +1089,88 @@ surfactant-based deposition, back-gated}
 
 \raisebox{-\height}{
 
+\includegraphics{figures/ch5/Q5C10_nosteam_backgate.png}
+
+}
+
+}
+
+\subcaption{\label{fig-surf-tx-bg}}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.49\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
 \includegraphics{figures/ch5/NTQ31C6_pristine_TXLG01_230330_steam_gate.png}
 
 }
 
 }
 
-\subcaption{\label{fig-steam-tx-lg}Steam-assisted dropcast
-surfactant-based deposition, liquid-gated}
+\subcaption{\label{fig-steam-tx-lg}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.02\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.49\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch5/Q18C6_steam_backgate.png}
+
+}
+
+}
+
+\subcaption{\label{fig-steam-tx-bg}}
 \end{minipage}%
 
-\caption{\label{fig-pristine-cnt-characteristics}Transfer
-characteristics of AZ\(^\circledR\) 1518 encapsulated field-effect
-transistors with carbon nanotube network channels deposited using
-various methods. 1XPBS was used as the buffer for the liquid-gated
-measurements here. The source-drain voltage used for all sweeps was
-\(V_{ds} = 100 \textrm{mV}\). A step size of 20 mV was used for the
-liquid-gated sweeps, while a step size of 100 mV was used for the
-backgated sweeps. Each pair of sweeps was taken from a separate device.
-Devices with a 100 nm SiO\(_2\) layer were used for backgated
-measurements, and devices with a 300 nm SiO\(_2\) layer were used for
-liquid gated measurements.}
+\caption{\label{fig-pristine-cnt-characteristics}Liquid-gated (left) and
+back-gated (right) transfer characteristics of AZ\(^\circledR\) 1518
+encapsulated field-effect transistors, where the film was deposited with
+solvent in (a) and (b), deposited with surfactant in (c) and (d), and
+deposited with surfactant in the presence of steam in (e) and (f). A
+step size of 100 mV was used for the backgated sweeps in (a), (c) and
+(e), while a step size of 20 mV was used for the liquid-gated sweeps in
+(b), (d) and (f). Gate current (leakage current) is shown with a dashed
+line. The source-drain voltage used for all sweeps was
+\(V_{ds} = 100 \textrm{mV}\), and 1XPBS was used as the buffer for the
+liquid-gated measurements here.}
 
 \end{figure}
 
 Each carbon nanotube device fabricated was electrically characterised as
 described in \textbf{?@sec-electrical-characterisation}, and electrical
 data was analysed using the Python code discussed in
-Section~\ref{sec-field-effect-transistor-analysis}.
-
-Figure~\ref{fig-pristine-cnt-characteristics} displays multi-channel
-measurements of representative devices fabricated as described in
-\textbf{?@sec-fabrication}. To ensure a consistent comparison, each
-device here was encapsulated with AZ\(^\circledR\) 1518 encapsulation
-before measurements were taken. The channels which did not exhibit
-reliable transistor characteristics are not shown. These `non-working'
-channels were either shorted, due to metal remaining on the channel
-after lift-off, or were very low current, due to a very sparse carbon
-nanotube network. Devices shown here with a solvent-deposited carbon
-nanotube network were fabricated prior to Jan 2022; devices with a
-surfactant-deposited network without steam present were fabricated prior
-to Jun 2021; devices with a surfactant-deposited network without steam
-were fabricated prior to Sep 2022.
-
-When backgated, devices exhibited \emph{p}-type transistor behaviour
-with significant hysteresis and negligible gate current leakage. The
-presence of hysteresis can be explained by the presence of defects or
-charge traps within and on the surface of the silicon dioxide and at
-interfaces between the silicon dioxide and carbon nanotubes
-\autocite{Lee2007,Lee2012,Ha2014}. The devices fabricated with a
-solvent-based deposition were switched off at a lower voltage than the
-devices which used surfactant during deposition.
+Section~\ref{sec-field-effect-transistor-analysis}. Devices with a 100
+nm or 300 nm SiO\(_2\) layer were used for liquid gated measurements,
+and devices with a 100 nm SiO\(_2\) layer were used for backgated
+measurements. Figure~\ref{fig-pristine-cnt-characteristics} displays
+multi-channel measurements of representative devices fabricated as
+described in \textbf{?@sec-fabrication}. To ensure a consistent
+comparison, each device here was encapsulated with AZ\(^\circledR\) 1518
+encapsulation before measurements were taken. The channels which did not
+exhibit reliable transistor characteristics are not shown. These
+`non-working' channels were either shorted, due to metal remaining on
+the channel after lift-off, or were very low current, due to a very
+sparse carbon nanotube network. Devices shown here with a
+solvent-deposited carbon nanotube network were fabricated prior to Jan
+2022; devices with a surfactant-deposited network without steam present
+were fabricated prior to Jun 2021; devices with a surfactant-deposited
+network without steam were fabricated prior to Sep 2022.
 
 \begin{figure}
 
@@ -1265,62 +1260,79 @@ distribution.}
 
 \end{figure}
 
-When the devices were liquid-gated with 1XPBS electrolyte, they
-exhibited ambipolar characteristics, commonly observed in carbon
-nanotube network FETs
+\hypertarget{liquid-gated-cntfets}{%
+\subsubsection*{Liquid-Gated CNTFETs}\label{liquid-gated-cntfets}}
+\addcontentsline{toc}{subsubsection}{Liquid-Gated CNTFETs}
+
+The liquid-gated devices in Figure~\ref{fig-solvent-tx-lg},
+Figure~\ref{fig-surf-tx-lg} and Figure~\ref{fig-steam-tx-lg} each
+exhibited ambipolar characteristics, commonly observed in liquid-gated
+carbon nanotube network FETs
 \autocite{Kauffman2008,Heller2009,JongYu2009,Derenskyi2014,Murugathas2018,Albarghouthi2022}.
-When devices were appropriately configured, leakage current did not
-exceed \(\sim 1 \times 10^{-7}\) V across the forward and reverse sweep.
-Devices generally exhibited significantly less hysteresis than in the
-backgated case. The devices shown which used carbon nanotube films
-deposited in surfactant with steam present showed the least hysteresis,
-which is largely due to the relatively small diameter of the bundles in
-these films \autocite{Pop2009}. These devices also showed significantly
-less channel-to-channel variation in electrical characteristics more
-generally. A summary of key parameters of pristine liquid-gated devices
-is shown in Figure~\ref{fig-sweep-parameters}. The full dataset consists
-of three sets of 21 liquid-gated transfer characteristics of working
-channels, with each set corresponding to the use of a particular method
-of carbon nanotube network deposition in the device fabrication.
-Measurements from at least three devices are included in each set. Each
-entry in the summary corresponds to the average of the specific
-parameter in the forward and reverse sweep direction.
+When devices were appropriately configured, leakage current (shown by
+the dashed traces) did not exceed \(\sim 1 \times 10^{-7}\) V across the
+forward and reverse sweep. The devices shown which used steam-deposited
+carbon nanotube films showed the least hysteresis. From
+Section~\ref{sec-pristine-AFM}, we know the mean diameter of the bundles
+in these films is about 0.9 nm less than the mean bundles in films
+deposited without steam present, and 5.5 nm less than those in films
+deposited in solvent. Hysteresis is known to scale roughly linearly with
+bundle diameter, due to trapped charge increasing as bundle density of
+states is increased \autocite{Pop2009}. Steam-deposited devices also
+showed significantly less channel-to-channel variation in electrical
+characteristics more generally. Channel 1 in
+Figure~\ref{fig-solvent-tx-lg} has a much higher off-current than the
+other channels of the same device, which appears to be due to a
+uncommonly high proportion of metallic carbon nanotubes present in the
+network conduction pathways of this channel
+\autocite{Rouhi2011,Zaumseil2015}.
+
+A summary of key parameters of pristine liquid-gated devices is shown in
+Figure~\ref{fig-sweep-parameters}. The full dataset consists of three
+sets of 21 liquid-gated transfer characteristics of working channels,
+with each set corresponding to the use of a particular method of carbon
+nanotube network deposition in the device fabrication. Measurements from
+at least three devices are included in each set. Each entry in the
+summary corresponds to the average of the specific parameter in the
+forward and reverse sweep direction. When steam was used for surfactant
+deposition of films, the resulting devices showed highly consistent
+channel-to-channel electrical properties. As the carbon nanotube films
+on these devices are relatively dense, as seen in
+Figure~\ref{fig-steaming-network}, we know that the network is well
+above the percolation threshold. As many carbon nanotube pathways
+connect across the channel in parallel, small variations in the network
+morphology have less of an impact on the overall channel behaviour
+\autocite{Murugathas2018}.We also see from
+Figure~\ref{fig-cnt-histogram} and Table~\ref{tbl-histogram-parameters}
+that the range of bundle sizes is relatively low in the steam-deposited
+films used in these devices, meaning the electrical behaviour of
+dominant conduction pathways is more spatially consistent. The
+repeatable subthreshold regime behaviour between channels seen for
+steam-deposited devices is a desirable attribute for reliable real-time
+multiplexed biosensing \autocite{Kauffman2008,Heller2009,Gao2010}.
 
 Channels from surfactant-deposited film devices usually showed a larger
 on-off ratio and subthreshold slope than those from solvent-deposited
-devices. When the transistor is gated in the subthreshold range, a
-larger on-off ratio and subthreshold slope results in a larger change in
-conductance in response to changes in the transfer characteristic curve.
-Therefore, a larger on-off ratio and subthreshold slope is desirable for
-improved sensor performance \autocite{Kauffman2008,Heller2009,Gao2010}.
-The larger on-off ratio for surfactant-deposited film devices is likely
-a result of the reduced bundling of nanotubes, as discussed in
-Section~\ref{sec-pristine-morphology}. Carbon nanotube pathways across
-the channel with a lower degree of bundling will have a lower number of
-component metallic tubes in the network, which increases the on-off
-ratio \autocite{LeMieux2008,Rouhi2011,Murugathas2018}. The effect of
-metallic nanotubes increasing the off current of a device channel is
-illustrated by channel 1 in Figure~\ref{fig-solvent-tx-lg}. The larger
+devices. Decreasing the ratio of gate-sensitive semiconducting carbon
+nanotubes to metallic nanotubes tends to decrease the on-off ratio
+\autocite{LeMieux2008,Rouhi2011,Zaumseil2015,Murugathas2018}.
+Section~\ref{sec-pristine-raman} seems to indicate there are more
+metallic nanotubes present in the surfactant-deposited films than in the
+solvent-deposited films. However, percolating conduction pathways
+dominate device behaviour and nanotube pathways across the channel with
+a lower degree of bundling are less likely to contain metallic tubes
+\autocite{Murugathas2018}. Therefore, the larger on-off ratio for
+surfactant-deposited film devices is likely a result of their reduced
+nanotube bundle size and reduced bundle size variation relative to other
+films, as discussed in Section~\ref{sec-pristine-morphology}. The larger
 subthreshold slope is likely due to increased mobility from a denser
 nanotube network in surfactant-deposited films \autocite{Rouhi2011}, as
-seen in Figure~\ref{fig-afm-morphology}.
-
-When steam is used for surfactant deposition of films, the resulting
-devices showed highly consistent channel-to-channel electrical
-properties. As the carbon nanotube films on these devices are relatively
-dense, as seen in Figure~\ref{fig-afm-morphology}, we know that the
-network is well above the percolation threshold. As many carbon nanotube
-pathways connect across the channel in parallel, small variations in the
-network morphology have less of an impact on the overall channel
-behaviour \autocite{Murugathas2018}. We also see from
-Table~\ref{tbl-histogram-parameters} that the range of bundle sizes is
-relatively low in the steam-deposited films used in these devices. The
-low range of bundle sizes means the semiconducting-metallic nanotube
-ratio is far more consistent for these devices, leading to more
-consistent electrical device characteristics. Being able to achieve
-consistent subthreshold regime behaviour between channels on the same
-device is a desirable attribute for reliable real-time multiplexed
-biosensing \autocite{Kauffman2008,Heller2009,Gao2010}.
+seen in Figure~\ref{fig-steaming-network}. A larger on-off ratio and
+subthreshold slope results in a larger change in conductance in response
+to changes in the transfer characteristic curve. Therefore, the larger
+on-off ratio and subthreshold slope of steam-deposited devices is
+desirable for improved sensor performance
+\autocite{Kauffman2008,Heller2009,Gao2010}.
 
 All channels characterised had a positive threshold voltage
 (\(V_{th}\)). The threshold voltage was largest and most consistent for
@@ -1328,23 +1340,41 @@ steam-assisted surfactant-deposited films. The relatively high values of
 \(V_{th}\) which correspond to channel measurements from steam-assisted
 surfactant-deposited devices indicates increased \(p\)-doping of the
 network relative to networks deposited via alternative processes
-\autocite{Kang2005,Heller2008,Murugathas2018}. It is highly likely the
-dopant is present due to the steam deposition, and may be related to the
-large contamination peak for steam-deposited films seen in
-Figure~\ref{fig-afm-morphology} and \textbf{?@fig-remaining-histogram}.
-One possibility is that this dopant is residual surfactant, which can
-\(p\)-dope carbon nanotubes as well as enhancing \(p\)-doping from
-adsorped oxygen and water
-\autocite{Kane2014,Nonoguchi2018,Christensen2022}. We have seen that
-steam prevents bundling of carbon nanotubes during deposition. This
-effect is likely due to persistence of the surfactant keeping nanotubes
-separate during this process. Presence of surfactant may also explain
-the lowered subthreshold slope and therefore mobility of the
-surfactant-deposited devices with steam relative to the
-surfactant-deposited devices without steam. The analysis by Kane
-\emph{et al.} shows that the thermal annealling at 150\(^\circ\)C used
-in this work to remove residual surfactant is likely inadequate for this
-purpose \autocite{Kane2014}.
+\autocite{Kang2005,Heller2008,Murugathas2018}. As seen from
+Figure~\ref{fig-steamed-surfactant}-f and
+Figure~\ref{fig-dg-peak-comparison}, the steam deposition process leads
+to the presence of significant, persistent surfactant aggregates. It has
+been previously established that residual surfactant can \(p\)-dope
+carbon nanotubes, alongside enhancing \(p\)-doping from adsorped oxygen
+and water \autocite{Kane2014,Nonoguchi2018,Christensen2022}. The
+presence of residual surfactant may also explain the lowered
+subthreshold slope, and therefore mobility, of the steam-deposited
+devices relative to devices with films deposited in surfactant without
+steam. The analysis by Kane \emph{et al.} shows that the thermal
+annealling at 150\(^\circ\)C used in this work to remove residual
+surfactant is likely inadequate for this purpose. Oxidation of devices
+and vacuum annealling at high temperatures (\textgreater{}
+600\^{}\circ\$C) may be required for effective desorption o f the
+persistent surfactant \autocite{Kane2014,Barnett2018}. Devices using
+films made using the alternative two methods have the advantage of not
+requiring careful treatment to remove surfactant.
+
+\hypertarget{back-gated-cntfets}{%
+\subsubsection*{Back-Gated CNTFETs}\label{back-gated-cntfets}}
+\addcontentsline{toc}{subsubsection}{Back-Gated CNTFETs}
+
+From Figure~\ref{fig-solvent-tx-bg}, Figure~\ref{fig-surf-tx-bg} and
+Figure~\ref{fig-steam-tx-bg}, we see backgated devices exhibited
+\emph{p}-type transistor behaviour, Gate current leakage was negligible,
+as shown by the dashed line staying close to zero across the sweep.
+Significant hysteresis was observed. The hysteresis can be explained by
+the presence of defects or charge traps within and on the surface of the
+silicon dioxide and at interfaces between the silicon dioxide and carbon
+nanotubes \autocite{Lee2007,Lee2012,Ha2014}. The hysteresis observed was
+much greater than for the corresponding liquid-gated sweeps on the
+right. The devices fabricated with a solvent-based deposition were
+switched off at a lower voltage than the devices which used surfactant
+during deposition.
 
 \begin{figure}
 
@@ -1513,9 +1543,9 @@ shown in (c) and (d) respectively.}
 
 \end{figure}
 
-Graphene devices were electrically characterised in the manner described
-in \textbf{?@sec-electrical-characterisation} and analysed using the
-Python code discussed in
+Graphene field-effect transistor devices were electrically characterised
+in the manner described in \textbf{?@sec-electrical-characterisation}
+and analysed using the Python code discussed in
 Section~\ref{sec-field-effect-transistor-analysis}.
 
 Figure~\ref{fig-pristine-graphene} shows the liquid-gated transfer
