@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, breakable, interior hidden, sharp corners, frame hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, frame hidden, breakable, boxrule=0pt, interior hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -1363,18 +1363,21 @@ requiring careful treatment to remove surfactant.
 \subsubsection*{Back-Gated CNTFETs}\label{back-gated-cntfets}}
 \addcontentsline{toc}{subsubsection}{Back-Gated CNTFETs}
 
-From Figure~\ref{fig-solvent-tx-bg}, Figure~\ref{fig-surf-tx-bg} and
-Figure~\ref{fig-steam-tx-bg}, we see backgated devices exhibited
-\emph{p}-type transistor behaviour, Gate current leakage was negligible,
-as shown by the dashed line staying close to zero across the sweep.
-Significant hysteresis was observed. The hysteresis can be explained by
-the presence of defects or charge traps within and on the surface of the
-silicon dioxide and at interfaces between the silicon dioxide and carbon
-nanotubes \autocite{Lee2007,Lee2012,Ha2014}. The hysteresis observed was
-much greater than for the corresponding liquid-gated sweeps on the
-right. The devices fabricated with a solvent-based deposition were
-switched off at a lower voltage than the devices which used surfactant
-during deposition.
+When characterising devices using the vapour delivery system chip
+carrier, the setup arrangement meant all measurements were taken using a
+backgate. From Figure~\ref{fig-solvent-tx-bg},
+Figure~\ref{fig-surf-tx-bg} and Figure~\ref{fig-steam-tx-bg}, we see
+backgated devices exhibited \emph{p}-type transistor behaviour. Gate
+current leakage was negligible, as shown by the dashed line staying
+close to zero across the sweep. Significant hysteresis was observed. The
+hysteresis can be explained by the presence of defects or charge traps
+within and on the surface of the silicon dioxide and at interfaces
+between the silicon dioxide and carbon nanotubes
+\autocite{Lee2007,Lee2012,Ha2014}. The hysteresis observed was much
+greater than for the corresponding liquid-gated sweeps on the right. The
+devices fabricated with a solvent-based deposition were switched off at
+a lower voltage than the devices which used surfactant during
+deposition.
 
 \begin{figure}
 
@@ -1426,27 +1429,25 @@ electrolyte.}
 
 \end{figure}
 
+Transfer measurements were taken to determine whether backgated
+measurements could be taken of an unencapsulated device in the vapour
+sensor chamber with 1XPBS covering the channels.
 Figure~\ref{fig-buffer-effect-on-backgate} shows the behaviour of an
 unencapsulated backgated device with a 300 nm SiO\(_2\) layer before and
 after being covered by 50 \(\mu\)L of 1XPBS (phosphate buffered saline).
 The on-off ratio and hysteresis of the channels increase significantly.
 The presence of water increases hysteresis through introducing charge
 traps at the silicon dioxide surface around the carbon nanotubes and at
-the surface of the nanotubes themselves. The use of alternative
-transistor dielectrics and/or device functionalisation could potentially
-be used to reduce this hysteresis, as the time variation in threshold
-voltage due to hysteresis is unwanted for biosensing work
-\autocite{Kim2003,Lee2007,Franklin2012,Ha2014}. The electrical double
-layer formed by the electrolyte at the surface of the carbon nanotubes
-will also have contributed to the observed change in electrical
-properties, as it screens surface charge present on the surface around
-the nanotubes \autocite{Heller2010}.
-
-There is also a significant increase in current leakage to the backgate
-for larger applied voltages, despite the electrolyte having no visible
-physical contact with the silicon backgate or copper plane. This leakage
-current may simply be due to an increase in relative humidity around the
-device due to the presence of water \autocite{Conseil2014}.
+the surface of the nanotubes themselves
+\autocite{Kim2003,Lee2007,Franklin2012,Ha2014}. There is also a
+significant increase in current leakage to the backgate for larger
+applied voltages, despite the electrolyte having no visible physical
+contact with the silicon backgate or copper plane. This leakage current
+may simply be due to an increase in relative humidity around the device
+due to the presence of water \autocite{Conseil2014}. As any variation in
+threshold voltage due to hysteresis and significant leakage current are
+undesirable for sensing procedures, this configuration was not used for
+vapour sensing purposes.
 
 \hypertarget{graphene-devices}{%
 \subsection{Graphene Devices}\label{graphene-devices}}
@@ -1499,7 +1500,7 @@ device due to the presence of water \autocite{Conseil2014}.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch5/JG098_pristine_transfer_sweep_comparison.png}
+\includegraphics{figures/ch5/JG098_ch1_absolute_values_with_gate_current.png}
 
 }
 
@@ -1524,7 +1525,7 @@ device due to the presence of water \autocite{Conseil2014}.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch5/JGQ00D6_pristine_transfer_sweep_comparison.png}
+\includegraphics{figures/ch5/JGQ00D6_ch3_absolute_values_with_gate_current.png}
 
 }
 
@@ -1535,11 +1536,13 @@ device due to the presence of water \autocite{Conseil2014}.
 
 \caption{\label{fig-pristine-graphene}These figures show liquid-gated
 transfer characteristics of channels from two AZ\(^\circledR\) 1518
-encapsulated graphene devices. In (a) and (b), the characteristics of
-working device channels upon initial exposure to 1XPBS are displayed
-alongside gate current. The transfer characteristics of channel 1 in (a)
-and channel 5 in (b) after various degrees of exposure to 1XPBS are
-shown in (c) and (d) respectively.}
+encapsulated graphene devices. The characteristics of working device
+channels upon initial exposure to 1XPBS are shown in (a) and (b). The
+transfer characteristics of channel 1 in (a) and channel 5 in (b) after
+various degrees of exposure to 1XPBS are shown in (c) and (d)
+respectively, with each transfer sweep numbered in the order the sweeps
+were taken. The dashed lines correspond to measurements of gate leakage
+current.}
 
 \end{figure}
 
@@ -1622,25 +1625,29 @@ these values were highly consistent before and after exposure to 1XPBS.
 \section{Real-Time Salt Concentration Sensing with Phosphate Buffered
 Saline}\label{sec-dummy-sensing}}
 
-All devices analysed in this section were fabricated using
-steam-assisted, surfactant-deposited carbon nanotube network films.
-
 \hypertarget{sec-baseline-drift}{%
 \subsection{Control Series and Baseline
 Drift}\label{sec-baseline-drift}}
 
-The total interval for the control series was 1800 s, with 20\(\mu\)L
-1XPBS additions at 100 s, 200 s and 300 s, and 20\(\mu\)L subtractions
-at 400 s, 500 s and 600 s. Devices were left untouched over the next
-1200 s to allow the current level to settle.
-Figure~\ref{fig-transfer-sweep} shows the transfer sweep of a single
-channel of a steam-assisted surfactant-deposited device encapsulated
-with SU8, fabricated after Jun 2023. The threshold voltage of the
-channel is \(V_{\textrm{th}}\) = 140 mV, and the voltage corresponding
-to minimum current is \(V_{\textrm{gap}}\) = 310 mV. The variable symbol
-V\(_{\textrm{gap}}\) denotes the center of the transistor bandgap, has
-been labeled in this manner to be consistent with previous work
-\autocite{Heller2009}.
+To verify the sensitivity of the fabricated devices and therefore verify
+their suitability for sensing, control measurements replicating a
+typical sensing experiment were taken with a pristine device. To check
+device sensitivity without first functionalising the channels, the
+response to successive dilutions of liquid-gate electrolyte was
+measured. A device with a steam-assisted, surfactant-deposited carbon
+nanotube network was used due to the high electrical consistency between
+channels as discussed previously. The total interval for the control
+series was 1800 s, with 20\(\mu\)L 1XPBS additions at 100 s, 200 s and
+300 s, and 20\(\mu\)L subtractions at 400 s, 500 s and 600 s. The device
+was left untouched over the next 1200 s to allow the current level to
+settle. Figure~\ref{fig-transfer-sweep} shows the transfer sweep of a
+single channel of a steam-assisted surfactant-deposited device
+encapsulated with SU8, fabricated after Jun 2023. The threshold voltage
+of the channel is \(V_{\textrm{th}}\) = 140 mV, and the voltage
+corresponding to minimum current is \(V_{\textrm{gap}}\) = 310 mV. The
+variable symbol V\(_{\textrm{gap}}\) denotes the center of the
+transistor bandgap, has been labeled in this manner to be consistent
+with previous work \autocite{Heller2009}.
 
 \begin{figure}
 
