@@ -13,7 +13,7 @@ book:
     # - 1-introduction.qmd
     # - 2-transistors.qmd
     # - 3-biosensors.qmd
-    # - 4-fabrication.qmd
+     - 4-fabrication.qmd
      - 5-pristine-characterisation.qmd
     # - 6-functionalisation-verification.qmd
     # - 7-functionalisation-testing.qmd
@@ -83,5 +83,6 @@ format:
     cite-method: citeproc
     link-citations: true
     reference-section-title: "References"
+    prefer-html: true
 
 editor: visual
