@@ -3,11 +3,54 @@ keep-tex: true
 format: pdf
 ---
 
+```{python}
+#| eval: false
+#| echo: false
+#| hide: true
+import re
+
+# Dictionary to map month abbreviations to numbers
+month_mapping = {
+    "jan": "1",
+    "feb": "2",
+    "mar": "3",
+    "apr": "4",
+    "may": "5",
+    "jun": "6",
+    "jul": "7",
+    "aug": "8",
+    "sep": "9",
+    "oct": "10",
+    "nov": "11",
+    "dec": "12"
+}
+
+# Read the content of the original .bib file with UTF-8 encoding
+with open("references.bib", "r", encoding="utf-8") as file:
+    bib_content = file.read()
+
+# Replace month abbreviations with numbers using a single regex
+pattern_month = r'month\s*=\s*{([a-z]+)},'
+def replace_month(match):
+    month_abbrev = match.group(1)
+    month_number = month_mapping.get(month_abbrev, month_abbrev)
+    return f'month = {{{month_number}}},'
+
+modified_content = re.sub(pattern_month, replace_month, bib_content, flags=re.IGNORECASE)
+
+# Replace "%" with "\%" when not preceded by a backslash
+modified_content = re.sub(r'(?<!\\)%', r'\\%', modified_content)
+
+# Write the modified content back to the original .bib file with UTF-8 encoding
+with open("references.bib", "w", encoding="utf-8") as file:
+    file.write(modified_content)
+```
+
 # Verifying Non-Covalent Functionalisation of Carbon Nanotubes and Graphene
 
 ## Introduction
 
-In previous chapters, I have discussed methods of fabricating carbon nanotube and graphene devices and then shown that they are sensitive to environmental changes in a saline solution. However, for specific sensing, the devices require (bio)chemical functionalisation. Instead of responding to stimuli themselves, the sensing signal is picked up by attached receptors. The devices then act as passive transducers for the received signal. Receptors previously used with carbon nanotube and graphene devices include aptamers [@Khan2021; @Nguyen2021; @Shkodra2021; @Nekrasov2021; @Mishyn2022; @Cassie2023] and a range of proteins [@Lerner2014; @Ahn2020; @Tong2020; @Wang2020], including odorant receptors [@Goldsmith2011; @Lee2018; @Murugathas2019b; @Murugathas2020; @Moon2020; @Yoo2022]. A common approach to attaching receptors to the transducer involves the use of a linker molecule to tether the receptor to the transducer. Verifying that this linker molecule is bridging between the transducer and the receptor element is important for a complete understanding of the behaviour of these sensors. This verification involves providing evidence for effective attachment of linker molecule to the transducing device channel, then showing successful tethering of odorant receptors and other biomolecules to the attached linker molecule.
+In previous chapters, I have discussed methods of fabricating carbon nanotube and graphene devices and then shown that they are sensitive to environmental changes in a saline solution. However, for specific sensing, the devices require (bio)chemical functionalisation. Instead of responding to stimuli themselves, the sensing signal is picked up by attached receptors. The devices then act as passive transducers for the received signal. Receptors previously used with carbon nanotube and graphene devices include aptamers [@Khan2021; @Nguyen2021; @Shkodra2021; @Nekrasov2021; @Mishyn2022; @Cassie2023] and a range of proteins [@Lerner2014; @Ahn2020; @Tong2020; @Wang2020], including animal odorant receptors [@Goldsmith2011; @Lee2018; @Murugathas2019b; @Murugathas2020; @Moon2020; @Yoo2022]. A common approach to attaching receptors to the transducer involves the use of a linker molecule to tether the receptor to the transducer. Verifying that this linker molecule is bridging between the transducer and the receptor element is important for a complete understanding of the behaviour of these sensors. This verification involves providing evidence for effective attachment of linker molecule to the transducing device channel, then showing successful tethering of odorant receptors and other biomolecules to the attached linker molecule.
 
 This chapter therefore takes some time exploring the following selection of available linker molecules for specific biosensing: 1-Pyrenebutanoic Acid N-Hydroxysuccinimide Ester (PBASE), 1-Pyrenebutyric Acid (PBA), Pyrene-PEG-NTA (PPN) and Pyrene-PEG-Biotin (PPB). The linker molecules used are discussed in detail, and numerous hurdles to successful functionalisation via linker molecules are identified and addressed. Next, it looks at verifying that that the odorant receptor proteins of interest have specifically attached to these linker molecules. The experimental parameters used for both the attachment of linker molecules and receptor proteins are also varied, and the impact of these variations on successful functionalisation is investigated via Raman spectroscopy, fluorescence microscopy and electrical characterisation.
 
@@ -32,7 +75,7 @@ $\pi$-stacking or $\pi-\pi$ interaction is often used to describe a type of non-
 Two conformations of PBASE molecule with geometry optimised via *ab initio* calculations performed with Gaussian 16 software [@g16]. White balls correspond to hydrogen, grey to carbon, red to oxygen and blue to nitrogen. The pyrene moiety is highlighted in the image with a red dashed outline.
 :::
 
-1-Pyrenebutanoic acid N-hydroxysuccinimide ester (variously known commercially and in the literature as 1-Pyrenebutyric acid N-hydroxysuccinimide ester, PBASE, PBSE, PASE, Pyr-NHS, PyBASE, PANHS) is a aromatic molecule commonly used for tethering biomolecules to the carbon rings of graphene and carbon nanotubes. Using computational modelling, two locally stable molecular conformations were found to exist, a straight (@fig-pbase-stable-1) and bent (@fig-pbase-stable-2) structure. The conformation in @fig-pbase-stable-1 has a Hartree-Fock energy of -3427728.67 kJ/mol, while the conformation in @fig-pbase-stable-2 has a Hartree-Fock energy of -3427729.66 kJ/mol. The difference between computed Hartree-Fock energies is 1.0 kJ/mol, small enough that the existence of both molecular conformations is physically feasible. Similar straight and bent structures have previously been modelled for PBASE attached to graphene [@Oishi2022]. The pyrene moiety, highlighted with a red dashed outline in [@fig-pbase-stable-1]-b, non-covalently bonds to the carbon rings of the carbon nanotube and graphene surface. The N-hydroxysuccinimide (NHS) ester group, seen on the right-hand side of @fig-pbase-structure, is highly reactive with amine groups. It can undergo a nucleophilic substitution reaction with amines attached to proteins or aptamers, tethering these biomolecules via an amide or imide bond [@Chen2001; @Hermanson2013-16; @Hermanson2013-3; @Mishyn2022].
+1-Pyrenebutanoic acid N-hydroxysuccinimide ester (variously known commercially and in the literature as 1-Pyrenebutyric acid N-hydroxysuccinimide ester, PBASE, PBSE, PASE, Pyr-NHS, PyBASE, PANHS) is a aromatic molecule commonly used for tethering biomolecules to the carbon rings of graphene and carbon nanotubes. Using computational modelling, two locally stable molecular conformations were found to exist, a straight (@fig-pbase-stable-1) and bent (@fig-pbase-stable-2) structure. The conformation in @fig-pbase-stable-1 has a Hartree-Fock energy of -3427728.67 kJ/mol, while the conformation in @fig-pbase-stable-2 has a Hartree-Fock energy of -3427729.66 kJ/mol. The difference between computed Hartree-Fock energies is 1.0 kJ/mol, small enough that the existence of both molecular conformations is physically feasible. Similar straight and bent structures have previously been modelled for PBASE attached to graphene [@Oishi2022]. 
 
 \newpage
 \KOMAoptions{paper=landscape,pagesize}
@@ -54,37 +97,39 @@ knitr::kable(pbase_table,
                            "Incubation type",
                            "Time (hr)",
                            "Rinse steps",
-                           "References"), format = "simple")
+                           "References"), format = "simple") 
     
 ```
 
 \newpage
 \KOMAoptions{paper=portrait,pagesize}
 
-The non-covalent functionalisation of proteins onto a single-walled carbon nanotube using PBASE was first reported by Chen *et al.* in 2001 [@Chen2001]. Two methods for protein functionalisation and immobilisation were successfully used, with the only differences being the solvent used to dissolve the PBASE powder (DMF, methanol) and the final concentration of the resulting solutions (6 mM, 1 mM respectively). The lower concentration may have been used for PBASE in methanol as PBASE powder appears to dissolve poorly in methanol at higher concentrations. Several groups directly cite Chen *et al.* when discussing functionalisation with PBASE [@Besteman2003; @Cella2010; @Campos2019; @Zheng2016; @Ohno2010]. Other groups using PBASE for graphene or carbon nanotube functionalisation do not explicitly reference Chen *et al.* in their methodology, but it is apparent they often draw on one of these two original methods. This common ancestry becomes apparent from the high frequency of methods detailing the use of 6 mM PBASE in dimethylformamide (DMF) and 1 mM PBASE in methanol, as seen in @tbl-pbase-functionalisation.
+The pyrene moiety, highlighted with a red dashed outline in [@fig-pbase-stable-1]-b, non-covalently bonds to the carbon rings of the carbon nanotube and graphene surface. The N-hydroxysuccinimide (NHS) ester group, seen on the right-hand side of @fig-pbase-structure, is highly reactive with amine groups. It can undergo a nucleophilic substitution reaction with amines attached to proteins or aptamers, tethering these biomolecules via an amide or imide bond [@Chen2001; @Hermanson2013-16; @Hermanson2013-3; @Mishyn2022].
+
+The non-covalent functionalisation of proteins onto a single-walled carbon nanotube using PBASE was first reported by Chen *et al.* in 2001 [@Chen2001]. Two successful methods for protein functionalisation and immobilisation were reported, with the only differences being the solvent used to dissolve the PBASE powder (DMF, methanol) and the final concentration of the resulting solutions (6 mM, 1 mM respectively). PBASE powder appears to dissolve poorly in methanol at higher concentrations, which might explain the use of different concentrations of PBASE in each solvent. A full comparison of methods used for PBASE functionalisation in the literature is given in @tbl-pbase-functionalisation. Several listed works directly cite Chen *et al.* when discussing functionalisation with PBASE [@Besteman2003; @Cella2010; @Campos2019; @Zheng2016; @Ohno2010]. The other works listed do not explicitly reference Chen *et al.* in their methodology; however, the frequency of methods detailing the use of 6 mM PBASE in dimethylformamide (DMF) and 1 mM PBASE in methanol indicate that these processes are largely copying the process used by Chen *et al.*.
 
  However, it is also apparent from @tbl-pbase-functionalisation that there is a large degree of variation in the methods used for PBASE functionalisation. Various electrical characterisation, microscopy and spectroscopy techniques have been used to demonstrate successful functionalisation. Until recently, there has been little justification provided for the selection of variables used in the functionalisation procedure (e.g. length of time submerged in solvent containing PBASE), despite the wide-ranging use of this process in the literature [@Hinnemo2017; @Zhen2018; @Wang2020]. This is surprising, given that the sensitivity of functionalised devices is considered to be closely related to the density of surface functionalisation [@White2008; @Hermanson2013-3; @Chen2014]. Furthermore, a detailed investigation of PBASE functionalisation process variables has only been undertaken for graphene-based devices [@Zhen2018; @Hao2020; @Wang2020; @Mishyn2022]. 
  
-Zhen *et al.*, Wang *et al.* and Mishyn *et al.* claim that carefully tuning the surface concentration of PBASE is required to avoid multilayer coverage of the graphene surface, as this negatively impacts sensing. Mishyn *et al.* use cyclic voltammetry to demonstrate that less receptor attachment to the graphene surface occurs when multiple layers of PBASE are present. However, none of these groups perform analyte sensing using their functionalised graphene devices [@Zhen2018; @Wang2020; @Mishyn2022]. In contrast, Hao *et al.* find that maximising surface coverage of PBASE results in more sensitive aptameric sensing, thus drawing the opposite conclusion [@Hao2020]. The inconsistency in these recent findings mean more work is needed to understand the PBASE functionalisation process to achieve optimal biosensor sensitivity. It may also be the case that a specific functionalisation process is required for optimal sensitivity with the use of a specific type of receptor.
+Zhen *et al.* [@Zhen2018], Wang *et al.* [@Wang2020] and Mishyn *et al.* [@Mishyn2022] have all claimed that carefully tuning the surface concentration of PBASE is required to avoid multilayer coverage of the graphene surface, as this negatively impacts sensing. Mishyn *et al.* [@Mishyn2022] used cyclic voltammetry to demonstrate that less receptor attachment to the graphene surface occurs when multiple layers of PBASE are present. However, none of these groups have presented analyte sensing results from their functionalised graphene devices. In contrast, Hao *et al.* [@Hao2020] found that maximising the PBASE surface coverage of a channel resulted in more sensitive aptameric sensing, thereby reaching the opposite conclusion. The inconsistency in these recent findings mean more work is needed to understand the PBASE functionalisation process to achieve optimal biosensor sensitivity. It may also be the case that a specific functionalisation process is required for optimal sensitivity with the use of a specific type of receptor.
 
 ::: {#fig-pbase-nmr layout-ncol=1}
 
-![](figures/ch6/modified_sigma_pbase_nmr.png){#fig-sigma-nmr}
+![](figures/ch6/labelled_modified_sigma_pbase_nmr.png){#fig-sigma-nmr}
 
-![](figures/ch6/modified_setareh_pbase_nmr.png){#fig-setareh-nmr}
+![](figures/ch6/labelled_modified_setareh_pbase_nmr.png){#fig-setareh-nmr}
 
-![](figures/ch6/modified_dmso_nmr.png){#fig-dmso-nmr}
+![](figures/ch6/labelled_modified_dmso_nmr.png){#fig-dmso-nmr}
 
-$^{1}$H Nuclear Magnetic Resonance (NMR) spectra, performed with DMSO-d$_6$ used as the NMR solvent. (a) and (b) show NMR spectrum for commercially purchased PBASE, from Sigma-Aldrich and Setareh Biotech respectively, while (c) shows the blank spectrum taken with only DMSO-d$_6$ present (spectra taken by Jennie Ramirez-Garcia).
+$^{1}$H Nuclear Magnetic Resonance (NMR) spectra, performed with DMSO-d$_6$ used as the NMR solvent. (a) and (b) show NMR spectrum for commercially purchased PBASE, from Sigma-Aldrich and Setareh Biotech respectively, while (c) shows the blank spectrum taken with only DMSO-d$_6$ present (spectra taken by Jennie Ramirez-Garcia, School of Chemical and Physical Sciences, Te Herenga Waka - Victoria University of Wellington). Unlabelled peaks correspond to sample impurities.
 :::
 
 Once fastened to a bioreceptor via an amide or imide bond, the attachment to the linker molecule is not easily broken. However, prior to use in functionalisation processes, the NHS ester may react with any water present (hydrolysis). This reaction converts PBASE to 1-pyrenebutyric acid (PBA), leaving it unavailable to react further with amine groups [@Hermanson2013-3; @Hermanson2013-5; @Mishyn2022]. If the amine group functionalisation is performed within a $\sim1$ hour period, with a high concentration of bioreceptor used at close to neutral pH, competing hydrolysis should not have a significantly adverse impact on the functionalisation process [@Hermanson2013-3]. However, if PBASE is exposed to water during storage over a significant length of time, the presence of 1-Ethyl-3-(3-dimethylaminopropyl)carbodiimide (EDC) can be used to restore the NHS ester and enable the substitution reaction to take place (see discussion of PBA/EDC in @sec-PBA).
 
 ### Examining 1-Pyrenebutanoic Acid N-Hydroxysuccinimide Ester Purity
 
-I purchased PBASE from two suppliers, Sigma-Aldrich and Setareh Biotech. Sigma recommended DMF and methanol as suitable solvents for dissolving PBASE, alongside chloroform and dimethyl sulfoxide (DMSO). Setareh Biotech indicated methanol can be used for dissolving PBASE. The two suppliers had conflicting information for suitable storage of PBASE, with Sigma recommending room temperature storage while Setareh Biotech recommends storage of $-5$ to $-30 ^\circ \text{C}$ and protection from light and moisture. Given the long travel time of the PBASE samples under uncertain storage conditions, I used nuclear magnetic resonance (NMR) spectroscopy to verify the purity of the PBASE as recieved from each supplier. In light of the negative effect of water on PBASE, in particular I wanted to find out if any water was present in the samples.
+I purchased PBASE from two suppliers, Sigma-Aldrich and Setareh Biotech. Sigma recommended DMF and methanol as suitable solvents for dissolving PBASE, alongside chloroform and dimethyl sulfoxide (DMSO). Setareh Biotech indicated methanol can be used for dissolving PBASE. The two suppliers had conflicting information for suitable storage of PBASE, with Sigma recommending room temperature storage while Setareh Biotech recommends storage of $-5$ to $-30 ^\circ \text{C}$ and protection from light and moisture. I used nuclear magnetic resonance (NMR) spectroscopy to verify the purity of PBASE from various suppliers. As water can react with PBASE to form unwanted byproducts, it appears that protection from moisture is particularly important. A particular emphasis was placed on detecting water presence in the received samples, considering the long travel time of the PBASE with uncertain storage conditions.
 
-@fig-pbase-nmr compares the shapes of hydrogen NMR spectra of PBASE from each supplier when dissolved in deuterated DMSO, alongside a blank deuterated DMSO spectrum. Both PBASE samples possessed characteristic chemical shift features between $2.1-2.2$ ppm, $2.8-2.9$ ppm, and $3.4-3.5$ ppm. These chemical shifts roughly correspond to those seen in previous NMR spectra for PBASE [@NMR2]. The feature at 2.50 ppm represents the deuterated DMSO solvent, while the single peak between $3.3-3.4$ ppm represents the water present in the sample. By comparing the area of these peaks, the amount of water originally present in the PBASE sample can be estimated. The H$_{2}$O:DMSO ratio is 1:7 in the blank spectrum, but $\sim$ 1:3 in the provided samples, possibly indicating the introduction of water to the PBASE during production or storage. However, DMSO is strongly hygroscopic and slight differences in DMSO storage time, as well as differences in  humidity during sample preparation, may have had a significant impact on this result [@Lebel1962]. Other impurities are also seen on both PBASE spectra, though their small size indicates they make up only a small percentage of each sample. Note that Strack *et al.* recommend leaving frozen PBASE at room temperature for 15 minutes before opening to prevent the introduction of condensation [@Strack2013].
+@fig-pbase-nmr compares the shapes of hydrogen NMR spectra of PBASE from each supplier when dissolved in deuterated DMSO, alongside a blank deuterated DMSO spectrum. Both PBASE samples possessed characteristic chemical shift features between $2.1-2.2$ ppm, $2.8-2.9$ ppm, and $3.4-3.5$ ppm. These chemical shifts roughly correspond to those seen in previous NMR spectra for PBASE [@NMR2]. The feature at 2.50 ppm represents the deuterated DMSO solvent, while the single peak between $3.3-3.4$ ppm represents the water present in the sample. By comparing the area of these peaks, a rough estimate of the amount of water originally present in the PBASE sample can be obtained. The H$_{2}$O:DMSO ratio is 1:7 in the blank spectrum, but $\sim$ 1:3 in the provided samples, possibly indicating the introduction of water to the PBASE during production or storage. However, DMSO is strongly hygroscopic and slight differences in DMSO storage time, as well as differences in  humidity during sample preparation, may have had a significant impact on this result [@Lebel1962]. Other impurities are also seen on both PBASE spectra, though their small size indicates they make up only a small percentage of each sample. Strack *et al.* [@Strack2013] recommend leaving frozen PBASE at room temperature for 15 minutes before exposing it to air to prevent condensation near the PBASE, as this can cause unnecessary $H_2O$ contamination.
 
 ### Electrical Characterisation
 
