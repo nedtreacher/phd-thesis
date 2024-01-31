@@ -184,7 +184,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, interior hidden, enhanced, boxrule=0pt, breakable, borderline west={3pt}{0pt}{shadecolor}, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, boxrule=0pt, breakable, frame hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, sharp corners]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -214,6 +214,10 @@ chemistry
 \chapter{Verifying Non-Covalent Functionalisation of Carbon Nanotubes
 and
 Graphene}\label{verifying-non-covalent-functionalisation-of-carbon-nanotubes-and-graphene}}
+
+\begin{verbatim}
+310598
+\end{verbatim}
 
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
@@ -362,13 +366,14 @@ highlighted in the image with a red dashed outline.}
 
 \end{figure}
 
-1-Pyrenebutanoic acid N-hydroxysuccinimide ester (variously known
-commercially and in the literature as 1-Pyrenebutyric acid
-N-hydroxysuccinimide ester, PBASE, PBSE, PASE, Pyr-NHS, PyBASE, PANHS)
-is a aromatic molecule commonly used for tethering biomolecules to the
-carbon rings of graphene and carbon nanotubes. Using computational
-modelling, two locally stable molecular conformations were found to
-exist, a straight (Figure~\ref{fig-pbase-stable-1}) and bent
+1-pyrenebutanoic acid N-hydroxysuccinimide ester (also known
+commercially and in the literature both as 1-pyrenebutyric acid
+N-hydroxysuccinimide ester and 1-pyrenebutanoic acid succinimidyl ester;
+acronyms include PBASE, PBSE, PyBASE, PASE, PYSE, PSE, Pyr-NHS and
+PANHS) is a aromatic molecule commonly used for tethering biomolecules
+to the carbon rings of graphene and carbon nanotubes. Using
+computational modelling, two locally stable molecular conformations were
+found to exist, a straight (Figure~\ref{fig-pbase-stable-1}) and bent
 (Figure~\ref{fig-pbase-stable-2}) structure. The conformation in
 Figure~\ref{fig-pbase-stable-1} has a Hartree-Fock energy of -3427728.67
 kJ/mol, while the conformation in Figure~\ref{fig-pbase-stable-2} has a
@@ -380,6 +385,10 @@ PBASE attached to graphene \autocite{Oishi2022}.
 
 \newpage
 \KOMAoptions{paper=landscape,pagesize}
+
+\begin{verbatim}
+Warning: package 'knitr' was built under R version 4.3.2
+\end{verbatim}
 
 \hypertarget{tbl-pbase-functionalisation}{}
 \begin{longtable}[]{@{}lllllll@{}}
@@ -476,8 +485,9 @@ differences being the solvent used to dissolve the PBASE powder (DMF,
 methanol) and the final concentration of the resulting solutions (6 mM,
 1 mM respectively). PBASE powder appears to dissolve poorly in methanol
 at higher concentrations, which might explain the use of different
-concentrations of PBASE in each solvent. A full comparison of methods
-used for PBASE functionalisation in the literature is given in
+concentrations of PBASE in each solvent. An extensive comparison of
+methods used in the literature for PBASE functionalisation of carbon
+nanotube and graphene devices with aptamers and proteins is given in
 Table~\ref{tbl-pbase-functionalisation}. Several listed works directly
 cite Chen \emph{et al.} when discussing functionalisation with PBASE
 \autocite{Besteman2003,Cella2010,Campos2019,Zheng2016,Ohno2010}. The
@@ -703,15 +713,15 @@ Characterisation}\label{electrical-characterisation}}
 \subcaption{\label{fig-dmso-pbase-tx}}
 \end{minipage}%
 
-\caption{\label{fig-PBASE-vs-solvent-only}The change in the electrical
-transfer characteristics of carbon nanotube transistors after being
-submerged in solvent for one hour and then rinsed thoroughly is
-demonstrated in (a) and (b), where the solvents used are methanol (MeOH)
-and dimethyl sulfoxide (DMSO) respectively. The change in
-characteristics of similar transistor channels after being submerged in
-these same solvents for one hour along with 1 mM PBASE then rinsed are
-shown in (c) and (d) respectively. Threshold voltages for each transfer
-characteristic are also shown.}
+\caption{\label{fig-PBASE-vs-solvent-only}The electrical transfer
+characteristics of carbon nanotube transistors (V\_\{ds\} = 100 mV)
+before and after being submerged in methanol (a) or dimethyl sulfoxide
+(b) for one hour and subsequently rinsed with deionised water. The
+change in characteristics of similar transistor channels after being
+submerged in these same solvents containing 1 mM PBASE for one hour and
+then rinsed are shown in (c) and (d) respectively. Average threshold
+voltages for each transfer characteristic curve are also shown (taking
+the average of forward and reverse sweep values).}
 
 \end{figure}
 
@@ -734,18 +744,19 @@ shape of the change in the transfer curve, it seems the residual polar
 solvent molecules capacitively gate the channel
 \autocite{Artyukhin2006,Heller2008}.
 
-In contrast, previous work has shown that \(\pi\)-stacking carbon
-nanotube network to PBASE does not significantly affect the channel
-gating and therefore the channel threshold voltage
-\autocite{Besteman2003,Murugathas2019b}. Murugathas \emph{et al.}
-observed a slight increase in channel conductance after PBASE
-functionalisation when functionalising devices with solvent-deposited
-CNT films. In Figure~\ref{fig-PBASE-vs-solvent-only}, a slight increase
-in channel conductance post-functionalisation is observed for both
-Figure~\ref{fig-meoh-pbase-tx} and Figure~\ref{fig-dmso-pbase-tx}
-relative to the solvent-only case in Figure~\ref{fig-meoh-only-tx} and
-Figure~\ref{fig-dmso-only-tx}. It appears that the presence of PBASE
-molecules increases channel mobility and therefore conductance
+Furthermore, using the same characterisation process as in this work,
+Murugathas \emph{et al.} \autocite{Murugathas2019b} showed that
+\(\pi\)-stacking of PBASE onto a solvent-deposited carbon nanotube
+network had little effect on channel threshold voltage, implying the
+presence of PBASE had not significantly influenced channel gating
+\autocite{Murugathas2019b}. However, they did observe a slight increase
+in channel conductance after PBASE functionalisation. In
+Figure~\ref{fig-PBASE-vs-solvent-only}, a slight increase in channel
+conductance post-functionalisation is observed for both
+Figure~\ref{fig-meoh-pbase-tx} and Figure~\ref{fig-dmso-pbase-tx} when
+compared to the solvent-only case in Figure~\ref{fig-meoh-only-tx} and
+Figure~\ref{fig-dmso-only-tx}. This result implies that the presence of
+PBASE molecules increases channel mobility and therefore conductance
 \autocite{Heller2008}.
 
 Capactive gating results from dense coverage of adsorped molecules on
@@ -755,14 +766,18 @@ permittivity of MeOH and DMSO are \(\sim\) 33 \autocite{Mohsen-Nia2010}
 and \(\sim\) 47 \autocite{Hunger2010} respectively, which are both much
 lower than the relative permittivity of phosphate buffer saline,
 \(\sim\) 80 \autocite{Shkodra2021}. From Figure~\ref{fig-meoh-only-tx}
-and Figure~\ref{fig-dmso-only-tx}, the average threshold shift values
-found resulting from exposure to each solvent were \(\Delta\)V =
-\(-0.15 \pm 0.03\) V and \(\Delta\)V = \(-0.15 \pm 0.01\) V for MeOH and
-DMSO respectively. The threshold voltage shifts in
-Figure~\ref{fig-meoh-pbase-tx} and Figure~\ref{fig-dmso-pbase-tx} from
-the pristine are small compared with the devices exposed to solvent only
-- this is likely due to the effect of increased conductance from the
-PBASE competing with the gating effect from the residual solvent.
+and Figure~\ref{fig-dmso-only-tx}, the threshold shift values found
+resulting from exposure to each solvent, taking the average of forward
+and reverse sweep values from a single device, were \(\Delta\)V =
+\(-0.15 \pm 0.02\) V and \(\Delta\)V = \(-0.15 \pm 0.01\) V for MeOH and
+DMSO respectively. The average threshold shift value for a second device
+exposed to MeOH was \(\Delta\)V = \(-0.16 \pm 0.02\) V, indicating that
+this threshold shift result is reproducible. The threshold voltage
+shifts in Figure~\ref{fig-meoh-pbase-tx} and
+Figure~\ref{fig-dmso-pbase-tx} from the pristine are small compared with
+the devices exposed to solvent only - this is likely due to the effect
+of increased conductance from the PBASE competing with the gating effect
+from the residual solvent.
 
 The absorption of organic solvent by the carbon nanotube network has
 unknown but potentially negative implications for biosensor
@@ -795,36 +810,41 @@ proteins and aptamers onto carbon nanotubes and graphene.
 NHS were co-mingled in buffer/electrolyte solution or DI water in each
 process - some papers used N-hydroxysulfosuccinimide instead of
 N-hydroxysuccinimide, and both compounds are abbreviated as NHS in this
-table for simplicity. Blank entries indicate there was no mention of the
-parameter in a particular paper. \(^†\)PEG or PEG pyrene were used to
-reduce non-specific binding. \(^{††}\)Several pyrene-based linkers were
-compared and PBA gave an optimal functionalisation
+table for simplicity. Device exposure times to each solution are shown
+next to the solution concentration. Blank entries indicate there was no
+mention of the parameter in a particular paper. \(^†\)PEG or PEG pyrene
+were used to reduce non-specific binding. \(^{††}\)Several pyrene-based
+linkers were compared and PBA gave an optimal functionalisation
 result.}\tabularnewline
 \toprule\noalign{}
-Solvent & Channel & PBA (mM) & PBA Time (hr) & EDC (mM) & NHS (mM) &
-EDC/NHS Time (hr) & References \\
+Solvent & Channel & PBA (mM) & Exposure (hr) & EDC (mM) & NHS (mM) &
+Exposure (min) & References \\
 \midrule\noalign{}
 \endfirsthead
 \toprule\noalign{}
-Solvent & Channel & PBA (mM) & PBA Time (hr) & EDC (mM) & NHS (mM) &
-EDC/NHS Time (hr) & References \\
+Solvent & Channel & PBA (mM) & Exposure (hr) & EDC (mM) & NHS (mM) &
+Exposure (min) & References \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-DMF & Graphene & 0.6 & 1 & - & - & 120 & Gao \textit{et al.}\(^†\)
-\cite{Gao2016} \\
-& & 5 & 2 & 2 & 5 & 30 & Mishyn \textit{et al.} \cite{Mishyn2022} \\
-& CNT & 100 & 3 & 200 & - & 30 & Min \textit{et al.} \cite{Min2012} \\
+DMF & Graphene & 0.6 & 1 & - & - & 120 & Gao \textit{et al.}\(^†\),
+2016. \cite{Gao2016} \\
+& & 5 & 2 & 2 & 5 & 30 & Mishyn \textit{et al.}, 2022.
+\cite{Mishyn2022} \\
+& CNT & 100 & 3 & 200 & - & 30 & Min \textit{et al.}, 2012.
+\cite{Min2012} \\
+& Graphene, CNT & 7.6 & 2 & 8 & 20 & 120 & Xu \textit{et al.}, 2014.
+\cite{Xu2014} \\
 DI water & CNT & - & - & 32 & 12 & Overnight & Pacios
-\textit{et al.}\(^†\) \cite{Pacios2012} \\
-Ethanol & CNT & 1 & 1 & 100 & 100 & 20 & Filipiak \textit{et al.}\(^†\)
-\cite{Filipiak2018} \\
+\textit{et al.}\(^†\), 2012. \cite{Pacios2012} \\
+Ethanol & CNT & 1 & 1 & 100 & 100 & 20 & Filipiak \textit{et al.}\(^†\),
+2018. \cite{Filipiak2018} \\
 Acetonitrile & Graphene & 1 & 1 & 400 & 100 & 60 & Tong
-\textit{et al.}\(^{††}\) \cite{Tong2020} \\
-Borax solution & CNT & 2 & 24 & 2.5 & - & 1080 & Liu
-\textit{et al.}\(^†\) \cite{Liu2011} \\
-DMSO & Graphene & 5 & 1 & 50 & 50 & 90 & Fenzl \textit{et al.}
+\textit{et al.}\(^{††}\), 2020. \cite{Tong2020} \\
+Borax & CNT & 2 & 24 & 2.5 & - & 1080 & Liu \textit{et al.}\(^†\), 2011.
+\cite{Liu2011} \\
+DMSO & Graphene & 5 & 1 & 50 & 50 & 90 & Fenzl \textit{et al.}, 2017.
 \cite{Fenzl2017} \\
 \end{longtable}
 
@@ -839,12 +859,12 @@ DMSO & Graphene & 5 & 1 & 50 & 50 & 90 & Fenzl \textit{et al.}
 Methods}\label{comparing-attachment-methods-1}}
 
 Another linker molecule that can be used to attach receptor molecules to
-a carbon nanotube or graphene channel is 1-pyrenebutyric acid (PBA). As
-with PBASE, the pyrene group of PBA has a \(\pi\) interaction with the
-carbon rings of the channel surface. It is possible to react PBA with
-1-ethyl-3-(3-dimethylaminopropyl) carbodiimide hydrochloride (EDC or
-EDAC) to form an \emph{O}-acylisourea intermediate, which can then react
-with an amine group on a biomolecule and form an amide bond
+a carbon nanotube or graphene channel is 1-pyrenebutyric acid (PBA or
+PyBA). As with PBASE, the pyrene group of PBA has a \(\pi\) interaction
+with the carbon rings of the channel surface. It is possible to react
+PBA with 1-ethyl-3-(3-dimethylaminopropyl) carbodiimide hydrochloride
+(EDC or EDAC) to form an \emph{O}-acylisourea intermediate, which can
+then react with an amine group on a biomolecule and form an amide bond
 \autocite{Sehgal1994,Hermanson2013-4}. The water solubility of EDC means
 that, unlike PBASE, it is possible to functionalise with EDC dissolved
 in water rather than in an organic solvent. However, like PBASE, EDC and
@@ -858,89 +878,74 @@ the reaction vessel, PBASE is formed as an active intermediate, which is
 less prone to hydrolysis and increases the PBA/EDC reaction yield
 \autocite{Sehgal1994,Hermanson2013-4,Hermanson2013-14}.
 
-From comparing Table~\ref{tbl-pbase-functionalisation} and
+A full comparison of functionalisation procedures used for linking
+carbon nanotube and graphene devices to aptamers and proteins with PBA
+is given in Table~\ref{tbl-pba-functionalisation}. To the best of my
+knowledge, this table is as complete a summary as possible of
+1-pyrenebutyric acid functionalisation processes for carbon nanotube and
+graphene field-effect transistor biochemical sensors. By comparing
+Table~\ref{tbl-pbase-functionalisation} and
 Table~\ref{tbl-pba-functionalisation}, it is clear that PBASE is more
 widely used for non-covalent functionalisation than PBA/EDC. As was the
 case for PBASE, there are a wide range of process variables used for the
 functionalisation process, with little justification used for variables
 chosen. Also notable is the frequent use of polyethylene glycol (PEG) or
-pyrene-PEG for prevention of non-specific binding (see
-\textbf{?@sec-non-specific-binding} for further discussion of NSB).
-Despite being less widely used, Mishyn \emph{et al.} state a preference
-for the use of PBA/EDC over PBASE, as they found it was less prone to
-hydrolysis and gave a larger reaction yield when binding ferrocene to
-graphene \autocite{Mishyn2022}. A potential downside of using PBA/EDC
-for protein immobilisation is that EDC has numerous ways of interacting
-with proteins, and not all of these are necessarily desirable. The
-addition of NHS may also cause processing issues, such as precipitation
-of the reaction compound \autocite{Hermanson2013-4}. The greater range
-of process variables involved in the functionalisation also adds to the
-complexity of accurately reproducing past results.
+pyrene-PEG for prevention of non-specific binding (NSB). Non-specific
+binding is discussed further in \textbf{?@sec-non-specific-binding}.
+Despite being less widely used, Mishyn \emph{et al.}
+\autocite{Mishyn2022} state a preference for the use of PBA/EDC over
+PBASE, as they found it was less prone to hydrolysis and gave a larger
+reaction yield when binding ferrocene to graphene. A potential downside
+of using PBA/EDC for protein immobilisation is that EDC has numerous
+ways of interacting with proteins, and not all of these are necessarily
+desirable; furthermore, the addition of NHS may also cause other issues,
+such as precipitation of the reaction compound
+\autocite{Hermanson2013-4}. The greater range of process variables
+involved in the functionalisation also adds to the complexity of
+reproducing past results.
 
 \hypertarget{raman-spectroscopy}{%
 \subsection{Raman Spectroscopy}\label{raman-spectroscopy}}
 
 \begin{figure}
 
-\begin{minipage}[t]{0.53\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch6/Ned_Raman_bundled.png}
+{\centering \includegraphics[width=0.55\textwidth,height=\textheight]{figures/ch6/comparison_raman.png}
 
 }
 
-}
-
-\subcaption{\label{fig-raman-pbase-pba}}
-\end{minipage}%
-%
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch6/comparison_raman.png}
-
-}
-
-}
-
-\subcaption{\label{fig-raman-comparison}}
-\end{minipage}%
-
-\caption{\label{fig-linker-raman}Each spectrum shown in (a) corresponds
-to the average intensity across nine Raman spectra at different
-locations across a selection of chemically-modified carbon nanotube
-films. Each spectrum has been normalised so that I\(_D\) = 1 (D-peak
-maximum is unity). (b) shows the distribution of D-band peak to G-band
-peak ratio (I\(_D\)/I\(_G\)) calculated for each of the nine locations
-on each film.}
+\caption{\label{fig-linker-raman}This box plot shows the distribution of
+D-band peak to G\(^+\)-band peak ratio, I\(_D\)/I\(_G\), across nine
+locations for a selection of chemically-modified carbon nanotube films.
+The D-band and G-band intensities for all samples were first normalised
+to the intensity peak corresponding to the silicon dioxide substrate.}
 
 \end{figure}
 
 Raman spectroscopy was used to verify the attachment of PBA to a carbon
-nanotube network film. The carbon nanotube films used for verifying
-pyrene attachment were solvent-deposited, as highly-bundled devices were
-found to have less previously-existing defects present, as discussed in
-\textbf{?@sec-pristine-raman}. Droplets of DMSO solution were placed on
-three (solvent-deposited) carbon nanotube films taken from the same
-wafer. The DMSO solution on one film contained 5 mM PBA, the solution on
-another film contained 5 mM PBASE, and the DMSO on the final film
-contained no linker molecule. After incubation for 1 hour, films were
-rinsed for 15 s with DMSO, then for 15 s with IPA to remove excess DMSO
-while avoiding hydrolysis of the PBASE. Raman spectroscopy was performed
-on the films in the manner outlined in
-\textbf{?@sec-raman-characterisation}. The PBA-exposed film was further
-exposed to 20 mM EDC and 40 mM NHS in 1XPBS electrolyte for 30 minutes,
-and a second Raman spectra was taken for this film. The average
-intensity of Raman shift for each film measurement set is shown in
-Figure~\ref{fig-raman-pbase-pba}. The distribution of I\(_D\)/I\(_G\)
-ratio across all nine Raman spectra from each film measurement set is
-shown in Figure~\ref{fig-raman-comparison}.
+nanotube network film with a silicon dioxide substrate in the manner
+outlined in \textbf{?@sec-raman-characterisation}. As highly-bundled
+devices were found to have less defects present prior to modification,
+as discussed in \textbf{?@sec-pristine-raman}, solvent-deposited films
+were used for the verification of pyrene attachment to prevent the
+initial presence of defects influencing the analysis. Droplets of DMSO
+solution were placed on three (solvent-deposited) carbon nanotube films
+taken from the same wafer. The DMSO solution on one film contained PBA,
+the solution on another film contained PBASE, and the DMSO on the final
+film contained no linker molecule. After incubation for 1 hour, films
+were rinsed for 15 s with DMSO, then for 15 s with IPA to remove excess
+DMSO while avoiding hydrolysis of the PBASE. After the first set of
+Raman spectra was taken, the film initially exposed to PBA was further
+exposed to a solution of 20 mM EDC and 40 mM NHS in 1XPBS electrolyte
+for 30 minutes, and a second set of Raman spectra was taken for this
+film. As in \textbf{?@sec-pristine-raman}, spectra were processed
+according to Section~\ref{sec-raman-analysis}, and the silicon dioxide
+reference peak measured in the wavenumber range 100 cm\(^{-1}\) \(-\)
+650 cm\(^{-1}\) was used to normalise the D-band and G-band peaks from
+the wavenumber range 1300 cm\(^{-1}\) \(-\) 1650 cm\(^{-1}\). The ratio
+between the average intensity of the D-peak and the G\(^+\)-peak at each
+position was calculated, and the distribution of ratio values
+corresponding to each modified film is shown in
+Figure~\ref{fig-linker-raman}.
 
 There is a \(\sim 3 \times\) increase in the intensity ratio
 I\(_D\)/I\(_G\) for both the films modified with PBASE and PBA compared
@@ -956,7 +961,7 @@ difference between results is not immediately clear, but may result from
 the significant differences in the pristine composition and morphology
 of carbon nanotube networks used in each publication, and differences in
 the functionalisation method used. Across all scan locations in
-Figure~\ref{fig-raman-comparison}, there is signficant overlap between
+\textbf{?@fig-raman-comparison}, there is signficant overlap between
 I\(_D\)/I\(_G\) measurements for both PBA and PBASE. Furthermore, after
 further functionalisation of the PBA-modified film with EDC/NHS,
 subsequent Raman measurements of the film do not differ significantly to
