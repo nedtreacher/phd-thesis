@@ -184,7 +184,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, frame hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, sharp corners, enhanced, interior hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, interior hidden, sharp corners, enhanced, frame hidden, borderline west={3pt}{0pt}{shadecolor}, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -1218,6 +1218,16 @@ Figure~\ref{fig-PPF-concs} shows various concentrations of
 pyrene-PEG-FITC dissolved in 1XPBS, which is used for fluorescence
 characterisation in this section.
 
+Both SU8 and AZ\(^\circledR\) 1518 photoresist were found to fluoresce,
+which is due to their photoactive component \autocite{Pai2007}. This
+passive fluorescence was found to drown out fluorescence from a
+dye-functionalised device channel, and so photoresist encapsulated
+devices were not used for fluorescence imaging. A different type of
+encapsulation could potentially be used to verify linker attachment with
+fluorescence after a device has been encapsulated. These alternative
+encapsulation methods for use with fluorescence microscopy are discussed
+in \textbf{?@sec-future-work}.
+
 \begin{figure}
 
 {\centering \includegraphics[width=0.45\textwidth,height=\textheight]{figures/ch6/PPF_vials.png}
@@ -1312,6 +1322,8 @@ regions are the device electrodes, while the brightly fluorescent region
 is the graphene channel area.}
 
 \end{figure}
+
+\textless!---\textgreater{}
 
 \hypertarget{electrical-characterisation-with-mpeg-pyrene}{%
 \subsection{Electrical Characterisation with
@@ -1443,6 +1455,8 @@ when comparing the SiO\(_2\) surface next to the graphene channel and
 the SiO\(_2\) below the graphene channel. The physical mechanism linking
 these two factors is currently unclear.
 
+\textless!---\textgreater{}
+
 \hypertarget{sec-impediments}{%
 \section{Addressing Functionalisation Issues}\label{sec-impediments}}
 
@@ -1458,13 +1472,13 @@ Contamination}\label{sec-photoresist-contamination}}
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch6/modified_SU8only_FITCfilter_channel2_4.5s_12.6X_221207.png}
+\includegraphics{figures/ch6/modified_SU8only_FITCfilter_channel2_350ms_12.6X_221207.png}
 
 }
 
 }
 
-\subcaption{\label{fig-SU8-only}}
+\subcaption{\label{fig-350ms-SU8}}
 \end{minipage}%
 %
 \begin{minipage}[t]{0.05\linewidth}
@@ -1477,21 +1491,6 @@ Contamination}\label{sec-photoresist-contamination}}
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch6/modified_SU8only_FITCfilter_channel2_350ms_12.6X_221207.png}
-
-}
-
-}
-
-\subcaption{\label{fig-350ms-SU8}}
-\end{minipage}%
-\newline
 \begin{minipage}[t]{0.47\linewidth}
 
 {\centering 
@@ -1506,6 +1505,21 @@ Contamination}\label{sec-photoresist-contamination}}
 
 \subcaption{\label{fig-350ms-SU8-FITC}}
 \end{minipage}%
+\newline
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/modified_CNT20_1mMPPF_window4_350ms_12.6X_221124.png}
+
+}
+
+}
+
+\subcaption{\label{fig-SU8-FITC-CNT}}
+\end{minipage}%
 %
 \begin{minipage}[t]{0.05\linewidth}
 
@@ -1523,35 +1537,6 @@ Contamination}\label{sec-photoresist-contamination}}
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch6/modified_CNT20_1mMPPF_window4_350ms_12.6X_221124.png}
-
-}
-
-}
-
-\subcaption{\label{fig-SU8-FITC-CNT}}
-\end{minipage}%
-
-\caption{\label{fig-FITC-SU8}A fluorescence image of a carbon nanotube
-device encapsulated with SU8 using the pre-2023 mask is shown in (a)
-using a 4.5 s exposure time. An image of the same region on this device
-taken using a shorter exposure time (0.35 s) is shown in (b). With the
-same exposure time as in (b), (c) shows a SU8-encapsulated channel after
-modification with an aqueous solution of 1 mM Pyrene-PEG-FITC, while (d)
-shows an SU8-coated CNT film where a 320 \(\mu\)m \(\times\) 320
-\(\mu\)m region of SU8 has been photolithographically removed to expose
-the CNTs in that region. All images were taken using an FITC filter.}
-
-\end{figure}
-
-\begin{figure}
-
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
 \includegraphics{figures/ch6/modified_softbake1minacetonerinse_aptamer_ch3_mCherry_30sexposure_highcontrast_ISO200_12.6X.png}
 
 }
@@ -1560,8 +1545,8 @@ the CNTs in that region. All images were taken using an FITC filter.}
 
 \subcaption{\label{fig-aptamer-photoresist-1}}
 \end{minipage}%
-%
-\begin{minipage}[t]{0.05\linewidth}
+\newline
+\begin{minipage}[t]{0.26\linewidth}
 
 {\centering 
 
@@ -1585,38 +1570,60 @@ the CNTs in that region. All images were taken using an FITC filter.}
 
 \subcaption{\label{fig-aptamer-photoresist-2}}
 \end{minipage}%
+%
+\begin{minipage}[t]{0.26\linewidth}
 
-\caption{\label{fig-aptamer-photoresist}Both (a) and (b) show
-fluorescence images of an carbon nanotube device with photoresist
-surface residue after exposure to PBASE and fluorescent-tagged aptamer,
-where the device in (b) was hardbaked at 200\(^\circ\)C for 1 hour
-before exposure while the device (a) was not. An mCherry filter and 30 s
-exposure time were used.}
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-FITC-SU8}A fluorescence image of a carbon nanotube
+device encapsulated with SU8 using the pre-2023 mask is shown in (a)
+using a 0.35 s exposure time. With the same exposure time as in (a), (c)
+shows a SU8-encapsulated channel after modification with an aqueous
+solution of 1 mM Pyrene-PEG-FITC, while (d) shows an SU8-coated CNT film
+where a 320 \(\mu\)m \(\times\) 320 \(\mu\)m region of SU8 has been
+photolithographically removed to expose the CNTs in that region. Both
+(d) and (e) show fluorescence images of an carbon nanotube device with
+photoresist surface residue after exposure to PBASE and
+fluorescent-tagged aptamer, where the device in (e) was hardbaked at
+200\(^\circ\)C for 1 hour before exposure while the device (d) was not.
+For images (a)-(c) a FITC filter was used, while for (d)-(e) a mCherry
+filter and 30 s exposure time were used.}
 
 \end{figure}
 
-Linker interacting with residual photoresist was an issue quickly
-encountered when initially characterising pyrene-PEG-FITC attachment
-(PPF) via fluorescence microscopy. Figure~\ref{fig-SU8-only} shows an
-fluoresence image of a carbon nanotube device channel encapsulated with
-SU8, taken with a FITC filter. The photoresist itself is seen to
-fluoresce due to its photoactive component \autocite{Pai2007}, and
-therefore a different type of encapsulation would need to be used if
-verifying channel attachment via fluorescence post-encapsulation.
-Alternative encapsulation methods which can be used with fluorescence
-microscopy are discussed in \textbf{?@sec-future-work}. The
-pyrene-PEG-FITC also appears to interact with the surface of the SU8.
-Figure~\ref{fig-350ms-SU8} and Figure~\ref{fig-350ms-SU8-FITC} were
-taken using the same microscope settings (filter, ISO, contrast,
-exposure time), yet the SU8 exposed to PPF appears much brighter than
-the pristine SU8. Furthermore, Figure~\ref{fig-SU8-FITC-CNT} shows that
-when photoresist residue on a carbon nanotube film is exposed to PPF, it
-shows up brightly under the fluorescence microscope. The presence of
-photoresist residue not only interferes with the use of fluorescence
-microscopy for functionalisation verification but is undesirable for
-sensing purposes. Devices made after June 2023 were exposed to UV light
-and then placed in AZ\(^\circledR\) 326 developer to remove any residual
-photoresist after each photolithography step.
+An functionalisation issue quickly encountered when characterising
+pyrene-PEG-FITC interaction with device channels (PPF) via fluorescence
+microscopy was an unwanted secondary interaction between the linker and
+residual photoresist. Figure~\ref{fig-350ms-SU8} and
+Figure~\ref{fig-350ms-SU8-FITC} are fluorescence images of SU8
+encapsulation before and after being exposed to PPF. Despite the same
+microscope settings being used to take the images (filter, ISO,
+contrast, exposure time), the SU8 exposed to PPF appears much brighter
+than the pristine SU8. No fluorescence is seen from the device channel,
+as the length of exposure time required to see the fluorescence would
+lead to fluorescence from the dye-modified linker attached to the
+photoresist flooding the image with light. An analogy which could be
+used is that of a dim outdoor lamp in a photograph; if the photograph
+was taken on a starless night, it would show up clearly, but with the
+sun out it would be very difficult to see regardless of how the
+photograph was taken. We therefore assert that because the fluorescence
+of the dye attached to the photoresist is much more intense than the dye
+attached to the carbon nanotubes, the linker appears to have a more
+extensive interaction with the photoresist via an unknown mechanism than
+it does by \(pi\)-stacking with the carbon nanotubes.
+
+In Figure~\ref{fig-SU8-FITC-CNT} that patches of photoresist residue
+remaining on a carbon nanotube film shows up brightly under the
+fluorescence microscope after being exposed to PPF. The presence of
+photoresist residue is undesirable for both functionalisation and
+sensing, and fluorescence microscopy was a useful tool for detecting
+residue and testing suitable residue elimination measures.
 
 A similar interaction between AZ\(^\circledR\) 1518 photoresist and
 fluorescent-tagged, amine-terminated aptamer was seen when
@@ -1630,8 +1637,8 @@ for 1 hour, rinsed with methanol and Tris buffer, then incubated in 1
 The aptamer was denatured by heating in a water bath at 95\(^\circ\)C
 for 5 minutes then cooling in an ice bath for 10 minutes before use.
 Fluorescence microscope images of channels from the two devices are
-shown in Figure~\ref{fig-aptamer-photoresist}, where the dark regions
-are the gold device electrodes.
+shown in \textbf{?@fig-aptamer-photoresist}, where the dark regions are
+the gold device electrodes.
 
 From comparing Figure~\ref{fig-aptamer-photoresist-1} and
 Figure~\ref{fig-aptamer-photoresist-2}, it is apparent that hardbaking
@@ -1650,6 +1657,10 @@ onwards devices were vacuum annealed for 1 hour at 150 \(^\circ\)C prior
 to functionalisation. This approach was taken to ensure photoresist was
 being heated from above as well as below and made chemically inert at
 its surface.
+
+Using fluorescence microscopy, an effective measure for remove exposed
+to UV light and placed in AZ\(^\circledR\) 326 developer to remove
+residual photoresist after each photolithography step.
 
 \hypertarget{sec-hydrophobicity}{%
 \subsection{Hydrophobicity of Carbon Nanotubes and
