@@ -184,7 +184,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, sharp corners, boxrule=0pt, interior hidden, frame hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, frame hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, sharp corners, enhanced, interior hidden]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -1053,10 +1053,10 @@ and 40 mM NHS in 1XPBS electrolyte for 30 minutes.
 Figure~\ref{fig-edc-nhs-threshold-shift} shows the change resulting from
 subsequent EDC/NHS exposure. When EDC/NHS is added, a threshold shift of
 \(\Delta\)V \(\sim\) -0.08 V was observed on multiple channels. The
-negative shift indicates that the presence of the EDC/NHS has n-doped
-the carbon nanotube network, which likely results from the formation of
-a positively-charged \emph{O}-acylisourea active ester from the PBA
-attached to the carbon nanotubes \autocite{Heller2008,Hermanson2013-4}.
+exposure to EDC/NHS negatively shifts the transfer characteristic curve,
+most likely due to the PBA present reacting to form positively-charged
+\emph{O}-acylisourea esters and negatively gating the attached carbon
+nanotube network \autocite{Heller2008,Hermanson2013-4}.
 Figure~\ref{fig-rinse-threshold-shift} shows that this shift is not
 significantly affected by further exposure of the channel to PBS. This
 indicates that hydrolysis over the course of one hour is insufficient to
@@ -1113,7 +1113,7 @@ to bind streptavidin to a graphene field-effect transistor device
 \autocite{Miki2019}. The PEGlyated linkers used in the following
 sections were purchased pre-prepared. Pyrene-PEG-NTA (2 kDa) was
 purchased from Nanocs, while pyrene-PEG-FITC (2 kDa, 10 kDa),
-pyrene-PEG-rhodamine (3.4 kDa), mPEG-Pyrene (Pyrene-PEG, 10 kDa) and
+pyrene-PEG-rhodamine (3.4 kDa), mPEG-Pyrene (10 kDa) and
 pyrene-PEG-biotin (10 kDa) were purchased from Creative PEGworks.
 
 \hypertarget{sec-PPF-fluorescence-characterisation}{%
@@ -1163,32 +1163,64 @@ Pyrene-PEG-FITC}\label{sec-PPF-fluorescence-characterisation}}
 \end{minipage}%
 
 \caption{\label{fig-FITC-rhodamine-B}Four 200 \(\mu\)m \(\times\) 200
-\(\mu\)m graphene squares modified with FITC in (a), and with Rhodamine
-B in (b). In (a), an FITC filter and 6.5 s exposure time was used, and
-in (b) a Texas Red filter and 1.4 s exposure time was used.}
+\(\mu\)m graphene squares modified with the dyes (a) fluorescein
+isothiocyanate (FITC) and (b) Rhodamine B. No pyrene/PEG/pyrene-PEG was
+attached to these dyes. In (a), an FITC filter and 6.5 s exposure time
+was used, and in (b) a Texas Red filter and 1.4 s exposure time was
+used.}
 
 \end{figure}
 
-To understand the attachment of PEGlyated pyrene-based linkers to the
-carbon nanotube or graphene surface, pyrene-PEG modified with
-fluorescein isothiocyanate was used, a widely-used fluorescent probe
-which does not specifically interact with carbon rings.
-Figure~\ref{fig-FITC-rhodamine-B} gives a comparison of the presence of
-FITC and Rhodamine B with four 200 \(\mu\)m \(\times\) 200 \(\mu\)m
-graphene squares. There is a much stronger contrast between the graphene
-squares and the background after functionalisation with Rhodamine B,
-showing a clear, specific interaction between Rhodamine B and graphene.
-It has previously been determined that the benzene rings of rhodamine
-\(\pi\)-stack with carbon rings \autocite{Tang2012}. As it is the
-attachment of pyrene which is of interest, rather than attachment of the
-fluorescent modifier, FITC was used instead of Rhodamine B.
+Dye attachment was used to map the prescence of PEGlyated pyrene-based
+linkers across a carbon nanotube or graphene surface with fluorescence
+microscopy. Four 200 \(\mu\)m \(\times\) 200 \(\mu\)m graphene squares
+were incubated in two commonly used and easily obtained dyes,
+fluorescein isothiocyanate (FITC) and Rhodamine B, to test whether the
+dyes themselves bond to graphene.
+
+The functionalisation of graphene devices with fluorescent dye was
+performed using the following steps:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  1 mM dye (FITC or Rhodamine B) prepared in PBS solution by vortex
+  mixing for 10-15 minutes.
+\item
+  Graphene on silicon dioxide substrate rinsed with acetone and IPA,
+  then nitrogen dried, and then treated with 300 mTorr 5W oxygen plasma
+  for 15 s (see Section~\ref{sec-hydrophobicity}).
+\item
+  Immediately (in less than 1 min) place a 20 \(\mu\)L droplet of dye
+  solution onto the substrate surface, near wet tecwipes to keep
+  droplets humidified, covered with a glass container. Leave for 20
+  minutes.
+\item
+  After 20 minutes, substrate rinsed in PBS for 30 s.
+\item
+  Substrate rinsed with m-CNT dispersion solution for 5 minutes at
+  70\(^\circ\)C with a pipette, then rinsed with DI water, ethanol,
+  acetone, IPA and nitrogen dried (see
+  Section~\ref{sec-pyrene-interactions}).
+\end{enumerate}
+
+The results of this test are shown in Figure~\ref{fig-FITC-rhodamine-B}.
+There is a much stronger contrast between the graphene squares and the
+background after functionalisation with Rhodamine B, showing a clear,
+specific interaction between Rhodamine B and graphene. It has previously
+been determined that the benzene rings of rhodamine \(\pi\)-stack with
+carbon rings \autocite{Tang2012}. Rhodamine B could therefore not be
+used as a fluorescent marker to check for attachment of our linker
+molecules. However, as fluorescein isothiocyanate did not show
+significant interaction with the graphene, this marker was subsequently
+used for fluorescent mapping linker attachment.
 Figure~\ref{fig-PPF-concs} shows various concentrations of
 pyrene-PEG-FITC dissolved in 1XPBS, which is used for fluorescence
 characterisation in this section.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\textwidth,height=\textheight]{figures/ch6/PPF_vials.png}
+{\centering \includegraphics[width=0.45\textwidth,height=\textheight]{figures/ch6/PPF_vials.png}
 
 }
 
@@ -1220,14 +1252,15 @@ performed as follows:
 \end{enumerate}
 
 Fluorescence images of the unencapsulated graphene devices successfully
-functionalised with pyrene-PEG-FITC, showing up bright green against a
-dark background, are shown in Figure~\ref{fig-FITC-EtOH}. The dark
-regions are the gold electrodes, and the bright green region is the
+functionalised with pyrene-PEG-FITC (PPF), showing up bright green
+against a dark background, are shown in Figure~\ref{fig-FITC-EtOH}. As
+indicated by the labels, the darkest regions are the titanium-gold
+electrodes, and the bright green region is the PPF functionalised
 graphene channel. It is noticable that some variation in fluorescence is
 seen between channels, indicating the quality of functionalisation may
 vary across the channels of a device. Some of the difficulties
 encountered when investigating functionalisation with pyrene-PEG-FITC
-are outlined in Section~\ref{sec-impediments}.
+are discussed later in Section~\ref{sec-impediments}.
 
 \begin{figure}
 
@@ -1237,7 +1270,7 @@ are outlined in Section~\ref{sec-impediments}.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch6/modified_noencap_1mMPPF_channel2_1sexposure_6.3X_highcontrast_221214.png}
+\includegraphics{figures/ch6/labelled_modified_noencap_1mMPPF_channel2_1sexposure_6.3X_highcontrast_221214.png}
 
 }
 
@@ -1262,7 +1295,7 @@ are outlined in Section~\ref{sec-impediments}.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch6/modified_noencap_1mMPPF_channel7_1sexposure_6.3X_highcontrast_221214.png}
+\includegraphics{figures/ch6/labelled_modified_noencap_1mMPPF_channel7_1sexposure_6.3X_highcontrast_221214.png}
 
 }
 
@@ -1273,39 +1306,111 @@ are outlined in Section~\ref{sec-impediments}.
 
 \caption{\label{fig-FITC-EtOH}Fluorescence images of an unencapsulated
 graphene channel after functionalisation with 1 mM pyrene-PEG-FITC in
-ethanol, taken using an FITC filter and a 1 s exposure time, where (a)
-is channel 2 of the device and (b) is channel 7.}
+ethanol, taken using an FITC filter with a 1 s exposure time, where (a)
+shows channel 2 of the device and (b) shows channel 7. The darker
+regions are the device electrodes, while the brightly fluorescent region
+is the graphene channel area.}
 
 \end{figure}
 
-\hypertarget{electrical-characterisation-with-pyrene-peg}{%
+\hypertarget{electrical-characterisation-with-mpeg-pyrene}{%
 \subsection{Electrical Characterisation with
-Pyrene-PEG}\label{electrical-characterisation-with-pyrene-peg}}
+mPEG-Pyrene}\label{electrical-characterisation-with-mpeg-pyrene}}
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.55\textwidth,height=\textheight]{figures/ch6/Dirac_shift_comparisons_mPEGpyrene.png}
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/withplasma_surfactantrinse_Dirac_shift_comparisons_0_mPEGpyrene.png}
 
 }
 
-\caption{\label{fig-pypeg-dirac-shift}(Major) Dirac voltage shifts of
-graphene field-effect transistors after functionalisation with various
-concentrations of pyrene-PEG dissolved in 1XPBS, as well as after being
-cleaned with m-surfactant solution. Measurements corresponding to each
-concentration are of three different device channels from a single
+}
+
+\subcaption{\label{fig-pypeg-dirac-shift-no-plasma}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/withplasma_surfactantrinse_Dirac_shift_comparisons_2_mPEGpyrene.png}
+
+}
+
+}
+
+\subcaption{\label{fig-pypeg-dirac-shift-plasma}}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.26\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/withplasma_surfactantrinse_Dirac_shift_comparisons_3_mPEGpyrene.png}
+
+}
+
+}
+
+\subcaption{\label{fig-pypeg-dirac-shift-plasma-surfactant}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.26\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-mPEGpyrene-Dirac-shift}(Major) Dirac voltage shifts
+of graphene field-effect transistors after functionalisation with
+concentrations of mPEG-Pyrene in 1XPBS at 0, 0.01 and 0.1 mM, followed
+by rinsing with m-surfactant solution. Measurements corresponding to
+each concentration are of three different device channels from a single
 device measured four times, where the device was rinsed with 1XPBS
 between each measurement.}
 
 \end{figure}
 
-Figure~\ref{fig-pypeg-dirac-shift} compares the electrical
-characteristics of graphene transistor channels before and after
-functionalisation with various concentrations of pyrene-PEG, showing the
-magnitude in shift of the (major) Dirac point. Graphene devices used
-were fabricated before Nov 2022. 2 mM Pyrene-PEG was dissolved in 1XPBS
-using a vortex mixer for 10 min at 1000 rpm until fully dissolved, then
-diluted in series to 1 mM, 0.1 mM, and 0.01 mM in 1XPBS. Plasma treated
-devices were treated with 5W oxygen plasma for 15 s at 350 mTorr before
+\textbf{?@fig-pypeg-dirac-shift} compares the electrical characteristics
+of graphene transistor channels before and after functionalisation with
+various concentrations of mPEG-pyrene, showing the magnitude in shift of
+the (major) Dirac point. 2 mM Pyrene-PEG was dissolved in 1XPBS using a
+vortex mixer for 10 min at 1000 rpm until fully dissolved, then diluted
+in series to 1 mM, 0.1 mM, and 0.01 mM in 1XPBS. Plasma treated devices
+were treated with 5 W oxygen plasma for 15 s at 350 mTorr before
 functionalisation. 2 \(\mu\)L solution was placed on each device channel
 for 1 hour, covered with a glass dish and in the presence of wet
 tecwipes to keep the environment humid. Devices were then rinsed in
@@ -1317,23 +1422,23 @@ and finally nitrogen drying them.
 
 As in the case of PBASE and PBA on carbon nanotubes, the neutral charge
 of pyrene means there is no significant Dirac shift when the plasma
-treated devices are successfully functionalised with pyrene-PEG
+treated devices are successfully functionalised with mPEG-pyrene
 \autocite{Lerner2012}. Interestingly, however, when the devices are not
 plasma treated before functionalisation, there is a significant Dirac
-shift at higher concentrations of pyrene-PEG. Since aqueous
+shift at higher concentrations of mPEG-pyrene. Since aqueous
 functionalisation without a plasma pre-treatment results in little or no
 graphene surface coverage, as demonstrated in
 Section~\ref{sec-PPF-fluorescence-characterisation}, it can be safely
-assumed that this shift is due to attachment of pyrene-PEG to the small
+assumed that this shift is due to attachment of mPEG-pyrene to the small
 region of silicon dioxide not covered by encapsulation which borders the
 channel. Furthermore,
 Section~\ref{sec-PPF-fluorescence-characterisation} shows us that even
 after plasma treatment, the SiO\(_2\) surface will still interact with
-pyrene-PEG upon functionalisation. Oxygen plasma treatment is known to
+mPEG-pyrene upon functionalisation. Oxygen plasma treatment is known to
 make the graphene layer permeable to water, and therefore it is likely
-the SiO\(_2\) surface below the graphene is also coated with pyrene-PEG
+the SiO\(_2\) surface below the graphene is also coated with mPEG-pyrene
 after plasma treatment \autocite{Surwade2015}. Therefore, it appears the
-Dirac shift results from a difference in pyrene-PEG surface coverage
+Dirac shift results from a difference in mPEG-pyrene surface coverage
 when comparing the SiO\(_2\) surface next to the graphene channel and
 the SiO\(_2\) below the graphene channel. The physical mechanism linking
 these two factors is currently unclear.
@@ -1622,9 +1727,10 @@ forms on the graphene (or carbon nanotube) surface when exposed to air
 \autocite{Ashraf2014,Stando2019,Park2022}. Treatment with oxygen plasma
 at 5 W for 15 s has previously been found to remove this
 hydrocarbonaceous layer, restoring the intrinsic hydrophilicity of
-graphene \autocite{Shin2010}. Furthermore, storing the graphene surface
-in DI water rather than air prevents the return of this hydrocarbon
-layer \autocite{Ashraf2014}.
+graphene \autocite{Shin2010}. Storing the graphene surface in DI water
+rather than air prevents the return of this hydrocarbon layer
+\autocite{Ashraf2014}. The use of a relatively low power plasma ensures
+damage to the graphene layer is minimised.
 
 Treatment of an unencapsulated carbon nanotube network device at 5 W for
 15 s at 300 mTorr greatly reduced the contact angle of a water droplet
