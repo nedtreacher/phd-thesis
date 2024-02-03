@@ -280,7 +280,7 @@ Fluorescence images of the unencapsulated graphene devices successfully function
 Fluorescence images of an unencapsulated graphene channel after functionalisation with 1 mM pyrene-PEG-FITC in ethanol, taken using an FITC filter with a 1 s exposure time, where (a) shows channel 2 of the device and (b) shows channel 7. The darker regions are the device electrodes, while the brightly fluorescent region is the graphene channel area. 
 :::
 
-<!--->
+<!--
 
 ### Electrical Characterisation with mPEG-Pyrene
 
@@ -300,13 +300,13 @@ Fluorescence images of an unencapsulated graphene channel after functionalisatio
 
 As in the case of PBASE and PBA on carbon nanotubes, the neutral charge of pyrene means there is no significant Dirac shift when the plasma treated devices are successfully functionalised with mPEG-pyrene [@Lerner2012]. Interestingly, however, when the devices are not plasma treated before functionalisation, there is a significant Dirac shift at higher concentrations of mPEG-pyrene. Since aqueous functionalisation without a plasma pre-treatment results in little or no graphene surface coverage, as demonstrated in @sec-PPF-fluorescence-characterisation, it can be safely assumed that this shift is due to attachment of mPEG-pyrene to the small region of silicon dioxide not covered by encapsulation which borders the channel. Furthermore, @sec-PPF-fluorescence-characterisation shows us that even after plasma treatment, the SiO$_2$ surface will still interact with mPEG-pyrene upon functionalisation. Oxygen plasma treatment is known to make the graphene layer permeable to water, and therefore it is likely the SiO$_2$ surface below the graphene is also coated with mPEG-pyrene after plasma treatment [@Surwade2015]. Therefore, it appears the Dirac shift results from a difference in mPEG-pyrene surface coverage when comparing the SiO$_2$ surface next to the graphene channel and the SiO$_2$ below the graphene channel. The physical mechanism linking these two factors is currently unclear.
 
-<!--->
+-->
 
 ## Addressing Functionalisation Issues {#sec-impediments}
 
 ### Photoresist Contamination {#sec-photoresist-contamination}
 
-::: {#fig-FITC-SU8 layout="[[47.5,-5,47.5], [47.5,-5,47.5], [-26.25,47.5,-26.25]]"}
+::: {#fig-FITC-SU8 layout="[[47.5,-5,47.5], [47.5,-5,47.5], [47.5,-5,47.5]]"}
 
 ![](figures/ch6/modified_SU8only_FITCfilter_channel2_350ms_12.6X_221207.png){#fig-350ms-SU8}
 
@@ -314,9 +314,11 @@ As in the case of PBASE and PBA on carbon nanotubes, the neutral charge of pyren
 
 ![](figures/ch6/modified_CNT20_1mMPPF_window4_350ms_12.6X_221124.png){#fig-SU8-FITC-CNT}
 
-![](figures/ch6/modified_softbake1minacetonerinse_aptamer_ch3_mCherry_30sexposure_highcontrast_ISO200_12.6X.png){#fig-aptamer-photoresist-1}
+![](figures/ch6/modified_C1_ch5_mCherry_10sexposure_highcontrast_12.6X.png){#fig-aptamer-photoresist-1}
 
-![](figures/ch6/modified_hardbake_aptamer_ch3_mCherry_30sexposure_highcontrast_ISO200_12.6X.png){#fig-aptamer-photoresist-2}
+![](figures/ch6/modified_softbake1minacetonerinse_aptamer_ch3_mCherry_30sexposure_highcontrast_ISO200_12.6X.png){#fig-aptamer-photoresist-2}
+
+![](figures/ch6/modified_hardbake_aptamer_ch3_mCherry_30sexposure_highcontrast_ISO200_12.6X.png){#fig-aptamer-photoresist-3}
 
 A fluorescence image of a carbon nanotube device encapsulated with SU8 using the pre-2023 mask is shown in (a) using a 0.35 s exposure time. With the same exposure time as in (a), (c) shows a SU8-encapsulated channel after modification with an aqueous solution of 1 mM Pyrene-PEG-FITC, while (d) shows an SU8-coated CNT film where a 320 $\mu$m $\times$ 320 $\mu$m region of SU8 has been photolithographically removed to expose the CNTs in that region. Both (d) and (e) show fluorescence images of an carbon nanotube device with photoresist surface residue after exposure to PBASE and fluorescent-tagged aptamer, where the device in (e) was hardbaked at 200$^\circ$C for 1 hour before exposure while the device (d) was not. For images (a)-(c) a FITC filter was used, while for (d)-(e) a mCherry filter and 30 s exposure time were used.
 :::
@@ -327,7 +329,7 @@ An functionalisation issue quickly encountered when characterising pyrene-PEG-FI
 
 Two carbon nanotube network devices were spincoated with AZ$^\circledR$ 1518 photoresist and heated at 95$^\circ$C for 5 minutes. One device was then hardbaked at 200$^\circ$C for 1 hour. Both devices were then rinsed for 1 minute with acetone. Each device was then submerged in 1 mM PBASE in methanol for 1 hour, rinsed with methanol and Tris buffer, then incubated in 1 $\mu$M Cy3-tagged aptamer in Tris buffer at 4$^\circ$C overnight. The aptamer was denatured by heating in a water bath at 95$^\circ$C for 5 minutes then cooling in an ice bath for 10 minutes before use. Fluorescence microscope images of channels from the two devices are shown in @fig-aptamer-photoresist, where the dark regions are the gold device electrodes.
 
-From comparing @fig-aptamer-photoresist-1 and @fig-aptamer-photoresist-2, it is apparent that hardbaking the AZ$^\circledR$ 1518 photoresist significantly reduces the amount of fluorescent aptamer attached to the surface. This is an indication that the chemical interaction between the photoresist and the pyrene linker, or alternatively the biological material, can be suppressed through sufficient heating of the photoresist. Hardbaking of the photoresist does not appear to have completely prevented functionalisation, with some aptamer fluorescence still visible in @fig-aptamer-photoresist-2. It is possible that heating from the bottom of the device is insufficient to hardbake the photoresist layer completely, an effect that would be amplified for the thick photoresist layer on encapsulated devices. Therefore, from June 2023 onwards devices were vacuum annealed for 1 hour at 150 $^\circ$C prior to functionalisation. This approach was taken to ensure photoresist was being heated from above as well as below and made chemically inert at its surface.
+From comparing @fig-aptamer-photoresist-2 and @fig-aptamer-photoresist-3, it is apparent that hardbaking the AZ$^\circledR$ 1518 photoresist significantly reduces the amount of fluorescent aptamer attached to the surface. This is an indication that the chemical interaction between the photoresist and the pyrene linker, or alternatively the biological material, can be suppressed through sufficient heating of the photoresist. Hardbaking of the photoresist does not appear to have completely prevented functionalisation, with some aptamer fluorescence still visible in @fig-aptamer-photoresist-2. It is possible that heating from the bottom of the device is insufficient to hardbake the photoresist layer completely, an effect that would be amplified for the thick photoresist layer on encapsulated devices. Therefore, from June 2023 onwards devices were vacuum annealed for 1 hour at 150 $^\circ$C prior to functionalisation. This approach was taken to ensure photoresist was being heated from above as well as below and made chemically inert at its surface.
 
 Using fluorescence microscopy, an  effective measure for remove exposed to UV light and placed in AZ$^\circledR$ 326 developer to remove residual photoresist after each photolithography step.
 
