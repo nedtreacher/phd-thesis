@@ -184,7 +184,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, interior hidden, sharp corners, enhanced, frame hidden, borderline west={3pt}{0pt}{shadecolor}, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, interior hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, sharp corners, boxrule=0pt, frame hidden]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -1323,140 +1323,6 @@ is the graphene channel area.}
 
 \end{figure}
 
-\textless!---\textgreater{}
-
-\hypertarget{electrical-characterisation-with-mpeg-pyrene}{%
-\subsection{Electrical Characterisation with
-mPEG-Pyrene}\label{electrical-characterisation-with-mpeg-pyrene}}
-
-\begin{figure}
-
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch6/withplasma_surfactantrinse_Dirac_shift_comparisons_0_mPEGpyrene.png}
-
-}
-
-}
-
-\subcaption{\label{fig-pypeg-dirac-shift-no-plasma}}
-\end{minipage}%
-%
-\begin{minipage}[t]{0.05\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch6/withplasma_surfactantrinse_Dirac_shift_comparisons_2_mPEGpyrene.png}
-
-}
-
-}
-
-\subcaption{\label{fig-pypeg-dirac-shift-plasma}}
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.26\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch6/withplasma_surfactantrinse_Dirac_shift_comparisons_3_mPEGpyrene.png}
-
-}
-
-}
-
-\subcaption{\label{fig-pypeg-dirac-shift-plasma-surfactant}}
-\end{minipage}%
-%
-\begin{minipage}[t]{0.26\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-
-\caption{\label{fig-mPEGpyrene-Dirac-shift}(Major) Dirac voltage shifts
-of graphene field-effect transistors after functionalisation with
-concentrations of mPEG-Pyrene in 1XPBS at 0, 0.01 and 0.1 mM, followed
-by rinsing with m-surfactant solution. Measurements corresponding to
-each concentration are of three different device channels from a single
-device measured four times, where the device was rinsed with 1XPBS
-between each measurement.}
-
-\end{figure}
-
-\textbf{?@fig-pypeg-dirac-shift} compares the electrical characteristics
-of graphene transistor channels before and after functionalisation with
-various concentrations of mPEG-pyrene, showing the magnitude in shift of
-the (major) Dirac point. 2 mM Pyrene-PEG was dissolved in 1XPBS using a
-vortex mixer for 10 min at 1000 rpm until fully dissolved, then diluted
-in series to 1 mM, 0.1 mM, and 0.01 mM in 1XPBS. Plasma treated devices
-were treated with 5 W oxygen plasma for 15 s at 350 mTorr before
-functionalisation. 2 \(\mu\)L solution was placed on each device channel
-for 1 hour, covered with a glass dish and in the presence of wet
-tecwipes to keep the environment humid. Devices were then rinsed in
-1XPBS for 30 s before measurements were taken. Surfactant rinsing
-involved placing functionalised devices in m-CNT dispersion solution for
-5 minutes at 70\(^\circ\)C, periodically agitating the solution with a
-pipette, then rinsing the devices with DI water, ethanol, acetone, IPA
-and finally nitrogen drying them.
-
-As in the case of PBASE and PBA on carbon nanotubes, the neutral charge
-of pyrene means there is no significant Dirac shift when the plasma
-treated devices are successfully functionalised with mPEG-pyrene
-\autocite{Lerner2012}. Interestingly, however, when the devices are not
-plasma treated before functionalisation, there is a significant Dirac
-shift at higher concentrations of mPEG-pyrene. Since aqueous
-functionalisation without a plasma pre-treatment results in little or no
-graphene surface coverage, as demonstrated in
-Section~\ref{sec-PPF-fluorescence-characterisation}, it can be safely
-assumed that this shift is due to attachment of mPEG-pyrene to the small
-region of silicon dioxide not covered by encapsulation which borders the
-channel. Furthermore,
-Section~\ref{sec-PPF-fluorescence-characterisation} shows us that even
-after plasma treatment, the SiO\(_2\) surface will still interact with
-mPEG-pyrene upon functionalisation. Oxygen plasma treatment is known to
-make the graphene layer permeable to water, and therefore it is likely
-the SiO\(_2\) surface below the graphene is also coated with mPEG-pyrene
-after plasma treatment \autocite{Surwade2015}. Therefore, it appears the
-Dirac shift results from a difference in mPEG-pyrene surface coverage
-when comparing the SiO\(_2\) surface next to the graphene channel and
-the SiO\(_2\) below the graphene channel. The physical mechanism linking
-these two factors is currently unclear.
-
-\textless!---\textgreater{}
-
 \hypertarget{sec-impediments}{%
 \section{Addressing Functionalisation Issues}\label{sec-impediments}}
 
@@ -1618,27 +1484,33 @@ attached to the carbon nanotubes, the linker appears to have a more
 extensive interaction with the photoresist via an unknown mechanism than
 it does by \(pi\)-stacking with the carbon nanotubes.
 
-In Figure~\ref{fig-SU8-FITC-CNT} that patches of photoresist residue
-remaining on a carbon nanotube film shows up brightly under the
-fluorescence microscope after being exposed to PPF. The presence of
-photoresist residue is undesirable for both functionalisation and
-sensing, and fluorescence microscopy was a useful tool for detecting
-residue and testing suitable residue elimination measures.
+Figure~\ref{fig-SU8-FITC-CNT} shows a square region of carbon nanotubes
+surrounded by photoresist after exposure to PFF. Some patches of the
+carbon nanotube square appear brighter than others. Since we know that
+dye-modified linker attached to photoresist has a greater fluorescent
+intensity than dye-modified linker attached to carbon nanotubes, it
+appears that these bright patches correspond to patches of residual
+photoresist which have not been completely removed from the carbon
+nanotube square by the development process. A similar interaction
+between AZ\(^\circledR\) 1518 photoresist and fluorescent-tagged,
+amine-terminated aptamer was seen when functionalising using PBASE, as
+seen in \textbf{?@fig-aptamer-photoresist}. The presence of photoresist
+residue is undesirable for both functionalisation and sensing, and
+fluorescence microscopy was a useful tool for detecting residue and
+testing suitable residue elimination measures.
 
-A similar interaction between AZ\(^\circledR\) 1518 photoresist and
-fluorescent-tagged, amine-terminated aptamer was seen when
-functionalising using PBASE. Two carbon nanotube network devices were
-spincoated with AZ\(^\circledR\) 1518 photoresist and heated at
-95\(^\circ\)C for 5 minutes. One device was then hardbaked at
-200\(^\circ\)C for 1 hour. Both devices were then rinsed for 1 minute
-with acetone. Each device was then submerged in 1 mM PBASE in methanol
-for 1 hour, rinsed with methanol and Tris buffer, then incubated in 1
-\(\mu\)M Cy3-tagged aptamer in Tris buffer at 4\(^\circ\)C overnight.
-The aptamer was denatured by heating in a water bath at 95\(^\circ\)C
-for 5 minutes then cooling in an ice bath for 10 minutes before use.
-Fluorescence microscope images of channels from the two devices are
-shown in \textbf{?@fig-aptamer-photoresist}, where the dark regions are
-the gold device electrodes.
+Two carbon nanotube network devices were spincoated with
+AZ\(^\circledR\) 1518 photoresist and heated at 95\(^\circ\)C for 5
+minutes. One device was then hardbaked at 200\(^\circ\)C for 1 hour.
+Both devices were then rinsed for 1 minute with acetone. Each device was
+then submerged in 1 mM PBASE in methanol for 1 hour, rinsed with
+methanol and Tris buffer, then incubated in 1 \(\mu\)M Cy3-tagged
+aptamer in Tris buffer at 4\(^\circ\)C overnight. The aptamer was
+denatured by heating in a water bath at 95\(^\circ\)C for 5 minutes then
+cooling in an ice bath for 10 minutes before use. Fluorescence
+microscope images of channels from the two devices are shown in
+\textbf{?@fig-aptamer-photoresist}, where the dark regions are the gold
+device electrodes.
 
 From comparing Figure~\ref{fig-aptamer-photoresist-1} and
 Figure~\ref{fig-aptamer-photoresist-2}, it is apparent that hardbaking
