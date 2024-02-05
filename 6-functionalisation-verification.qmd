@@ -253,11 +253,20 @@ The functionalisation of graphene devices with fluorescent dye was performed usi
 
 5. Substrate rinsed with m-CNT dispersion solution for 5 minutes at 70$^\circ$C with a pipette, then rinsed with DI water, ethanol, acetone, IPA and nitrogen dried (see @sec-pyrene-interactions). 
 
+![Microcentrifuge tubes containing various concentrations of 10 kDa pyrene-PEG-FITC in solution (1 mM, 0.1 mM and 0.01 mM left to right)](figures/ch6/PPF_vials.png){#fig-PPF-concs width="45%"}
+
  The results of this test are shown in @fig-FITC-rhodamine-B. There is a much stronger contrast between the graphene squares and the background after functionalisation with Rhodamine B, showing a clear, specific interaction between Rhodamine B and graphene. It has previously been determined that the benzene rings of rhodamine $\pi$-stack with carbon rings [@Tang2012]. Rhodamine B could therefore not be used as a fluorescent marker to check for attachment of our linker molecules. However, as fluorescein isothiocyanate did not show significant interaction with the graphene, this marker was subsequently used for fluorescent mapping linker attachment. @fig-PPF-concs shows various concentrations of pyrene-PEG-FITC dissolved in 1XPBS, which is used for fluorescence characterisation in this section.
 
- Both SU8 and AZ$^\circledR$ 1518 photoresist were found to fluoresce, which is due to their photoactive component [@Pai2007]. This passive fluorescence was found to drown out fluorescence from a dye-functionalised device channel, and so photoresist encapsulated devices were not used for fluorescence imaging. A different type of encapsulation could potentially be used to verify linker attachment with fluorescence after a device has been encapsulated. These alternative encapsulation methods for use with fluorescence microscopy are discussed in @sec-future-work. 
+ Both SU8 and AZ$^\circledR$ 1518 photoresist fluoresced under a variety of microscope filters, resulting from light interacting with the photoactive component present in both resists [@Pai2007]. This background fluorescence was found to drown out fluorescence from a dye-functionalised device channel, and so photoresist encapsulated devices were not used for fluorescence imaging. (Consider a photograph of a dim outdoor lamp; if the photograph was taken on a starless night, the light from the lamp would show up clearly, but with the sun out the light would be very difficult to see regardless of how the photograph was taken.) A different type of encapsulation could potentially be used to verify linker attachment with fluorescence after a device has been encapsulated. These alternative encapsulation methods for use with fluorescence microscopy are discussed in @sec-future-work.
 
-![Microcentrifuge tubes containing various concentrations of 10 kDa pyrene-PEG-FITC in solution (1 mM, 0.1 mM and 0.01 mM left to right)](figures/ch6/PPF_vials.png){#fig-PPF-concs width="45%"}
+::: {#fig-FITC-EtOH layout="[47.5,-5,47.5]"}
+
+![](figures/ch6/labelled_modified_noencap_1mMPPF_channel2_1sexposure_6.3X_highcontrast_221214.png){#fig-FITC-EtOH-ch2}
+
+![](figures/ch6/labelled_modified_noencap_1mMPPF_channel7_1sexposure_6.3X_highcontrast_221214.png){#fig-FITC-EtOH-ch7}
+
+Fluorescence images of an unencapsulated graphene channel after functionalisation with 1 mM pyrene-PEG-FITC in ethanol, taken using an FITC filter with a 1 s exposure time, where (a) shows channel 2 of the device and (b) shows channel 7. The darker regions are the device electrodes, while the brightly fluorescent region is the graphene channel area. 
+:::
 
 The functionalisation of graphene devices with pyrene-PEG-FITC was performed as follows:
 
@@ -269,16 +278,7 @@ The functionalisation of graphene devices with pyrene-PEG-FITC was performed as 
 
 4. After 20 minutes, device was rinsed for 30 s with ethanol, then acetone, IPA and nitrogen dried.
 
-Fluorescence images of the unencapsulated graphene devices successfully functionalised with pyrene-PEG-FITC (PPF), showing up bright green against a dark background, are shown in @fig-FITC-EtOH. As indicated by the labels, the darkest regions are the titanium-gold electrodes, and the bright green region is the PPF functionalised graphene channel. It is noticable that some variation in fluorescence is seen between channels, indicating the quality of functionalisation may vary across the channels of a device. Some of the difficulties encountered when investigating functionalisation with pyrene-PEG-FITC are discussed later in @sec-impediments.
-
-::: {#fig-FITC-EtOH layout="[47.5,-5,47.5]"}
-
-![](figures/ch6/labelled_modified_noencap_1mMPPF_channel2_1sexposure_6.3X_highcontrast_221214.png){#fig-FITC-EtOH-ch2}
-
-![](figures/ch6/labelled_modified_noencap_1mMPPF_channel7_1sexposure_6.3X_highcontrast_221214.png){#fig-FITC-EtOH-ch7}
-
-Fluorescence images of an unencapsulated graphene channel after functionalisation with 1 mM pyrene-PEG-FITC in ethanol, taken using an FITC filter with a 1 s exposure time, where (a) shows channel 2 of the device and (b) shows channel 7. The darker regions are the device electrodes, while the brightly fluorescent region is the graphene channel area. 
-:::
+Fluorescence images of the unencapsulated graphene devices successfully functionalised with pyrene-PEG-FITC (PPF), showing up bright green against a dark background, are shown in @fig-FITC-EtOH. As indicated by the labels, the darkest regions are the titanium-gold electrodes, and the bright green region is the PPF functionalised graphene channel. It is noticable that some variation in fluorescence is seen between channels, indicating the quality of functionalisation may vary across the channels of a device. Some of the difficulties encountered when investigating functionalisation with pyrene-PEG-FITC are discussed further in @sec-impediments.
 
 <!--
 
@@ -306,31 +306,43 @@ As in the case of PBASE and PBA on carbon nanotubes, the neutral charge of pyren
 
 ### Photoresist Contamination {#sec-photoresist-contamination}
 
-::: {#fig-FITC-SU8 layout="[[47.5,-5,47.5], [47.5,-5,47.5], [47.5,-5,47.5]]"}
+::: {#fig-photoresist-contamination layout="[[47.5,-5,47.5], [47.5,-5,47.5], [47.5,-5,47.5]]"}
 
 ![](figures/ch6/modified_SU8only_FITCfilter_channel2_350ms_12.6X_221207.png){#fig-350ms-SU8}
 
 ![](figures/ch6/modified_CNT20_1mMPPF_channel8_350ms_12.6X_221124.png){#fig-350ms-SU8-FITC}
 
-![](figures/ch6/modified_CNT20_1mMPPF_window4_350ms_12.6X_221124.png){#fig-SU8-FITC-CNT}
+![](figures/ch6/modified_Ccontrol_ch2_mCherry_10sexposure_highcontrast_12.6X.png){#fig-aptamer-photoresist-1}
 
-![](figures/ch6/modified_C1_ch5_mCherry_10sexposure_highcontrast_12.6X.png){#fig-aptamer-photoresist-1}
+![](figures/ch6/modified_C1_ch5_mCherry_10sexposure_highcontrast_12.6X.png){#fig-aptamer-photoresist-2}
 
-![](figures/ch6/modified_softbake1minacetonerinse_aptamer_ch3_mCherry_30sexposure_highcontrast_ISO200_12.6X.png){#fig-aptamer-photoresist-2}
+![](figures/ch6/modified_softbake1minacetonerinse_aptamer_ch3_mCherry_30sexposure_highcontrast_ISO200_12.6X.png){#fig-aptamer-photoresist-3}
 
-![](figures/ch6/modified_hardbake_aptamer_ch3_mCherry_30sexposure_highcontrast_ISO200_12.6X.png){#fig-aptamer-photoresist-3}
+![](figures/ch6/modified_hardbake_aptamer_ch3_mCherry_30sexposure_highcontrast_ISO200_12.6X.png){#fig-aptamer-photoresist-4}
 
-A fluorescence image of a carbon nanotube device encapsulated with SU8 using the pre-2023 mask is shown in (a) using a 0.35 s exposure time. With the same exposure time as in (a), (c) shows a SU8-encapsulated channel after modification with an aqueous solution of 1 mM Pyrene-PEG-FITC, while (d) shows an SU8-coated CNT film where a 320 $\mu$m $\times$ 320 $\mu$m region of SU8 has been photolithographically removed to expose the CNTs in that region. Both (d) and (e) show fluorescence images of an carbon nanotube device with photoresist surface residue after exposure to PBASE and fluorescent-tagged aptamer, where the device in (e) was hardbaked at 200$^\circ$C for 1 hour before exposure while the device (d) was not. For images (a)-(c) a FITC filter was used, while for (d)-(e) a mCherry filter and 30 s exposure time were used.
+A fluorescence image of a SU8-encapsulated carbon nanotube device is shown in (a), while (b) shows the same channel after modification with an solution of 1 mM Pyrene-PEG-FITC. A 0.35 s exposure time and FITC filter were used for (a)-(b). The fluorescence image in (c) shows an unencapsulated channel, while (d) shows the same channel after Cy3-tagged aptamer exposure. A 10 s exposure time and mCherry filter were used for (c)-(d). The fluorescence images in (e) and (f) show devices pre-coated with a thin layer of photoresist then submerged in Cy3-tagged aptamer, where the device in (f) was hardbaked before aptamer exposure. An mCherry filter and 30 s exposure time were used for for (e)-(f).
 :::
 
-An functionalisation issue quickly encountered when characterising pyrene-PEG-FITC interaction with device channels (PPF) via fluorescence microscopy was an unwanted secondary interaction between the linker and residual photoresist. @fig-350ms-SU8 and @fig-350ms-SU8-FITC are fluorescence images of SU8 encapsulation before and after being exposed to PPF. Despite the same microscope settings being used to take the images (filter, ISO, contrast, exposure time), the SU8 exposed to PPF appears much brighter than the pristine SU8. No fluorescence is seen from the device channel, as the length of exposure time required to see the fluorescence would lead to fluorescence from the dye-modified linker attached to the photoresist flooding the image with light. An analogy which could be used is that of a dim outdoor lamp in a photograph; if the photograph was taken on a starless night, it would show up clearly, but with the sun out it would be very difficult to see regardless of how the photograph was taken. We therefore assert that because the fluorescence of the dye attached to the photoresist is much more intense than the dye attached to the carbon nanotubes, the linker appears to have a more extensive interaction with the photoresist via an unknown mechanism than it does by $pi$-stacking with the carbon nanotubes.
+An functionalisation issue quickly encountered when characterising pyrene-PEG-FITC (PPF) interaction with sensing channels via fluorescence microscopy was an unwanted secondary interaction between the linker and residual photoresist. @fig-350ms-SU8 and @fig-350ms-SU8-FITC are fluorescence images of SU8 encapsulation (using the pre-2023 mask) before and after being exposed to PPF. Despite the same microscope settings being used to take the images (filter, ISO, contrast, exposure time), the SU8 exposed to PPF appears much brighter than the pristine SU8. This result indicates that the linker appears to have an extensive interaction with the photoresist via an unknown mechanism. No fluorescence is seen from the device channel. The length of exposure time required to see fluorescence from the modified channel would lead to fluorescence from the modified linker attached to the photoresist $-$ as well as the photoresist itself $-$ flooding the image with light. Therefore, it is not clear whether the carbon nanotubes have been functionalised with the dye-modified linker. However, out of caution we can assume that the presence of this secondary interaction is not desirable.
 
-@fig-SU8-FITC-CNT shows a square region of carbon nanotubes surrounded by photoresist after exposure to PFF. Some patches of the carbon nanotube square appear brighter than others. Since we know that dye-modified linker attached to photoresist has a greater fluorescent intensity than dye-modified linker attached to carbon nanotubes, it appears that these bright patches correspond to patches of residual photoresist which have not been completely removed from the carbon nanotube square by the development process. A similar interaction between AZ$^\circledR$ 1518 photoresist and fluorescent-tagged, amine-terminated aptamer was seen when functionalising using PBASE, as seen in @fig-aptamer-photoresist. The presence of photoresist residue is undesirable for both functionalisation and sensing, and fluorescence microscopy was a useful tool for detecting residue and testing suitable residue elimination measures.
+A similar interaction was seen between AZ$^\circledR$ 1518 photoresist and fluorescent-tagged, amine-terminated aptamer. An unencapsulated carbon nanotube network device, fabricated using the pre-June 2022 process outlined in @sec-fabrication, was incubated with 500 nM Cy3-tagged aptamer in Tris buffer at 4$^\circ$C overnight. The aptamer was first denatured by heating in a water bath at 95$^\circ$C for 5 minutes then cooling in an ice bath for 10 minutes before use. 
 
-Two carbon nanotube network devices were spincoated with AZ$^\circledR$ 1518 photoresist and heated at 95$^\circ$C for 5 minutes. One device was then hardbaked at 200$^\circ$C for 1 hour. Both devices were then rinsed for 1 minute with acetone. Each device was then submerged in 1 mM PBASE in methanol for 1 hour, rinsed with methanol and Tris buffer, then incubated in 1 $\mu$M Cy3-tagged aptamer in Tris buffer at 4$^\circ$C overnight. The aptamer was denatured by heating in a water bath at 95$^\circ$C for 5 minutes then cooling in an ice bath for 10 minutes before use. Fluorescence microscope images of channels from the two devices are shown in @fig-aptamer-photoresist, where the dark regions are the gold device electrodes.
+@fig-aptamer-photoresist-1 and @fig-aptamer-photoresist-2 are fluorescence images of the device channel region before and after exposure to aptamer. A thick red ring is visible around the electrodes after functionalisation, despite no PBASE being used to tether the amine-terminated aptamer. It appears that these bright patches correspond to patches of residual photoresist which have not been completely removed from the carbon nanotube square by the development process. These patches have then interacted with the aptamer, causing them to appear bright under the fluorescence microscope. Beyond potentially interfering with functionalisation, photoresist residue blocking a device channel will prevent interaction with the buffer and prevent sensing.
 
-From comparing @fig-aptamer-photoresist-2 and @fig-aptamer-photoresist-3, it is apparent that hardbaking the AZ$^\circledR$ 1518 photoresist significantly reduces the amount of fluorescent aptamer attached to the surface. This is an indication that the chemical interaction between the photoresist and the pyrene linker, or alternatively the biological material, can be suppressed through sufficient heating of the photoresist. Hardbaking of the photoresist does not appear to have completely prevented functionalisation, with some aptamer fluorescence still visible in @fig-aptamer-photoresist-2. It is possible that heating from the bottom of the device is insufficient to hardbake the photoresist layer completely, an effect that would be amplified for the thick photoresist layer on encapsulated devices. Therefore, from June 2023 onwards devices were vacuum annealed for 1 hour at 150 $^\circ$C prior to functionalisation. This approach was taken to ensure photoresist was being heated from above as well as below and made chemically inert at its surface.
+To test whether residual resist can be prevented by interacting with aptamer by crosslinking the resist, two unencapsulated devices were prepared as follows. Devices were first spincoated with AZ$^\circledR$ 1518 in the manner described in @sec-fabrication, and the bulk of the resist was then removed by soaking the device in acetone for 1 minute. This process left a thin coating of photoresist on the devices. One of these devices was then hardbaked at 200$^\circ$C for 1 hour. They were then functionalised in the following manner:
 
+1. Unencapsulated device was submerged in 1 mM PBASE in methanol solution for 1 hour.
+
+2. The device was then rinsed with methanol and Tris buffer.
+
+3. 1 $\mu$M Cy3-tagged aptamer was denatured by heating in a water bath at 95$^\circ$C for 5 minutes then cooling in an ice bath for 10 minutes before use.
+
+4. The device was incubated with aptamer in Tris buffer at 4$^\circ$C overnight.
+
+Fluorescence microscope images of channels from the two devices are shown in @fig-photoresist-contamination, where the dark regions are the gold device electrodes From comparing @fig-aptamer-photoresist-2 and @fig-aptamer-photoresist-3, it is apparent that hardbaking the AZ$^\circledR$ 1518 photoresist significantly reduces the amount of fluorescent aptamer attached to the surface. This is an indication that the chemical interaction between the photoresist and the pyrene linker, or alternatively the biological material, can be suppressed through sufficient heating of the photoresist. Hardbaking of the photoresist does not appear to have completely prevented functionalisation, with some aptamer fluorescence still visible in @fig-aptamer-photoresist-2. It is possible that heating from the bottom of the device is insufficient to hardbake the photoresist layer completely, an effect that would be amplified for the thick photoresist layer on encapsulated devices. Therefore, from June 2023 onwards devices were vacuum annealed for 1 hour at 150 $^\circ$C prior to functionalisation. This approach was taken to ensure photoresist was being heated from above as well as below and made chemically inert at its surface.
+
+
+This result demonstrates the use of fluorescence microscopy as a tool to detect residue and test suitable residue elimination measures.
 Using fluorescence microscopy, an  effective measure for remove exposed to UV light and placed in AZ$^\circledR$ 326 developer to remove residual photoresist after each photolithography step.
 
 ### Hydrophobicity of Carbon Nanotubes and Graphene {#sec-hydrophobicity}
