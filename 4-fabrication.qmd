@@ -189,7 +189,7 @@ Although using AZ$^\circledR$ nLOF 2020 photolithography involves more processin
 
 The height profile corresponding to a wafer with electrodes fabricated using AZ$^\circledR$ nLOF 2020 is shown in @fig-dektat-nLOF-electrode. A 20 nm titanium adhesion layer and 100 nm Au layer were used for both  @fig-dektat-AZ1518-electrode and  @fig-dektat-nLOF-electrode to ensure a consistent comparison, resulting in a measured electrode height of $103\pm2$ nm for both wafers. A comparison of these figures indicates that AZ$^\circledR$ nLOF 2020 photoresist has a more consistent electrode height profile across the wafer surface than the wafer which used AZ$^\circledR$ 1518 resist. The measured edge features for the AZ$^\circledR$ 1518 resist electrodes vary in size from 20 nm to 450 nm above the bulk electrode surface, whereas the edge features for the AZ$^\circledR$ nLOF 2020 resist do not exceed 14 nm in height.
 
-### Encapsulation{#sec-encapsulation}
+### Encapsulation {#sec-encapsulation}
 
 Several different approaches were used for the encapsulation, or contact protection, of devices. The encapsulation of graphene and carbon-nanotube transistors for biosensing is essential to improve transistor characteristics, passivate the electrodes and ensure only the nanomaterial region is active during biosensing, as discussed in @sec-biosensor-methods.
 
@@ -252,7 +252,9 @@ The initial attempt at fabricating a dielectric encapsulation layer used silicon
 
 Unfortunately, when aluminium oxide layers which were thicker than $\sim$ 100 nm were deposited, there was found to be a significant drop in current relative to the unencapsulated device. This drop was signficant enough to make devices unsuitable for sensing. Meanwhile, devices with encapsulation $\sim$ 100 nm thick had significant gate current leakage through the encapsulation layer when liquid-gated. This leakage was present even when AZ$^\circledR$ nLOF 2020 was used for electrode patterning to avoid edge spikes (as discussed in @sec-electrodes). Furthermore, aluminium oxide should not be subsequently exposed to its etchant TMAH, meaning it was difficult to completely remove residual photoresist from device channels after encapsulation. Possible future approaches to ceramic encapsulation are discussed in @sec-future-work.
 
-##	Characterisation via Atomic Force Microscopy {#sec-afm-characterisation}
+##	Characterisation of Carbon Nanotube and Graphene Field-Effect Transistors
+
+### Atomic Force Microscopy {#sec-afm-characterisation}
 
 Atomic force microscopy in this thesis was taken using a Nanosurf NaioAFM in dynamic force mode (also known as tapping mode, oscillating mode, acoustic AC mode or intermittent-contact mode). An ACLA probe (AppNano) was used with a tip diameter of 12 nm, height of $14-16$ $\mu$m and a nominal cantilever spring constant of 58 N/m. All atomic force microscopy was performed with the Nanosurf NaioAFM on a stablising table under a Faraday cage to minimise mechanical and electromagnetic interference. A 256 $\times$ 256 pixel resolution was typically used. Imaging was performed in air at room temperature. 
 
@@ -260,15 +262,15 @@ Atomic force microscope (AFM) images could not be taken from the small exposed c
 
 The open source data analysis software Gwyddion (version 2.59) was used to analyse AFM images. This included levelling the background with the polynomial background removal function, removing scarring and zeroing the z-scale.
 
-##	Characterisation via Fluorescence Microscopy {#sec-fluorescence-characterisation}
+### Fluorescence Microscopy {#sec-fluorescence-characterisation}
 
 Fluorescence microscopy was performed using an Olympus BX63 fluorescence microscope controlled using cellSens imaging software. Microscope objectives used were all Olympus UPLSAPO/UPlanSApo, apochromat objectives which compensate for spherical and chromatic aberrations. Objectives had infinite aperture and a field number of 26.5. Filter cubes used included the Olympus FITC filter (excitation wavelength range: $467-498$ nm, emission wavelength range: $513-556$ nm), Texas Red (excitation wavelength range: $542-582$  nm, emission wavelength range: $604-644$ nm) and GFP (excitation wavelength range: $604-644$ nm, emission wavelength range: $502-538$ nm). The ISO was kept at the lowest available setting, ISO200. All microscopy was performed in darkness with the screen turned away from the microscope. To ensure photobleaching did not adversely affect imaging, images were taken soon after initial exposure to fluorescence and taking repeated photos of the same region was avoided. Various useful and thorough introductions to fluorescence microscopy can be found online [@Nikon; @Zeiss].
 
-##	Characterisation via Raman Spectroscopy {#sec-raman-characterisation}
+### Raman Spectroscopy {#sec-raman-characterisation}
 
 Raman spectroscopy was performed with a HORIBA Jobin Yvon LabRAM HR800 Raman spectrometer. The wavelength and power used for laser excitation of samples were 514 nm and 1 mW respectively. Spectra were taken with a 1800 line holographic grating with a hole size of 300 $\mu$m. A accumulation time of 20 seconds was used when taking spectra. Each spectrum was recorded twice at ten positions within a 40 $\mu$m $\times$ 100 $\mu$m rectangular region on a carbon nanotube film, with a vertical spacing of 10 $\mu$m and horizonal spacing of 20 $\mu$m between each position. Spectra were collected over two wavenumber ranges at each position, with the first range between 100 cm$^{-1}$ and 650 cm$^{-1}$, and the second between 1300 cm$^{-1}$ and 1650 cm$^{-1}$. Data collected at the final, tenth position was often much noiser than all other measurements taken due to an unclear experimental issue, and this data was therefore discarded.
 
-##	Electrical Characterisation {#sec-electrical-characterisation}
+###	Electrical Characterisation {#sec-electrical-characterisation}
 
 ![Liquid-gated device schematic showing electrical connections to the three source measure units.  V$_{\mathrm{ds}}$ is applied between the source SMU (SMU 1) and the drain SMU (SMU 2), while V$_{\mathrm{lg}}$ is applied between the gate SMU (SMU 3) and the drain SMU. The drain SMU is held at 0 V or connected to a ground plane. Drain current I$_{\mathrm{d}}$ is measured at the drain SMU, and gate leakage current I$_{\mathrm{g}}$ is measured at the gate SMU.](figures/ch4/liquid-gate-schematic.png){#fig-liquid-gate-schematic width="90%"}
 
@@ -295,13 +297,7 @@ Custom programs for National Instruments LabView 2017 were used for measurements
 
 Liquid-gated transfer characteristics of carbon nanotube FETs were measured at V$_{\mathrm{ds}}$ = 100 mV and liquid-gated transfer characteristics of graphene FETs were measured at V$_{\mathrm{ds}}$ = 1 V, where V$_{\mathrm{lg}}$ was swept between -0.5 V and 1 V in both the forward and reverse direction with a step size of either 10 or 20 mV. Backgated transfer characteristics of carbon nanotube FETs were either measured at V$_{\mathrm{ds}}$ = 100 mV or V$_{\mathrm{ds}}$ = 1 V, where V$_{\mathrm{bg}}$ was swept between -5 V and 5 V or -10 V and 10 V in the forward and reverse directions with a step size of 50 mV or 100 mV.
 
-### Sensing Measurements
-
-A liquid-gated setup was used for aqueous-phase sensing and a back-gated setup in the vapour delivery system was used for vapour-phase sensing, as described above.
-
-Sensing measurements were performed with constant source-drain and gate voltages. The gate voltage used was chosen by locating the subthreshold region of the device transfer characteristics and choosing a voltage that fell within this region, usually V$_{\mathrm{g}}$ = 0 V. 
-
-Using the NI-PXIe with the PXIe-2737 module, eight-channel multiplexed current measurements could be taken in rapid succession. An integration time of 200 or 400 ms was used for sampling with each channel, with the actual sampling rate set by the NI-PXIe. In practice this meant a sampling rate of 1.81 s (for 200 ms integration time) or 3.41 s (for 400 ms integration time) for any given channel. A 200 ms integration time meant the time between samples from successive channels varied between $220 ms-230$ ms, while a 400 ms integration time meant the time between samples was consistently 426 ms. The Keysight equipment used a constant 1 s sampling interval.
+A liquid-gated setup was used for aqueous-phase sensing and a back-gated setup in the vapour delivery system was used for vapour-phase sensing. Sensing measurements were performed with constant source-drain and gate voltages. The gate voltage used was chosen by locating the subthreshold region of the device transfer characteristics and choosing a voltage that fell within this region, usually V$_{\mathrm{g}}$ = 0 V. Using the NI-PXIe with the PXIe-2737 module, eight-channel multiplexed current measurements could be taken in rapid succession. An integration time of 200 or 400 ms was used for sampling with each channel, with the actual sampling rate set by the NI-PXIe. In practice this meant a sampling rate of 1.81 s (for 200 ms integration time) or 3.41 s (for 400 ms integration time) for any given channel. A 200 ms integration time meant the time between samples from successive channels varied between $220 ms-230$ ms, while a 400 ms integration time meant the time between samples was consistently 426 ms. The Keysight equipment used a constant 1 s sampling interval.
 
 #### Aqueous Sensing {.unnumbered}
 

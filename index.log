@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.2)  6 FEB 2024 17:59
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.2)  7 FEB 2024 08:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1140,7 +1140,7 @@ Package biblatex Warning: Conflicting options.
 (biblatex)                'urldate=iso' requires 'seconds=true'.
 (biblatex)                Setting 'seconds=true' on input line 184.
 
-(./index.aux)
+No file index.aux.
 \openout1 = `index.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 184.
@@ -1396,6 +1396,9 @@ LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on input line 184.
 Package hyperref Info: Link coloring OFF on input line 184.
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
@@ -1411,8 +1414,8 @@ Package biblatex Info: Automatic encoding selection.
 \openout4 = `index.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'index.bbl' found.
-(./index.bbl)
+Package biblatex Info: ... file 'index.bbl' not found.
+No file index.bbl.
 Package biblatex Info: Reference section=0 on input line 184.
 Package biblatex Info: Reference segment=0 on input line 184.
 LaTeX Font Info:    Font shape `TU/LatinModernRoman(0)/m/n' will be
@@ -1437,40 +1440,7 @@ LaTeX Font Info:    Font shape `TU/LatinModernRoman(2)/b/n' will be
 (Font)              scaled to size 10.62935pt on input line 192.
 LaTeX Font Info:    Font shape `TU/LatinModernRoman(2)/b/n' will be
 (Font)              scaled to size 20.13269pt on input line 192.
-(./index.toc
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 7.665pt on input line 3.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
-(Font)              scaled to size 5.475pt on input line 3.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3.
-(c:/Users/perkinne/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95099pt on input line 3.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.66568pt on input line 3.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.4755pt on input line 3.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 3.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.66417pt on input line 3.
-LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.47441pt on input line 3.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
-(c:/Users/perkinne/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
-(c:/Users/perkinne/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Font shape `TU/LatinModernRoman(2)/b/n' will be
-(Font)              scaled to size 11.64862pt on input line 25.
-LaTeX Font Info:    Font shape `TU/LatinModernRoman(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 25.
-)
+No file index.toc.
 \tf@toc=\write5
 \openout5 = `index.toc'.
 
@@ -1487,4 +1457,1081 @@ LaTeX Font Info:    Font shape `TU/LatinModernRoman(0)/m/n' will be
 chapter 1.
 
 Class scrbook Warning: \float@addtolists detected!
-(scrbook)     
+(scrbook)              Implementation of \float@addtolist became
+(scrbook)              deprecated in KOMA-Script v3.01 2008/11/14 and
+(scrbook)              has been replaced by several more flexible
+(scrbook)              features of package `tocbasic`.
+(scrbook)              Since Version 3.12 support for deprecated
+(scrbook)              \float@addtolist interface has been
+(scrbook)              restricted to only some of the KOMA-Script
+(scrbook)              features and been removed from others.
+(scrbook)              Loading of package `scrhack' may help to
+(scrbook)              avoid this warning, if you are using a
+(scrbook)              a package that still implements the
+(scrbook)              deprecated \float@addtolist interface.
+
+LaTeX Font Info:    Font shape `TU/LatinModernRoman(2)/b/n' will be
+(Font)              scaled to size 13.97833pt on input line 223.
+
+LaTeX Warning: Citation 'Khan2021' on page 3 undefined on input line 233.
+
+LaTeX Font Info:    Font shape `TU/LatinModernRoman(0)/b/n' will be
+(Font)              scaled to size 10.95pt on input line 233.
+
+LaTeX Warning: Citation 'Nguyen2021' on page 3 undefined on input line 233.
+
+
+LaTeX Warning: Citation 'Shkodra2021' on page 3 undefined on input line 233.
+
+
+LaTeX Warning: Citation 'Nekrasov2021' on page 3 undefined on input line 233.
+
+
+LaTeX Warning: Citation 'Mishyn2022' on page 3 undefined on input line 233.
+
+
+LaTeX Warning: Citation 'Cassie2023' on page 3 undefined on input line 233.
+
+
+LaTeX Warning: Citation 'Lerner2014' on page 3 undefined on input line 234.
+
+
+LaTeX Warning: Citation 'Ahn2020' on page 3 undefined on input line 234.
+
+
+LaTeX Warning: Citation 'Tong2020' on page 3 undefined on input line 234.
+
+
+LaTeX Warning: Citation 'Wang2020' on page 3 undefined on input line 234.
+
+
+LaTeX Warning: Citation 'Goldsmith2011' on page 3 undefined on input line 236.
+
+
+LaTeX Warning: Citation 'Lee2018' on page 3 undefined on input line 236.
+
+
+LaTeX Warning: Citation 'Murugathas2019b' on page 3 undefined on input line 236.
+
+
+LaTeX Warning: Citation 'Murugathas2020' on page 3 undefined on input line 236.
+
+
+LaTeX Warning: Citation 'Moon2020' on page 3 undefined on input line 236.
+
+
+LaTeX Warning: Citation 'Yoo2022' on page 3 undefined on input line 236.
+
+
+Underfull \hbox (badness 1902) in paragraph at lines 225--245
+[]\TU/LatinModernRoman(2)/m/n/10.95 , []] and a range of proteins [[], [],
+ []
+
+
+Underfull \hbox (badness 2126) in paragraph at lines 225--245
+[]\TU/LatinModernRoman(2)/m/n/10.95 , []], including animal odorant receptors [[],
+ []
+
+
+Underfull \hbox (badness 1253) in paragraph at lines 225--245
+[]\TU/LatinModernRoman(2)/m/n/10.95 , [], [], [], []]. A
+ []
+
+[3]
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 14.4pt on input line 261.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 261.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 261.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 261.
+(c:/Users/perkinne/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 14.4013pt on input line 261.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.00092pt on input line 261.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.00064pt on input line 261.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 14.39845pt on input line 261.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 9.99893pt on input line 261.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 6.99925pt on input line 261.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 261.
+(c:/Users/perkinne/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 261.
+(c:/Users/perkinne/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+LaTeX Warning: Citation 'Long2012' on page 4 undefined on input line 271.
+
+
+LaTeX Warning: Citation 'DiCrescenzo2014' on page 4 undefined on input line 271.
+
+
+LaTeX Warning: Citation 'Wang2020' on page 4 undefined on input line 271.
+
+
+LaTeX Warning: Citation 'Khan2021' on page 4 undefined on input line 271.
+
+
+LaTeX Warning: Citation 'Mishyn2022' on page 4 undefined on input line 271.
+
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 7.665pt on input line 273.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(1)/m/n' will be
+(Font)              scaled to size 5.475pt on input line 273.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.95099pt on input line 273.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.66568pt on input line 273.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 5.4755pt on input line 273.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 10.94882pt on input line 273.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 7.66417pt on input line 273.
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 5.47441pt on input line 273.
+
+LaTeX Warning: Citation 'Lerner2014' on page 4 undefined on input line 273.
+
+
+LaTeX Warning: Citation 'Thodkar2021' on page 4 undefined on input line 276.
+
+File: figures/ch7/pyrene-cnt.png Graphic file (type bmp)
+<figures/ch7/pyrene-cnt.png>
+
+LaTeX Warning: Citation 'Carbonnanotube' on page 4 undefined on input line 287.
+
+
+LaTeX Warning: Citation 'Carbonnanotube' on page 4 undefined on input line 287.
+
+
+LaTeX Warning: Citation 'Perez2015' on page 4 undefined on input line 293.
+
+
+LaTeX Warning: Citation 'Martinez2012' on page 4 undefined on input line 296.
+
+
+LaTeX Warning: Citation 'Perez2015' on page 4 undefined on input line 296.
+
+
+LaTeX Warning: Citation 'Hermanson2013-16' on page 4 undefined on input line 302.
+
+
+LaTeX Warning: Citation 'Perez2015' on page 4 undefined on input line 302.
+
+
+LaTeX Warning: Citation 'Mishyn2022' on page 4 undefined on input line 302.
+
+
+LaTeX Warning: Reference `fig-pi-interaction-cnt' on page 4 undefined on input line 303.
+
+
+LaTeX Warning: Citation 'Zhou2019' on page 4 undefined on input line 307.
+
+LaTeX Font Info:    Font shape `TU/LatinModernRoman(0)/m/sl' in size <10.95> not available
+(Font)              Font shape `TU/LatinModernRoman(0)/m/it' tried instead on input line 310.
+LaTeX Font Info:    Font shape `TU/LatinModernRoman(0)/m/it' will be
+(Font)              scaled to size 10.95pt on input line 310.
+[4]
+LaTeX Font Info:    Font shape `TU/LatinModernRoman(2)/b/n' will be
+(Font)              scaled to size 11.64862pt on input line 317.
+File: figures/ch7/pbase_stable_1_pyrene.png Graphic file (type bmp)
+<figures/ch7/pbase_stable_1_pyrene.png>
+
+Overfull \hbox (7.2923pt too wide) in paragraph at lines 325--330
+ [][] 
+ []
+
+LaTeX Font Info:    Font shape `TU/LatinModernRoman(0)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 333.
+File: figures/ch7/pbase_stable_2_pyrene.png Graphic file (type bmp)
+<figures/ch7/pbase_stable_2_pyrene.png>
+
+Overfull \hbox (7.2923pt too wide) in paragraph at lines 350--355
+ [][] 
+ []
+
+
+LaTeX Warning: Citation 'g16' on page 5 undefined on input line 365.
+
+
+LaTeX Warning: Citation 'g16' on page 5 undefined on input line 365.
+
+
+LaTeX Warning: Reference `fig-pbase-stable-1' on page 5 undefined on input line 376.
+
+
+LaTeX Warning: Reference `fig-pbase-stable-2' on page 5 undefined on input line 377.
+
+
+LaTeX Warning: Reference `fig-pbase-stable-1' on page 5 undefined on input line 378.
+
+
+LaTeX Warning: Reference `fig-pbase-stable-2' on page 5 undefined on input line 379.
+
+
+LaTeX Warning: Citation 'Oishi2022' on page 5 undefined on input line 384.
+
+
+Underfull \hbox (badness 1087) in paragraph at lines 369--385
+[]\TU/LatinModernRoman(2)/m/n/10.95 1-pyrenebutanoic acid N-hydroxysuccinimide ester (also known commercially and
+ []
+
+[5] [6]
+Overfull \hbox (16.00331pt too wide) in alignment at lines 390--400
+ [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (16.00331pt too wide) in alignment at lines 400--405
+ [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (16.00331pt too wide) in alignment at lines 405--407
+ [] [] [] [] [] [] [] 
+ []
+
+
+LaTeX Warning: Citation 'Maehashi2007' on page 7 undefined on input line 409.
+
+
+LaTeX Warning: Citation 'Garcia-Aljaro2010' on page 7 undefined on input line 411.
+
+
+LaTeX Warning: Citation 'Chen2001' on page 7 undefined on input line 412.
+
+
+LaTeX Warning: Citation 'Cella2010' on page 7 undefined on input line 413.
+
+
+LaTeX Warning: Citation 'Das2011' on page 7 undefined on input line 414.
+
+
+LaTeX Warning: Citation 'Besteman2003' on page 7 undefined on input line 415.
+
+
+LaTeX Warning: Citation 'Tsang2019' on page 7 undefined on input line 416.
+
+
+LaTeX Warning: Citation 'Wiedman2017' on page 7 undefined on input line 417.
+
+
+LaTeX Warning: Citation 'Gao2018' on page 7 undefined on input line 419.
+
+
+LaTeX Warning: Citation 'Nekrasov2021' on page 7 undefined on input line 421.
+
+
+LaTeX Warning: Citation 'Hwang2016' on page 7 undefined on input line 422.
+
+
+LaTeX Warning: Citation 'Hao2020' on page 7 undefined on input line 423.
+
+
+LaTeX Warning: Citation 'Mishyn2022' on page 7 undefined on input line 425.
+
+
+LaTeX Warning: Citation 'NurNasyifa2020' on page 7 undefined on input line 427.
+
+
+LaTeX Warning: Citation 'Campos2019' on page 7 undefined on input line 429.
+
+
+LaTeX Warning: Citation 'Kuscu2020' on page 7 undefined on input line 430.
+
+
+LaTeX Warning: Citation 'Xu2017' on page 7 undefined on input line 431.
+
+
+LaTeX Warning: Citation 'Khan2020' on page 7 undefined on input line 433.
+
+
+LaTeX Warning: Citation 'Wang2020' on page 7 undefined on input line 434.
+
+
+LaTeX Warning: Citation 'Ono2020' on page 7 undefined on input line 436.
+
+
+LaTeX Warning: Citation 'Zheng2016' on page 7 undefined on input line 438.
+
+
+LaTeX Warning: Citation 'Kim2009' on page 7 undefined on input line 439.
+
+
+LaTeX Warning: Citation 'Yoo2022' on page 7 undefined on input line 440.
+
+
+LaTeX Warning: Citation 'Sethi2020' on page 7 undefined on input line 441.
+
+
+LaTeX Warning: Citation 'Ohno2010' on page 7 undefined on input line 442.
+
+
+LaTeX Warning: Citation 'Lopez2015' on page 7 undefined on input line 443.
+
+
+LaTeX Warning: Citation 'Strack2013' on page 7 undefined on input line 444.
+
+
+Overfull \hbox (281.47499pt too wide) in alignment at lines 407--445
+ [] [] [] [] [] [] [] 
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 1.1 on input line 445.
+
+[7]
+
+LaTeX Warning: Reference `fig-pbase-stable-1' on page 8 undefined on input line 451.
+
+
+LaTeX Warning: Reference `fig-pbase-structure' on page 8 undefined on input line 454.
+
+
+LaTeX Warning: Citation 'Chen2001' on page 8 undefined on input line 458.
+
+
+LaTeX Warning: Citation 'Hermanson2013-16' on page 8 undefined on input line 458.
+
+
+LaTeX Warning: Citation 'Hermanson2013-3' on page 8 undefined on input line 458.
+
+
+LaTeX Warning: Citation 'Mishyn2022' on page 8 undefined on input line 458.
+
+
+LaTeX Warning: Citation 'Chen2001' on page 8 undefined on input line 462.
+
+
+LaTeX Warning: Reference `tbl-pbase-functionalisation' on page 8 undefined on input line 471.
+
+
+LaTeX Warning: Citation 'Besteman2003' on page 8 undefined on input line 473.
+
+
+LaTeX Warning: Citation 'Cella2010' on page 8 undefined on input line 473.
+
+
+LaTeX Warning: Citation 'Campos2019' on page 8 undefined on input line 473.
+
+
+LaTeX Warning: Citation 'Zheng2016' on page 8 undefined on input line 473.
+
+
+LaTeX Warning: Citation 'Ohno2010' on page 8 undefined on input line 473.
+
+
+LaTeX Warning: Reference `tbl-pbase-functionalisation' on page 8 undefined on input line 481.
+
+
+LaTeX Warning: Citation 'Hinnemo2017' on page 8 undefined on input line 488.
+
+
+LaTeX Warning: Citation 'Zhen2018' on page 8 undefined on input line 488.
+
+
+LaTeX Warning: Citation 'Wang2020' on page 8 undefined on input line 488.
+
+
+LaTeX Warning: Citation 'White2008' on page 8 undefined on input line 491.
+
+
+LaTeX Warning: Citation 'Hermanson2013-3' on page 8 undefined on input line 491.
+
+
+LaTeX Warning: Citation 'Chen2014' on page 8 undefined on input line 491.
+
+
+LaTeX Warning: Citation 'Zhen2018' on page 8 undefined on input line 494.
+
+
+LaTeX Warning: Citation 'Hao2020' on page 8 undefined on input line 494.
+
+
+LaTeX Warning: Citation 'Wang2020' on page 8 undefined on input line 494.
+
+
+LaTeX Warning: Citation 'Mishyn2022' on page 8 undefined on input line 494.
+
+
+LaTeX Warning: Citation 'Zhen2018' on page 8 undefined on input line 496.
+
+
+LaTeX Warning: Citation 'Wang2020' on page 8 undefined on input line 497.
+
+
+LaTeX Warning: Citation 'Mishyn2022' on page 8 undefined on input line 497.
+
+
+LaTeX Warning: Citation 'Mishyn2022' on page 8 undefined on input line 500.
+
+
+LaTeX Warning: Citation 'Hao2020' on page 8 undefined on input line 505.
+
+[8]
+File: figures/ch7/labelled_modified_sigma_pbase_nmr.png Graphic file (type bmp)
+<figures/ch7/labelled_modified_sigma_pbase_nmr.png>
+File: figures/ch7/labelled_modified_setareh_pbase_nmr.png Graphic file (type bmp)
+<figures/ch7/labelled_modified_setareh_pbase_nmr.png>
+File: figures/ch7/labelled_modified_dmso_nmr.png Graphic file (type bmp)
+<figures/ch7/labelled_modified_dmso_nmr.png>
+
+LaTeX Warning: Float too large for page by 8.69278pt on input line 570.
+
+
+LaTeX Warning: Citation 'Hermanson2013-3' on page 9 undefined on input line 577.
+
+
+LaTeX Warning: Citation 'Hermanson2013-5' on page 9 undefined on input line 577.
+
+
+LaTeX Warning: Citation 'Mishyn2022' on page 9 undefined on input line 577.
+
+
+LaTeX Warning: Citation 'Hermanson2013-3' on page 9 undefined on input line 581.
+
+
+LaTeX Warning: Reference `sec-PBA' on page 9 undefined on input line 586.
+
+LaTeX Font Info:    Font shape `TU/LatinModernRoman(0)/m/n' will be
+(Font)              scaled to size 7.665pt on input line 598.
+LaTeX Font Info:    Font shape `TU/LatinModernRoman(0)/m/n' will be
+(Font)              scaled to size 5.475pt on input line 598.
+
+LaTeX Warning: Reference `fig-pbase-nmr' on page 9 undefined on input line 607.
+
+
+LaTeX Warning: Citation 'NMR2' on page 9 undefined on input line 613.
+
+
+LaTeX Warning: Citation 'Lebel1962' on page 9 undefined on input line 623.
+
+
+LaTeX Warning: Citation 'Strack2013' on page 9 undefined on input line 625.
+
+[9] [10]
+File: figures/ch7/Q23D5_ch1_MeOHonly.png Graphic file (type bmp)
+<figures/ch7/Q23D5_ch1_MeOHonly.png>
+
+Overfull \hbox (7.28644pt too wide) in paragraph at lines 640--645
+ [][] 
+ []
+
+File: figures/ch7/Q23D12_ch1_DMSOonly.png Graphic file (type bmp)
+<figures/ch7/Q23D12_ch1_DMSOonly.png>
+
+Overfull \hbox (7.28644pt too wide) in paragraph at lines 655--660
+ [][] 
+ []
+
+File: figures/ch7/Q2C6_ch2_MeOHPBASE.png Graphic file (type bmp)
+<figures/ch7/Q2C6_ch2_MeOHPBASE.png>
+
+Overfull \hbox (7.28644pt too wide) in paragraph at lines 670--675
+ [][] 
+ []
+
+File: figures/ch7/Q23D7_ch3_DMSOPBASE.png Graphic file (type bmp)
+<figures/ch7/Q23D7_ch3_DMSOPBASE.png>
+
+Overfull \hbox (7.28644pt too wide) in paragraph at lines 685--690
+ [][] 
+ []
+
+
+Underfull \hbox (badness 2027) in paragraph at lines 704--704
+[][][]|[]\TU/LatinModernRoman(2)/m/n/10.95 The electrical transfer characteristics of carbon nanotube transistors
+ []
+
+
+LaTeX Warning: Reference `fig-meoh-only-tx' on page 11 undefined on input line 713.
+
+
+LaTeX Warning: Reference `fig-dmso-only-tx' on page 11 undefined on input line 713.
+
+
+LaTeX Warning: Reference `tbl-pbase-functionalisation' on page 11 undefined on input line 716.
+
+
+LaTeX Warning: Citation 'Besteman2003' on page 11 undefined on input line 721.
+
+
+LaTeX Warning: Citation 'Artyukhin2006' on page 11 undefined on input line 725.
+
+
+LaTeX Warning: Citation 'Heller2008' on page 11 undefined on input line 725.
+
+[11]
+
+LaTeX Warning: Citation 'Murugathas2019b' on page 12 undefined on input line 728.
+
+
+LaTeX Warning: Citation 'Murugathas2019b' on page 12 undefined on input line 732.
+
+
+LaTeX Warning: Reference `fig-PBASE-vs-solvent-only' on page 12 undefined on input line 734.
+
+
+LaTeX Warning: Reference `fig-meoh-pbase-tx' on page 12 undefined on input line 736.
+
+
+LaTeX Warning: Reference `fig-dmso-pbase-tx' on page 12 undefined on input line 736.
+
+
+LaTeX Warning: Reference `fig-meoh-only-tx' on page 12 undefined on input line 737.
+
+
+LaTeX Warning: Reference `fig-dmso-only-tx' on page 12 undefined on input line 738.
+
+
+LaTeX Warning: Citation 'Heller2008' on page 12 undefined on input line 740.
+
+
+LaTeX Warning: Citation 'Heller2008' on page 12 undefined on input line 744.
+
+
+LaTeX Warning: Citation 'Mohsen-Nia2010' on page 12 undefined on input line 745.
+
+
+LaTeX Warning: Citation 'Hunger2010' on page 12 undefined on input line 746.
+
+
+LaTeX Warning: Citation 'Shkodra2021' on page 12 undefined on input line 748.
+
+
+LaTeX Warning: Reference `fig-meoh-only-tx' on page 12 undefined on input line 748.
+
+
+LaTeX Warning: Reference `fig-dmso-only-tx' on page 12 undefined on input line 749.
+
+
+LaTeX Warning: Reference `fig-meoh-pbase-tx' on page 12 undefined on input line 756.
+
+
+LaTeX Warning: Reference `fig-dmso-pbase-tx' on page 12 undefined on input line 757.
+
+
+LaTeX Warning: Citation 'Khan2021' on page 12 undefined on input line 768.
+
+
+LaTeX Warning: Citation 'Besteman2003' on page 12 undefined on input line 776.
+
+[12] [13]
+Underfull \hbox (badness 10000) in paragraph at lines 781--783
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 781--783
+
+ []
+
+
+Overfull \hbox (57.17409pt too wide) in alignment at lines 785--803
+ [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (57.17409pt too wide) in alignment at lines 803--808
+ [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (57.17409pt too wide) in alignment at lines 808--810
+ [] [] [] [] [] [] [] [] 
+ []
+
+
+LaTeX Warning: Citation 'Gao2016' on page 14 undefined on input line 812.
+
+
+LaTeX Warning: Citation 'Mishyn2022' on page 14 undefined on input line 813.
+
+
+LaTeX Warning: Citation 'Min2012' on page 14 undefined on input line 814.
+
+
+LaTeX Warning: Citation 'Xu2014' on page 14 undefined on input line 815.
+
+
+LaTeX Warning: Citation 'Pacios2012' on page 14 undefined on input line 817.
+
+
+LaTeX Warning: Citation 'Filipiak2018' on page 14 undefined on input line 819.
+
+
+LaTeX Warning: Citation 'Tong2020' on page 14 undefined on input line 821.
+
+
+LaTeX Warning: Citation 'Liu2011' on page 14 undefined on input line 823.
+
+
+LaTeX Warning: Citation 'Fenzl2017' on page 14 undefined on input line 825.
+
+
+Overfull \hbox (209.8221pt too wide) in alignment at lines 810--826
+ [] [] [] [] [] [] [] [] 
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 1.2 on input line 826.
+
+[14]
+
+LaTeX Warning: Citation 'Sehgal1994' on page 15 undefined on input line 845.
+
+
+LaTeX Warning: Citation 'Hermanson2013-4' on page 15 undefined on input line 845.
+
+
+LaTeX Warning: Citation 'Hermanson2013-4' on page 15 undefined on input line 852.
+
+
+LaTeX Warning: Citation 'Sehgal1994' on page 15 undefined on input line 856.
+
+
+LaTeX Warning: Citation 'Hermanson2013-4' on page 15 undefined on input line 856.
+
+
+LaTeX Warning: Citation 'Hermanson2013-14' on page 15 undefined on input line 856.
+
+
+LaTeX Warning: Reference `tbl-pba-functionalisation' on page 15 undefined on input line 860.
+
+
+LaTeX Warning: Reference `tbl-pbase-functionalisation' on page 15 undefined on input line 864.
+
+
+LaTeX Warning: Reference `tbl-pba-functionalisation' on page 15 undefined on input line 865.
+
+
+LaTeX Warning: Citation 'Mishyn2022' on page 15 undefined on input line 873.
+
+
+LaTeX Warning: Citation 'Hermanson2013-4' on page 15 undefined on input line 880.
+
+File: figures/ch7/comparison_raman.png Graphic file (type bmp)
+<figures/ch7/comparison_raman.png>
+
+LaTeX Warning: Reference `sec-raman-analysis' on page 15 undefined on input line 919.
+
+
+LaTeX Warning: Reference `fig-linker-raman' on page 15 undefined on input line 925.
+
+
+Underfull \vbox (badness 3098) has occurred while \output is active []
+
+[15] [16]
+File: figures/ch7/NTQ24C10_ch3_comparison_1.png Graphic file (type bmp)
+<figures/ch7/NTQ24C10_ch3_comparison_1.png>
+
+Overfull \hbox (7.28221pt too wide) in paragraph at lines 933--938
+ [][] 
+ []
+
+File: figures/ch7/NTQ24C10_ch3_comparison_2.png Graphic file (type bmp)
+<figures/ch7/NTQ24C10_ch3_comparison_2.png>
+
+Overfull \hbox (7.28221pt too wide) in paragraph at lines 948--953
+ [][] 
+ []
+
+File: figures/ch7/NTQ24C10_ch3_comparison_3.png Graphic file (type bmp)
+<figures/ch7/NTQ24C10_ch3_comparison_3.png>
+
+Overfull \hbox (7.28221pt too wide) in paragraph at lines 963--968
+ [][] 
+ []
+
+File: figures/ch7/NTQ24C10_ch3_comparison_4.png Graphic file (type bmp)
+<figures/ch7/NTQ24C10_ch3_comparison_4.png>
+
+Overfull \hbox (7.28221pt too wide) in paragraph at lines 978--983
+ [][] 
+ []
+
+
+LaTeX Warning: Citation 'Wei2010' on page 17 undefined on input line 1007.
+
+
+LaTeX Warning: Citation 'Lan2013' on page 17 undefined on input line 1007.
+
+
+LaTeX Warning: Citation 'Wei2010' on page 17 undefined on input line 1007.
+
+
+LaTeX Warning: Citation 'Lan2013' on page 17 undefined on input line 1009.
+
+
+LaTeX Warning: Reference `fig-pba-functionalisation-threshold-shift' on page 17 undefined on input line 1032.
+
+
+LaTeX Warning: Reference `fig-pba-threshold-shift' on page 17 undefined on input line 1039.
+
+
+LaTeX Warning: Citation 'Lerner2012' on page 17 undefined on input line 1045.
+
+
+LaTeX Warning: Citation 'Murugathas2019b' on page 17 undefined on input line 1049.
+
+
+Underfull \vbox (badness 1242) has occurred while \output is active []
+
+[17] [18]
+
+LaTeX Warning: Reference `fig-edc-nhs-threshold-shift' on page 19 undefined on input line 1053.
+
+
+LaTeX Warning: Citation 'Heller2008' on page 19 undefined on input line 1059.
+
+
+LaTeX Warning: Citation 'Hermanson2013-4' on page 19 undefined on input line 1059.
+
+
+LaTeX Warning: Reference `fig-rinse-threshold-shift' on page 19 undefined on input line 1060.
+
+
+LaTeX Warning: Citation 'Holzinger2011' on page 19 undefined on input line 1085.
+
+
+LaTeX Warning: Citation 'Amano2016' on page 19 undefined on input line 1085.
+
+
+LaTeX Warning: Citation 'Chang2017' on page 19 undefined on input line 1085.
+
+
+LaTeX Warning: Citation 'Chang2017' on page 19 undefined on input line 1087.
+
+
+LaTeX Warning: Citation 'Goldsmith2011' on page 19 undefined on input line 1090.
+
+
+LaTeX Warning: Citation 'Holzinger2011' on page 19 undefined on input line 1092.
+
+
+LaTeX Warning: Citation 'Star2003a' on page 19 undefined on input line 1096.
+
+
+LaTeX Warning: Citation 'Dundas2013' on page 19 undefined on input line 1096.
+
+
+LaTeX Warning: Citation 'Hermanson2013-11' on page 19 undefined on input line 1096.
+
+
+LaTeX Warning: Citation 'Fairhead2015' on page 19 undefined on input line 1096.
+
+[19]
+
+LaTeX Warning: Citation 'Hermanson2013-18' on page 20 undefined on input line 1104.
+
+
+LaTeX Warning: Citation 'Meran2018' on page 20 undefined on input line 1104.
+
+
+LaTeX Warning: Citation 'Hermanson2013-18' on page 20 undefined on input line 1107.
+
+
+LaTeX Warning: Citation 'Shkodra2021' on page 20 undefined on input line 1110.
+
+
+LaTeX Warning: Citation 'Miki2019' on page 20 undefined on input line 1113.
+
+File: figures/ch7/NGW8D1_FITC_6.5sexposure_10X_221121.png Graphic file (type bmp)
+<figures/ch7/NGW8D1_FITC_6.5sexposure_10X_221121.png>
+
+Overfull \hbox (7.28809pt too wide) in paragraph at lines 1129--1134
+ [][] 
+ []
+
+File: figures/ch7/NGW8D4_rhodamineB_cornergraphene_221110.png Graphic file (type bmp)
+<figures/ch7/NGW8D4_rhodamineB_cornergraphene_221110.png>
+
+Overfull \hbox (7.28809pt too wide) in paragraph at lines 1154--1159
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `sec-hydrophobicity' on page 20 undefined on input line 1192.
+
+[20]
+
+LaTeX Warning: Reference `sec-pyrene-interactions' on page 21 undefined on input line 1204.
+
+File: figures/ch7/PPF_vials.png Graphic file (type bmp)
+<figures/ch7/PPF_vials.png>
+
+LaTeX Warning: Reference `fig-FITC-rhodamine-B' on page 21 undefined on input line 1219.
+
+
+LaTeX Warning: Citation 'Tang2012' on page 21 undefined on input line 1224.
+
+
+LaTeX Warning: Reference `fig-PPF-concs' on page 21 undefined on input line 1229.
+
+[21]
+
+LaTeX Warning: Citation 'Pai2007' on page 22 undefined on input line 1235.
+
+File: figures/ch7/labelled_modified_noencap_1mMPPF_channel2_1sexposure_6.3X_highcontrast_221214.png Graphic file (type bmp)
+<figures/ch7/labelled_modified_noencap_1mMPPF_channel2_1sexposure_6.3X_highcontrast_221214.png>
+
+Overfull \hbox (7.29178pt too wide) in paragraph at lines 1253--1258
+ [][] 
+ []
+
+File: figures/ch7/labelled_modified_noencap_1mMPPF_channel7_1sexposure_6.3X_highcontrast_221214.png Graphic file (type bmp)
+<figures/ch7/labelled_modified_noencap_1mMPPF_channel7_1sexposure_6.3X_highcontrast_221214.png>
+
+Overfull \hbox (7.29178pt too wide) in paragraph at lines 1278--1283
+ [][] 
+ []
+
+[22]
+
+LaTeX Warning: Reference `fig-FITC-EtOH' on page 23 undefined on input line 1321.
+
+
+LaTeX Warning: Reference `sec-impediments' on page 23 undefined on input line 1328.
+
+File: figures/ch7/modified_SU8only_FITCfilter_channel2_350ms_12.6X_221207.png Graphic file (type bmp)
+<figures/ch7/modified_SU8only_FITCfilter_channel2_350ms_12.6X_221207.png>
+
+Overfull \hbox (7.28809pt too wide) in paragraph at lines 1343--1348
+ [][] 
+ []
+
+File: figures/ch7/modified_CNT20_1mMPPF_channel8_350ms_12.6X_221124.png Graphic file (type bmp)
+<figures/ch7/modified_CNT20_1mMPPF_channel8_350ms_12.6X_221124.png>
+
+Overfull \hbox (7.29668pt too wide) in paragraph at lines 1368--1373
+ [][] 
+ []
+
+File: figures/ch7/modified_Ccontrol_ch2_mCherry_10sexposure_highcontrast_12.6X.png Graphic file (type bmp)
+<figures/ch7/modified_Ccontrol_ch2_mCherry_10sexposure_highcontrast_12.6X.png>
+
+Overfull \hbox (7.28809pt too wide) in paragraph at lines 1383--1388
+ [][] 
+ []
+
+File: figures/ch7/modified_C1_ch5_mCherry_10sexposure_highcontrast_12.6X.png Graphic file (type bmp)
+<figures/ch7/modified_C1_ch5_mCherry_10sexposure_highcontrast_12.6X.png>
+
+Overfull \hbox (7.2827pt too wide) in paragraph at lines 1408--1413
+ [][] 
+ []
+
+File: figures/ch7/modified_softbake1minacetonerinse_aptamer_ch3_mCherry_30sexposure_highcontrast_ISO200_12.6X.png Graphic file (type bmp)
+<figures/ch7/modified_softbake1minacetonerinse_aptamer_ch3_mCherry_30sexposure_highcontrast_ISO200_12.6X.png>
+
+Overfull \hbox (7.29042pt too wide) in paragraph at lines 1423--1428
+ [][] 
+ []
+
+File: figures/ch7/modified_hardbake_aptamer_ch3_mCherry_30sexposure_highcontrast_ISO200_12.6X.png Graphic file (type bmp)
+<figures/ch7/modified_hardbake_aptamer_ch3_mCherry_30sexposure_highcontrast_ISO200_12.6X.png>
+
+Overfull \hbox (7.29572pt too wide) in paragraph at lines 1448--1453
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 45.84192pt on input line 1471.
+
+
+LaTeX Warning: Reference `fig-350ms-SU8' on page 23 undefined on input line 1476.
+
+
+LaTeX Warning: Reference `fig-350ms-SU8-FITC' on page 23 undefined on input line 1477.
+
+
+LaTeX Warning: Reference `fig-aptamer-photoresist-1' on page 23 undefined on input line 1500.
+
+
+LaTeX Warning: Reference `fig-aptamer-photoresist-2' on page 23 undefined on input line 1501.
+
+[23] [24]
+
+LaTeX Warning: Reference `fig-aptamer-photoresist-3' on page 25 undefined on input line 1539.
+
+
+LaTeX Warning: Reference `fig-aptamer-photoresist-4' on page 25 undefined on input line 1540.
+
+
+LaTeX Warning: Reference `fig-aptamer-photoresist-4' on page 25 undefined on input line 1547.
+
+File: figures/ch7/modified_NGW8D9_edgechannel_post10min50Cacetonerinse_221109.png Graphic file (type bmp)
+<figures/ch7/modified_NGW8D9_edgechannel_post10min50Cacetonerinse_221109.png>
+
+Overfull \hbox (7.28809pt too wide) in paragraph at lines 1576--1581
+ [][] 
+ []
+
+File: figures/ch7/modified_NGW8D7_edgechannel_lowerexposuretime_221108.png Graphic file (type bmp)
+<figures/ch7/modified_NGW8D7_edgechannel_lowerexposuretime_221108.png>
+
+Overfull \hbox (7.28809pt too wide) in paragraph at lines 1601--1606
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `fig-no-attachment' on page 25 undefined on input line 1629.
+
+
+LaTeX Warning: Reference `sec-pyrene-interactions' on page 25 undefined on input line 1632.
+
+
+LaTeX Warning: Citation 'Ashraf2014' on page 25 undefined on input line 1638.
+
+
+LaTeX Warning: Citation 'Stando2019' on page 25 undefined on input line 1640.
+
+
+LaTeX Warning: Citation 'Park2022' on page 25 undefined on input line 1640.
+
+
+LaTeX Warning: Citation 'Shin2010' on page 25 undefined on input line 1642.
+
+
+LaTeX Warning: Citation 'Ashraf2014' on page 25 undefined on input line 1644.
+
+[25]
+
+LaTeX Warning: Reference `fig-hydrophobicity' on page 26 undefined on input line 1651.
+
+
+LaTeX Warning: Reference `fig-no-attachment' on page 26 undefined on input line 1653.
+
+
+LaTeX Warning: Reference `fig-attachment-post-plasma' on page 26 undefined on input line 1656.
+
+
+LaTeX Warning: Reference `sec-linker-receptor-attachment' on page 26 undefined on input line 1667.
+
+[26]
+File: figures/ch7/modified_NGW6D4_PyPEGFITC_channel2_1.6sexposure_10X_221122.png Graphic file (type bmp)
+<figures/ch7/modified_NGW6D4_PyPEGFITC_channel2_1.6sexposure_10X_221122.png>
+
+Overfull \hbox (7.28809pt too wide) in paragraph at lines 1676--1681
+ [][] 
+ []
+
+File: figures/ch7/modified_SiO2_1mMPPR_2_221109.png Graphic file (type bmp)
+<figures/ch7/modified_SiO2_1mMPPR_2_221109.png>
+
+Overfull \hbox (7.28809pt too wide) in paragraph at lines 1701--1706
+ [][] 
+ []
+
+File: figures/ch7/modified_NGW6D7_PyPEGFITC_channel3top_postmsurfclean_7.5sexposure_20X_221123.png Graphic file (type bmp)
+<figures/ch7/modified_NGW6D7_PyPEGFITC_channel3top_postmsurfclean_7.5sexposure_20X_221123.png>
+
+Overfull \hbox (7.28809pt too wide) in paragraph at lines 1716--1721
+ [][] 
+ []
+
+File: figures/ch7/modified_NGW6D7_PyPEGFITC_channel1_postmsurfclean_7.75sexposure_40X_221123.png Graphic file (type bmp)
+<figures/ch7/modified_NGW6D7_PyPEGFITC_channel1_postmsurfclean_7.75sexposure_40X_221123.png>
+
+Overfull \hbox (7.28809pt too wide) in paragraph at lines 1741--1746
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `fig-rhodamine-silicon-dioxide' on page 27 undefined on input line 1778.
+
+
+LaTeX Warning: Citation 'CreativePEGworks2022' on page 27 undefined on input line 1783.
+
+
+LaTeX Warning: Reference `fig-PPF-PBS-20X' on page 27 undefined on input line 1789.
+
+
+LaTeX Warning: Reference `fig-PPF-PBS-40X' on page 27 undefined on input line 1789.
+
+File: figures/ch7/modified_GFPNi2+1_5sexposure_12.6X_mediumcontrast_18_230324.png Graphic file (type bmp)
+<figures/ch7/modified_GFPNi2+1_5sexposure_12.6X_mediumcontrast_18_230324.png>
+
+Overfull \hbox (7.28012pt too wide) in paragraph at lines 1804--1809
+ [][] 
+ []
+
+File: figures/ch7/modified_GFPNi2+1_5sexposure_12.6X_mediumcontrast_20_230324.png Graphic file (type bmp)
+<figures/ch7/modified_GFPNi2+1_5sexposure_12.6X_mediumcontrast_20_230324.png>
+
+Overfull \hbox (7.28012pt too wide) in paragraph at lines 1829--1834
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `tbl-pbase-functionalisation' on page 27 undefined on input line 1848.
+
+
+LaTeX Warning: Reference `fig-GFP-coffee-ring' on page 27 undefined on input line 1863.
+
+[27] [28]
+
+LaTeX Warning: Citation 'Deegan1997' on page 29 undefined on input line 1870.
+
+
+LaTeX Warning: Citation 'Shimobayashi2018' on page 29 undefined on input line 1870.
+
+[29]
+File: figures/ch7/modified_GFPOR_PBASE_10sexposure_20X_mediumcontrast_ch1_231019_2.png Graphic file (type bmp)
+<figures/ch7/modified_GFPOR_PBASE_10sexposure_20X_mediumcontrast_ch1_231019_2.png>
+
+Overfull \hbox (7.28012pt too wide) in paragraph at lines 1899--1904
+ [][] 
+ []
+
+File: figures/ch7/modified_GFPOR_PBASE_10sexposure_40X_mediumcontrast_ch1_231019_2.png Graphic file (type bmp)
+<figures/ch7/modified_GFPOR_PBASE_10sexposure_40X_mediumcontrast_ch1_231019_2.png>
+
+Overfull \hbox (7.28012pt too wide) in paragraph at lines 1924--1929
+ [][] 
+ []
+
+File: figures/ch7/modified_GFPOR_PBASE_10sexposure_40X_mediumcontrast_ch2_231019.png Graphic file (type bmp)
+<figures/ch7/modified_GFPOR_PBASE_10sexposure_40X_mediumcontrast_ch2_231019.png>
+
+Overfull \hbox (7.28012pt too wide) in paragraph at lines 1939--1944
+ [][] 
+ []
+
+File: figures/ch7/modified_GFPOR_PBASE_10sexposure_40X_mediumcontrast_ch3_231019.png Graphic file (type bmp)
+<figures/ch7/modified_GFPOR_PBASE_10sexposure_40X_mediumcontrast_ch3_231019.png>
+
+Overfull \hbox (7.28012pt too wide) in paragraph at lines 1964--1969
+ [][] 
+ []
+
+
+LaTeX Warning: File `figures/ch7/modified_GFPOR_PBASE_10sexposure_40X_mediumcontrast_ch7_231019.png' not found on input line 1983.
+
+! Unable to load picture or PDF file 'figures/ch7/modified_GFPOR_PBASE_10sexposure_40X_mediumcontrast_ch7_231019.png'.
+<to be read again> 
+                   }
+l.1983 }
+         
+Here is how much of TeX's memory you used:
+ 42441 strings out of 476877
+ 910285 string characters out of 5803226
+ 1961395 words of memory out of 5000000
+ 63747 multiletter control sequences out of 15000+600000
+ 568488 words of font info for 125 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 108i,10n,122p,10900b,1982s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on index.pdf (33 pages).

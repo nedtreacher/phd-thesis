@@ -184,7 +184,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, borderline west={3pt}{0pt}{shadecolor}, breakable, frame hidden, sharp corners, boxrule=0pt, enhanced]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, sharp corners, enhanced, interior hidden, borderline west={3pt}{0pt}{shadecolor}, breakable, frame hidden]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -1510,14 +1510,14 @@ microscope. Beyond potentially interfering with functionalisation,
 photoresist residue blocking a device channel will prevent interaction
 with the buffer and prevent sensing.
 
-To test whether residual resist can be prevented by interacting with
+To test whether residual resist could be prevented from interacting with
 aptamer by crosslinking the resist, two unencapsulated devices were
 prepared as follows. Devices were first spincoated with AZ\(^\circledR\)
-1518 in the manner described in \textbf{?@sec-fabrication}, and the bulk
-of the resist was then removed by soaking the device in acetone for 1
+1518 in the manner described in \textbf{?@sec-fabrication}. Next, the
+majority of resist was removed by soaking the device in acetone for 1
 minute. This process left a thin coating of photoresist on the devices.
 One of these devices was then hardbaked at 200\(^\circ\)C for 1 hour.
-They were then functionalised in the following manner:
+Both devices were subsequently functionalised in the following manner:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -1535,32 +1535,33 @@ They were then functionalised in the following manner:
   overnight.
 \end{enumerate}
 
-Fluorescence microscope images of channels from the two devices are
-shown in Figure~\ref{fig-photoresist-contamination}, where the dark
-regions are the gold device electrodes From comparing
-Figure~\ref{fig-aptamer-photoresist-2} and
-Figure~\ref{fig-aptamer-photoresist-3}, it is apparent that hardbaking
-the AZ\(^\circledR\) 1518 photoresist significantly reduces the amount
-of fluorescent aptamer attached to the surface. This is an indication
-that the chemical interaction between the photoresist and the pyrene
-linker, or alternatively the biological material, can be suppressed
-through sufficient heating of the photoresist. Hardbaking of the
-photoresist does not appear to have completely prevented
-functionalisation, with some aptamer fluorescence still visible in
-Figure~\ref{fig-aptamer-photoresist-2}. It is possible that heating from
-the bottom of the device is insufficient to hardbake the photoresist
-layer completely, an effect that would be amplified for the thick
-photoresist layer on encapsulated devices. Therefore, from June 2023
-onwards devices were vacuum annealed for 1 hour at 150 \(^\circ\)C prior
-to functionalisation. This approach was taken to ensure photoresist was
-being heated from above as well as below and made chemically inert at
-its surface.
+Fluorescence microscope images of channels from each device are shown in
+Figure~\ref{fig-aptamer-photoresist-3} and
+Figure~\ref{fig-aptamer-photoresist-4}, where the latter is the device
+hardbaked before functionalisation. By comparing the two images, it is
+apparent that hardbaking the AZ\(^\circledR\) 1518 photoresist
+significantly reduces the amount of fluorescent aptamer attached to the
+surface. This result is an indication that sufficient heating of the
+photoresist can prevent it interacting with PBASE or amine-tagged
+biological material. However, there is still some Cy3-tagged aptamer
+fluorescence visible in Figure~\ref{fig-aptamer-photoresist-4}. It
+appears that hardbaking has not completely prevented photoresist from
+interacting with the aptamer. It is possible that heating from the
+bottom of the device is insufficient to hardbake the photoresist layer
+completely, an effect that would be amplified for the thick photoresist
+layer on encapsulated devices. Therefore, from June 2023 onwards devices
+were vacuum annealed for 1 hour at 150 \(^\circ\)C prior to
+functionalisation. This approach was taken to ensure photoresist was
+heated from above as well as below and made chemically inert across its
+surface.
 
 This result demonstrates the use of fluorescence microscopy as a tool to
-detect residue and test suitable residue elimination measures. Using
-fluorescence microscopy, an effective measure for remove exposed to UV
-light and placed in AZ\(^\circledR\) 326 developer to remove residual
-photoresist after each photolithography step.
+detect residue and test suitable residue elimination measures. Further
+testing showed that performing a 1 minute flood exposure (for positive
+resist only) then placing a device in AZ\(^\circledR\) 326 developer for
+3 minutes was highly effective at removing photoresist residue. Both
+these development and annealing techniques were used for all
+functionalised devices in subsequent sections.
 
 \hypertarget{sec-hydrophobicity}{%
 \subsection{Hydrophobicity of Carbon Nanotubes and
@@ -1610,13 +1611,13 @@ Graphene}\label{sec-hydrophobicity}}
 
 \caption{\label{fig-hydrophobicity}Fluorescence images of a 1000
 \(\mu\)m \(\times\) 100 \(\mu\)m graphene channel after
-functionalisation with 1 mM pyrene-PEG-rhodamine in 1XPBS, taken using
-an Texas Red filter and a 1.8 s exposure time. The graphene film in (a)
-was not oxygen plasma cleaned before functionalisation, while the
-graphene film in (b) was oxygen plasma cleaned at 5 W for 15 s at 300
-mTorr pressure immediately before functionalisation. Insets show a 10
-\(\mu\)L droplet placed on an unencapsulated carbon nanotube device
-before (a) and after (b) the same oxygen plasma treatment procedure.}
+functionalisation with 1 mM pyrene-PEG-rhodamine in 1XPBS. The graphene
+film in (a) was not oxygen plasma cleaned before functionalisation,
+while the graphene film in (b) was oxygen plasma cleaned at 5 W for 15 s
+at 300 mTorr pressure immediately before functionalisation. Insets show
+a 10 \(\mu\)L droplet placed on an unencapsulated carbon nanotube device
+before (a) and after (b) the same oxygen plasma treatment procedure.
+Images were taken using an Texas Red filter and a 1.8 s exposure time.}
 
 \end{figure}
 
