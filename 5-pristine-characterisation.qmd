@@ -1,0 +1,339 @@
+---
+keep-tex: true
+format: pdf
+---
+
+#	Characteristics of Pristine Carbon Nanotube & Graphene Field Effect Transistors
+
+##	Carbon Nanotube Network Morphology {#sec-pristine-morphology}
+
+@fig-afm-morphology shows a side-by-side comparison of the surface morphology of carbon nanotube films fabricated using the methods described in @sec-dep-carbon-nanotubes. These images were collected using an atomic force microscope and processed in the manner described in @sec-afm-characterisation. They each show bundles of carbon nanotubes with a range of diameters and lengths, with each bundle containing one or multiple nanotubes. As discussed in previous works using solvent-based deposition techniques for depositing carbon nanotubes, multi-tube bundles form due to strong mutual attraction between nanotubes [@Zheng2017; @Thanihaichelvan2018; @Thanihaichelvan2019; @Nguyen2021]. However, when surfactants are present, they adsorb onto the carbon nanotubes and form a highly repulsive structure able to overcome the strong attraction between nanotubes. This repulsion then keeps the individual carbon nanotubes isolated [@Wenseleers2004; @Gavrel2013; @Hermanson2013-16; @Shimizu2013; @DiCrescenzo2014]. The diameter range provided by the supplier for the individual carbon nanotubes used is $1.2-1.7$ nm, while the length range is $0.3-5.0$ $\mu$m (Nanointegris).
+
+::: {#fig-afm-morphology layout="[[47.5,-5,47.5], [47.5,-5,47.5], [47.5,-5,47.5]]"}
+
+![Solvent-based deposition](figures/ch5/Ned_NTQ24_20220125_00235.png){#fig-bundled-network}
+
+![Solvent based deposition histogram](figures/ch5/Ned_NTQ24_20220125_00235_histogram_guess.png){#fig-bundled-network-histogram}
+
+![Dropcast surfactant-based deposition](figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2).png){#fig-dropcast-network}
+
+![Dropcast surfactant-based deposition histogram](figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_histogram_guess.png){#fig-dropcast-network-histogram}
+
+![Steam-assisted dropcast surfactant-based deposition](figures/ch5/Ned_NGQ14D2_W4_pristine_20220713_00567.png){#fig-steaming-network}
+
+![Steam-assisted dropcast surfactant-based deposition](figures/ch5/Ned_NGQ14D2_W4_pristine_20220713_00567_histogram_guess.png){#fig-steaming-network-histogram}
+
+2.5 $\mu$m $\times$ 2.5 $\mu$m atomic force microscope (AFM) images of carbon nanotube films deposited using various methods, shown side-by-side with surface profile histograms extracted from the AFM profile. Each histogram is shown alongside a linear combination of normal distributions #1 and #2, corresponding to the silicon and carbon nanotube distribution respectively. The counts remaining after #1 and #2 have been subtracted from the AFM histogram are shown in blue.
+:::
+
+The diameter range of deposited single-walled carbon nanotubes can be modelled via a normal or Gaussian distribution [@LeMieux2008; @Liu2013; @Thanihaichelvan2018;  @Vobornik2023]. However, when we extract and bin the height profiles from the 2.5 $\mu$m $\times$ 2.5 $\mu$m AFM images, plotted in black in @fig-afm-morphology, the histograms do not follow a normal distribution. The reason for this result is that the carbon nanotubes do not lie perfectly level on a perfectly level silicon oxide substrate - the atomic force microscope histogram would only be a single normal distribution in this ideal case. In practice, the SiO$_2$ substrate and carbon nanotube surface both have a degree of roughness, which may in part be due to the presence of atmospheric contaminants. In the case of the surfactant-deposited networks, residual surfactant may also contribute to surface roughness [@Vobornik2023]. Furthermore, nanotubes overlap and cross over each other, creating junctions with the combined height of the overlapping nanotubes.
+
+It has been demonstrated that the surface roughness of a bare SiO$_2$ substrate can also be modelled with a normal distribution. This normal distribution can be set as the reference or zero point for other height measurements [@Velicky2015]. As both the carbon nanotube and silicon dioxide background heights can each be modelled using a normal distribution, we make an initial assumption that a linear combination of normal distributions can be used to model the AFM histograms in @fig-afm-morphology. Using the process discussed in @sec-histogram-analysis, we approximate the normal distributions corresponding to the silicon oxide substrate and carbon nanotube network, shown in @fig-afm-morphology as green and red curves respectively. The silicon oxide peak appears to fit more closely to the distribution with smaller carbon nanotube heights, which could be due to measurement of the silicon background being improved when feature height is smaller. We notice that the distribution for the carbon nanotube bundles drops to approximately zero before reaching 0 nm, which is physically appropriate.
+
+::: {#fig-remaining-histogram layout="[[47.5,-5,47.5], [-26.25,47.5,-26.25]]"}
+
+![Solvent based deposition histogram](figures/ch5/Ned_NTQ24_20220125_00235_half_histogram_fit.png){#fig-bundled-network-remainder}
+
+![Dropcast surfactant-based deposition histogram](figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_half_histogram_fit.png){#fig-dropcast-network-remainder}
+
+![Steam-assisted dropcast surfactant-based deposition ](figures/ch5/Ned_NGQ14D2_W4_pristine_20220713_00567_half_histogram_fit.png){#fig-steaming-network-remainder}
+
+
+The counts which remain after #1 and #2 have been subtracted from the AFM histogram are shown in black. The counts have been overlaid with half a Gaussian distribution, manually fitted.
+:::
+
+By subtracting the modelled silicon and carbon nanotube normal distributions from the AFM histogram, we find a remaining distribution spread roughly between 0 nm and the mean of the carbon nanotube bundle distribution. It is also apparent that the remaining distribution consistently follows a half-normal distribution after a sharp rise to maximum, as shown in @fig-remaining-histogram. The full histogram profile therefore appears to be a linear combination of normal and half-normal distributions. This combination could be modelled mathematically in order to rapidly extract key parameters from atomic force microscope images, but this approach is outside of the scope of this thesis [@Alruwaili2022]. 
+
+The half-normal distribution could correspond to surface roughness due to the presence of contaminants. These contaminants could be residual surfactant or other atmospheric contamination resistant to acetone and isopropanol rinsing. Such contamination may or may not have implications for biosensing suitability, but surfactant contamination could certainly have negative effects on biological elements sensitive to surfactant. The area of this central peak may be useful for determining the extent of contamination on a carbon nanotube film, discussed further in @sec-contamination. Interestingly, the peak of the carbon nanotube distribution occurs at a height approximately 2.5$\times$ the height corresponding to the peak of the half-normal distribution. This may imply there is a relationship between the distributions, which could mean the contaminant corresponds to broken pieces of individual nanotubes with various lengths.
+
+If we model carbon nanotube bundles as cylinders, and we assume the component nanotubes follow 2D packing and are of equal diameter, we can give an estimate the mean bundle size for each deposition type in terms of number of nanotubes *n* [@Graham1998; @Thanihaichelvan2018; @Specht2023].
+
+```{r}
+#| label: tbl-circle-packing
+#| tbl-cap: The first eight optimised ratios of 2D packed circle diameter to encompassing circle diameter, given to 3 s.f. (encompassing circle diameter = $d$, number of packed circles = $n$, approximate packed circle diameter = $d_n$).\\
+#|
+
+knitr::opts_chunk$set(echo = FALSE)
+library(knitr)
+library(kableExtra)
+
+circle_packing <- read.csv("tables/ch5/circle_packing.csv", sep=",")
+circle_packing <- circle_packing[rowSums(is.na(circle_packing)) == 0,]
+
+knitr::kable(circle_packing, col.names = NULL, format = "simple")
+```
+
+@tbl-circle-packing shows the relationship between the diameter of a bundle and the constituent diameters of up to nine 2D packed carbon nanotubes within that bundle. Assuming an average carbon nanotube diameter of 1.45 nm, we can use the $d$/$d_n$ packing ratios to obtain an estimate of the number of nanotubes in the mean bundle size for each deposition [@Specht2023].  We can also give an approximate range which this estimate falls within using the provided range of individual carbon nanotube diameters ($1.2-1.7$ nm) and the 95% confidence interval of the mean bundle size ($2\sigma$). These estimates are shown in @tbl-histogram-parameters. Also shown is an estimate of the ratio of single- to multi-tube bundles for each deposition, found by comparing the proportion of each carbon nanotube curve below and above 2.9 nm, the minimum multi-tube bundle size for 1.45 nm diameter nanotubes. It should be noted that the force of the atomic force microscope tip may cause some degree of nanotube bundle compression, leading to a systematic underestimate of nanotube height [@Vobornik2023]. The relative proportion of multi-tube bundles shown in @tbl-histogram-parameters should therefore be treated as a lower-limit estimate of the true proportion. 
+
+```{r}
+#| label: setup
+#| include: false
+library(tidyverse)
+library(kableExtra)
+
+histogram_parameters <- read.csv("tables/ch5/histogram_parameters.csv", sep=",", check.names=FALSE)
+histogram_parameters <- histogram_parameters[rowSums(is.na(histogram_parameters)) == 0,]
+```
+
+```{r}
+#| tbl-cap: The mean of histogram distributions for carbon nanotube films deposited using various methods, alongside estimates for the number of nanotubes present per bundle (within a 95% confidence interval) and the proportion of multi-tubed bundles present across the network. The value in brackets corresponds to an estimate for the number of nanotubes present in the mean bundle size.
+#| label: tbl-histogram-parameters
+
+histogram_parameters %>% 
+  kable(
+    booktabs = TRUE, #LaTeX "booktabs formatting"
+    linesep = "", #no linespace
+    align = c(rep("l", 1), rep("c", 5)), #aligns col 1 left, all others center
+    col.names = c("", names(.)[-1]), #dataframe sets names of each column
+  ) %>%
+  add_header_above(c(" " = 1, "Distribution Mean (nm)" = 3, "Bundle Attributes" = 2), bold = TRUE) %>% #rows 2,3,4 have a header "Distribution mean (nm)"
+  column_spec(1, width = "2cm") #first column is 2 cm wide
+
+```
+
+When surfactant is used in the deposition process, both the carbon nanotube bundle diameter mean and standard deviation are small compared to the mean and standard deviation of solvent deposited films. However, despite the presence of surfactant, it is apparent both from @fig-afm-morphology and @tbl-histogram-parameters that not all surfactant-dispersed carbon nanotubes are deposited individually. Bundling may occur during the process of deposition onto the substrate, which could disrupt the repulsive forces from the surfactant coating and allow attractive forces to temporarily dominate. 
+
+It is possible that the bundling of surfactant-dispersed carbon nanotubes is a consequence of dynamics introduced by the coffee-ring effect [@Deegan1997; @VanGaalen2021]. The coffee-ring effect refers to a build-up of dispersed solid forming around the edges of a dispersion evaporating on a surface. This process occurs due to the dispersion edges being fixed by surface forces, leading to capillary flow outwards to replace liquid evaporating at the edges, bringing solid material along with it. The presence of vapour is known to disrupt this capillary effect [@Bishop2020].
+
+## Electrical Characteristics of Pristine Devices {#sec-pristine-electrical-characterisation}
+
+### Carbon Nanotube Network Devices
+
+::: {#fig-pristine-cnt-characteristics layout="[[49,-2,49], [49,-2,49], [49,-2,49]]"}
+
+![Solvent-based deposition, back-gated](figures/ch5/NTQ22C2_solvent_backgate.png){#fig-solvent-tx-bg}
+
+![Solvent-based deposition, liquid-gated](figures/ch5/NTQ24C8_pristine_TXLG01_220211_solvent_gate.png){#fig-solvent-tx-lg}
+
+![Dropcast surfactant-based deposition, back-gated](figures/ch5/Q5C10_nosteam_backgate.png){#fig-surf-tx-bg}
+
+![Dropcast surfactant-based deposition, liquid-gated](figures/ch5/NTQ5C3_pristine_TXLG01_210602_nosteam_gate.png){#fig-surf-tx-lg}
+
+![Steam-assisted dropcast surfactant-based deposition, back-gated](figures/ch5/Q18C6_steam_backgate.png){#fig-steam-tx-bg}
+
+![Steam-assisted dropcast surfactant-based deposition, liquid-gated](figures/ch5/NTQ31C6_pristine_TXLG01_230330_steam_gate.png){#fig-steam-tx-lg}
+
+Transfer characteristics of AZ$^\circledR$ 1518 encapsulated field-effect transistors with carbon nanotube network channels deposited using various methods. 1XPBS was used as the buffer for the liquid-gated measurements here. The source-drain voltage used for all sweeps was $V_{ds} = 100 \textrm{mV}$. A step size of 20 mV was used for the liquid-gated sweeps, while a step size of 100 mV was used for the backgated sweeps. Each pair of sweeps was taken from a separate device. Devices with a 100 nm SiO$_2$ layer were used for backgated measurements, and devices with a 300 nm SiO$_2$ layer were used for liquid gated measurements.
+:::
+
+Each carbon nanotube device fabricated was electrically characterised as described in @sec-electrical-characterisation, and electrical data was analysed using the Python code discussed in @sec-field-effect-transistor-analysis. 
+
+@fig-pristine-cnt-characteristics displays multi-channel measurements of representative devices fabricated as described in @sec-fabrication. To ensure a consistent comparison, each device here was encapsulated with AZ$^\circledR$ 1518 encapsulation before measurements were taken. The channels which did not exhibit reliable transistor characteristics are not shown. These 'non-working' channels were either shorted, due to metal remaining on the channel after lift-off, or were very low current, due to a very sparse carbon nanotube network. Devices shown here with a solvent-deposited carbon nanotube network were fabricated prior to Jan 2022; devices with a surfactant-deposited network without steam present were fabricated prior to Jun 2021; devices with a surfactant-deposited network without steam were fabricated prior to Sep 2022.
+
+When backgated, devices exhibited *p*-type transistor behaviour with significant hysteresis and negligible gate current leakage. The presence of hysteresis can be explained by the presence of defects or charge traps within and on the surface of the silicon dioxide and at interfaces between the silicon dioxide and carbon nanotubes [@Lee2007; @Lee2012; @Ha2014]. The devices fabricated with a solvent-based deposition were switched off at a lower voltage than the devices which used surfactant during deposition.
+
+::: {#fig-sweep-parameters layout="[[47.5,-5,47.5], [-26.25,47.5,-26.25]]"}
+
+![](figures/ch5/onoff_CNT.png){#fig-on-off-ratio}
+
+![](figures/ch5/SS.png){#fig-subthreshold-slope}
+
+![](figures/ch5/threshold_V.png){#fig-threshold-voltage}
+
+These boxplots illustrate the statistical distribution of (a) the on-off ratio, (b) the subthreshold slope, and (c) the threshold voltage of AZ$^\circledR$ 1518 encapsulated liquid-gated transistor channels corresponding to each type of carbon nanotube film deposition. For each deposition type, electrical characteristics were taken of 21 channels of at least three separate devices. The boxes indicate the 25th and 75th percentile of the distribution.
+:::
+
+When the devices were liquid-gated with 1XPBS electrolyte, they exhibited ambipolar characteristics, commonly observed in carbon nanotube network FETs [@Kauffman2008; @Heller2009; @JongYu2009; @Derenskyi2014; @Thanihaichelvan2018; @Albarghouthi2022]. When devices were appropriately configured, leakage current did not exceed $\sim 1 \times 10^{-7}$ V across the forward and reverse sweep. Devices generally exhibited significantly less hysteresis than in the backgated case. The devices shown which used carbon nanotube films deposited in surfactant with steam present showed the least hysteresis, which is largely due to the relatively small diameter of the bundles in these films [@Pop2009]. These devices also showed significantly less channel-to-channel variation in electrical characteristics more generally. A summary of key parameters of pristine liquid-gated devices is shown in @fig-sweep-parameters. The full dataset consists of three sets of 21 liquid-gated transfer characteristics of working channels, with each set corresponding to the use of a particular method of carbon nanotube network deposition in the device fabrication. Measurements from at least three devices are included in each set. Each entry in the summary corresponds to the average of the specific parameter in the forward and reverse sweep direction.
+
+Channels from surfactant-deposited film devices usually showed a larger on-off ratio and subthreshold slope than those from solvent-deposited devices. When the transistor is gated in the subthreshold range, a larger on-off ratio and subthreshold slope results in a larger change in conductance in response to changes in the transfer characteristic curve. Therefore, a larger on-off ratio and subthreshold slope is desirable for improved sensor performance [@Kauffman2008; @Heller2009; @Gao2010]. The larger on-off ratio for surfactant-deposited film devices is likely a result of the reduced bundling of nanotubes, as discussed in @sec-pristine-morphology. Carbon nanotube pathways across the channel with a lower degree of bundling will have a lower number of component metallic tubes in the network, which increases the on-off ratio [@LeMieux2008; @Rouhi2011;@Thanihaichelvan2018]. The effect of metallic nanotubes increasing the off current of a device channel is illustrated by channel 1 in @fig-solvent-tx-lg. The larger subthreshold slope is likely due to increased mobility from a denser nanotube network in surfactant-deposited films [@Rouhi2011], as seen in @fig-afm-morphology.
+
+When steam is used for surfactant deposition of films, the resulting devices showed highly consistent channel-to-channel electrical properties. As the carbon nanotube films on these devices are relatively dense, as seen in @fig-afm-morphology, we know that the network is well above the percolation threshold. As many carbon nanotube pathways connect across the channel in parallel, small variations in the network morphology have less of an impact on the overall channel behaviour [@Thanihaichelvan2018]. We also see from @tbl-histogram-parameters that the range of bundle sizes is relatively low in the steam-deposited films used in these devices. The low range of bundle sizes means the semiconducting-metallic nanotube ratio is far more consistent for these devices, leading to more consistent electrical device characteristics. Being able to achieve consistent subthreshold regime behaviour between channels on the same device is a desirable attribute for reliable real-time multiplexed biosensing [@Kauffman2008; @Heller2009; @Gao2010].
+
+All channels characterised had a positive threshold voltage ($V_{th}$). The threshold voltage was largest and most consistent for steam-assisted surfactant-deposited films. The marked increase in $V_{th}$ for channel measurements from surfactant-deposited devices with steam present relative to other channel measurements indicates $p$-doping of the carbon nanotubes has occurred[@Kang2005; @Heller2008; @Thanihaichelvan2018]. It is highly likely the dopant is present due to the steam deposition, and may be related to the large contamination peak for steam-deposited films seen in @fig-afm-morphology and @fig-remaining-histogram. One possibility is that this dopant is residual surfactant, which can $p$-dope carbon nanotubes and lead to enhanced $p$-doping from adsorped oxygen and water [@Kane2014; @Nonoguchi2018]. We have seen that steam prevents bundling of carbon nanotubes during deposition. This effect is likely due to persistence of the surfactant keeping nanotubes separate during this process. Presence of surfactant may also explain the lowered subthreshold slope and therefore mobility of the surfactant-deposited devices with steam relative to the surfactant-deposited devices without steam. The analysis by Kane *et al.* shows that the thermal annealling at 150$^\circ$C used in this work to remove residual surfactant is likely inadequate for this purpose [@Kane2014].
+
+::: {#fig-buffer-effect-on-backgate layout="[[47.5,-5,47.5]]"}
+
+![](figures/ch5/Q35C3_nobuffer.png){#fig-no-buffer}
+
+![](figures/ch5/Q35C3_buffer.png){#fig-50uL-buffer}
+
+Backgated transfer sweeps were taken of an single unencapsulated device with a 300 nm SiO$_2$ layer and steam assisted surfactant-deposited carbon nanotube network channels before and after being covered in $50 \mu$L 1XPBS electrolyte.
+:::
+
+@fig-buffer-effect-on-backgate shows the behaviour of an unencapsulated backgated device with a 300 nm SiO$_2$ layer before and after being covered by 50 $\mu$L of 1XPBS (phosphate buffered saline). The on-off ratio and hysteresis of the channels increase significantly. The presence of water increases hysteresis through introducing charge traps at the silicon dioxide surface around the carbon nanotubes and at the surface of the nanotubes themselves. The use of alternative transistor dielectrics and/or device functionalisation could potentially be used to reduce this hysteresis, as the time variation in threshold voltage due to hysteresis is unwanted for biosensing work [@Kim2003; @Lee2007; @Franklin2012; @Ha2014].  The electrical double layer formed by the electrolyte at the surface of the carbon nanotubes will also have contributed to the observed change in electrical properties, as it screens surface charge present on the surface around the nanotubes [@Heller2010].
+
+There is also a significant increase in current leakage to the backgate for larger applied voltages, despite the electrolyte having no visible physical contact with the silicon backgate or copper plane. This leakage current may simply be due to an increase in relative humidity around the device due to the presence of water [@Conseil2014].
+
+### Graphene Devices
+
+::: {#fig-pristine-graphene layout="[[47.5,-5,47.5], [47.5,-5,47.5]]"}
+
+![](figures/ch5/JG098_pristine_TXLG01_5mVstep_220920_norinse.png){#fig-graphene-transfer-1}
+
+![](figures/ch5/JGQ00D6_pristine_TXLG01_5mVstep_220914_norinse.png){#fig-graphene-transfer-2}
+
+![](figures/ch5/JG098_pristine_transfer_sweep_comparison.png){#fig-graphene-transfer-comparison-1}
+
+![](figures/ch5/JGQ00D6_pristine_transfer_sweep_comparison.png){#fig-graphene-transfer-comparison-2}
+
+These figures show liquid-gated transfer characteristics of channels from two AZ$^\circledR$ 1518 encapsulated graphene devices. In (a) and (b), the characteristics of working device channels upon initial exposure to 1XPBS are displayed alongside gate current. The transfer characteristics of channel 1 in (a) and channel 5 in (b) after various degrees of exposure to 1XPBS are shown in (c) and (d) respectively.
+:::
+
+Graphene devices were electrically characterised in the manner described in @sec-electrical-characterisation and analysed using the Python code discussed in @sec-field-effect-transistor-analysis. 
+
+@fig-pristine-graphene shows the liquid-gated transfer characteristics of two graphene devices. These devices were fabricated prior to Jun 2021. Both devices exhibit the ambipolar characteristics typical of liquid-gated graphene devices [@Heller2009a;@Heller2010; @Xia2010; @Kireev2017]. As with the carbon nanotube network devices, leakage current remained below $\sim$ 1 $\times$ $10^{-7}$ V across both the forward and reverse sweep. Hysteresis between the forward and reverse sweep is caused by trapping of charge within and on the surface of the SiO$_{2}$ dielectric [@Bartolomeo2011]. The major Dirac point for these devices is slightly to the right of V$_{\textrm{Dirac}} \approxeq$ 0 V, which indicates $p$-doping of the channel. This slight $p$-doping is likely a result of a adsorption of oxygen and water from the air and residue resist from photolithography [@Cheng2011; @Shin2012; @Kireev2017].
+
+Some devices exhibited a double-minima feature, indicating the presence of two Dirac points. This effect arises due to doping of graphene by the metal contacts. In shorter length channels, metal doping affects the entire channel length, leading to a consistent Fermi level and a single Dirac point. However, for longer channel lengths like ours, the doping effect from metal contact no longer reaches the entire channel, leading to a difference in Fermi level between the graphene in the channel and graphene under the metal contact. The difference in Fermi levels results in the presence of a second Dirac point [@Bartolomeo2011; @Feng2014; @Peng2018]. The global minimum of the transfer characteristic can be referred to as the 'major' Dirac point.
+
+@fig-pristine-graphene also shows the effect of 1XPBS on the graphene channels. The channels were measured on exposure to 1XPBS, after exposure to 1XPBS for one hour, and after the device surface was rinsed and 1XPBS was replaced in the well one time, two times and three times successively. A slight leftward shift of the major Dirac point was observed. This effect is possibly a result of gate bias stress, where successive transfer sweeps introduce charge traps to the graphene layer and alters the current level at a given gate voltage [@Bargaoui2018; @Noyce2019]. Kireev *et al.* found that a series of liquid-gated sweeps also reduced the size of the second Dirac point, and suggested that it indicated the gate current was removing atmospheric contaminants from the graphene surface via current annealing [@Kireev2017]. This could be explained as the removal of contaminants causing improved contact between the metal and graphene surface, and thus increasing metal doping and consistency of the Fermi level across the channel. If the contaminants removed are $p$-dopants, then this effect could also explain the leftward shift of the major Dirac point.
+
+```{r}
+#| label: setup2
+#| include: false
+library(tidyverse)
+library(kableExtra)
+
+graphene_device_parameters <- read.csv("tables/ch5/graphene_device_parameters.csv", sep=",")
+graphene_device_parameters <- graphene_device_parameters[rowSums(is.na(graphene_device_parameters)) == 0,]
+```
+
+```{r}
+#| tbl-cap: Average on-off ratio and major Dirac point voltage for AZ® 1518 encapsulated liquid-gated graphene transistor channels at various stages of exposure to 1XPBS. Electrical characteristics were taken of 6 channels total, three channels from each of two devices.
+#| label: tbl-graphene-parameters
+
+graphene_device_parameters %>% 
+  kable(
+    booktabs = TRUE, #LaTeX "booktabs formatting"
+    linesep = "", #no linespace
+    align = c(rep("l", 1), rep("c", 5)), #aligns col 1 left, all others center
+    col.names = c("", "1XPBS: Initial", "1XPBS: After 1 hr", "1XPBS: Rinse"), 
+    escape = FALSE)
+```
+
+@tbl-graphene-parameters shows the on-off ratio and major Dirac point voltage of the graphene devices. Apart from the previously-mentioned slight leftward shift of the major Dirac point, these values were highly consistent before and after exposure to 1XPBS.
+
+##	Real-Time Salt Concentration Sensing with Phosphate Buffered Saline {#sec-dummy-sensing}
+
+All devices analysed in this section were fabricated using steam-assisted, surfactant-deposited carbon nanotube network films.
+
+### Control Series and Baseline Drift {#sec-baseline-drift}
+
+The total interval for the control series was 1800 s, with 20$\mu$L 1XPBS additions at 100 s, 200 s and 300 s, and 20$\mu$L subtractions at 400 s, 500 s and 600 s. Devices were left untouched over the next 1200 s to allow the current level to settle. @fig-transfer-sweep shows the transfer sweep of a single channel of a steam-assisted surfactant-deposited device encapsulated with SU8, fabricated after Jun 2023. The threshold voltage of the channel is $V_{\textrm{th}}$ = 140 mV, and the voltage corresponding to minimum current is $V_{\textrm{gap}}$ = 310 mV. The variable symbol V$_{\textrm{gap}}$ denotes the center of the transistor bandgap, has been labeled in this manner to be consistent with previous work [@Heller2009].
+
+::: {#fig-salt-conc-control-series-SU8 layout="[[45,-5,50], [-25,50,-25]]"}
+
+![](figures/ch5/Q2C10ch8custom.png){#fig-transfer-sweep}
+
+![](figures/ch5/Q2C10_with_fitted_curves.png){#fig-linear-fit}
+
+![](figures/ch5/Q2C10_with_fitted_curves_exp.png){#fig-exp-fit}
+
+The two gate voltages used during the control series in (b) are marked on the transfer characteristic in (a), where the transfer curve axis has been scaled so as to be centered around the minimum of the reverse sweep. The linear fits to the control series in (b) from 1200 s onwards had R squared values of 0.78 and 0.70 for the traces with gate voltage $V_{\textrm{lg}}-V_{\textrm{gap}}$ = $-200$ mV and $V_{\textrm{lg}}-V_{\textrm{gap}}$ = $-150$ mV respectively. The exponential fits in (c) from $0-1200$ s had R squared values of 0.71 and 0.93 for the $V_{\textrm{lg}}-V_{\textrm{gap}}$ = $-200$ mV and $V_{\textrm{lg}}-V_{\textrm{gap}}$ = $-150$ mV traces respectively.
+:::
+
+@fig-linear-fit shows two control series performed using the same channel on different days, with a different gate voltage used during each series. In both series, there is no clear stepwise response to any addition or subtraction of 1XPBS, as expected. We see that the current has a period of rapid decay followed by slower baseline drift, which has been observed previously for parallel arrangements of single carbon nanotubes in air or vacuum [@Lin2006; @Noyce2019]. This effect results from changes in the occupancy of charge traps in and around the substrate and carbon nanotubes. The magnitude of baseline drift is lower for our devices than for those characterised by Noyce *et al.*, which may be a result of numerous device and setup differences which affect the presence of charge traps. These differences include liquid-gating instead of back-gated, the use of a network of carbon nanotubes instead of single nanotubes, a different channel length, the use of a 300 nm instead of 90 nm SiO$_2$ layer, and the use of an asymmetric, liquid-gated transfer sweep over a shorter voltage range to characterise devices before each control series was measured [@Noyce2019]. 
+
+As a first approximation to the longer time constant exponentials discussed by Noyce *et al.*, linear fits were performed on each control series from $1200-1800$ s. The gradient of the $V_{\textrm{lg}}-V_{\textrm{gap}}$ = $-200$ mV gated control series was $m_{1} = -0.95\pm0.02$ pA/s, while the gradient of the $V_{\textrm{lg}}-V_{\textrm{gap}}$ = $-150$ mV gated control series was $m_{2} = -0.69\pm0.02$ pA/s. The equations for the two linear fits were proportional to each other, with $m_{2}t + b_{2} = (0.73 \pm 0.03)\times (m_{1}t + b_{1})$. This indicates a relationship between the voltage used to gate the devices and the degree of longer-term baseline drift. This effect is likely a consequence of gate bias stress, where gating introduces charge traps to the channel over time and reduces drain current. The more negative the applied bias, the larger the amplitude of the longer-term drift [@Bargaoui2018]. 
+
+When the longer-term linear fits were subtracted from the raw data, the remaining dataset followed a exponential decay trend for both control series. @fig-exp-fit shows exponential fits to the remaining curve from $0-1200$ s. Both exponentials had a characteristic time constant of $\tau = 300 \pm 20$ s, indicating this rate of decay is independent of the gate voltage used to gate the transistor. They are therefore also proportional to each other, with $a_{2}\exp(-t/\tau) = (2.39\pm0.05)\times a_{1}\exp(-t/\tau)$. The $V_{\textrm{lg}}-V_{\textrm{gap}}$ = $-200$ mV measurement was performed 3 days after the $V_{\textrm{lg}}-V_{\textrm{gap}}$ = $-150$ mV measurement. It seems that the amplitude of the exponential term is history dependent and reduced with each subsequent control series. This behaviour is unlike that of the devices characterised by Noyce *et al.*, where the amplitude of the initial decay exponential remained the same after a initial reset gate sweep. It therefore appears that the sweep performed on these devices before measurement is insufficient to redistribute charges in trap states and reset the baseline drift, which could be a consequence of being liquid-gated instead of back-gated, being asymmetric or being over a shorter voltage range [@Noyce2019].
+
+::: {#fig-salt-conc-control-series-AZ1518 layout="[[40,-5,55], [-22.5,55,-22.5]]"}
+
+![](figures/ch5/Q31C1_absolute_values_without_gate_current.png){#fig-transfer-sweep-AZ1518}
+
+![](figures/ch5/Q31C1_with_fitted_curves.png){#fig-linear-fit-AZ1518}
+
+![](figures/ch5/Q31C1_with_fitted_curves_exp.png){#fig-exp-fit-AZ1518}
+
+The absolute-value transfer characteristics for the channels from Device 1 and Device 2 used in the control series in (b) are shown in (a), coloured green and purple respectively. The transfer curve axis has been scaled so as to be centered around the minimum of the reverse sweep, or in the case of Device 2, the centre point between the voltages where current drops to zero in the reverse sweep. The gate voltages used for each device during the control series in (b) are marked on the transfer characteristics in (a) in the same colour as their corresponding device. The linear fits to the control series in (b) from 1200 s onwards had R squared values of 0.96 and 0.67, and the exponential fits in (c) from $0-1200$ s had R squared values of 0.94 and 0.92 for Devices 1 & 2 respectively.
+:::
+
+@fig-transfer-sweep-AZ1518 shows channel transfer characteristics from two different steam-assisted surfactant-deposited, AZ$^\circledR$ 1518 encapsulated devices fabricated in different device batches. The central feature in the transfer characteristic in device 2 represents absolute-value measurements of 'negative current'. These are unphysical measurements which come from equipment error and can be treated as zero current passing through the channel, and therefore V$_{\textrm{gap}}$ is located in the center of this region. Device 1, with the channel characteristic curve shown in green, was fabricated in Mar 2023. Device 2, with the channel characteristic curve shown in purple, was fabricated after Jun 2023. Device 2 was flood exposed, rinsed with AZ$^\circledR$ 326 developer and annealed at $150^\circ$C before measurement. When taking control series measurements, the devices were gated so that the current level for each control series would be as similar as possible, as illustrated by the dotted lines in @fig-transfer-sweep-AZ1518.
+
+As in @fig-linear-fit, linear fits were performed on each control series from $1200-1800$ s, shown in @fig-linear-fit-AZ1518. The gradient of the control series corresponding to Device 1 was $m_{1} = -8.2\pm0.1$ pA/s, while the gradient of the control series corresponding to Device 2 was $m_{2} = -6.6\pm0.2$. Again, the equations for the two linear fits were proportional to each other, where $m_{2}t + b_{2} = (0.81 \pm 0.03)\times (m_{1}t + b_{1})$, despite being different channels from a different device batch. This result indicates that gate bias stress has the same effect on baseline drift on channels of different devices fabricated in the same manner.
+
+As with the SU8 device, subtracting the linear fit resulted in a a dataset which followed an exponential trend. @fig-exp-fit-AZ1518 shows exponential fits from $0-1200$ s to the remaining curves from the AZ$^\circledR$ 1518 devices. The time constants for these exponentials were dissimilar, with a time constant of $\tau = 141 \pm 3$ s for Device 1 and a time constant of $\tau = 408 \pm 11$ s for Device 2.
+The exponential amplitudes had opposite sign, with the first indicating an increase in net positive trapped charge and the latter indicating an increase in net negative trapped charge. It appears the difference in processing between the devices has changed the net charge of the traps initially present when measuring the control series.
+
+From this analysis it appears that the baseline drift for the liquid-gated carbon nanotube devices can be accurately approximated as a combination of a exponential and linear term. The linear term appears to be consistent across channels of a particular device type, with the size of this term increasing with increasingly negative gate bias. The time constant of the exponential term appears to be intrinsic to the channel being measured. 
+
+### Sensing Series {#sec-salt-conc-series}
+
+A salt concentration sensing series were performed from 1800 s onwards, directly after the control series. Salt concentration testing was done to confirm the fabricated devices were sensitive to small environmental changes in their pristine state, to check for spurious signals, and to ensure gate current leakage or other confounding factors were not contributing to sensing responses. The PDMS well contained 80 $\mu$L 1X PBS at 1800 s. During the series, successive additions of deionised water were made to reduce the concentration of PBS in the well. An initial 1X PBS addition was performed at 2100s, to confirm no changes occurred during the control series that would interfere with sensing. All additions to the well in the sensing series and resulting changes to the PBS concentration in the well are shown in @tbl-salt-conc-series. 
+```{r}
+#| label: setup3
+#| include: false
+library(tidyverse)
+library(kableExtra)
+
+salt_conc_series <- read.csv("tables/ch5/salt-conc-series.csv", sep=",")
+salt_conc_series <- salt_conc_series[rowSums(is.na(salt_conc_series)) == 0,]
+```
+
+```{r}
+#| tbl-cap: This table shows the times at which 20 µL additions were made to the PDMS well, with 300 s between each addition. The concentration in the well after each addition and the change in concentration after each addition are also shown. The well contained 80 µL of 1X PBS at 1800 s.
+#| label: tbl-salt-conc-series
+
+salt_conc_series %>% 
+  kable(
+    booktabs = TRUE, #LaTeX "booktabs formatting"
+    linesep = "",    #no linespace
+    align = c(rep("l", 1), rep("c", 6)), #aligns col 1 left, all others center
+    col.names = NULL #removes csv column names
+  ) %>%
+  add_header_above(c(" " = 1, "1X PBS Addition" = 1, "DI Water Additions" = 5), bold = FALSE)
+```
+
+::: {#fig-salt-conc-sensing layout="[[50,50], [50,50], [-25,50,-25]]"}
+
+![](figures/ch5/NTQ31C1_pristine_saltconc_sample_230324.png){#fig-salt-conc-no-norm}
+
+![](figures/ch5/NTQ31C1_pristine_saltconc_sample_230324_detrend_trunc_arrows_normalised.png){#fig-salt-conc-detrend}
+
+![](figures/ch5/NTQ31C1_pristine_saltconc_sample_230324_filtered_detrend_trunc_arrows_normalised_(2).png){#fig-salt-conc-detrend-filter}
+
+![](figures/ch5/NTQ31C1_mean_simple_difference_before_and_after_step_filtered_concentrations.png){#fig-salt-conc-signal}
+
+![](figures/ch5/salt_conc_box_plot.png){#fig-salt-conc-box-plot}
+
+Various visualisations of a multiplexed salt concentration sensing series taken from a single device. In (a), the raw current measurements for each channel are shown alongside gate current. The same measurements after despiking, removal of baseline drift and normalisation to initial current are shown in (b), (c) shows the data in (b) after being processed with a moving median filter, and (d) shows the signal changes in (c). The signal data in (d) is shown in box plot format in (e) alongside a fit to the median change in signal for each addition. The R squared value for the fit was 0.86.
+:::
+
+@fig-salt-conc-no-norm shows a multiplexed salt concentration sensing series from the channels of a single AZ$^\circledR$ 1518 encapsulated device, measured with the NI-PXIe. The gate voltage used was 0.0 V; this meant current measurements were well above the magnitude of the subthreshold device current. Gate current measurements did not exceed 1 nA for the SU8 encapsulated devices, and did not exceed 10 nA for the AZ$^\circledR$ 1518 devices. At each of the deionised water addition times, the current traces for at least two out of six channels showed a sharp, transient increase in current followed by a return to an increased baseline. This baseline follows the downwards drift discussed in @sec-baseline-drift. It is well established that changing the salt concentration of the liquid gate has an electrostatic gating effect on the carbon nanotubes or graphene, and changes the transfer characteristics of the channel. This shift in transfer characteristic means we observe a realtime signal response to each addition [@Heller2009; @Heller2010; @Kireev2017].
+
+Following the discussion in @sec-baseline-drift, we can subtract the linear term approximating baseline drift ($mt$) for each channel from the data in @fig-salt-conc-no-norm to account for the downward drift. The mean current level just before 1800 s then becomes roughly constant. We then normalise each channel relative to their initial mean current level $I_{0}$. We also remove artifacts resulting from PXIe-2737 module lag, single datapoints which fall well below the current level of the immediately preceding and succeeding datapoints. This 'despike' process uses an interquartile range filter, as discussed in @sec-field-effect-transistor-analysis. The resulting dataset is shown in @fig-salt-conc-detrend. This figure shows that the signal-to-noise ratio remains roughly similar across all channels of the device. However, the behaviour of the initial transient increase with each addition is highly variable across channels and between additions for a single channel.
+
+As measurement of the highly variable initial transient is not useful for robust sensing purposes, we can apply a moving median filter to the dataset, discussed further in @sec-field-effect-transistor-analysis. The filtered data is shown in @fig-salt-conc-detrend-filter. Noise and initial transients are removed completely, while the clearly defined step to a new current baseline is retained. Using the realtime data in @fig-salt-conc-detrend-filter, a plot of signal against addition can be created using the method described in @sec-field-effect-transistor-analysis, shown in @fig-salt-conc-signal. This presentation of the data allows us to see the increase at each step relative to $I_{0}$. 
+
+Intriguingly, even though the largest change in PBS concentration occurred at the first deionised water addition (see @tbl-salt-conc-series), there was very little signal change across all channels, while a relatively large change occurred at the second addition. The logarithm of final salt concentration has previously been shown to be proportional to conductance change in the linear on-regime [@Heller2010]. @fig-salt-conc-box-plot shows the signal change presented in terms of this logarithmic relationship. We see that the median values of the first two additions do not line up well with the overall logarithmic trend. Insufficient mixing in the tightly enclosed PDMS well environment for the first few additions may be responsible for this result. Subsequent additions may improve mixing in the well, leading to the change in concentration at the surface of the channel being more representative of the overall concentration in the well.
+
+::: {#fig-salt-conc-sensing-2 layout="[50,50]"}
+
+![](figures/ch5/NTQ31C1_pristine_saltconc_sample_230324_detrend_trunc_arrows_normalised_2.png){#fig-salt-conc-detrend-2}
+
+![](figures/ch5/NTQ31C1_pristine_saltconc_sample_230324_filtered_detrend_trunc_arrows_normalised.png){#fig-salt-conc-detrend-filter-2}
+
+If normalised so that the size of signal change is measured relative to the final instead of initial current, @fig-salt-conc-detrend and @fig-salt-conc-detrend-filter can be shown as (e) and (f) respectively.
+:::
+
+In @fig-salt-conc-detrend and @fig-salt-conc-detrend-filter, we see that the drift behaviour of individual channels begin to significantly diverge from one another from roughly the second deionised water addition onwards. This deviation from the baseline drift subtracted from the raw data occurs either because the linear fit is only a first-order approximation which weakens with time, or because the additions themselves affect the drift behaviour. Displaying the data as discrete signal changes, as in @fig-salt-conc-signal, is one way of excluding these deviations (see @sec-field-effect-transistor-analysis). An alternative way of presenting the signal changes, by normalising relative to both $I_{0}$ and the final current reading, is shown in @fig-salt-conc-sensing-2. This approach is useful for comparing unaccounted-for drift behaviour as well as the initial transient responses to additions between the channels of a multiplexed device. 
+
+@fig-salt-conc-detrend-2 demonstrates that the transient increases are consistently largest for channels in the center of the device, and smaller for those on the device edges (channels 1 & 2). This spatially-dependent behaviour may indicate responses are determined by the location of placement of the water additions along the surface of the electrolyte in the well. From @fig-salt-conc-detrend-filter-2, where the transient responses are largely filtered out, we see clearly that the signal response relative to drift is highly consistent between channels. This result demonstrates that once unaccounted-for drift behaviour is removed, the signal size in response to each addition is highly consistent between channels. Slight deviations from the overall trend, such as for channels 5, 6 and 7 at deionised water addition 2, and for channels 5 and 6 at deionised water addition 5, are likely due to the large transient spikes at these channels not being completely filtered out by the median filter.
+
+#### Signal-to-Noise Ratio {.unnumbered}
+
+::: {#fig-salt-conc-SNR layout="[50,-5,45]"}
+
+![](figures/ch5/saltconc_initial_additions.png){#fig-salt-conc-SNR}
+
+![](figures/ch5/Q2C10ch8custom.png){#fig-transfer-sweep-2}
+
+The signal-to-noise ratio of the first deionised water addition for the traces seen in @fig-salt-conc-control-series-SU8 are shown in (a). For convenience, the transfer characteristics of the three channels in @fig-salt-conc-control-series-SU8, showing the two gate voltages used for measurements of a single SU8-encapsulated channel, are shown again in (b). 
+:::
+
+To compare signal-to-noise ratio between different gate currents and device configurations, the initial additions post-1800 s from the current traces in  @fig-salt-conc-control-series-SU8 that were discussed earlier in @sec-baseline-drift are shown in @fig-salt-conc-SNR. Previous work on the signal-to-noise ratio for liquid-gated, encapsulated carbon nanotube devices suggests that gating devices close to $V_{gap}$ should give the largest signal-to-noise ratio for salt concentration additions [@Heller2009]. However, as shown by @fig-salt-conc-control-series-SU8, this relationship was not consistently observed. This discrepancy could be a result of the use of a network of carbon nanotubes rather than a single nanotube; gating may have less of an impact on noise when a network morphology is used. Alternatively, it could be a result of a lack of mixing in our static well setup leading to inconsistent signal sizes with concentration change. Heller *et al.* used a flow cell during their signal-to-ratio work [@Heller2009].
+
+## Conclusion
+
+To ensure fabricated transistors were suitable for biosensing purposes, the morphology and electrical properties of the pristine carbon nanotube and graphene transistors were investigated. 
+
+The morphology of the carbon nanotube networks were found to have a significant impact on the electrical characteristics of the devices, which was determined through comparison of the height profile of the carbon nanotube network and the key electrical parameters of a range of carbon nanotube devices. When networks were highly bundled ($>90$ %), there was a large range of carbon nanotube bundle diameters present in the network. This large variation in the size of conducting pathways resulted in a wide range of on-off ratios and threshold voltages for the liquid-gated devices created using these carbon nanotube films. In contrast, devices using films fabricated with a relatively low percentage of bundling ($<75$ %) showed highly consistent on-off ratios and threshold voltages, along with low hysteresis, due to the relatively consistent bundle diameters and high density of these networks. These low-bundling networks were found to have a mean bundle distribution height of $3.2 \pm 1.1$ nm. When performing multiplexed sensing, consistent channel behaviour is highly desirable since comparing sensing behaviour between channels is more straightforward.
+
+However, atomic force microscope images of low bundling networks also indicated that these networks have the most contamination present on the surface of the film relative to carbon nanotubes. This is possibly the cause of the increased threshold voltage of devices with films deposited with steam present relative to those using films fabricated without steam. The steam deposition may introduce $p$-dopants to the carbon nanotubes, which could be due to surfactant left over from the deposition process. Since the presence of surfactant could negatively impact biosensing, techniques to remove contaminants should be explored in more detail. Thermal annealing of carbon nanotube films at high temperature is one approach that could be taken to resolve this issue, which is discussed further in @sec-future-work. The presence of electrolyte on the surface of a backgated transistor was also found to significantly adversely affect its electrical characteristics.
+
+Constant voltage real-time measurements of the carbon nanotube devices had a characteristic drift that could be modelled using a exponential and linear term. The linear term of baseline drift appeared to be characteristic to the type of device measured, where the equation of the trendline for linear drift was proportionally related between channels fabricated in the same manner. An increase in device current level therefore meant an increase in the degree of linear drift. The time constant of the exponential term appeared to be characteristic to the particular channel used, with a time constant of $\tau = 300 \pm 20$ s for the SU8-encapsulated channel characteristed, and time constants of $\tau = 141 \pm 3$ s and $\tau = 408 \pm 11$ s for the AZ$^\circledR$ 1518 devices characterised.
+
+Salt concentration sensing series indicated that the carbon nanotube transistor devices were highly sensitive to environmental changes and therefore suitable for sensing work. Successive additions of deionised water to the 1X PBS present in the well gave signal responses of up to 2.5 % above the control response. The signal response was found to be proportional to the logarithm of concentration, giving a fit to the median response sizes with an $R^2 = 0.86$. Deviations from this trend can possibly be explained by the enclosed sensing environment preventing sufficient mixing of electrolyte concentrations within the PDMS well. It was also seen that the relative signal size to baseline drift was highly consistent between channels. This is a promising result when it comes to ensuring consistent multiplexin, but it remains to be seen if this behaviour carries over to sensing with biofunctionalised devices.
+
+Graphene devices were often found to possess a double-minima feature, which appears to be the result of a lack of doping from the metal contacts in the center of the device channels. These double Dirac points are unlikely to have an significant effect on the sensing behaviour of graphene devices. The graphene device characteristics were found to be consistent after 1 hour exposure to 1X PBS with minimal drift, with an on-off ratio of 5 and major Dirac point voltage of 0.3 V. There was some indications from the transfer characteristics that $p$-dopants were present on the graphene surface.
+
