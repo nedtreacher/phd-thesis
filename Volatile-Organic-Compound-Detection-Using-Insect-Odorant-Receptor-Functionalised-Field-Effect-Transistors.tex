@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, breakable, sharp corners, borderline west={3pt}{0pt}{shadecolor}, enhanced, boxrule=0pt, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, frame hidden, breakable, enhanced, interior hidden, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -872,20 +872,45 @@ Figure~\ref{fig-MFC-calibration-curves}. The flow through the chamber
 was offset from the nominal flow reading from the mass flow controllers,
 with a strong linear relationship between the two measurements. A linear
 least-squares fit was performed, where coefficients \(m\) and \(b\) were
-found for the linear relationship displacement flow
-\(= \space m \space \times\) nominal flow \(+ \space b\). A 95\%
-confidence interval for the fit was also obtained. 200 sccm: p1 =
-(1.14\$\pm\(0.07) p2 = (-6\)\pm\(8) 500 sccm: p1 = (1.14\)\pm\(0.06) p2 = (-6\)\pm\$16)
+found for the linear relationship \(D = md + b\), where \(d\) is nominal
+flow from the MFC and \(D\) is measured displacement flow. A 95\%
+confidence interval for the fit was also obtained. For the 200 sccm MFC
+flow through the carrier line, values of \(m = 1.14\pm0.07\) and
+\(b = -6\pm8\) were obtained, while for the 500 sccm MFC flow through
+the dilution line, values of \(m = 1.14\pm0.06\) and \(b = -6\pm16\)
+were obtained.
 
-By disconnecting the flowmeter from the PID micropump and closing all
-valves out of the manifold except the valve exiting to the flowmeter
-(see Figure~\ref{fig-stage-2-pid}), it was possible to then check the
-flow rate measured by the PID flowmeter relative to the actual flow
-passing through the system. For example, a 200 sccm flow rate through
-the dilution line from the Tylan MFC, corresponding to a \(\sim\) 230
-sccm actual flow rate through the chamber, was measured as a \(\sim\)
-140 sccm flow rate by the flowmeter. Subsequent measurements showed that
-the flowmeter
+It appears that the offset between the measured displacement flow and
+nominal output flow is not due to leaks in the system, since the offset
+indicates measured flow exceeds the nominal flow. Instead, the offset
+appears to be a systematic error introduced by the electronics or
+software used to record the output flow from the MFCs. The identical
+offset between measured and nominal flow observed for each MFC, even
+when placed on different lines to the chamber, further strengthens the
+likelihood of the offset being due to the control side of the system.
+Furthermore, due to the identical offset for each of the carrier and
+dilution MFCs, the same offset should apply to a mixture of flows on
+each line. For example, a 200 sccm nominal flow through the dilution
+line from the 500 sccm full-scale MFC should have a roughly identical
+actual flow rate to a 50 sccm nominal flow through the dilution line and
+a 150 sccm flow through the carrier line. In this work, tests performed
+with the vapour delivery system have flow rate stated in terms of their
+nominal value, but the reader should keep in mind the \(1.14 \times\)
+offset from actual flow.
+
+For example, a 200 sccm flow rate through the dilution line from the
+Tylan MFC, corresponding to a \(\sim\) 230 sccm actual flow rate through
+the chamber, was measured as a \(\sim\) 140 sccm flow rate by the
+flowmeter.
+
+Subsequent measurements showed that for flow rates \(\lesssim 75\) sccm
+on the flowmeter, the linear relationship breaks down. By disconnecting
+the flowmeter from the PID micropump and closing all valves out of the
+manifold except the valve exiting to the flowmeter (see
+Figure~\ref{fig-stage-2-pid}), it was possible to then check the flow
+rate measured by the PID flowmeter relative to the nominal flow. In this
+way, the actual rate of \(\lesssim 75\) sccm flows through the flowmeter
+could be obtained.
 
 \hypertarget{sensor-responses-to-vapour-flow}{%
 \subsection{Sensor Responses to Vapour
