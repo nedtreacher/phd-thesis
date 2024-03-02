@@ -1,47 +1,222 @@
+---
+keep-tex: true
+format: pdf
+latex_runs: 3
+---
+
+```{python}
+
+import re
+
+# Dictionary to map month abbreviations to numbers
+month_mapping = {
+    "jan": "1",
+    "feb": "2",
+    "mar": "3",
+    "apr": "4",
+    "may": "5",
+    "jun": "6",
+    "jul": "7",
+    "aug": "8",
+    "sep": "9",
+    "oct": "10",
+    "nov": "11",
+    "dec": "12"
+}
+
+# Read the content of the original .bib file with UTF-8 encoding
+with open("references.bib", "r", encoding="utf-8") as file:
+    bib_content = file.read()
+
+# Replace month abbreviations with numbers using a single regex
+pattern_month = r'month\s*=\s*{([a-z]+)},'
+def replace_month(match):
+    month_abbrev = match.group(1)
+    month_number = month_mapping.get(month_abbrev, month_abbrev)
+    return f'month = {{{month_number}}},'
+
+modified_content = re.sub(pattern_month, replace_month, bib_content, flags=re.IGNORECASE)
+
+# Replace "%" with "\%" when not preceded by a backslash
+modified_content = re.sub(r'(?<!\\)%', r'\\%', modified_content)
+
+# Write the modified content back to the original .bib file with UTF-8 encoding
+with open("references.bib", "w", encoding="utf-8") as file:
+    file.write(modified_content)
+```
+
 # Vapour Sensing System for Transistor Biosensing {#sec-vapour-sensing-biosensors}
 
-## Introduction
+## General Remarks
 
-Two LabView Virtual Instruments (VIs) were adapted from pre-existing VIs for operating the mass flow controllers and monitoring vapour flow into the device chamber, as well as monitoring temperature and humidity in the vapour delivery system's manifold. These VIs were named ""  A third VI was developed in parallel which combined the first two Virtual Instruments, alongside allowing the sequence of values to control the mass flow controllers.
+Through the adaptation of an existing setup, a custom vapour delivery system was developed to measure the response of field-effect biosensors to vapour. To achieve this goal, the new system needed to meet three requirements: 
 
-From Honours report:
-"""
-Figure 12 gives the right side of the front panel of the LabView VI sample with vapour.VI, which letsus preset an autonomously-performed vapour sensing sequence. Each row in each array module corresponds to a differennest step in this sequence. The 'howManySteps' module lets us set how many of these steps are performed. The 'Durations Array' module determines the length of time in seconds each step is performed over. The 'Carrier Flows Array' and 'Dilution Flows Array' modules let us set the carrier flow and dilution 
-flow, respectively, in standard cubic centimetres per minute (sccm) through the gas rig at each step. The carrier flow pushes analyte vapour into the vapour-sensing device chamber, while dilution flow is used to modify the flow behaviour of the analyte vapour entering the chamber. The vapour sensing sequence as depicted in Figure 12 was used for all vapour sensing runs in this investigation. At the end of the sequence, the data collected about the vapour sensing process was saved as an .lvm file.
-"""
+- The ability to automatically deliver a vapour to an enclosed environment in a controlled manner.
+
+- The ability to collect measurements from a sensor device within that environment.
+
+- The ability to collect data from off-the-shelf reference sensors monitoring the same environment, for comparison with data collected by the novel biosensor.
+
+The previously existing system had a limited ability to meet the first two requirements, but was not able to take reference measurements of vapour flow. To implement new elements that would enable the system to fulfill all three requirements, a two-step development approach was taken across the course of the thesis. The changes made with each step of the redesign are outlined in @sec-vapour-system-design. 
+
+Three mass flow controllers (MFC) were used to precisely control and monitor the flow of nitrogen into the system in units of standard cubic centimeters per minute (sccm). The manner in which these controllers were configured in the system is discussed in @sec-delivery-system. The reference sensors chosen were a photoionisation detector (Ametek Mocon) and relative humidity and temperature indicator (Telaire). The photoionisation detector is able to monitor a wide range of volatile organic compounds, but cannot monitor compounds with an ionisation energy exceeding 10.6 eV. This includes nitrogen, oxygen, carbon dioxide, argon and water [@PIDmanual; @Ionscience]. Therefore, the photoionisation detector (PID) should not respond to either ambient air or standard nitrogen flow through the detector. As we would also like to monitor the presence of water vapour in the system, we use the relative humidity indicator (RHI). The operation of these reference sensors is discussed further in @sec-reference-sensors. 
+
 ## Technical Notes
 
-### General Remarks
+### Delivery System {#sec-delivery-system}
 
-### Delivery System 
+![Image of the three mass flow controllers (MFCs) of the Te Herenga Waka - Victoria University of Wellington cleanroom vapour delivery system, each with a regulator to set the pressure at the MFC inlet. (1) is the 20 sccm full-scale flow MFC, (2) is the 200 sccm full-scale flow MFC, and (3) is the 500 sccm full-scale flow MFC.](figures/ch5/vapour_system_layout_2.png){#fig-mass-flow-controller-layout width=70%}
 
-### Control System
+![Image of the analyte bottle, used to hold a volatile compound which provides vapour to the carrier line, either through bubbling or headspace sampling.](figures/ch5/analyte_bottle.png){#fig-analyte-bottle width=70%}
+
+Three mass flow controllers and their associated regulators sit in an covered enclosure, seen from the front in @fig-mass-flow-controller-layout. These are used to control the nitrogen flow rate through two different lines towards the chamber, the carrier line and dilution line. These lines reconnect at a mixing point about a metre before the chamber. Flow through the carrier line passes through the analyte bottle and carries analyte vapour to the mixing point. The dilution line separately delivers flow to the mixing point, modifying the flow pushing the analyte vapour towards the chamber. The analyte bottle in the carrier line is shown in @fig-analyte-bottle. Each line consist of a mix of stainless steel and flexible PVC tubing, with various Swagelok fittings and valves. These valves include check valves, to ensure there is no backflow of vapour mass within the system. The electronic integration and programming of the mass flow controllers is described in @sec-control-system.
+
+### Reference Sensors {#sec-reference-sensors}
+
+![Image of the device chamber, reference sensors and other related components.  The components are labelled as follows: (1) Device chamber, (2) Photoionisation detector (PID), (3) Flowmeter from chamber to PID, (4) Micropump from chamber to PID, (5) Relative humidity and temperature monitor.](figures/ch5/vapour_system_layout_1.png){#fig-reference-sensor-layout width=70%} 
+
+Two reference sensors were added to the vapour delivery setup to compare the response to vapour by the fabricated sensor device with some reference signal. These reference sensors are a photoionisation detector (Ametek Mocon) and a relative humidity and temperature indicator (Telaire). The layout of these reference sensors (and their associated peripherals) relative to the device chamber is shown in @fig-reference-sensor-layout. These components are on a raised platform directly above the mass flow controller enclosure. Vapour flowing through the device chamber passes into a cylindrical manifold with three outlets. One outlet is the system exhaust, one flows into relative humidity indicator chamber, and one flows into the photoionisation detector. A dial-controlled micro diaphragm pump is used to set the flow rate from the manifold into the photoionisation detector, with a flowmeter used to monitor this flow rate.
+
+The electronic integration and programming of the relative humidity and temperature indicator is described in @sec-control-system. The photoionisation detector was connected to a laptop directly via USB, then controlled and monitored using the supplier-provided VOC-TRAQ II software package. 
+
+#### Relative Humidity and Temperature Indicator {.unnumbered}
+
+The relative humidity and temperature indicator used here is a capacitive humidity sensor [@Telairesensor]. It consists of a capacitor with a hygroscopic polymer as the capacitor dielectric. As room temperature water has a much larger dielectric constant than the polymer dielectric, absorption of water by the polymer leads to increased sensor capacitance [@capacitivesensor]. The Telaire sensor has then been calibrated so that the sensor capacitance, corresponding to the amount of moisture absorbed by the polymer and therefore the relative humidity, is translated by the sensor into an electronic signal. This signal can then be processed using the hardware and software described in @sec-control-system to give a value for the relative humidity. The sensor has a quoted relative humidity (RH) accuracy of $\pm 2.0$% when RH is below 80%, and has a quoted temperature accuracy of $0.5^\circ$C [@Telairesensor]. 
+
+The absolute humidity (AH), the mass of water vapour within a set volume, can be calculated using @eq-absolute-humidity, where $C = 2.16679$ gKJ$^{-1}$, $P_W$ is the water vapour pressure (in Pa) and T is the temperature (in K) [@humidityformula].
+
+$$
+AH = C\frac{P_W}{T}
+$$ {#eq-absolute-humidity}
+
+For temperatures between -20$^\circ$C and 50$^\circ$C, water vapour pressure $P_W$ (in hPa) can be approximated using @eq-water-vapour-pressure, where RH is relative humidity, T is temperature in $^\circ$C, $A = 6.116441$ hPa, $m = 7.591386$ and $T_{n} = 240.7263^\circ$C [@humidityformula].
+
+$$
+P_W = RH \times A \times 10^{(mT/(T+T_{n}))}
+$$ {#eq-water-vapour-pressure}
+
+#### Photoionisation Detector {.unnumbered}
+
+A photoionisation detector (PID) can be used to continuously monitor volatile organic compounds by measuring the extent to which vapour molecules passing through the detector can be ionised. A small percentage of vapour molecules flowing into the detector diffuse into a sensor cavity. This cavity is bounded on each side by a pair of electrodes. A lamp in the body of the detector radiates UV light through a window into this cavity. The vapour molecules have their outer-most electrons excited and removed when struck with these high-energy photons. The ionised molecules then drift towards the sensor cathode, while free electrons drift towards the sensor anode. This results in a current proportional to the concentration of vapour molecules in the chamber. The current can then be amplified for a signal readout. To be detected, the ionisation energy of the molecules being monitored cannot exceed the energy of the incident UV light. Therefore, molecules of clean air will not be detected. Likewise, volatile organic compounds with high ionisation energy $-$ such as methane $-$ will not be recognised by the PID. Conversely, if the energy is required to ionise a volatile of interest is relatively low, the PID will generally show a relatively large response to that volatile [@Ionscience; @PIDmanual]. 
+
+The photoionisation detector used in this work had a lamp energy of 10.6 eV, with a quoted response time of less than 2 seconds. Photoionisation detectors are designed to sensitively detect within a particular concentration range. These ranges can be stated in terms of the sensitivity of the detector to isobutylene, which is typically used to calibrate PID sensors. The range of the PID sensor used was 10 ppb $-$ 200 ppm isobutylene. With constant temperature and pressure, the quoted accuracy of the sensor is $\pm$ 3%. 
+
+The vapour of interest can be delivered to the PID either through diffusion or by means of a low-power pump. A micro diaphragm pump (Xavitech) was selected to pump the vapour from the chamber into the PID detector. This pump was selected to have a low maximum flow rate as the PID requires a inlet flow of less than 300 sccm. As the pump is controlled using a unlabelled dial, a flowmeter was used to independently measure the flow rate through the micropump into the PID.
+
+### Control System {#sec-control-system}
+
+The vapour delivery system was controlled and monitored from a laptop connected to a National Instruments USB-6009 multifunction data acquisition system (DAQ). This USB-6009 DAQ connected to the mass flow controllers and relative humidity and temperature indicator via a custom-designed circuit board manufactured by PCBway. The outputs and inputs of the USB-6009 DAQ were set using custom LabView software. These electronic and software components of the vapour delivery control system are described in more detail below.
 
 #### Electronics {.unnumbered}
 
+::: {#fig-vapour-sensor-pcb layout="[47.5,-5,47.5]"}
+
+![](figures/ch5/low_flow_config.png){#fig-low-flow}
+
+![](figures/ch5/high_flow_config.png){#fig-high-flow}
+
+Images of the vapour delivery control system circuit board, where (a) shows the low-flow configuration and (b) shows the high-flow configuration. Components are labelled as follows: (1) 9-pin carrier line port, (2) 9-pin dilution line port, (3) dilution port switch (determines which dilution line port is active), (4) 25-pin dilution line port. In (a), the 500 sccm full-scale MFC is connected at the 25-pin dilution line port, the 200 sccm full-scale MFC is connected at the 9-pin carrier line port and the red dilution port switch is towards "Tylan" (to the right). In (b), the 200 sccm full-scale MFC is connected at the 9-pin dilution line port, the 20 sccm full-scale MFC is connected at the 9-pin carrier line port and the red dilution port switch is towards "MKS" (to the left).
+:::
+
+![Circuit board schematic for controlling and monitoring both the mass flow controllers and the relative humidity and temperature sensor. The relative humidity and temperature sensor is connected to the circuit board via the T9602 footprint. The mass flow controllers connect to the board in two configurations. The first ("high-flow") configuration has the Tylan dilution and MKS carrier ports connected, with switch SW1 in the Tylan direction. The second ("low-flow") configuration has both MKS ports connected, with switch SW1 connected in the MKS direction. Resistors R1-R6 are all 10 kOhm, while R7-R8 are both 0 Ohm. The circuit board was designed using the KiCad Layout Editor.](figures/ch5/current_PCB.png){#fig-current-pcb-design width=95%}
+
+The control circuit board used to connect the mass flow controllers and relative humidity and temperature indicator to the NI USB-6009 is shown in @fig-vapour-sensor-pcb. Only one mass flow controller can be set to provide flow to a specific line, and so only two mass flow controllers can be operational simultaneously during testing with the vapour delivery system. The control circuit board allows the user to set which two mass flow controllers are to be used during a specific test run. @fig-high-flow shows the "high-flow" configuration, where the 500 sccm full-scale MFC is connected to the dilution line and the 200 sccm full-scale MFC is connected to the carrier line. @fig-low-flow shows the "low-flow" configuration, where the 200 sccm full-scale MFC is connected to the dilution line and the 20 sccm full-scale MFC is connected to the carrier line. The design for the circuit board is shown in @fig-current-pcb-design, showing the pinout to the USB-6009 and the various components used to connect the MFCs, relative humidity indicator, and the power supply for the MFCs.
+
 #### Software {.unnumbered}
 
+Two LabView Virtual Instruments (VIs) were adapted from pre-existing VIs for operating the mass flow controllers and monitoring vapour flow into the device chamber, as well as monitoring temperature and humidity in the vapour delivery system's manifold. These VIs were named "vapour-sensor-basic.vi" and "temp-and-humidity-basic.vi". A third VI was developed in parallel which combined the first two Virtual Instruments and allowed the user to set a sequence of values for the output flow from the mass flow controllers before an experimental run. This VI was named "vapour-sensor-sequence-timestamped.vi". Flow rate, relative humidity and temperature data were then saved as .lvm files. The LabView VIs described here are available on request.
 
-## Design
+## Design {#sec-vapour-system-design}
 
-### Stage I Design
+### Initial Design
+
+![P&ID of the original vapour delivery system](figures/ch5/PID_V0.png){#fig-original-pid width=100%}
+
+::: {#fig-original-setup layout="[[40,-5,60], [-26.25,47.5,-26.25]]"}
+
+![](figures/ch5/original_system_front.png){#fig-original-front}
+
+![](figures/ch5/original_system_back.png){#fig-original-back}
+
+The original vapour delivery system setup, where (a) shows the front of the system, including the device chamber, analyte bottles and four-way valve, and (b) shows the back of the system, including the mass flow controllers and solenoid valves.
+:::
+
+![The control circuit board for the original vapour delivery system.](figures/ch5/original_pcb.png){#fig-original-pcb width=55%}
+
+The initial design of the vapour delivery system, as shown in @fig-original-pid, was relatively simple. No reference sensors were included in the setup, and only one channel could be characterised without opening the chamber and changing the position of the device. However, as constructed it worked well as a self-contained system, which was able to deliver vapour to a device channel while measuring current across the channel. The original system is shown in @fig-original-setup, and the circuit board used to control it is shown in@fig-original-pcb  A 500 sccm full-range MFC (Tylan) was placed on the dilution line, and a 200 sccm full-range MFC (Tylan) was placed on the carrier line. A glass container for analyte was present on the carrier line, with a vapour trap upstream to collect any backflow. The vapour trap was removed in later iterations due to the presence of a check valve to prevent backflow. The device chamber and mass flow controllers were connected to a laptop and an Agilent 4156C semiconductor parameter analyser and controlled using LabView.
+
+### Stage I Design {#sec-vapour-system-design-1}
+
+![P&ID of the Stage I vapour delivery system.](figures/ch5/PID_V1.png){#fig-stage-1-pid width=100%}
+
+![Conceptual 3D Model of Stage I vapour delivery system. The model was made in Autodesk 360 by Alex Puglisi, School of Chemical and Physical Sciences, Te Herenga Waka - Victoria University of Wellington.](figures/ch5/cad_V1.png){#fig-stage-1-cad width=100%}
+
+The first stage of the vapour delivery system redesign, as shown in @fig-stage-1-pid and @fig-stage-1-cad was implemented in Nov 2021. This system introduced the ability to use a 20 sccm full-range MFC (MKS Instruments) for carrier line flow and a 200 sccm full-range MFC (MKS Instruments) for either carrier or dilution line flow, to give better control when using low flow rates. The reference sensors were also implemented, with each sensor connected in parallel to the chamber exhaust. Through testing the system with ethanol and acetone as analytes, the following issues with this implementation of the setup were identified:
+
+- With the system connected to the lab supply of nitrogen, pressure changes in the line due to nitrogen use elsewhere in the lab impacted the pressure at the MFCs and the flow through the lines.
+
+- The pressure indicator used for the device chamber had a much wider range than the pressure reached before nitrogen began to leak out of the PVC tubing; this meant pressure changes in the chamber, resulting from closing the exit valves while nitrogen flow entered the chamber, did not register on the indicator.  
+
+- The PID responded unexpectedly slowly to changes in vapour concentration in the chamber. For example, after acetone or ethanol vapour had been run through the chamber, running clean nitrogen through the system for 3 hours was required before the PID returned to a constant baseline reading.
+
+- There was no way to ensure the device chamber was free of analyte vapour before an experimental run aside from running nitrogen through the dilution line. After prolonged use, condensed analyte was sometimes visible in the PVC lines of the delivery system.
+
+These issues, along with various minor structural and design issues, were addressed in the second-stage implementation of the system.
 
 ### Stage II Design
 
-### Future Improvements
+![Process & instrumentation diagram (P&ID) of the second-stage design for the vapour delivery system.](figures/ch5/PID_V2.png){#fig-stage-2-pid width=100%}
 
+@fig-stage-2-pid gives an overview of the second-stage design for the vapour delivery system setup. This stage of the redesign was implemented between Jan and May 2022. Changes from the first stage included:
 
-## Validating Vapour Delivery System
+- The addition of a N$_2$ cylinder (152D size) as the source of nitrogen for the system to replace the lab supply.
 
-![Vapour Delivery System - Schematic of device chamber and manifold](figures/ch5/chamber-manifold.png){width=90%}
+- A pressure indicator with a lower pressure range was used, which could register pressure changes within the device chamber.
 
-### Temperature and Humidity Indicator
+- A chamber manifold was placed before the exhaust with outlets into the PID and RHI.
 
-### Photoionisation Detector
+- A micro diaphragm pump was introduced between the manifold and PID to supply the PID with vapour from the chamber, and a flowmeter was placed before the pump to measure the flow rate out of the chamber to the PID. The PID was then seen to respond quickly to system changes (discussed further in @sec-calibration).
 
-#### Bubbling Vapour {.unnumbered}
+- A piece of PVC tubing was placed at the PID outlet to limit air from the fumehood entering the PID when the micropump was off.
+
+- Valves were placed before all system components so that the device chamber and post-analyte bottle carrier line could be evacuated with a roughing pump without potentially affecting components.
+
+- Check valves were placed at the exhaust to prevent backflow from the roughing pump into the delivery system.
+
+These changes broadly addressed the issues identified in @sec-vapour-system-design-1. 
+
+## Calibration and Measurements of Vapour Flow {#sec-calibration}
+
+### Chamber Flow Calibration
+
+![Setup for calibration of mass flow controllers using the water displacement method.](figures/ch5/water_displacement.png){#fig-water-displacement width=45%}
+
+A water displacement test was carried out to determine the relationship between the flow rate measured by the mass flow controllers and the actual flow rate passing through the chamber. All valves were set so that both the dilution and carrier lines followed a single path. Both these paths went through the device chamber and out through the system exhaust. An empty analyte bottle was placed on the carrier line. The system exhaust was placed into a bucket filled with tap water, with the outlet sitting beneath an upturned 500 mL measurement cylinder, as pictured in @fig-water-displacement. The cylinder was used to measure the volume of displaced water over time, which is equivalent to the rate of change of nitrogen volume entering the cylinder from the exhaust. As leaks in the manifold and exhaust line were not detected when leak testing with bubble solution, it can be safely assumed that the rate at which nitrogen exits the exhaust is equivalent to the nitrogen flow rate through the device chamber.
+
+::: {#fig-MFC-calibration-curves layout="[[47.5,-5,47.5]]"}
+
+![](figures/ch5/200sccmMFC_carrierline_thruchamber.png){#fig-200-MFC-curve}
+
+![](figures/ch5/500sccmMFC_dilutionline_thruchamber.png){#fig-500-MFC-curve}
+
+Calibration curves for the 200 sccm full-scale MFC through the carrier line (a) and the 500 sccm full-scale MFC through the dilution line (b).
+:::
+
+The time taken to displace a fixed volume of water was measured three times for a series of constant flow rates, both for the 200 sccm MFC (MKS) on the carrier line and the 500 sccm MFC (Tylan) on the dilution line. The displacement flow rate corresponding to each measurement could then be found by dividing volume by time. These measurements, of displacement flow relative to nominal flow through the MFC, are shown in @fig-MFC-calibration-curves. The flow through the chamber was offset from the nominal flow reading from the mass flow controllers, with a strong linear relationship between the two measurements. A linear least-squares fit was performed, where coefficients $m$ and $b$ were found for the linear relationship displacement flow $= \space m \space \times$ nominal flow $+ \space b$. A 95% confidence interval for the fit was also obtained. 200 sccm: p1 = (1.14$\pm$0.07) p2 = (-6$\pm$8) 500 sccm: p1 = (1.14$\pm$0.06) p2 = (-6$\pm$16)
+
+By disconnecting the flowmeter from the PID micropump and closing all valves out of the manifold except the valve exiting to the flowmeter (see @fig-stage-2-pid), it was possible to then check the flow rate measured by the PID flowmeter relative to the actual flow passing through the system. For example, a 200 sccm flow rate through the dilution line from the Tylan MFC, corresponding to a $\sim$ 230 sccm actual flow rate through the chamber, was measured as a $\sim$ 140 sccm flow rate by the flowmeter. Subsequent measurements showed that the flowmeter 
+
+### Sensor Responses to Vapour Flow 
+
+![Simplified schematic showing the flow into and out of the device chamber and manifold of the delivery system. The input flows from the carrier and dilution line are represented by C and D, and the output flow through the PID is represented by P. This diagram assumes that flow through leaks in the chamber and manifold is low enough to be considered negligible, which was confirmed by leak testing with bubble solution.](figures/ch5/chamber-manifold-v2.png){width=100%}
+
+#### Relative Humidity Indicator {.unnumbered}
+
+#### Photoionisation Detector {.unnumbered}
 
 First year report:
 """First, a 200 sccm flow of N2 gas was sent through the dilution line to the device chamber until 1000 s. Then, the flow controller three-way valves were manually adjusted so that the same 200 sccm flow was directed through 50 mL of EtOH analyte in the carrier line. This continued until 2200 s, where the valves were again manually adjusted so that 200 sccm clean N2 again flowed through the device chamber. The resulting current across the device channel was monitored over this time, and is shown in Figure 19. A response to EtOH exposure and removal is visible."""
+
+### PID Calibration
 
 ## Summary 

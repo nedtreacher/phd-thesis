@@ -3,7 +3,7 @@ keep-tex: true
 format: pdf
 ---
 
-# Fabrication of Carbon Nanotube Network and Graphene Field-Effect Transistors and Characterisation Methods {#sec-fabrication}
+# Fabrication and Characterisation of Carbon Nanotube Network and Graphene Field-Effect Transistors {#sec-fabrication}
 
 ## Introduction
 
@@ -12,6 +12,8 @@ This chapter discusses the fabrication processes for both the carbon nanotube ne
 The nitrogen ($\geq$ 99.99%) and oxygen (99.7%) used in fabrication work  was supplied by BOC Limited New Zealand. All acetone and isopropanol used for wafer/device processing had a minimum 99.9% purity (HPLC grade). Deionised (DI) water was taken from a Synergy$^\circledR$ UV Water Purification System. The DI water had a measured conductivity of $(1.4\pm0.1)\textrm{ } \mu \textrm{S cm}^{-1}$, compared to tap water with a measured conductivity of $(7.8\pm0.2)\textrm{ } \mu \textrm{S cm}^{-1}$.
 
 ## Photolithography for Carbon Nanotube and Graphene Field-Effect Transistors {#sec-photolithography}
+
+### Overview
 
 ![A side-view comparison of generic photolithography processes for positive and negative resists in the ideal case. Photolithography with a positive resist requires a single softbake step before exposure, while for negative resists a second baking step is required after exposure (Thicknesses shown not to scale).](figures/ch4/positive-negative-photolithography.png){#fig-photolithography-types}
 
@@ -78,7 +80,7 @@ The step-by-step processes for each resist are detailed in the subsequent sectio
 
 ## Fabrication of Carbon Nanotube and Graphene Field-Effect Transistors {#sec-qw-processing}
 
-### General Remarks
+### Overview
 
 ![The photolithographic processes used for fabrication of both carbon nanotube and graphene devices (graphene devices were fabricated individually for every step. Step #2 is passed over for graphene devices).](figures/ch4/photolithography-cycle.png){#fig-qw-photolithography width="90%"}
 
@@ -214,13 +216,13 @@ A side-by-side microscope comparison of hardbaked AZ$^\circledR$ 1518 processed 
 
 ![](figures/ch4/dektat_AZ1518_oldmask.png){#fig-AZ1518-old}
 
+![](figures/ch4/dektat_SU8_oldmask.png){#fig-SU8-old}
+
 ![](figures/ch4/dektat_AZ1518_newmask.png){#fig-AZ1518-new}
 
 ![](figures/ch4/dektat_SU8_newmask.png){#fig-SU8-new}
 
-![](figures/ch4/dektat_SU8_oldmask.png){#fig-SU8-old}
-
-Dektat of carbon nanotube devices after encapsulation photolithography using hardbaked AZ$^\circledR$ 1518 and SU-8 2150, taken from various devices. (a) and (c) show photolithography performed with the old, pre-2023 mask, using AZ$^\circledR$ 1518 and SU-8 2150 respectively. (b) and (d) show photolithography performed with the new mask from 2023 onwards, using AZ$^\circledR$ 1518 and SU-8 2150 respectively.
+Dektat of carbon nanotube devices after encapsulation photolithography using hardbaked AZ$^\circledR$ 1518 and SU-8 2150, taken from various devices. (a) and (b) show photolithography performed with the old, pre-2023 mask, using AZ$^\circledR$ 1518 and SU-8 2150 respectively. (c) and (d) show photolithography performed with the new mask from 2023 onwards, using AZ$^\circledR$ 1518 and SU-8 2150 respectively.
 :::
 
 Two types of photoresist were initially trialled for encapsulation of carbon nanotube network devices, AZ$^\circledR$ 1518 and SU8-2150. Both AZ$^\circledR$ 1518 [@Murugathas2018; @Murugathas2019b; @Shkodra2021] and SU-8 have been previously used for device encapsulation, with SU-8 noted for being particularly stable and biocompatible [@Lee2006; @Chen2021; @Albarghouthi2022]. 
@@ -276,7 +278,7 @@ Raman spectroscopy was performed with a HORIBA Jobin Yvon LabRAM HR800 Raman spe
 
 Both liquid-gated and back-gated measurements were taken of carbon nanotube and graphene devices. Liquid-gated measurements were taken using the configuration shown in @fig-liquid-gate-schematic. Back-gated measurements were taken with a copper plane placed underneath the Si/SiO$_2$ wafer and connected to SMU 3 instead of the reference electrode.
 
-All measurement setups used had the same basic configuration, with two source measure units (SMUs) attached to the source and gate. Voltage from the source and gate SMUs was either kept constant or varied, with only one SMU varied at a time. Three different measurement setups were used for taking these measurements, the Agilent (Keysight/HP) 4156C Semiconductor Parameter Analyser, the Keysight B1500A Semiconductor Device Analyser, and a National Instruments NI-PXIe modular measurement system with a 8 GB PXIe-8821 controller and two NI-4138 source measure units. For measurements with the Keysight instruments, a third, drain SMU was attached and kept at a constant 0 V (as shown in @fig-liquid-gate-schematic).
+All measurement setups used had the same basic configuration, with two source measure units (SMUs) attached to the source and gate. Voltage from the source and gate SMUs was either kept constant or varied, with only one SMU varied at a time. Three different measurement setups were used for taking these measurements, the Agilent (Keysight/HP) 4156C semiconductor parameter analyser, the Keysight B1500A semiconductor device analyser, and a National Instruments NI-PXIe modular measurement system with a 8 GB PXIe-8821 controller and two NI-4138 source measure units in the system chassis. For measurements with the Keysight instruments, a third, drain SMU was attached and kept at a constant 0 V (as shown in @fig-liquid-gate-schematic).
 
 ::: {#fig-PDMS-clean layout="[[-25,50,-25], [47.5,-5,47.5]]"}
 
@@ -289,9 +291,18 @@ All measurement setups used had the same basic configuration, with two source me
 A carbon nanotube field-effect transistor device with a polydimethylsiloxane (PDMS) 'well' placed on the device surface is seen in (a), followed by microscope images of the surface of a well before (b) and after (c) isopropanol (IPA) sonication for 10 minutes.
 :::
 
-When using the Agilent 4156C Semiconductor Parameter Analyser or Keysight B1500A Semiconductor Device Analyser for liquid-gated measurements, a Rucker and Kolls with micromanipulators was used to contact the devices; when using the National Instruments NI-PXIe for liquid-gated measurements, a custom-made chip carrier with spring-loaded, pointed-tip, gold-coated pogo pins was used. Ag/AgCl standard electrodes were used as the liquid-gate electrode. The electrode was submerged in 80 $\mu$L of PBS buffer in a polydimethylsiloxane (PDMS) 'well' $-$ a flexible structure used to contain the electrolyte solution $-$ with outer dimensions of 12 mm $\times$ 6 mm $\times$ 6 mm. This PDMS well was sonicated in isopropanol for 10 min and thoroughly N$_2$ dried before use. The microscope images seen in @fig-PDMS-clean show the PDMS surface before and after this cleaning step. The end of Ag/AgCl standard electrode to be submerged should be rinsed in DI water and left to sit in DI water for 15 minutes before characterisation is performed.
+When using the Agilent 4156C semiconductor parameter analyser or Keysight B1500A semiconductor device analyser for liquid-gated measurements, a Rucker and Kolls with micromanipulators was used to contact the devices; when using the National Instruments NI-PXIe for liquid-gated measurements, a custom-made chip carrier with spring-loaded, pointed-tip, gold-coated pogo pins was used. Ag/AgCl standard electrodes were used as the liquid-gate electrode. The electrode was submerged in 80 $\mu$L of PBS buffer in a polydimethylsiloxane (PDMS) 'well' $-$ a flexible structure used to contain the electrolyte solution $-$ with outer dimensions of 12 mm $\times$ 6 mm $\times$ 6 mm. This PDMS well was sonicated in isopropanol for 10 min and thoroughly N$_2$ dried before use. The microscope images seen in @fig-PDMS-clean show the PDMS surface before and after this cleaning step. The end of Ag/AgCl standard electrode to be submerged should be rinsed in DI water and left to sit in DI water for 15 minutes before characterisation is performed.
 
-The Agilent 4156C Semiconductor Parameter Analyser and Keysight B1500A Semiconductor Device Analyser were also used for back-gated measurements of devices within the vapour delivery system device chamber. When the lid of this chamber was tightly sealed, it acted a Faraday cage for another custom-made chip carrier with spring-loaded gold-coated pogo pins, able to contact four channel electrode pairs at once. The silicon back of the device was pressed by the pins against a copper block, connected to the gate SMU.
+::: {#fig-device-interface layout="[[-7.5,85,-7.5], [-12.5,75,-12.5]]"}
+
+![](figures/ch4/chip_PCB.png){#fig-device-interface-schematic}
+
+![](figures/ch4/device_interface.png){#fig-device-interface}
+
+The circuit board schematic for the interface between the sensor device and output signal cable leaving the delivery system chamber is shown in (a). The 0.5 mm through holes connect the PTFE-coated wires which then connect to the output cable, while the 1.75 mm through holes are for attaching the sleeves of gold pogo pins. These pogo pins contact the device within the chamber. 2 × 2.5 mm solder pads have been placed around the 1.75 mm throughholes for better contact with the pogo pin sleeves. The circuit board was placed within two layers of PTFE casing for mounting and protection from vapour within the chamber. The interface as constructed is shown in (b). This electronic interface was designed and put together by Rifat Ullah, School of Chemical and Physical Sciences, Te Herenga Waka - Victoria University of Wellington.
+:::
+
+The Agilent 4156C Semiconductor Parameter Analyser and Keysight B1500A Semiconductor Device Analyser were also used for back-gated measurements of devices within the vapour delivery system device chamber. When the lid of this chamber was tightly sealed, it acted a Faraday cage for another custom-made chip carrier with spring-loaded gold-coated pogo pins, able to contact four channel electrode pairs at once. The silicon back of the device was pressed by the pins against a copper block, connected to the gate SMU. The design of the chamber chip carrier is shown in @fig-device-interface.
 
 Custom programs for National Instruments LabView 2017 were used for measurements from the Agilent 4156C Semiconductor Parameter Analyser and the National Instruments NI-PXIe. Keysight EasyEXPERT software was used for characterisation with the Keysight B1500A Semiconductor Device Analyser.
 

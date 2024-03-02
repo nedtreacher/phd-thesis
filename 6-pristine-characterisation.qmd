@@ -142,6 +142,29 @@ It is also possible to compare the relative magnitude of the D-peak and G$^+$-pe
 
 ## Electrical Characteristics of Pristine Devices {#sec-pristine-electrical-characterisation}
 
+### Python Analysis {#sec-python-analysis}
+
+Analysis of electrical measurements was performed using the three modules described in @sec-field-effect-transistor-analysis. The first of the three modules is for processing sensing datasets. This module cleans, analyses and filters sensing data and produces a variety of plots. These plots include normalised plots (type of normalisation can be set in the code config file), plots with fitted curves, plots with the linear baseline drift removed, plots of signal with analyte addition, "despiked" plots and "filtered" plots. The analysis used to produce these plots is described further below. It is possible to add annotations to any of these plots using the config file, and it is possible to produce a plot with a combination of these modifications. The module can also fit exponential and linear trendlines to regions of the sensing data, and find the signal change per analyte addition; the module then returns spreadsheets containing the results of these analyses, including the standard deviation for all calculated parameters. 
+
+The scipy.optimize.curve_fit function is used in the first module to fit linear and exponential curves to regions of interest of the sensing data. For a linear fit $mt + b$, initial parameters are simply set as $m=1$ and $b=0$. For an exponential fit $a\exp{(-t/\tau)} + c$, rough approximations are used for the initial parameters: $c$ is set as the final current measurement of the region of interest, $a$ is set as the initial current measurement minus $c$, and $\tau$ is set as the time where current has dropped to $e^{-1}a + c$. 
+
+"Despiked" plots have had spurious datapoints removed through the use of an interquartile range rolling filter. The window size of the rolling filter used was 40 datapoints, and datapoints in each window with a z-score above $\pm 3$ were removed from the plotted/processed data. "Filtered" plots had noise reduced using a moving median filter. The moving median filter is more effective at removing noise than a simple moving average, and has advantages over other filters (such as the Savitzky-Golay filter) when removing noise from data with sharp edges, as is the case for sensing data. Median filtering can also be used for baseline drift compensation, though this approach was not used in this thesis [@Stone2011]. The moving median filter used had a window of 40 datapoints. 
+
+Plots of signal with analyte addition were constructed from current data after first removing baseline drift and applying a moving median filter. A simple difference calculation between the mean of the filtered current before an addition and the mean of the filtered current after the addition was performed at each addition. These differences were then normalised relative to the initial current. The signal with analyte addition give reasonably consistent results regardless of whether baseline drift was removed from the data, as shown in @fig-spaa-plot-comparison. We can therefore be confident that robust signal with analyte addition plots are robust even in the presence of significant drift.
+
+::: {#fig-spaa-plot-comparison layout="[50,50]"}
+
+![](figures/app2/NTQ31C1_mean_simple_difference_before_and_after_step_filtered_concentrations.png){#fig-spaa-no-detrend}
+
+![](figures/app2/NTQ31C1_mean_simple_difference_before_and_after_step_filtered_concentrations_detrend.png){#fig-spaa-detrend}
+
+A comparison of signal with analyte addition plots taken from the same salt concentration sensing dataset (the same dataset as used in @fig-salt-conc-sensing). In (a), a simple difference calculation performed on filtered data was used, while in (b) the same calculation was performed on filtered data with the baseline drift removed, the method used in the body of the thesis. 
+:::
+
+The second module creates combined and individual plots of transfer data collected from eight channels on a single device. In combined plots, channels which are non-working, due to being shorted or non-conducting, are removed via setting a maximum and minimum possible on-current in the config file. Various parameters from the transfer characteristics are saved as a spreadsheet along with standard error. These parameters include on current, off current, subthreshold slope and threshold voltage for the carbon nanotube devices, and on current, off current and major Dirac point voltage for graphene devices. The device type being analysed can be set in the config file.
+
+The third module allows for comparison of transfer measurements taken of the same channel before and after some modification. It also calculates the shift in either threshold voltage or major Dirac voltage of the device.
+
 ### Carbon Nanotube Network Devices
 
 ::: {#fig-pristine-cnt-characteristics layout="[[49,-2,49], [49,-2,49], [49,-2,49]]"}

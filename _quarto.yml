@@ -14,9 +14,9 @@ book:
     # - 2-transistors.qmd
     # - 3-biosensors.qmd
     # - 4-fabrication.qmd
-    # - 5-vapour-sensing.qmd
+     - 5-vapour-sensing.qmd
     # - 6-pristine-characterisation.qmd
-     - 7-functionalisation-verification.qmd
+    # - 7-functionalisation-verification.qmd
     # - 8-functionalisation-testing.qmd
     # - 9-conclusions.qmd
     # - acknowledgements.qmd         # uncomment this line to see acknowledgements in html (will appear twice in pdf)
@@ -26,6 +26,8 @@ book:
 bibliography: references.bib
 cite-method: biblatex
 biblatexoptions:
+  #- citestyle=numeric
+  #- sorting=none  # Optional: to preserve the order of citations as they appear in the document
   - citestyle = ieee
   - urldate = iso8601
 
@@ -37,11 +39,12 @@ sansfont: Latin Modern Roman
 
 execute:
   echo: false # change to false to hide code
+  show: false # change to false to hide code
 
 format:
   html:
     theme: cosmo
-  pdf:
+  pdf: 
     documentclass: scrbook
     keep-tex: true 
     toc: true
