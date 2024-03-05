@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, frame hidden, breakable, enhanced, interior hidden, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, breakable, frame hidden, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, interior hidden, sharp corners]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -315,13 +315,13 @@ point about a metre before the chamber. Flow through the carrier line
 passes through the analyte bottle and carries analyte vapour to the
 mixing point. The dilution line separately delivers flow to the mixing
 point, modifying the flow pushing the analyte vapour towards the
-chamber. The analyte bottle in the carrier line is shown in
-Figure~\ref{fig-analyte-bottle}. Each line consist of a mix of stainless
-steel and flexible PVC tubing, with various Swagelok fittings and
-valves. These valves include check valves, to ensure there is no
-backflow of vapour mass within the system. The electronic integration
-and programming of the mass flow controllers is described in
-Section~\ref{sec-control-system}.
+chamber. The 10 mL analyte Schott bottle (Duran) is shown connected to
+the carrier line in Figure~\ref{fig-analyte-bottle}. Each line consist
+of a mix of stainless steel and flexible PVC tubing, with various
+Swagelok fittings and valves. These valves include check valves, to
+ensure there is no backflow of vapour mass within the system. The
+electronic integration and programming of the mass flow controllers is
+described in Section~\ref{sec-control-system}.
 
 \hypertarget{sec-reference-sensors}{%
 \subsection{Reference Sensors}\label{sec-reference-sensors}}
@@ -372,15 +372,15 @@ capacitive humidity sensor \autocite{Telairesensor}. It consists of a
 capacitor with a hygroscopic polymer as the capacitor dielectric. As
 room temperature water has a much larger dielectric constant than the
 polymer dielectric, absorption of water by the polymer leads to
-increased sensor capacitance \autocite{capacitivesensor}. The Telaire
-sensor has then been calibrated so that the sensor capacitance,
-corresponding to the amount of moisture absorbed by the polymer and
-therefore the relative humidity, is translated by the sensor into an
-electronic signal. This signal can then be processed using the hardware
-and software described in Section~\ref{sec-control-system} to give a
-value for the relative humidity. The sensor has a quoted relative
-humidity (RH) accuracy of \(\pm 2.0\)\% when RH is below 80\%, and has a
-quoted temperature accuracy of \(0.5^\circ\)C \autocite{Telairesensor}.
+increased sensor capacitance \autocite{capacitivesensor}. The sensor
+capacitance, corresponding to the amount of moisture absorbed by the
+polymer and therefore the relative humidity, is then translated by the
+sensor into a calibrated electronic output. This output is then
+processed using the hardware and software described in
+Section~\ref{sec-control-system} to give a value for the relative
+humidity. The sensor has a quoted relative humidity (RH) accuracy of
+\(\pm 2.0\)\% when RH is below 80\%, and has a quoted temperature
+accuracy of \(0.5^\circ\)C \autocite{Telairesensor}.
 
 The absolute humidity (AH), the mass of water vapour within a set
 volume, can be calculated using Equation~\ref{eq-absolute-humidity},
@@ -871,14 +871,14 @@ displacement flow relative to nominal flow through the MFC, are shown in
 Figure~\ref{fig-MFC-calibration-curves}. The flow through the chamber
 was offset from the nominal flow reading from the mass flow controllers,
 with a strong linear relationship between the two measurements. A linear
-least-squares fit was performed, where coefficients \(m\) and \(b\) were
-found for the linear relationship \(D = md + b\), where \(d\) is nominal
-flow from the MFC and \(D\) is measured displacement flow. A 95\%
-confidence interval for the fit was also obtained. For the 200 sccm MFC
-flow through the carrier line, values of \(m = 1.14\pm0.07\) and
-\(b = -6\pm8\) were obtained, while for the 500 sccm MFC flow through
-the dilution line, values of \(m = 1.14\pm0.06\) and \(b = -6\pm16\)
-were obtained.
+least-squares fit was performed, where coefficients \(a_1\) and \(a_2\)
+were found for the linear relationship \(D = a_1d + a_2\), where \(d\)
+is nominal flow from the MFC and \(D\) is measured displacement flow. A
+95\% confidence interval for each fit was also obtained. For the 200
+sccm MFC flow through the carrier line, values of \(a_1 = 1.14\pm0.07\)
+and \(a_2 = -6\pm8\) were obtained, while for the 500 sccm MFC flow
+through the dilution line, values of \(a_1 = 1.14\pm0.06\) and
+\(a_2 = -6\pm16\) were obtained.
 
 It appears that the offset between the measured displacement flow and
 nominal output flow is not due to leaks in the system, since the offset
@@ -896,21 +896,41 @@ actual flow rate to a 50 sccm nominal flow through the dilution line and
 a 150 sccm flow through the carrier line. In this work, tests performed
 with the vapour delivery system have flow rate stated in terms of their
 nominal value, but the reader should keep in mind the \(1.14 \times\)
-offset from actual flow.
+offset from the actual chamber flow.
 
-For example, a 200 sccm flow rate through the dilution line from the
-Tylan MFC, corresponding to a \(\sim\) 230 sccm actual flow rate through
-the chamber, was measured as a \(\sim\) 140 sccm flow rate by the
-flowmeter.
+\begin{figure}
 
-Subsequent measurements showed that for flow rates \(\lesssim 75\) sccm
-on the flowmeter, the linear relationship breaks down. By disconnecting
-the flowmeter from the PID micropump and closing all valves out of the
-manifold except the valve exiting to the flowmeter (see
-Figure~\ref{fig-stage-2-pid}), it was possible to then check the flow
-rate measured by the PID flowmeter relative to the nominal flow. In this
-way, the actual rate of \(\lesssim 75\) sccm flows through the flowmeter
-could be obtained.
+{\centering \includegraphics[width=0.5\textwidth,height=\textheight]{figures/ch5/PID_flowmeter.png}
+
+}
+
+\caption{\label{fig-flowmeter-calibration}Calibration curve for the PID
+flowmeter, comparing flowmeter readings with flow rate of water
+displacement.}
+
+\end{figure}
+
+The time taken to displace a fixed water volume was also measured three
+times for a series of constant flow rates through the flowmeter from the
+chamber to exhaust. A linear relationship was obtained between flowmeter
+readings and actual displacement, as shown in
+Figure~\ref{fig-flowmeter-calibration}. Expressing the relationship as
+\(D = b_1f + b_2\), where \(f\) is the flowmeter reading and \(D\) is
+measured displacement flow, values of \(b_1 = 1.0\pm0.2\) and
+\(b_2 = 80\pm25\) were obtained. A 200 sccm flow rate through the
+dilution line from the Tylan MFC, corresponding to a \(\sim\) 230 sccm
+actual flow rate through the chamber, would therefore be measured as a
+\(\sim\) 150 sccm flow rate by the flowmeter. Subsequent measurements
+showed that the linear relationship in
+Figure~\ref{fig-flowmeter-calibration} breaks down for flowmeter
+readings \(\lesssim 75\). For example, a 50 sccm flow on the flowmeter
+was found to correspond to 85 sccm of measured displacement flow. By
+disconnecting the flowmeter from the PID micropump and closing all
+valves out of the manifold except the valve exiting to the flowmeter
+(see Figure~\ref{fig-stage-2-pid}), the nominal flow on the MFC could be
+directly compared to the flowmeter reading. In this manner, the actual
+flow rate of readings \(\lesssim 75\) sccm on the flowmeter could be
+quickly obtained.
 
 \hypertarget{sensor-responses-to-vapour-flow}{%
 \subsection{Sensor Responses to Vapour
@@ -922,19 +942,84 @@ Flow}\label{sensor-responses-to-vapour-flow}}
 
 }
 
-\caption{Simplified schematic showing the flow into and out of the
-device chamber and manifold of the delivery system. The input flows from
-the carrier and dilution line are represented by C and D, and the output
-flow through the PID is represented by P. This diagram assumes that flow
+\caption{\label{fig-chamber-schematic}Simplified schematic showing the
+flow into and out of the device chamber and manifold of the delivery
+system. The input flows from the carrier and dilution line are
+represented by C and D, and the output flow through the PID is
+represented by P. The exhaust can either flow past the relative humidity
+indicator or straight to the fumehood. This diagram assumes that flow
 through leaks in the chamber and manifold is low enough to be considered
 negligible, which was confirmed by leak testing with bubble solution.}
 
 \end{figure}
 
+Once the rate of flow through the device chamber had been calibrated,
+the next step was to verify the correct operation of the reference
+sensors used in the system. Various flow rates in and out of the chamber
+were used to calibrate and verify the reference sensors. These flows in
+and out of the chamber are labelled on the simplified schematic in
+Figure~\ref{fig-chamber-schematic}.
+
 \hypertarget{relative-humidity-indicator}{%
 \subsubsection*{Relative Humidity
 Indicator}\label{relative-humidity-indicator}}
 \addcontentsline{toc}{subsubsection}{Relative Humidity Indicator}
+
+\hypertarget{tbl-RHI-flow-sequence}{}
+\begin{longtable}[]{@{}lll@{}}
+\caption{\label{tbl-RHI-flow-sequence}Flow sequence for testing relative
+humidity indicator.}\tabularnewline
+\toprule\noalign{}
+t (s) & C (sccm) & D (sccm) \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+t (s) & C (sccm) & D (sccm) \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+200 & 0 & 400 \\
+200 & 100 & 300 \\
+200 & 200 & 200 \\
+200 & 200 & 100 \\
+200 & 200 & 0 \\
+\end{longtable}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch5/RHI_verification.png}
+
+}
+
+\caption{\label{fig-RHI-verification}Relative humidity readouts from the
+relative humidity indicator juxtaposed with flow rates from the dilution
+line and carrier lines of the vapour system, with 10 mL deionised water
+in the carrier line analyte bottle.}
+
+\end{figure}
+
+To test the relative humidity indicator (RHI), all valves out of the
+chamber were sealed except for the valve for the relative humidity
+indicator chamber. This meant all flow coming out of the system would
+pass by the relative humidity indicator (P = 0 sccm and exhaust goes to
+RHI in Figure~\ref{fig-chamber-schematic}). Continuous nitrogen flow was
+then placed through the chamber until relative humidity dropped to about
+20\%. 10 mL of deionised water was placed into the analyte bottle. The
+following sequence of flows shown in Table~\ref{tbl-RHI-flow-sequence}
+was placed through the chamber (t = time, C = carrier line flow rate, D
+= dilution line flow rate). Note that between 230 s and 630 s, the total
+flow rate remains the same, but the ratio of dilution to carrier flow
+differs.
+
+From Figure~\ref{fig-RHI-verification}, it is clear that with increased
+flow from the analyte bottle containing deionised water, the relative
+humidity registered by the Telaire sensor also increases. The increases
+in relative humidity occur about 50 s after corresponding increases in
+flow through the carrier line, which appears to be the time taken for
+water vapour to first reach the relative humidity indicator chamber.
+Over the full 800 s of carrier line flow, relative humidity increases
+from a minimum of 14.0\% to a maximum of 44.3\%.
 
 \hypertarget{photoionisation-detector-1}{%
 \subsubsection*{Photoionisation
@@ -950,9 +1035,6 @@ adjusted so that 200 sccm clean N2 again flowed through the device
 chamber. The resulting current across the device channel was monitored
 over this time, and is shown in Figure 19. A response to EtOH exposure
 and removal is visible.''``\,''
-
-\hypertarget{pid-calibration}{%
-\subsection{PID Calibration}\label{pid-calibration}}
 
 \hypertarget{summary}{%
 \section{Summary}\label{summary}}
