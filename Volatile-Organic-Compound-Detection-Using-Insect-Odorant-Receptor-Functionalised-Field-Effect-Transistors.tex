@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, breakable, frame hidden, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, interior hidden, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, enhanced, breakable, boxrule=0pt, interior hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -306,20 +306,30 @@ either through bubbling or headspace sampling.}
 
 \end{figure}
 
-Three mass flow controllers and their associated regulators sit in an
+Three mass flow controller and their associated regulators sit in an
 covered enclosure, seen from the front in
 Figure~\ref{fig-mass-flow-controller-layout}. These are used to control
 the nitrogen flow rate through two different lines towards the chamber,
-the carrier line and dilution line. These lines reconnect at a mixing
-point about a metre before the chamber. Flow through the carrier line
-passes through the analyte bottle and carries analyte vapour to the
-mixing point. The dilution line separately delivers flow to the mixing
-point, modifying the flow pushing the analyte vapour towards the
-chamber. The 10 mL analyte Schott bottle (Duran) is shown connected to
-the carrier line in Figure~\ref{fig-analyte-bottle}. Each line consist
-of a mix of stainless steel and flexible PVC tubing, with various
-Swagelok fittings and valves. These valves include check valves, to
-ensure there is no backflow of vapour mass within the system. The
+the carrier line and dilution line. The lines merge at a mixing point
+about a metre before the device chamber, which contains the device being
+analysed. Each line consist of a mix of stainless steel and flexible PVC
+tubing, with various Swagelok fittings and valves. These valves include
+check valves, to ensure there is no backflow of vapour within the
+system. The carrier line connects flow to a 10 mL Schott bottle (Duran)
+containing analyte, shown in Figure~\ref{fig-analyte-bottle}. The vapour
+from the volatile analyte is then carried by nitrogen flow through the
+carrier line. A three-way valve determines whether the analyte vapour is
+then carried towards the mixing point or sent into the fumehood via the
+exhaust. The dilution line separately delivers flow to the mixing point,
+modifying the flow pushing the analyte vapour towards the chamber.
+
+The setup is designed so that only one mass flow controller is directed
+through a single line at a time. The mass flow controller with a
+full-scale flow of 500 sccm (standard cubic centimeters per minute) can
+only be directed through the dilution line, and the mass flow controller
+with a full-scale flow of 20 sccm can only be directed through the
+carrier line. The mass flow controller with a full-scale flow of 200
+sccm can be directed through the dilution line or carrier line. The
 electronic integration and programming of the mass flow controllers is
 described in Section~\ref{sec-control-system}.
 
@@ -383,19 +393,20 @@ humidity. The sensor has a quoted relative humidity (RH) accuracy of
 accuracy of \(0.5^\circ\)C \autocite{Telairesensor}.
 
 The absolute humidity (AH), the mass of water vapour within a set
-volume, can be calculated using Equation~\ref{eq-absolute-humidity},
-where \(C = 2.16679\) gKJ\(^{-1}\), \(P_W\) is the water vapour pressure
-(in Pa) and T is the temperature (in K) \autocite{humidityformula}.
+volume, can be calculated in gm\(^{-3}\) using
+Equation~\ref{eq-absolute-humidity}, where \(C = 2.16679\) gKJ\(^{-1}\),
+\(P_W\) is the water vapour pressure (in Pa) and T is the temperature
+(in K) \autocite{humidityformula}.
 
 \begin{equation}\protect\hypertarget{eq-absolute-humidity}{}{
 AH = C\frac{P_W}{T}
 }\label{eq-absolute-humidity}\end{equation}
 
-For temperatures between -20\(^\circ\)C and 50\(^\circ\)C, water vapour
-pressure \(P_W\) (in hPa) can be approximated using
+For temperatures between -20 \(^\circ\)C and 50 \(^\circ\)C, water
+vapour pressure \(P_W\) (in hPa) can be approximated using
 Equation~\ref{eq-water-vapour-pressure}, where RH is relative humidity,
 T is temperature in \(^\circ\)C, \(A = 6.116441\) hPa, \(m = 7.591386\)
-and \(T_{n} = 240.7263^\circ\)C \autocite{humidityformula}.
+and \(T_{n} = 240.7263 ^\circ\)C \autocite{humidityformula}.
 
 \begin{equation}\protect\hypertarget{eq-water-vapour-pressure}{}{
 P_W = RH \times A \times 10^{(mT/(T+T_{n}))}
@@ -430,31 +441,48 @@ relatively large response to that volatile
 The photoionisation detector used in this work had a lamp energy of 10.6
 eV, with a quoted response time of less than 2 seconds. Photoionisation
 detectors are designed to sensitively detect within a particular
-concentration range. These ranges can be stated in terms of the
-sensitivity of the detector to isobutylene, which is typically used to
-calibrate PID sensors. The range of the PID sensor used was 10 ppb \(-\)
-200 ppm isobutylene. With constant temperature and pressure, the quoted
-accuracy of the sensor is \(\pm\) 3\%.
+concentration range. PID sensors can become less sensitive after being
+exposed to very high concentrations of volatile gas. They can also
+become less sensitive if exposed to high levels of humidity or volatile
+substances known to contaminate the PID window, which are not used in
+this thesis. The typical sensitivity range of a PID can be stated in
+terms of the sensor response to isobutylene gas, which is typically used
+to calibrate PID sensors. The sensitivity of the the PID sensor used
+here was 10 ppb \(-\) 200 ppm. Calibration with a reference gas ensures
+the detector reads the true concentration of volatiles being detected,
+multiplied by some previously-documented factor called a ``response
+factor''. However, these response factors can vary based on the design
+of the PID and various environmental factors
+\autocite{Ionscience,PIDmanual}.
+
+In this work, the PID was operated without end-user calibration. PID
+measurements were used to confirm the evolution of vapour presence in
+the chamber over time. It should be expected that sensor sensitivity
+will exhibit span drift over days or weeks, depending on changes in the
+local environment, and therefore measurements should not be treated as
+absolute measurements that correspond to a true concentration reading.
 
 The vapour of interest can be delivered to the PID either through
 diffusion or by means of a low-power pump. A micro diaphragm pump
 (Xavitech) was selected to pump the vapour from the chamber into the PID
-detector. This pump was selected to have a low maximum flow rate as the
-PID requires a inlet flow of less than 300 sccm. As the pump is
-controlled using a unlabelled dial, a flowmeter was used to
-independently measure the flow rate through the micropump into the PID.
+detector. A pump with a low maximum flow rate was selected since the PID
+requires a inlet flow of less than 300 sccm. As the pump is controlled
+using a unlabelled dial, a flowmeter was used to independently measure
+the flow rate through the micropump into the PID.
 
 \hypertarget{sec-control-system}{%
 \subsection{Control System}\label{sec-control-system}}
 
 The vapour delivery system was controlled and monitored from a laptop
 connected to a National Instruments USB-6009 multifunction data
-acquisition system (DAQ). This USB-6009 DAQ connected to the mass flow
-controllers and relative humidity and temperature indicator via a
-custom-designed circuit board manufactured by PCBway. The outputs and
-inputs of the USB-6009 DAQ were set using custom LabView software. These
-electronic and software components of the vapour delivery control system
-are described in more detail below.
+acquisition input/ output module (DAQ). This USB-6009 DAQ connected to
+the mass flow controllers and relative humidity and temperature
+indicator (Telaire) via a custom-designed circuit board manufactured by
+PCBway. The outputs and inputs of the USB-6009 DAQ were set using custom
+LabView software. These electronic and software components of the vapour
+delivery control system are described in more detail below. The
+photoionisation detector (Ametek Mocon) was controlled from the same
+laptop with its own prepackaged software (VOC-TRAQ II).
 
 \hypertarget{electronics}{%
 \subsubsection*{Electronics}\label{electronics}}
@@ -777,15 +805,15 @@ included:
   roughing pump into the delivery system.
 \end{itemize}
 
-These changes broadly addressed the issues identified in
+These changes largely addressed the issues identified in
 Section~\ref{sec-vapour-system-design-1}.
 
 \hypertarget{sec-calibration}{%
 \section{Calibration and Measurements of Vapour
 Flow}\label{sec-calibration}}
 
-\hypertarget{chamber-flow-calibration}{%
-\subsection{Chamber Flow Calibration}\label{chamber-flow-calibration}}
+\hypertarget{sec-flow-calibration}{%
+\subsection{Chamber Flow Calibration}\label{sec-flow-calibration}}
 
 \begin{figure}
 
@@ -965,6 +993,33 @@ Figure~\ref{fig-chamber-schematic}.
 Indicator}\label{relative-humidity-indicator}}
 \addcontentsline{toc}{subsubsection}{Relative Humidity Indicator}
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch5/RHI_verification.png}
+
+}
+
+\caption{\label{fig-RHI-verification}Relative humidity readouts from the
+relative humidity indicator juxtaposed with flow rates from the dilution
+line and carrier lines of the vapour system, with 10 mL deionised water
+in the carrier line analyte bottle.}
+
+\end{figure}
+
+To test the relative humidity indicator (RHI), all valves out of the
+chamber were sealed except for the valve for the relative humidity
+indicator chamber. This meant all flow coming out of the system would
+pass through the relative humidity indicator chamber (P = 0 sccm and
+exhaust goes to RHI in Figure~\ref{fig-chamber-schematic}). Continuous
+nitrogen flow was then placed through the chamber until relative
+humidity dropped to about 20\%. 10 mL of deionised water was placed into
+the analyte bottle. A series of different flow rates through each line
+was sent to the chamber, with the sequence of flow rates shown in
+Table~\ref{tbl-RHI-flow-sequence} (t = time, C = carrier line flow rate,
+D = dilution line flow rate). Note that between 230 s and 630 s, the
+total flow rate remains the same, but the ratio of dilution to carrier
+flow differs.
+
 \hypertarget{tbl-RHI-flow-sequence}{}
 \begin{longtable}[]{@{}lll@{}}
 \caption{\label{tbl-RHI-flow-sequence}Flow sequence for testing relative
@@ -986,55 +1041,140 @@ t (s) & C (sccm) & D (sccm) \\
 200 & 200 & 0 \\
 \end{longtable}
 
-\begin{figure}
+Figure~\ref{fig-RHI-verification} shows flow purely from the dilution
+line decreases humidity as measured by the Telaire sensor, while flow
+from the analyte bottle containing deionised water increases humidity,
+as expected. It also shows that in regular 200 s intervals, an uptick in
+the increase of relative humidity occurs, which then begins to flatten
+out. Each gradient uptick occurs about 50 s after a corresponding
+increase in flow through the carrier line. It therefore appears that
+each interval corresponds to an increase of water vapour flow, where 50
+s is the time taken for the increased concentration of water vapour to
+first reach the relative humidity indicator.
 
-{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch5/RHI_verification.png}
-
-}
-
-\caption{\label{fig-RHI-verification}Relative humidity readouts from the
-relative humidity indicator juxtaposed with flow rates from the dilution
-line and carrier lines of the vapour system, with 10 mL deionised water
-in the carrier line analyte bottle.}
-
-\end{figure}
-
-To test the relative humidity indicator (RHI), all valves out of the
-chamber were sealed except for the valve for the relative humidity
-indicator chamber. This meant all flow coming out of the system would
-pass by the relative humidity indicator (P = 0 sccm and exhaust goes to
-RHI in Figure~\ref{fig-chamber-schematic}). Continuous nitrogen flow was
-then placed through the chamber until relative humidity dropped to about
-20\%. 10 mL of deionised water was placed into the analyte bottle. The
-following sequence of flows shown in Table~\ref{tbl-RHI-flow-sequence}
-was placed through the chamber (t = time, C = carrier line flow rate, D
-= dilution line flow rate). Note that between 230 s and 630 s, the total
-flow rate remains the same, but the ratio of dilution to carrier flow
-differs.
-
-From Figure~\ref{fig-RHI-verification}, it is clear that with increased
-flow from the analyte bottle containing deionised water, the relative
-humidity registered by the Telaire sensor also increases. The increases
-in relative humidity occur about 50 s after corresponding increases in
-flow through the carrier line, which appears to be the time taken for
-water vapour to first reach the relative humidity indicator chamber.
 Over the full 800 s of carrier line flow, relative humidity increases
-from a minimum of 14.0\% to a maximum of 44.3\%.
+from a minimum of \(14.0\pm2.0\)\% to a maximum of \(43.6\pm2.0\)\%. The
+temperature in the chamber remained between \(21.0\pm0.5\) \(^\circ\)C
+and \(22.0\pm0.5\) \(^\circ\)C over the entire measurement period.
+Combining equations Equation~\ref{eq-absolute-humidity} and
+Equation~\ref{eq-water-vapour-pressure} from
+Section~\ref{sec-reference-sensors}, we find that the absolute humidity
+in the chamber reaches a low of \(2.6\pm0.4\) gm\(^{-3}\) at 238.1 s,
+38.1 s after the initial onset of carrier flow, and a high of
+\(8.4\pm0.5\) gm\(^{-3}\) at 998.8 s, after 798.8 s of carrier flow
+through the chamber. The clear response of the Telaire RHI to water
+vapour flow through the carrier line confirms that this sensor is
+working as expected.
 
 \hypertarget{photoionisation-detector-1}{%
 \subsubsection*{Photoionisation
 Detector}\label{photoionisation-detector-1}}
 \addcontentsline{toc}{subsubsection}{Photoionisation Detector}
 
-First year report: ``\,````First, a 200 sccm flow of N2 gas was sent
-through the dilution line to the device chamber until 1000 s. Then, the
-flow controller three-way valves were manually adjusted so that the same
-200 sccm flow was directed through 50 mL of EtOH analyte in the carrier
-line. This continued until 2200 s, where the valves were again manually
-adjusted so that 200 sccm clean N2 again flowed through the device
-chamber. The resulting current across the device channel was monitored
-over this time, and is shown in Figure 19. A response to EtOH exposure
-and removal is visible.''``\,''
+\begin{figure}
+
+\begin{minipage}[t]{0.20\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.60\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch5/240223_240226_comparison_unnormalised.png}
+
+}
+
+}
+
+\subcaption{\label{fig-ethex-comparison-unnormalised}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.20\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.20\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.60\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch5/240223_240226_comparison.png}
+
+}
+
+}
+
+\subcaption{\label{fig-ethex-comparison}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.20\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-PID-EtHex-response}The response of the
+photoionisation detector to ethyl hexanoate vapour over 600 s of
+exposure is shown relative to the 200 sccm nitrogen flow baseline in
+(a), and normalised with respect to the maximum reading in (b).}
+
+\end{figure}
+
+To test the photoionisation detector, the device chamber and carrier
+line were first purged of vapour through the exhaust using a roughing
+pump, with the PID valve closed to protect it from the pump. The PID
+valve was then opened, the micropump was set to 150 sccm as read by the
+flowmeter. During testing with the PID, the total flow into the chamber
+was set at 200 sccm as read by the mass flow controllers. The
+calibration curves in Section~\ref{sec-flow-calibration} show that the
+actual flow C + D was then therefore approximately the same as the
+actual flow rate into the PID, P. A flow of 200 sccm nitrogen was placed
+through the dilution line to the chamber for 10 minutes until successive
+concentration readings from the PID were either approximately constant,
+or until baseline drift was small enough to be considered negligible.
+These measurements were then used as the baseline (0 ppm) for subsequent
+measurements. 5 mL of the volatile organic compound ethyl hexanoate
+(EtHex) was placed into the analyte bottle. A flow of 150 sccm was then
+sent through the carrier line and 50 sccm through the dilution line for
+600 s. The same procedure was performed on two separate days spaced
+three days apart to check that the measured PID response to ethyl
+hexanoate vapour pumped out of the manifold was repeatable.
+
+The responses from each day are shown in
+Figure~\ref{fig-PID-EtHex-response}. In
+Figure~\ref{fig-ethex-comparison-unnormalised}, the response from each
+day is shown unnormalised, with the parts per million concentration
+shown relative to the nitrogen baseline as recorded.
 
 \hypertarget{summary}{%
 \section{Summary}\label{summary}}
