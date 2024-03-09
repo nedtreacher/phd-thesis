@@ -1,49 +1,10 @@
 ---
 keep-tex: true
-format: pdf
 latex_runs: 3
+format:
+  pdf:
+    css: custom.css
 ---
-
-```{python}
-
-import re
-
-# Dictionary to map month abbreviations to numbers
-month_mapping = {
-    "jan": "1",
-    "feb": "2",
-    "mar": "3",
-    "apr": "4",
-    "may": "5",
-    "jun": "6",
-    "jul": "7",
-    "aug": "8",
-    "sep": "9",
-    "oct": "10",
-    "nov": "11",
-    "dec": "12"
-}
-
-# Read the content of the original .bib file with UTF-8 encoding
-with open("references.bib", "r", encoding="utf-8") as file:
-    bib_content = file.read()
-
-# Replace month abbreviations with numbers using a single regex
-pattern_month = r'month\s*=\s*{([a-z]+)},'
-def replace_month(match):
-    month_abbrev = match.group(1)
-    month_number = month_mapping.get(month_abbrev, month_abbrev)
-    return f'month = {{{month_number}}},'
-
-modified_content = re.sub(pattern_month, replace_month, bib_content, flags=re.IGNORECASE)
-
-# Replace "%" with "\%" when not preceded by a backslash
-modified_content = re.sub(r'(?<!\\)%', r'\\%', modified_content)
-
-# Write the modified content back to the original .bib file with UTF-8 encoding
-with open("references.bib", "w", encoding="utf-8") as file:
-    file.write(modified_content)
-```
 
 # Vapour Sensing System for Transistor Biosensing {#sec-vapour-sensing-biosensors}
 
@@ -57,9 +18,9 @@ Through the adaptation of an existing setup, a custom vapour delivery system was
 
 - The ability to collect data from off-the-shelf reference sensors monitoring the same environment, for comparison with data collected by the novel biosensor.
 
-The previously existing system had a limited ability to meet the first two requirements, but was not able to take reference measurements of vapour flow. To implement new elements that would enable the system to fulfill all three requirements, a two-step development approach was taken across the course of the thesis. The changes made with each step of the redesign are outlined in @sec-vapour-system-design. 
+The existing system had a limited ability to meet the first two requirements, but was not able to take reference measurements of vapour flow. To implement new elements that would enable the system to fulfill all three requirements, a two-step development approach was taken across the course of the thesis. The changes made with each step of the redesign are outlined in @sec-vapour-system-design. 
 
-Three mass flow controllers (MFC) were used to precisely control and monitor the flow of nitrogen into the system in units of standard cubic centimeters per minute (sccm). The manner in which these controllers were configured in the system is discussed in @sec-delivery-system. The reference sensors chosen were a photoionisation detector (Ametek Mocon) and relative humidity and temperature indicator (Telaire). The photoionisation detector is able to monitor a wide range of volatile organic compounds, but cannot monitor compounds with an ionisation energy exceeding 10.6 eV. This includes nitrogen, oxygen, carbon dioxide, argon and water [@PIDmanual; @Ionscience]. Therefore, the photoionisation detector (PID) should not respond to either ambient air or standard nitrogen flow through the detector. As we would also like to monitor the presence of water vapour in the system, we use the relative humidity indicator (RHI). The operation of these reference sensors is discussed further in @sec-reference-sensors. 
+Three mass flow controllers (MFC) were used to precisely control and monitor the flow of nitrogen into the system in units of standard cubic centimeters per minute (sccm). The manner in which these controllers were configured in the system is discussed in @sec-delivery-system. The reference sensors chosen were a photoionisation detector (Ametek Mocon) and relative humidity and temperature indicator (Telaire). The photoionisation detector is able to monitor a wide range of volatile organic compounds, but cannot monitor compounds with an ionisation energy exceeding 10.6 eV. This includes nitrogen, oxygen, carbon dioxide, argon and water [@PIDmanual; @Ionscience]. Therefore, the photoionisation detector (PID) should not respond to either ambient air or standard nitrogen flow through the detector. As we would also like to monitor the presence of water vapour in the system, we use a relative humidity indicator (RHI). The operation of these reference sensors is discussed further in @sec-reference-sensors. 
 
 ## Technical Notes
 
@@ -91,7 +52,7 @@ $$
 AH = C\frac{P_W}{T}
 $$ {#eq-absolute-humidity}
 
-For temperatures between -20 $^\circ$C and 50 $^\circ$C, water vapour pressure $P_W$ (in hPa) can be approximated using @eq-water-vapour-pressure, where RH is relative humidity, T is temperature in $^\circ$C, $A = 6.116441$ hPa, $m = 7.591386$ and $T_{n} = 240.7263 ^\circ$C [@humidityformula].
+For temperatures between -20$^\circ$C and 50$^\circ$C, water vapour pressure $P_W$ (in hPa) can be approximated using @eq-water-vapour-pressure, where RH is relative humidity, T is temperature in $^\circ$C, $A = 6.116441$ hPa, $m = 7.591386$ and $T_{n} = 240.7263^\circ$C [@humidityformula].
 
 $$
 P_W = RH \times A \times 10^{(mT/(T+T_{n}))}
@@ -114,18 +75,20 @@ output module (DAQ). This USB-6009 DAQ connected to the mass flow controllers an
 
 #### Electronics {.unnumbered}
 
-::: {#fig-vapour-sensor-pcb layout="[47.5,-5,47.5]"}
+::: {.custom-figure-class #fig-vapour-sensor-pcb layout="[48.75,-2.5,48.75]"}
 
-![](figures/ch5/low_flow_config.png){#fig-low-flow}
+![](figures/ch5/low_flow_config_edited.png){#fig-low-flow}
+<span class="subfigure-label"></span>
 
-![](figures/ch5/high_flow_config.png){#fig-high-flow}
+![](figures/ch5/high_flow_config_edited.png){#fig-high-flow}
+<span class="subfigure-label"></span>
 
 Images of the vapour delivery control system circuit board, where (a) shows the low-flow configuration and (b) shows the high-flow configuration. Components are labelled as follows: (1) 9-pin carrier line port, (2) 9-pin dilution line port, (3) dilution port switch (determines which dilution line port is active), (4) 25-pin dilution line port. In (a), the 500 sccm full-scale MFC is connected at the 25-pin dilution line port, the 200 sccm full-scale MFC is connected at the 9-pin carrier line port and the red dilution port switch is towards "Tylan" (to the right). In (b), the 200 sccm full-scale MFC is connected at the 9-pin dilution line port, the 20 sccm full-scale MFC is connected at the 9-pin carrier line port and the red dilution port switch is towards "MKS" (to the left).
 :::
 
 ![Circuit board schematic for controlling and monitoring both the mass flow controllers and the relative humidity and temperature sensor. The relative humidity and temperature sensor is connected to the circuit board via the T9602 footprint. The mass flow controllers connect to the board in two configurations. The first ("high-flow") configuration has the Tylan dilution and MKS carrier ports connected, with switch SW1 in the Tylan direction. The second ("low-flow") configuration has both MKS ports connected, with switch SW1 connected in the MKS direction. Resistors R1-R6 are all 10 kOhm, while R7-R8 are both 0 Ohm. The circuit board was designed using the KiCad Layout Editor.](figures/ch5/current_PCB.png){#fig-current-pcb-design width=95%}
 
-The control circuit board used to connect the mass flow controllers and relative humidity and temperature indicator to the NI USB-6009 is shown in @fig-vapour-sensor-pcb. Only one mass flow controller can be set to provide flow to a specific line, and so only two mass flow controllers can be operational simultaneously during testing with the vapour delivery system. The control circuit board allows the user to set which two mass flow controllers are to be used during a specific test run. @fig-high-flow shows the "high-flow" configuration, where the 500 sccm full-scale MFC is connected to the dilution line and the 200 sccm full-scale MFC is connected to the carrier line. @fig-low-flow shows the "low-flow" configuration, where the 200 sccm full-scale MFC is connected to the dilution line and the 20 sccm full-scale MFC is connected to the carrier line. The design for the circuit board is shown in @fig-current-pcb-design, showing the pinout to the USB-6009 and the various components used to connect the MFCs, relative humidity indicator, and the power supply for the MFCs.
+The control circuit board used to connect the mass flow controllers and relative humidity and temperature indicator to the NI USB-6009 is shown in @fig-vapour-sensor-pcb. Only one mass flow controller can be set to provide flow to a specific line, and so only two mass flow controllers can be operational simultaneously during testing with the vapour delivery system. The control circuit board allows the user to set which two mass flow controllers are to be used during a specific test run. @fig-vapour-sensor-pcb (a) shows the "high-flow" configuration, where the 500 sccm full-scale MFC is connected to the dilution line and the 200 sccm full-scale MFC is connected to the carrier line. @fig-vapour-sensor-pcb (b) shows the "low-flow" configuration, where the 200 sccm full-scale MFC is connected to the dilution line and the 20 sccm full-scale MFC is connected to the carrier line. The design for the circuit board is shown in @fig-current-pcb-design, showing the pinout to the USB-6009 and the various components used to connect the MFCs, relative humidity indicator, and the power supply for the MFCs.
 
 #### Software {.unnumbered}
 
@@ -137,11 +100,13 @@ Two LabView Virtual Instruments (VIs) were adapted from pre-existing VIs for ope
 
 ![P&ID of the original vapour delivery system](figures/ch5/PID_V0.png){#fig-original-pid width=100%}
 
-::: {#fig-original-setup layout="[[40,-5,60], [-26.25,47.5,-26.25]]"}
+::: {.custom-figure-class #fig-original-setup layout="[[36.2,63.8]]"}
 
-![](figures/ch5/original_system_front.png){#fig-original-front}
+![](figures/ch5/original_system_front_edited.png)
+<span class="subfigure-label"></span>
 
-![](figures/ch5/original_system_back.png){#fig-original-back}
+![](figures/ch5/original_system_back_edited.png)
+<span class="subfigure-label"></span>
 
 The original vapour delivery system setup, where (a) shows the front of the system, including the device chamber, analyte bottles and four-way valve, and (b) shows the back of the system, including the mass flow controllers and solenoid valves.
 :::
@@ -154,9 +119,7 @@ The initial design of the vapour delivery system, as shown in @fig-original-pid,
 
 ![P&ID of the Stage I vapour delivery system.](figures/ch5/PID_V1.png){#fig-stage-1-pid width=100%}
 
-![Conceptual 3D Model of Stage I vapour delivery system. The model was made in Autodesk 360 by Alex Puglisi, School of Chemical and Physical Sciences, Te Herenga Waka - Victoria University of Wellington.](figures/ch5/cad_V1.png){#fig-stage-1-cad width=100%}
-
-The first stage of the vapour delivery system redesign, as shown in @fig-stage-1-pid and @fig-stage-1-cad was implemented in Nov 2021. This system introduced the ability to use a 20 sccm full-range MFC (MKS Instruments) for carrier line flow and a 200 sccm full-range MFC (MKS Instruments) for either carrier or dilution line flow, to give better control when using low flow rates. The reference sensors were also implemented, with each sensor connected in parallel to the chamber exhaust. Through testing the system with ethanol and acetone as analytes, the following issues with this implementation of the setup were identified:
+The first stage of the vapour delivery system redesign, as shown in @fig-stage-1-pid, was implemented in Nov 2021. This system introduced the ability to use a 20 sccm full-range MFC (MKS Instruments) for carrier line flow and a 200 sccm full-range MFC (MKS Instruments) for either carrier or dilution line flow, to give better control when using low flow rates. The reference sensors were also implemented, with each sensor connected in parallel to the chamber exhaust. Through testing the system with ethanol and acetone as analytes, the following issues with this implementation of the setup were identified:
 
 - With the system connected to the lab supply of nitrogen, pressure changes in the line due to nitrogen use elsewhere in the lab impacted the pressure at the MFCs and the flow through the lines.
 
@@ -170,7 +133,7 @@ These issues, along with various minor structural and design issues, were addres
 
 ### Stage II Design
 
-![Process & instrumentation diagram (P&ID) of the second-stage design for the vapour delivery system.](figures/ch5/PID_V2.png){#fig-stage-2-pid width=100%}
+![Process & instrumentation diagram (P&ID) of the second-stage design for the vapour delivery system. Red outlines indicate additions introduced to the system subsequent to the first stage design.](figures/ch5/PID_V2.png){#fig-stage-2-pid width=100%}
 
 @fig-stage-2-pid gives an overview of the second-stage design for the vapour delivery system setup. This stage of the redesign was implemented between Jan and May 2022. Changes from the first stage included:
 
@@ -198,11 +161,13 @@ These changes largely addressed the issues identified in @sec-vapour-system-desi
 
 A water displacement test was carried out to determine the relationship between the flow rate measured by the mass flow controllers and the actual flow rate passing through the chamber. All valves were set so that both the dilution and carrier lines followed a single path. Both these paths went through the device chamber and out through the system exhaust. An empty analyte bottle was placed on the carrier line. The system exhaust was placed into a bucket filled with tap water, with the outlet sitting beneath an upturned 500 mL measurement cylinder, as pictured in @fig-water-displacement. The cylinder was used to measure the volume of displaced water over time, which is equivalent to the rate of change of nitrogen volume entering the cylinder from the exhaust. As leaks in the manifold and exhaust line were not detected when leak testing with bubble solution, it can be safely assumed that the rate at which nitrogen exits the exhaust is equivalent to the nitrogen flow rate through the device chamber.
 
-::: {#fig-MFC-calibration-curves layout="[[47.5,-5,47.5]]"}
+::: {.custom-figure-class #fig-MFC-calibration-curves layout="[[47.5,-5,47.5]]"}
 
-![](figures/ch5/200sccmMFC_carrierline_thruchamber.png){#fig-200-MFC-curve}
+![](figures/ch5/200sccmMFC_carrierline_thruchamber_edited.png)
+<span class="subfigure-label"></span>
 
-![](figures/ch5/500sccmMFC_dilutionline_thruchamber.png){#fig-500-MFC-curve}
+![](figures/ch5/500sccmMFC_dilutionline_thruchamber_edited.png)
+<span class="subfigure-label"></span>
 
 Calibration curves for the 200 sccm full-scale MFC through the carrier line (a) and the 500 sccm full-scale MFC through the dilution line (b).
 :::
@@ -239,22 +204,34 @@ To test the relative humidity indicator (RHI), all valves out of the chamber wer
 
 @fig-RHI-verification shows flow purely from the dilution line decreases humidity as measured by the Telaire sensor, while flow from the analyte bottle containing deionised water increases humidity, as expected. It also shows that in regular 200 s intervals, an uptick in the increase of relative humidity occurs, which then begins to flatten out. Each gradient uptick occurs about 50 s after a corresponding increase in flow through the carrier line. It therefore appears that each interval corresponds to an increase of water vapour flow, where 50 s is the time taken for the increased concentration of water vapour to first reach the relative humidity indicator. 
 
-Over the full 800 s of carrier line flow, relative humidity increases from a minimum of $14.0\pm2.0$% to a maximum of $43.6\pm2.0$%. The temperature in the chamber remained between $21.0\pm0.5$ $^\circ$C and $22.0\pm0.5$ $^\circ$C over the entire measurement period. Combining equations @eq-absolute-humidity and @eq-water-vapour-pressure from @sec-reference-sensors, we find that the absolute humidity in the chamber reaches a low of $2.6\pm0.4$ gm$^{-3}$ at 238.1 s, 38.1 s after the initial onset of carrier flow, and a high of $8.4\pm0.5$ gm$^{-3}$ at 998.8 s, after 798.8 s of carrier flow through the chamber. The clear response of the Telaire RHI to water vapour flow through the carrier line confirms that this sensor is working as expected. 
+Over the full 800 s of carrier line flow, relative humidity increases from a minimum of $14.0\pm2.0$% to a maximum of $43.6\pm2.0$%. The temperature in the chamber remained between $21.0\pm0.5^\circ$C and $22.0\pm0.5^\circ$C over the entire measurement period. Combining equations @eq-absolute-humidity and @eq-water-vapour-pressure from @sec-reference-sensors, we find that the absolute humidity in the chamber reaches a low of $2.6\pm0.4$ gm$^{-3}$ at 238.1 s, 38.1 s after the initial onset of carrier flow, and a high of $8.4\pm0.5$ gm$^{-3}$ at 998.8 s, after 798.8 s of carrier flow through the chamber. The clear response of the Telaire RHI to water vapour flow through the carrier line confirms that this sensor is working as expected. 
 
 #### Photoionisation Detector {.unnumbered}
 
-::: {#fig-PID-EtHex-response layout="[[-20,60,-20], [-20,60,-20]]"}
+To test the photoionisation detector, the device chamber and carrier line were first purged of vapour through the exhaust using a roughing pump, with the PID valve closed to protect it from the pump. The PID valve was then opened, the micropump was set to 150 sccm as read by the flowmeter. During testing with the PID, the total flow into the chamber was set at 200 sccm as read by the Tylan mass flow controllers. The calibration curves in @sec-flow-calibration show that the actual flow C + D was then therefore approximately the same as the actual flow rate into the PID, P. A flow of 200 sccm nitrogen was placed through the dilution line to the chamber for 10 minutes until successive concentration readings from the PID were either approximately constant, or until baseline drift was small enough to be considered negligible. These measurements were then used as the baseline (0 ppm) for subsequent measurements. 5 mL of the volatile organic compound ethyl hexanoate (EtHex) was placed into the analyte bottle. A flow of 150 sccm was then sent through the carrier line and 50 sccm through the dilution line for 600 s. The same procedure was performed on two separate dates spaced three days apart (23 Feb and 26 Feb) to check that the measured PID response to ethyl hexanoate vapour pumped out of the manifold was repeatable. 
 
-![](figures/ch5/240223_240226_comparison_unnormalised.png){#fig-ethex-comparison-unnormalised}
+::: {.custom-figure-class #fig-PID-EtHex-response layout="[[-15,70,-15], [-15,70,-15]]"}
 
-![](figures/ch5/240223_240226_comparison.png){#fig-ethex-comparison}
+![$\vspace{-2em}$](figures/ch5/240223_240226_comparison_unnormalised_edited.png)
+<span class="subfigure-label"></span>
+
+![$\vspace{-2em}$](figures/ch5/240223_240226_comparison_edited.png)
+<span class="subfigure-label"></span>
 
 The response of the photoionisation detector to ethyl hexanoate vapour over 600 s of exposure is shown relative to the 200 sccm nitrogen flow baseline in (a), and normalised with respect to the maximum reading in (b).
 :::
 
-To test the photoionisation detector, the device chamber and carrier line were first purged of vapour through the exhaust using a roughing pump, with the PID valve closed to protect it from the pump. The PID valve was then opened, the micropump was set to 150 sccm as read by the flowmeter. During testing with the PID, the total flow into the chamber was set at 200 sccm as read by the mass flow controllers. The calibration curves in @sec-flow-calibration show that the actual flow C + D was then therefore approximately the same as the actual flow rate into the PID, P. A flow of 200 sccm nitrogen was placed through the dilution line to the chamber for 10 minutes until successive concentration readings from the PID were either approximately constant, or until baseline drift was small enough to be considered negligible. These measurements were then used as the baseline (0 ppm) for subsequent measurements. 5 mL of the volatile organic compound ethyl hexanoate (EtHex) was placed into the analyte bottle. A flow of 150 sccm was then sent through the carrier line and 50 sccm through the dilution line for 600 s. The same procedure was performed on two separate dates spaced three days apart (23 Feb and 26 Feb) to check that the measured PID response to ethyl hexanoate vapour pumped out of the manifold was repeatable. 
+The responses from each date are shown in @fig-PID-EtHex-response. In @fig-PID-EtHex-response (a), the response corresponding to each measurement date is shown unnormalised, with the parts per million concentration shown relative to the nitrogen baseline as recorded by the PID. Both measurements show little to no response to vapour for approximately 50 s, which seems to be the time taken for vapour to first reach the PID. Over the next 100s, there is a rapid increase in vapour concentration detected, which then settles to a constant concentration at about 300 s. This appears to be the maximum concentration of EtHex vapour that can be contained by the chamber in this configuration. There is approximately a 200 parts per billion difference in maximum concentration between the measurement on each date. 
 
-The responses from each date are shown in @fig-PID-EtHex-response. In @fig-ethex-comparison-unnormalised, the response corresponding to each measurement date is shown unnormalised, with the parts per million concentration shown relative to the nitrogen baseline as recorded by the PID. Both measurements show little to no response to vapour for approximately 50 s, which seems to be the time taken for vapour to first reach the PID. Over the next 100s, there is a rapid increase in vapour concentration detected, which then settles to a constant baseline for both measurements at about 300 s. There is approximately a 200 parts per billion difference between each measurement. However, this is not unexpected. As discussed in @sec-reference-sensors, the PID is being run uncalibrated, and some drift of the sensitivity of the sensor due to environmental changes is highly likely. To check that the PID records the same evolution of vapour flow with time, regardless of its sensitivity, the measurements from both dates were then normalised with respect to the maximum concentration reading. @fig-ethex-comparison shows that once normalised, the rate of change in concentration with time is almost identical between the two measurement sets. This test verifies that the evolution of vapour concentration of the device chamber can be repeatably measured using the PID in the vapour delivery system.
+However, this is not unexpected. As discussed in @sec-reference-sensors, the PID is being run uncalibrated, and some drift of the sensitivity of the sensor due to environmental changes is highly likely. To check that the PID records the same evolution of vapour flow with time, regardless of its sensitivity, the measurements from both dates were then normalised with respect to the maximum concentration reading. @fig-PID-EtHex-response (b) shows that once normalised, the rate of change in concentration with time is almost identical between the two measurement sets. This test verifies that the evolution of vapour concentration of the device chamber can be repeatably measured using the PID in the vapour delivery system.
+
+![The response of the photoionisation detector to 3 evenly-spaced intervals of ethyl hexanoate vapour entering the device chamber, relative to a 200 sccm nitrogen flow baseline. Input intervals were either either 50 s, 100 s or 200 s in length. During each input interval, 150 sccm carrier flow and 50 sccm dilution flow was placed through the chamber.](figures/ch5/input_time_comparison.png){#fig-concentration-comparison width=95%}
+
+A further series of tests were performed to verify whether it was possible to compare different concentrations of vapour in the chamber using the PID. All testing was performed on the same day to minimise sensitivity drift. For each test, the system was purged of vapour and the total dilution flow into the chamber was set at 200 sccm as read by the Tylan mass flow controller. Flow out of the chamber to the PID was set at 100 sccm as read by the micropump flowmeter, and the almost-constant nitrogen baseline after 10 minutes was set as the PID zero point. 5 mL of the volatile organic compound ethyl hexanoate (EtHex) was placed into the analyte bottle. During each test, 200 sccm was continuously flowed through the dilution line, except during three evenly spaced intervals of equal length. During these intervals, 150 sccm flow was placed through the carrier line and 50 sccm flow placed through the dilution line. In each test, the input interval time was varied to examine its effect on maximum vapour concentration recorded by the PID. As it took longer for the PID to return to a constant baseline with increased input intervals, when the input interval was increased, the spacing between intervals was also increased.
+
+The results of three tests, with input intervals of 50 s, 100 s and 200 s, are shown in @fig-concentration-comparison. Each interval of carrier flow corresponds to a rapid increase in concentration, which reaches a peak, then decreases. The maximum concentration reached for each interval is shown above the corresponding peak. Note that the maximum concentration label does not correspond to the difference between the original baseline and the maximum concentration of each peak. Instead, it corresponds to the difference between the concentration measurement at a set time before the onset of carrier flow and the maximum concentration reached. For each test, this set time is 5% of the spacing time used, 50 s, 150 s and 300 s respectively. This approach was taken to account for what appears to be drift from the original 0 ppm baseline. This variable baseline drift was particularly significant for the 100 s interval measurements, where concentration measurements settled to a new baseline of $\sim$ 0.05 ppm after the third peak.
+
+The values of three concentration maxima in each test are highly consistent, with only a $\pm$ 0.02 ppm margin of error. This experiment demonstrates that if tests using the PID are performed during the same day, placing the same vapour flow into the PID for the same interval of time in each test, it is possible to measure the same maximum concentration with the PID. It furthermore indicates that the placing the same amount of vapour flow into the chamber for a set amount of time leads to a reproducible concentration of vapour building up within the chamber.
 
 ## Summary 
 
