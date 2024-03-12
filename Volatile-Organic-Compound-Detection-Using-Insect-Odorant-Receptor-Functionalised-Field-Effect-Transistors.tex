@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, enhanced, breakable, borderline west={3pt}{0pt}{shadecolor}, sharp corners, frame hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, borderline west={3pt}{0pt}{shadecolor}, interior hidden, frame hidden, boxrule=0pt, breakable, sharp corners]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -841,12 +841,13 @@ to the nitrogen flow rate through the device chamber.
 \caption{\label{fig-MFC-calibration-curves}The nominal flow rate as
 measured by the mass flow controller compared to the actual flow rate
 measured using water displacement testing, shown for the 200 sccm
-full-scale MFC through the carrier line in (a) and the 500 sccm
-full-scale MFC through the dilution line in (b). Three water
-displacement tests were performed for each constant flow rate. A strong
-linear relationship between nominal and actual flows was identified
-using least-squares methods, with an R-squared value of 0.98 for the
-trendline in (a) and 0.997 for the trendline in (b).}
+full-scale mas flow controller placed through the carrier line in (a),
+and for the 500 sccm full-scale mass flow controller placed through the
+dilution line in (b). Three water displacement tests were performed for
+each constant flow rate. A strong linear relationship between nominal
+and actual flows was identified using least-squares methods, shown by a
+blue dotted trendline. The fit shown in (a) had an R-squared value of
+0.98, while the fit in (b) had an R-squared value of 0.997.}
 
 \end{figure}
 
@@ -856,17 +857,23 @@ carrier line and the 500 sccm MFC (Tylan) on the dilution line. The
 displacement flow rate corresponding to each measurement could then be
 found by dividing volume by time. These measurements, of displacement
 flow relative to nominal flow through the MFC, are shown in
-Figure~\ref{fig-MFC-calibration-curves}. The flow through the chamber
-was offset from the nominal flow reading from the mass flow controllers,
-with a strong linear relationship between the two measurements. A linear
-least-squares fit was performed, where coefficients \(a_1\) and \(a_2\)
-were found for the linear relationship \(D = a_1d + a_2\), where \(d\)
-is nominal flow from the MFC and \(D\) is measured displacement flow. A
-95\% confidence interval for each fit was also obtained. For the 200
-sccm MFC flow through the carrier line, values of \(a_1 = 1.18\pm0.09\)
-and \(a_2 = -1\pm13\) were obtained, while for the 500 sccm MFC flow
-through the dilution line, values of \(a_1 = 1.16\pm0.04\) and
-\(a_2 = -5\pm10\) were obtained.
+Figure~\ref{fig-MFC-calibration-curves}. The increased uncertainty for
+higher flow measurements is predominantly due to the increased
+difficulty of precise measurement of these more rapid flows using the
+water displacement tests. However, increased instability of flow from
+the MFCs at higher flow rates may also contribute to this uncertainty.
+
+The flow through the chamber was offset from the nominal flow reading
+from the mass flow controllers; a strong linear relationship was found
+to exist between the two measurements. A linear least-squares fit was
+performed, where coefficients \(a_1\) and \(a_2\) were found for the
+linear relationship \(D = a_1d + a_2\), where \(d\) is nominal flow from
+the MFC and \(D\) is measured displacement flow. A 95\% confidence
+interval for each fit was also obtained. For the 200 sccm MFC flow
+through the carrier line, values of \(a_1 = 1.18\pm0.09\) and
+\(a_2 = -1\pm13\) were obtained, while for the 500 sccm MFC flow through
+the dilution line, values of \(a_1 = 1.16\pm0.04\) and \(a_2 = -5\pm10\)
+were obtained.
 
 It appears that the offset between the measured displacement flow and
 nominal output flow is not due to leaks in the system, since the offset
@@ -893,33 +900,41 @@ the nominal and actual chamber flow.
 
 }
 
-\caption{\label{fig-flowmeter-calibration}Calibration curve for the PID
-flowmeter, comparing flowmeter readings with flow rate of water
-displacement.}
+\caption{\label{fig-flowmeter-calibration}Comparison of flowmeter
+readings with flow measurements from water displacement testing. Three
+water displacement tests were performed for each constant flow rate. A
+linear least-squares fit is shown by the blue dotted line, with an
+R-squared value of 0.87.}
 
 \end{figure}
 
 The time taken to displace a fixed water volume was also measured three
 times for a series of constant flow rates through the flowmeter from the
-chamber to exhaust. A linear relationship was obtained between flowmeter
-readings and actual displacement, as shown in
+chamber to exhaust. A least-squares linear relationship was obtained
+between flowmeter readings and actual displacement, as shown in
 Figure~\ref{fig-flowmeter-calibration}. Expressing the relationship as
 \(D = b_1f + b_2\), where \(f\) is the flowmeter reading and \(D\) is
-measured displacement flow, values of \(b_1 = 1.0\pm0.2\) and
-\(b_2 = 80\pm25\) were obtained. A 200 sccm flow rate through the
+measured displacement flow, values of \(b_1 = 0.85\pm0.2\) and
+\(b_2 = -18\pm26\) were obtained. A 200 sccm flow rate through the
 dilution line from the Tylan MFC, corresponding to a \(\sim\) 230 sccm
 actual flow rate through the chamber, would therefore be measured as a
-\(\sim\) 150 sccm flow rate by the flowmeter. Subsequent measurements
-showed that the linear relationship in
-Figure~\ref{fig-flowmeter-calibration} breaks down for flowmeter
-readings \(\lesssim 75\). For example, a 50 sccm flow on the flowmeter
-was found to correspond to 85 sccm of measured displacement flow. By
-disconnecting the flowmeter from the PID micropump and closing all
-valves out of the manifold except the valve exiting to the flowmeter
-(see Figure~\ref{fig-stage-2-pid}), the nominal flow on the MFC could be
-directly compared to the flowmeter reading. In this manner, the actual
-flow rate of readings \(\lesssim 75\) sccm on the flowmeter could be
-quickly obtained.
+\(\sim\) 150 sccm flow rate by the flowmeter. The R-squared value for
+the fit was 0.87.
+
+Note that the flow reading by the flowmeter became more unstable for
+flows above 150 sccm and below 130 sccm, leading to reduced
+repeatability and increased uncertainty of measurements taken for these
+higher and lower flow rates. To understand the reason for this
+instability, flow through the chamber was placed directly through the
+flowmeter without the micropump present. Stable readings could then be
+achieved, indicating that the flow rate instability at higher or lower
+flows results from limitations of the micropump used for vapour
+delivery. As the flow rate from the micropump was relatively stable
+between 130 \(-\) 150 sccm, a flow reading 150 sccm on the flowmeter was
+generally used when measuring vapour flow through the delivery system to
+the photoionisation detector. From
+Figure~\ref{fig-flowmeter-calibration} it can be seen that this
+corresponds to an actual flow of \(\sim\) 110 sccm.
 
 \hypertarget{sensor-responses-to-vapour-flow}{%
 \subsection{Sensor Responses to Vapour
