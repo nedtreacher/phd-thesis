@@ -16,8 +16,11 @@ def add_sidebar(image_path, label, ratio_size):
     width, height = img.size
     
     # Define sidebar width and font size relative to the image height and width
-    sidebar_width = (height * width // 20000) // ratio_size
-    font_size = (height * width // 37500) // ratio_size
+    #sidebar_width = (height * width // 20000) // ratio_size
+    #font_size = (height * width // 37500) // ratio_size
+    
+    sidebar_width = (height * width // 37500) // ratio_size
+    font_size = (height * width // 55000) // ratio_size
     
     # Create a new image with sidebar
     new_img = Image.new('RGB', (int(width) + int(sidebar_width), int(height)), color='white')
@@ -56,8 +59,8 @@ def edit_images(image_labels):
 if __name__ == "__main__":
     # List of tuples containing image filenames, custom labels, and ratio sizes
     image_labels = [
-        ("original_system_front.png", "(a)", 0.362),
-        ("original_system_back.png", "(b)", 0.638)  # Example of different ratio size
+        ("200sccmMFC_carrierline_thruchamber.png", "(a)", 0.5),
+        ("500sccmMFC_dilutionline_thruchamber.png", "(b)", 0.5)  # Example of different ratio size
     ]
     
     # Edit specified images

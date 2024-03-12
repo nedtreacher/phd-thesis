@@ -6,6 +6,10 @@ keep-tex: true
 
 ## Ambipolar Field-Effect Transistors
 
+### General Notes {#sec-general-FETs}
+
+As carbon nanotubes and graphene are highly sensitive substances and are easily functionalised with biomaterials, they make an ideal platform for biosensing \cite{battie_evaluation_2010, benlikaya_ascertaining_2019, ohno_chemical_2010,goodwin_graphene_2021}. CNTFETs are mainly p-type transistors with positive charge carriers \cite{martel_single-_1998,kong_nanotube_2000}, while GFETs are ambipolar \cite{ohno_chemical_2010}. Applying an gate voltage $V_g$ to the gate of a CNTFET or GFET increases (or decreases) the number of available charge carriers, by bringing the relevant charge-carrying band closer to (or further away from) the Fermi level of the channel \cite{sze_semiconductor_devices_2007}.
+
 ### Gating {#sec-gating}
 
 #### Back-gating {.unnumbered}
@@ -18,5 +22,10 @@ keep-tex: true
 
 It is important to account for the changes in current that occur during a sensing run that are unrelated to sensing, and try to minimise these changes as much as possible. These changes are due to a variety of causes and can be categorised as various types of noise and baseline drift. (1/f noise paper, heller paper)
 
+## Random-Network Carbon Nanotube Field-Effect Transistors
 
+### Morphology
 
+Carbon nanotube network and graphene field-effect transistors (CNTFETs and GFETs) are voltage-gated transistors that use a network of carbon nanotubes, or graphene, as a channel for current from the source to the drain electrode.
+    
+Nanotubes in a network can have semiconducting characteristics (s-CNTs) or metallic characteristics (m-CNTs), depending on their chirality \cite{martel_single-_1998,kong_nanotube_2000}.
