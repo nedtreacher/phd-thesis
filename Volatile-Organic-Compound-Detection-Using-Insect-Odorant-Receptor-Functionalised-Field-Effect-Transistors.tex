@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, borderline west={3pt}{0pt}{shadecolor}, interior hidden, frame hidden, boxrule=0pt, breakable, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, sharp corners, enhanced, interior hidden, breakable, boxrule=0pt, frame hidden]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -228,8 +228,8 @@ chemistry
 \chapter{Vapour Sensing System for Transistor
 Biosensing}\label{sec-vapour-sensing-biosensors}}
 
-\hypertarget{general-remarks}{%
-\section{General Remarks}\label{general-remarks}}
+\hypertarget{general-overview}{%
+\section{General Overview}\label{general-overview}}
 
 Through the adaptation of an existing setup, a custom vapour delivery
 system was developed to measure the response of field-effect biosensors
@@ -930,11 +930,13 @@ flowmeter without the micropump present. Stable readings could then be
 achieved, indicating that the flow rate instability at higher or lower
 flows results from limitations of the micropump used for vapour
 delivery. As the flow rate from the micropump was relatively stable
-between 130 \(-\) 150 sccm, a flow reading 150 sccm on the flowmeter was
-generally used when measuring vapour flow through the delivery system to
-the photoionisation detector. From
+between 130 \(-\) 150 sccm, a micropump flow measured as 150 sccm on the
+flowmeter was generally used when measuring vapour flow through the
+delivery system to the photoionisation detector. From
 Figure~\ref{fig-flowmeter-calibration} it can be seen that this
-corresponds to an actual flow of \(\sim\) 110 sccm.
+corresponds to an actual flow of \(\sim\) 110 sccm, about 50\% of the
+actual flow passing through the chamber when the total output flow of
+the mass flow controllers is set at 200 sccm.
 
 \hypertarget{sensor-responses-to-vapour-flow}{%
 \subsection{Sensor Responses to Vapour
@@ -996,6 +998,17 @@ D = dilution line flow rate). Note that between 230 s and 630 s, the
 total flow rate remains the same, but the ratio of dilution to carrier
 flow differs.
 
+Figure~\ref{fig-RHI-verification} shows flow purely from the dilution
+line decreases humidity as measured by the Telaire sensor, while flow
+from the analyte bottle containing deionised water increases humidity,
+as expected. It also shows that in regular 200 s intervals, an uptick in
+the increase of relative humidity occurs, which then begins to flatten
+out. Each gradient uptick occurs about 50 s after a corresponding
+increase in flow through the carrier line. It therefore appears that
+each interval corresponds to an increase of water vapour flow, where 50
+s is the time taken for the increased concentration of water vapour to
+first reach the relative humidity indicator.
+
 \hypertarget{tbl-RHI-flow-sequence}{}
 \begin{longtable}[]{@{}lll@{}}
 \caption{\label{tbl-RHI-flow-sequence}Flow sequence for testing relative
@@ -1016,17 +1029,6 @@ t (s) & C (sccm) & D (sccm) \\
 200 & 200 & 100 \\
 200 & 200 & 0 \\
 \end{longtable}
-
-Figure~\ref{fig-RHI-verification} shows flow purely from the dilution
-line decreases humidity as measured by the Telaire sensor, while flow
-from the analyte bottle containing deionised water increases humidity,
-as expected. It also shows that in regular 200 s intervals, an uptick in
-the increase of relative humidity occurs, which then begins to flatten
-out. Each gradient uptick occurs about 50 s after a corresponding
-increase in flow through the carrier line. It therefore appears that
-each interval corresponds to an increase of water vapour flow, where 50
-s is the time taken for the increased concentration of water vapour to
-first reach the relative humidity indicator.
 
 Over the full 800 s of carrier line flow, relative humidity increases
 from a minimum of \(14.0\pm2.0\)\% to a maximum of \(43.6\pm2.0\)\%. The
@@ -1166,21 +1168,6 @@ verifies that the evolution of vapour concentration of the device
 chamber can be repeatably measured using the PID in the vapour delivery
 system.
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch5/input_time_comparison.png}
-
-}
-
-\caption{\label{fig-concentration-comparison}The response of the
-photoionisation detector to 3 evenly-spaced intervals of ethyl hexanoate
-vapour entering the device chamber, relative to a 200 sccm nitrogen flow
-baseline. Input intervals were either either 50 s, 100 s or 200 s in
-length. During each input interval, 150 sccm carrier flow and 50 sccm
-dilution flow was placed through the chamber.}
-
-\end{figure}
-
 \hypertarget{photoionisation-detector-with-vapour-flow-intervals}{%
 \subsubsection*{Photoionisation Detector with Vapour Flow
 Intervals}\label{photoionisation-detector-with-vapour-flow-intervals}}
@@ -1205,6 +1192,21 @@ varied to examine its effect on maximum vapour concentration recorded by
 the PID. As it took longer for the PID to return to a constant baseline
 with increased input intervals, when the input interval was increased,
 the spacing between intervals was also increased.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch5/input_time_comparison.png}
+
+}
+
+\caption{\label{fig-concentration-comparison}The response of the
+photoionisation detector to 3 evenly-spaced intervals of ethyl hexanoate
+vapour entering the device chamber, relative to a 200 sccm nitrogen flow
+baseline. Input intervals were either either 50 s, 100 s or 200 s in
+length. During each input interval, 150 sccm carrier flow and 50 sccm
+dilution flow was placed through the chamber.}
+
+\end{figure}
 
 The results of three tests, with input intervals of 50 s, 100 s and 200
 s, are shown in Figure~\ref{fig-concentration-comparison}. Each interval
