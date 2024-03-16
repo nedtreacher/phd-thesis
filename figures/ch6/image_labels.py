@@ -19,8 +19,8 @@ def add_sidebar(image_path, label, ratio_size):
     #sidebar_width = (height * width // 20000) // ratio_size
     #font_size = (height * width // 37500) // ratio_size
     
-    sidebar_width = (height * width // 150000) // ratio_size
-    font_size = (height * width // 225000) // ratio_size
+    sidebar_width = (height * width // 75000) // ratio_size
+    font_size = (height * width // 160000) // ratio_size
     
     # Create a new image with sidebar
     new_img = Image.new('RGB', (int(width) + int(sidebar_width), int(height)), color='white')
@@ -59,8 +59,8 @@ def edit_images(image_labels):
 if __name__ == "__main__":
     # List of tuples containing image filenames, custom labels, and ratio sizes
     image_labels = [
-        #("Q2C6_fitted_curves.png", "(a)", 0.7),
-        ("Q2C6_fitted_curves_exp.png", "(b)", 0.7)  # Example of different ratio size
+        ("Q2C6_Q3C2_detrend_trunc_arrows_normalised.png", "(a)", 0.7)#,
+        #("Q2C6_Q3C2_mean_simple_difference_before_and_after.png", "(b)", 0.7)  # Example of different ratio size
     ]
     
     # Edit specified images

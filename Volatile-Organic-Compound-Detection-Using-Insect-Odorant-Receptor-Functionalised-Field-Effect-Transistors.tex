@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, interior hidden, breakable, frame hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, frame hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable, sharp corners, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -747,7 +747,7 @@ probability density for the carbon nanotube bundle histogram drops to
 approximately zero at or before 0 nm, which is physically appropriate.
 
 \begin{verbatim}
-Warning: package 'kableExtra' was built under R version 4.3.2
+Warning: package 'kableExtra' was built under R version 4.3.3
 \end{verbatim}
 
 \hypertarget{tbl-circle-packing}{}
@@ -956,7 +956,7 @@ solvent-deposited carbon nanotube film and a steam-assisted
 surfactant-deposited film, both on silicon dioxide, in the manner
 described in \textbf{?@sec-raman-characterisation}. These spectra were
 then processed using the Python script mentioned in
-\textbf{?@sec-raman-analysis}. For each location, spectra over two
+Section~\ref{sec-raman-analysis}. For each location, spectra over two
 wavenumber ranges were collected. A peak corresponding to the silicon
 dioxide substrate, found in the range between 100 cm\(^{-1}\) and 650
 cm\(^{-1}\), was used as a reference peak for the normalisation of
@@ -1015,7 +1015,7 @@ Devices}\label{sec-pristine-electrical-characterisation}}
 \subsection{Python Analysis}\label{sec-python-analysis}}
 
 Analysis of electrical measurements was performed using the three
-modules described in \textbf{?@sec-field-effect-transistor-analysis}.
+modules described in Section~\ref{sec-field-effect-transistor-analysis}.
 The first of the three modules is for processing sensing datasets. This
 module cleans, analyses and filters sensing data and produces a variety
 of plots. These plots include normalised plots (type of normalisation
@@ -1267,9 +1267,9 @@ liquid-gated measurements here.}
 Each carbon nanotube device fabricated was electrically characterised as
 described in \textbf{?@sec-electrical-characterisation}, and electrical
 data was analysed using the Python code discussed in
-\textbf{?@sec-field-effect-transistor-analysis}. Devices with a 100 nm
-or 300 nm SiO\(_2\) layer were used for liquid gated measurements, and
-devices with a 100 nm SiO\(_2\) layer were used for backgated
+Section~\ref{sec-field-effect-transistor-analysis}. Devices with a 100
+nm or 300 nm SiO\(_2\) layer were used for liquid gated measurements,
+and devices with a 100 nm SiO\(_2\) layer were used for backgated
 measurements. Figure~\ref{fig-pristine-cnt-characteristics} displays
 multi-channel measurements of representative devices fabricated as
 described in \textbf{?@sec-fabrication}. To ensure a consistent
@@ -1463,13 +1463,13 @@ presence of residual surfactant may also explain the lowered
 subthreshold slope, and therefore mobility, of the steam-deposited
 devices relative to devices with films deposited in surfactant without
 steam. The analysis by Kane \emph{et al.} shows that the thermal
-annealling at 150\(^\circ\)C used in this work to remove residual
-surfactant is likely inadequate for this purpose. Oxidation of devices
-and vacuum annealling at high temperatures (\textgreater{}
-600\^{}\circ\$C) may be required for effective desorption o f the
-persistent surfactant \autocite{Kane2014,Barnett2018}. Devices using
-films made using the alternative two methods have the advantage of not
-requiring careful treatment to remove surfactant.
+annealling at 150°C used in this work to remove residual surfactant is
+likely inadequate for this purpose. Oxidation of devices and vacuum
+annealling at high temperatures (\textgreater{} 600°C) may be required
+for effective desorption of the persistent surfactant
+\autocite{Kane2014,Barnett2018}. Devices using films made using the
+alternative two methods have the advantage of not requiring careful
+treatment to remove surfactant.
 
 \hypertarget{back-gated-cntfets}{%
 \subsubsection*{Back-Gated CNTFETs}\label{back-gated-cntfets}}
@@ -1660,7 +1660,7 @@ current.}
 Graphene field-effect transistor devices were electrically characterised
 in the manner described in \textbf{?@sec-electrical-characterisation}
 and analysed using the Python code discussed in
-\textbf{?@sec-field-effect-transistor-analysis}.
+Section~\ref{sec-field-effect-transistor-analysis}.
 
 Figure~\ref{fig-pristine-graphene} shows the liquid-gated transfer
 characteristics of two graphene devices. These devices were fabricated
@@ -2180,23 +2180,23 @@ resulting from PXIe-2737 module lag, single datapoints which fall well
 below the current level of the immediately preceding and succeeding
 datapoints, are also removed. This `despike' process uses an
 interquartile range filter, which is described in
-\textbf{?@sec-field-effect-transistor-analysis}. The resulting dataset
-is shown in Figure~\ref{fig-salt-conc-detrend}. This figure shows that
-the signal-to-noise ratio remains roughly similar across all channels of
-the device. However, the behaviour of the initial transient increase
-with each addition is highly variable across channels and between
-additions for a single channel.
+Section~\ref{sec-python-analysis}. The resulting dataset is shown in
+Figure~\ref{fig-salt-conc-detrend}. This figure shows that the
+signal-to-noise ratio remains roughly similar across all channels of the
+device. However, the behaviour of the initial transient increase with
+each addition is highly variable across channels and between additions
+for a single channel.
 
 As measurement of the highly variable initial transient is not useful
 for robust sensing purposes, a moving median filter was applied, with
 the implementation of this filter discussed in
-\textbf{?@sec-field-effect-transistor-analysis}. The filtered data is
-shown in Figure~\ref{fig-salt-conc-detrend-filter}. Noise and initial
-transients are removed completely, while the clearly defined step to a
-new current baseline is retained. Using the realtime data in
+Section~\ref{sec-python-analysis}. The filtered data is shown in
+Figure~\ref{fig-salt-conc-detrend-filter}. Noise and initial transients
+are removed completely, while the clearly defined step to a new current
+baseline is retained. Using the realtime data in
 Figure~\ref{fig-salt-conc-detrend-filter}, a plot of signal against
 addition can be created using the method described in
-\textbf{?@sec-field-effect-transistor-analysis}, shown in
+Section~\ref{sec-python-analysis}, shown in
 Figure~\ref{fig-salt-conc-signal}. This presentation of the data allows
 us to see the increase at each step relative to \(I_{0}\).
 
@@ -2306,10 +2306,10 @@ linear fit is only a first-order approximation which weakens with time,
 or because the additions themselves affect the drift behaviour.
 Displaying the data as discrete signal changes, as in
 Figure~\ref{fig-salt-conc-signal}, is one way of excluding these
-deviations (see \textbf{?@sec-field-effect-transistor-analysis}). An
-alternative way of presenting the signal changes, by normalising
-relative to both \(I_{0}\) and the final current reading with the
-formula \((I - I_{0})/(I_{f} - I_{0})\), is shown in
+deviations (see Section~\ref{sec-python-analysis}). An alternative way
+of presenting the signal changes, by normalising relative to both
+\(I_{0}\) and the final current reading with the formula
+\((I - I_{0})/(I_{f} - I_{0})\), is shown in
 Figure~\ref{fig-salt-conc-sensing-2}. This approach is useful for
 filtering out remaining unaccounted-for drift behaviour in order to
 compare the short-term transient responses to additions across the
@@ -2543,11 +2543,11 @@ leakage current remains negligible across the entire control series. As
 seen for the liquid-gated device in Section~\ref{sec-baseline-drift},
 there is a period of rapid exponential decay followed by a period of
 stable, approximately linear baseline drift. The baseline drift observed
-appears to be significantly lower than that seen by Noyce \emph{et al.}
-\autocite{Noyce2019}. This observation suggests that their larger drift
-is not a result of backgating in air, as previously suggested, but
-instead due to their use of a significantly different fabrication
-process.
+here appears to be significantly lower than that seen by Noyce \emph{et
+al.} \autocite{Noyce2019}. This observation suggests that the higher
+magnitude of drift observed by Noyce \emph{et al.} is not a result of
+backgating in air, as previously suggested, but instead due to the use
+of a significantly different fabrication process for their devices.
 
 A linear least-squares fit was performed on the samples taken between
 2400 s \(-\) 3600 s, and the fit obtained had an R-squared value of
@@ -2581,20 +2581,212 @@ the type of gating used for device characterisation.
 \hypertarget{sec-EtHex-series}{%
 \subsection{Sensing Series}\label{sec-EtHex-series}}
 
-From 3600 s onwards, the device was exposed to four intervals of ethyl
-hexanoate vapour flow from the carrier line. 5 mL of ethyl hexanoate was
-placed into the analyte bottle on the carrier line before testing for
-the sensing series. The same settings for the vapour delivery system
-were kept from Section~\ref{sec-vapour-drift}, and the PID zero point
-was set just before the sensing series was performed. A total flow of
-200 sccm between the two mass flow controllers was kept through the
-chamber at all times. During each interval 150 sccm flow was placed
+Directly after the 3600 s control series, the device was exposed to four
+intervals of ethyl hexanoate vapour flow from the carrier line. 5 mL of
+ethyl hexanoate was placed into the analyte bottle on the carrier line
+before testing for the sensing series. The same settings for the vapour
+delivery system were kept from Section~\ref{sec-vapour-drift}. A total
+flow of 200 sccm between the two mass flow controllers was kept through
+the chamber at all times. During each interval 150 sccm flow was placed
 through the carrier line. Apart for the duration of these intervals,
 flow through the carrier line was kept at zero. The intervals were of
 varying lengths to see how the carbon nanotube device responded to
 various concentrations of vapour in the chamber as recorded by the PID.
 A 1200 s recovery period was placed between each carrier flow interval,
 where 200 sccm flow was placed into the chamber from the dilution line.
+A separate test was also performed in an identical manner, except no
+ethyl hexanoate was placed into the analyte bottle. The chamber
+temperature was 22°C \(\pm\) 2°C for all measurements.
+
+\begin{figure}
+
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.70\linewidth}
+
+{\centering 
+
+\includegraphics{figures/ch6/Q2C6_Q3C2_detrend_trunc_arrows_normalised_edited.png}
+{}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.70\linewidth}
+
+{\centering 
+
+\includegraphics{figures/ch6/Q2C6_Q3C2_mean_simple_difference_before_and_after_edited.png}
+{}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-EtHex-sampling}Device channel responses to intervals
+of flow from the carrier line into the vapour delivery system chamber.
+Intervals begin at 3600 s, 4850 s, 6150 s and 7500 s. The length of each
+interval is indicated above the corresponding normalised current
+responses in (a) for both ethyl hexanoate (EtHex) and for no analyte
+present in the analyte bottle. The signal changes corresponding to the
+current responses to each interval for both ethyl hexanoate and for no
+analyte present are shown in (b).}
+
+\end{figure}
+
+Figure~\ref{fig-EtHex-sampling} shows the result of these interval
+tests, both with and without ethyl hexanoate placed in the analyte
+bottle. The data presented in Figure~\ref{fig-EtHex-sampling} (a) has
+been normalised, despiked, filtered and corrected for baseline drift in
+the manner described in both Section~\ref{sec-python-analysis} and
+Section~\ref{sec-salt-conc-series}. Each interval of exposure to carrier
+line flow corresponds to a current increase. These increases have been
+labelled with the length of the corresponding interval used. When ethyl
+hexanoate is present in the analyte bottle on the carrier line, the
+response to each exposure interval is considerably larger than the
+response when no analyte is present. It should be noted that some
+response to carrier line flow is observed even when the analyte bottle
+is empty. This is most likely to be the result residual analyte in the
+carrier line being pumped into the chamber. It appears very low levels
+of analyte persist in the line even after purging the system lines with
+a roughing pump. Concentration measurements taken using the
+photoionisation detector, shown in Figure~\ref{fig-EtHex-sampling-PID},
+also indicate some low-level, residual vapour reaches the chamber during
+each interval even when the analyte bottle is left empty.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\textwidth,height=\textheight]{figures/ch6/input_time_comparison.png}
+
+}
+
+\caption{\label{fig-EtHex-sampling-PID}Nominal concentration
+measurements by the photoionisation detector taken from the device
+chamber during device current sampling from 3600 s onwards, both with
+and without ethyl hexanoate (EtHex) in the analyte bottle. The maximum
+nominal concentration reached during each carrier flow interval is
+indicated above each peak.}
+
+\end{figure}
+
+The signal response seen corresponds to a change in conductance of the
+exposed carbon nanotubes within the device channel. These conductance
+changes occur due to the molecular adsorption of ethyl hexanoate vapour
+onto the external and internal surfaces of the nanotubes. The vapour can
+dopes the semiconducting carbon nanotubes in the channel, causing a
+shift in the channel threshold voltage, and can cause carrier scattering
+when adsorped onto the metallic nanotubes present. Binding of analyte to
+a gas sensing material can be reversible or irreversible. In general,
+adsorption onto carbon nanotube sensors is irreversible. This
+irreversibility means after a response to analyte, readings from the
+sensor will not return to the original baseline within the same
+timescale as the sensing response, even after stopping analyte flow to
+the chamber \autocite{Agnihotri2005,Lee2005}. From
+Figure~\ref{fig-EtHex-sampling}, it is clear that the carbon nanotube
+sensor configuration used here is primarily irreversible, where the
+current level does not return to baseline within a period of 1200 s
+after analyte exposure.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\textwidth,height=\textheight]{figures/ch6/EtHex-ratio-comparison.png}
+
+}
+
+\caption{\label{fig-EtHex-ratio-comparison}Device response against
+maximum concentration measurement corresponding to each interval of
+carrier flow. The experimental results have been fitted with two
+adsorption isotherm models. The chamber temperature was 22°C ± 2°C
+across both datasets.}
+
+\end{figure}
+
+Assuming that the signal response is directly proportional to the degree
+of surface coverage by adsorbed analyte on the carbon nanotube network
+\autocite{Lee2005}, it should be possible to model the relationship
+between signal response and concentration in the device chamber with an
+adsorption isotherm \autocite{Agnihotri2005}.
+Figure~\ref{fig-EtHex-ratio-comparison} shows the maximum nominal
+concentration measured for every peak shown in
+Figure~\ref{fig-EtHex-sampling-PID} plotted against the corresponding
+signal responses shown in Figure~\ref{fig-EtHex-sampling} (b), alongside
+two standard adsorption isotherms fitted using linear least-squares
+methods. The Langmuir isotherm (Equation~\ref{eq-langmuir}) is used to
+model monolayer surface adsorption of gases onto solids, where the
+relative rates of adsorption and desorption are in a dynamic
+equilibrium. \(q_e\) is the amount of adsorption at equilibrium, \(C_e\)
+is the concentration of adsorbent at equilibrium, \(K_L\) is the
+Langmuir constant related to adsorption capacity and \(q_m\) is a
+constant. The Freundlich isotherm (Equation~\ref{eq-freundlich}) models
+adsorption onto a heterogeneous surface. \(K_F\) is the adsorption
+capacity and \(1/n\) is adsorption intensity. \(1/n\) can be used to
+understand the heterogeneity of adsorbate sites
+\autocite{Ayawei2017,Sabzehmeidani2021}. The Freundlich isotherm has
+previously been used to model adsorption of volatile organic molecules
+onto single-walled carbon nanotubes \autocite{Agnihotri2005}. Calculated
+parameters for the Langmuir and Freundlich fits are shown in
+Table~\ref{tbl-isotherm_parameters}.
+
+\begin{equation}\protect\hypertarget{eq-freundlich}{}{
+q_e = K_FC_e\exp{(1/n)}
+}\label{eq-freundlich}\end{equation}
+
+\begin{equation}\protect\hypertarget{eq-langmuir}{}{
+q_e = \frac{q_mK_LC_e}{1+K_LC_e}
+}\label{eq-langmuir}\end{equation}
+
+\hypertarget{tbl-isotherm_parameters}{}
+\begin{longtable}[t]{>{\raggedright\arraybackslash}p{4cm}>{\centering\arraybackslash}p{3cm}>{\centering\arraybackslash}p{3cm}>{}p{3cm}}
+\caption{\label{tbl-isotherm_parameters}Langmuir and Freundlich isotherm parameters for adsorption of ethyl
+hexanoate onto a carbon nanotube network field-effect transistor device. }\tabularnewline
+
+\toprule
+ & \$K\_L\$ & \$q\_m\$\\
+\midrule
+Langmuir & 1 & 1\\
+ & \$K\_F\$ & \$n\$\\
+Freundlich & 1 & 1\\
+\bottomrule
+\end{longtable}
 
 \hypertarget{conclusion}{%
 \section{Conclusion}\label{conclusion}}
@@ -2712,6 +2904,63 @@ Humidity and temperature sensor & T9602 & Telaire\\
 Enclosure, for humidity and temperature sensor & MC001189 & Multicomp Pro\\
 \bottomrule
 \end{longtable}
+
+\hypertarget{sec-python}{%
+\chapter{Python Code for Data Analysis}\label{sec-python}}
+
+\hypertarget{code-repository}{%
+\section{Code Repository}\label{code-repository}}
+
+The code used for general analysis of field-effect transistor devices in
+this thesis was written with Python 3.8.8. Contributors to the code used
+include Erica Cassie, Erica Happe, Marissa Dierkes and Leo Browning. The
+code is located on GitHub and the research group OneDrive, and is
+available on request.
+
+\hypertarget{sec-histogram-analysis}{%
+\section{Atomic Force Microscope Histogram
+Analysis}\label{sec-histogram-analysis}}
+
+The purpose of this code is to analyse atomic force microscope (AFM)
+images of carbon nanotube networks in .xyz format taken using an atomic
+force microscope and processed in Gwyddion (see
+\textbf{?@sec-afm-characterisation}). It was originally designed by
+Erica Happe in Matlab, and adapted by Marissa Dierkes and myself for use
+in Python. The code imports the .xyz data and sorts it into bins 0.15 nm
+in size for processing. To perform skew-normal distribution fits, both
+\emph{scipy.optimize.curve\_fit} and \emph{scipy.stats.skewnorm} modules
+are used in this code.
+
+\hypertarget{sec-raman-analysis}{%
+\section{Raman Spectroscopy Analysis}\label{sec-raman-analysis}}
+
+The purpose of this code is to analyse a series of Raman spectra taken
+at different points on a single film (see
+\textbf{?@sec-raman-characterisation}). Data is imported in a series of
+tab-delimited text files, with the low wavenumber spectrum (100
+cm\(^{-1} - 650\) cm\(^{-1}\)) and high wavenumber spectrum (1300
+cm\(^{-1} - 1650\) cm\(^{-1}\)) imported in separate datafiles for each
+scan location.
+
+\hypertarget{sec-field-effect-transistor-analysis}{%
+\section{Field-Effect Transistor
+Analysis}\label{sec-field-effect-transistor-analysis}}
+
+The purpose of this code is to analyse electrical measurements taken of
+field-effect transistor (FET) devices. Electrical measurements were
+either taken from the Keysight 4156C Semiconductor Parameter Analyser,
+National Instruments NI-PXIe or Keysight B1500A Semiconductor Device
+Analyser as discussed in \textbf{?@sec-electrical-characterisation}; the
+code is able to analyse data in .csv format taken from all three
+measurement setups. The main Python file in the code base consists of
+three related but independent modules: the first analyses and plots
+sensing data from the FET devices, the second analyses and plots
+transfer characteristics from channels across a device, and the third
+compares individual channel characteristics before and after a
+modification or after each of several modifications. The code base also
+features a separate config file and style sheet which govern the
+behaviour of the main code. The code base was designed collaboratively
+by myself and Erica Cassie over GitHub using the Sourcetree Git GUI.
 
 
 \backmatter
