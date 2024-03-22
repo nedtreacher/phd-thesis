@@ -8,24 +8,67 @@ keep-tex: true
 
 ### General Notes {#sec-general-FETs}
 
-As carbon nanotubes and graphene are highly sensitive substances and are easily functionalised with biomaterials, they make an ideal platform for biosensing \cite{battie_evaluation_2010, benlikaya_ascertaining_2019, ohno_chemical_2010,goodwin_graphene_2021}. CNTFETs are mainly p-type transistors with positive charge carriers \cite{martel_single-_1998,kong_nanotube_2000}, while GFETs are ambipolar \cite{ohno_chemical_2010}. Applying an gate voltage $V_g$ to the gate of a CNTFET or GFET increases (or decreases) the number of available charge carriers, by bringing the relevant charge-carrying band closer to (or further away from) the Fermi level of the channel \cite{sze_semiconductor_devices_2007}.
+Carbon nanotube network and graphene field-effect transistors (CNTFETs and GFETs) are voltage-gated transistors that use a network of carbon nanotubes, or graphene, as a channel for current from the source to the drain electrode.
+
+CNTFETs are mainly p-type transistors with positive charge carriers \cite{martel_single-_1998,kong_nanotube_2000}, while GFETs are ambipolar \cite{ohno_chemical_2010}. Applying an gate voltage $V_g$ to the gate of a CNTFET or GFET increases (or decreases) the number of available charge carriers, by bringing the relevant charge-carrying band closer to (or further away from) the Fermi level of the channel \cite{sze_semiconductor_devices_2007}.
+
+
+
 
 ### Gating {#sec-gating}
+
+
+::: {.custom-figure-class #fig-gating-schematics layout="[[47.5,-5,47.5]]"}
+
+![$\vspace{-2em}$](figures/ch2/back-gate-schematic_edited.png)
+<span class="subfigure-label"></span>
+
+![$\vspace{-2em}$](figures/ch2/liquid-gate-schematic_edited.png)
+<span class="subfigure-label"></span>
+
+Two 
+:::
+
 
 #### Back-gating {.unnumbered}
 
 #### Liquid-gating {.unnumbered}
 
-### Electrical Properties
+### Electrical Characterisation
 
-### Noise and Baseline Drift
+#### Threshold Voltage {.unnumbered}
+
+Threshold Voltage: minimum gate-to-source voltage that is needed to create a conducting path between the electrodes
+
+Quantative measurement of leftward shift in transfer curve
+Use minima of curve in reverse sweep direction (more consistent than reading in forward sweep direction)
+I compared the transfer characteristics after then rinse steps to the pristine characteristics
+Transfer shifts where current drops to zero are excluded (indicates delamination/damage to channel)
+
+Second quantative measurement of leftward shift in transfer curve
+Use curve in reverse sweep direction (more consistent than reading in forward sweep direction)
+Separate readings for left and right hand sides of transfer curve (left side = electrons dominant carrier, right side = holes dominant carrier)
+Transfer shifts where current drops to zero are excluded (indicates delamination/damage to channel)
+This gives us a quantitative idea of whether the transfer shifts in slides 5/6 are stable (remain the same/similar after rinse steps)
+
+### Current Sampling
 
 It is important to account for the changes in current that occur during a sensing run that are unrelated to sensing, and try to minimise these changes as much as possible. These changes are due to a variety of causes and can be categorised as various types of noise and baseline drift. (1/f noise paper, heller paper)
 
 ## Random-Network Carbon Nanotube Field-Effect Transistors
 
+### Composition and Chirality
+
+Nanotubes in a network can have semiconducting characteristics (s-CNTs) or metallic characteristics (m-CNTs), depending on their chirality \cite{martel_single-_1998,kong_nanotube_2000}.
+
 ### Morphology
 
-Carbon nanotube network and graphene field-effect transistors (CNTFETs and GFETs) are voltage-gated transistors that use a network of carbon nanotubes, or graphene, as a channel for current from the source to the drain electrode.
-    
-Nanotubes in a network can have semiconducting characteristics (s-CNTs) or metallic characteristics (m-CNTs), depending on their chirality \cite{martel_single-_1998,kong_nanotube_2000}.
+
+## Graphene Field-Effect Transistors
+
+### Electrical Characterisation of Graphene Field-Effect Transistors
+
+Quantative measurement of leftward shift in transfer curve
+Use minima of curve in reverse sweep direction (more consistent than reading in forward sweep direction)
+I compared the transfer characteristics after then rinse steps to the pristine characteristics
+Transfer shifts where current drops to zero are excluded (indicates delamination/damage to channel)
