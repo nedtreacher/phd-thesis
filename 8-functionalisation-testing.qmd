@@ -9,38 +9,60 @@ format: pdf
 
 ##	Aqueous Sensing of Ethyl Hexanoate with OR22a-functionalised Carbon Nanotube Transistor
 
+### Functionalisation
+
+A carbon nanotube network field-effect transistor device, fabricated using post-June 2023 methods as described in @sec-fabrication, was functionalised with OR22a nanodiscs. The network used for the device was deposited using the steam-assisted surfactant method, and the device was encapsulated with AZ$^\circledR$ 1518 using the post-Jan 2023 photolithography mask. The functionalisation was performed as follows:
+
+1. The device was exposed to UV light for 1 minute, placed in AZ$^\circledR$ 326 developer for 3 minutes, then rinsed with acetone, isopropanol and nitrogen dried.
+
+2. The device was vacuum annealed for 1 hour at 150°C. 
+
+Note: Steps 1 & 2 were added to ensure any residual photoresist on the channel was removed or passivated before functionalisation, see @sec-photoresist-contamination.
+
+3. A solution of 1 mM PBASE (Setareh Biotech) in methanol was prepared by fully dissolving 2 mg PBASE in 5 mL methanol by vortex mixing at 1000 rpm in a dark room.
+
+Note: PBASE was stored at -18°C for 18 months prior to use, and was thawed under vacuum for 15 minutes in dark conditions before opening.
+
+4. The device was then rinsed with methanol, fully submerged in $\sim$ 1 mL of PBASE in methanol solution and left covered with parafilm for 1 hour, then rinsed with methanol for 15 s, rinsed with 1XPBS for 15 s and nitrogen dried to remove residual PBASE.
+
+5. The device was left dry and in darkness while collecting the OR22a nanodiscs from the -80°C freezer.
+
+6. 10 $\mu$L OR22a nanodiscs (batch number ND-OR22a-SB018, 1.9 mg/mL, prepared 7 months earlier) were diluted in 1 mL 1XPBS 
+
+Note: The full 1 mL was used to flush out the nanodisc vial when preparing the nanodisc solution, with successive additions and subtractions of 50 $\mu$L 1XPBS into and from the vial.
+
+7. The device was submerged in the OR22a nanodisc solution and left covered with parafilm for 1 hour, then rinsed with 1XPBS for 15 s and gently nitrogen dried.
+
+### Electrical Characteristics
+
+Liquid-gated electrical characteristics were taken of the sensing channel before and after functionalisation with OR22a. These characteristics are shown in @fig-OR22a-TX-comparison, shown using both a logarithmic and linear current scale. The device exhibited ambipolar characteristics before functionalisation, which is typically seen for steam-deposited carbon nanotube films (@sec-cnt-devices). However, $p$-type behaviour dominates after device functionalisation due to a significant drop in $n$-type conductance. There was little hysteresis present, which is also typical for these devices. A slight increase in hysteresis was observed post-functionalisation. Leakage current (shown by the dashed traces) never exceeds $1 \times 10^{-7}$ V, both before and after functionalisation. The significant change in electrical characteristics observed could be due to five possible factors $-$ adsorption of solvent onto the network, network attachment of PBASE without subsequent protein attachment, non-specific adsorption of protein onto the network, PBASE-mediated attachment of the membrane scaffold protein (MSP) of nanodiscs to the network, and PBASE-mediated attachment of odorant receptors to the network. Note that as the nanodisc volume is much larger than that of the odorant receptor, any direct protein adsorption is highly likely to be adsorption of the nanodisc membrane scaffold protein onto the carbon nanotube network. Odorant receptor attachment via PBASE is therefore the only desirable functionalisation result for sensing purposes.
+
+::: {.custom-figure-class #fig-OR22a-TX-comparison layout="[[47.5,-5,47.5]]"}
+
+![$\vspace{-2em}$](figures/ch8/Q1C6_ch7_absolute_values_with_gate_current_edited.png)
+<span class="subfigure-label"></span>
+
+![$\vspace{-2em}$](figures/ch8/Q1C6_ch7_absolute_values_with_threshold_voltage_shift_without_gate_current_edited.png)
+<span class="subfigure-label"></span>
+
+Liquid-gated carbon nanotube network device transfer characteristics before and after OR22a nanodisc functionalisation. In (a), the characteristics are shown on a logarithmic scale, where the gate current for each transfer curve is shown with a dashed line. In (b), the characteristics are shown on a linear scale alongside a dashed line tangent to the subthreshold slope of the characteristic curve. The threshold voltage corresponding to the intercept of this slope with the x-axis is shown for each transfer characteristic curve.
+:::
+
+Only minor changes were observed in the on-off ratio when comparing the device channel before and after functionalisation. The on-off ratio for the pristine channel was $1120\pm220$, fairly typical for a transfer curve from a steam-assisted surfactant-deposited CNT network device (see @sec-cnt-devices). The on-off ratio increased slightly to $1830\pm550$ after functionalisation. We expect to see an increase in on-off ratio for a device successfully functionalised with OR22a, which may result from an increase in negative charge causing modulation of Schottky barriers between metallic and semiconducting carbon nanotubes within the network  [@Murugathas2019b]. However, we also expect increased hole conductance from the attachment of PBASE, even without proteins being present (@sec-PBASE-electrical-characterisation). It is therefore difficult to determine whether functionalisation has been successful from the on-off ratio of transfer characteristics alone. 
+
+Functionalisation of the channel resulted in a negative shift in threshold voltage of $-0.20\pm0.03$ V. This is significantly in excess of threshold voltage shifts measured for both methanol adsorption ($-0.15\pm0.02$ V) and PBASE attachment ($-0.06\pm0.04$ V), confirming that protein has attached to the carbon nanotubes. However, both direct protein adsorption [@Bradley2004; @Heller2008] and empty nanodisc attachment [@Murugathas2019b] also lead to the same significant negative threshold voltage shift in the liquid-gated transfer characteristic curve. In all three cases, the voltage shift is predominantly the result of negative charge transfer from the adsorped proteins to the semiconducting carbon nanotubes [@Bradley2004; @Heller2008; @Murugathas2019b]. It is likely that the negative shift observed results from some combination of the three types of attachment. It should be noted that while the size of the functionalisation-induced threshold voltage shift can be used to determine whether protein has attached to the nanodisc network, it cannot be used to specifically determine whether odorant receptors have attached to the network.
+
+### Aqueous Sensing of Ethyl Hexanoate
+
+
+
+### Network Morphology
+
 <!-- These issues have been studied in detail for soft biological samples such as oligonucleotides, where it was shown that the AFM measurements with common settings can underestimate the actual height by over 50% [22,23,24]. [@Vobornik2023] !-->
 
 ##	Variability in Biosensor Behaviour
 
 ##	Potential Sources of Variability {#sec-contamination}
-
-### Solvent Contamination
-
-::: {#fig-afm-solvent layout="[[47.5,-5,47.5], [-26.25,47.5,-26.25]]"}
-
-![Pristine surfactant deposited device](figures/ch5/Danica_NTQ14D6_90sCNT_20220915_00596.png){#fig-pristine-afm}
-
-![Surfactant-deposited device after 1 hour submersion in DMSO](figures/ch5/Danica_NTQ14D6_DMSO_W4_20220915_00607.png){#fig-DMSO-afm}
-
-![Surfactant-deposited device after 1 hour submersion in DMSO containing 1 mM dissolved PBASE](figures/ch5/Danica_NTQ14D7_1mMPBASE_W4_20220915_00610.png){#fig-DMSO-PBASE-afm}
-
-2.5 $\mu$m x 2.5 $\mu$m atomic force microscope images of a surfactant-deposited carbon nanotube film before and after exposure to dimethyl sulfoxide (DMSO) and after exposure to DMSO containing 1 mM 1-pyrenebutanoic acid n-hydroxysuccinimide ester (PBASE). 
-:::
-
-To accurately characterise devices with atomic force microscopy before and after functionalisation, it was important to first understand the impact that the non-biological elements used in a functionalisation process have on imaging the carbon nanotube film.
-
-::: {#fig-afm-solvent-histograms layout="[[47.5,-5,47.5], [-26.25,47.5,-26.25]]"}
-
-![Pristine surfactant-deposited device](figures/ch5/Danica_NTQ14D6_90sCNT_20220915_00596_histogram.png){#fig-pristine-histogram}
-
-![Surfactant-deposited device after 1 hour submersion in DMSO](figures/ch5/Danica_NTQ14D6_DMSO_W4_20220915_00607_histogram.png){#fig-DMSO-histogram}
-
-![Surfactant-deposited device after 1 hour submersion in DMSO containig 1 mM dissolved PBASE ](figures/ch5/Danica_NTQ14D7_1mMPBASE_W4_20220915_00610_histogram.png){#fig-DMSO-PBASE-histogram}
-
-Surface profile histograms extracted from the 2.5 $\mu$m x 2.5 $\mu$m atomic force microscope images seen in @fig-afm-solvent, each fitted with a linear combination of normal distributions. Component normal distributions corresponding to each linear combination are also shown.
-
-:::
 
 ###	Surfactant Contamination {#sec-cnt-deposition-effects}
 
@@ -50,9 +72,13 @@ Surface profile histograms extracted from the 2.5 $\mu$m x 2.5 $\mu$m atomic for
 
 ###	Aggregation of Odorant Receptor Nanodiscs
 
-###	Other Sources of Variability
+### Solvent Contamination
 
-###	Vapour Sensing with Empty Nanodiscs
 
-### Conclusion
+
+##	Other Sources of Variability
+
+##	Vapour Sensing with Empty Nanodiscs
+
+## Conclusion
 
