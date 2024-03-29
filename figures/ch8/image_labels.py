@@ -7,15 +7,26 @@ def add_sidebar(image_path, label, ratio_size):
     # Open the image
     img = Image.open(image_path)
     
+    # Resize image to 300 DPI based on height
+    #width, height = img.size
+    #new_height = int((height / img.info['dpi']) * 300)
+    #img = img.resize((int(width * (new_height / height)), new_height))
+    
     # Get resized image dimensions
     width, height = img.size
     
     # Define sidebar width and font size relative to the image height and width
-    #sidebar_width = (height * width // 20000) // ratio_size
-    #font_size = (height * width // 37500) // ratio_size
+    #sidebar_width = (height * width // 4000) // ratio_size
+    #font_size = (height * width // 8500) // ratio_size
     
-    sidebar_width = (height * width // 66000) // ratio_size
-    font_size = (height * width // 95000) // ratio_size
+    sidebar_width = (height * width // 4000) // ratio_size
+    font_size = (height * width // 7400) // ratio_size
+    
+    #sidebar_width = (height * width // 66000) // ratio_size
+    #font_size = (height * width // 95000) // ratio_size
+    
+    #sidebar_width = (height * width // 150000) // ratio_size
+    #font_size = (height * width // 210000) // ratio_size
     
     # Create a new image with sidebar
     new_img = Image.new('RGB', (int(width) + int(sidebar_width), int(height)), color='white')
@@ -54,8 +65,8 @@ def edit_images(image_labels):
 if __name__ == "__main__":
     # List of tuples containing image filenames, custom labels, and ratio sizes
     image_labels = [
-        ("Q1C6_ch7_absolute_values_with_gate_current.png", "(a)", 0.5),
-        ("Q1C6_ch7_absolute_values_with_threshold_voltage_shift_without_gate_current.png", "(b)", 0.5)  # Example of different ratio size
+        ("DF2Q3D9_AZ1518ENCAP_PostPBASE_ch6_00313_mask.png", "(a)", 0.5),
+        ("DF2Q1D6_postNDOR22a_ch7_1_00375_mask.png", "(b)", 0.5)  # Example of different ratio size
     ]
     
     # Edit specified images
