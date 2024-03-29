@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, sharp corners, interior hidden, enhanced, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, interior hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, enhanced, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -715,18 +715,19 @@ al.} \autocite{Vobornik2023}, five successive diameter measurements of
 were not taken at bundle junctions. A height threshold `mask' was
 defined in Gwyddion to determine average substrate height, as shown in
 Figure~\ref{fig-mask}. This background value was subtracted from our
-diameter measurements to determine the actual bundle height. The means
-of the solvent-deposited, surfactant-deposited and steam-assisted
-surfactant-deposited bundle diameter histograms are \(8.8 \pm 4.0\) nm,
-\(4.2 \pm 1.8\) nm and \(3.3 \pm 1.0\) nm respectively. An increased
-maximum feature height leads to an increased mean background height, and
-by examining the AFM images in Figure~\ref{fig-afm-morphology} it
-appears this may be due to deep artifacts on the surface of the
-substrate in the vicinity of large features. The average of the five
-height-adjusted values for each carbon nanotube bundle was then
-calculated, and these 30 averages were sorted into six equal-sized bins.
-The binned bundle diameter measurements, alongside estimated probability
-density, are shown in Figure~\ref{fig-cnt-histogram}.
+diameter measurements to determine the actual bundle height. The mean
+background height of the solvent-deposited, surfactant-deposited and
+steam-assisted surfactant-deposited bundle diameter histograms were
+\(8.8 \pm 4.0\) nm, \(4.2 \pm 1.8\) nm and \(3.3 \pm 1.0\) nm
+respectively. An increased maximum feature height leads to an increased
+mean background height, and by examining the AFM images in
+Figure~\ref{fig-afm-morphology} it appears this may be due to deep
+artifacts on the surface of the substrate in the vicinity of large
+features. The average of the five height-adjusted values for each carbon
+nanotube bundle was then calculated, and these 30 averages were sorted
+into six equal-sized bins. The binned bundle diameter measurements,
+alongside estimated probability density, are shown in
+Figure~\ref{fig-cnt-histogram}.
 
 From Figure~\ref{fig-cnt-histogram}, it is clear that each histogram
 appears to follow a positively skewed normal distribution, different to
@@ -738,13 +739,14 @@ bundles to undergo some degree of compression, and the resulting
 systematic underestimation of their height may be responsible for the
 distribution skewness \autocite{Vobornik2023}. The fitted skew-normal
 distribution in Figure~\ref{fig-solvent-cnt-histogram} has
-\(\alpha = 2.7\), \(\xi = 4.3\) nm, \(\omega = 5.9\) nm, the
-distribution in Figure~\ref{fig-surfactant-cnt-histogram} has
-\(\alpha = 2.4\), \(\xi = 2.2\) nm, \(\omega = 2.6\) nm, and the
-distribution in Figure~\ref{fig-steamed-surfactant-cnt-histogram} has
-\(\alpha = 3.6\), \(\xi = 2.2\) nm and \(\omega = 1.5\) nm. The
-probability density for the carbon nanotube bundle histogram drops to
-approximately zero at or before 0 nm, which is physically appropriate.
+\(\alpha = 2.7\) (shape), \(\xi = 4.3\) nm (location/mean),
+\(\omega = 5.9\) nm (scale/standard deviation), the distribution in
+Figure~\ref{fig-surfactant-cnt-histogram} has \(\alpha = 2.4\),
+\(\xi = 2.2\) nm, \(\omega = 2.6\) nm, and the distribution in
+Figure~\ref{fig-steamed-surfactant-cnt-histogram} has \(\alpha = 3.6\),
+\(\xi = 2.2\) nm and \(\omega = 1.5\) nm. The probability density for
+the carbon nanotube bundle histogram drops to approximately zero at or
+before 0 nm, which is physically appropriate.
 
 \begin{verbatim}
 Warning: package 'kableExtra' was built under R version 4.3.3
@@ -1898,7 +1900,7 @@ to the PBS control series from each channel from 1200 s onwards are
 shown in (b), while exponential fits to the PBS control series from
 \(0-1200\) with the linear fit subtracted are shown in (c). No
 significant response to PBS additions are seen at any of the addition
-times from 100 s - 600 s.}
+times from \(100-600\) s.}
 
 \end{figure}
 
@@ -1907,11 +1909,11 @@ to each device channel alongside gate current. In both series, there is
 no clear stepwise response to any addition or subtraction of 1XPBS. Gate
 leakage current remains negligible across the entire control series,
 with no change in response to 1XPBS additions. The current has a period
-of faster decay followed by slower baseline drift, similar to
-observations by Lin \emph{et al.} and more recently Noyce \emph{et al.}
-for parallel arrangements of single carbon nanotubes in air or vacuum
-\autocite{Lin2006,Noyce2019}. This effect results from changes in the
-occupancy of charge traps in and around the substrate and carbon
+of short-term decay followed by much longer term baseline drift, similar
+to observations by Lin \emph{et al.} and more recently Noyce \emph{et
+al.} for parallel arrangements of single carbon nanotubes in air or
+vacuum \autocite{Lin2006,Noyce2019}. This effect results from changes in
+the occupancy of charge traps in and around the substrate and carbon
 nanotubes. The magnitude of baseline drift is lower for our devices than
 for those characterised by Noyce \emph{et al.}, which may be a result of
 numerous device and setup differences which affect the presence of
@@ -1944,67 +1946,74 @@ Channels & CH1 & CH2 & CH3 & CH5 & CH6 & CH7 \\
 \end{longtable}
 
 \hypertarget{tbl-exp-fits}{}
-\begin{longtable}[]{@{}llllll@{}}
+\begin{longtable}[]{@{}lllll@{}}
 \caption{\label{tbl-exp-fits}The coefficients of exponential fits to the
 PBS control series of each channel between \(0-1200\) s, after the
 linear fit has been subtracted, where \(I_0\) is the gradient and
 \(\tau\) is the time constant.\\
 }\tabularnewline
 \toprule\noalign{}
-Channels & CH1 & CH2 & CH3 & CH6 & CH7 \\
+Channels & CH2 & CH3 & CH6 & CH7 \\
 \midrule\noalign{}
 \endfirsthead
 \toprule\noalign{}
-Channels & CH1 & CH2 & CH3 & CH6 & CH7 \\
+Channels & CH2 & CH3 & CH6 & CH7 \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-\(I_0\) (nA) & \(-0.66\pm0.26\) & \(6.21\pm0.09\) & \(7.84\pm0.41\) &
-\(5.67\pm0.11\) & \(9.82\pm0.47\) \\
-\(\tau\) (s) & \(800\pm750\) & \(500\pm30\) & \(790\pm100\) &
-\(330\pm20\) & \(440\pm70\) \\
+\(I_0\) (nA) & \(6.07\pm0.08\) & \(7.19\pm0.11\) & \(5.75\pm0.12\) &
+\(9.68\pm0.41\) \\
+\(\tau\) (s) & \(450\pm10\) & \(610\pm30\) & \(280\pm10\) &
+\(350\pm30\) \\
 \end{longtable}
 
-As a first approximation to the longer time constant exponentials
+As a first-order approximation to the longer time constant exponentials
 discussed by Noyce \emph{et al.} \autocite{Noyce2019}, linear fits were
-performed on each PBS control series from \(1200-1800\) s. These linear
-fits are shown by the dashed yellow lines in
-Figure~\ref{fig-linear-fit}. The parameters from each fit in
-Figure~\ref{fig-linear-fit} are shown in Table~\ref{tbl-linear-fits},
-where \(I = c_1t + c_2\). The fits for channels 1, 5 and 7 are all in
-parallel within error. The gradient value for each fit in
-Figure~\ref{fig-linear-fit} is reasonably consistent between all
-channels, all falling within a 2.6 pA/s range. When the long-term linear
-fits were subtracted from the raw data, the remaining dataset followed a
-exponential decay trend for both control series.
+performed on each PBS control series from \(1200-1800\) s. These fits
+are tangent to the curve of the sum of the larger time constant
+exponentials, and are a close approximation to this curve when higher
+order terms in the series expansion are approximately zero. This is only
+the case when \(t\ll\tau_i\), where the time interval of interest \(t\)
+is much shorter than the time constants of the larger time constant
+exponentials, \(\tau_i\). These linear fits are shown by the dashed
+yellow lines in Figure~\ref{fig-linear-fit}. The parameters from each
+fit in Figure~\ref{fig-linear-fit} are shown in
+Table~\ref{tbl-linear-fits}, where \(I = c_1t + c_2\). The fits for
+channels 1, 5 and 7 are all in parallel within error. The gradient value
+for each fit in Figure~\ref{fig-linear-fit} is consistent within a 2.6
+pA/s range across all channels. The current data from channel 1 is
+closely approximated by the linear across the entire control series. No
+short-term decay is present for this channel, indicating the channel has
+low net trapped charge. It is unclear why this short-term exponential
+decay behaviour is only absent for channel 1.
 
-Figure~\ref{fig-exp-fit} shows exponential fits to the remaining curve
-from \(0-1200\) s, which was successful for all channels except channel
-5. The parameters from each fit are shown in Table~\ref{tbl-exp-fits},
-where \(I = I_0\exp(-t/\tau)\). Any constant term \(I_C\) resulting from
-the fit was negligible and so could be neglected. The exponential fits
-had characteristic time constants \(\tau\) ranging between \(300 - 800\)
-s. This result indicates 1800 s is a sufficient length of time for this
-short-term baseline drift to decay almost completely for the channels
-with smaller time constants. However, it means that for some channels, a
-control sequence of up to 4000 s may be required for this term to be
-neglected. The exponential term for channel 1 has a amplitude close to
-zero, indicating the channel has low net trapped charge. It is unclear
-why the behaviour of this channel is signficantly different from the
-others.
+The long-term linear fits were next subtracted from the raw control
+series data. Figure~\ref{fig-exp-fit} shows exponential fits to the
+remaining curve from \(0-1800\) s, which was successful for all channels
+except channels 1 and 5. The parameters from each fit are shown in
+Table~\ref{tbl-exp-fits}, where \(I = I_0\exp(-t/\tau)\). Any constant
+term \(I_C\) resulting from the fit was negligible and so could be
+neglected. The exponential fits had characteristic time constants
+\(\tau\) ranging between \(280 - 610\) s. Note that the value of
+peak-to-peak noise is above 5\% of the initial current value for all
+channels. This result indicates that 3 time constants is a sufficient
+length of time for this short-term baseline drift to decay almost
+completely for each channels. At most, \(1830\pm150\) s is required to
+minimise the drift present when sensing is performed, which is fulfilled
+by the chosen length of the control series.
 
 From this analysis it appears that the baseline drift for the
-liquid-gated carbon nanotube devices can be accurately approximated as a
+liquid-gated carbon nanotube devices can generally be approximated as a
 combination of a exponential and linear term. The lack of response to
 1XPBS at any of the six PBS addition and removal times gives us
 confidence that this is a stable baseline which can be used for reliable
-chemical sensing. Furthermore, after \(\sim 800\) s the baseline drift
+chemical sensing. Furthermore, after \(\sim 1800\) s the baseline drift
 can be reasonably approximated as linear, with a small gradient of less
-than -10 pA/s. The slow change of current means that it becomes easier
-to distinguish responses due to analyte addition. It can therefore be
-concluded that the 1800 s length of the PBS control series is
-appropriate for minimising baseline drift for more reliable sensing.
+than -10 pA/s. The approximately linear current change means that it
+becomes easier to distinguish responses due to analyte addition. It can
+therefore be concluded that the 1800 s length of the PBS control series
+is appropriate for minimising baseline drift for more reliable sensing.
 
 \hypertarget{sec-salt-conc-series}{%
 \subsection{Sensing Series}\label{sec-salt-conc-series}}
@@ -2080,7 +2089,7 @@ Final PBS concentration & 1X & 0.83X & 0.71X & 0.63X & 0.56X & 0.50X\\
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch6/NTQ31C1_pristine_saltconc_sample_230324_filtered_detrend_trunc_arrows_normalised_(2).png}
+\includegraphics{figures/ch6/NTQ31C1_pristine_saltconc_sample_230324_filtered_detrend_trunc_arrows_normalised.png}
 
 }
 
@@ -2238,7 +2247,7 @@ the overall concentration in the well.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch6/NTQ31C1_pristine_saltconc_sample_230324_filtered_detrend_trunc_arrows_normalised.png}
+\includegraphics{figures/ch6/NTQ31C1_pristine_saltconc_sample_230324_filtered_detrend_trunc_arrows_normalised_2.png}
 
 }
 
@@ -2528,8 +2537,7 @@ measured for a backgated device channel across 3600 s, where V\(_{ds}\)
 from 2400 s onwards has been indicated on (a) with a black dashed line.
 The linear fit has then been subtracted from (a) to give the dataset
 shown in (b). An exponential fit to the dataset in (b) is also shown in
-black. The R-squared value for the linear fit in (a) was 0.998, while
-the R-squared value for the exponential fit in (b) was 0.89.}
+black.}
 
 \end{figure}
 
@@ -2540,42 +2548,47 @@ channel. During this period of time, a 200 sccm nitrogen flow was placed
 through the device chamber with the dilution mass flow controller. Gate
 leakage current remains negligible across the entire control series. As
 seen for the liquid-gated device in Section~\ref{sec-baseline-drift},
-there is a period of rapid exponential decay followed by a period of
-stable, approximately linear baseline drift. The baseline drift observed
-here appears to be significantly lower than that seen by Noyce \emph{et
-al.} \autocite{Noyce2019}. This observation suggests that the higher
-magnitude of drift observed by Noyce \emph{et al.} is not a result of
-backgating in air, as previously suggested, but instead due to the use
-of a significantly different fabrication process for their devices.
+there is a period of rapidly-disappearing exponential decay followed by
+a period of stable, approximately linear baseline drift. The baseline
+drift observed here appears to be significantly lower than that seen by
+Noyce \emph{et al.} \autocite{Noyce2019}. This observation suggests that
+the higher magnitude of drift observed by Noyce \emph{et al.} is not a
+result of backgating in air, as previously suggested, but instead due to
+the use of a significantly different fabrication process for their
+devices.
 
 A linear least-squares fit was performed on the samples taken between
 2400 s \(-\) 3600 s, and the fit obtained had an R-squared value of
 0.998. The constants obtained for the linear fit, where
 \(I = c_1t + c_2\), were \(c_1 = -17.31\pm0.05\) pAs\(^{-1}\) and
-\(c_2 = 0.779 \mu\)A. Both linear and constant terms are slightly higher
-than that of the average liquid-gated device drift. The linear fit was
-then subtracted from the raw data, and an exponential least-squares fit
-was performed on the remaining dataset.
-Figure~\ref{fig-bg-baseline-drift} (b) shows the exponential fit to this
-remaining dataset from 0 s \(-\) 3600 s, where the R-squared value was
-0.89. The constants obtained for the exponential fit
+\(c_2 = 0.779 \mu\)A. Both linear and constant terms are higher than
+that of the average liquid-gated device drift. The linear fit was then
+subtracted from the raw data, and an exponential least-squares fit was
+performed on the remaining dataset. Figure~\ref{fig-bg-baseline-drift}
+(b) shows the exponential fit to this remaining dataset from 0 s \(-\)
+3600 s. The constants obtained for the exponential fit
 \(I = I_0exp(-t/\tau)\) were \(I_0 = 7.20 \pm 0.05\) nA and
-\(\tau = 730 \pm 10\) s. The exponential term is very similar in size
-and time constant to those of the liquid-gated device, which may
-indicate this decay behaviour is independent of the type of transistor
-gating. The large time constant indicates that 3600 s is just sufficient
-for the exponential term to decay to approximately zero before starting
-a sensing series for this channel.
+\(\tau = 730 \pm 10\) s. The exponential term is similar in size to
+those found for the channels of the liquid-gated device, which may
+indicate the magnitude of this decay behaviour is independent of the
+type of transistor gating. Three time constants equates to
+\(2190 \pm 30\), indicating the length of the control sequence could be
+safely reduced to 2400 s without the short-term exponential drift being
+present during sensing.
 
 This analysis indicates that the baseline drift for the backgated carbon
 nanotube under nitrogen flow can be approximated as a combination of a
 exponential, linear and constant term. Furthermore, while only measured
 here for a single channel, it appears likely that we can expect
 backgated baseline drift behaviour to be similar to the multiplexed
-liquid-gated drifts observed in Section~\ref{sec-baseline-drift}. It
-seems that the nature of baseline drift in these devices is largely a
-result of the general nature of the carbon nanotube network, rather than
-the type of gating used for device characterisation.
+liquid-gated drifts observed in Section~\ref{sec-baseline-drift}, except
+possibly with a longer time constant for the exponential term. It seems
+that the baseline drift behaviour in these devices is primarily due to
+the general nature of the carbon nanotube network. It appears possible
+that the type of gating used for device characterisation may affect the
+rate at which the exponential term decays. However, further
+experimentation may be needed to confirm this relationship, which is
+outside the scope of this thesis.
 
 \hypertarget{sec-EtHex-series}{%
 \subsection{Sensing Series}\label{sec-EtHex-series}}
@@ -2829,15 +2842,15 @@ channels, with a mean value of \(-6.1 \pm 1.2\) pAs\^{}\{-1\},
 indicating that similar drift behaviour should be reproducible between
 devices fabricated in the same manner. The time constant of the
 exponential term for liquid-gated drift ranged from
-\(\tau = 330 \pm 20\) s to \(\tau = 800 \pm 750\) s for the device
+\(\tau = 280 \pm 10\) s to \(\tau = 610 \pm 30\) s for the device
 characterised. The linear term of back-gated baseline drift in nitrogen
 found for a single channel was \(-17.31\pm0.05\) pAs\^{}\{-1\}, higher
 than all measurements for liquid-gated linear drift. The exponential
-term found was \(\tau = 730 \pm 10\) s, similar to that of the
+term found was \(\tau = 730 \pm 10\) s, higher than that of the
 liquid-gated channels. These results indicate a control series length of
-between 1650 s and 4000 s is suitable for minimising the effects of
-baseline drift on sensing, for both liquid-gated and back-gated
-measurements.
+1800 s is appropriate for minimising the effects of baseline drift on
+liquid-gated sensing, while a control series length of 2400 s is
+sufficient in the case of a backgated device under nitrogen flow.
 
 A PBS dilution sensing series indicated that the carbon nanotube
 transistor devices were highly sensitive to environmental changes in an
@@ -3299,9 +3312,9 @@ recommend leaving frozen PBASE at room temperature for 15 minutes before
 exposing it to air to prevent condensation near the PBASE, as this can
 cause unnecessary \(H_2O\) contamination.
 
-\hypertarget{electrical-characterisation}{%
+\hypertarget{sec-PBASE-electrical-characterisation}{%
 \subsection{Electrical
-Characterisation}\label{electrical-characterisation}}
+Characterisation}\label{sec-PBASE-electrical-characterisation}}
 
 \begin{figure}
 
@@ -3389,8 +3402,8 @@ solvents commonly used in PBASE functionalisation processes
 dimethyl sulfoxide (DMSO), a significant negative shift in channel
 threshold voltage occurs even after thorough rinsing with deionised
 water. It appears that the carbon nanotubes have adsorped solvent which
-persists even after device cleaning. From the shape of the change in the
-transfer curve, it seems the residual polar solvent molecules
+persists even after rinsing the device. From the shape of the change in
+the transfer curve, it seems the residual polar solvent molecules
 capacitively gate the channel \autocite{Artyukhin2006,Heller2008}.
 Besteman \emph{et al.} reported observing a similar effect from
 prolonged exposure of a single carbon nanotube to dimethylformamide
@@ -3413,8 +3426,7 @@ the feature height of the network is significantly increased.
 
 }
 
-\subcaption{\label{fig-pristine-afm}Pristine surfactant deposited
-device}
+\subcaption{\label{fig-pristine-afm}}
 \end{minipage}%
 %
 \begin{minipage}[t]{0.05\linewidth}
@@ -3439,13 +3451,13 @@ device}
 
 }
 
-\subcaption{\label{fig-DMSO-afm}Surfactant-deposited device after 1 hour
-submersion in DMSO}
+\subcaption{\label{fig-DMSO-afm}}
 \end{minipage}%
 
 \caption{\label{fig-afm-solvent}2.5 \(\mu\)m x 2.5 \(\mu\)m atomic force
 microscope images of a surfactant-deposited carbon nanotube film before
-and after exposure to dimethyl sulfoxide (DMSO).}
+(a) and after (b) 1 hour submersed in dimethyl sulfoxide (DMSO). Image
+blurring in (b) appears to be due to the presence of adsorped DMSO.}
 
 \end{figure}
 
@@ -3749,9 +3761,9 @@ functionalisation of the carbon nanotube network with both the PBA and
 PBASE has led to measurable \(pi\)-stacking between the network and the
 pyrene group attached to each compound.
 
-\hypertarget{electrical-characterisation-1}{%
+\hypertarget{electrical-characterisation}{%
 \subsection{Electrical
-Characterisation}\label{electrical-characterisation-1}}
+Characterisation}\label{electrical-characterisation}}
 
 Figure~\ref{fig-pba-functionalisation-threshold-shift} shows the
 transfer characteristics of a carbon nanotube transistor channel at
@@ -4477,13 +4489,66 @@ pyrene-PEG-NTA by submerging them in solution instead of dropcasting.
 \section{Verifying Linker-OR Nanodisc Attachment with Fluorescence
 Microscopy}\label{sec-linker-receptor-attachment}}
 
+\hypertarget{sec-PBASE-GFP-OR-attachment}{%
+\subsection{GFP-OR Nanodisc
+Functionalisation}\label{sec-PBASE-GFP-OR-attachment}}
+
 To verify the formation of amide (or imide) bonds between PBASE and the
 odorant receptors (ORs) contained within nanodiscs, a fluorescent
 biomarker was directly attached to the odorant receptors for detection
 with fluorescence microscopy. The biomarker used was the \emph{Aequorea
-Victoria} green fluorescent protein (GFP). As far as I know, this is the
-first time fluorescence has been used to verify the successful
-attachment of odorant receptor nanodiscs to a carbon nanotube network.
+Victoria} green fluorescent protein (GFP). The functionalisation of
+unencapsulated carbon nanotube devices (steam-deposited, fabricated
+using post-June 2023 methods outlined in \textbf{?@sec-fabrication})
+with PBASE and GFP-OR nanodiscs was performed as follows:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  The device was exposed to UV light for 1 minute, placed in
+  AZ\(^\circledR\) 326 developer for 3 minutes, then rinsed with
+  acetone, isopropanol and nitrogen dried.
+\item
+  The device was vacuum annealed for 1 hour at 150°C (Note: Steps 1 \& 2
+  were added to ensure any residual photoresist on the channel was
+  removed or passivated before functionalisation, see
+  Section~\ref{sec-photoresist-contamination}).
+\item
+  A solution of 1 mM PBASE (Setareh Biotech) in methanol prepared by
+  fully dissolving 2 mg PBASE in 5 mL methanol by vortex mixing at 1000
+  rpm in a dark room (Note: PBASE was stored at -18°C for 18 months
+  prior to use, and was thawed under vacuum for 15 minutes in dark
+  conditions before opening)
+\item
+  The device was then rinsed with methanol, fully submerged in \(\sim\)
+  1 mL of PBASE in methanol solution and left covered with parafilm for
+  1 hour, then rinsed with methanol for 15 s, rinsed with 1XPBS for 15 s
+  and nitrogen dried to remove residual PBASE.
+\item
+  The device was left dry and in darkness while collecting the GFP-OR
+  nanodiscs from the -80°C freezer. An opaque cover was placed over the
+  GFP-OR vial to shield it from light.
+\item
+  20 \(\mu\)L GFP-OR nanodiscs (batch number ND-GFP-OR43b-0002, prepared
+  12 months earlier) were diluted in 2 mL 1XPBS (Note: The full 2 mL was
+  used to flush out the nanodisc vial when preparing the nanodisc
+  solution, with successive additions and subtractions of 50 \(\mu\)L
+  1XPBS into and from the vial).
+\item
+  The device was submerged in the GFP-OR43b nanodisc solution and left
+  covered with parafilm for 1 hour in darkness, then rinsed with 1XPBS
+  for 15 s.
+\item
+  For fluorescence microscopy, the device was briefly rinsed with DI
+  water and nitrogen dried to remove dried-down salt residue left by the
+  1XPBS.
+\end{enumerate}
+
+A control device was prepared using the same process but skipping steps
+3 and 4.
+
+\hypertarget{sec-PBASE-GFP-OR-microscopy}{%
+\subsection{Fluorescence Microscopy}\label{sec-PBASE-GFP-OR-microscopy}}
 
 \begin{figure}
 
@@ -4610,93 +4675,44 @@ attachment of odorant receptor nanodiscs to a carbon nanotube network.
 \caption{\label{fig-PBASE-GFP-ORs}The fluorescence images on the left
 side \(-\) (a), (c) and (e) \(-\) show unencapsulated carbon nanotube
 network channels from a device incubated in GFP-OR43b nanodiscs. The
-fluorescence images on the right \(-\) (b), (d) and (f) \(-\) show the
-channels of a similar device after successive PBASE and GFP-OR43b
-nanodisc incubation. Images (a) and (c) are both of the same channel on
-the first device, and images (b) and (d) are of the same channel on the
-second, but (c) and (d) were taken using a greater magnification. The
-insets in (c)-(f) compare the central channel region of (c)-(f) more
-directly. All images were taken using the same microscope settings, with
-a GFP filter and a 10 s exposure time.}
+rectangular dark regions to the left and right of each image are the
+gold electrodes. The fluorescence images on the right \(-\) (b), (d) and
+(f) \(-\) show the channels of a similar device after successive PBASE
+and GFP-OR43b nanodisc incubation. Images (a) and (c) are both of the
+same channel on the first device, and images (b) and (d) are of the same
+channel on the second, but (c) and (d) were taken using a greater
+magnification. The insets in (c)-(f) compare the central channel region
+of (c)-(f) more directly. All images were taken with the same microscope
+settings (GFP filter and 10 s exposure time), directly after
+functionalisation in a dark room.}
 
 \end{figure}
 
-The functionalisation of unencapsulated carbon nanotube devices
-(steam-deposited, fabricated using post-June 2023 methods outlined in
-\textbf{?@sec-fabrication}) with PBASE and GFP-OR nanodiscs was
-performed as follows:
+Fluorescence images of the GFP-OR43b and control devices discussed in
+Section~\ref{sec-PBASE-GFP-OR-attachment} are shown in
+Figure~\ref{fig-PBASE-GFP-ORs}. Fluorescence microscope images were
+taken immediately after functionalisation; devices were transported to
+the fluorescence microscope room in a foil-wrapped container, and the
+fluorescence microscope room was kept dark while images were taken. All
+fluorescence images were taken of channels with ungated resistance
+measurements within a 50-500 k\(\Omega\) range both before and after
+functionalisation.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  The device was exposed to UV light for 1 minute, placed in
-  AZ\(^\circledR\) 326 developer for 3 minutes, then rinsed with
-  acetone, isopropanol and nitrogen dried.
-\item
-  The device was vacuum annealed for 1 hour at 150°C (Note: Steps 1 \& 2
-  were added to ensure any residual photoresist on the channel was
-  removed or passivated before functionalisation, see
-  Section~\ref{sec-photoresist-contamination}).
-\item
-  A solution of 1 mM PBASE (Setareh Biotech) in methanol prepared by
-  fully dissolving 2 mg PBASE in 5 mL methanol by vortex mixing at 1000
-  rpm in a dark room (Note: PBASE was stored at -18°C for 18 months
-  prior to use, and was thawed under vacuum for 15 minutes in dark
-  conditions before opening)
-\item
-  The device was then rinsed with methanol, fully submerged in \(\sim\)
-  1 mL of PBASE in methanol solution and left covered with parafilm for
-  1 hour, then rinsed with methanol for 15 s, rinsed with 1XPBS for 15 s
-  and nitrogen dried to remove residual PBASE.
-\item
-  The device was left dry and in darkness while collecting the GFP-OR
-  nanodiscs from the -80°C freezer.
-\item
-  20 \(\mu\)L GFP-OR nanodiscs (batch number ND-GFP-OR43b-0002, prepared
-  12 months earlier) were diluted in 2 mL 1XPBS (Note: The full 2 mL was
-  used to flush out the nanodisc vial when preparing the nanodisc
-  solution, with successive additions and subtractions of 50 \(\mu\)L
-  1XPBS into and from the vial).
-\item
-  The device was submerged in the GFP-OR43b nanodisc solution and left
-  covered with parafilm for 1 hour, then rinsed with 1XPBS for 15 s.
-\item
-  For fluorescence microscopy, the device was briefly rinsed with DI
-  water and nitrogen dried to remove dried-down salt residue left by the
-  1XPBS.
-\item
-  Fluorescence microscope images were taken immediately after
-  functionalisation; devices were transported to the fluorescence
-  microscope room in a foil-wrapped container, and the fluorescence
-  microscope room was kept dark while images were taken.
-\end{enumerate}
-
-A control device was prepared using the same process but skipping steps
-3 and 4. Fluorescence images of both devices are shown in
-Figure~\ref{fig-PBASE-GFP-ORs}. All fluorescence images were taken of
-channels with a measured resistance within a 50-500 k\(\Omega\) range
-both before and after functionalisation.
-
-As mentioned in \textbf{?@sec-fluorescence-characterisation}, the
-rectangular dark regions to the left and right of each image are the
-gold electrodes. The silicon dioxide regions in each image appear bright
-under the GFP filter, indicating non-specific binding between the
-GFP-OR43b nanodiscs and the silicon dioxide substrate. As this device
-has been annealed, UV exposed and developed before functionalisation,
-this non-specific attachment is unlikely to be interaction with residual
-photoresist (see Section~\ref{sec-photoresist-contamination}). The
-SiO\(_2\) substrate also appears brighter in the images on the right of
+The silicon dioxide regions in each image appear bright under the GFP
+filter, indicating non-specific binding between the GFP-OR43b nanodiscs
+and the silicon dioxide substrate. As this device has been annealed, UV
+exposed and developed before functionalisation, this non-specific
+attachment is unlikely to be interaction with residual photoresist (see
+Section~\ref{sec-photoresist-contamination}). The SiO\(_2\) substrate
+also appears brighter in the images on the right of
 Figure~\ref{fig-PBASE-GFP-ORs}, which are of the device initially
 exposed to PBASE. The discussion in
 Section~\ref{sec-pyrene-interactions} indicates that the pyrene moiety
-of PBASE may non-specifically interact with the silicon dioxide
-substrate, therefore, the SiO\(_2\) substrate may have had a coating of
-attached PBASE when the device on the right of
-Figure~\ref{fig-PBASE-GFP-ORs} was submerged in the GFP-OR43b nanodiscs.
-The attachment of GFP-OR43b nanodiscs to this PBASE coating may have
-been more extensive than direct attachment of GFP-OR43b nanodiscs to the
-silicon dioxide, which led to brighter fluorescence of the modified
-silicon dioxide for the PBASE-incubated device.
+of PBASE non-specifically interacts with the silicon dioxide substrate.
+The attachment of GFP-OR43b nanodiscs to this PBASE coating appears have
+led to more GFP-OR43b nanodiscs attaching to the silicon dioxide, giving
+rise to the brighter fluorescence of the silicon dioxide seen for the
+PBASE-incubated device on the right of Figure~\ref{fig-PBASE-GFP-ORs}.
 
 A comparison of fluorescence in the channel region between images on the
 left of Figure~\ref{fig-PBASE-GFP-ORs} (GFP-OR43b only) and the images
@@ -4710,7 +4726,9 @@ of the carbon nanotubes. However, when the carbon nanotubes are modified
 with PBASE, the GFP-OR43b is able to attach to the channel, and so the
 channel shows up brightly under the fluorescence microscope GFP filter.
 This trend was consistent across all conducting channels on each of the
-two devices.
+two devices. As far as I know, this is the first time fluorescence has
+been used to verify the successful attachment of odorant receptor
+nanodiscs to a carbon nanotube network.
 
 \hypertarget{sec-conclusion}{%
 \section{Conclusion}\label{sec-conclusion}}
@@ -4810,8 +4828,9 @@ Devices}\label{biosensing-with-insect-odorant-receptor-functionalised-carbon-nan
 Carbon Nanotube
 Transistor}\label{aqueous-sensing-of-ethyl-hexanoate-with-or22a-functionalised-carbon-nanotube-transistor}}
 
-\hypertarget{functionalisation}{%
-\subsection{Functionalisation}\label{functionalisation}}
+\hypertarget{or-nanodisc-functionalisation}{%
+\subsection{OR Nanodisc
+Functionalisation}\label{or-nanodisc-functionalisation}}
 
 A carbon nanotube network field-effect transistor device, fabricated
 using post-June 2023 methods as described in \textbf{?@sec-fabrication},
@@ -4877,35 +4896,36 @@ subtractions of 50 \(\mu\)L 1XPBS into and from the vial.
   gently nitrogen dried.
 \end{enumerate}
 
-\hypertarget{electrical-characteristics}{%
-\subsection{Electrical
-Characteristics}\label{electrical-characteristics}}
-
 Liquid-gated electrical characteristics were taken of the sensing
-channel before and after functionalisation with OR22a. These
-characteristics are shown in Figure~\ref{fig-OR22a-TX-comparison}, shown
-using both a logarithmic and linear current scale. The device exhibited
-ambipolar characteristics before functionalisation, which is typically
-seen for steam-deposited carbon nanotube films
-(Section~\ref{sec-cnt-devices}). However, \(p\)-type behaviour dominates
-after device functionalisation due to a significant drop in \(n\)-type
-conductance. There was little hysteresis present, which is also typical
-for these devices. A slight increase in hysteresis was observed
-post-functionalisation. Leakage current (shown by the dashed traces)
-never exceeds \(1 \times 10^{-7}\) V, both before and after
-functionalisation. The significant change in electrical characteristics
-observed could be due to five possible factors \(-\) adsorption of
-solvent onto the network, network attachment of PBASE without subsequent
-protein attachment, non-specific adsorption of protein onto the network,
-PBASE-mediated attachment of nanodiscs to the network, and
-PBASE-mediated attachment of odorant receptors to the network.
-Electrical characteristics can be used to help understand which of these
-factors have played the most significant role in the functionalisation
-process.
+channel (channel 7)before and after functionalisation with OR22a. These
+electrical characteristics were taken in using a liquid gate buffer of
+1XPBS containing 0.5\% DMSO with the B1500A semiconductor device
+analyser. These characteristics are shown in
+Figure~\ref{fig-OR22a-TX-comparison}, shown using both a logarithmic and
+linear current scale. The device exhibited ambipolar characteristics
+before functionalisation, which is typically seen for steam-deposited
+carbon nanotube films (Section~\ref{sec-cnt-devices}). However,
+\(p\)-type behaviour dominates after device functionalisation due to a
+significant drop in \(n\)-type conductance. There was little hysteresis
+present, which is also typical for these devices. A slight increase in
+hysteresis was observed post-functionalisation. Leakage current (shown
+by the dashed traces) never exceeds \(1 \times 10^{-7}\) V, both before
+and after functionalisation. The significant change in electrical
+characteristics observed could be due to five possible factors \(-\)
+adsorption of solvent onto the network, network attachment of PBASE
+without subsequent protein attachment, non-specific adsorption of
+protein onto the network, PBASE-mediated attachment of the membrane
+scaffold protein (MSP) of nanodiscs to the network, and PBASE-mediated
+attachment of odorant receptors to the network. Note that as the
+nanodisc volume is much larger than that of the odorant receptor, any
+direct protein adsorption is highly likely to be adsorption of the
+nanodisc membrane scaffold protein onto the carbon nanotube network.
+Odorant receptor attachment via PBASE is therefore the only desirable
+functionalisation result for sensing purposes.
 
 \begin{figure}
 
-\begin{minipage}[t]{0.47\linewidth}
+\begin{minipage}[t]{0.50\linewidth}
 
 {\centering 
 
@@ -4916,17 +4936,7 @@ process.
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.05\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.47\linewidth}
+\begin{minipage}[t]{0.50\linewidth}
 
 {\centering 
 
@@ -4954,20 +4964,397 @@ device channel before and after functionalisation. The on-off ratio for
 the pristine channel was \(1120\pm220\), fairly typical for a transfer
 curve from a steam-assisted surfactant-deposited CNT network device (see
 Section~\ref{sec-cnt-devices}). The on-off ratio increased slightly to
-\(1830\pm550\) after functionalisation.
+\(1830\pm550\) after functionalisation. We expect to see an increase in
+on-off ratio for a device successfully functionalised with OR22a, which
+may result from an increase in negative charge causing modulation of
+Schottky barriers between metallic and semiconducting carbon nanotubes
+within the network \autocite{Murugathas2019b}. However, we also expect
+increased hole conductance from the attachment of PBASE, even without
+proteins being present
+(Section~\ref{sec-PBASE-electrical-characterisation}). It is therefore
+difficult to determine whether functionalisation has been successful
+from the on-off ratio of transfer characteristics alone.
 
-A threshold shift of
+Functionalisation of the channel resulted in a negative shift in
+threshold voltage of \(-0.20\pm0.03\) V. This is significantly in excess
+of threshold voltage shifts measured for both methanol adsorption
+(\(-0.15\pm0.02\) V) and PBASE attachment (\(-0.06\pm0.04\) V),
+confirming that protein has attached to the carbon nanotubes. However,
+both direct protein adsorption \autocite{Bradley2004,Heller2008} and
+empty nanodisc attachment \autocite{Murugathas2019b} also lead to the
+same significant negative threshold voltage shift in the liquid-gated
+transfer characteristic curve. In all three cases, the voltage shift is
+predominantly the result of negative charge transfer from the adsorped
+proteins to the semiconducting carbon nanotubes
+\autocite{Bradley2004,Heller2008,Murugathas2019b}. It is likely that the
+negative shift observed results from some combination of the three types
+of attachment. It should be noted that while the size of the
+functionalisation-induced threshold voltage shift can be used to
+determine whether protein has attached to the nanodisc network, it
+cannot be used to specifically determine whether odorant receptors have
+attached to the network.
 
-Section~\ref{sec-cnt-devices}
+\begin{figure}
 
-\hypertarget{control-series}{%
-\subsection{Control Series}\label{control-series}}
+\begin{minipage}[t]{0.50\linewidth}
 
-\hypertarget{sensing-series}{%
-\subsection{Sensing Series}\label{sensing-series}}
+{\centering 
 
-\hypertarget{morphology}{%
-\subsection{Morphology}\label{morphology}}
+\includegraphics{figures/ch8/Pristine_DF2Q3D10_ 00141_edited.png} {}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\includegraphics{figures/ch8/DF2Q3D9_AZ1518ENCAP_PostPBASE_ch6_00313_edited.png}
+{}
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\includegraphics{figures/ch8/DF2Q1D6_postNDOR22a_ch7_1_00375_edited.png}
+{}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\includegraphics{figures/ch8/DF2Q1D6_postNDOR22a_ch7_2sline_2.5um_00379_edited.png}
+{}
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-working-OR22a-AFM}Atomic force microscope images of
+the channel region of carbon nanotube network devices before and after
+functionalisation. The channel network of a pristine device is shown in
+(a), while (b) shows a network after exposure to PBASE in MeOH for 1
+hour. The images in (c) and (d) are both of channel 7 from the sensing
+device functionalised in this section.}
+
+\end{figure}
+
+Atomic force microscope images of the device channels both before
+functionalisation and after sensing with the functionalised device to
+confirm the presence of nanodiscs. These are the first atomic force
+microscope images taken of OR nanodiscs found on a sensing channel
+rather than on a separate carbon nanotube film
+\autocite{Murugathas2019b}; the wider 20 \(\mu\)m encapsulation mask
+discussed in \textbf{?@sec-encapsulation} made this possible. These
+images are shown in Figure~\ref{fig-working-OR22a-AFM}. The position of
+nanodiscs relative to the carbon nanotubes is less clearly seen here
+than for the CNT films used by Murugathas \emph{et al.}, since the
+network morphology used for these devices is much denser
+\autocite{Murugathas2019b}. It is therefore difficult to determine
+whether nanodiscs have preferentially attached to the carbon nanotubes.
+Aggregations of nanodiscs are visible in
+Figure~\ref{fig-working-OR22a-AFM} (c)\(-\)(d). These nanodisc clusters
+are especially large in the lower half of
+Figure~\ref{fig-working-OR22a-AFM} (c), however, these features are
+still much smaller than the nanodisc aggregated nanodisc features seen
+by Murugathas \emph{et al.}
+
+\begin{figure}
+
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\includegraphics{figures/ch8/DF2Q3D9_AZ1518ENCAP_PostPBASE_ch6_00313_mask_edited.png}
+{}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\includegraphics{figures/ch8/DF2Q1D6_postNDOR22a_ch7_1_00375_mask_edited.png}
+{}
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-working-OR22a-masks}The (a) and (b) masks}
+
+\end{figure}
+
+Using the method outlined in Vobornik \emph{et al.} as discussed in
+Section~\ref{sec-pristine-AFM}, the average nanotube height of the
+carbon nanotube network submersed in PBASE and methanol for 1 hour shown
+in Figure~\ref{fig-working-OR22a-AFM} (b) is \(2.2\pm1.3\) nm. This
+value is the same as the location parameter \(\xi\) for the skew normal
+distribution found for a pristine steam-assisted surfactant-deposited
+network (Section~\ref{sec-pristine-AFM}). The substrate mask used to
+find the average height is shown in Figure~\ref{fig-working-OR22a-masks}
+(a), with this background having an average height of \(8.1\pm0.4\) nm.
+The substrate mask of the OR22a-functionalised device shown in
+Figure~\ref{fig-working-OR22a-AFM} (c) is shown in
+Figure~\ref{fig-working-OR22a-masks} (b). Using this mask, it was found
+that the substrate height had an average height of \(4.4 \pm 1.2\) nm.
+Subtracting the height of the substrate from the total height of the AFM
+images in Figure~\ref{fig-working-OR22a-AFM} (c) and (d), a maximum
+height of 21.5 nm for the carbon nanotubes plus the OR22a nanodiscs is
+obtained across both images. The average height of the carbon nanotubes
+can then be subtracted to find a height range of OR22a aggregates of
+10\$-\$19 nm, where \$\sim\$10 nm is the minimum nanodisc height
+\autocite{Nath2007,Bayburt2010,Murugathas2020}.
+
+\hypertarget{aqueous-sensing-of-ethyl-hexanoate}{%
+\subsection{Aqueous Sensing of Ethyl
+Hexanoate}\label{aqueous-sensing-of-ethyl-hexanoate}}
+
+The procedure used for biosensor detection of ethyl hexanoate in liquid
+was the same as the procedure outlined in
+Section~\ref{sec-dummy-sensing}, except 0.5\% DMSO was present in the
+buffer solution (to improve ethyl hexanoate solubility) and dilutions of
+ethyl hexanoate in the same 0.5\% DMSO 1XPBS buffer solution were added
+during the sensing series. The 0.5\% DMSO 1XPBS was prepared by adding 5
+\(\mu\)L of DMSO to 995 \(\mu\)L 1XPBS before device characterisation.
+The dilutions of ethyl hexanoate were prepared with the same 1XPBS at
+the same time, where 5 \(\mu\)L of 200 fM, 200 pM, 200 nM and 200
+\(\mu\)M ethyl hexanoate in DMSO were placed into four individual vials
+containing 995 \(\mu\)L 1XPBS each, giving 1mL vials of 1 fM, 1 pM, 1 nM
+and 1 \(\mu\)M ethyl hexanoate in 0.5\% DMSO 1XPBS. The ethyl hexanoate
+in DMSO dilutions were prepared beforehand as a 1:10 dilution series in
+DMSO using 200 mM stock solution, where dilutions ranged from 20 mM to
+200 fM. Sampling measurements were taken using the B1500A semiconductor
+device analyser, with the transfer measurement in
+Figure~\ref{fig-OR22a-TX-comparison} (b) taken directly before sensing.
+The full control series plus sensing sequence is shown in
+Figure~\ref{fig-EtHex-aqueous-sensing}. Gate current remained negligible
+across the entire sensing procedure.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch8/Q1C6.png}
+
+}
+
+\caption{\label{fig-EtHex-aqueous-sensing}The control series (before
+1800 s) and ethyl hexanoate sensing series (after 1800 s) of the
+OR22a-functionalised device channel. No responses to 0.5\% DMSO 1XPBS
+were seen during the control series, while significant responses to
+additions of ethyl hexanoate diluted in 0.5\% DMSO 1XPBS were seen at
+2400 s, 2700 s, 3000 s and 3600 s.}
+
+\end{figure}
+
+The control series for the sensing series is shown in
+Figure~\ref{fig-OR22a-control-series} (a). No clear stepwise response is
+seen to buffer additions or subtractions. The functionalised device
+shows similar baseline drift behaviour to that of a pristine device,
+with a period of short-term decay quickly yielding to a more long-lived
+decay behaviour. A linear fit \(I = c_1t + c_2\) to the region
+\(1200-1800\) had a gradient of \(c_1 = -1.76\pm0.02\) pA/s. This
+gradient is smaller than the range of values found for the linear fit
+approximating the longer-term drift of a pristine device
+(Section~\ref{sec-baseline-drift}), but of the same order of magnitude.
+The linear fit was then subtracted from the control series and an
+exponential fit \(I = I_0\exp(-t/\tau)\) was performed on the remaining
+dataset, as shown in Figure~\ref{fig-OR22a-control-series} (b). A value
+of \(590 \pm 3\) s was found for the exponential time constant, similar
+to those found for the channels of the pristine device. This confirms
+that the 1800 s control series is sufficient to avoid the presence of
+short-term decay during sensing.
+
+\begin{figure}
+
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.70\linewidth}
+
+{\centering 
+
+\includegraphics{figures/ch8/Q1C6_with_fitted_curves_edited.png} {}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.70\linewidth}
+
+{\centering 
+
+\includegraphics{figures/ch8/Q1C6_with_fitted_curves_exp_edited.png} {}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-OR22a-control-series}The control series for the
+OR22a-functionalised device is shown in (a), alongside an extrapolated
+linear fit to the control series from 1200 s onwards. The control series
+with the linear approximation subtracted fitted to an exponential curve
+is shown in (b).}
+
+\end{figure}
+
+It appears that the exponential fit overestimates current measurements
+between 1100 s and 1500 s and underestimates between 1500 s and 1800 s.
+This deviation from the fit may result from the linear approximation
+used to represent long-term baseline drift being weaker for this channel
+than for those discussed previously in Section~\ref{sec-dummy-sensing}
+and Section~\ref{sec-pristine-EtHex}. This could result from the
+exponential terms for long-term baseline drift having relatively short
+time constants, so \(t\ll\tau_i\) no longer holds and higher order terms
+in the linear approximation are no longer negligible. This observation
+may indicate a relationship exists between device functionalisation and
+the long-lived device decay behaviour. However, it may simply result
+from the natural variation between randomly-deposited device channels.
+Further work may be required to confirm the existence of such a
+relationship, though this work is outside the scope of this thesis.
+
+\begin{figure}
+
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.70\linewidth}
+
+{\centering 
+
+\includegraphics{figures/ch8/Q1C6_filtered_detrend_trunc_arrows_normalised_edited.png}
+{}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.70\linewidth}
+
+{\centering 
+
+\includegraphics{figures/ch8/Q1C6_mean_simple_difference_before_and_after_step_filtered_concentrations_edited.png}
+{}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-OR22a-sensing-series}The normalised sensing series
+for the OR22a-functionalised device is shown in (a). The current data
+has been despiked, with baseline drift removed and a moving median
+filter applied. The concentration of each 20 \(\mu\)L addition is
+indicated above the time of addition. The signal data corresponding to
+the mean difference in current before and after each addition is shown
+in (b).}
+
+\end{figure}
+
+Figure~\ref{fig-OR22a-sensing-series} (a) shows the cleaned and filtered
+ethyl hexanoate sensing data from the OR22a-functionalised device from
+1800 s onwards. The concentration of each 20 \(\mu\)L addition is
+indicated above the corresponding addition time. The source-drain
+current across the channel decreased rapidly with each addition of ethyl
+hexanoate in \(0.5%
+\) DMSO 1XPBS solution. This current decrease appears irreversible, as
+the current stabilises after each addition at a lower current level than
+prior to the addition. This behaviour appears to be a response by OR22a
+to its positive ligand ethyl hexanoate, similar to the response by OR22a
+to methyl hexanoate seen by Murugathas \emph{et al.}. The presence of
+the ORCO coreceptor was not required for responses to be seen. The
+device showed responses to ethyl hexanoate over a wide range of
+concentrations, beginning with a \(\sim 6%
+\) response to 1 fM EtHex in \(0.5%
+\) DMSO 1XPBS, while showing no response to 0.5\% 1XPBS buffer.
+Interestingly, as seen in Figure~\ref{fig-OR22a-sensing-series} (b), no
+clear dose-dependent response was observed. The behaviour seen may be
+explained by a decreased sensitivity to subsequent additions seen by
+seen by Murugathas \emph{et al.} \autocite{Murugathas2019b} competing
+with the logarithmic increases in the concentration around the channel.
 
 \hypertarget{variability-in-biosensor-behaviour}{%
 \section{Variability in Biosensor

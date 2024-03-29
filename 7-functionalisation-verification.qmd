@@ -379,10 +379,30 @@ From @tbl-pbase-functionalisation, full device submersion appears to be the most
 It appears this is a result of the his-tag GFP attaching to a dense region of pyrene-PEG-NTA at the edge of the functionalisation droplet. This accretion of pyrene-PEG-NTA at the edge of the droplet is a result of the coffee-ring effect, where the evaporation of the droplet leads to transport of particles to the droplet edges via capillary flow [@Deegan1997; @Shimobayashi2018]. As this gradient in surface coverage of attached proteins has unknown consequences for sensing, in subsequent sections devices were functionalised with PBASE or pyrene-PEG-NTA by submerging them in solution instead of dropcasting.
 
 ## Verifying Linker-OR Nanodisc Attachment with Fluorescence Microscopy {#sec-linker-receptor-attachment}
-<!--
-### Functionalisation using PBASE {#sec-PBASE-GFP-OR-attachment}
--->
-To verify the formation of amide (or imide) bonds between PBASE and the odorant receptors (ORs) contained within nanodiscs, a fluorescent biomarker was directly attached to the odorant receptors for detection with fluorescence microscopy. The biomarker used was the *Aequorea Victoria* green fluorescent protein (GFP). As far as I know, this is the first time fluorescence has been used to verify the successful attachment of odorant receptor nanodiscs to a carbon nanotube network.
+
+### GFP-OR Nanodisc Functionalisation {#sec-PBASE-GFP-OR-attachment}
+
+To verify the formation of amide (or imide) bonds between PBASE and the odorant receptors (ORs) contained within nanodiscs, a fluorescent biomarker was directly attached to the odorant receptors for detection with fluorescence microscopy. The biomarker used was the *Aequorea Victoria* green fluorescent protein (GFP). The functionalisation of unencapsulated carbon nanotube devices (steam-deposited, fabricated using post-June 2023 methods outlined in @sec-fabrication) with PBASE and GFP-OR nanodiscs was performed as follows:
+
+1. The device was exposed to UV light for 1 minute, placed in AZ$^\circledR$ 326 developer for 3 minutes, then rinsed with acetone, isopropanol and nitrogen dried.
+
+2. The device was vacuum annealed for 1 hour at 150°C (Note: Steps 1 & 2 were added to ensure any residual photoresist on the channel was removed or passivated before functionalisation, see @sec-photoresist-contamination).
+
+3. A solution of 1 mM PBASE (Setareh Biotech) in methanol prepared by fully dissolving 2 mg PBASE in 5 mL methanol by vortex mixing at 1000 rpm in a dark room (Note: PBASE was stored at -18°C for 18 months prior to use, and was thawed under vacuum for 15 minutes in dark conditions before opening)
+
+4. The device was then rinsed with methanol, fully submerged in $\sim$ 1 mL of PBASE in methanol solution and left covered with parafilm for 1 hour, then rinsed with methanol for 15 s, rinsed with 1XPBS for 15 s and nitrogen dried to remove residual PBASE.
+
+5. The device was left dry and in darkness while collecting the GFP-OR nanodiscs from the -80°C freezer. An opaque cover was placed over the GFP-OR vial to shield it from light.
+
+6. 20 $\mu$L GFP-OR nanodiscs (batch number ND-GFP-OR43b-0002, prepared 12 months earlier) were diluted in 2 mL 1XPBS (Note: The full 2 mL was used to flush out the nanodisc vial when preparing the nanodisc solution, with successive additions and subtractions of 50 $\mu$L 1XPBS into and from the vial).
+
+7. The device was submerged in the GFP-OR43b nanodisc solution and left covered with parafilm for 1 hour in darkness, then rinsed with 1XPBS for 15 s. 
+
+8. For fluorescence microscopy, the device was briefly rinsed with DI water and nitrogen dried to remove dried-down salt residue left by the 1XPBS.
+
+A control device was prepared using the same process but skipping steps 3 and 4.
+
+### Fluorescence Microscopy {#sec-PBASE-GFP-OR-microscopy}
 
 ::: {#fig-PBASE-GFP-ORs layout="[[47.5,-5,47.5],[47.5,-5,47.5],[47.5,-5,47.5]]"}
 
@@ -398,34 +418,15 @@ To verify the formation of amide (or imide) bonds between PBASE and the odorant 
 
 ![](figures/ch7/modified_GFPOR_PBASE_10sexposure_40X_mediumcontrast_ch2_231019.png){#fig-PBASE-GFP-OR-ch2}
 
-The fluorescence images on the left side $-$ (a), (c) and (e) $-$ show unencapsulated carbon nanotube network channels from a device incubated in GFP-OR43b nanodiscs. The fluorescence images on the right $-$ (b), (d) and (f) $-$ show the channels of a similar device after successive PBASE and GFP-OR43b nanodisc incubation. Images (a) and (c) are both of the same channel on the first device, and images (b) and (d) are of the same channel on the second, but (c) and (d) were taken using a greater magnification. The insets in (c)-(f) compare the central channel region of (c)-(f) more directly. All images were taken using the same microscope settings, with a GFP filter and a 10 s exposure time.
+The fluorescence images on the left side $-$ (a), (c) and (e) $-$ show unencapsulated carbon nanotube network channels from a device incubated in GFP-OR43b nanodiscs. The rectangular dark regions to the left and right of each image are the gold electrodes. The fluorescence images on the right $-$ (b), (d) and (f) $-$ show the channels of a similar device after successive PBASE and GFP-OR43b nanodisc incubation. Images (a) and (c) are both of the same channel on the first device, and images (b) and (d) are of the same channel on the second, but (c) and (d) were taken using a greater magnification. The insets in (c)-(f) compare the central channel region of (c)-(f) more directly. All images were taken with the same microscope settings (GFP filter and 10 s exposure time), directly after functionalisation in a dark room. 
 :::
 
-The functionalisation of unencapsulated carbon nanotube devices (steam-deposited, fabricated using post-June 2023 methods outlined in @sec-fabrication) with PBASE and GFP-OR nanodiscs was performed as follows:
+Fluorescence images of the GFP-OR43b and control devices discussed in @sec-PBASE-GFP-OR-attachment are shown in @fig-PBASE-GFP-ORs. Fluorescence microscope images were taken immediately after functionalisation; devices were transported to the fluorescence microscope room in a foil-wrapped container, and the fluorescence microscope room was kept dark while images were taken. All fluorescence images were taken of channels with ungated resistance measurements within a 50-500 k$\Omega$ range both before and after functionalisation. 
 
-1. The device was exposed to UV light for 1 minute, placed in AZ$^\circledR$ 326 developer for 3 minutes, then rinsed with acetone, isopropanol and nitrogen dried.
+The silicon dioxide regions in each image appear bright under the GFP filter, indicating non-specific binding between the GFP-OR43b nanodiscs and the silicon dioxide substrate. As this device has been annealed, UV exposed and developed before functionalisation, this non-specific attachment is unlikely to be interaction with residual photoresist (see @sec-photoresist-contamination). The SiO$_2$ substrate also appears brighter in the images on the right of @fig-PBASE-GFP-ORs, which are of the device initially exposed to PBASE. The discussion in @sec-pyrene-interactions indicates that the pyrene moiety of PBASE non-specifically interacts with the silicon dioxide substrate. The attachment of GFP-OR43b nanodiscs to this PBASE coating appears have led to more GFP-OR43b nanodiscs attaching to the silicon dioxide, giving rise to the brighter fluorescence of the silicon dioxide seen for the PBASE-incubated device on the right of @fig-PBASE-GFP-ORs.
 
-2. The device was vacuum annealed for 1 hour at 150°C (Note: Steps 1 & 2 were added to ensure any residual photoresist on the channel was removed or passivated before functionalisation, see @sec-photoresist-contamination).
+A comparison of fluorescence in the channel region between images on the left of @fig-PBASE-GFP-ORs (GFP-OR43b only) and the images on the right (GFP-OR43b and PBASE) is given by the inset in [@fig-GFP-OR-ch6]-f. The inset demonstrates that the channels not incubated in PBASE are significantly less bright than those that had been incubated with PBASE. It appears that, as expected from the discussion in @sec-hydrophobicity, the GFP-OR43b in 1XPBS is unable to approach the unmodified channel due to the hydrophobicity of the carbon nanotubes. However, when the carbon nanotubes are modified with PBASE, the GFP-OR43b is able to attach to the channel, and so the channel shows up brightly under the fluorescence microscope GFP filter. This trend was consistent across all conducting channels on each of the two devices. As far as I know, this is the first time fluorescence has been used to verify the successful attachment of odorant receptor nanodiscs to a carbon nanotube network.
 
-3. A solution of 1 mM PBASE (Setareh Biotech) in methanol prepared by fully dissolving 2 mg PBASE in 5 mL methanol by vortex mixing at 1000 rpm in a dark room (Note: PBASE was stored at -18°C for 18 months prior to use, and was thawed under vacuum for 15 minutes in dark conditions before opening)
-
-4. The device was then rinsed with methanol, fully submerged in $\sim$ 1 mL of PBASE in methanol solution and left covered with parafilm for 1 hour, then rinsed with methanol for 15 s, rinsed with 1XPBS for 15 s and nitrogen dried to remove residual PBASE.
-
-5. The device was left dry and in darkness while collecting the GFP-OR nanodiscs from the -80°C freezer.
-
-6. 20 $\mu$L GFP-OR nanodiscs (batch number ND-GFP-OR43b-0002, prepared 12 months earlier) were diluted in 2 mL 1XPBS (Note: The full 2 mL was used to flush out the nanodisc vial when preparing the nanodisc solution, with successive additions and subtractions of 50 $\mu$L 1XPBS into and from the vial).
-
-7. The device was submerged in the GFP-OR43b nanodisc solution and left covered with parafilm for 1 hour, then rinsed with 1XPBS for 15 s.
-
-8. For fluorescence microscopy, the device was briefly rinsed with DI water and nitrogen dried to remove dried-down salt residue left by the 1XPBS.
-
-9. Fluorescence microscope images were taken immediately after functionalisation; devices were transported to the fluorescence microscope room in a foil-wrapped container, and the fluorescence microscope room was kept dark while images were taken.  
-
-A control device was prepared using the same process but skipping steps 3 and 4. Fluorescence images of both devices are shown in @fig-PBASE-GFP-ORs. All fluorescence images were taken of channels with a measured resistance within a 50-500 k$\Omega$ range both before and after functionalisation.
-
-As mentioned in @sec-fluorescence-characterisation, the rectangular dark regions to the left and right of each image are the gold electrodes. The silicon dioxide regions in each image appear bright under the GFP filter, indicating non-specific binding between the GFP-OR43b nanodiscs and the silicon dioxide substrate. As this device has been annealed, UV exposed and developed before functionalisation, this non-specific attachment is unlikely to be interaction with residual photoresist (see @sec-photoresist-contamination). The SiO$_2$ substrate also appears brighter in the images on the right of @fig-PBASE-GFP-ORs, which are of the device initially exposed to PBASE. The discussion in @sec-pyrene-interactions indicates that the pyrene moiety of PBASE may non-specifically interact with the silicon dioxide substrate, therefore, the SiO$_2$ substrate may have had a coating of attached PBASE when the device on the right of @fig-PBASE-GFP-ORs was submerged in the GFP-OR43b nanodiscs. The attachment of GFP-OR43b nanodiscs to this PBASE coating may have been more extensive than direct attachment of GFP-OR43b nanodiscs to the silicon dioxide, which led to brighter fluorescence of the modified silicon dioxide for the PBASE-incubated device.
-
-A comparison of fluorescence in the channel region between images on the left of @fig-PBASE-GFP-ORs (GFP-OR43b only) and the images on the right (GFP-OR43b and PBASE) is given by the inset in [@fig-GFP-OR-ch6]-f. The inset demonstrates that the channels not incubated in PBASE are significantly less bright than those that had been incubated with PBASE. It appears that, as expected from the discussion in @sec-hydrophobicity, the GFP-OR43b in 1XPBS is unable to approach the unmodified channel due to the hydrophobicity of the carbon nanotubes. However, when the carbon nanotubes are modified with PBASE, the GFP-OR43b is able to attach to the channel, and so the channel shows up brightly under the fluorescence microscope GFP filter. This trend was consistent across all conducting channels on each of the two devices.
 <!--
 ![Fluorescence image of a device functionalised with 0.1 mM PBASE in methanol, followed by 10 $\mu$L/mL GFP-OR43b nanodiscs in 1XPBS. The image was taken using the same settings as in @fig-PBASE-GFP-ORs, with a GFP filter and a 10 s exposure time](figures/ch7/modified_GFPOR_10sexposure_40X_mediumcontrast_ch1_231027.png){#fig-PBASE-GFP-OR-0.1mM width="45%"}
 
