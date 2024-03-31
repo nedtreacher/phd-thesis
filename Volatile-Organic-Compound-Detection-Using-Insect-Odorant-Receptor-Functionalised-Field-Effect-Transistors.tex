@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, borderline west={3pt}{0pt}{shadecolor}, frame hidden, interior hidden, breakable, boxrule=0pt, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, frame hidden, breakable, interior hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, sharp corners]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -578,18 +578,26 @@ substrate in (c) and (d) was exposed to surfactant, and the substrate in
 
 \end{figure}
 
+\begin{equation}\protect\hypertarget{eq-skew}{}{
+f(x) = \frac{2}{\omega}\phi\bigg(\frac{x-\xi}{\omega}\bigg)\Phi\bigg(\alpha\bigg(\frac{x-\xi}{\omega}\bigg)\bigg)
+}\label{eq-skew}\end{equation}
+
 In Figure~\ref{fig-afm-substrate}, it appears that each substrate
 surface has a roughness that follows a normal distribution with some
 degree of skewness. Figure~\ref{fig-sio2-histogram} and
 Figure~\ref{fig-surfactant-histogram} are negatively skewed
-distributions. The fitted skew-normal distribution in
-Figure~\ref{fig-sio2-histogram} has a skew parameter \(\alpha\) (or
-shape parameter) of -3.2, a location parameter \(\xi\) of 2.2 nm and a
-scale parameter \(\omega\) of 0.5 nm, while in
-Figure~\ref{fig-surfactant-histogram} \(\alpha = -2.2\), \(\xi = 2.2\)
-nm and \(\omega = 0.5\) nm. \(\xi\) and \(\omega\) correspond to the
-mean and standard deviation of the skew-free normal distribution when
-\(\alpha\) is set equal to zero \autocite{Azzalini1999}. The close
+distributions. The equation for a skew-normal distribution is given in
+Equation~\ref{eq-skew}, where \(\alpha\) is the ``shape parameter'',
+\(\xi\) is the ``location parameter'', \(\omega\) is the ``scale
+parameter'', \(\phi(x)\) is the standard normal distribution and
+\(\Phi(x)\) is the corresponding cumulative distribution function.
+\(\alpha\) indicates the skewness of the distribution. \(\xi\) and
+\(\omega\) correspond to the mean and standard deviation of the
+skew-free normal distribution when \(\alpha\) is set equal to zero
+\autocite{Azzalini1999}. The fitted skew-normal distribution in
+Figure~\ref{fig-sio2-histogram} has \(\alpha = -3.2\), \(\xi = 2.2\) nm
+and \(\omega = 0.5\) nm, while in Figure~\ref{fig-surfactant-histogram}
+\(\alpha = -2.2\), \(\xi = 2.2\) nm and \(\omega = 0.5\) nm. The close
 correspondence between \(\xi\) and \(\omega\) for these distributions
 but not \(\alpha\) implies that the skewness is a variable imaging or
 processing artifact rather than a physical property of the surface.
@@ -716,7 +724,7 @@ were not taken at bundle junctions. A height threshold `mask' was
 defined in Gwyddion to determine average substrate height, as shown in
 Figure~\ref{fig-mask}. This background value was subtracted from our
 diameter measurements to determine the actual bundle height. The mean
-background height of the solvent-deposited, surfactant-deposited and
+background heights of the solvent-deposited, surfactant-deposited and
 steam-assisted surfactant-deposited bundle diameter histograms were
 \(8.8 \pm 4.0\) nm, \(4.2 \pm 1.8\) nm and \(3.3 \pm 1.0\) nm
 respectively. An increased maximum feature height leads to an increased
@@ -739,8 +747,8 @@ bundles to undergo some degree of compression, and the resulting
 systematic underestimation of their height may be responsible for the
 distribution skewness \autocite{Vobornik2023}. The fitted skew-normal
 distribution in Figure~\ref{fig-solvent-cnt-histogram} has
-\(\alpha = 2.7\) (shape), \(\xi = 4.3\) nm (location/mean),
-\(\omega = 5.9\) nm (scale/standard deviation), the distribution in
+\(\alpha = 2.7\) (shape; skew), \(\xi = 4.3\) nm (location; mean),
+\(\omega = 5.9\) nm (scale; standard deviation), the distribution in
 Figure~\ref{fig-surfactant-cnt-histogram} has \(\alpha = 2.4\),
 \(\xi = 2.2\) nm, \(\omega = 2.6\) nm, and the distribution in
 Figure~\ref{fig-steamed-surfactant-cnt-histogram} has \(\alpha = 3.6\),
@@ -5081,82 +5089,130 @@ nanodisc features seen by Murugathas \emph{et al.}
 
 \begin{figure}
 
-\begin{minipage}[t]{0.50\linewidth}
+{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch8/DF2Q3D9_PBASE_cnt_histogram.png}
+
+}
+
+\caption{\label{fig-PBASE-histogram}Histogram height distribution of
+device channel after functionalisation with PBASE and methanol. The
+distribution is shown with a corresponding KDE plot, along with a fitted
+skew-normal distribution.}
+
+\end{figure}
+
+\begin{figure}
+
+\begin{minipage}[t]{0.05\linewidth}
 
 {\centering 
 
-\includegraphics{figures/ch8/DF2Q3D9_AZ1518ENCAP_PostPBASE_ch6_00313_mask_edited.png}
+\includegraphics{figures/ch8/(a).png} {}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\includegraphics{figures/ch8/DF2Q3D9_AZ1518ENCAP_PostPBASE_ch6_00313_mask.png}
 {}
 
 }
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.05\linewidth}
 
 {\centering 
 
-\includegraphics{figures/ch8/DF2Q1D6_postNDOR22a_ch7_1_00375_mask_edited.png}
+\includegraphics{figures/ch8/(b).png} {}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\includegraphics{figures/ch8/DF2Q1D6_postNDOR22a_ch7_1_00375_mask.png}
 {}
 
 }
 
 \end{minipage}%
 
-\caption{\label{fig-working-OR22a-masks}The (a) and (b) masks}
+\caption{\label{fig-working-OR22a-masks}Atomic force microscope images
+with the substrate background highlighted with a green mask. Here, (a)
+shows a device channel after functionalisation with PBASE and methanol,
+while (b) shows channel 7 from the sensing device functionalised with
+OR22a nanodiscs in this section.}
 
 \end{figure}
 
-Using the method outlined in Vobornik \emph{et al.} as discussed in
-Section~\ref{sec-pristine-AFM}, the average nanotube height of the
-carbon nanotube network submersed in PBASE and methanol for 1 hour shown
-in Figure~\ref{fig-working-OR22a-AFM} (b) is \(5.8\pm1.3\) nm. The
-substrate mask used to find the average height is shown in
-Figure~\ref{fig-working-OR22a-masks} (a), with this background having an
-average height of \(4.6\pm0.4\) nm. The substrate mask of the
-OR22a-functionalised device shown in Figure~\ref{fig-working-OR22a-AFM}
-(c) is shown in Figure~\ref{fig-working-OR22a-masks} (b). Using this
-mask, it was found that the substrate height had an average height of
-\(5.7 \pm 0.6\) nm. The maximum height of the vertically-stacked carbon
-nanotubes and OR22a nanodiscs was found to be \$\sim\$20 nm by
-subtracting the height of the substrate from the total height of the AFM
-image in Figure~\ref{fig-working-OR22a-AFM} (c). The average height of
-the carbon nanotubes can then be subtracted from \$\sim\$20 nm to obtain
-the height range for the OR22a aggregates, \(10-14\) nm, where
-\$\sim\$10 nm is the minimum nanodisc height
-\autocite{Nath2007,Bayburt2010,Murugathas2020}.
+Using the method outlined in Vobornik \emph{et al.}
+\autocite{Vobornik2023}, a histogram of heights measured from the carbon
+nanotube network submersed in PBASE and methanol for 1 hour (see (b) in
+Figure~\ref{fig-working-OR22a-AFM}) is given in
+Figure~\ref{fig-PBASE-histogram}. The mask used to find the average
+height of the substrate is shown in Figure~\ref{fig-working-OR22a-masks}
+(a), which was found to be \(4.6\pm0.4\) nm. A positively-skewed normal
+distribution was fitted to the dataset in the manner described in
+Section~\ref{sec-pristine-AFM}. The parameters of the skew-normal
+distribution \(-\) \(\alpha\), the shape parameter, indicating skew;
+\(\xi\), the location parameter, indicating the skewless mean; and
+\(\omega\), the scale parameter, indicating skewless standard
+distribution \(-\) were \(\alpha = 1.0\), \(\xi = 4.6\) nm,
+\(\omega = 1.6\) nm. The low value for \(\alpha\) relative to the values
+seen in Section~\ref{sec-pristine-AFM} may indicate that the residual
+solvent or presence of PBASE reduces the distribution skew, either by
+shielding the carbon nanotube bundles from compression or through some
+other means. Assuming skew is an artifact of AFM measurement, the mean
+height of carbon nanotubes in the network can then be estimated to be
+\(4.6 \pm 1.6\) nm.
 
-Note that the height range estimate given here assumes that nanodiscs do
-not lie on junctions between nanotubes, which is unlikely to be the case
-in practice. It also assumes that, due to the high density of the
-network, that the nanodiscs predominantly sit on top of the carbon
-nanotubes instead of directly adjacent to them on the substrate surface.
-Height measurements of biological samples taken via AFM has been shown
-to underestimate actual feature height by over 50\%
-\autocite{Vobornik2023}. Despite the degree of uncertainty these
-approximations introduce, it can still be reasonably concluded that the
-breadth of these aggregations is well in excess of their height. While
-the cross-sections of the largest features are up to 20 nanodiscs
-across, they are a few nanodiscs high at most; certainly less than five,
-and quite possibly not more than one.
+The substrate mask of the OR22a-functionalised device (see (c) in
+Figure~\ref{fig-working-OR22a-AFM}) is shown in
+Figure~\ref{fig-working-OR22a-masks} (b). The substrate for this network
+had an average height of \(5.7 \pm 0.6\) nm. The maximum height of the
+vertically-stacked carbon nanotubes and OR22a nanodiscs was found to be
+\$\sim\$20 nm by subtracting the height of the substrate from the total
+height of the AFM image in Figure~\ref{fig-working-OR22a-AFM} (c). The
+average height of the carbon nanotubes can then be subtracted from
+\$\sim\$20 nm to obtain the height range for the OR22a aggregates
+present, \(10-15\) nm, where \$\sim\$10 nm is considered to be the lower
+end of height distribution of nanodiscs
+\autocite{Nath2007,Bayburt2010,Murugathas2020}. Note that the height
+range estimate given here assumes that nanodiscs do not lie on junctions
+between nanotubes, which is unlikely to be the case in practice. It also
+assumes that, due to the high density of the network, that the nanodiscs
+predominantly sit on top of the carbon nanotubes instead of directly
+adjacent to them on the substrate surface. Height measurements of
+biological samples taken via AFM has been shown to underestimate actual
+feature height by over 50\% \autocite{Vobornik2023}.
 
-The significant difference between the height and breadth of nanodiscs
+Despite these approximations, the breadth of these aggregations is
+significantly greater than their height. While the cross-sections of the
+largest features are up to 20 nanodiscs across, they are a few nanodiscs
+high at most; certainly less than five, and very possibly not more than
+one. This difference between the height and breadth of nanodiscs
 indicates that \(-\) rather than clustering together in solution and
 attaching at a single location as an aggregate, or nucleating out of
-solution around a single attached nanodisc \(-\) the nanodiscs have
+solution around a single attached nanodisc \(-\) the nanodiscs
 individually attached to a preferred site on the carbon nanotube
-network. This preferred site may be at junctions between two large
-carbon nanotubes, where there is a larger surface area available for
-binding than on the sidewalls of a carbon nanotube bundle. It is also
-possible that these sites are those that are particularly clean
-contamination, either atmospheric or resulting from the deposition
-process. AFM images showing iOR-nanodisc functionalised carbon nanotube
-networks with significant vertical clustering have been reported
-\autocite{Murugathas2019b}. However, the functionalised films shown in
-these AFM images were not used as channels for sensing. The observation
-the nanodiscs or odorant receptors are attaching directly to the channel
-network and not simply sticking to each other is a positive indicationr
-successfully functionalised.
+network. This site may be at junctions between two large carbon
+nanotubes, which has a relatively large surface area available for
+binding. It is also possible that these sites are those that are
+particularly clean of contamination, which may be atmospheric or related
+to the network deposition process. AFM images showing iOR-nanodisc
+functionalised carbon nanotube networks with significant vertical
+clustering have been reported \autocite{Murugathas2019b}. However, the
+functionalised films shown in these AFM images were not used as channels
+for sensing. The observation the nanodiscs or odorant receptors are
+attaching directly to the channel network and not simply sticking to
+each other is a positive indication of successfully functionalisation.
 
 \hypertarget{aqueous-sensing-of-ethyl-hexanoate}{%
 \subsection{Aqueous Sensing of Ethyl
