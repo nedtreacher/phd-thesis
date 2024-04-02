@@ -40,7 +40,7 @@ def create_text_image(text, font_path, font_size, image_path):
     print(f"Image saved to {image_path}")
 
 # Example usage
-text = "(f)"
+text = "(d)"
 font_path = "C:\\Users\\perkinne\\OneDrive - Victoria University of Wellington - STAFF\\Ned_Natalie_PhD\\PhD-thesis\\lm\\lmroman10-regular-webfont.ttf"  # Load font from non-system .ttf file
 font_size = 80
 image_path = f"figures\\{text}.png"
