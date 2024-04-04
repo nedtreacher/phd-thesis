@@ -52,7 +52,7 @@ Only minor changes were observed in the on-off ratio when comparing the device c
 
 Functionalisation of the channel resulted in a negative shift in threshold voltage of $-0.20\pm0.03$ V. This is significantly in excess of threshold voltage shifts measured for both methanol adsorption ($-0.15\pm0.02$ V) and after exposure to PBASE in methanol ($-0.06\pm0.04$ V), confirming that protein has attached to the carbon nanotubes. However, both direct protein adsorption [@Bradley2004; @Heller2008] and empty nanodisc attachment [@Murugathas2019b] should also lead to a significant negative threshold voltage shift in the liquid-gated transfer characteristic curve. In all three cases, the voltage shift is predominantly the result of negative charge transfer from the adsorped proteins to the semiconducting carbon nanotubes [@Bradley2004; @Heller2008; @Murugathas2019b]. It is likely that the negative shift observed results from some combination of the three types of attachment. It should be noted that while the size of the functionalisation-induced threshold voltage shift can be used to determine whether protein has attached to the nanodisc network, it cannot be used to specifically determine whether odorant receptors have attached to the network.
 
-::: {#fig-working-OR22a-AFM layout="[[3,-1,45,-1,3,-1,45,-1],[3,-1,45,-1,3,-1,45,-1]]" layout-valign="top"}
+::: {#fig-working-OR22a-AFM layout="[[3,-1,45,-1,3,-1,45,-1]]" layout-valign="top"}
 
 ![](figures/(a).png)
 
@@ -60,27 +60,18 @@ Functionalisation of the channel resulted in a negative shift in threshold volta
 
 ![](figures/(b).png)
 
-![](figures/ch8/DF2Q3D9_AZ1518ENCAP_PostPBASE_ch6_00313.png)
-
-![](figures/(c).png)
-
 ![](figures/ch8/DF2Q1D6_postNDOR22a_ch7_1_00375.png)
 
-![](figures/(d).png)
-
-![](figures/ch8/DF2Q1D6_postNDOR22a_ch7_2sline_2.5um_00379.png)
-
-Atomic force microscope images of the channel region of carbon nanotube network devices before and after functionalisation. The channel network of a pristine device is shown in (a), while (b) shows a network after exposure to PBASE in MeOH for 1 hour. The images in (c) and (d) are both of channel 7 from the sensing device functionalised in this section.
+Atomic force microscope images of the channel region of carbon nanotube network devices before and after functionalisation. The channel network of a pristine device is shown in (a), while (b) is of channel 7 from the sensing device functionalised in this section.
 :::
 
-
-Atomic force microscope images of the device channels both before functionalisation and after sensing with the functionalised device to confirm the presence of nanodiscs. As far as the author knows, these are the first atomic force microscope images taken of iOR nanodiscs found on a sensing channel rather than on a separate carbon nanotube film; the wider 20 µm encapsulation mask discussed in @sec-encapsulation made this possible. These images are shown in @fig-working-OR22a-AFM. The position of nanodiscs relative to the carbon nanotubes is less clearly seen on the denser network morphology used here than on the more bundled morphology used by Murugathas *et al.* [@Murugathas2019b]. It is therefore more difficult to discern with the naked eye whether nanodiscs have preferentially attached to the carbon nanotubes. However, aggregations of nanodiscs are visible in @fig-working-OR22a-AFM (c)$-$(d). These nanodisc clusters are especially sizable in the lower half of @fig-working-OR22a-AFM (c), where the two largest clusters are $200\pm10$ nm across at their widest point. However, these features are still much smaller than most of the agglomerated nanodisc features seen by Murugathas *et al.* [@Murugathas2019b].
+Atomic force microscope images of the device channels both before functionalisation and after sensing with the functionalised device to confirm the presence of nanodiscs. As far as the author knows, these are the first atomic force microscope images taken of iOR nanodiscs found on a sensing channel rather than on a separate carbon nanotube film; the wider 20 µm encapsulation mask discussed in @sec-encapsulation made this possible. These images are shown in @fig-working-OR22a-AFM. Aggregations of nanodiscs are visible in @fig-working-OR22a-AFM (c)$-$(d). These nanodisc clusters are especially sizable in the lower half of @fig-working-OR22a-AFM (c), where the two largest clusters are $200\pm10$ nm across at their widest point. However, these features are still much smaller than most of the agglomerated nanodisc features seen by Murugathas *et al.* [@Murugathas2019b]. Furthermore, the nanodisc features closely follow the carbon nanotube bundles across the densely bundled morphology used by Murugathas *et al.* [@Murugathas2019b]. On the dense network morphology used here, the position of nanodisc clusters relative to the carbon nanotubes is less distinct. To confirm whether nanodiscs have preferentially attached to the carbon nanotubes, a more quantitative approach is needed.
 
 ::: {#fig-working-OR22a-masks layout="[3,-1,45,-1,3,-1,45,-1]" layout-valign="top"}
 
 ![](figures/(a).png)
 
-![](figures/ch8/DF2Q3D9_AZ1518ENCAP_PostPBASE_ch6_00313_mask.png)
+![](figures/ch8/Pristine_DF2Q3D10_ 00141_mask.png)
 
 ![](figures/(b).png)
 
@@ -89,13 +80,23 @@ Atomic force microscope images of the device channels both before functionalisat
 Atomic force microscope images with the substrate background highlighted with a green mask. Here, (a) shows a device channel after functionalisation with PBASE and methanol, while (b) shows channel 7 from the sensing device functionalised with OR22a nanodiscs in this section.
 :::
 
-![Histogram height distribution of device channel after functionalisation with PBASE and methanol. The distribution is shown with a corresponding KDE plot, along with a fitted skew-normal distribution.](figures/ch8/DF2Q3D9_PBASE_cnt_histogram.png){#fig-PBASE-histogram width=70%}
+::: {#fig-crosssection layout="[3,-1,45,-1,3,-1,45,-1]" layout-valign="top"}
 
-Using the method outlined in Vobornik *et al.* [@Vobornik2023], a histogram of heights measured from the carbon nanotube network submersed in PBASE and methanol for 1 hour (see (b) in @fig-working-OR22a-AFM) is given in @fig-PBASE-histogram. The mask used to find the average height of the substrate is shown in @fig-working-OR22a-masks (a), which was found to be $4.6\pm0.4$ nm. A positively-skewed normal distribution was fitted to the dataset in the manner described in @sec-pristine-AFM. The parameters of the skew-normal distribution $-$ the shape parameter $\alpha$, indicating skew; the location parameter  $\xi$, indicating the skewless mean; and the scale parameter $\omega$, indicating skewless standard distribution $-$ were $\alpha = 1.0$, $\xi = 4.6$ nm, and $\omega = 1.6$ nm. The low value for $\alpha$ relative to the values seen in @sec-pristine-AFM may indicate that the residual solvent or presence of PBASE reduces the distribution skew, either by shielding the carbon nanotube bundles from compression or through some other means. Assuming skew is an artifact of AFM measurement, the mean height of carbon nanotubes in the network can then be estimated to be $4.6 \pm 1.6$ nm.
+![](figures/(a).png)
 
-The substrate mask of the OR22a-functionalised device (see (c) in @fig-working-OR22a-AFM) is shown in @fig-working-OR22a-masks (b). The substrate for this network had an average height of $5.7 \pm 0.6$ nm. The maximum height of the vertically-stacked carbon nanotubes and OR22a nanodiscs was found to be $\sim$ 20 nm by subtracting the height of the substrate from the total height of the AFM image in @fig-working-OR22a-AFM (c). The average height of the carbon nanotubes can then be subtracted from $\sim$ 20 nm to obtain the height range for the OR22a aggregates present, $10-15$ nm, where $\sim$ 10 nm is considered to be the lower end of height distribution of nanodiscs [@Nath2007; @Bayburt2010; @Murugathas2020]. Note that the height range estimate given here assumes that nanodiscs do not lie on junctions between nanotubes, which is unlikely to be the case in practice. It also assumes that, due to the high density of the network, that the nanodiscs predominantly sit on top of the carbon nanotubes instead of directly adjacent to them on the substrate surface. Height measurements of biological samples taken via AFM has been shown to underestimate actual feature height by over 50% [@Vobornik2023].
+![](figures/ch8/Pristine_DF2Q3D10_ 00141_11.2nm_crosssection.png)
 
-Even keeping in mind these approximations, it is apparent that the breadth of these aggregations is significantly greater than their height. While the cross-sections of the largest features are up to 20 nanodiscs across, they are a few nanodiscs high at most; certainly less than five, and very possibly not more than one. This difference between the height and breadth of nanodiscs indicates that, rather than clustering together in solution and attaching at a single location as an aggregate, the nanodiscs have individually attached to preferred locations across the carbon nanotube network. These locations may be at junctions between two large carbon nanotubes, which have a relatively large surface area available for binding. It is also possible that these locations are those that are particularly clean of contamination; contamination which may be atmospheric, or due to the network deposition process. AFM images showing iOR-nanodisc functionalised carbon nanotube networks with significant vertical clustering have been reported [@Murugathas2019b]. However, the functionalised films shown in these AFM images were not used as channels for sensing. The observation the nanodiscs or odorant receptors are attaching directly to the channel network and not simply sticking to each other may be a positive indicator for functionalisation.
+![](figures/(b).png)
+
+![](figures/ch8/DF2Q1D6_postNDOR22a_ch7_1_00375_12nm_crosssection.png)
+
+Cross-sections of the atomic force microscope images of (a) the pristine device at 11.2 nm, and (b) the functionalised device at 12 nm. Both cross-sections are 8.7 nm above the respective substrate background. 
+:::
+
+
+The average height of the substrate was found for both pristine and functionalised atomic force microscope images using the masking tool in Gwyddion. The masks for each image are shown in @fig-working-OR22a-masks. Average substrate heights of $2.5\pm0.2$ nm and $3.3\pm0.4$ nm were found for the pristine and functionalised networks respectively, each within a single standard deviation of the average substrate height of the steam-assisted surfactant-deposited film analysed in @sec-pristine-AFM. A cross-section was taken of the functionalised network at 12.0 nm, the minimum height at which the distinctive spindles of the carbon nanotube network were no longer visible; this cross-section was 8.7 nm above the average substrate height. A cross-section was also taken of the pristine network at 8.7 nm above substrate height, 11.2 nm. These cross-sections are shown in @fig-crosssection. The pristine cross-section in @fig-crosssection (a) shows no spindly nanotube features, but some rounded features are present. The majority of features are below 50 nm and sparsely distributed. These features are likely to correspond to contamination, possibly surfactant, on the surface of the carbon nanotubes. In @fig-crosssection (b), many features are over 100 nm across, and often form clusters which sometimes follow curved lines across the network; a strong indication that the position of nanodisc aggregations is determined by the presence of carbon nanotubes.
+
+As the maximum height of the functionalised AFM is 25.9 nm and only nanodisc features are present at 12.0 nm, there must be nanodisc agglomerates present at least 13.9 nm tall. The estimated height range for nanodiscs is $\sim$ 10 $-$ 20 nm [@Nath2007; @Bayburt2010; @Murugathas2020]. Assuming a average carbon nanotube height of 1.45 nm, with a average substrate height of 3.3 nm, the nanodisc agglomerations could be up to $\sim$ 21 nm tall. Note that height measurements of biological samples taken via AFM have been shown to underestimate actual feature height by over 50% [@Vobornik2023]. Even so, the breadths of the nanodisc features are significantly greater than their heights. While the cross-sections of the largest features are up to 20 nanodiscs across, they are a few nanodiscs high at most; certainly less than five. It appears that, rather than clustering together in solution and attaching as an aggregate, the nanodiscs are individually attaching to preferred locations on the network. These locations may be at junctions between two large carbon nanotubes, which have a relatively large surface area available for binding, or at locations particularly clean of contamination. AFM images showing iOR-nanodisc functionalised carbon nanotube networks with significant vertical clustering have been reported, but these images were not of channels used for sensing [@Murugathas2019b].
 
 ### Aqueous Sensing of Ethyl Hexanoate
 
@@ -192,29 +193,30 @@ Liquid-gated carbon nanotube network device transfer characteristics before and 
 ![](figures/ch8/Q4C4_CH6_PostSensing_OR22a_Func_AFM100670_00693_mask.png)
 
 
-An atomic force microscope image of channel 6 from the OR22a nanodisc functionalised device which showed no response to ethyl hexanoate is shown in (a), with same image shown in (b) with the mask used to find the average substrate height highlighted in green. The contrast between carbon nanotubes and the substrate has been increased in (b) for visual clarity.
+An atomic force microscope image of channel 6 from the OR22a nanodisc functionalised device which showed no response to ethyl hexanoate is shown in (a), with same image shown in (b) with the mask used to find the average substrate height highlighted in green. The bounds of the colour map have been lowered in (b), as colour mapping over the full height range makes it difficult to clearly distinguish between sub-20 nm features and the substrate.
 :::
 
-Liquid-gated electrical characteristics were taken of each sensing channel from this device before and after functionalisation with OR22a, in the same manner as @sec-aqueous-sensing-EtHex. These characteristics are shown in @fig-OR22a-variability-TX. The threshold shift was $-0.06\pm0.02$, the same as that of a device functionalised with PBASE in methanol without subsequent functionalisation with OR22a nanodiscs. The lack of a significant threshold shift might lead the reader to believe that no protein is present on the carbon nanotube network. However, an atomic force microscope image of the channel in @fig-OR22a-variability-AFM-comparison (a) shows protein present on channel 6, which showed a $-0.05$ V threshold shift. The average substrate height of the AFM image is $4.7\pm0.4$ nm. Therefore, assuming the PBASE-functionalised nanotubes have a mean height of $4.6\pm1.6$ nm (@sec-aqueous-sensing-EtHex), nanodisc aggregates with a height range of $10-30$ nm are present on the network $-$ a similar range to that seen for the working functionalised device. 
+Liquid-gated electrical characteristics were taken of each sensing channel from this device before and after functionalisation with OR22a, in the same manner as @sec-aqueous-sensing-EtHex. These characteristics are shown in @fig-OR22a-variability-TX. The threshold shift was $-0.06\pm0.02$, the same as that of a device functionalised with PBASE in methanol without subsequent functionalisation with OR22a nanodiscs. The lack of a significant threshold shift might lead the reader to believe that no protein is present on the carbon nanotube network. However, an atomic force microscope image of the channel in @fig-OR22a-variability-AFM-comparison (a) shows protein present on channel 6, which showed a $-0.05$ V threshold shift. The average substrate height of the AFM image is $4.7\pm0.4$ nm. Therefore, assuming the PBASE-functionalised nanotubes have a mean height of $4.6\pm1.6$ nm, nanodisc aggregates with heights of up to 30 nm are present on the network. This height range is similar to the height range of aggregates on the working functionalised device in @sec-aqueous-sensing-EtHex. It therefore appears that proteins have attached to the network without leading to significant gating of the modified channel.
 
-::: {#fig-OR22a-variability-TX-comparison layout="[3,-1,50,-1,3,-1,50,-1]" layout-valign="top"}
+::: {#fig-OR22a-variability-TX-comparison layout="[3,-1,50,-3,3,50]" layout-valign="top"}
 
 ![](figures/(a).png)
 
-![](figures/ch8/Q4C4_ch4_without_gate_current.png)
+![](figures/ch8/00161_noPBASE.png)
 
 ![](figures/(b).png)
 
 ![](figures/ch8/Q4C8_ch4_without_gate_current.png)
 
 
-Liquid-gated carbon nanotube network device transfer characteristics before and after attachment of OR22a nanodiscs. The device characteristics in (a) are from channel 4 of the device in this section, while the device characteristics in (b) are from channel 4 of a device submerged in OR22a nanodiscs for 1 hour without being functionalised with PBASE in methanol beforehand.
+The atomic force microscope image in (a) shows a carbon nanotube film submerged in OR22a nanodiscs for 1 hour without prior exposure to PBASE or methanol. The device characteristics in (b) are from channel 4 of a separate device prepared in the same manner.
 :::
 
-It appears that proteins have attached to the network without leading to significant gating of the network. As there are strong indications that both OR nanodisc and empty nanodisc attachment via PBASE cause significant gating of the network (@sec-aqueous-sensing-EtHex), it could be reasoned that the nanodiscs have attached directly to the network via their amine groups without PBASE mediating this attachment. This adsorption process is expected to be relatively weak compared to attachment via PBASE, but still lead to a threshold voltage shift [@Bradley2004]. However, it appears that attachment of OR22a nanodiscs or empty nanodiscs to the network without PBASE present also leads to a significant shift in the threshold voltage, as shown in @fig-OR22a-variability-TX-comparison. The negative shift in @fig-OR22a-variability-TX-comparison is -0.27 V, a similar shift to that of the threshold shift seen in @sec-aqueous-sensing-EtHex for the working biosensor. However, the device functionalised without PBASE did not work as a sensor when tested with ethyl hexanoate.
+Both OR nanodisc and empty nanodisc attachment via PBASE have been shown to cause significant gating of the network (@sec-aqueous-sensing-EtHex). Therefore, it might be reasoned that the lack of a gating effect with nanodiscs present results from a direct attachment mechanism that does not require the PBASE linker. Previous work has shown proteins can be adsorped directly onto carbon nanotubes via their amine group, although adsorption is expected to be relatively weak compared to attachment mediated by PBASE linker [@Bradley2004]. @fig-OR22a-variability-TX-comparison (a) shows nanodiscs present on a carbon nanotube network film after submersion in a 10 μL/mL OR22a nanodisc in PBS solution for 1 hour (batch NDOR22a-0016-1), without prior exposure to PBASE in methanol. It appears that the threshold voltage shift resulting from direct nanodisc attachment is significant. The negative shift in @fig-OR22a-variability-TX-comparison (b) is -0.27 V, a similar shift to that of the threshold shift seen in @sec-aqueous-sensing-EtHex for the working biosensor. However, this device channel did not work as a sensor when tested with ethyl hexanoate. @fig-noPBASE-sensing shows a small, positive current response to additions of ethyl hexanoate diluted in 1% DMSO 1XPBS, which may result from the weakly attached OR22a nanodiscs being mechanically removed by the pressure of each addition on the device channels.
 
+![Real-time sampling of a device functionalised with OR22a without the use of PBASE in the functionalisation process. A 20 µL addition of 1% DMSO 1XPBS was made at 200 s. Subsequently, 20 µL additions of ethyl hexanoate diluted in 1% DMSO 1XPBS were made at 400 s, 600 s, 800 s and 1000 s and 1200 s, with the concentration of each addition indicated above the time of addition.](figures/ch8/Q4C8_filtered_detrend_trunc_arrows_normalised.png){#fig-noPBASE-sensing width=50%}
 
-It seems that the nanodiscs are not actually attaching to the carbon nanotubes themselves in @fig-OR22a-variability-AFM-comparison. Instead, they are attaching to some surface coating adsorped onto the carbon nanotubes. This behaviour would explain the presence of nanodiscs without 
+There appears to be a contradiction at play; OR22a nanodiscs are present when  It seems that the nanodiscs are not actually attaching to the carbon nanotubes themselves in @fig-OR22a-variability-AFM-comparison. Instead, they are attaching to some surface coating adsorped onto the carbon nanotubes. This behaviour would explain the presence of nanodiscs without 
 
 
 ##	Potential Sources of Variability {#sec-contamination}
