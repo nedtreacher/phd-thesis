@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, interior hidden, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, sharp corners, breakable, borderline west={3pt}{0pt}{shadecolor}, interior hidden, enhanced, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -1217,9 +1217,9 @@ with the logarithmic increases in the concentration around the channel.
 \hypertarget{sec-variability}{%
 \section{Addressing Biosensor Variability}\label{sec-variability}}
 
-\hypertarget{variability-in-biosensor-behaviour}{%
+\hypertarget{sec-variability-biosensor}{%
 \subsection{Variability in Biosensor
-Behaviour}\label{variability-in-biosensor-behaviour}}
+Behaviour}\label{sec-variability-biosensor}}
 
 \begin{figure}
 
@@ -2728,22 +2728,6 @@ respectively.}
 
 \end{figure}
 
-To test whether protein was present on the channel, an atomic force
-microscope image was taken of channel 6, as shown in
-Figure~\ref{fig-OR22a-variability-AFM}. The same image analysis as in
-Section~\ref{sec-aqueous-sensing-EtHex} was performed, with the
-substrate mask shown in
-Figure~\ref{fig-OR22a-variability-AFM-comparison} (a) giving an average
-substrate height of \(3.8\pm0.4\). A binary representation of the image
-with a 12.5 nm threshold, 8.7 nm above the average substrate height, is
-shown in Figure~\ref{fig-OR22a-variability-AFM-comparison} (b). As with
-the functionalised device in Figure~\ref{fig-crosssection} (b),
-Figure~\ref{fig-OR22a-variability-AFM-comparison} (b) shows clustering
-of features, many of which are larger than 50 nm across. It seems,
-therefore, that nanodisc aggregates up to 27.5 nm high are present on
-channel 6, despite the lack of a significant threshold shift as a result
-of functionalisation.
-
 The normalised sensing behaviour for the solvent-deposited carbon
 nanotube device is shown in Figure~\ref{fig-solvent-deposited-sensing}.
 The device is largely unresponsive at each addition, with a slight
@@ -2769,9 +2753,257 @@ over a larger scale these aggregations can be at least 330 nm tall,
 forming large clusters which may indicate mutual interaction during
 deposition.
 
--graphene
+\begin{figure}
 
-(mention liposomes)
+{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch8/Q3C3_filtered_trunc_arrows_normalised.png}
+
+}
+
+\caption{\label{fig-graphene-sensing}A normalised ethyl hexanoate
+sensing series taken with a OR22a-functionalised graphene device. The
+concentration of each 20 µL addition is indicated above the time of
+addition, with additions made at 500 s, 1000 s, 1500 s, 2000 s and 2500
+s.}
+
+\end{figure}
+
+\begin{figure}
+
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(a).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch8/Q3C3_ch6_PBASE_OR22a.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch8/Q3C9_ch4_noPBASE_OR22a.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-graphene-sensing-TX}Liquid-gated graphene device
+transfer characteristics before and after OR22a nanodisc
+functionalisation. (a) corresponds to a device functionalised, where (a)
+was functionalised using the standard method while (b) was
+functionalised without submerging the device in PBASE and methanol. The
+shift in Dirac point resulting from functionalisation is also shown for
+each device.}
+
+\end{figure}
+
+\begin{figure}
+
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(a).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.46\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch8/Ned_NG007_w3_pristine_00087_20210428.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.46\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch8/Ned_NGW3D4_OR22a_w1_00243_20210802.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-graphene-AFM-comparison}2.5 µm \(\times\) 2.5 µm
+atomic force microscope images of (a) a monolayer graphene film on
+SiO\(_2\) and (b) a graphene film after OR22a nanodisc
+functionalisation.}
+
+\end{figure}
+
+Normalised sensing data from a graphene field-effect transistor
+functionalised with OR22a nanodiscs in the manner outlined previously is
+displayed in Figure~\ref{fig-graphene-sensing}. Again, the device shows
+little response to additions, with no current change resulting from an
+addition exceeding 1\% of the current reading before that addition. This
+contrasts with the device behaviour observed by Murugathas \emph{et
+al.}, target analyte additions above 10 fM caused an OR22a
+nanodisc-functionalised graphene device to exhibit current changes which
+consistently exceeded 2\% \autocite{Murugathas2020}. The electrical
+characteristics of the channel used before and after sensing are shown
+in Figure~\ref{fig-graphene-sensing-TX} (a), with a order of magnitude
+decrease in on-current and negatively shifted Dirac point, similar to
+the effects of functionalisation observed previously with working OR22a
+nanodisc GFET biosensors \autocite{Murugathas2020}. Intriguingly,
+Figure~\ref{fig-graphene-sensing-TX} (b) shows that when modified
+directly with OR22a nanodiscs without exposure to PBASE and methanol, a
+larger negative shift in the Dirac point is observed, reflecting the
+gating behaviour seen for carbon nanotube devices functionalised with
+and without PBASE in methanol in
+Section~\ref{sec-variability-biosensor}. The similarity between results
+may imply that the large change in characteristics seen in
+Figure~\ref{fig-graphene-sensing-TX} (a) may be primarily due to the
+effect of methanol and PBASE as in the case of the carbon nanotube
+network devices.
+
+The surface of a pristine graphene surface and a OR22a-functionalised
+graphene surface are shown in Figure~\ref{fig-graphene-AFM-comparison}
+(a) and (b) respectively. Graphene folds of up to 7.3 nm in height are
+visible on the right hand side of
+Figure~\ref{fig-graphene-AFM-comparison} (a).
+
+\hypertarget{pbase-hydrolysis}{%
+\subsubsection*{PBASE Hydrolysis}\label{pbase-hydrolysis}}
+\addcontentsline{toc}{subsubsection}{PBASE Hydrolysis}
 
 \hypertarget{solvent-contamination}{%
 \subsubsection*{Solvent Contamination}\label{solvent-contamination}}
