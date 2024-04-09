@@ -240,7 +240,7 @@ An explanation is required for the seemingly contradictory situation where nanod
 
 ###	Potential Sources of Variability {#sec-contamination}
 
-Throughout the course of this thesis, multiple potential candidates for the unwanted surface coating discussed in the previous section have been identified. These include the surfactant used in carbon nanotube deposition (@sec-pristine-morphology, @sec-pristine-electrical-characterisation) and the solvent used in functionalisation (@sec-PBASE-electrical-characterisation). Another possibility is that PBASE itself is acting as a surface coating, which could result from multilayer coverage restricting access by the odorant receptors to directly attached PBASE (@sec-PBASE-attachment). Alternatively, PBASE may have hydrolysed into PBA prior to attachment, forming an inert surface layer upon $\pi$-stacking around the carbon nanotubes. However, no threshold shift directly attributable to PBA attachment should occur  (@sec-PBA-characterisation), and this is not what was observed when characterising the non-working device in @sec-variability. To understand which of these candidates is responsible for the significant variability in biosensor functionality, the sensing procedure was performed with slight variations on the biosensor fabrication and functionalisation procedures. In each test, an individual element of one of these procedures was altered to prevent the introduction of a specific surface coating. The biosensor was then characterised and tested to see if it would respond to its target odorant.
+Throughout the course of this thesis, multiple potential candidates for the unwanted surface coating discussed in the previous section have been identified. These include the surfactant used in carbon nanotube deposition (@sec-pristine-morphology, @sec-pristine-electrical-characterisation), the solvent used in functionalisation (@sec-PBASE-electrical-characterisation) and the hydrophobic layer which naturally forms on graphene and carbon nanotubes in air (@sec-hydrophobicity). Another possibility is that PBASE itself is acting as a surface coating, which could result from multilayer coverage restricting access by the odorant receptors to directly attached PBASE (@sec-PBASE-attachment). Alternatively, PBASE may have hydrolysed into PBA prior to attachment, forming an inert surface layer upon $\pi$-stacking around the carbon nanotubes. However, no threshold shift directly attributable to PBA attachment should occur (@sec-PBA-characterisation), and this is not what was observed when characterising the non-working device in @sec-variability-biosensor. To understand which of these candidates is responsible for the significant variability in biosensor functionality, the sensing procedure was performed with slight variations on the biosensor fabrication and functionalisation procedures. In each test, an individual element of one of these procedures was altered to prevent the introduction of a specific surface coating. The biosensor was then characterised and tested to see if it would respond to its target odorant.
 
 #### Fabrication {.unnumbered}
 
@@ -347,6 +347,8 @@ It appears that avoiding the use of surfactant on the transducer element is not 
 
 #### Functionalisation {.unnumbered}
 
+Next, an investigation was made into whether the type of solvent used in functionalisation was responsible for the variability observed in device behaviour. A solvent commonly used in the literature for functionalisation with PBASE is dimethyl sulfoxide (DMSO), as discussed in @sec-PBASE-attachment. A surfactant-deposited device was functionalised with OR22a nanodiscs in the same manner as described in @sec-working-PBASE-functionalisation, except DMSO was used instead of methanol when preparing the PBASE solution. The sensing dataset from the four device channels of a suitable current level are displayed in @fig-DMSO-sensing (a), where methyl hexanoate (MeHex) was used as the target compound. No channel shows a negative current response to MeHex. Current changes after each addition are consistently below 1% on all channels, and therefore appear negligible on the scale used in @fig-DMSO-sensing (b). 
+
 ::: {#fig-DMSO-sensing layout="[[-11,3,-1,70,-15],[-11,3,-1,70,-15]]" layout-valign="top"}
 
 ![](figures/(a).png)
@@ -357,28 +359,7 @@ It appears that avoiding the use of surfactant on the transducer element is not 
 
 ![](figures/ch8/NTQ25C10_OR22a_sample_220208_filtered_DMSO.png)
 
-A normalised sensing series across four multiplexed channels from a device functionalised with PBASE in DMSO to attach OR22a nanodiscs. The concentration of each 20 µL addition is indicated above the time of addition. Current data has been despiked and baseline drift removed in both (a) and (b), while a moving median filter has also been applied to the dataset shown in (b). 
-:::
-
-::: {#fig-DMSO-TX layout="[[3,-1,45,-1,3,-1,45,-1],[3,-1,45,-1,3,-1,45,-1]]" layout-valign="top"}
-
-![](figures/(a).png)
-
-![](figures/ch8/NTQ25C10_ch1_DMSO.png)
-
-![](figures/(b).png)
-
-![](figures/ch8/NTQ25C10_ch2_DMSO.png)
-
-![](figures/(c).png)
-
-![](figures/ch8/NTQ25C10_ch3_DMSO.png)
-
-![](figures/(d).png)
-
-![](figures/ch8/NTQ25C10_ch4_DMSO.png)
-
-Fiquid-gated carbon nanotube network device transfer characteristics before and after OR22a nanodisc functionalisation using PBASE in DMSO. Each subfigure (a)-(d) corresponds to a different channel of the functionalised device; (a) corresponds to channel 1, (b) corresponds to channel 2, (c) corresponds to channel 3, and (d) corresponds to channel 4. The dashed line shown is tangent to the subthreshold slope of the characteristic curve. The threshold voltage associated with each curve is also shown.
+A normalised sensing series across four multiplexed channels from a device functionalised with PBASE in DMSO to attach OR22a nanodiscs. The concentration of each 20 µL addition of methyl hexanoate in 1% DMSO 1XPBS is indicated above the time of addition. Current data has been despiked and baseline drift removed in both (a) and (b), while a moving median filter has also been applied to the dataset shown in (b). 
 :::
 
 ::: {#fig-DMSO-AFM-comparison layout="[[3,-1,45,-1,3,-1,45,-1],[3,-1,45,-1,3,-1,45,-1]]" layout-valign="top"}
@@ -400,16 +381,80 @@ Fiquid-gated carbon nanotube network device transfer characteristics before and 
 ![](figures/ch8/Ned_NTQ25C10_W2_2.5um_20220208_00287_section_3.png)
 
 
-Atomic force microscope images of a carbon nanotube film functionalised with OR22a nanodiscs using PBASE in DMSO. The average substrate height is shown in green in (a). A binary representation of the atomic force microscope image with a threshold height of 12.3 nm is shown in (b). The cross-sections in (c) and (d) demonstrate that the long, rounded features seen in (b) correspond to densely packed collections of nanodisc aggregates following the length of a carbon nanotube.
+Atomic force microscope images of a carbon nanotube film functionalised with OR22a nanodiscs using PBASE in DMSO. The average substrate height is shown in green in (a). A binary representation of the atomic force microscope image with a threshold height of 12.3 nm is displayed in (b). (c) shows features in the functionalised film across the height range $12.3-18.9$ nm, while (d) shows another binary representation at 18.8 nm.
 :::
 
+::: {#fig-DMSO-TX layout="[[3,-1,45,-1,3,-1,45,-1],[3,-1,45,-1,3,-1,45,-1]]" layout-valign="top"}
+
+![](figures/(a).png)
+
+![](figures/ch8/NTQ25C10_ch1_DMSO.png)
+
+![](figures/(b).png)
+
+![](figures/ch8/NTQ25C10_ch2_DMSO.png)
+
+![](figures/(c).png)
+
+![](figures/ch8/NTQ25C10_ch3_DMSO.png)
+
+![](figures/(d).png)
+
+![](figures/ch8/NTQ25C10_ch4_DMSO.png)
+
+Liquid-gated carbon nanotube network device transfer characteristics before and after OR22a nanodisc functionalisation using PBASE in DMSO. Each subfigure (a)-(d) corresponds to a different channel of the functionalised device; (a) corresponds to channel 1, (b) corresponds to channel 2, (c) corresponds to channel 3, and (d) corresponds to channel 4. The dashed line shown is tangent to the subthreshold slope of the characteristic curve. The threshold voltage associated with each curve is also shown.
+:::
+
+An atomic force microscope images of a film modified using DMSO in PBASE with OR22a nanodiscs is shown in @fig-DMSO-AFM-comparison (a), along with a mask in green indicating an average substrate height of $3.6\pm0.6$. The binary representation in @fig-DMSO-AFM-comparison (b) shows long, rounded features sit directly above the above the CNT threshold height of 12.3 nm. By extending the threshold height range to $12.3-18.9$ nm, it becomes apparent that these features are not simply large carbon nanotube bundles, but instead appear to be densely packed collections of nanodisc aggregates following the length of various carbon nanotube bundles. The distribution of nanodiscs along the nanotubes gives them a string of pearls or *Hormosira*-like appearance [@NewZealandPlantConservationNetwork]. Some features are too tall for the "pearls" on the "string" to be individually distinguished in @fig-DMSO-AFM-comparison (c), but @fig-DMSO-AFM-comparison (d) shows every rounded "pearl" along every "string" can be distinguished from one another at a taller threshold. These images strongly suggest nanodisc aggregates are present on the network, but does not necessarily indicate a direct connection between nanodiscs and the network.
+
+The transfer characteristics of the four sensing channels are displayed in @fig-DMSO-TX. An average threshold shift of $-0.22\pm0.03$ V is seen across these channels, significantly exceeding the expected threshold shifts of $-0.06\pm0.01$ for exposure to PBASE in DMSO and $-0.15\pm0.01$ for exposure to DMSO without PBASE. This functionalisation threshold shift is similar to that of the device which responded to target analyte in @sec-EtHex-aqueous-sensing, -0.20 V. The shift is also similar to that seen for the device functionalised directly with OR22a nanodiscs without PBASE, -0.27 V. It therefore seems that the nanodiscs are directly attached to the carbon nanotube network, yet they do not respond to the target analyte. It seems likely that the negative gating is a result of nanodisc attachment to the network, either with or without PBASE as a linker; meanwhile, there is limited or no attachment between the network and the odorant receptors themselves. This lack of connection to the odorant receptors appears to be a second factor at play in the variability seen in biosensor behaviour.
+
+As discussed in @sec-PBASE-purity, DMSO is a highly hygroscopic solvent. If a non-negligible amount of water is present in the DMSO during functionalisation, the PBASE is being exposed to water for more than an hour before introducing OR nanodiscs. Over this time period, the PBASE may be able to undergo ester hydrolysis [@Hermanson2013-3]. To eliminate the possibility that hydrolysis has prevented the attachment of odorant receptors to PBASE on the network, an alternative method using 1-pyrenebutyric acid (PBA) in DMSO was also trialled. This method was similar to those seen in @sec-PBA. PBA is first attached to the carbon nanotube network, then, once the bulk of the DMSO has been rinsed off the device surface, converted to PBASE using carbodiimide (EDC) and succinimide (NHS) reagents. The PBASE is then available to attach to the OR22a nanodiscs as usual. The functionalisation process with PBA was therefore the same as in @sec-working-PBASE-functionalisation, with the following steps replacing steps $3-4$:
+
+- A solution of 5 mM PBA (Setareh Biotech) in DMSO was prepared by fully dissolving 7 mg PBASE in 5 mL DMSO by vortex mixing at 1000 rpm.
+
+- The device was left submerged in the 5 mM PBASE in DMSO solution for 1 hour in a parafilm-sealed container.
+
+- A solution of 20 mM EDC and 40 mM NHS in 1XPBS was prepared by dissolving 31 mg EDC and 46 mg NHS in 10 mL 1XPBS.
+
+Note: EDC was thawed under vacuum for 15 minutes in dark conditions before opening.
+
+- The device was rinsed with DMSO for 15 s and 1XPBS for 15 s, then placed into the EDC/NHS solution for 30 minutes.
+
+- The device was then rinsed with 1XPBS for 15s before OR22a nanodisc functionalisation.
+
+![A normalised methyl hexanoate (MeHex) sensing series taken with a OR22a-functionalised carbon nanotube device using PBA with EDC and NHS. The concentration of each 20 µL addition is indicated above the time of addition.](figures/ch8/NTQ25D3_OR22a_sample_220218_EDCNHS.png){#fig-EDCNHS-sensing width=70%}
+
+::: {#fig-EDCNHS-AFM-comparison layout="[[3,-1,45,-1,3,-1,45,-1]]" layout-valign="top"}
+
+![](figures/(a).png)
+
+![](figures/ch8/Ned_NTQ25D3_2.5um_20220222_00362_mask.png)
+
+![](figures/(b).png)
+
+![](figures/ch8/Ned_NTQ25D3_2.5um_20220222_00362_cross.png)
 
 
-showing long, rounded features with a *Hormosira*-like appearance [@NewZealandPlantConservationNetwork].
+2.5 µm $\times$ 2.5 µm atomic force microscope images of a carbon nanotube film functionalised with OR22a nanodiscs using PBA in DMSO with EDC and NHS. The average substrate height is shown in green in (a), while (b) shows features in the functionalised film across the height range $12.6-25.0$ nm.
+:::
 
--DMSO promoting hydrolysis PBA/EDC
+::: {#fig-EDCNHS-TX layout="[3,-1,45,-1,3,-1,45,-1]" layout-valign="top"}
 
-Remove the possibility of contamination with solvent or PBASE multilayer coverage
+![](figures/(a).png)
+
+![](figures/ch8/NTQ25D3_ch3_EDCNHS.png)
+
+![](figures/(b).png)
+
+![](figures/ch8/NTQ25D3_ch6_EDCNHS.png)
+
+Liquid-gated carbon nanotube network device transfer characteristics before and after OR22a nanodisc functionalisation using PBA in DMSO with EDC and NHS. Each subfigure corresponds to a different device channel, where (a) is channel 3 and (b) is channel 6. The dashed line shown is tangent to the subthreshold slope of the characteristic curve. The threshold voltage associated with each curve is also shown.
+:::
+
+These steps were designed to be broadly similar to those seen in @sec-PBA, with an molar excess of NHS relative to EDC to ensure full conversion of the *O*-acylisourea intermediate into PBASE. Normalised, filtered sensing series from two multiplexed channels of the functionalised device are shown in @fig-EDCNHS-sensing. Again, any current response subsequent to additions is positive and <1%. An atomic force microscope image of a film modified in the same manner as the sensing device is shown in @fig-EDCNHS-AFM-comparison (a), with substrate height $3.9\pm1.5$ nm. When a suitable height range above the threshold height 12.6 nm is selected, as in @fig-EDCNHS-AFM-comparison (b), highly clustered nanodisc features with the appearance of pearls on a string are again visible. The transfer characteristics of each channel before and after functionalisation are shown in @fig-EDCNHS-TX, where an average threshold shift of $-0.12\pm0.01$ V is observed. In @sec-PBA-characterisation, the threshold shift for PBA attachment in DMSO was -0.15 V. The difference between these two values is not large enough to convincingly conclude whether nanodiscs have attached via PBASE or not. It therefore appears that the problem identified with variability in device behaviour in @sec-variability-biosensor is not resolved by the use of a different solvent or steps to prevent PBASE hydrolysis.
+
+From this testing process, two possible sources of variability from surface contamination remain. The first is the hydrocarbonaceous contamination layer that results from device exposure to air. The second is the potential for multilayer adhesion of PBASE or PBA on the transducer surface. A further possible source of variability was also identified from the PBASE in DMSO functionalisation, where transfer measurements and AFM imaging both strongly suggested direct attachment of nanodiscs: preferential attachment of nanodiscs with minimal or no attachment of the contained odorant receptors. An altered non-covalent functionalisation method using pyrene-PEG-biotin was therefore developed to address all three of these factors at once. This method is trialled in the following section.
 
 ##	iOR Biosensing with Aqueous Functionalisation 
 
