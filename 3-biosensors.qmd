@@ -1,16 +1,51 @@
 ---
 keep-tex: true
+format: pdf
 ---
 
 # Carbon Nanotube and Graphene Field-Effect Transistors as Biosensor Platforms
 
 ## Carbon Nanotube Networks & Graphene as Biosensing Transducers {#sec-biosensing-transducers}
 
-As carbon nanotubes and graphene are highly sensitive substances and are easily functionalised with biomaterials, they make an ideal platform for biosensing \cite{battie_evaluation_2010, benlikaya_ascertaining_2019, ohno_chemical_2010,goodwin_graphene_2021}.
+As carbon nanotubes and graphene are highly sensitive substances and are easily functionalised with biomaterials, they make an ideal platform for biosensing [@Battie2010; @Ohno2010;  @Benlikaya2019; @Goodwin2021].
 
-## Biosensor Examples
+## Odorant Receptors {#sec-odorant-receptors}
+
+### *In Vivo* Structure and Function
+
+### Artificial Membranes {#sec-artificial-membranes}
+
+## Odorant Receptor Carbon Nanotube and Graphene Biosensors
 
 ### Sensor Types
+
+\newpage
+\KOMAoptions{paper=landscape,pagesize}
+
+```{r warning=FALSE}
+#| label: tbl-or-biosensors
+#| tbl-cap: Summary of past fabrication methods for odorant receptor-functionalised carbon nanotube and graphene biosensors. GA = glutaraldehyde, DAN = 1,5-diaminonaphthalene, DMT-MM = 4-(4,6-dimethoxy-1,3,5-triazin-2-yl)-4 methylmorpholinium chloride, NTA = nitrilotriacetic acid, PDL = poly-D-lysine, Ab = Antibody fragments, CNTFET = carbon nanotube field-effect transistor, GFET = graphene field-effect transistor.
+
+knitr::opts_chunk$set(echo = FALSE)
+library(knitr)
+
+or_table <- read.csv("tables/ch3/OR_biosensors.csv", sep=",")
+or_table <- or_table[rowSums(is.na(or_table)) == 0,]
+
+knitr::kable(or_table, 
+            col.names = c("Attachment",
+                           "Attachment Method",
+                           "References",
+                           "Transducer",
+                           "OR Type",
+                           "OR Format",
+                           "LOD"), format = "simple") 
+    
+```
+
+\newpage
+\KOMAoptions{paper=portrait,pagesize}
+
 
 ### Sensor Functionalisation
 
@@ -20,9 +55,11 @@ As carbon nanotubes and graphene are highly sensitive substances and are easily 
 
 #### Vapour Environment {.unnumbered}
 
-## Insect Odorant Receptors {#sec-odorant-receptors}
+## Insect Odorant Receptor Biosensors
 
-### Artificial Membranes {#sec-artificial-membranes}
+### Insect Odorant Receptors
+
+### Biosensor Examples
 
 ##	Non-Specific Binding {#sec-non-specific-binding}
 
@@ -35,4 +72,3 @@ As carbon nanotubes and graphene are highly sensitive substances and are easily 
 #### PDMS Well {.unnumbered}
 
 #### Reference Electrode {.unnumbered}
-
