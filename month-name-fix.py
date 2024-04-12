@@ -32,6 +32,9 @@ modified_content = re.sub(pattern_month, replace_month, bib_content, flags=re.IG
 # Replace "%" with "\%" when not preceded by a backslash
 modified_content = re.sub(r'(?<!\\)%', r'\\%', modified_content)
 
+# Replace "&" with "\&" when not preceded by a backslash
+modified_content = re.sub(r'(?<!\\)&', r'\\&', modified_content)
+
 # Write the modified content back to the original .bib file with UTF-8 encoding
 with open("references.bib", "w", encoding="utf-8") as file:
     file.write(modified_content)
