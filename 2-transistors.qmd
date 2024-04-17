@@ -1,40 +1,90 @@
 ---
 keep-tex: true
+format: pdf
 ---
 
 # Carbon Nanotube and Graphene Field-Effect Transistors
 
-## Ambipolar Field-Effect Transistors
+## Introduction
 
-### General Notes {#sec-general-FETs}
+## Thin-Film Field-Effect Transistors {#sec-general-FETs}
 
-Carbon nanotube network and graphene field-effect transistors (CNTFETs and GFETs) are voltage-gated transistors that use a network of carbon nanotubes, or graphene, as a channel for current from the source to the drain electrode.
+### Structure and Gating {#sec-gating}
 
-CNTFETs are mainly p-type transistors with positive charge carriers \cite{martel_single-_1998,kong_nanotube_2000}, while GFETs are ambipolar \cite{ohno_chemical_2010}. Applying an gate voltage $V_g$ to the gate of a CNTFET or GFET increases (or decreases) the number of available charge carriers, by bringing the relevant charge-carrying band closer to (or further away from) the Fermi level of the channel \cite{sze_semiconductor_devices_2007}.
+Carbon nanotube network and graphene field-effect transistors (CNTFETs and GFETs) are both examples of a class of transistors called thin-film transistors (TFTs). These transistors are closely related to the commonly-used metal oxide semiconductor field-effect transistor (MOSFET). However, unlike in MOSFETs, in TFTs the transistor substrate is not used as the channel; instead, current passes through the semiconducting film, which is contacted via conductive source and drain electrodes. This semiconducting film may be a network of carbon nanotubes or layers of graphene [@Sun2013]. 
+
+::: {#fig-gating-schematics layout="[[3,-1,45,-1,3,-1,45,-1]]"}
+
+![](figures/(a).png)
+
+![](figures/ch2/back-gate-schematic.png)
+
+![](figures/(b).png)
+
+![](figures/ch2/liquid-gate-schematic.png)
+
+Schematics (not to scale) showing the side-view cross-section of a thin-film field-effect transistor in both the (a) back-gated and (b) liquid-gated configuration. A graphene monolayer or a carbon nanotube network is used as the transistor thin-film.
+:::
+
+### Electrical Characterisation
+
+CNTFETs are traditionally *p*-type transistors with positive charge carriers [@Martel1998; @Kong2000], while GFETs are ambipolar [@Ohno2010a]. Applying an gate voltage V$_g$ to the gate of a CNTFET or GFET increases, or decreases, the number of available charge carriers, by bringing the relevant charge-carrying band closer to, or further away from, the Fermi level of the channel [@Sze2006]. An example of both back-gated and liquid-gated transfer characteristics from thin-film transistors are shown in @fig-gating-transfer
+
+An important attribute of the transfer characteristic curve for all thin-film FETs is the on-off current ratio. On-off current ratio is the ratio of the current through a device when gated fully “off” with a positive voltage, to the current through the device when gated fully “on” with a negative voltage [@Zheng2017]. The off current in an ambipolar FET can be defined as the minimum current during the transfer sweep, where the majority carrier transitions from being holes to electrons or vice versa. For example, the on current of the channel shown in @fig-gating-transfer (b) is 741.5 nA, the off current is 0.2 nA, and therefore the on-off ratio is $\sim$ 3000. In contrast, even when 10 V is applied, the backgated device shown in @fig-gating-transfer (a) is never gated fully off. Application of higher voltages to the gate result in significant leakage currents through the gate, and can even result in irreversible breakdown of the oxide layer [@Sze2006]. Being able to traverse both on and off regimes over a limited voltage interval is one of the many advantages of the liquid-gated configuration.
+
+::: {#fig-gating-transfer layout="[3,-1,45,-1,3,-1,45,-1]"}
+
+![](figures/(a).png)
+
+![](figures/ch2/NTQ31C5ch1on_off_current.png)
+
+![](figures/(b).png)
+
+![](figures/ch2/Q5C10ch5on_current.png)
 
 
-
-
-### Gating {#sec-gating}
-
-
-::: {.custom-figure-class #fig-gating-schematics layout="[[47.5,-5,47.5]]"}
-
-![$\vspace{-2em}$](figures/ch2/back-gate-schematic_edited.png)
-<span class="subfigure-label"></span>
-
-![$\vspace{-2em}$](figures/ch2/liquid-gate-schematic_edited.png)
-<span class="subfigure-label"></span>
-
-Two 
+Field-effect transistor transfer characteristics on a logarithmic scale. The device channel in (a) was backgated while the device channel in (b) was liquid-gated. The "on" current in (a) and (b) is shown with a red horizontal line, while the "off" current in (b) is shown with a blue horizontal line.
 :::
 
 
-#### Back-gating {.unnumbered}
+### Current Sampling
 
-#### Liquid-gating {.unnumbered}
+It is important to account for the changes in current that occur during a sensing run that are unrelated to sensing, and try to minimise these changes as much as possible. These changes are due to a variety of causes and can be categorised as various types of noise and baseline drift. (1/f noise paper, heller paper)
 
-### Electrical Characterisation
+## Graphene Field-Effect Transistors
+
+### Electrical Characterisation {#sec-electrical-characterisation-graphene}
+
+![Transfer characteristics of a graphene field-effect transistor channel showing the regions of hole conduction and electron conduction. The red dotted line indicates the Dirac point voltage of the device channel.](figures/ch2/Graphene_transfer.png){#fig-linker-raman width="60%"}
+
+Quantative measurement of leftward shift in transfer curve
+Use minima of curve in reverse sweep direction (more consistent than reading in forward sweep direction)
+I compared the transfer characteristics after then rinse steps to the pristine characteristics
+Transfer shifts where current drops to zero are excluded (indicates delamination/damage to channel)
+
+## Random-Network Carbon Nanotube Field-Effect Transistors
+
+### Composition and Chirality
+
+Nanotubes in a network can have semiconducting characteristics (s-CNTs) or metallic characteristics (m-CNTs), depending on their chirality [@Martel1998; @Kong2000].
+
+### Network Morphology
+
+
+### Electrical Characterisation {#sec-electrical-characterisation-CNT}
+
+::: {#fig-literature-characteristics layout="[[3,-1,45,-1,3,-1,45,-1]]"}
+
+![](figures/(a).png)
+
+![](figures/ch2/CNT_transfer_1.png)
+
+![](figures/(b).png)
+
+![](figures/ch2/CNT_transfer_2.png)
+
+Transfer characteristics of a single carbon nanotube network field-effect transistor channel, using a logarithmic scale in (a) and using a linear scale in (b) to emphasise different features of the same dataset. The subthreshold slope is shown with a black dotted line, while the threshold voltages are shown with red dotted lines. The ON and OFF regimes are also indicated on both figures.
+:::
 
 #### Threshold Voltage {.unnumbered}
 
@@ -50,25 +100,3 @@ Use curve in reverse sweep direction (more consistent than reading in forward sw
 Separate readings for left and right hand sides of transfer curve (left side = electrons dominant carrier, right side = holes dominant carrier)
 Transfer shifts where current drops to zero are excluded (indicates delamination/damage to channel)
 This gives us a quantitative idea of whether the transfer shifts in slides 5/6 are stable (remain the same/similar after rinse steps)
-
-### Current Sampling
-
-It is important to account for the changes in current that occur during a sensing run that are unrelated to sensing, and try to minimise these changes as much as possible. These changes are due to a variety of causes and can be categorised as various types of noise and baseline drift. (1/f noise paper, heller paper)
-
-## Random-Network Carbon Nanotube Field-Effect Transistors
-
-### Composition and Chirality
-
-Nanotubes in a network can have semiconducting characteristics (s-CNTs) or metallic characteristics (m-CNTs), depending on their chirality \cite{martel_single-_1998,kong_nanotube_2000}.
-
-### Morphology
-
-
-## Graphene Field-Effect Transistors
-
-### Electrical Characterisation of Graphene Field-Effect Transistors
-
-Quantative measurement of leftward shift in transfer curve
-Use minima of curve in reverse sweep direction (more consistent than reading in forward sweep direction)
-I compared the transfer characteristics after then rinse steps to the pristine characteristics
-Transfer shifts where current drops to zero are excluded (indicates delamination/damage to channel)
