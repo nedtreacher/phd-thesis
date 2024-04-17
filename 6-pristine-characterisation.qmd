@@ -169,6 +169,54 @@ The second module creates combined and individual plots of transfer data collect
 
 The third module allows for comparison of transfer measurements taken of the same channel before and after some modification. It also calculates the shift in either threshold voltage or major Dirac voltage of the device.
 
+### Graphene Devices
+
+::: {#fig-pristine-graphene layout="[[47.5,-5,47.5], [47.5,-5,47.5]]"}
+
+![](figures/ch6/JG098_pristine_TXLG01_5mVstep_220920_norinse.png){#fig-graphene-transfer-1}
+
+![](figures/ch6/JGQ00D6_pristine_TXLG01_5mVstep_220914_norinse.png){#fig-graphene-transfer-2}
+
+![](figures/ch6/JG098_ch1_absolute_values_with_gate_current.png){#fig-graphene-transfer-comparison-1}
+
+![](figures/ch6/JGQ00D6_ch3_absolute_values_with_gate_current.png){#fig-graphene-transfer-comparison-2}
+
+These figures show liquid-gated transfer characteristics of channels from two AZ$^\circledR$ 1518 encapsulated graphene devices. The characteristics of working device channels upon initial exposure to 1XPBS are shown in (a) and (b). The transfer characteristics of channel 1 in (a) and channel 5 in (b) after various degrees of exposure to 1XPBS are shown in (c) and (d) respectively, with each transfer sweep numbered in the order the sweeps were taken. The dashed lines correspond to measurements of gate leakage current.
+:::
+
+Graphene field-effect transistor devices were electrically characterised in the manner described in @sec-electrical-characterisation and analysed using the Python code discussed in @sec-field-effect-transistor-analysis. 
+
+@fig-pristine-graphene shows the liquid-gated transfer characteristics of two graphene devices. These devices were fabricated prior to Jun 2021. Both devices exhibit the ambipolar characteristics typical of liquid-gated graphene devices [@Heller2009a;@Heller2010; @Xia2010; @Kireev2017]. As with the carbon nanotube network devices, leakage current remained below $\sim$ 1 $\times$ $10^{-7}$ V across both the forward and reverse sweep. Hysteresis between the forward and reverse sweep is caused by trapping of charge within and on the surface of the SiO$_{2}$ dielectric [@Bartolomeo2011]. The major Dirac point for these devices is slightly to the right of V$_{\textrm{Dirac}} \approxeq$ 0 V, which indicates $p$-doping of the channel. This slight $p$-doping is likely a result of a adsorption of oxygen and water from the air and residue resist from photolithography [@Cheng2011; @Shin2012; @Kireev2017].
+
+Some devices exhibited a double-minima feature, indicating the presence of two Dirac points. This effect arises due to doping of graphene by the metal contacts. In shorter length channels, metal doping affects the entire channel length, leading to a consistent Fermi level and a single Dirac point. However, for longer channel lengths like ours, the doping effect from metal contact no longer reaches the entire channel, leading to a difference in Fermi level between the graphene in the channel and graphene under the metal contact. The difference in Fermi levels results in the presence of a second Dirac point [@Bartolomeo2011; @Feng2014; @Peng2018]. The global minimum of the transfer characteristic can be referred to as the 'major' Dirac point.
+
+@fig-pristine-graphene also shows the effect of 1XPBS on the graphene channels. The channels were measured on exposure to 1XPBS, after exposure to 1XPBS for one hour, and after the device surface was rinsed and 1XPBS was replaced in the well one time, two times and three times successively. A slight negative shift of the major Dirac point was observed. This effect is possibly a result of gate bias stress, where successive transfer sweeps introduce charge traps to the graphene layer and alters the current level at a given gate voltage [@Bargaoui2018; @Noyce2019]. Alternatively,  Kireev *et al.* found that a series of liquid-gated sweeps also reduced the size of the second Dirac point, and suggested that it indicated the gate current was removing atmospheric contaminants from the graphene surface via current annealing [@Kireev2017]. This could be explained as the removal of contaminants causing improved contact between the metal and graphene surface, and thus increasing metal doping and consistency of the Fermi level across the channel. If the contaminants removed are $p$-dopants, then this effect could also explain the negative shift of the major Dirac point.
+
+```{r}
+#| label: setup2
+#| include: false
+library(tidyverse)
+library(kableExtra)
+
+graphene_device_parameters <- read.csv("tables/ch6/graphene_device_parameters.csv", sep=",")
+graphene_device_parameters <- graphene_device_parameters[rowSums(is.na(graphene_device_parameters)) == 0,]
+```
+
+```{r}
+#| tbl-cap: Average on-off ratio and major Dirac point voltage for AZ® 1518 encapsulated liquid-gated graphene transistor channels at various stages of exposure to 1XPBS. Electrical characteristics were taken of 6 channels total, three channels from each of two devices.
+#| label: tbl-graphene-parameters
+
+graphene_device_parameters %>% 
+  kable(
+    booktabs = TRUE, #LaTeX "booktabs formatting"
+    linesep = "", #no linespace
+    align = c(rep("l", 1), rep("c", 5)), #aligns col 1 left, all others center
+    col.names = c("", "1XPBS: Initial", "1XPBS: After 1 hr", "1XPBS: Rinse"), 
+    escape = FALSE)
+```
+
+@tbl-graphene-parameters shows the on-off ratio and major Dirac point voltage of the graphene devices. Apart from the previously-mentioned slight negative shift of the major Dirac point, these values were highly consistent before and after exposure to 1XPBS.
+
 ### Carbon Nanotube Network Devices {#sec-cnt-devices}
 
 ::: {#fig-pristine-cnt-characteristics layout="[[49,-2,49], [49,-2,49], [49,-2,49]]"}
@@ -225,54 +273,6 @@ Backgated transfer sweeps were taken of an single unencapsulated device with a 3
 :::
 
 Transfer measurements were taken to determine whether backgated measurements could be taken of an unencapsulated device in the vapour sensor chamber with 1XPBS covering the channels. @fig-buffer-effect-on-backgate shows the behaviour of an unencapsulated backgated device with a 300 nm SiO$_2$ layer before and after being covered by 50 µL of 1XPBS (phosphate buffered saline). The on-off ratio and hysteresis of the channels increase significantly. The presence of water increases hysteresis through introducing charge traps at the silicon dioxide surface around the carbon nanotubes and at the surface of the nanotubes themselves [@Kim2003; @Lee2007; @Franklin2012; @Ha2014]. There is also a significant increase in current leakage to the backgate for larger applied voltages, despite the electrolyte having no visible physical contact with the silicon backgate or copper plane. This leakage current may simply be due to an increase in relative humidity around the device due to the presence of water [@Conseil2014]. As any variation in threshold voltage due to hysteresis and significant leakage current are undesirable for sensing procedures, this configuration was not used for vapour sensing purposes.
-
-### Graphene Devices
-
-::: {#fig-pristine-graphene layout="[[47.5,-5,47.5], [47.5,-5,47.5]]"}
-
-![](figures/ch6/JG098_pristine_TXLG01_5mVstep_220920_norinse.png){#fig-graphene-transfer-1}
-
-![](figures/ch6/JGQ00D6_pristine_TXLG01_5mVstep_220914_norinse.png){#fig-graphene-transfer-2}
-
-![](figures/ch6/JG098_ch1_absolute_values_with_gate_current.png){#fig-graphene-transfer-comparison-1}
-
-![](figures/ch6/JGQ00D6_ch3_absolute_values_with_gate_current.png){#fig-graphene-transfer-comparison-2}
-
-These figures show liquid-gated transfer characteristics of channels from two AZ$^\circledR$ 1518 encapsulated graphene devices. The characteristics of working device channels upon initial exposure to 1XPBS are shown in (a) and (b). The transfer characteristics of channel 1 in (a) and channel 5 in (b) after various degrees of exposure to 1XPBS are shown in (c) and (d) respectively, with each transfer sweep numbered in the order the sweeps were taken. The dashed lines correspond to measurements of gate leakage current.
-:::
-
-Graphene field-effect transistor devices were electrically characterised in the manner described in @sec-electrical-characterisation and analysed using the Python code discussed in @sec-field-effect-transistor-analysis. 
-
-@fig-pristine-graphene shows the liquid-gated transfer characteristics of two graphene devices. These devices were fabricated prior to Jun 2021. Both devices exhibit the ambipolar characteristics typical of liquid-gated graphene devices [@Heller2009a;@Heller2010; @Xia2010; @Kireev2017]. As with the carbon nanotube network devices, leakage current remained below $\sim$ 1 $\times$ $10^{-7}$ V across both the forward and reverse sweep. Hysteresis between the forward and reverse sweep is caused by trapping of charge within and on the surface of the SiO$_{2}$ dielectric [@Bartolomeo2011]. The major Dirac point for these devices is slightly to the right of V$_{\textrm{Dirac}} \approxeq$ 0 V, which indicates $p$-doping of the channel. This slight $p$-doping is likely a result of a adsorption of oxygen and water from the air and residue resist from photolithography [@Cheng2011; @Shin2012; @Kireev2017].
-
-Some devices exhibited a double-minima feature, indicating the presence of two Dirac points. This effect arises due to doping of graphene by the metal contacts. In shorter length channels, metal doping affects the entire channel length, leading to a consistent Fermi level and a single Dirac point. However, for longer channel lengths like ours, the doping effect from metal contact no longer reaches the entire channel, leading to a difference in Fermi level between the graphene in the channel and graphene under the metal contact. The difference in Fermi levels results in the presence of a second Dirac point [@Bartolomeo2011; @Feng2014; @Peng2018]. The global minimum of the transfer characteristic can be referred to as the 'major' Dirac point.
-
-@fig-pristine-graphene also shows the effect of 1XPBS on the graphene channels. The channels were measured on exposure to 1XPBS, after exposure to 1XPBS for one hour, and after the device surface was rinsed and 1XPBS was replaced in the well one time, two times and three times successively. A slight negative shift of the major Dirac point was observed. This effect is possibly a result of gate bias stress, where successive transfer sweeps introduce charge traps to the graphene layer and alters the current level at a given gate voltage [@Bargaoui2018; @Noyce2019]. Alternatively,  Kireev *et al.* found that a series of liquid-gated sweeps also reduced the size of the second Dirac point, and suggested that it indicated the gate current was removing atmospheric contaminants from the graphene surface via current annealing [@Kireev2017]. This could be explained as the removal of contaminants causing improved contact between the metal and graphene surface, and thus increasing metal doping and consistency of the Fermi level across the channel. If the contaminants removed are $p$-dopants, then this effect could also explain the negative shift of the major Dirac point.
-
-```{r}
-#| label: setup2
-#| include: false
-library(tidyverse)
-library(kableExtra)
-
-graphene_device_parameters <- read.csv("tables/ch6/graphene_device_parameters.csv", sep=",")
-graphene_device_parameters <- graphene_device_parameters[rowSums(is.na(graphene_device_parameters)) == 0,]
-```
-
-```{r}
-#| tbl-cap: Average on-off ratio and major Dirac point voltage for AZ® 1518 encapsulated liquid-gated graphene transistor channels at various stages of exposure to 1XPBS. Electrical characteristics were taken of 6 channels total, three channels from each of two devices.
-#| label: tbl-graphene-parameters
-
-graphene_device_parameters %>% 
-  kable(
-    booktabs = TRUE, #LaTeX "booktabs formatting"
-    linesep = "", #no linespace
-    align = c(rep("l", 1), rep("c", 5)), #aligns col 1 left, all others center
-    col.names = c("", "1XPBS: Initial", "1XPBS: After 1 hr", "1XPBS: Rinse"), 
-    escape = FALSE)
-```
-
-@tbl-graphene-parameters shows the on-off ratio and major Dirac point voltage of the graphene devices. Apart from the previously-mentioned slight negative shift of the major Dirac point, these values were highly consistent before and after exposure to 1XPBS.
 
 ##	Aqueous Sensing of Phosphate Buffered Saline Concentration {#sec-dummy-sensing}
 
@@ -424,11 +424,11 @@ The transfer characteristics of a single steam-deposited carbon nanotube field-e
 
 To understand the effect of gate voltages on signal-to-noise ratio, two PBS control and salt concentration sensing series were performed with the same channel at different gate voltages. The transfer characteristics of this channel are shown in @fig-transfer-sweep-2, with coloured dashed lines marking the voltages used for gating the transistor during each sesning series. @fig-salt-conc-SNR shows the initial PBS and DI water additions made after 1800 s. Previous work on the signal-to-noise ratio for liquid-gated, encapsulated carbon nanotube devices suggests that gating devices close to $V_{gap}$ should give the largest signal-to-noise ratio for salt concentration additions [@Heller2009]. However, this was not what was observed for our carbon nanotube field-effect transitor, as @fig-salt-conc-SNR shows improved signal-to-noise ratio, i.e. the signal step can be more clearly distinguished, when gated at a voltage further removed from $V_{gap}$. This discrepancy could be a result of the use of a network of carbon nanotubes rather than a single nanotube; gating may have less of an impact on noise when a network morphology is used. Alternatively, it could be a result of a lack of mixing in our static well setup leading to inconsistent signal sizes with concentration change. Heller *et al.* used a flow cell during their signal-to-ratio work [@Heller2009]. By using a flow cell with our devices, it would be possible to confirm whether this is the case, and this might also help us reduce the size of unwanted transient responses resulting from drop-wise additions.   
 
-##	Vapour Sensing with Ethyl Hexanoate {#sec-pristine-EtHex}
+##	Vapour Sensing with Volatile Organic Compounds {#sec-pristine-EtHex}
 
 ### Baseline Drift {#sec-vapour-drift}
 
-When sensing vapour in the vapour delivery system, devices have no liquid gate and are instead backgated when taking measurements. Therefore, the baseline drift of devices characterised in this manner should be considered separately to those characterised in an liquid-gated environment. Device baseline drift of a backgated device in the vapour sensing chamber is therefore examined here in more detail. A AZ$^\circledR$ 1518 encapsulated carbon nanotube network device was used in this discussion. The device was fabricated on a substrate with a 300 nm SiO$_2$ layer, and the carbon nanotube film was deposited using the steam-assisted surfactant method. Before measurements were taken, the vapour system was purged of vapour, the total dilution flow into the chamber was set at 200 sccm as read by the Tylan mass flow controller and flow to the PID was set to 150 sccm on the flowmeter. The transfer sweep of a channel on this device (channel 6) is shown in @fig-backgate-transfer, measured using the B1500A semiconductor device analyser.
+When sensing vapour in the vapour delivery system, devices have no liquid gate and are instead backgated when taking measurements. Therefore, the baseline drift of devices characterised in this manner should be considered separately to those characterised in an liquid-gated environment. Device baseline drift of a backgated device in the vapour sensing chamber is therefore examined here in more detail. A AZ$^\circledR$ 1518 encapsulated carbon nanotube network device was used for this discussion. The device was fabricated on a substrate with a 300 nm SiO$_2$ layer, and the carbon nanotube film was deposited using the steam-assisted surfactant method. Before measurements were taken, the vapour system was purged of vapour, the total dilution flow into the chamber was set at 200 sccm as read by the Tylan mass flow controller and flow to the PID was set to 150 sccm on the flowmeter. The transfer sweep of a channel on this device (channel 6) is shown in @fig-backgate-transfer, measured using the B1500A semiconductor device analyser.
 
 ![Transfer sweep of a steam-deposited carbon nanotube network field-effect transistor, backgated in the vapour delivery system device chamber.](figures/ch6/Q2C6_backgate_characterisation.png){#fig-backgate-transfer width=35%}
 
@@ -449,24 +449,53 @@ A linear least-squares fit was performed on the samples taken between 2400 s $-$
 
 This analysis indicates that the baseline drift for the backgated carbon nanotube under nitrogen flow can be approximated as a combination of a exponential, linear and constant term. Furthermore, while only measured here for a single channel, it appears likely that we can expect backgated baseline drift behaviour to be similar to the multiplexed liquid-gated drifts observed in @sec-baseline-drift, except possibly with a longer time constant for the exponential term. It seems that the baseline drift behaviour in these devices is primarily due to the general nature of the carbon nanotube network. It appears possible that the type of gating used for device characterisation may affect the rate at which the exponential term decays. However, further experimentation may be needed to confirm this relationship, which is outside the scope of this thesis.
 
-### Sensing Series {#sec-EtHex-series}
+### Sensing Series {#sec-vapour-series}
 
-Directly after the 3600 s control series, the device was exposed to four intervals of ethyl hexanoate vapour flow from the carrier line. 5 mL of ethyl hexanoate was placed into the analyte bottle on the carrier line before testing for the sensing series. The same settings for the vapour delivery system were kept from @sec-vapour-drift. A total flow of 200 sccm between the two mass flow controllers was kept through the chamber at all times. During each interval 150 sccm flow was placed through the carrier line. Apart for the duration of these intervals, flow through the carrier line was kept at zero. The intervals were of varying lengths to see how the carbon nanotube device responded to various concentrations of vapour in the chamber as recorded by the PID. A 1200 s recovery period was placed between each carrier flow interval, where 200 sccm flow was placed into the chamber from the dilution line. A separate test was also performed in an identical manner, except no ethyl hexanoate was placed into the analyte bottle. The chamber temperature was 22°C $\pm$ 2°C for all measurements.
+Directly after the 3600 s control series, sensing devices were exposed to four intervals of volatile organic vapour flow from the carrier line. Two high vapour pressure compounds, ethyl hexanoate and *trans*-2-hexen-1-al, were measured separately using two different devices. 5 mL of the analyte of interest was placed into the analyte bottle on the carrier line before each sensing series. The same settings for the vapour delivery system were kept from @sec-vapour-drift. A total flow of 200 sccm between the two mass flow controllers was kept through the chamber at all times. During each interval 150 sccm flow was placed through the carrier line. Apart for the duration of these intervals, flow through the carrier line was kept at zero. The intervals were of varying lengths to see how the carbon nanotube device responded to various concentrations of vapour in the chamber as recorded by the PID. A 1200 s recovery period was placed between each carrier flow interval, where 200 sccm flow was placed into the chamber from the dilution line. A separate series was also performed for each device in an identical manner except without analyte in the analyte bottle. The chamber temperature was 22°C $\pm$ 3°C for all measurements.
 
-::: {.custom-figure-class #fig-EtHex-sampling layout="[[-15,70,-15],[-15,70,-15]]"}
+::: {#fig-EtHex-sampling layout="[[3,-1,45,-1,3,-1,45,-1],[3,-1,45,-1,3,-1,45,-1],[3,-1,45,-1,3,-1,45,-1]]"}
 
-![](figures/ch6/Q2C6_Q3C2_detrend_trunc_arrows_normalised_edited.png)
-<span class="subfigure-label"></span>
+![](figures/(a).png)
 
-![](figures/ch6/Q2C6_Q3C2_mean_simple_difference_before_and_after_edited.png)
-<span class="subfigure-label"></span>
+![](figures/ch6/Q39C11_detrend_trunc_arrows_normalised.png)
 
-Device channel responses to intervals of flow from the carrier line into the vapour delivery system chamber. Intervals begin at 3600 s, 4850 s, 6150 s and 7500 s. The length of each interval is indicated above the corresponding normalised current responses in (a) for both ethyl hexanoate (EtHex) and for no analyte present in the analyte bottle. The signal changes corresponding to the current responses to each interval for both ethyl hexanoate and for no analyte present are shown in (b). 
+![](figures/(b).png)
+
+![](figures/ch6/Q2C6_detrend_trunc_arrows_normalised.png)
+
+![](figures/(c).png)
+
+![](figures/ch6/Q39C11_filtered_detrend_trunc_arrows_normalised.png)
+
+![](figures/(d).png)
+
+![](figures/ch6/Q2C6_filtered_detrend_trunc_arrows_normalised.png)
+
+![](figures/(e).png)
+
+![](figures/ch6/Q39C11_mean_simple_difference_before_and_after_step_filtered_concentrations.png)
+
+![](figures/(f).png)
+
+![](figures/ch6/Q2C6_mean_simple_difference_before_and_after_step_filtered_concentrations.png)
+
+Device channel responses to intervals of flow from the carrier line into the vapour delivery system chamber. Intervals begin at 3600 s, 4850 s, 6150 s and 7500 s. The length of each interval is indicated above the corresponding normalised current response to *trans*-2-hexen-1-al (E2Hex) in (a) and to ethyl hexanoate (EtHex) in (b). Each series is shown alongside a control series in which no analyte was present in the analyte bottle. The dataset after applying a moving median filter is shown in (c) for E2Hex and (d) for EtHex. The signal changes corresponding to the current responses to each interval are shown in (e) for E2Hex and (f) for EtHex. 
 :::
 
-@fig-EtHex-sampling shows the result of these interval tests, both with and without ethyl hexanoate placed in the analyte bottle. The data presented in @fig-EtHex-sampling (a) has been normalised, despiked, filtered and corrected for baseline drift in the manner described in both @sec-python-analysis and @sec-salt-conc-series. Each interval of exposure to carrier line flow corresponds to a current increase. These increases have been labelled with the length of the corresponding interval used. When ethyl hexanoate is present in the analyte bottle on the carrier line, the response to each exposure interval is considerably larger than the response when no analyte is present. It should be noted that some response to carrier line flow is observed even when the analyte bottle is empty. This is most likely to be the result of low levels of residual analyte in the carrier line being pumped into the chamber. It appears very low levels of analyte persist in the line even after purging the system lines with a roughing pump. Concentration measurements taken using the photoionisation detector, shown in @fig-EtHex-sampling-PID, also indicate some low-level, residual vapour reaches the chamber during each interval even when the analyte bottle is left empty.
+The results of these interval tests, both with and without analyte, are shown in @fig-EtHex-sampling (a) for *trans*-2-hexen-1-al and @fig-EtHex-sampling (b) for ethyl hexanoate. These results have been normalised, despiked and have had baseline drift corrections applied in the manner described in both @sec-python-analysis and @sec-salt-conc-series. To more clearly discern sensing behaviour through the noise present, a moving median filter was applied to these datasets, as shown in @fig-EtHex-sampling (c) and @fig-EtHex-sampling (d) for E2Hex and EtHex respectively. Most intervals of exposure to carrier line flow correspond to a current increase. These increases have been labelled with the length of the corresponding interval used. When analyte was present in the analyte bottle on the carrier line, the response to each exposure interval was generally larger than the response when no analyte is present. Some response to carrier line flow is observed even when the analyte bottle is empty. As the system lines are purged with a roughing pump before sensing, and both lines are checked for vapour before sensing during the PID, it appears these small responses may be due to a slow leak of volatiles from the fumehood environment into the carrier line when not in use. Vapour concentration measurements from PID, shown in @fig-EtHex-sampling-PID, also indicate that an ionisable gas is reaching the chamber during each interval, even when the analyte bottle is left empty.
 
-![Nominal concentration measurements by the photoionisation detector taken from the device chamber during device current sampling from 3600 s onwards, both with and without ethyl hexanoate (EtHex) in the analyte bottle. The maximum nominal concentration reached during each carrier flow interval is indicated above each peak.](figures/ch6/input_time_comparison.png){#fig-EtHex-sampling-PID width=70%}
+::: {#fig-EtHex-sampling-PID layout="[[-11,3,-1,70,-15],[-11,3,-1,70,-15]]"}
+
+![](figures/(a).png)
+
+![](figures/ch6/Q39C11_detrend_trunc_arrows_normalised.png)
+
+![](figures/(b).png)
+
+![](figures/ch6/input_time_comparison_2.png)
+
+Nominal concentration measurements by the photoionisation detector taken from the device chamber during device current sampling from 3600 s onwards. Measurements both with and without *trans*-2-hexen-1-al (E2Hex) in the analyte bottle are shown in (a), while measurements both with and without ethyl hexanoate (EtHex) are shown in (b). The maximum nominal concentration reached during each carrier flow interval is indicated above each peak.
+:::
 
 The signal response seen corresponds to a change in conductance of the exposed carbon nanotubes within the device channel. These conductance changes occur due to the molecular adsorption of ethyl hexanoate vapour onto the external and internal surfaces of the nanotubes. The vapour can dopes the semiconducting carbon nanotubes in the channel, causing a shift in the channel threshold voltage, and can cause carrier scattering when adsorped onto the metallic nanotubes present. Binding of analyte to a gas sensing material can be reversible or irreversible. In general, adsorption onto carbon nanotube sensors is irreversible. This irreversibility means after a response to analyte, readings from the sensor will not return to the original baseline within the same timescale as the sensing response, even after stopping analyte flow to the chamber [@Agnihotri2005; @Lee2005]. From @fig-EtHex-sampling, it is clear that the carbon nanotube sensor configuration used here is primarily irreversible, where the current level does not return to baseline within a period of 1200 s after analyte exposure.
 
