@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, boxrule=0pt, frame hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners, enhanced, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, boxrule=0pt, enhanced, breakable, borderline west={3pt}{0pt}{shadecolor}, interior hidden, sharp corners]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -2925,39 +2925,156 @@ EtHex.}
 
 \end{figure}
 
-Figure~\ref{fig-EtHex-sampling} shows the result of these interval
-tests, both with and without ethyl hexanoate placed in the analyte
-bottle. The data presented in Figure~\ref{fig-EtHex-sampling} (a) has
-been normalised, despiked, filtered and corrected for baseline drift in
-the manner described in both Section~\ref{sec-python-analysis} and
-Section~\ref{sec-salt-conc-series}. Each interval of exposure to carrier
-line flow corresponds to a current increase. These increases have been
-labelled with the length of the corresponding interval used. When ethyl
-hexanoate is present in the analyte bottle on the carrier line, the
-response to each exposure interval is considerably larger than the
-response when no analyte is present. It should be noted that some
+The results of these interval tests, both with and without analyte, are
+shown in Figure~\ref{fig-EtHex-sampling} (a) for
+\emph{trans}-2-hexen-1-al and Figure~\ref{fig-EtHex-sampling} (b) for
+ethyl hexanoate. These results have been normalised, despiked and have
+had baseline drift corrections applied in the manner described in both
+Section~\ref{sec-python-analysis} and
+Section~\ref{sec-salt-conc-series}. To more clearly discern sensing
+behaviour through the noise present, a moving median filter was applied
+to these datasets, as shown in Figure~\ref{fig-EtHex-sampling} (c) and
+Figure~\ref{fig-EtHex-sampling} (d) for E2Hex and EtHex respectively.
+Most intervals of exposure to carrier line flow correspond to a current
+increase. These increases have been labelled with the length of the
+corresponding interval used. When analyte was present in the analyte
+bottle on the carrier line, the response to each exposure interval was
+generally larger than the response when no analyte is present. Some
 response to carrier line flow is observed even when the analyte bottle
-is empty. This is most likely to be the result of low levels of residual
-analyte in the carrier line being pumped into the chamber. It appears
-very low levels of analyte persist in the line even after purging the
-system lines with a roughing pump. Concentration measurements taken
-using the photoionisation detector, shown in
-Figure~\ref{fig-EtHex-sampling-PID}, also indicate some low-level,
-residual vapour reaches the chamber during each interval even when the
-analyte bottle is left empty.
+is empty. As the system lines are purged with a roughing pump before
+sensing, and both lines are checked for vapour before sensing during the
+PID, it appears these small responses may be due to a slow leak of
+volatiles from the fumehood environment into the carrier line when not
+in use. Vapour concentration measurements from PID, shown in
+Figure~\ref{fig-EtHex-sampling-PID}, also indicate that an ionisable gas
+is reaching the chamber during each interval, even when the analyte
+bottle is left empty.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch6/input_time_comparison.png}
+\begin{minipage}[t]{0.11\linewidth}
+
+{\centering 
+
+~
 
 }
 
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(a).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.70\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/input_time_comparison_E2Hex.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.11\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.70\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/input_time_comparison_EtHex.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
 \caption{\label{fig-EtHex-sampling-PID}Nominal concentration
 measurements by the photoionisation detector taken from the device
-chamber during device current sampling from 3600 s onwards, both with
-and without ethyl hexanoate (EtHex) in the analyte bottle. The maximum
-nominal concentration reached during each carrier flow interval is
-indicated above each peak.}
+chamber during device current sampling from 3600 s onwards. Measurements
+both with and without \emph{trans}-2-hexen-1-al (E2Hex) in the analyte
+bottle are shown in (a), while measurements both with and without ethyl
+hexanoate (EtHex) are shown in (b). The maximum nominal concentration
+reached during each carrier flow interval is indicated above each peak.}
 
 \end{figure}
 
