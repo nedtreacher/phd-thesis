@@ -35,8 +35,6 @@ Note: The full 1 mL was used to flush out the nanodisc vial when preparing the n
 
 7. The device was submerged in the OR22a nanodisc solution and left covered with parafilm for 1 hour, then rinsed with 1XPBS for 15 s and gently nitrogen dried.
 
-Liquid-gated electrical characteristics were taken of the sensing channel (channel 7) before and after functionalisation with OR22a. These electrical characteristics were taken in using a liquid gate buffer of 1XPBS containing 0.5% DMSO with the B1500A semiconductor device analyser. These characteristics are shown in @fig-OR22a-TX-comparison, shown using both a logarithmic and linear current scale. The device exhibited ambipolar characteristics before functionalisation, which is typically seen for steam-deposited carbon nanotube films (@sec-cnt-devices). However, $p$-type behaviour dominates after device functionalisation due to a significant drop in $n$-type conductance. There was little hysteresis present, which is also typical for these devices. A slight increase in hysteresis was observed post-functionalisation. Leakage current (shown by the dashed traces) never exceeds $1 \times 10^{-7}$ V, both before and after functionalisation. The significant change in electrical characteristics observed could be due to five possible factors $-$ adsorption of solvent onto the network, network attachment of PBASE without subsequent protein attachment, non-specific adsorption of protein onto the network, PBASE-mediated attachment of the membrane scaffold protein (MSP) of nanodiscs to the network, and PBASE-mediated attachment of odorant receptors to the network. Note that as the nanodisc volume is much larger than that of the odorant receptor, any direct protein adsorption is highly likely to be adsorption of the nanodisc membrane scaffold protein onto the carbon nanotube network. Odorant receptor attachment via PBASE is therefore the only desirable functionalisation result for sensing purposes.
-
 ::: {#fig-OR22a-TX-comparison layout="[[3,-1,45,-1,3,-1,45,-1]]" layout-valign="top"}
 
 ![](figures/(a).png)
@@ -49,6 +47,8 @@ Liquid-gated electrical characteristics were taken of the sensing channel (chann
 
 Liquid-gated carbon nanotube network device transfer characteristics before and after OR22a nanodisc functionalisation. In (a), the characteristics are shown on a logarithmic scale, where the gate current for each transfer curve is shown with a dashed line. In (b), the characteristics are shown on a linear scale alongside a dashed line tangent to the subthreshold slope of the characteristic curve. The threshold voltage corresponding to the intercept of this slope with the x-axis is shown for each transfer characteristic curve.
 :::
+
+Liquid-gated electrical characteristics were taken of the sensing channel (channel 7) before and after functionalisation with OR22a. These electrical characteristics were taken in using a liquid gate buffer of 1XPBS containing 0.5% DMSO with the B1500A semiconductor device analyser. These characteristics are shown in @fig-OR22a-TX-comparison, shown using both a logarithmic and linear current scale. The device exhibited ambipolar characteristics before functionalisation, which is typically seen for steam-deposited carbon nanotube films (@sec-cnt-devices). However, $p$-type behaviour dominates after device functionalisation due to a significant drop in $n$-type conductance. There was little hysteresis present, which is also typical for these devices. A slight increase in hysteresis was observed post-functionalisation. Leakage current (shown by the dashed traces) never exceeds $1 \times 10^{-7}$ V, both before and after functionalisation. The significant change in electrical characteristics observed could be due to five possible factors $-$ adsorption of solvent onto the network, network attachment of PBASE without subsequent protein attachment, non-specific adsorption of protein onto the network, PBASE-mediated attachment of the membrane scaffold protein (MSP) of nanodiscs to the network, and PBASE-mediated attachment of odorant receptors to the network. Note that as the nanodisc volume is much larger than that of the odorant receptor, any direct protein adsorption is highly likely to be adsorption of the nanodisc membrane scaffold protein onto the carbon nanotube network. Odorant receptor attachment via PBASE is therefore the only desirable functionalisation result for sensing purposes.
 
 Only minor changes were observed in the on-off ratio when comparing the device channel before and after functionalisation. The on-off ratio for the pristine channel was $1120\pm220$, fairly typical for a transfer curve from a steam-assisted surfactant-deposited CNT network device (see @sec-cnt-devices). The on-off ratio increased slightly to $1830\pm550$ after functionalisation. We expect to see an increase in on-off ratio for a device successfully functionalised with OR22a, which may result from an increase in negative charge causing modulation of Schottky barriers between metallic and semiconducting carbon nanotubes within the network  [@Murugathas2019b]. However, we also expect increased hole conductance from the attachment of PBASE, even without proteins being present (@sec-PBASE-electrical-characterisation). It is therefore difficult to determine whether functionalisation has been successful from the on-off ratio of transfer characteristics alone. 
 
@@ -67,13 +67,13 @@ Functionalisation of the channel resulted in a negative shift in threshold volta
 Atomic force microscope images of the channel region of carbon nanotube network devices before and after functionalisation. The channel network of a pristine device is shown in (a), while (b) is of channel 7 from the sensing device functionalised in this section.
 :::
 
-Atomic force microscope images of the device channels both before functionalisation and after sensing with the functionalised device to confirm the presence of nanodiscs. As far as the author knows, these are the first atomic force microscope images taken of iOR nanodiscs found on a sensing channel rather than on a separate carbon nanotube film; the wider 20 µm encapsulation mask discussed in @sec-encapsulation made this possible. These images are shown in @fig-working-OR22a-AFM. Aggregations of nanodiscs are visible in @fig-working-OR22a-AFM (c)$-$(d). These nanodisc clusters are especially sizable in the lower half of @fig-working-OR22a-AFM (c), where the two largest clusters are $200\pm10$ nm across at their widest point. However, these features are still much smaller than most of the agglomerated nanodisc features seen by Murugathas *et al.* [@Murugathas2019b]. Furthermore, the nanodisc features closely follow the carbon nanotube bundles across the densely bundled morphology used by Murugathas *et al.* [@Murugathas2019b]. On the dense network morphology used here, the position of nanodisc clusters relative to the carbon nanotubes is less distinct. To confirm whether nanodiscs have preferentially attached to the carbon nanotubes, a more quantitative approach is needed.
+Atomic force microscope images of the device channels both before functionalisation and after sensing with the functionalised device to confirm the presence of nanodiscs. As far as the author knows, these are the first atomic force microscope images taken of iOR nanodiscs found on a sensing channel rather than on a separate carbon nanotube film; this was made possible by using the 20 µm wide aperture encapsulation mask discussed in @sec-encapsulation. These images are shown in @fig-working-OR22a-AFM. Aggregations of nanodiscs are visible in @fig-working-OR22a-AFM (c)$-$(d). These nanodisc clusters are especially sizable in the lower half of @fig-working-OR22a-AFM (c), where the two largest clusters are $200\pm10$ nm across at their widest point. However, these features are still much smaller than most of the agglomerated nanodisc features seen by Murugathas *et al.* [@Murugathas2019b]. Furthermore, the nanodisc features closely follow the carbon nanotube bundles across the densely bundled morphology used by Murugathas *et al.* [@Murugathas2019b]. On the dense network morphology used here, the position of nanodisc clusters relative to the carbon nanotubes is less distinct. To confirm whether nanodiscs have preferentially attached to the carbon nanotubes, a more quantitative approach is needed.
 
 ::: {#fig-working-OR22a-masks layout="[3,-1,45,-1,3,-1,45,-1]" layout-valign="top"}
 
 ![](figures/(a).png)
 
-![](figures/ch8/Pristine_DF2Q3D10_ 00141_mask.png)
+![](figures/ch8/Pristine_DF2Q3D10_00141_mask.png)
 
 ![](figures/(b).png)
 
@@ -82,23 +82,103 @@ Atomic force microscope images of the device channels both before functionalisat
 Atomic force microscope images with the substrate background highlighted with a green mask. Here, (a) shows a device channel after functionalisation with PBASE and methanol, while (b) shows channel 7 from the sensing device functionalised with OR22a nanodiscs in this section.
 :::
 
+The average height of the substrate was found for both pristine and functionalised atomic force microscope images using the masking tool in Gwyddion. The masks for each image are shown in @fig-working-OR22a-masks. Average substrate heights of $1.9\pm0.3$ nm and $3.3\pm0.4$ nm were found for the pristine and functionalised networks respectively. In Gwyddion, both networks were simplified to a binary representation, where features above a certain threshold were shown as white and features below shown as black. This representation, shown in @fig-crosssection, has the appearance of a cross-section through the network at the threshold height. The threshold was chosen as the minimum height where carbon nanotube spindles were no longer apparent in the functionalised image, 8.7 nm above the substrate. @fig-crosssection (a) shows only a few, sparsely distributed features, the majority of which are below 50 nm in width. These features may correspond to large nanotube-nanotube junctions, surfactant residue, or other surface contamination (@sec-pristine-morphology). In @fig-crosssection (b), many features are over 50 nm across. They are often found close together, and form a curved line across the network in the bottom left corner (shown in red); this curvilinear arrangement of nanodisc features gives a strong indication specific attachment to the carbon nanotubes has occurred.
+
 ::: {#fig-crosssection layout="[3,-1,45,-1,3,-1,45,-1]" layout-valign="top"}
 
 ![](figures/(a).png)
 
-![](figures/ch8/Pristine_DF2Q3D10_ 00141_11.2nm_crosssection.png)
+![](figures/ch8/Pristine_DF2Q3D10_00141_crosssection.png)
 
 ![](figures/(b).png)
 
-![](figures/ch8/DF2Q1D6_postNDOR22a_ch7_1_00375_12nm_crosssection.png)
+![](figures/ch8/DF2Q1D6_postNDOR22a_ch7_1_00375_crosssection_edit.png)
 
-Binary representations of the atomic force microscope images of (a) the pristine device, with a threshold height of 11.2 nm, and (b) the functionalised device, with a threshold height of 12 nm. Both thresholds are 8.7 nm above the substrate background of their respective images. 
+Binary representations of the atomic force microscope images of (a) the pristine device, with a threshold height of 10.6 nm, and (b) the functionalised device, with a threshold height of 12.0 nm. Both thresholds are 8.7 nm above the substrate background of their respective images. 
 :::
 
-
-The average height of the substrate was found for both pristine and functionalised atomic force microscope images using the masking tool in Gwyddion. The masks for each image are shown in @fig-working-OR22a-masks. Average substrate heights of $2.5\pm0.2$ nm and $3.3\pm0.4$ nm were found for the pristine and functionalised networks respectively, both within one standard deviation of the substrate height of the steam-assisted surfactant-deposited film analysed in @sec-pristine-AFM. In Gwyddion, both networks were simplified to a binary representation, where features above a certain threshold were shown as white and features below shown as black, as shown in @fig-crosssection. This representation has the appearance of a cross-section through the network at the threshold height. The threshold was chosen as the minimum height where carbon nanotube spindles were no longer apparent in the functionalised image, 8.7 nm above the substrate. @fig-crosssection (a) shows only a few, sparsely distributed features, the majority of which are below 50 nm. These features may correspond to surfactant or other surface contamination (@sec-pristine-morphology). In @fig-crosssection (b), many features are over 50 nm across, and often form clusters which sometimes follow curved lines across the network; these patterns give a strong indication that nanodiscs are attaching to the carbon nanotubes.
-
 As the maximum height of the functionalised AFM is 25.9 nm and only nanodisc features are present at 12.0 nm, there must be nanodisc agglomerates present at least 13.9 nm tall. The estimated height range for nanodiscs is $\sim$ 10 $-$ 20 nm [@Nath2007; @Bayburt2010; @Murugathas2020]. Assuming a average carbon nanotube height of 1.45 nm, with a average substrate height of 3.3 nm, the nanodisc agglomerations could be up to $\sim$ 21 nm tall. Note that height measurements of biological samples taken via AFM have been shown to underestimate actual feature height by over 50% [@Vobornik2023]. Even so, the breadths of the nanodisc features are significantly greater than their heights. While the cross-sections of the largest features are up to 20 nanodiscs across, they are a few nanodiscs high at most; certainly less than five. It appears that, rather than clustering together in solution and attaching as an aggregate, the nanodiscs are individually attaching to preferred locations on the network. These locations may be at junctions between two large carbon nanotubes, which have a relatively large surface area available for binding, or at locations particularly clean of contamination. AFM images showing iOR-nanodisc functionalised carbon nanotube networks with significant vertical clustering have been reported, but these images were not of channels used for sensing [@Murugathas2019b].
+
+::: {#fig-PBASE-GFP-ORs layout="[[3,-1,45,-1,3,-1,45,-1],[3,-1,45,-1,3,-1,45,-1],[3,-1,45,-1,3,-1,45,-1]]"}
+
+![](figures/(a).png)
+
+![](figures/ch8/modified_GFPOR_10sexposure_20X_mediumcontrast_ch6_240208.png)
+
+![](figures/(b).png)
+
+![](figures/ch8/modified_GFPOR_PBASE_10sexposure_20X_mediumcontrast_ch1_231019_2.png)
+
+![](figures/(c).png)
+
+![](figures/ch8/modified_GFPOR_10sexposure_40X_mediumcontrast_ch6_240208.png)
+
+![](figures/(d).png)
+
+![](figures/ch8/modified_GFPOR_PBASE_10sexposure_40X_mediumcontrast_ch1_231019_2.png)
+
+![](figures/(e).png)
+
+![](figures/ch8/modified_GFPOR_10sexposure_40X_mediumcontrast_ch3_240208.png)
+
+![](figures/(f).png)
+
+![](figures/ch8/modified_GFPOR_PBASE_10sexposure_40X_mediumcontrast_ch2_231019.png)
+
+
+The fluorescence images on the left side $-$ (a), (c) and (e) $-$ show unencapsulated carbon nanotube network channels from a device incubated in GFP-OR nanodiscs. The rectangular dark regions to the left and right of each image are the gold electrodes. The fluorescence images on the right $-$ (b), (d) and (f) $-$ show the channels of a similar device after successive PBASE and GFP-OR nanodisc incubation. Images (a) and (c) are both of the same channel on the first device, and images (b) and (d) are of the same channel on the second, but (c) and (d) were taken using a greater magnification. The insets in (c)-(f) compare the central channel region of (c)-(f) more directly. All images were taken with the same microscope settings (GFP filter and 10 s exposure time), taken in quick succession, directly after functionalisation in a dark room. 
+:::
+
+Fluorescence microscopy was also used to confirm the presence of GFP-tagged odorant receptors on the carbon nanotube network. A device was functionalised using nanodiscs with odorant receptors attached to *Aequorea Victoria* green fluorescent protein (GFP) using the process described earlier. When these nanodiscs were used, the functionalisation was performed in darkness, with the odorant receptor nanodisc vial transported under an opaque cover to protect it from light (batch number ND-GFP-OR43b-0002, prepared 12 months earlier). After functionalisation, devices were briefly rinsed with DI water and nitrogen dried to remove dried-down salt residue left by the 1XPBS. A control device was also prepared without the use of PBASE, skipping steps 3 and 4 in the functionalisation process. Fluorescence images of the GFP-OR functionalised and control devices are shown in @fig-PBASE-GFP-ORs. Note that fluorescence microscope images were taken immediately after functionalisation; devices were transported to the fluorescence microscope room in a foil-wrapped container, and the fluorescence microscope room was kept dark while images were taken.
+
+The silicon dioxide regions in each image appear bright under the GFP filter, indicating non-specific binding between the GFP-OR nanodiscs and the silicon dioxide substrate. As this device has been annealed, UV exposed and developed before functionalisation, the likelihood this non-specific attachment is to residual photoresist is reduced significantly (see @sec-photoresist-contamination). The SiO$_2$ substrate also appears brighter in the images on the right of @fig-PBASE-GFP-ORs, which are of the device initially exposed to PBASE. The discussion in @sec-pyrene-interactions indicates that the pyrene moiety of PBASE non-specifically interacts with the silicon dioxide substrate. Assuming no significant variation in the fluorescence of GFP between nanodisc vials, the PBASE coating appears have led to more nanodiscs attaching to the silicon dioxide, giving rise to the brighter fluorescence of the silicon dioxide seen for the PBASE-incubated device on the right of @fig-PBASE-GFP-ORs.
+
+A comparison of fluorescence in the channel region between images on the left of @fig-PBASE-GFP-ORs (GFP-OR nanodiscs) and the images on the right (GFP-OR nanodiscs and PBASE) is given by the inset in @fig-PBASE-GFP-ORs (c)-(f). The inset demonstrates that the channels not incubated in PBASE are significantly less bright than those that had been incubated with PBASE. It appears that the presence of GFP-OR nanodiscs in 1XPBS is limited on these channels. However, when the carbon nanotubes are modified with PBASE, the GFP-OR nanodiscs are able to attach to the channel, and so the channel shows up brightly under the fluorescence microscope GFP filter. Importantly, since the GFP is attached to odorant receptors rather than the nanodiscs themselves, there must be odorant receptors present on the channel after functionalisation; attachment to the channel is not limited to empty nanodiscs. This trend was consistent across all conducting channels on each of the two devices. As far as I know, this is the first time fluorescence has been used to investigate the attachment of odorant receptor nanodiscs to a carbon nanotube network.
+
+<!--
+![Fluorescence image of a device functionalised with 0.1 mM PBASE in methanol, followed by 10 µL/mL GFP-OR43b nanodiscs in 1XPBS. The image was taken using the same settings as in @fig-PBASE-GFP-ORs, with a GFP filter and a 10 s exposure time](figures/ch7/modified_GFPOR_10sexposure_40X_mediumcontrast_ch1_231027.png){#fig-PBASE-GFP-OR-0.1mM width="45%"}
+
+@fig-PBASE-GFP-OR-0.1mM shows that a lowered concentration of PBASE also leads to a channel region with no visible fluorescence (with the same exposure time used). This indicates that a 0.1 mM PBASE concentration is insufficient for odorant receptors to approach the hydrophobic channel and extensiinteract with the channel region. As discussed in @sec-pyrene-interactions, this indicates that a specific interaction is occurring between PBASE and the GFP-OR43b.
+
+### Functionalisation using Pyrene-PEG-NTA {#sec-NTA-functionalisation}
+
+::: {#fig-OR-GFP-PPN layout="[47.5,-5,47.5]"}
+
+![](figures/ch7/modified_GFPOR_Cu2+_10sexposure_20X_mediumcontrast_ch4_231027.png){#fig-PPN-GFP-OR-1}
+
+![](figures/ch7/modified_GFPOR_Cu2+_10sexposure_40X_mediumcontrast_ch4_231027_40b.png){#fig-PPN-GFP-OR-2}
+
+Image (a) and (b) show fluorescence images of a carbon nanotube channel after functionalisation with 1 µL/mL GFP-OR43b nanodiscs in 1XPBS using pyrene-PEG-NTA. (b) has been brightened by 40% for visual clarity. Both images were taken using a GFP filter and 10 s exposure time.
+:::
+
+Pyrene-PEG-NTA was also used to attach the green fluorescent protein tagged odorant receptors through attaching to their histidine tag via the mechanisms outlined in @sec-NTA-biotin-PEG. As nanodiscs as well as odorant receptors have attached amine groups (see @sec-artificial-membranes), even nanodiscs which do not contain the receptor required for sensing can attach to the carbon nanotubes in the presence of PBASE linker. However, the nanodiscs used here possessed no histidine tag. Therefore, successful GFP-OR Nanodisc attachment via a histidine bonding process indicates odorant receptors, rather than nanodisc membranes, have specifically attached to the carbon nanotube network.
+
+The following procedure was used to functionalise unencapsulated carbon nanotube devices (steam-deposited, fabricated using post-June 2023 methods outlined in @sec-fabrication) with pyrene-PEG-NTA and GFP-OR nanodiscs:
+
+1. The device was exposed to UV light for 1 minute, placed in AZ$^\circledR$ 326 developer for 3 minutes, then rinsed with acetone, isopropanol and nitrogen dried.
+
+2. The device was vacuum annealed for 1 hour at 150°C (Note: Steps 1 & 2 were added to ensure any residual photoresist on the channel was removed or passivated before functionalisation, see @sec-photoresist-contamination).
+
+3. A solution of 100 µM Pyrene-PEG-NTA (Nanocs) in ethanol was prepared by fully dissolving 1 mg Pyrene-PEG-NTA in 5 mL ethanol by sonicating for 1 minute in a dark room (Note: Pyrene-PEG-NTA was stored at -18°C for 6 months prior to use, and was thawed under vacuum for 15 minutes in dark conditions before opening; the solution was left at 4°C for a week before use).
+
+4. 10 mL of 10 mM CuSO$_4$ in 1XPBS was prepared by dissolving CuSO$_4$ powder in 1XPBS by vortex mixing for 15 minutes.
+
+5. After vortex mixing Pyrene-PEG-NTA in ethanol solution at 1000 rpm for 10 minutes, the Pyrene-PEG-NTA solution was diluted to 1 µM in ethanol by placing 100 µL into 9.9 mL ethanol.
+
+6. The device was then rinsed with acetone, IPA and nitrogen dried, fully submerged in 10 mL of 1 µM Pyrene-PEG-NTA in ethanol solution and left covered with parafilm for 15 minutes, then rinsed with ethanol for 15 s, rinsed with 1XPBS for 15 s and nitrogen dried to remove residual Pyrene-PEG-NTA.
+
+7. The device was then placed in 10 mL of CuSO$_4$ in 1XPBS and covered with parafilm for 1 hour to coordinate Cu$^{2+}$ with NTA, then rinsed 15 with 1XPBS (Note: NiSO$_4$ can be used as an alternative)
+
+8. 10 µL GFP-OR nanodiscs were diluted in 10 mL 1XPBS (batch number ND-GFP-OR43b-0002, prepared 12 months earlier and stored at -80°C) .
+
+9. The device was submerged in the GFP-OR43b nanodisc solution and left covered with parafilm for 30 minutes, then rinsed with 1XPBS for 15 s.
+
+10. For fluorescence microscopy, the device was rinsed with DI water for 1 minute and nitrogen dried to remove salt residue from the 1XPBS.
+
+Fluorescence images of the unencapsulated carbon nanotube devices successfully functionalised with GFP-OR43b nanodiscs using Pyrene-PEG-NTA are shown in [@fig-PPN-GFP-OR-1]-b. Similar non-specific attachment to the silicon dioxide as in @sec-PBASE-GFP-OR-attachment is seen, but green fluorescent protein-modified odorant receptors also appear to have attached to the channel. Device characteristics were measured with a multimeter to check how the device characteristics changed during the functionalisation process. The minimum measured channel resistance increased from 560 k$\Omega$ to 790 k$\Omega$, indicating the functionalisation process tends to decrease channel conductance.
+-->
+
+<!-- Surfactant rinsing was used to verify the specific attachment of GFP-OR43b nanodiscs to the Pyrene-PEG-NTA, in the same manner as outlined in @sec-PBASE-GFP-OR-attachment. [@fig-OR-GFP-surfactant-1]-d show fluorescence microscope images of the device after functionalisation with GFP-OR43b. The fluorescent protein appears to be present predominantly on the channel surface, indicating that OR-GFP43b is only attaching to linker on the channel region. This indicates that the surfactant rinse removed pyrene-PEG-NTA from everywhere except the channels, due to its relatively strong $\pi$-stacking interaction with the carbon nanotubes. --> 
 
 ### Aqueous Sensing of Ethyl Hexanoate {#sec-EtHex-aqueous-sensing}
 
@@ -214,7 +294,7 @@ Liquid-gated electrical characteristics were taken of each sensing channel from 
 
 ![](figures/(b).png)
 
-![](figures/ch8/Ned_Q16D2_W4_OR22a1_noPBASE_sensing_2.5micron_256px_00462_20210921_12.8nm_threshold.png)
+![](figures/ch8/Ned_Q16D2_W4_OR22a1_noPBASE_sensing_2.5micron_256px_00462_20210921_crosssection.png)
 
 
  The binary representation of the network, with a height threshold of 12.8 nm (average substrate height = 4.1 nm), is shown in (b).
@@ -234,7 +314,9 @@ Liquid-gated electrical characteristics were taken of each sensing channel from 
 The device characteristics in (a) are from channel 4 of the device placed in OR22a nanodisc solution for 1 hour without prior exposure to PBASE or methanol before and after functionalisation. Real-time sampling using this channel is shown in (b). A 20 µL addition of 1% DMSO 1XPBS was made at 200 s. Subsequently, 20 µL additions of ethyl hexanoate diluted in 1% DMSO 1XPBS were made at 400 s, 600 s, 800 s and 1000 s and 1200 s, with the concentration of each addition indicated above the time of addition.
 :::
 
-Both OR nanodisc and empty nanodisc attachment via PBASE have been shown to cause significant gating of the network (@sec-aqueous-sensing-EtHex). Therefore, it might be reasoned that the lack of a gating effect, but with nanodiscs present, results from a direct attachment mechanism circumventing the PBASE linker. The amine group on proteins can be attached directly onto carbon nanotubes by adsorption, although this attachment is relatively weak [@Bradley2004]. @fig-OR22a-noPBASE-AFM shows an AFM image of a carbon nanotube network film after submersion in a 10 μL/mL OR22a nanodisc in PBS solution for 1 hour (batch NDOR22a-0016-1), without prior exposure to PBASE in methanol. @fig-OR22a-noPBASE-AFM-comparison shows the substrate mask in (a) and a binary representation of this AFM with nanodisc aggregates clearly visible in (b). In @fig-OR22a-variability-TX-comparison (a), the negative threshold shift of a channel modified in this way was -0.27 V, similar in size to the shift due to functionalisation seen for the working biosensor. However, this device channel did not work as a sensor when tested with ethyl hexanoate. @fig-OR22a-variability-TX-comparison (b) shows a small, positive current response to additions of ethyl hexanoate diluted in 1% DMSO 1XPBS, which may result from the weakly attached OR22a nanodiscs being mechanically removed by the pressure of each addition on the device channels.
+Both OR nanodisc and empty nanodisc attachment via PBASE have been shown to cause significant gating of the network (@sec-aqueous-sensing-EtHex). Therefore, it might be reasoned that the lack of a gating effect, but with nanodiscs present, results from a direct attachment mechanism circumventing the PBASE linker. The amine group on proteins can be attached directly onto carbon nanotubes by adsorption, although this attachment is relatively weak [@Bradley2004]. @fig-OR22a-noPBASE-AFM shows an AFM image of a carbon nanotube network film after submersion in a 10 μL/mL OR22a nanodisc in PBS solution for 1 hour (batch NDOR22a-0016-1), without prior exposure to PBASE in methanol. @fig-OR22a-noPBASE-AFM-comparison shows the substrate mask in (a) and a binary representation of this AFM with nanodisc aggregates clearly visible in (b). In @fig-OR22a-variability-TX-comparison (a), the negative threshold shift of a channel modified in this way was -0.27 V, similar in size to the shift due to functionalisation seen for the working biosensor. 
+
+The attachment of nanodiscs in 1XPBS is may seem surprising, given that the fluorescence microscopy work in @sec-working-PBASE-functionalisation indicates  However, this device channel did not work as a sensor when tested with ethyl hexanoate. @fig-OR22a-variability-TX-comparison (b) shows a small, positive current response to additions of ethyl hexanoate diluted in 1% DMSO 1XPBS, which may result from the weakly attached OR22a nanodiscs being mechanically removed by the pressure of each addition on the device channels.
 
 An explanation is required for the seemingly contradictory situation where nanodiscs can be present on a device channel without significant gating effects. The most straightforward explanation is that no reliable correlation exist between the two phenomena. Given the consistent threshold shift results for various linker functionalisations seen in @sec-noncovalent-functionalisation, this scenario implies a significant variation in protein structure and charge behaviour within a single nanodisc batch, which seems unlikely. Another possibility is that some type of surface coating is causing nanodiscs to not attach to either PBASE or the carbon nanotubes. This surface coating might be attractive, attaching to both nanodiscs and carbon nanotubes, but forming a barrier layer between the two. Alternatively, this coating might be repulsive, causing nanodiscs to attach weakly to the substrate around the carbon nanotubes. Variations in the degree to which a network is coated may then explain why the same functionalisation method might work for one device but not another. The following section investigates ways of eliminating possible sources of surface coating for more reliable functionalisation results.
 
@@ -288,13 +370,13 @@ The normalised sensing series of the solvent-deposited, OR22a-functionalised dev
 Liquid-gated solvent-deposited carbon nanotube device transfer characteristics before and after OR22a nanodisc functionalisation. (a) corresponds to channel 2, (b) corresponds to channel 3, (c) corresponds to channel 4, (d) corresponds to channel 5, (e) corresponds to channel 6 and (f) corresponds to channel 7. The dashed line shown is tangent to the subthreshold slope of the characteristic curve. The threshold voltage corresponding to the intercept of this slope with the x-axis is shown for each transfer characteristic curve.
 :::
 
-::: {#fig-solvent-deposited-AFM-comparison layout="[[3,-1,45,3,-1,45,-1],[3,-1,45,-1,3,-1,45,-1]]" layout-valign="top"}
+::: {#fig-solvent-deposited-AFM-comparison layout="[[3,-1,43,-2,3,-1,46],[3,-1,45,-1,3,-1,45,-1]]" layout-valign="top"}
 
 ![](figures/(a).png)
 
 ![](figures/ch8/Ned_NTQ25C5_W4_20220126_00245_mask.png)
 
-![](figures/(b).png)
+![](figures/(b).png) 
 
 ![](figures/ch8/Ned_NTQ25C5_W4_20220126_00245_section.png)
 
@@ -465,4 +547,6 @@ From this elimination process, three possible sources of variability in device p
 ##	Vapour Sensing
 
 ## Conclusion
+
+Fluorescence microscopy was used to investigate PBASE functionalisation of GFP-tagged odorant receptors. An eight-channel device was modified by submersion in 1 mM PBASE in methanol for 1 hour, then submersion in 10 µL mL$^{-1}$ GFP-OR nanodiscs in 1XPBS for 1 hour. An eight-channel control device was also prepared by submersion in 10 µL mL$^{-1}$ GFP-OR nanodiscs in 1XPBS for 1 hour, but with no PBASE. The channels of the PBASE-submersed devices showed significant GFP fluorescence, while the channels of the control devices showed little to no GFP fluorescence. This result indicates protein attachment to the channel is not limited to empty nanodiscs. As far as I am aware, this is the first time fluorescence has been used to verify the presence of odorant receptors on a carbon nanotube network.
 
