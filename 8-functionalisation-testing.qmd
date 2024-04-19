@@ -316,7 +316,7 @@ The device characteristics in (a) are from channel 4 of the device placed in OR2
 
 Both OR nanodisc and empty nanodisc attachment via PBASE have been shown to cause significant gating of the network (@sec-aqueous-sensing-EtHex). Therefore, it might be reasoned that the lack of a gating effect, but with nanodiscs present, results from a direct attachment mechanism circumventing the PBASE linker. The amine group on proteins can be attached directly onto carbon nanotubes by adsorption, although this attachment is relatively weak [@Bradley2004]. @fig-OR22a-noPBASE-AFM shows an AFM image of a carbon nanotube network film after submersion in a 10 μL/mL OR22a nanodisc in PBS solution for 1 hour (batch NDOR22a-0016-1), without prior exposure to PBASE in methanol. @fig-OR22a-noPBASE-AFM-comparison shows the substrate mask in (a) and a binary representation of this AFM with nanodisc aggregates clearly visible in (b). In @fig-OR22a-variability-TX-comparison (a), the negative threshold shift of a channel modified in this way was -0.27 V, similar in size to the shift due to functionalisation seen for the working biosensor. 
 
-The attachment of nanodiscs in 1XPBS is may seem surprising, given that the fluorescence microscopy work in @sec-working-PBASE-functionalisation indicates  However, this device channel did not work as a sensor when tested with ethyl hexanoate. @fig-OR22a-variability-TX-comparison (b) shows a small, positive current response to additions of ethyl hexanoate diluted in 1% DMSO 1XPBS, which may result from the weakly attached OR22a nanodiscs being mechanically removed by the pressure of each addition on the device channels.
+The attachment of nanodiscs in 1XPBS may seem surprising, given that the fluorescence microscopy work in @sec-working-PBASE-functionalisation indicates no GFP-OR present after functionalisation without PBASE.   However, this device channel did not work as a sensor when tested with ethyl hexanoate. @fig-OR22a-variability-TX-comparison (b) shows a small, positive current response to additions of ethyl hexanoate diluted in 1% DMSO 1XPBS, which may result from the weakly attached OR22a nanodiscs being mechanically removed by the pressure of each addition on the device channels.
 
 An explanation is required for the seemingly contradictory situation where nanodiscs can be present on a device channel without significant gating effects. The most straightforward explanation is that no reliable correlation exist between the two phenomena. Given the consistent threshold shift results for various linker functionalisations seen in @sec-noncovalent-functionalisation, this scenario implies a significant variation in protein structure and charge behaviour within a single nanodisc batch, which seems unlikely. Another possibility is that some type of surface coating is causing nanodiscs to not attach to either PBASE or the carbon nanotubes. This surface coating might be attractive, attaching to both nanodiscs and carbon nanotubes, but forming a barrier layer between the two. Alternatively, this coating might be repulsive, causing nanodiscs to attach weakly to the substrate around the carbon nanotubes. Variations in the degree to which a network is coated may then explain why the same functionalisation method might work for one device but not another. The following section investigates ways of eliminating possible sources of surface coating for more reliable functionalisation results.
 
@@ -370,7 +370,7 @@ The normalised sensing series of the solvent-deposited, OR22a-functionalised dev
 Liquid-gated solvent-deposited carbon nanotube device transfer characteristics before and after OR22a nanodisc functionalisation. (a) corresponds to channel 2, (b) corresponds to channel 3, (c) corresponds to channel 4, (d) corresponds to channel 5, (e) corresponds to channel 6 and (f) corresponds to channel 7. The dashed line shown is tangent to the subthreshold slope of the characteristic curve. The threshold voltage corresponding to the intercept of this slope with the x-axis is shown for each transfer characteristic curve.
 :::
 
-::: {#fig-solvent-deposited-AFM-comparison layout="[[3,-1,43,-2,3,-1,46],[3,-1,45,-1,3,-1,45,-1]]" layout-valign="top"}
+::: {#fig-solvent-deposited-AFM-comparison layout="[[3,-1,44,-1,3,-1,45,-1],[3,-1,45,-1,3,-1,45,-1]]" layout-valign="top"}
 
 ![](figures/(a).png)
 
@@ -540,9 +540,40 @@ From this elimination process, three possible sources of variability in device p
 
 ##	iOR Biosensing with Aqueous Functionalisation 
 
-### Aqueous-Based Functionalisation with OR35a
+### Aqueous-Based Functionalisation with OR10a
+
+A carbon nanotube network field-effect transistor device, fabricated using post-June 2023 methods as described in @sec-fabrication, was functionalised with a novel method using OR10a solubilised in surfactant. The odorant receptors were not expressed in a nanodisc format, and were avidin-tagged or "avi-tagged". Upon preparation, the odorant receptors were modified with pyrene-PEG-biotin. The pyrene-PEG-biotin linker attached to the avi-tags on the odorant receptors, as described in @sec-NTA-biotin-PEG, allowing them to attach directly from solution to the carbon nanotubes via the attached pyrene linker. 
+
+(batch number: AviHis-OR10a-001)
+
+
+The network used for the device was deposited using the steam-assisted surfactant method, and the device was encapsulated with AZ$^\circledR$ 1518 using the post-Jan 2023 photolithography mask. The functionalisation was performed as follows:
+
+1. The device was exposed to UV light for 1 minute, placed in AZ$^\circledR$ 326 developer for 3 minutes, then rinsed with acetone, isopropanol and nitrogen dried.
+
+2. The device was vacuum annealed for 1 hour at 150°C. 
+
+Note: Steps 1 & 2 were added to ensure any residual photoresist on the channel was removed or passivated before functionalisation, see @sec-photoresist-contamination.
+
+3. A solution of 1 mM PBASE (Setareh Biotech) in methanol was prepared by fully dissolving 2 mg PBASE in 5 mL methanol by vortex mixing at 1000 rpm in a dark room.
+
+Note: PBASE was stored at -18°C for 18 months prior to use, and was thawed under vacuum for 15 minutes in dark conditions before opening.
+
+4. The device was then rinsed with methanol, fully submerged in $\sim$ 1 mL of PBASE in methanol solution and left covered with parafilm for 1 hour, then rinsed with methanol for 15 s, rinsed with 1XPBS for 15 s and nitrogen dried to remove residual PBASE.
+
+5. The device was left dry and in darkness while collecting the OR22a nanodiscs from the -80°C freezer.
+
+6. 10 µL OR22a nanodiscs (batch number ND-OR22a-SB018, 1.9 mg/mL, prepared 7 months earlier) were diluted in 1 mL 1XPBS 
+
+Note: The full 1 mL was used to flush out the nanodisc vial when preparing the nanodisc solution, with successive additions and subtractions of 50 µL 1XPBS into and from the vial.
+
+7. The device was submerged in the OR22a nanodisc solution and left covered with parafilm for 1 hour, then rinsed with 1XPBS for 15 s and gently nitrogen dried.
 
 -mention Pyrene-PEG-NHS to demonstrate nanodisc attachment (no nanodiscs were used but this is what water-based pyrene-PEG-NHS attachment of nanodiscs looks like)
+
+-mention use of DMSO addition (10%, shows variation in DMSO cannot account for big drops)
+
+-add transfer sweep before and after plasma clean of carbon nanotube device
 
 ##	Vapour Sensing
 
