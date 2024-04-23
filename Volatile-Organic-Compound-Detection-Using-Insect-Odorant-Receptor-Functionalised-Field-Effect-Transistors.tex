@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, borderline west={3pt}{0pt}{shadecolor}, breakable, sharp corners, enhanced, boxrule=0pt, interior hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, boxrule=0pt, interior hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -291,7 +291,8 @@ thawed under vacuum for 15 minutes in dark conditions before opening.
   nanodiscs from the -80°C freezer.
 \item
   10 µL OR22a nanodiscs (batch number ND-OR22a-SB018, 1.9 mg/mL,
-  prepared 7 months earlier) were diluted in 1 mL 1XPBS
+  prepared 7 months earlier) were diluted in 1 mL freshly-prepared
+  1XPBS.
 \end{enumerate}
 
 Note: The full 1 mL was used to flush out the nanodisc vial when
@@ -419,10 +420,10 @@ characteristic curve.}
 \end{figure}
 
 Liquid-gated electrical characteristics were taken of the sensing
-channel (channel 7) before and after functionalisation with OR22a. These
-electrical characteristics were taken in using a liquid gate buffer of
-1XPBS containing 0.5\% DMSO with the B1500A semiconductor device
-analyser. These characteristics are shown in
+channel (channel 7) before and after functionalisation with OR22a
+nanodiscs. These electrical characteristics were taken in using a liquid
+gate buffer of 1XPBS containing 0.5\% v/v DMSO with the B1500A
+semiconductor device analyser. These characteristics are shown in
 Figure~\ref{fig-OR22a-TX-comparison}, shown using both a logarithmic and
 linear current scale. The device exhibited ambipolar characteristics
 before functionalisation, which is typically seen for steam-deposited
@@ -451,12 +452,12 @@ the pristine channel was \(1120\pm220\), fairly typical for a transfer
 curve from a steam-assisted surfactant-deposited CNT network device (see
 \textbf{?@sec-cnt-devices}). The on-off ratio increased slightly to
 \(1830\pm550\) after functionalisation. We expect to see an increase in
-on-off ratio for a device successfully functionalised with OR22a, which
-may result from an increase in negative charge causing modulation of
-Schottky barriers between metallic and semiconducting carbon nanotubes
-within the network \autocite{Murugathas2019b}. However, we also expect
-increased hole conductance from the attachment of PBASE, even without
-proteins being present
+on-off ratio for a device successfully functionalised with OR22a
+nanodiscs, which may result from an increase in negative charge causing
+modulation of Schottky barriers between metallic and semiconducting
+carbon nanotubes within the network \autocite{Murugathas2019b}. However,
+we also expect increased hole conductance from the attachment of PBASE,
+even without proteins being present
 (\textbf{?@sec-PBASE-electrical-characterisation}). It is therefore
 difficult to determine whether functionalisation has been successful
 from the on-off ratio of transfer characteristics alone.
@@ -1232,23 +1233,23 @@ Hexanoate}\label{sec-EtHex-aqueous-sensing}}
 
 The procedure used for biosensor detection of ethyl hexanoate in liquid
 was the same as the procedure outlined in \textbf{?@sec-dummy-sensing},
-except 0.5\% DMSO was present in the buffer solution (to improve ethyl
-hexanoate solubility) and dilutions of ethyl hexanoate in the same 0.5\%
-DMSO 1XPBS buffer solution were added during the sensing series. The
-0.5\% DMSO 1XPBS was prepared by adding 5 µL of DMSO to 995 µL 1XPBS
-before device characterisation. The dilutions of ethyl hexanoate were
-prepared with the same 1XPBS at the same time, where 5 µL of 200 fM, 200
-pM, 200 nM and 200 µM ethyl hexanoate in DMSO were placed into four
-individual vials containing 995 µL 1XPBS each, giving 1mL vials of 1 fM,
-1 pM, 1 nM and 1 µM ethyl hexanoate in 0.5\% DMSO 1XPBS. The ethyl
-hexanoate in DMSO dilutions were prepared beforehand as a 1:10 dilution
-series in DMSO using 200 mM stock solution, where dilutions ranged from
-20 mM to 200 fM. Sampling measurements were taken using the B1500A
-semiconductor device analyser, with the transfer measurement in
-Figure~\ref{fig-OR22a-TX-comparison} (b) taken directly before sensing.
-The full control series plus sensing sequence is shown in
-Figure~\ref{fig-EtHex-aqueous-sensing}. Gate current remained negligible
-across the entire sensing procedure.
+except 0.5\% v/v DMSO was present in the buffer solution (to improve
+ethyl hexanoate solubility) and dilutions of ethyl hexanoate in the same
+0.5\% v/v DMSO 1XPBS buffer solution were added during the sensing
+series. The 0.5\% v/v DMSO 1XPBS was prepared by adding 5 µL of DMSO to
+995 µL 1XPBS before device characterisation. The dilutions of ethyl
+hexanoate were prepared with the same 1XPBS at the same time, where 5 µL
+of 200 fM, 200 pM, 200 nM and 200 µM ethyl hexanoate in DMSO were placed
+into four individual vials containing 995 µL 1XPBS each, giving 1mL
+vials of 1 fM, 1 pM, 1 nM and 1 µM ethyl hexanoate in 0.5\% v/v DMSO
+1XPBS. The ethyl hexanoate in DMSO dilutions were prepared beforehand as
+a 1:10 dilution series in DMSO using 200 mM stock solution, where
+dilutions ranged from 20 mM to 200 fM. Sampling measurements were taken
+using the B1500A semiconductor device analyser, with the transfer
+measurement in Figure~\ref{fig-OR22a-TX-comparison} (b) taken directly
+before sensing. The full control series plus sensing sequence is shown
+in Figure~\ref{fig-EtHex-aqueous-sensing}. Gate current remained
+negligible across the entire sensing procedure.
 
 \begin{figure}
 
@@ -1258,10 +1259,13 @@ across the entire sensing procedure.
 
 \caption{\label{fig-EtHex-aqueous-sensing}The control series (before
 1800 s) and ethyl hexanoate sensing series (after 1800 s) of the
-OR22a-functionalised device channel. No responses to 0.5\% DMSO 1XPBS
-were seen during the control series, while significant responses to
-additions of ethyl hexanoate diluted in 0.5\% DMSO 1XPBS were seen at
-2400 s, 2700 s, 3000 s and 3600 s.}
+OR22a-functionalised device channel. No responses to 0.5\% v/v DMSO
+1XPBS were seen during the control series, while significant responses
+to additions of ethyl hexanoate diluted in 0.5\% v/v DMSO 1XPBS were
+seen at 2400 s, 2700 s, 3000 s and 3600 s. Functionalisation and sensing
+was performed by Danica Fontein, School of Chemical and Physical
+Sciences, Te Herenga Waka - Victoria University of Wellington, using the
+methods developed in this thesis.}
 
 \end{figure}
 
@@ -1561,17 +1565,17 @@ the channel decreased rapidly with each addition of ethyl hexanoate in
 the current stabilises after each addition at a lower current level than
 prior to the addition. This behaviour appears to be a response by OR22a
 to its positive ligand ethyl hexanoate, similar to the response by OR22a
-to methyl hexanoate seen by Murugathas \emph{et al.}. The presence of
-the ORCO coreceptor was not required for responses to be seen. The
+to methyl hexanoate seen by Murugathas \emph{et al.}. The ORCO
+coreceptor was not required to be present for responses to be seen. The
 device showed responses to ethyl hexanoate over a wide range of
 concentrations, beginning with a \(\sim 6\)\% response to 1 fM EtHex in
-\(0.5%
-\) DMSO 1XPBS, while showing no response to 0.5\% 1XPBS buffer.
-Interestingly, as seen in Figure~\ref{fig-OR22a-sensing-series} (b), no
-clear dose-dependent response was observed. The behaviour seen may be
-explained by a decreased sensitivity to subsequent additions seen by
-seen by Murugathas \emph{et al.} \autocite{Murugathas2019b} competing
-with the logarithmic increases in the concentration around the channel.
+0.5\% v/v DMSO 1XPBS, while showing no response to any 0.5\% v/v DMSO
+1XPBS buffer addition. Interestingly, as seen in
+Figure~\ref{fig-OR22a-sensing-series} (b), no clear dose-dependent
+response was observed. The behaviour seen may be explained by a
+decreased sensitivity to subsequent additions seen by seen by Murugathas
+\emph{et al.} \autocite{Murugathas2019b} competing with the logarithmic
+increases in the concentration around the channel.
 
 \hypertarget{sec-variability}{%
 \section{Addressing Biosensor Variability}\label{sec-variability}}
@@ -2151,16 +2155,17 @@ microscope image with a threshold height of 12.5 nm is shown in (b).}
 \end{figure}
 
 Liquid-gated electrical characteristics were taken of each sensing
-channel from this device before and after functionalisation with OR22a,
-in the same manner as Section~\ref{sec-aqueous-sensing-EtHex}. These
-characteristics are shown in Figure~\ref{fig-OR22a-variability-TX}. The
-average threshold shift was \(-0.06\pm0.02\), the same as that of a
-device functionalised with PBASE in methanol without subsequent
-functionalisation with OR22a nanodiscs. To test whether protein was
-present on the channel, an atomic force microscope image was taken of
-channel 6, as shown in Figure~\ref{fig-OR22a-variability-AFM}. The same
-image analysis as in Section~\ref{sec-aqueous-sensing-EtHex} was
-performed, with the substrate mask shown in
+channel from this device before and after functionalisation with OR22a
+nanodiscs, in the same manner as
+Section~\ref{sec-aqueous-sensing-EtHex}. These characteristics are shown
+in Figure~\ref{fig-OR22a-variability-TX}. The average threshold shift
+was \(-0.06\pm0.02\), the same as that of a device functionalised with
+PBASE in methanol without subsequent functionalisation with OR22a
+nanodiscs. To test whether protein was present on the channel, an atomic
+force microscope image was taken of channel 6, as shown in
+Figure~\ref{fig-OR22a-variability-AFM}. The same image analysis as in
+Section~\ref{sec-aqueous-sensing-EtHex} was performed, with the
+substrate mask shown in
 Figure~\ref{fig-OR22a-variability-AFM-comparison} (a) giving an average
 substrate height of \(3.8\pm0.4\). A binary representation of the image
 with a 12.5 nm threshold, 8.7 nm above the average substrate height, is
@@ -2370,10 +2375,10 @@ representation of the network, with a height threshold of 12.8 nm
 characteristics in (a) are from channel 4 of the device placed in OR22a
 nanodisc solution for 1 hour without prior exposure to PBASE or methanol
 before and after functionalisation. Real-time sampling using this
-channel is shown in (b). A 20 µL addition of 1\% DMSO 1XPBS was made at
-200 s. Subsequently, 20 µL additions of ethyl hexanoate diluted in 1\%
-DMSO 1XPBS were made at 400 s, 600 s, 800 s and 1000 s and 1200 s, with
-the concentration of each addition indicated above the time of
+channel is shown in (b). A 20 µL addition of 1\% v/v DMSO 1XPBS was made
+at 200 s. Subsequently, 20 µL additions of ethyl hexanoate diluted in
+1\% v/v DMSO 1XPBS were made at 400 s, 600 s, 800 s and 1000 s and 1200
+s, with the concentration of each addition indicated above the time of
 addition.}
 
 \end{figure}
@@ -2386,7 +2391,7 @@ results from a direct attachment mechanism circumventing the PBASE
 linker. The amine group on proteins can be attached directly onto carbon
 nanotubes by adsorption, although this attachment is relatively weak
 \autocite{Bradley2004}. Figure~\ref{fig-OR22a-noPBASE-AFM} shows an AFM
-image of a carbon nanotube network film after submersion in a 10 μL/mL
+image of a carbon nanotube network film after submersion in a 10 µL/mL
 OR22a nanodisc in PBS solution for 1 hour (batch NDOR22a-0016-1),
 without prior exposure to PBASE in methanol.
 Figure~\ref{fig-OR22a-noPBASE-AFM-comparison} shows the substrate mask
@@ -2404,9 +2409,9 @@ present after functionalisation without PBASE. However, this device
 channel did not work as a sensor when tested with ethyl hexanoate.
 Figure~\ref{fig-OR22a-variability-TX-comparison} (b) shows a small,
 positive current response to additions of ethyl hexanoate diluted in 1\%
-DMSO 1XPBS, which may result from the weakly attached OR22a nanodiscs
-being mechanically removed by the pressure of each addition on the
-device channels.
+v/v DMSO 1XPBS, which may result from the weakly attached OR22a
+nanodiscs being mechanically removed by the pressure of each addition on
+the device channels.
 
 An explanation is required for the seemingly contradictory situation
 where nanodiscs can be present on a device channel without significant
@@ -2455,6 +2460,65 @@ procedures. In each test, an individual element of one of these
 procedures was altered to prevent the introduction of a specific surface
 coating. The biosensor was then characterised and tested to see if it
 would respond to its target odorant.
+
+\hypertarget{spurious-responses}{%
+\subsubsection*{Spurious Responses}\label{spurious-responses}}
+\addcontentsline{toc}{subsubsection}{Spurious Responses}
+
+Before testing to see if a surface coating was responsible for the lack
+of response seen to ethyl hexanoate by the device in
+Section~\ref{sec-variability-biosensor}, it was important to investigate
+the possibility the signals seen in
+Section~\ref{sec-EtHex-aqueous-sensing} were false positives. The highly
+sensitive device channel could credibly respond to three different rapid
+environmental changes occurring with each addition: the mechanical
+action of the addition, a difference between the 0.5\% v/v DMSO in 1XPBS
+containing the analyte and the 0.5\% v/v DMSO in 1XPBS already in the
+well, or a direct response to analyte. It is important to eliminate the
+first two possibilities to be certain that the device is responding to
+analyte. The control series as it stands demonstrates responses cannot
+be explained by mechanical action. All analyte solutions are prepared
+simultaneously using the same 1XPBS, taking care to avoid
+cross-contamination, so responses are unlikely to result from a
+difference between the 1XPBS in the analyte solution and the 1XPBS in
+the well. It then must be verified whether a functionalised device
+channel will respond to a change in DMSO concentration, which is the
+result of the DMSO concentration in an analyte addition being different
+to the concentration in the PDMS well.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch8/NGW4_D7_OR22aliposome_sampling_220623_detrend_trunc_arrows_normalised.png}
+
+}
+
+\caption{\label{fig-DMSO-concentration}Response to changing the
+concentration of DMSO in the PDMS well of a OR22a-functionalised sensor.
+The well originally contained 100 µL of 1\% v/v DMSO 1XPBS. 20 µL
+additions of DMSO in PBS were made at 3300 s and 3600 s.}
+
+\end{figure}
+
+Figure~\ref{fig-DMSO-concentration} shows that a increase in DMSO
+concentration in the well from 1\% v/v to 2.5\% v/v leads to a steep
+drop in current of 0.5\% \(-\) 1.5\% across two OR22a-functionalised
+device channels. The gate current remained negligible across this time
+period (\textless0.1\% of average drain current). Though the current
+changes in Figure~\ref{fig-DMSO-concentration} share similarities with
+other observed responses to analyte, they are significantly smaller than
+the \textgreater2\% changes seen in
+Section~\ref{sec-EtHex-aqueous-sensing}. Furthermore, precise
+measurement of DMSO in analyte preparations means that a change in
+proportion of DMSO in the well of this scale is unlikely. It therefore
+seems improbable that a change in DMSO concentration is the primary
+cause of these responses. However, the author recommends a slight
+modification to the control series for a more robust experimental
+baseline. For a device with 100 µL 0.5\% v/v DMSO 1XPBS in the well
+after the first buffer addition at 100 s, a subsequent 20 µL addition of
+1\% v/v DMSO 1XPBS at 200 s and 20 µL addition of 0\% v/v DMSO 1XPBS
+addition at 300 s can be used to check for spurious responses due to
+changing DMSO concentration, while ensuring the DMSO concentration in
+the well is 0.5\% v/v after the control series.
 
 \hypertarget{fabrication}{%
 \subsubsection*{Fabrication}\label{fabrication}}
@@ -3528,7 +3592,7 @@ on the scale used in Figure~\ref{fig-DMSO-sensing} (b).
 \caption{\label{fig-DMSO-sensing}A normalised sensing series across four
 multiplexed channels from a device functionalised with PBASE in DMSO to
 attach OR22a nanodiscs. The concentration of each 20 µL addition of
-methyl hexanoate in 1\% DMSO 1XPBS is indicated above the time of
+methyl hexanoate in 1\% v/v DMSO 1XPBS is indicated above the time of
 addition. Current data has been despiked and baseline drift removed in
 both (a) and (b), while a moving median filter has also been applied to
 the dataset shown in (b).}
@@ -4290,9 +4354,8 @@ functioning as a sensor: attachment of nanodiscs, but with minimal or no
 attachment of the contained odorant receptors. An altered non-covalent
 functionalisation method using pyrene-PEG-biotin was therefore developed
 to eliminate all of the above factors at once and investigate the
-resulting sensor behaviour. This novel method, loosely based on the
-non-covalent functionalisation procedure used by Miki \emph{et al.}
-\autocite{Miki2019}, is trialled in the following section.
+resulting sensor behaviour. This novel method is trialled in the
+following section.
 
 \hypertarget{ior-biosensing-with-aqueous-functionalisation}{%
 \section{iOR Biosensing with Aqueous
@@ -4306,19 +4369,21 @@ A carbon nanotube network field-effect transistor device, fabricated
 using post-June 2023 methods as described in \textbf{?@sec-fabrication},
 was functionalised with a novel method using OR10a solubilised in
 surfactant. The odorant receptors were not expressed in a nanodisc
-format, and were avidin-tagged or ``avi-tagged''. Upon preparation, the
-odorant receptors were modified with pyrene-PEG-biotin. The
-pyrene-PEG-biotin linker attached to the avi-tags on the odorant
-receptors, as described in \textbf{?@sec-NTA-biotin-PEG}, allowing them
-to attach directly from solution to the carbon nanotubes via the
-attached pyrene linker.
-
-(batch number: AviHis-OR10a-001)
-
-The network used for the device was deposited using the steam-assisted
-surfactant method, and the device was encapsulated with AZ\(^\circledR\)
-1518 using the post-Jan 2023 photolithography mask. The
-functionalisation was performed as follows:
+format, and were avidin-tagged or ``avi-tagged''. This eliminates the
+possibility of nanodiscs interfering with odorant receptor attachment,
+though does leave them vunerable to harsh environmental conditions
+\autocite{Nath2007,Bayburt2010}. Upon preparation, the odorant receptors
+were modified with pyrene-PEG-biotin. The pyrene-PEG-biotin linker
+attached to the avi-tags on the odorant receptors, as described in
+\textbf{?@sec-NTA-biotin-PEG}, allowing them to attach directly from
+solution to the carbon nanotubes via the attached pyrene linker. This
+approach meant that no PBASE, PBA or organic solvent was needed in the
+functionalisation process. To eliminate the remaining possible sources
+of surface contamination, such as the hydrocarbonaceous coating of
+nanotubes and residual photoresist, a short oxgyen plasma cleaning step
+was used. The details of the functionalisation, process, loosely based
+on the non-covalent functionalisation procedure used by Miki \emph{et
+al.} \autocite{Miki2019}, are as follows:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -4330,8 +4395,8 @@ functionalisation was performed as follows:
   The device was vacuum annealed for 1 hour at 150°C.
 \end{enumerate}
 
-Note: Steps 1 \& 2 were added to ensure any residual photoresist on the
-channel was removed or passivated before functionalisation, see
+Note: Steps 1 \& 2 were added to either remove or passivate residual
+photoresist on the channel before functionalisation, see
 \textbf{?@sec-photoresist-contamination}.
 
 \begin{enumerate}
@@ -4339,28 +4404,9 @@ channel was removed or passivated before functionalisation, see
 \setcounter{enumi}{2}
 \tightlist
 \item
-  A solution of 1 mM PBASE (Setareh Biotech) in methanol was prepared by
-  fully dissolving 2 mg PBASE in 5 mL methanol by vortex mixing at 1000
-  rpm in a dark room.
-\end{enumerate}
-
-Note: PBASE was stored at -18°C for 18 months prior to use, and was
-thawed under vacuum for 15 minutes in dark conditions before opening.
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
-\item
-  The device was then rinsed with methanol, fully submerged in \(\sim\)
-  1 mL of PBASE in methanol solution and left covered with parafilm for
-  1 hour, then rinsed with methanol for 15 s, rinsed with 1XPBS for 15 s
-  and nitrogen dried to remove residual PBASE.
-\item
-  The device was left dry and in darkness while collecting the OR22a
-  nanodiscs from the -80°C freezer.
-\item
-  10 µL OR22a nanodiscs (batch number ND-OR22a-SB018, 1.9 mg/mL,
-  prepared 7 months earlier) were diluted in 1 mL 1XPBS
+  10 µL surfactant-solubilised avi-tagged OR10a modified with
+  pyrene-PEG-biotin (batch number AviHis-OR10a-001, prepared 9 months
+  earlier) was diluted in 1 mL freshly-prepared 1XPBS.
 \end{enumerate}
 
 Note: The full 1 mL was used to flush out the nanodisc vial when
@@ -4369,20 +4415,148 @@ subtractions of 50 µL 1XPBS into and from the vial.
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{6}
+\setcounter{enumi}{3}
 \tightlist
 \item
-  The device was submerged in the OR22a nanodisc solution and left
-  covered with parafilm for 1 hour, then rinsed with 1XPBS for 15 s and
-  gently nitrogen dried.
+  Device was treated with a gentle oxygen plasma, \(\sim\) 5 W at
+  200-300 mTorr, for 15 seconds.
 \end{enumerate}
+
+Note: Oxygen plasma must be very gentle to avoid excessive damage to
+carbon nanotube network, with an O\(_2\) flow rate of \textless10 sccm
+into the plasma cleaner. Relatively sparse nanotube networks may require
+a lower O\(_2\) plasma exposure time to remain viable for sensing.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\tightlist
+\item
+  The device was submerged in the OR10a solution and left covered with
+  parafilm for 15 minutes, then rinsed with 1XPBS for 15 s and
+  thoroughly nitrogen dried.
+\end{enumerate}
+
+\begin{figure}
+
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(a).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch8/NTQ39C7_ch2_absolute_values_with_gate_current.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch8/Q31C12_ch6_absolute_values_with_gate_current.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-OR10a-TX-comparison}Liquid-gated carbon nanotube
+network device transfer characteristics on a logarithmic scale before
+and after modification, where the gate current for each transfer curve
+is shown with a dashed line. The change in characteristics from the
+functionalisation process in this section is shown in (a), while the
+change resulting from a 5 W plasma clean is shown in (b).}
+
+\end{figure}
+
+Figure~\ref{fig-OR10a-TX-comparison} (a) shows the liquid-gated
+characteristics of a device channel (channel 2) before and after the
+functionalisation process with OR10a. The change of characteristics
+observed can be compared with the change of characteristics seen for a
+plasma clean only, seen in Figure~\ref{fig-OR10a-TX-comparison} (b). A
+significant drop in channel occurs as a result of the plasma cleaning
+process. This large change in mobility makes it difficult to clearly
+identify changes in gating specifically due to the presence of the
+OR10a. Since the OR10a is not held within a nanodisc format, it
 
 -mention Pyrene-PEG-NHS to demonstrate nanodisc attachment (no nanodiscs
 were used but this is what water-based pyrene-PEG-NHS attachment of
 nanodiscs looks like)
-
--mention use of DMSO addition (10\%, shows variation in DMSO cannot
-account for big drops)
 
 -add transfer sweep before and after plasma clean of carbon nanotube
 device
