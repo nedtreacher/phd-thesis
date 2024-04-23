@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, boxrule=0pt, interior hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, sharp corners, frame hidden, enhanced, borderline west={3pt}{0pt}{shadecolor}, interior hidden, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -4405,7 +4405,7 @@ photoresist on the channel before functionalisation, see
 \tightlist
 \item
   10 µL surfactant-solubilised avi-tagged OR10a modified with
-  pyrene-PEG-biotin (batch number AviHis-OR10a-001, prepared 9 months
+  pyrene-PEG-biotin (batch number AviHis-OR10a-001, prepared 12 months
   earlier) was diluted in 1 mL freshly-prepared 1XPBS.
 \end{enumerate}
 
@@ -4552,14 +4552,312 @@ plasma clean only, seen in Figure~\ref{fig-OR10a-TX-comparison} (b). A
 significant drop in channel occurs as a result of the plasma cleaning
 process. This large change in mobility makes it difficult to clearly
 identify changes in gating specifically due to the presence of the
-OR10a. Since the OR10a is not held within a nanodisc format, it
+OR10a. The OR10a is not held within a nanodisc format, so the morphology
+of the functionalised network cannot be compared directly using previous
+atomic force microscope images. A solvent-deposited carbon nanotube film
+was prepared separately using OR nanodiscs, where the ORs were attached
+via their amine group using pyrene-PEG-NHS ester. Pyrene-PEG-NHS ester
+is very similar to PBASE but contains a PEG chain.
+Figure~\ref{fig-PPN-linker} shows an atomic force microscope image of
+the modified film. OR nanodisc aggregates very clearly follow the carbon
+nanotubes, indicating specific attachment between nanodiscs and carbon
+nanotubes can be acheived using linker containing pyrene-PEG.
 
--mention Pyrene-PEG-NHS to demonstrate nanodisc attachment (no nanodiscs
-were used but this is what water-based pyrene-PEG-NHS attachment of
-nanodiscs looks like)
+\begin{figure}
 
--add transfer sweep before and after plasma clean of carbon nanotube
-device
+{\centering \includegraphics[width=0.5\textwidth,height=\textheight]{figures/ch8/Ned_funcverification_PPNHSwamine_R_1um_20220414_00466.png}
+
+}
+
+\caption{\label{fig-PPN-linker}1 µm \(\times\) 1 µm atomic force
+microscope image of a solvent-deposited carbon nanotube film
+functionalised with OR nanodiscs using Pyrene-PEG-NHS.}
+
+\end{figure}
+
+\hypertarget{sec-MeSal-aqueous-sensing}{%
+\subsection{Aqueous Sensing of Methyl
+Salicylate}\label{sec-MeSal-aqueous-sensing}}
+
+The procedure used for sensing methyl salicylate (MeSal) was identical
+to that used in \textbf{?@sec-EtHex-sec-EtHex-aqueous-sensing}, except
+using MeSal instead of EtHex. Analyte solutions in 0.5\% DMSO/1XPBS
+solution containing methyl salicylate concentrations at 1 fM, 1 pM, 1 nM
+and 1 µM were prepared beforehand, The same buffer was used for each
+dilution, as well as for the well, which contained 80 µL 0.5\%
+DMSO/1XPBS prior to sensing. Sensing measurements were taken using the
+NI-PXIe system. The full control series plus sensing sequence is shown
+in Figure~\ref{fig-MeSal-sensing}. Gate current remained negligible
+across the full sensing procedure.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch8/NTQ39C7_OR10avihis_MeSalsensing_240403.png}
+
+}
+
+\caption{\label{fig-MeSal-sensing}The control series (before 1800 s) and
+ethyl hexanoate sensing series (after 1800 s) of the
+OR10a-functionalised device channel. No responses to 0.5\% v/v DMSO
+1XPBS were seen during the control series, while significant responses
+to additions of methyl salicylate diluted in 0.5\% v/v DMSO 1XPBS were
+seen at 2400 s and 3000 s.}
+
+\end{figure}
+
+\begin{figure}
+
+\begin{minipage}[t]{0.11\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(a).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.70\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch8/NTQ39C7_OR10avihis_MeSalsensing_240403_with_fitted_curves.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.11\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.70\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch8/NTQ39C7_OR10avihis_MeSalsensing_240403_with_fitted_curves_exp.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-OR10a-drift}Control series for the
+OR10a-functionalised device is shown in (a) alongside a linear fit to
+the control series from 1200 s onwards, where the fit has been
+extrapolated to 0 s, shown as a black dotted line. The control series
+with the linear approximation subtracted is shown in (b), fitted with an
+exponential function shown as a black dotted line.}
+
+\end{figure}
+
+\begin{figure}
+
+\begin{minipage}[t]{0.11\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(a).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.70\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch8/NTQ39C7_OR10avihis_MeSalsensing_240403_filtered_detrend_trunc_arrows_normalised.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.11\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.70\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch8/NTQ39C7_mean_simple_difference_before_and_after_step_filtered_concentrations.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-OR10a-responses}The normalised sensing series for
+the OR10a-functionalised device is shown in (a), alongside the
+concentration of each 20 µL addition. The current data has been
+despiked, with baseline drift subtracted and a moving median filter
+applied. The signal data corresponding to the mean difference in current
+before and after each addition is shown in (b).}
+
+\end{figure}
 
 \hypertarget{vapour-sensing}{%
 \section{Vapour Sensing}\label{vapour-sensing}}
