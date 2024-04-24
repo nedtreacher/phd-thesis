@@ -548,7 +548,7 @@ From this elimination process, three possible sources of variability in device p
 
 ##	iOR Biosensing with Aqueous Functionalisation 
 
-### Aqueous-Based Functionalisation with OR10a
+### Aqueous-Based Functionalisation
 
 A carbon nanotube network field-effect transistor device, fabricated using post-June 2023 methods as described in @sec-fabrication, was functionalised with a novel method using OR10a solubilised in surfactant. The odorant receptors were not expressed in a nanodisc format, and were avidin-tagged or "avi-tagged". This eliminates the possibility of nanodiscs interfering with odorant receptor attachment, though does leave them vunerable to harsh environmental conditions [@Nath2007; @Bayburt2010]. Upon preparation, the odorant receptors were modified with pyrene-PEG-biotin. The pyrene-PEG-biotin linker attached to the avi-tags on the odorant receptors, as described in @sec-NTA-biotin-PEG, allowing them to attach directly from solution to the carbon nanotubes via the attached pyrene linker. This approach meant that no PBASE, PBA or organic solvent was needed in the functionalisation process. To eliminate the remaining possible sources of surface contamination, such as the hydrocarbonaceous coating of nanotubes and residual photoresist, a short oxgyen plasma cleaning step was used. The details of the functionalisation, process, loosely based on the non-covalent functionalisation procedure used by Miki *et al.* [@Miki2019], are as follows:
 
@@ -564,7 +564,7 @@ Note: The full 1 mL was used to flush out the nanodisc vial when preparing the n
 
 4. Device was treated with a gentle oxygen plasma, $\sim$ 5 W at 200-300 mTorr, for 15 seconds.
 
-Note: Oxygen plasma must be very gentle to avoid excessive damage to carbon nanotube network, with an O$_2$ flow rate of <10 sccm into the plasma cleaner. Relatively sparse nanotube networks may require a lower O$_2$ plasma exposure time to remain viable for sensing.  
+Note: Oxygen plasma was very gentle, with an O$_2$ flow rate of <10 sccm into the plasma cleaner, to avoid excessive damage to the carbon nanotube network.
 
 5. The device was submerged in the OR10a solution and left covered with parafilm for 15 minutes, then rinsed with 1XPBS for 15 s and thoroughly nitrogen dried.
 
@@ -587,9 +587,9 @@ Liquid-gated carbon nanotube network device transfer characteristics on a logari
 
 ### Aqueous Sensing of Methyl Salicylate {#sec-MeSal-aqueous-sensing}
 
-The procedure used for sensing methyl salicylate (MeSal) was identical to that used in @sec-EtHex-sec-EtHex-aqueous-sensing, except using MeSal instead of EtHex. Analyte solutions in 0.5% DMSO/1XPBS solution containing methyl salicylate concentrations at 1 fM, 1 pM, 1 nM and 1 µM were prepared beforehand, The same buffer was used for each dilution, as well as for the well, which contained 80 µL 0.5% DMSO/1XPBS prior to sensing. Sensing measurements were taken using the NI-PXIe system. The full control series plus sensing sequence is shown in @fig-MeSal-sensing. Gate current remained negligible across the full sensing procedure, and no responses were seen to buffer additions or subtractions. A linear fit to the baseline drift in the region $1200-1800$ s, shown in @fig-OR10a-drift (a), had a gradient of $c_1 = -0.38\pm0.01$ pA/s, while an exponential fit to the drift minus the linear fit, shown in @fig-OR10a-drift (b), had a time constant of $506 \pm 12$ s. A deviation from the exponential fit similar to that seen for the control series in @sec-EtHex-aqueous-sensing is observed, indicating that $t\ll\tau_i$ does not hold for the drift behaviour and further lending support to the possibility that functionalised devices exhibit characteristic long-term decay behaviour.
+The procedure used for sensing methyl salicylate (MeSal) was identical to that used in @sec-EtHex-aqueous-sensing, except using MeSal instead of EtHex. Analyte solutions in 0.5% DMSO/1XPBS solution containing methyl salicylate concentrations at 1 fM, 1 pM, 1 nM and 1 µM were prepared beforehand, The same buffer was used for each dilution, as well as for the well, which contained 80 µL 0.5% DMSO/1XPBS prior to sensing. Sensing measurements were taken using the NI-PXIe system. The full control series plus sensing sequence is shown in @fig-MeSal-sensing. Gate current remained negligible across the full sensing procedure, and no responses were seen to buffer additions or subtractions. A linear fit to the baseline drift in the region $1200-1800$ s, shown in @fig-OR10a-drift (a), had a gradient of $c_1 = -0.38\pm0.01$ pA/s, while an exponential fit to the drift minus the linear fit, shown in @fig-OR10a-drift (b), had a time constant of $506 \pm 12$ s. A deviation from the exponential fit similar to that seen for the control series in @sec-EtHex-aqueous-sensing is observed, indicating that $t\ll\tau_i$ does not hold for the drift behaviour and further lending support to the possibility that functionalised devices exhibit characteristic long-term decay behaviour.
 
-![The control series (before 1800 s) and ethyl hexanoate sensing series (after 1800 s) of the OR10a-functionalised device channel. Source-drain current was set at $V_{ds}$ = 100 mV while gate current was set at $V_g$ = 0 V. No responses to 0.5% v/v DMSO 1XPBS were seen during the control series, while significant responses to additions of methyl salicylate diluted in 0.5% v/v DMSO 1XPBS were seen at 2400 s and 3000 s.](figures/ch8/NTQ39C7_OR10avihis_MeSalsensing_240403.png){#fig-MeSal-sensing width=70%}
+![The control series (before 1800 s) and methyl salicylate sensing series (after 1800 s) of the OR10a-functionalised device channel. Source-drain current was set at $V_{ds}$ = 100 mV while gate current was set at $V_g$ = 0 V. No responses to 0.5% v/v DMSO 1XPBS were seen during the control series, while significant responses to additions of methyl salicylate diluted in 0.5% v/v DMSO 1XPBS were seen at 2400 s and 3000 s.](figures/ch8/NTQ39C7_OR10avihis_MeSalsensing_240403.png){#fig-MeSal-sensing width=70%}
 
 ::: {#fig-OR10a-drift layout="[[-11,3,-1,70,-15],[-11,3,-1,70,-15]]" layout-valign="top"}
 
@@ -617,9 +617,63 @@ Control series for the OR10a-functionalised device is shown in (a) alongside a l
 The normalised sensing series for the OR10a-functionalised device is shown in (a), alongside the concentration of each 20 µL addition. The current data has been despiked, with baseline drift subtracted and a moving median filter applied. The signal data corresponding to the mean difference in current before and after each addition is shown in (b).
 :::
 
-Cleaned and filtered methyl salicylate sensing data with linear baseline drift removed is shown in @fig-OR10a-responses (a). The concentration of each 20 µL methyl salicylate addition is shown above each corresponding addition time. Significant and irreversible current decreases occurred directly after the 1 fM and 1 nM MeSal additions. @fig-OR10a-responses (b) shows that a $\sim$ 3% current drop occurred subsequent to the 1 fM addition and a $\sim$ 23% current drop occurred subsequent to the 1 nM MeSal addition. No negative change in current occurred after the buffer addition, or any of the other three analyte additions. Murugathas *et al.* also observed a similar drop-off in response as analyte concentration increased when sensing with OR10a [@Murugathas2019b].
+Cleaned and filtered methyl salicylate sensing data with linear baseline drift removed is shown in @fig-OR10a-responses (a). The concentration of each 20 µL methyl salicylate addition is shown above each corresponding addition time. Significant and irreversible current decreases occurred directly after the 1 fM and 1 nM MeSal additions. @fig-OR10a-responses (b) shows that a $\sim$ 3% current drop occurred subsequent to the 1 fM addition and a $\sim$ 23% current drop occurred subsequent to the 1 nM MeSal addition. No negative change in current occurred after the buffer addition, or any of the other three analyte additions. Murugathas *et al.* also observed a similar drop-off in response with increased analyte concentration when sensing with OR10a [@Murugathas2019b]. It appears that the OR10a odorant receptors saturate at a low concentration relative to the OR22a odorant receptors tested earlier. Transfer characteristics of the device before and after sensing are shown in @fig-OR10a-TX-1 (a), showing a threshold shift of -0.07 V.
 
-##	Vapour Sensing
+::: {#fig-OR10a-TX-1 layout="[[3,-1,45,-1,3,-1,46,-1]]" layout-valign="top"}
+
+![](figures/(a).png)
+
+![](figures/ch8/NTQ39C7_ch2_before_after_sensing_1.png)
+
+![](figures/(b).png)
+
+![](figures/ch8/NTQ39C7_ch2_before_after_rinse.png)
+
+Transfer characteristics of the device after the 1st sensing series, where $V_{ds}$ = 100 mV. The transfer characteristics before and after sensing are shown in (a), while (b) shows the channel characteristics before and after being rinsed with 1XPBS.
+:::
+
+The device was then rinsed for 15 s in 1XPBS after the initial sensing series. The effect of the rinse on the transfer characteristics of the device is illustrated in @fig-OR10a-TX-1 (b). The rinsing step appears to have largely restored the electrical characteristics of device to their state prior to sensing. It appears the gating effect due to the presence of analyte has been reversed. Assuming that this effect results from structural changes in the odorant receptors, the reversal of threshold shift upon rinsing indicates that without analyte present, the proteins return to their original structure. This implies that the device can be reused as a sensor. Furthermore, as adsorption of solvent leads to gating which is not reversible through rinsing (@sec-PBASE-electrical-characterisation), this is also an indication that the responses are not simply due to adsorption of the DMSO present. 
+
+::: {#fig-OR10a-responses-2 layout="[[-11,3,-1,70,-15],[-11,3,-1,70,-15]]" layout-valign="top"}
+
+![](figures/(a).png)
+
+![](figures/ch8/NTQ39C7_2.png)
+
+![](figures/(b).png)
+
+![](figures/ch8/NTQ39C7_2_filtered_detrend_trunc_arrows_normalised.png)
+
+
+A second methyl salicylate sensing series was performed with the OR10a-functionalised device channel subsequent to rinsing, shown in @fig-OR10a-responses-2 (a). Source-drain current was set at $V_{ds}$ = 100 mV while gate current was set at $V_g$ = 0 V. No responses to 0.5% v/v DMSO 1XPBS additions or significant gate current leakage were observed in (a). A clear response is observed after each nanomolar addition of methyl salicylate in (b). The current data in (b) has had a moving median filter applied and linear baseline drift removed.
+:::
+
+A second methyl salicylate sensing series was then performed with the same device, shown in @fig-OR10a-responses-2 (a). The linear component of baseline drift from $1200-1800$ s had a gradient of $c_1 = -0.31\pm0.01$ pA/s, similar that seen in the previous sensing run. A current response was seen directly after all five analyte additions, shown in @fig-OR10a-responses-2 (b). Only nanomolar additions of methyl salicylate were used to avoid saturating the proteins and reducing the sensitivity of the sensor. Interestingly, the initial 1 nM analyte addition was similar in size (24%) to the current change resulting from the 1 nM analyte addition in @fig-OR10a-responses (23%). This result indicates that the size of responses may correspond to the well concentration in a reproducible manner, where there is a specific change in well concentration that gives the largest response. Five successive 20 µL 1 nM methyl salicylate additions to the 100 µL buffer in the well results in a well concentration of 500 pM MeSal. Given the steady decrease in analyte response size with successive additions in @fig-OR10a-responses-2, it appears that the sensor saturates at close to 500 pM, which may explain the lack of response to micromolar additions in @fig-OR10a-responses.
+
+![Transfer characteristics of the device directly before and after the 2nd sensing series, where $V_{ds}$ = 100 mV.](figures/ch8/NTQ39C7_ch2_before_after_sensing_2.png){#fig-OR10a-TX-2 width=50%}
+
+It also appears that the second sensing series resulted in a similar shift in transfer characteristics to that of the first series. @fig-OR10a-TX-2 shows a shift in threshold voltage of -0.08 V between the transfer characteristics directly before and directly after the nanomolar sensing series. This is another indication that nanomolar additions are enough to cause device saturation. The similarity between @fig-OR10a-TX-1 (a) and @fig-OR10a-TX-2 suggests a similar phenomenon has occurred during both sensing series, indicating a odorant receptor-functionalised device can be reused. This is surprising, given the odorant receptors lack a protective membrane. This discussion indicates that the attached odorant receptors can remain viable for at least several hours in room temperature buffer solution, without the need for the nanodisc format. 
+
+This method has a number of advantages over the OR nanodisc functionalisation method outlined earlier. The plasma cleaning step eliminates uncertainty stemming from a variety of possible surface coatings on the carbon nanotubes. Using detergent-solubilised odorant receptors removes the possibility that the nanodiscs are impeding direct attachment to odorant receptors in the functionalisation procedure. However, it has its own drawbacks. Oxygen plasma cleaning, even at low power, had a invasive effect on the carbon nanotube network. A large drop in mobility resulted from plasma cleaning; for sparser carbon nanotube morphologies, a sizable current drop could leave a device unsuitable for sensing. Since the main advantage of non-covalent functionalisation over covalent functionalisation is its minimal impact on mobility (@sec-non-covalent-bonding), this approach seems self-contradictory. It appears a less invasive but solvent-free approach should be identified for non-covalent functionalisation [@Ashraf2014], or a well-established covalent approach should instead be used for attaching odorant receptors (@sec-sensor-types). 
+
+### Vapour Sensing of *trans*-2-hexen-1-al
+
+Despite the drawbacks outlined previously, the functionalisation method in this section was also used to trial vapour phase sensing for the odorant receptor devices. As the vapour pressure of methyl salicylate was too low for reliable vapour system delivery, OR35a (batch number AviHis-OR35a-001, prepared 12 months earlier) was used in the functionalisation process instead of OR10a. OR35a responds to *trans*-2-hexen-1-al [@Murugathas2019b], which is suitable for use in the vapour delivery system. Back-gated transfer characteristics of a OR35a-functionalised before and after functionalisation are shown in @fig-OR35a-TX-comparison (a), alongside characteristics from a device before and after plasma cleaning at 5 W without subsequent functionalisation in @fig-OR35a-TX-comparison (b). As expected, a significant drop in mobility is seen as a result of the plasma cleaning step. Unlike the functionalised device, the device plasma cleaned without functionalisation turns off entirely at $V_g \sim$ 3 V, with this difference possibly due to variability in the impact of the plasma etch on different carbon nanotube devices. 
+
+::: {#fig-OR35a-TX-comparison layout="[[3,-1,45,-1,3,-1,45,-1]]" layout-valign="top"}
+
+![](figures/(a).png)
+
+![](figures/ch8/AQ1C4_ch4_absolute_values_with_gate_current.png)
+
+![](figures/(b).png)
+
+![](figures/ch8/Q31C12_ch7_absolute_values_with_gate_current.png)
+
+Back-gated carbon nanotube network device transfer characteristics on a logarithmic scale before and after modification, where the gate current for each transfer curve is shown with a dashed line. Source-drain current was $V_{ds}$ = 100 mV for each of the forward and reverse sweep. The change in characteristics from avi-tagged OR35a functionalisation is shown in (a), while the change resulting from a 5 W plasma clean is shown in (b).
+:::
+
+
 
 ## Conclusion
 
