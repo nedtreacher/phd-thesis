@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, interior hidden, sharp corners, breakable, enhanced, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, borderline west={3pt}{0pt}{shadecolor}, enhanced, interior hidden, frame hidden, boxrule=0pt, sharp corners]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -5496,8 +5496,8 @@ was performed on the the measurements from each channel between
 pAs\(^{-1}\), while for the OR35a-functionalised device,
 \(c_1 = -0.55\pm0.01\) pAs\(^{-1}\).
 Figure~\ref{fig-OR35a-baseline-drift} (b) shows the exponential fit
-\(I = I_0exp(-t/\tau)\) to each dataset with linear drift subtracted,
-where the time constant for the pristine device was
+\(I = I_0\textrm{exp}(-t/\tau)\) to each dataset with linear drift
+subtracted, where the time constant for the pristine device was
 \(\tau = 963 \pm 25\) s and for the OR35a-functionalised device was
 \(\tau = 704 \pm 4\) s.
 
@@ -5646,7 +5646,7 @@ functionalised device than the pristine device after each addition. The
 PID indicated a similar concentration of E2Hex was present in the device
 chamber with each addition, shown in
 Figure~\ref{fig-E2Hex-additions-PID}. Note that measurements were taken
-two days apart; the \$\sim\%50\% variation in chamber concentration
+two days apart; the \$\sim\$50\% variation in chamber concentration
 reached with each interval is largely due to PID span drift
 (\textbf{?@sec-responses-to-vapour}).
 
@@ -5664,8 +5664,8 @@ during each interval of carrier flow is indicated above each peak.}
 
 \end{figure}
 
-It appears that current responses are not the sharp, clear responses to
-analyte of the liquid-gated device seen in
+The current responses seen are not the sharp, clear responses to analyte
+of the liquid-gated device seen in
 Section~\ref{sec-MeSal-aqueous-sensing}. Instead, they seem more similar
 to the responses by bare carbon nanotubes to vapour in
 \textbf{?@sec-vapour-series}. There are also alternative explanations
@@ -5789,9 +5789,53 @@ threshold shift for the highly-bundled device after functionalisation
 was \(−0.02\pm0.01\) V, indicating a lack of electrical contact between
 the channel and nanodiscs even without surfactant present. By changing
 the solvent used for functionalisation from methanol to DMSO, the
-average threshold shift was \(−0.22\pm0.03\) V, indicating electrical
-contact with the nanodiscs had been achieved. However, no negative
-current changes were observed subsequent to analyte additions.
+average threshold shift was \(−0.22\pm0.03\) V, which demonstrates
+electrical contact with the nanodiscs. However, no negative current
+changes were observed subsequent to analyte additions, suggesting
+multiple confounding factors are at play. To ensure that the hygroscopic
+DMSO was not hydrolysing the PBASE and preventing odorant receptor
+attachment, a PBA with EDC/NHS functionalisation method was used.
+However, the average threshold shift observed was \(-0.12\pm0.01\) V,
+similar to the -0.15 V shift seen for attachment of PBA to DMSO without
+subsequent modification. The confounding factor is therefore not
+resolved by either changing the solvent or preventing hydrolysis.
+
+The remaining possible sources of surface contamination, including
+alkane hydrocarbons, multilayer linker and photoresist, were then
+addressed by making significant changes to the functionalisation
+procedure. To avoid multilayer coverage, pyrene-PEG-biotin was attached
+to avi-tagged odorant receptors before functionalisation. To remove
+hydrocarbons and residual photoresist, the transducer device was gently
+oxygen plasma cleaned before functionalisation. Furthermore, no
+nanodiscs were used, to ensure direct attachment of odorant receptors.
+Although there are also issues with reliable reproducibility of this
+method due to the plasma cleaning step, when a device was functionalised
+with OR10a in this manner, device current decreases of up to \(\sim\)
+24\% were observed in response to methyl salicylate additions. It
+appears the long-term baseline drift was affected by the
+functionalisation of the device, where the linear approximation used was
+relatively weak.
+
+This aqueous functionalisation approach was also used for vapour sensing
+with OR35a odorant receptors. Clear responses consistent with those seen
+in an aqueous environment were not observed. The changes in current seen
+appear more likely to result from a breakdown of the linear
+approximation of baseline drift for functionalised devices, or from
+increased non-specific sensitivity of the device post-functionalisation.
+It was concluded that reproducible vapour sensing would require either a
+robust covalent functionalisation method which used a protective
+membrane-like format, or alternatively from using a capture layer to
+protect non-covalently odorant receptors from the harsh chamber
+environment. However, it was found 0.5\% v/v DMSO 1XPBS could not act as
+this capture layer due to rapid evaporation of the layer having a
+significant effect on baseline drift from \(\sim\) 800 s onwards. An
+alternative liquid should therefore be identified which is biofriendly
+and miscible while having a low vapour pressure. It should also repel
+PDMS, to remain contained in the PDMS well upside down in the device
+chamber. These approaches significantly expand the scope of this work,
+and are therefore not addressed extensively in this thesis. However,
+some preliminary work on this topic is discussed in
+\textbf{?@sec-future-work}.
 
 \cleardoublepage
 \phantomsection
