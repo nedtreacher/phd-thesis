@@ -28,19 +28,26 @@ FETs are unipolar transistors: these transistors only use one type of charge car
 Schematics (not to scale) showing the side-view cross-section of a thin-film field-effect transistor in both the (a) back-gated and (b) liquid-gated configuration. A graphene monolayer or a carbon nanotube network is used as the transistor thin-film.
 :::
 
+discuss Debye length in the context of gating!!! mention plasma lol
+
 ### Electrical Characterisation
 
 CNTFETs are traditionally *p*-type transistors with positive charge carriers [@Martel1998; @Kong2000], while GFETs are ambipolar [@Ohno2010a]. Applying an gate voltage V$_g$ to the gate of a CNTFET or GFET increases, or decreases, the number of available charge carriers, by bringing the relevant charge-carrying band closer to, or further away from, the Fermi level of the channel [@Sze2006]. An example of both back-gated and liquid-gated transfer characteristics from thin-film transistors are shown in @fig-gating-transfer.
 
 $V_{ds}$ is the voltage between the source and drain electrodes at either end of the semiconducting channel, and is known as the ‘drain bias’. $V_g$ is the potential beneath the gate, and is known as the ‘gate bias’. The gate is insulated from the semiconducting channel by an oxide layer. $I_d$ is the current that flows through the FET from the source to the drain. The current-voltage plot of $I_d$ against $V_g$ is called the 'transfer characteristic curve' of the FET, while the I-V curve of $I_d$ against $V_{ds}$ is called the 'source-drain characteristic curve' of the FET.
 
-$V_g$ is used to turn the FET on or off. A FET is known as ‘normally-off’ if at zero gate bias the channel conductance is very low, and gate voltage must be applied to make the channel conductive. Conversely, a FET is ‘normally-on’ when the channel is conductive with zero gate bias and must have a gate voltage applied to be turned off. For $p$-type channel FETs, negative Vg brings the valence band closer to the Fermi level, meaning more positive charge carriers are available. Therefore these devices are  made more conductive with a more negative gate bias; an increase in $V_g$ reduces $I_d$. The opposite is true for $n$-type channel devices, where a more positive $V_g$ brings the conduction band closer to the Fermi level, meaning more negative charge carriers are available, making the device more conductive. The increased availability of majority carriers in both cases is known as ‘accumulation’.@fig-accumulation illustrates accumulation in each situation.
+$V_g$ is used to turn the FET on or off. A FET is known as ‘normally-off’ if at zero gate bias the channel conductance is very low, and gate voltage must be applied to make the channel conductive. Conversely, a FET is ‘normally-on’ when the channel is conductive with zero gate bias and must have a gate voltage applied to be turned off. For $p$-type channel FETs, negative Vg brings the valence band closer to the Fermi level, meaning more positive charge carriers are available. Therefore these devices are  made more conductive with a more negative gate bias; an increase in $V_g$ reduces $I_d$. The opposite is true for $n$-type channel devices, where a more positive $V_g$ brings the conduction band closer to the Fermi level, meaning more negative charge carriers are available, making the device more conductive. The increased availability of majority carriers in both cases is known as ‘accumulation’. @fig-accumulation illustrates accumulation in each situation.
 
 ![Energy band diagrams for a FET device under accumulation conditions, where the left side of each diagram is the gate region, while the right side is the channel region [@Sze2006].](figures/ch2/accumulation.png){#fig-accumulation width=50%}
 
 An important attribute of the transfer characteristic curve for all thin-film FETs is the on-off current ratio. On-off current ratio is the ratio of the current through a device when gated fully “off” with a positive voltage, to the current through the device when gated fully “on” with a negative voltage [@Zheng2017]. The off current in an ambipolar FET can be defined as the minimum current during the transfer sweep, where the majority carrier transitions from being holes to electrons or vice versa. For example, the on current of the channel shown in @fig-gating-transfer (b) is 741.5 nA, the off current is 0.2 nA, and therefore the on-off ratio is $\sim$ 3000. In contrast, even when 10 V is applied, the backgated device shown in @fig-gating-transfer (a) is never gated fully off. Application of higher voltages to the gate result in significant leakage currents through the gate, and can even result in irreversible breakdown of the oxide layer [@Sze2006]. Being able to traverse both on and off regimes over a limited voltage interval is one of the many advantages of the liquid-gated configuration.
 
-In the linear $I_d$-$V_{ds}$ regime, transconductance is given by $dI_{d}/dV_g$ , which gives a measure of the mobility of the charge carriers in the device channel [@Martel1998; @Sze2006; @Zheng2017]. 
+In the linear $I_d$-$V_{ds}$ regime, transconductance is given by $dI_{d}/dV_g$, which gives a measure of the mobility of the charge carriers in the device channel [@Martel1998; @Sze2006; @Zheng2017].
+
+Traditionally, for sensor applications $V_g$ is chosen to maximise transconductance, as this is considered to be the operating point where the channel is most sensitive to changes in the local environment [@Ohno2010a; @Choi2012]. However, for carbon nanotube FETs it has been suggested that operating in the subthreshold regime gives improved signal-to-noise ratio [@Heller2009]. A discussion about the subthreshold regime of CNTFETs is found in @sec-electrical-characterisation-CNT.
+
+subthreshold regime
+ Previous biosensor research 
 
 ::: {#fig-gating-transfer layout="[3,-1,45,-1,3,-1,45,-1]"}
 
@@ -76,7 +83,7 @@ It is important to account for the changes in current that occur during a sensin
 
 ![Transfer characteristics of a graphene field-effect transistor channel showing the regions of hole conduction and electron conduction. The red dotted line indicates the Dirac point voltage of the device channel.](figures/ch2/Graphene_transfer.png){#fig-linker-raman width="60%"}
 
-As graphene FETs are ambipolar, they can never be gated into an 'off' regime. In normal operation of a GFET, the lowest voltage obtainable by gating is known as the
+As graphene FETs are ambipolar, they do not possess a characteristic 'off' regime. In normal operation of a GFET, the lowest voltage obtainable by gating is known as the
 Dirac voltage [@Murugathas2020].
 
 Quantative measurement of leftward shift in transfer curve
