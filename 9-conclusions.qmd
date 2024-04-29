@@ -7,3 +7,5 @@
 ### Functionalisation
 
 ### Vapour Sensing {#sec-future-work-vapour}
+
+Replace all three mass flow controllers with two MFCs with maximum flow both equal to either 1000 or 10000 sccm. One MFC should be kept at a constant flow rate through the dilution line at all times during a sensing experiment. The other should also be kept at a constant flow rate at all times, but feed into a computer-automated solenoid valve which is able to switch the flow between multiple lines. Under normal operation, this second MFC should also be directed through the dilution line. During a sensing series, it should then be redirected through one of a series of carrier lines. Each carrier line only ever contains one analyte, to prevent cross-contamination between lines. 
