@@ -6,6 +6,17 @@
 
 ### Functionalisation
 
+#### Multiplexing {.unnumbered}
+
+A scent in nature contains a mixture of many different volatile organic compounds in vapour at different concentrations [@Kwon2015; @Hirata2021]. Therefore, it should be possible to multiplex iOR biosensors to distinguish between mixtures of volatile organic compounds in vapour. A similar approach could be taken to that of Son *et al.*, but for insect odorant receptors [@Son2017]. A difficulty that could arise here is that iORs may specifically bind with multiple VOCs. When interacting with an iOR, different volatiles can 'antagonise' each other, where an iOR will not respond to a volatile compound if another specific compound is present [@Kwon2015; @Munch2016; @Son2017;@Hirata2021]. This means a multiplexed iOR biosensor would first need to be tested individually against different volatile compounds, and then with mixtures of volatile compounds to detect any antagonistic behaviours.
+
 ### Vapour Sensing {#sec-future-work-vapour}
 
+#### System Layout {.unnumbered}
+
 Replace all three mass flow controllers with two MFCs with maximum flow both equal to either 1000 or 10000 sccm. One MFC should be kept at a constant flow rate through the dilution line at all times during a sensing experiment. The other should also be kept at a constant flow rate at all times, but feed into a computer-automated solenoid valve which is able to switch the flow between multiple lines. Under normal operation, this second MFC should also be directed through the dilution line. During a sensing series, it should then be redirected through one of a series of carrier lines. Each carrier line only ever contains one analyte, to prevent cross-contamination between lines. 
+
+#### Device Configuration {.unnumbered}
+
+iOR proteins are stabilised by having their lipid membrane maintained in an aqueous environment. Exposing iORs to vapour-phase compounds may cause them significant damage without the use of a protective membrane protein [@Sato2014; @Warden2019]. One way to accomplish this could be to place the iOR nanodiscs into a hydrogel environment. A hydrogel layer mimics the sensillum lymph in insects which help transmits VOCs to the iORs in vivo, while preventing their olfactory cells from drying out [@Sato2014; @Hurot2020; @Cali2020]. Another advantage of this approach is that VOCs travel differently through the hydrogel layer based on their individual chemical properties, which could aid with the selectivity of the sensor [@Hurot2020]. There are difficulties associated with this approach, such as slowing down the approach of volatile compounds to the iOR-FET surface, especially if these VOCs are insoluble [@Pelosi2018; @Warden2019; @Cali2020; @Yamada2021; @Spencer2021]. Yamada *et al.* used hydrophobic microslits at the liquid-vapour interface to promote mixing of VOCs with the aqueous environment [@Yamada2021].
+
