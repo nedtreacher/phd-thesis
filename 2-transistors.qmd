@@ -7,11 +7,16 @@ format: pdf
 
 ## Introduction
 
+Out of a wide range of available transducer options available for the creation of compact, portable and highly-integrated biosensors, field-effect transistors are among the most promising. Field-effect transistors, which consist of two conductive  are able to provide superior signal amplification due to their structure,
+
+
+Carbon nanotube network and graphene field-effect transistors (CNTFETs and GFETs) are both examples of a class of transistors called thin-film transistors (TFTs). These transistors are closely related to the commonly-used metal oxide semiconductor field-effect transistor (MOSFET). However, unlike in MOSFETs, in TFTs the transistor substrate is not used as the channel; instead, current passes through the semiconducting film, which is contacted via conductive source and drain electrodes. This semiconducting film may be a network of carbon nanotubes or layers of graphene [@Sun2013]. 
+
 ## Thin-Film Field-Effect Transistors {#sec-general-FETs}
 
 ### Structure and Gating {#sec-gating}
 
-Carbon nanotube network and graphene field-effect transistors (CNTFETs and GFETs) are both examples of a class of transistors called thin-film transistors (TFTs). These transistors are closely related to the commonly-used metal oxide semiconductor field-effect transistor (MOSFET). However, unlike in MOSFETs, in TFTs the transistor substrate is not used as the channel; instead, current passes through the semiconducting film, which is contacted via conductive source and drain electrodes. This semiconducting film may be a network of carbon nanotubes or layers of graphene [@Sun2013]. 
+
 
 FETs are unipolar transistors: these transistors only use one type of charge carrier in the conducting channel. For $n$-type conducting channels, these charge carriers are negative electrons, while $p$-type conducting channels use holes, positive charge carriers. The FET consists of a source, a drain, and a gate. The behaviour of carriers in the channel between the source and the drain is controlled capacitively by applied electric fields: hence the term ‘field effect’. A FET contains a potential barrier acting against charge carriers at the junctions between the channel and the contacts, known as ‘Schottky barriers’. These barriers arise because of the Fermi energy difference between the metal contacts and the semiconducting channel, and are characterised by the size of the barrier potential $φ_B$ [@Iijima1991]. Increased barrier size leads to increased resistance between the component materials of the FET [@Zheng2016].
 
