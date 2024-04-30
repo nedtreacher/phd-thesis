@@ -184,9 +184,9 @@ Fluorescence images of the unencapsulated carbon nanotube devices successfully f
 
 ### Aqueous Sensing of Ethyl Hexanoate {#sec-EtHex-aqueous-sensing}
 
-![The control series (before 1800 s) and ethyl hexanoate sensing series (after 1800 s) of the OR22a-functionalised device channel. Source-drain current was set at $V_{ds}$ = 100 mV while gate current was set at $V_g$ = 0 V. No responses to 0.5% v/v DMSO 1XPBS were seen during the control series, while significant responses to additions of ethyl hexanoate diluted in 0.5% v/v DMSO 1XPBS were seen at 2400 s, 2700 s, 3000 s and 3600 s. Functionalisation and sensing was performed by Danica Fontein, School of Chemical and Physical Sciences, Te Herenga Waka - Victoria University of Wellington, using the methods developed in this thesis.](figures/ch8/Q1C6.png){#fig-EtHex-aqueous-sensing width=70%}
-
 The procedure used for biosensor detection of ethyl hexanoate in liquid was the same as the procedure outlined in @sec-dummy-sensing, except 0.5% v/v DMSO was present in the buffer solution (to improve ethyl hexanoate solubility) and dilutions of ethyl hexanoate in the same 0.5% v/v DMSO 1XPBS buffer solution were added during the sensing series. The 0.5% v/v DMSO 1XPBS was prepared by adding 5 µL of DMSO to 995 µL 1XPBS before device characterisation. The dilutions of ethyl hexanoate were prepared with the same 1XPBS at the same time, where 5 µL of 200 fM, 200 pM, 200 nM and 200 µM ethyl hexanoate in DMSO were placed into four individual vials containing 995 µL 1XPBS each, giving 1mL vials of 1 fM, 1 pM, 1 nM and 1 µM ethyl hexanoate in 0.5% v/v DMSO 1XPBS. The ethyl hexanoate in DMSO dilutions were prepared beforehand as a 1:10 dilution series in DMSO using 200 mM stock solution, where dilutions ranged from 20 mM to 200 fM. Sampling measurements were taken using the B1500A semiconductor device analyser, with the transfer measurement in @fig-OR22a-TX-comparison (b) taken directly before sensing. The full control series plus sensing sequence is shown in @fig-EtHex-aqueous-sensing. Gate current remained negligible across the entire sensing procedure.
+
+![The control series and ethyl hexanoate sensing series of the OR22a-functionalised device channel. Source-drain current was set at $V_{ds}$ = 100 mV while gate current was set at $V_g$ = 0 V. Functionalisation and sensing was performed using the methods developed in this thesis by Danica Fontein, School of Chemical and Physical Sciences, Te Herenga Waka - Victoria University of Wellington.](figures/ch8/Q1C6.png){#fig-EtHex-aqueous-sensing width=70%}
 
 ::: {#fig-OR22a-control-series layout="[[-11,3,-1,70,-15],[-11,3,-1,70,-15]]" layout-valign="top"}
 
@@ -555,7 +555,22 @@ From this elimination process, three possible sources of variability in device p
 
 ### Aqueous-Based Functionalisation
 
-A carbon nanotube network field-effect transistor device, fabricated using post-June 2023 methods as described in @sec-fabrication, was functionalised with a novel method using OR10a solubilised in surfactant. The odorant receptors were not expressed in a nanodisc format, and were avidin-tagged or "avi-tagged". This eliminates the possibility of nanodiscs interfering with odorant receptor attachment, though does leave them vunerable to harsh environmental conditions [@Nath2007; @Bayburt2010]. Upon preparation, the odorant receptors were modified with pyrene-PEG-biotin. The pyrene-PEG-biotin linker attached to the avi-tags on the odorant receptors, as described in @sec-NTA-biotin-PEG, allowing them to attach directly from solution to the carbon nanotubes via the attached pyrene linker. This approach meant that no PBASE, PBA or organic solvent was needed in the functionalisation process. To eliminate the remaining possible sources of surface contamination, such as the hydrocarbonaceous coating of nanotubes and residual photoresist, a short oxgyen plasma cleaning step was used. The details of the functionalisation, process, loosely based on the non-covalent functionalisation procedure used by Miki *et al.* [@Miki2019], are as follows:
+A carbon nanotube network field-effect transistor device, fabricated using post-June 2023 methods as described in @sec-fabrication, was functionalised with a novel method using OR10a solubilised in surfactant. The odorant receptors were not expressed in a nanodisc format, and were avidin-tagged or "avi-tagged". This eliminates the possibility of nanodiscs interfering with odorant receptor attachment, though does leave them vunerable to harsh environmental conditions [@Nath2007; @Bayburt2010]. Upon preparation, the odorant receptors were modified with pyrene-PEG-biotin. The pyrene-PEG-biotin linker attached to the avi-tags on the odorant receptors, as described in @sec-NTA-biotin-PEG, allowing them to attach directly from solution to the carbon nanotubes via the attached pyrene linker. This approach meant that no PBASE, PBA or organic solvent was needed in the functionalisation process. To eliminate the remaining possible sources of surface contamination, such as the hydrocarbonaceous coating of nanotubes and residual photoresist, a short oxgyen plasma cleaning step was used. 
+
+::: {#fig-OR10a-TX-comparison layout="[[3,-1,45,-1,3,-1,45,-1]]" layout-valign="top"}
+
+![](figures/(a).png)
+
+![](figures/ch8/NTQ39C7_ch2_absolute_values_with_gate_current.png)
+
+![](figures/(b).png)
+
+![](figures/ch8/Q31C12_ch6_absolute_values_with_gate_current.png)
+
+Liquid-gated carbon nanotube network device transfer characteristics on a logarithmic scale before and after modification, where the gate current for each transfer curve is shown with a dashed line. Source-drain current was $V_{ds}$ = 100 mV for both the forward and reverse sweep. The change in characteristics from the functionalisation process in this section is shown in (a), while the change resulting from a 5 W plasma clean is shown in (b).
+:::
+
+The details of the functionalisation, process, loosely based on the non-covalent functionalisation procedure used by Miki *et al.* [@Miki2019], are as follows:
 
 1. The device was exposed to UV light for 1 minute, placed in AZ$^\circledR$ 326 developer for 3 minutes, then rinsed with acetone, isopropanol and nitrogen dried.
 
@@ -572,19 +587,6 @@ Note: The full 1 mL was used to flush out the nanodisc vial when preparing the n
 Note: Oxygen plasma was very gentle, with an O$_2$ flow rate of <10 sccm into the plasma cleaner, to avoid excessive damage to the carbon nanotube network.
 
 5. The device was submerged in the OR10a solution and left covered with parafilm for 15 minutes, then rinsed with 1XPBS for 15 s and thoroughly nitrogen dried.
-
-::: {#fig-OR10a-TX-comparison layout="[[3,-1,45,-1,3,-1,45,-1]]" layout-valign="top"}
-
-![](figures/(a).png)
-
-![](figures/ch8/NTQ39C7_ch2_absolute_values_with_gate_current.png)
-
-![](figures/(b).png)
-
-![](figures/ch8/Q31C12_ch6_absolute_values_with_gate_current.png)
-
-Liquid-gated carbon nanotube network device transfer characteristics on a logarithmic scale before and after modification, where the gate current for each transfer curve is shown with a dashed line. Source-drain current was $V_{ds}$ = 100 mV for both the forward and reverse sweep. The change in characteristics from the functionalisation process in this section is shown in (a), while the change resulting from a 5 W plasma clean is shown in (b).
-:::
 
 @fig-OR10a-TX-comparison (a) shows the liquid-gated characteristics of a device channel (channel 2) before and after the functionalisation process with OR10a. The change of characteristics observed can be compared with the change of characteristics seen for a plasma clean only, seen in @fig-OR10a-TX-comparison (b). A significant drop in channel occurs as a result of the plasma cleaning process. This large change in mobility makes it difficult to clearly identify changes in gating specifically due to the presence of the OR10a. The OR10a is not held within a nanodisc format, so the morphology of the functionalised network cannot be compared directly using previous atomic force microscope images. A solvent-deposited carbon nanotube film was prepared separately using OR nanodiscs, where the ORs were attached via their amine group using pyrene-PEG-NHS ester. Pyrene-PEG-NHS ester is very similar to PBASE but contains a PEG chain. @fig-PPN-linker shows an atomic force microscope image of the modified film. OR nanodisc aggregates very clearly follow the carbon nanotubes, indicating specific attachment between nanodiscs and carbon nanotubes can be acheived using linker containing pyrene-PEG. 
 
@@ -708,7 +710,7 @@ Device channel responses to intervals of flow from the carrier line into the vap
 
 After the 2500 s control series, each device was exposed to three intervals of *trans*-2-hexen-1-al vapour flow from the carrier line in the same manner. A total of 5 mL of the analyte of interest was present in the analyte bottle before each sensing series. A total flow of 200 sccm was kept through the chamber at all times. During each interval, 150 sccm of this total flow passed through the carrier line. Except during intervals, no flow was placed through the carrier line. A 1000 s recovery period was used between each interval. The temperature was 20°C $\pm$ 2°C during each series. These sensing series, which have been normalised, despiked and corrected for drift, are shown side-by-side in @fig-E2Hex-sampling (a), while @fig-E2Hex-sampling (b) shows these series after a moving median filter was applied. A larger current change is shown by the functionalised device than the pristine device after each addition. The PID indicated a similar concentration of E2Hex was present in the device chamber with each addition, shown in @fig-E2Hex-additions-PID. Note that measurements were taken two days apart; the $\sim$50% variation in chamber concentration reached with each interval is largely due to PID span drift (@sec-responses-to-vapour).
 
-![Nominal concentration measurements by the photoionisation detector taken from the device chamber during the vapour sensing series for both pristine and OR35a-functionalised devices. The maximum nominal concentration reached during each interval of carrier flow is indicated above each peak.](figures/ch8/input_time_comparison.png){#fig-E2Hex-additions-PID width=70%}
+![Nominal concentration measurements by the photoionisation detector taken from the device chamber during the vapour sensing series for both pristine and OR35a-functionalised devices. The maximum nominal concentration reached during each interval of carrier flow is indicated above each peak.](figures/ch8/input_time_comparison.png){#fig-E2Hex-additions-PID width=95%}
 
 The current responses seen are not the sharp, clear responses to analyte of the liquid-gated device seen in @sec-MeSal-aqueous-sensing. Instead, they seem more similar to the responses by bare carbon nanotubes to vapour in @sec-vapour-series. There are also alternative explanations for the current changes observed in @fig-E2Hex-sampling which do not involve specific detection of analyte. The functionalisation may have altered the drift behaviour so that the linear approximation used here for removing baseline drift is no longer useful. The breakdown in this approximation has then led to current increases that do not directly correspond to analyte being added. The functionalisation process may also have caused the device to become more sensitive to changes in vapour concentration, increasing the signal-to-noise ratio of the sensor. Regardless of their origin, the current increases observed cannot fairly be described as clear or convincing sensing responses. A working sensor should exhibit responses more similar to those seen in @sec-MeSal-aqueous-sensing. 
 
