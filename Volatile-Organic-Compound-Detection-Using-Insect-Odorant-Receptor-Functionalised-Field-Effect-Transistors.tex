@@ -193,12 +193,12 @@
 \title{Volatile Organic Compound Detection Using Insect Odorant-Receptor
 Functionalised Field-Effect Transistors}
 \author{Eddyn Oswald Perkins Treacher}
-\date{Apr 2024}
+\date{May 2024}
 
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, interior hidden, breakable, sharp corners, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, sharp corners, interior hidden, enhanced, frame hidden, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -231,37 +231,62 @@ Transistors}\label{carbon-nanotube-and-graphene-field-effect-transistors}}
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
+Out of a wide range of available transducer options available for the
+creation of compact, portable and highly-integrated biosensors,
+field-effect transistors are among the most promising. Field-effect
+transistors consist of two conductive electrodes on either side of a
+semiconducting channel, with the higher potential electrode called the
+source electrode and lower potential electrode called the drain
+electrode, alongside an isolated gate electrode. An applied electric
+field from the gate electrode capacitively controls channel resistance,
+giving rise to the label `field-effect'. By adjusting gate voltage,
+channel current can be varied over several orders of magnitude. The
+ability of this simple structure to obtain a large signal response from
+small changes in channel behaviour is highly advantageous for sensor
+applications \autocite{Shkodra2021,Yao2021}. Field-effect transistors
+are unipolar transistors; channel conduction either mainly consists of
+electron carriers, which is called \(n\)-type conduction, or hole
+carriers, which is called \(p\)-type conduction \autocite{Yao2021}.
+
+Carbon nanotube network and graphene field-effect transistors (CNTFETs
+and GFETs) are both examples of a class of field-effect transistors
+called thin-film transistors (TFTs). These transistors are closely
+related to the commonly-used metal oxide semiconductor field-effect
+transistor (MOSFET). Unlike MOSFETs, thin-film transistors do not use
+the substrate as the channel. Instead, current passes through a
+semiconducting film on the surface of the device. Since only a thin film
+is required for the channel, an important advantage of thin-film
+transistors over MOSFETs is their ability to use a range of flexible and
+stretchable substrates that may not be conductive. A wide variety of
+semiconducting films may be used; the films discussed here are carbon
+nanotube networks and graphene, which both fall under the class of
+carbon-based 2D nanomaterials. \autocite{Sun2013,Shkodra2021}.
+
 \hypertarget{sec-general-FETs}{%
 \section{Thin-Film Field-Effect Transistors}\label{sec-general-FETs}}
 
 \hypertarget{sec-gating}{%
 \subsection{Structure and Gating}\label{sec-gating}}
 
-Carbon nanotube network and graphene field-effect transistors (CNTFETs
-and GFETs) are both examples of a class of transistors called thin-film
-transistors (TFTs). These transistors are closely related to the
-commonly-used metal oxide semiconductor field-effect transistor
-(MOSFET). However, unlike in MOSFETs, in TFTs the transistor substrate
-is not used as the channel; instead, current passes through the
-semiconducting film, which is contacted via conductive source and drain
-electrodes. This semiconducting film may be a network of carbon
-nanotubes or layers of graphene \autocite{Sun2013}.
-
-FETs are unipolar transistors: these transistors only use one type of
-charge carrier in the conducting channel. For \(n\)-type conducting
-channels, these charge carriers are negative electrons, while \(p\)-type
-conducting channels use holes, positive charge carriers. The FET
-consists of a source, a drain, and a gate. The behaviour of carriers in
-the channel between the source and the drain is controlled capacitively
-by applied electric fields: hence the term `field effect'. A FET
-contains a potential barrier acting against charge carriers at the
-junctions between the channel and the contacts, known as `Schottky
-barriers'. These barriers arise because of the Fermi energy difference
-between the metal contacts and the semiconducting channel, and are
-characterised by the size of the barrier potential \(φ_B\)
-\autocite{Iijima1991}. Increased barrier size leads to increased
-resistance between the component materials of the FET
-\autocite{Zheng2016}.
+The basic components of the thin-film transistor can be configured in a
+variety of different ways. These configurations include the back-gated
+field-effect transistor and the liquid-gated transistor, also known as
+the electrolyte-gated transistor. The relatively simple back-gated
+configuration, shown in Figure~\ref{fig-gating-schematics} (a), uses the
+silicon substrate as the gate. The channel is isolated from the gate
+with a thin silicon dioxide layer. The device characteristics are
+determined by the gate capacitance, which is made up of the capacitance
+of the oxide layer (\(C_{ox}\)) and the quantum capacitance
+\autocite{Xia2009} of the 2D nanomaterial (\(C_{qm}\)). A liquid-gated
+device, shown in Figure~\ref{fig-gating-schematics} (b), gives rise to
+enhanced device sensitivity in an aqueous environment. In this
+configuration, a reference electrode is used as the gate, with the
+channel isolated from the gate by an electrolyte solution. This solution
+can be polymer, gel or water-based. The gate capacitance is a series
+combination of the electrical double layer capacitance of the
+electrolyte (\(C_{edl}\)), at both the channel-liquid and
+liquid-electrode interfaces, and \(C_{qm}\)
+\autocite{Shkodra2021,Li2023}.
 
 \begin{figure}
 
@@ -369,6 +394,11 @@ thin-film.}
 
 \end{figure}
 
+The type of structure used determines the type of sensing mechanisms
+available, which can include electrostatic gating, Schottky barrier
+modulation, capacitance modulation or charge scattering
+\autocite{Heller2008}.
+
 discuss Debye length in the context of gating!!! mention plasma lol
 
 \hypertarget{electrical-characterisation}{%
@@ -456,6 +486,22 @@ subthreshold regime of CNTFETs is found in
 Section~\ref{sec-electrical-characterisation-CNT}.
 
 subthreshold regime Previous biosensor research
+
+A FET contains a potential barrier acting against charge carriers at the
+junctions between the channel and the contacts, known as `Schottky
+barriers'. These barriers arise because of the Fermi energy difference
+between the metal contacts and the semiconducting channel, and are
+characterised by the size of the barrier potential \(φ_B\)
+\autocite{Iijima1991}. Increased barrier size leads to increased
+resistance between the component materials of the FET
+\autocite{Zheng2016}.
+
+As \(C_{qm} \gg C_{edl}\), hysteresis is significantly reduced for the
+liquid-gated configuration relative to the back-gated configuration. In
+this work, the liquid-gate is completely isolated from the channel,
+which ensures sensing is not due to modulation of the Schottky barrier
+between the channel and electrodes, but this is not always true for
+thin-film transistors in the literature \autocite{Li2023}.
 
 \begin{figure}
 
@@ -732,14 +778,23 @@ sensitive to their environment
 \autocite{Iijima1991,Battie2010,Boyd2014,Chen2019}. This high
 sensitivity is due to the high surface-to-volume ratio of the CNTs,
 which maximises the exposure of this electrically sensitive structure to
-its surroundings \autocite{Battie2010}. SWCNT-based devices consume
-little power, operate quickly and are flexible \autocite{Chen2019}.
-Nanotubes in a network can have semiconducting characteristics (s-CNTs)
-or metallic characteristics (m-CNTs), depending on their chirality
-\autocite{Martel1998,Kong2000}. A single CNT will therefore have
-different properties than a network of CNTs, where the individual
-electrical properties of the CNT tubes are averaged out across the
-network \autocite{Battie2010}.
+its surroundings \autocite{Yao2021,Shkodra2021}. SWCNT-based devices
+consume little power, operate quickly and are highly flexible
+\autocite{Chen2019,Shkodra2021}. Nanotubes in a network can have
+semiconducting characteristics (s-CNTs) or metallic characteristics
+(m-CNTs), depending on their chirality \autocite{Martel1998,Kong2000}. A
+single CNT will therefore have different properties than a network of
+CNTs, where the individual electrical properties of the CNT tubes are
+averaged out across the network \autocite{Battie2010}. The contact
+between the electrodes and carbon nanotubes determines the behaviour of
+channel carriers. The properties of electrodes generally used in CNT
+FETs means they usually operate as \(p\)-type transistors
+\autocite{Yao2021}.
+
+Semiconducting carbon nanotubes have particular advantages for use in
+sensor applications, including a high carrier mobility, compatibility
+with many biological targets, and ease of processing
+\autocite{Shkodra2021}.
 
 \hypertarget{network-morphology}{%
 \subsection{Network Morphology}\label{network-morphology}}
