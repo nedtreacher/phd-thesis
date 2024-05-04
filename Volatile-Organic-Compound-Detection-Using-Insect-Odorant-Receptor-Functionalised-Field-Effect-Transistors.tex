@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, sharp corners, interior hidden, enhanced, frame hidden, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, breakable, borderline west={3pt}{0pt}{shadecolor}, interior hidden, frame hidden, enhanced, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -235,32 +235,35 @@ Out of a wide range of available transducer options available for the
 creation of compact, portable and highly-integrated biosensors,
 field-effect transistors are among the most promising. Field-effect
 transistors consist of two conductive electrodes on either side of a
-semiconducting channel, with the higher potential electrode called the
-source electrode and lower potential electrode called the drain
-electrode, alongside an isolated gate electrode. An applied electric
-field from the gate electrode capacitively controls channel resistance,
-giving rise to the label `field-effect'. By adjusting gate voltage,
-channel current can be varied over several orders of magnitude. The
-ability of this simple structure to obtain a large signal response from
-small changes in channel behaviour is highly advantageous for sensor
+semiconducting channel, the `source' and `drain' electrodes, alongside
+an isolated `gate' electrode. An applied electric field from the gate
+electrode capacitively controls channel resistance, giving rise to the
+label `field-effect'. By adjusting gate voltage, the flow of charge
+carriers between source and drain can be varied over several orders of
+magnitude. The ability of this simple structure to obtain a large signal
+response from small changes in channel behaviour means field-effect
+transistors can be used as high-quality amplifiers for sensor
 applications \autocite{Shkodra2021,Yao2021}. Field-effect transistors
-are unipolar transistors; channel conduction either mainly consists of
-electron carriers, which is called \(n\)-type conduction, or hole
-carriers, which is called \(p\)-type conduction \autocite{Yao2021}.
+are typically unipolar transistors; channel conduction either mainly
+consists of electron carriers, or hole carriers, depending on the
+electrode and channel materials used \autocite{Yao2021}.
 
 Carbon nanotube network and graphene field-effect transistors (CNTFETs
 and GFETs) are both examples of a class of field-effect transistors
 called thin-film transistors (TFTs). These transistors are closely
 related to the commonly-used metal oxide semiconductor field-effect
 transistor (MOSFET). Unlike MOSFETs, thin-film transistors do not use
-the substrate as the channel. Instead, current passes through a
-semiconducting film on the surface of the device. Since only a thin film
-is required for the channel, an important advantage of thin-film
-transistors over MOSFETs is their ability to use a range of flexible and
-stretchable substrates that may not be conductive. A wide variety of
+the substrate as the device channel. Instead, current passes through a
+semiconducting film on the surface of the device. Since thin-film
+transistors do not require a conductive substrate, they can be
+fabricated using flexible and stretchable substrates, and so are
+significantly more versatile than MOSFETs. A wide variety of
 semiconducting films may be used; the films discussed here are carbon
 nanotube networks and graphene, which both fall under the class of
-carbon-based 2D nanomaterials. \autocite{Sun2013,Shkodra2021}.
+carbon-based 2D nanomaterials. Commonly used substrates include
+silicon/silicon dioxide, quartz, glass, and the flexible substrates
+polyimide (PI) and polyethylene terephthalate (PET)
+\autocite{Sun2013,Shkodra2021}.
 
 \hypertarget{sec-general-FETs}{%
 \section{Thin-Film Field-Effect Transistors}\label{sec-general-FETs}}
@@ -274,19 +277,16 @@ field-effect transistor and the liquid-gated transistor, also known as
 the electrolyte-gated transistor. The relatively simple back-gated
 configuration, shown in Figure~\ref{fig-gating-schematics} (a), uses the
 silicon substrate as the gate. The channel is isolated from the gate
-with a thin silicon dioxide layer. The device characteristics are
-determined by the gate capacitance, which is made up of the capacitance
-of the oxide layer (\(C_{ox}\)) and the quantum capacitance
-\autocite{Xia2009} of the 2D nanomaterial (\(C_{qm}\)). A liquid-gated
-device, shown in Figure~\ref{fig-gating-schematics} (b), gives rise to
-enhanced device sensitivity in an aqueous environment. In this
-configuration, a reference electrode is used as the gate, with the
-channel isolated from the gate by an electrolyte solution. This solution
-can be polymer, gel or water-based. The gate capacitance is a series
-combination of the electrical double layer capacitance of the
-electrolyte (\(C_{edl}\)), at both the channel-liquid and
-liquid-electrode interfaces, and \(C_{qm}\)
-\autocite{Shkodra2021,Li2023}.
+with a thin silicon dioxide layer. A liquid-gated device, shown in
+Figure~\ref{fig-gating-schematics} (b), is used for sensitive liquid
+analyte detection. In the most common form of this configuration, a
+Ag/AgCl reference electrode is used as the gate. The channel is isolated
+from the gate by the bulk of an electrolyte solution, typically the
+biofriendly phosphate-buffered saline (PBS). Other aqueous salt
+solutions, polymers and ion-gels are also sometimes used as the
+electrolyte gate. The electrolyte is restricted to the channel area
+using a hydrophobic PDMS microchamber, referred to here as a `PDMS well'
+\autocite{Avouris2007,Shkodra2021,Li2023}.
 
 \begin{figure}
 
@@ -390,78 +390,223 @@ liquid-electrode interfaces, and \(C_{qm}\)
 the side-view cross-section of a thin-film field-effect transistor in
 both the (a) back-gated and (b) liquid-gated configuration. A graphene
 monolayer or a carbon nanotube network is used as the transistor
-thin-film.}
+thin-film. The drain electrode is the gold contact on the left side of
+each figure, while the source electrode is the gold contact on the
+right.}
 
 \end{figure}
 
-The type of structure used determines the type of sensing mechanisms
-available, which can include electrostatic gating, Schottky barrier
-modulation, capacitance modulation or charge scattering
-\autocite{Heller2008}.
+When the source and drain electrodes of a thin-film field-effect
+transistor are made of metal, a Schottky barrier forms between the
+channel and the electrodes. The Schottky barrier results from a
+difference in the work function between the metal and semiconducting
+channel, leading to bending of the conduction and valence bands and the
+formation of an electric dipole layer at the junction. Due to the
+absence of metal-channel bonding, the metal used has a direct impact on
+barrier height \(\phi_B\) \autocite{Avouris2007,Li2023}. The spatial
+extent of the dipole layer is called the barrier thickness. For unipolar
+transistors, where the Schottky barrier is thick, the channel-electrode
+contact determines the type of charge carrier passing between source and
+drain. A contact which forms a low Schottky barrier for holes will form
+a high Schottky barrier for electrons. In this case, holes flow and the
+device is \(p\)-type. The reverse applies for a contact with a high
+Schottky barrier for holes, where electrons flow and the device is
+\(n\)-type. Thin-film devices can also be ambipolar, where charge
+carriers can quantum-mechanically tunnel through thin Schottky barriers
+and electrons and holes can both flow through the channel
+\autocite{Avouris2007,Heller2008,Shkodra2021,Yao2021}.
 
-discuss Debye length in the context of gating!!! mention plasma lol
+Two different voltages are used to adjust transistor operation. The
+first is the `drain bias', \(V_{ds}\), between the drain and source
+electrodes, and the second is the `gate bias', \(V_g\), applied between
+the gate and source electrode. Changing \(V_g\) alters the energy band
+bending at the channel-electrode junctions, and therefore also alters
+the energy barriers at these junctions. The value of \(V_g\) therefore
+determines whether charge carriers may flow under the influence of
+\(V_{ds}\) and produce a drain-source current \(I_d\); in other words,
+\(V_g\) determines whether the transistor is `on' or `off'. The
+threshold voltage \(V_t\) is the gate voltage required to increase the
+Schottky barrier height to a point where charge carriers no longer flow.
+For a \(p\)-type semiconductor channel, increasing \(V_g\) towards
+positive gate voltages will raise the Schottky barrier and turn current
+off, with the opposite being true for an \(n\)-type channel. In an
+ambipolar transistor, a highly negative \(V_g\) will give rise to hole
+conduction, and a highly positive \(V_g\) will give rise to electron
+conduction. There are therefore two threshold voltages for these
+devices, \(V_{t,h}\) and \(V_{t,e}\). Within the range between these
+gate voltages, both holes and electrons flow through the channel
+\autocite{Avouris2007,Reiner-Rozman2015,Yao2021,Li2023}.
+
+The type of structure used determines the type of biological sensing
+mechanisms available, which can include electrostatic gating, Schottky
+barrier modulation, capacitance modulation or charge scattering.
+Response mechanisms may take place at the gate, at the junctions between
+channel and contact, or within the semiconductor channel
+\autocite{Heller2008,Li2023}. The encapsulation layer shown in
+Figure~\ref{fig-gating-schematics} is added to separate the electrodes
+from the channel-metal junction, ensuring that the less-reliable
+response due to modification of the channel-metal Schottky barrier does
+not dominate sensing \autocite{Heller2008,Yao2021}. Encapsulation is
+therefore a vital part of a functioning sensor, despite being
+under-examined in the literature \autocite{Shkodra2021}. In an
+encapsulated device with a semiconducting thin-film, the predominant
+sensing mechanism is electrostatic gating. Here, the presence of a
+positive charge induces negative charge in the channel or \emph{vice
+versa}, in effect doping the channel and altering the relationship
+between \(V_g\) and \(I_d\) \autocite{Heller2008}. The relative effect
+of changes in \(V_g\) on \(I_d\) is determined by gate capacitance,
+which is a series combination of the geometric capacitance, \(C_{G}\),
+and the quantum capacitance of the 2D nanomaterial, \(C_{Q}\). For a
+back-gated device, geometric capacitance is predominantly due to the
+oxide layer capacitance \(C_{ox}\) \autocite{Heller2009a,Li2023}.
+
+\hypertarget{liquid-gating-and-debye-length}{%
+\subsubsection*{Liquid-Gating and Debye
+Length}\label{liquid-gating-and-debye-length}}
+\addcontentsline{toc}{subsubsection}{Liquid-Gating and Debye Length}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch2/Debye-length-schematic.png}
+
+}
+
+\caption{\label{fig-Debye-length}A diagram of the formation of an
+electric double layer (EDL) under an applied voltage between source and
+liquid-gate electrodes, with a \(p\)-type semiconductor used for the
+channel thin-film. Electric double layers are present at both the
+gate-electrolyte interface and semiconductor-electrolyte interface.
+Adapted from \autocite{Shkodra2021,Tiwari2022}}
+
+\end{figure}
+
+Understanding the ionic behaviour of the gate electrolyte used in a
+liquid-gated device setup gives insight into the gating and sensing
+behaviour of the setup. When a voltage is applied at the liquid-gate,
+the charged ions in solution move to form two electric double layers,
+one at the interface between the electrolyte and gate electrode, and one
+at the interface between electrolyte and semiconducting channel, as
+shown in Figure~\ref{fig-Debye-length}. The gate capacitance is a series
+combination of the capacitance of each EDL in series with quantum
+capacitance \(C_{Q}\). The Gouy-Chapman-Stern model splits the EDL into
+two distinct regions, the first being a compact layer of ions, the Stern
+layer, and the second being a more diffuse layer, the Gouy-Chapman
+layer. The surface potential of the solid-electrolyte interface
+exponentially decreases across the diffuse region of the double-layer;
+the characteristic length of this potential screening is known as Debye
+length, \(\lambda_D\). The typical electrolyte Debye length is on a
+nanometer scale, therefore the bulk electrolyte acts as an insulator,
+similar to the silicon dioxide dielectric in the back-gated
+configuration. The Stern layer capacitance is inversely proportional to
+the Debye length, and therefore decreased \(\lambda_D\) corresponds to
+increased gate capacitance
+\autocite{Bard2001,Israelachvili2011,Shkodra2021,Tiwari2022}.
+
+\begin{equation}\protect\hypertarget{eq-debye-length}{}{
+\lambda_D = \sqrt{\frac{\epsilon_0\epsilon_rk_bT}{2N_Aq^2I}}
+}\label{eq-debye-length}\end{equation}
+
+The equation for Debye length \(\lambda_D\) in an electrolyte solution
+is given by Equation~\ref{eq-debye-length}, where \(\epsilon_0\) is
+vacuum permittivity, \(\epsilon_r\) is the relative permittivity of the
+electrolyte, \(\k_B\) is the Boltzmann constant, \(T\) is absolute
+temperature in K, \(N_A\) is the Avogadro number, \(q\) is the
+elementary charge and \(I\) is ionic strength in mmol L\(^{-1}\). When
+temperature is kept constant, \(\lambda_D\) only depends on the ionic
+strength of the electrolyte and not on any attributes of the gate
+electrode or channel. Successive dilutions of a particular electrolyte
+will increase the Debye length: for \(1 \times\) PBS, \(\lambda_D\) is
+0.7 nm, for \(0.1 \times\) PBS, \(\lambda_D\) is 2.3 nm, for
+\(0.01 \times\) PBS \(\lambda_D\) is 7.3 nm and so on. This means gate
+capacitance is directly dependent on the electrolyte used and its
+concentration. A \(1 \times\) PBS electrolyte gives a gate capacitance
+several orders of magnitude larger than that of a silicon oxide
+back-gate, where a larger capacitance significantly increases the effect
+of electrostatic gating on the channel current. A liquid-gated device
+with low Debye length will therefore be highly sensitive to
+electrostatic changes across a small voltage range
+\autocite{Israelachvili2011,Shkodra2021}.
+
+However, a decreased Debye length also has disadvantages for sensing.
+Electrostatic potentials outside of the electrolyte-channel electrical
+double layer are effectively screened from the channel. Electrical
+double layers will also form around biomolecules such as DNA present
+within the solution. The combined screening effect means signals due to
+potential changes in charged biomolecules within the bulk electrolyte
+will have no effect on gating of the channel. Interactions between the
+analyte and any biorecognition element must therefore occur within the
+Debye length. A tradeoff has to be made between channel sensitivity and
+the size of the sensitive region above the channel. Many medium or large
+proteins will require a relatively dilute electrolyte for analyte
+capture to be detected by the channel
+\autocite{Stern2007,Piccinini2018,Shkodra2021}. Other approaches to
+increasing Debye length without reducing device sensitivity have also
+been trialled. One approach is to attach a layer of polyethylene glycol
+polymer (PEG) to the device, reducing the ability of counterions to
+approach the channel. This increases Debye length at the
+electrolyte-channel interface while preserving the capacitance of the
+electrolyte-gate interface, keeping device sensitivity relatively high
+\autocite{Gao2016,Kesler2020}.
 
 \hypertarget{electrical-characterisation}{%
 \subsection{Electrical
 Characterisation}\label{electrical-characterisation}}
 
-CNTFETs are traditionally \emph{p}-type transistors with positive charge
-carriers \autocite{Martel1998,Kong2000}, while GFETs are ambipolar
-\autocite{Ohno2010a}. Applying an gate voltage V\(_g\) to the gate of a
-CNTFET or GFET increases, or decreases, the number of available charge
-carriers, by bringing the relevant charge-carrying band closer to, or
-further away from, the Fermi level of the channel \autocite{Sze2006}. An
-example of both back-gated and liquid-gated transfer characteristics
-from thin-film transistors are shown in
+Both carbon nanotube field effect transistors and graphene field-effect
+transistors are naturally ambipolar \autocite{Avouris2007,Heller2009a}.
+As described in Section~\ref{sec-gating}, applying a gate voltage
+\(V_g\) to the gate of an ambipolar thin-film transistor influences the
+amount and type of available charge carriers through altering the
+channel energy bands and therefore the electrode-channel Schottky
+barriers. The current-voltage plots for a given transistor are known as
+the `characteristic curves' of the transistor. The plot of \(I_d\)
+against \(V_g\) at constant \(V_{ds}\) is known as the `transfer'
+characteristic curve at that source-drain voltage, while the I-V curve
+of \(I_d\) against \(V_{ds}\) at constant \(V_g\) is known as the
+`source-drain' or `output' characteristic curve at that gate voltage
+\autocite{Sze2006}. Device transfer characteristics are dictated by the
+gate capacitance, as discussed in Section~\ref{sec-gating}. An example
+of both back-gated and liquid-gated transfer characteristics from
+ambipolar thin-film transistors are shown in
 Figure~\ref{fig-gating-transfer}.
 
-\(V_{ds}\) is the voltage between the source and drain electrodes at
-either end of the semiconducting channel, and is known as the `drain
-bias'. \(V_g\) is the potential beneath the gate, and is known as the
-`gate bias'. The gate is insulated from the semiconducting channel by an
-oxide layer. \(I_d\) is the current that flows through the FET from the
-source to the drain. The current-voltage plot of \(I_d\) against \(V_g\)
-is called the `transfer characteristic curve' of the FET, while the I-V
-curve of \(I_d\) against \(V_{ds}\) is called the `source-drain
-characteristic curve' of the FET.
+When source-drain bias voltage is small, the output characteristic curve
+is linear \autocite{Avouris2007}. In this linear regime,
+transconductance at a specific gate voltage is given by
+\(g_m = |dI_{d}/dV_g|\). Transconductance indicates how responsive the
+device is to electrostatic gating at a given gate voltage. In other
+words, when \(g_m\) is large, small changes in \(V_g\) can significantly
+modulate channel current \(I_d\), which is useful for sensing
+\autocite{Heller2009a}. Transconductance at a given gate voltage is also
+proportional to the mobility of charge carriers in the device channel
+\autocite{Zheng2017,Li2023}. The transconductance at a specific gate
+voltage can be found from performing a linear fit in a small region
+around that voltage on the transfer curve. Linear fits for
+transconductance at \(V_g = 0\) V are shown for a back-gated device in
+Figure~\ref{fig-gating-transfer} (a), and a liquid-gated device in
+Figure~\ref{fig-gating-transfer} (b), which give values of
+\(g_m = 5 \times 10^{-8} S\) and \(g_m = 100 \times 10^{-8} S\)
+respectively. Note the order of magnitude difference between back-gated
+transconductance and liquid-gated transconductance. Applying the gate
+voltage that gives maximum transconductance may not always be the
+optimal sensing setup, however. Heller \emph{et al.} argued that gating
+carbon nanotube devices in the subthreshold regime led to sensing with
+superior signal-to-noise ratio \autocite{Heller2009}.
 
-\(V_g\) is used to turn the FET on or off. A FET is known as
-`normally-off' if at zero gate bias the channel conductance is very low,
-and gate voltage must be applied to make the channel conductive.
-Conversely, a FET is `normally-on' when the channel is conductive with
-zero gate bias and must have a gate voltage applied to be turned off.
-For \(p\)-type channel FETs, negative Vg brings the valence band closer
-to the Fermi level, meaning more positive charge carriers are available.
-Therefore these devices are made more conductive with a more negative
-gate bias; an increase in \(V_g\) reduces \(I_d\). The opposite is true
-for \(n\)-type channel devices, where a more positive \(V_g\) brings the
-conduction band closer to the Fermi level, meaning more negative charge
-carriers are available, making the device more conductive. The increased
-availability of majority carriers in both cases is known as
-`accumulation'. Figure~\ref{fig-accumulation} illustrates accumulation
-in each situation.
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.5\textwidth,height=\textheight]{figures/ch2/accumulation.png}
-
-}
-
-\caption{\label{fig-accumulation}Energy band diagrams for a FET device
-under accumulation conditions, where the left side of each diagram is
-the gate region, while the right side is the channel region
-\autocite{Sze2006}.}
-
-\end{figure}
+For the liquid-gated case, the choice of electrolyte determines the
+appropriate voltage range for electrical characterisation, as excessive
+voltages will induce redox reactions. For water-based electrolytes, gate
+voltages must be kept within the \$\pm\$1 V range
+\autocite{Shkodra2021}.
 
 An important attribute of the transfer characteristic curve for all
 thin-film FETs is the on-off current ratio. On-off current ratio is the
-ratio of the current through a device when gated fully ``off'' with a
+ratio of the current through a device when gated fully `off' with a
 positive voltage, to the current through the device when gated fully
-``on'' with a negative voltage \autocite{Zheng2017}. The off current in
-an ambipolar FET can be defined as the minimum current during the
-transfer sweep, where the majority carrier transitions from being holes
-to electrons or vice versa. For example, the on current of the channel
+`on' with a negative voltage \autocite{Zheng2017}. The off current in an
+ambipolar FET can be defined as the minimum current during the transfer
+sweep, where the majority carrier transitions from being holes to
+electrons or vice versa. For example, the on current of the channel
 shown in Figure~\ref{fig-gating-transfer} (b) is 741.5 nA, the off
 current is 0.2 nA, and therefore the on-off ratio is \(\sim\) 3000. In
 contrast, even when 10 V is applied, the backgated device shown in
@@ -472,29 +617,17 @@ of the oxide layer \autocite{Sze2006}. Being able to traverse both on
 and off regimes over a limited voltage interval is one of the many
 advantages of the liquid-gated configuration.
 
-In the linear \(I_d\)-\(V_{ds}\) regime, transconductance is given by
-\(dI_{d}/dV_g\), which gives a measure of the mobility of the charge
-carriers in the device channel \autocite{Martel1998,Sze2006,Zheng2017}.
-
-Traditionally, for sensor applications \(V_g\) is chosen to maximise
-transconductance, as this is considered to be the operating point where
-the channel is most sensitive to changes in the local environment
-\autocite{Ohno2010a,Choi2012}. However, for carbon nanotube FETs it has
-been suggested that operating in the subthreshold regime gives improved
-signal-to-noise ratio \autocite{Heller2009}. A discussion about the
-subthreshold regime of CNTFETs is found in
-Section~\ref{sec-electrical-characterisation-CNT}.
+\(V_t\) can be estimated by extrapolating the linear region of the
+transfer characteristics of a device to the \(V_g\) axis. The value for
+\(V_g\) at this intercept is approximately equal to \(V_t\) when
+\(V_{ds}\) is close to zero \autocite{Sze2006}. It should be noted that
+it is difficult to relate this estimate for \(V_t\) for thin-film
+field-effect transistors to carrier density directly. Instead, the value
+found for \(V_t\) should be considered as a useful parameter for
+comparing the gating behaviour of different devices
+\autocite{Schoonveld2001}.
 
 subthreshold regime Previous biosensor research
-
-A FET contains a potential barrier acting against charge carriers at the
-junctions between the channel and the contacts, known as `Schottky
-barriers'. These barriers arise because of the Fermi energy difference
-between the metal contacts and the semiconducting channel, and are
-characterised by the size of the barrier potential \(φ_B\)
-\autocite{Iijima1991}. Increased barrier size leads to increased
-resistance between the component materials of the FET
-\autocite{Zheng2016}.
 
 As \(C_{qm} \gg C_{edl}\), hysteresis is significantly reduced for the
 liquid-gated configuration relative to the back-gated configuration. In
@@ -512,102 +645,6 @@ thin-film transistors in the literature \autocite{Li2023}.
 \raisebox{-\height}{
 
 \includegraphics{figures/(a).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch2/Q5C10ch5on_current.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(b).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch2/NTQ31C5ch1on_off_current.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(c).png}
 
 }
 
@@ -655,7 +692,7 @@ thin-film transistors in the literature \autocite{Li2023}.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/(d).png}
+\includegraphics{figures/(b).png}
 
 }
 
@@ -696,16 +733,113 @@ thin-film transistors in the literature \autocite{Li2023}.
 }
 
 \end{minipage}%
+\newline
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(c).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch2/Q5C10ch5on_current.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(d).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch2/NTQ31C5ch1on_off_current.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
 
 \caption{\label{fig-gating-transfer}Examples of field-effect transistor
 transfer characteristics taken at \(V_{ds}\) = 100 mV from two different
-device channels. A logarithmic scale is used in (a) and (b), while a
-linear scale is used in (c) and (d). The device channel in (a) and (c)
-was backgated while the device channel in (b) and (d) was liquid-gated.
-The ``on'' current in (a) and (b) is shown with a red horizontal line,
-while the ``off'' current in (b) is shown with a blue horizontal line.
-The linear fit with gradient corresponding to transconductance at
-\(V_g\) = 0 V is shown in (c) and (d) with a dotted red line.}
+device channels. A linear scale is used in (a) and (b), while a
+logarithmic scale is used in (c) and (d). The device channel in (a) and
+(c) was backgated while the device channel in (b) and (d) was
+liquid-gated. The linear fit with gradient corresponding to
+transconductance at \(V_g\) = 0 V is shown in (a) and (b) with a dotted
+red line. The ``on'' current in (c) and (d) is shown with a red
+horizontal line, while the ``off'' current in (d) is shown with a blue
+horizontal line.}
 
 \end{figure}
 
@@ -720,6 +854,14 @@ to form a chain from the gate to the semiconductor, a short is created
 and breakdown occurs. With decreased oxide thickness the the required
 voltage for breakdown also decreases, due to increased carrier
 tunnelling.
+
+\begin{itemize}
+\tightlist
+\item
+  oxide layer leakages
+\end{itemize}
+
+Then leakage also occurs when electrolyte conducts
 
 \hypertarget{current-sampling}{%
 \subsection{Current Sampling}\label{current-sampling}}
@@ -751,7 +893,7 @@ voltage of the device channel.}
 
 \end{figure}
 
-As graphene FETs are ambipolar, they do not possess a characteristic
+As graphene field-effect transistors do not possess a characteristic
 `off' regime. In normal operation of a GFET, the lowest voltage
 obtainable by gating is known as the Dirac voltage
 \autocite{Murugathas2020}.
@@ -774,30 +916,37 @@ A single-walled carbon nanotube (SWCNT) consists of a graphene sheet, a
 flat carbon lattice with hexagonal cells, rolled up into a cylinder.
 Since their discovery in 1991, a wide range of device applications for
 carbon nanotubes (CNTs) have been proposed, based on CNTs being highly
-sensitive to their environment
-\autocite{Iijima1991,Battie2010,Boyd2014,Chen2019}. This high
-sensitivity is due to the high surface-to-volume ratio of the CNTs,
+sensitive to their environment \autocite{Iijima1991,Dekker1999}. This
+high sensitivity is due to the high surface-to-volume ratio of the CNTs,
 which maximises the exposure of this electrically sensitive structure to
 its surroundings \autocite{Yao2021,Shkodra2021}. SWCNT-based devices
 consume little power, operate quickly and are highly flexible
-\autocite{Chen2019,Shkodra2021}. Nanotubes in a network can have
-semiconducting characteristics (s-CNTs) or metallic characteristics
-(m-CNTs), depending on their chirality \autocite{Martel1998,Kong2000}. A
-single CNT will therefore have different properties than a network of
-CNTs, where the individual electrical properties of the CNT tubes are
-averaged out across the network \autocite{Battie2010}. The contact
-between the electrodes and carbon nanotubes determines the behaviour of
-channel carriers. The properties of electrodes generally used in CNT
-FETs means they usually operate as \(p\)-type transistors
-\autocite{Yao2021}.
+\autocite{Shkodra2021}. Nanotubes in a network can have semiconducting
+characteristics (s-CNTs) or metallic characteristics (m-CNTs), depending
+on their chirality \autocite{Martel1998,Kong2000}. A single CNT will
+therefore have different properties than a network of CNTs, where the
+individual electrical properties of the CNT tubes are averaged out
+across the network \autocite{Battie2010}. The contact between the
+electrodes and carbon nanotubes determines the behaviour of channel
+carriers. The properties of electrodes generally used in CNT FETs means
+they usually operate as \(p\)-type transistors \autocite{Yao2021}.
+
+Able to conduct ballistically, good coupling between gate and channel
+electric fields with carbon nanotube devices which enables shorter
+channel sizes \autocite{Avouris2007} carbon nanotube devices in the
+electrolyte-gated layout have stronger channel-gate coupling than the
+back-gated layout \autocite{Heller2009a}
 
 Semiconducting carbon nanotubes have particular advantages for use in
 sensor applications, including a high carrier mobility, compatibility
 with many biological targets, and ease of processing
 \autocite{Shkodra2021}.
 
-\hypertarget{network-morphology}{%
-\subsection{Network Morphology}\label{network-morphology}}
+\hypertarget{carbon-nanotube-networks}{%
+\subsection{Carbon Nanotube Networks}\label{carbon-nanotube-networks}}
+
+Schottky barriers form between the metallic and semiconducting carbon
+nanotubes within a network
 
 \hypertarget{sec-electrical-characterisation-CNT}{%
 \subsection{Electrical
@@ -910,6 +1059,16 @@ shown with red dotted lines. The ON and OFF regimes are also indicated
 on both figures.}
 
 \end{figure}
+
+Like graphene transistors, carbon nanotube transistors are naturally
+ambipolar: they can conduct both electrons and holes. Holes travel at
+highly negative voltages, while electrons travel at highly positive
+voltages. At intermediary voltages, both electrons and holes flow.
+Carbon nanotube transistors can also be doped into behaving as a
+unipolar transistor \autocite{Avouris2007}. If heavily oxygen doped, the
+semiconducting carbon nanotubes will exhibit \(p\)-type behaviour, with
+current flow only occuring in a negative bias state
+\autocite{Shkodra2021}.
 
 \hypertarget{threshold-voltage}{%
 \subsubsection*{Threshold Voltage}\label{threshold-voltage}}
