@@ -134,18 +134,6 @@ Interactions between iORs attached to the channel, such as OR22a, and positive l
 
 The reduction in the channel current of a functionalised FET upon exposure to a positive ligand is notably different to the signal transduction mechanism of iORs *in vivo*, since ORCO does not appear to be required for an iOR bioelectronic nose to function. It has been proposed that the signal response results from the positive ligand binding to the iOR protein, causing it to change shape. Cheema *et al.* used neutron reflectometry to demonstrate that OR22a nanodiscs undergo a 1 nm height change after ethyl hexanoate exposure, likely resulting from a structural change [@Cheema2021]. This change most likely affects the channel in one of two ways. The first involves transfer of charge from the iOR to the channel, reducing I$_{d}$ and causing a negative threshold voltage (or Dirac point) shift. Another could be a more indirect electrostatic gating effect, due to the movement of charge within the Debye screening length of the channel. The Debye length of $1 \times$ PBS buffer is typically much shorter than the height of a single nanodisc [@Murugathas2019b]. However, if structural changes in the iOR were primarily occurring at its base, it is still possible that the electrostatic gating could be the primary sensing mechanism.
 
-##	Non-Specific Binding
+##	Non-Specific Binding {#sec-non-specific-binding}
 
-### Overview {#sec-non-specific-binding}
-
-
-
-###	Non-Specific Binding to Channels
-
-###	Non-Specific Binding to Apparatus
-
-#### Encapsulation {.unnumbered}
-
-#### PDMS Well {.unnumbered}
-
-#### Reference Electrode {.unnumbered}
+Non-specific binding (NSB) refers to any attachment to the sensor channel not related to the specific analyte of interest which could interfere with sensing. Liquid-gated graphene and carbon nanotube devices are highly sensitive to the approach of charge within the Debye length of the device channel [@Shkodra2021]. Non-specific adsorption of the analyte or ambient contamination by numerous elements of the setup can lead to signal responses not attributable to the mechanism of interest (see @sec-CNT-sensing-mechanisms), leading to false positives when sensing [@Chen2004; @Shkodra2021]. These elements include the channel itself, but can also include the source-drain and gate electrodes [@Chen2004]. A variety of measures can be taken to prevent NSB from occurring. Once bioreceptors have been attached to the channel, remaining exposed carbon nanotubes can be passivated with chemical coatings such as Tween-20 and ethanolamine. If measuring multiple channels in a multiplexed array, one channel can be left uncoated to compare the sensing response in a process known as 'internal referencing' [@Shkodra2021].
