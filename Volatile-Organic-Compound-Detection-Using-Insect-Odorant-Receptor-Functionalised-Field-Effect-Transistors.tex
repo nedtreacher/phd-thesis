@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, frame hidden, boxrule=0pt, sharp corners, enhanced, breakable, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, breakable, sharp corners, enhanced, boxrule=0pt, interior hidden, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -952,25 +952,24 @@ Thin-film transistor devices typically exhibit some degree of
 hysteresis, where the history of channel current affects future current
 behaviour. Hysteresis in carbon nanotube and graphene field-effect
 transistors is a result of filling or emptying of slow-discharge charge
-traps in the local environment of the channel. These charge traps exist
-either within the silicon dioxide insulator or at its interface with the
-channel, which can result from adsorption of water or other dopants
-\autocite{McEuen2002,Kim2003,Wang2010}. A capacitive gating effect from
-charged ions also contributes to hysteresis, either due to the use of a
-electrolyte-gated environment or from charged surface contamination
+traps in the channel environment. These charge traps effectively dope
+the silicon dioxide insulator or the insulator-channel interface, which
+results from gate bias stress or dopant adsorption
+\autocite{McEuen2002,Kim2003,Wang2010,Bargaoui2018}. A capacitive gating
+effect from charged ions also contributes to hysteresis, from the use of
+a electrolyte-gated environment or from charged surface contamination
 \autocite{Wang2010,Yao2021}. Due to hysteresis, sweeping \(V_g\)
 forwards across a set voltage range will result in a different
-\(I_d - V_g\) characteristic curve than if \(V_g\) is subsequently swept
-in the reverse direction over that same range. Hysteresis depends on the
-voltage range used for characterisation, the sweep rate and the
-environment of the transistor channel \autocite{Kim2003,Wang2010}. The
-difference between the forward and reverse sweep for both the back-gated
-and liquid-gated case is illustrated in
-Figure~\ref{fig-gating-hysteresis}. The hysteresis is significantly
-lower for the liquid-gated case, which may be explained by the reduced
-voltage range and sweep rate. However, the electrolyte layer may also
-prevent atmospheric adsorbents reaching the channel, further reducing
-hysteresis.
+\(I_d - V_g\) characteristic curve than subsequently sweeping over
+\(V_g\) in the reverse direction. Hysteresis depends on the voltage
+range used for characterisation, the sweep rate and the environment of
+the transistor channel \autocite{Kim2003,Wang2010}. Hysteresis in both
+the back-gated and liquid-gated cases are shown in
+Figure~\ref{fig-gating-hysteresis}. Hysteresis is significantly lower
+for the liquid-gated case, which may be due to the reduced voltage range
+and sweep rate used. However, this change may also result from a
+reduction in trap states in the silicon dioxide layer due to the use of
+a liquid-gate.
 
 Memory effects are also present during current measurement when both
 source-drain and source-gate voltages are kept constant. These changes
@@ -981,14 +980,15 @@ analyte interaction during real-time sensing. Signal drift occurs both
 in ambient conditions and in a vacuum environment, and cannot be
 accounted for by changes in room temperature and ambient lighting alone.
 While research into signal drift is ongoing, it appears to be a
-hysteretic effect resulting from the filling of trap states over time
-\autocite{Lin2006,Noyce2019}. The high demand for characterisation
-equipment in a standard device laboratory means that waiting over three
-hours for baseline drift to settle is impractical, and furthermore,
-extended periods of voltage application may degrade bio-functionalised
-devices \autocite{Noyce2019}. Since trap states are unavoidable to a
-degree \autocite{DiMaria1993,Collins2000}, data analysis that accounts
-for baseline drift was therefore explored in some detail in this thesis.
+hysteretic effect resulting from changes in trap states over time
+\autocite{Lin2006,Bargaoui2018,Noyce2019}. The high demand for
+characterisation equipment in a standard device laboratory means that
+waiting over three hours for baseline drift to settle is impractical,
+and furthermore, extended periods of voltage application may degrade
+bio-functionalised devices \autocite{Noyce2019}. Since trap states are
+unavoidable to a degree \autocite{DiMaria1993,Collins2000}, data
+analysis that accounts for baseline drift was therefore explored in some
+detail in this thesis.
 
 \hypertarget{graphene-field-effect-transistors}{%
 \section{Graphene Field-Effect
@@ -1026,9 +1026,41 @@ reactions within a large range of applied voltages
 \subsubsection*{Graphene Folds}\label{graphene-folds}}
 \addcontentsline{toc}{subsubsection}{Graphene Folds}
 
-Vertical warping on the scale of tens of nanometers helps to stablise
-the graphene layer, increasing elastic energy but reducing the thermal
-vibrations which are large in a 2D material \autocite{Geim2007}.
+\begin{figure}
+
+{\centering \includegraphics[width=0.5\textwidth,height=\textheight]{figures/ch2/modified_NGW8D4_1mM_rhodamineB_centralchannel3_postMsurfactantclean5min_2.4sexposure_20X_221111.png}
+
+}
+
+\caption{\label{fig-graphene-folds}Fluorescence image of a strip of
+graphene on silicon dioxide surface functionalised with Rhodamine B dye.
+Bright lines are visible on the left side of the graphene surface which
+correspond to preferential attachment of dye along the graphene folds.}
+
+\end{figure}
+
+Graphene folding (also referred to as warping or wrinkling) on the scale
+of tens of nanometers occurs at many locations on a graphene monolayer.
+These folds primarily result from the chemical vapour deposition process
+onto copper used in the creation of graphene films. The thermal
+contraction of copper exceeds that of graphene during the rapid cooling
+that takes place after deposition. Since the graphene is pinned to the
+surface, this leads to slight folding of the monolayer. Transferring
+graphene from the rough copper to a relatively smooth Si/SiO\(_2\) wafer
+may also contribute to wrinkling
+\autocite{Zhao2012,Zhu2012,Chhikara2013}. Folds may be up to \(\sim\) 6
+nanometers in height \autocite{Zhu2012}. These folds help to
+mechanically stabilise the graphene layer, but have significant negative
+effects on charge transport \autocite{Geim2007,Chhikara2013,Zhu2012}.
+Folds also exhibit enhanced reactivity due to their low radius of
+curvature \autocite{Zhao2012}. This is demonstrated in
+Figure~\ref{fig-graphene-folds}, where the fluorescent Rhodamine B dye
+preferentially bonds to folded regions, leading to particularly dense
+functionalisation in these regions. This behaviour has been previously
+observed for the decoration of graphene with pentacene molecules
+\autocite{Chhikara2013}. Other defects influencing surface reactivity
+include grain boundaries and point defects in the crystal structure
+\autocite{Zhao2012,Chhikara2013}.
 
 \hypertarget{sec-electrical-characterisation-graphene}{%
 \subsection{Electrical
@@ -1176,6 +1208,9 @@ graphene FET in sensing applications when compared with carbon nanotube
 transistors \autocite{Novoselov2004}. However, the transconductance of
 the curve at \(V_g\) = 0 V, \(g_m\) = 1 µS, is similar to the
 liquid-gated transconductance of a carbon nanotube device shown earlier.
+The on-off ratio may be decreased by the presence of significant
+graphene folding due to diffusive transport of carriers along the folds
+\autocite{Zhu2012}.
 
 while the Dirac voltage is 0.29 V.
 
@@ -1185,8 +1220,8 @@ I compared the transfer characteristics after then rinse steps to the
 pristine characteristics Transfer shifts where current drops to zero are
 excluded (indicates delamination/damage to channel)
 
-\hypertarget{sensing-mechanisms}{%
-\subsection{Sensing Mechanisms}\label{sensing-mechanisms}}
+\hypertarget{sensing-behaviour}{%
+\subsection{Sensing Behaviour}\label{sensing-behaviour}}
 
 The large surface-to-volume ratio of graphene makes it highly sensitive
 to intermolecular interactions and therefore appropriate for use in
@@ -1194,6 +1229,9 @@ sensing applications \autocite{Ohno2015,Tran2016}. An analyte molecule
 can be detected using a graphene channel by observing the change in
 current that occurs when a charged analyte alters the channel Fermi
 level \autocite{Heller2010,Ohno2015}.
+
+Sensing may be dominated by interactions occurring at the graphene folds
+\autocite{Zhao2012}.
 
 \hypertarget{random-network-carbon-nanotube-field-effect-transistors}{%
 \section{Random-Network Carbon Nanotube Field-Effect
@@ -1307,20 +1345,20 @@ In a network carbon nanotube device with metal electrodes, transistor
 switching is primarily governed by band bending at the interfaces
 between each electrode and the semiconducting carbon nanotubes. The
 difference in Fermi level between each material leads to a a flow of
-charge across each interface until the Fermi levels equilibriate and a
+charge across each interface until the Fermi levels equilibrate and a
 Schottky barrier forms. These barriers are effectively electric dipole
-layers, whose net electric fields restrict the further flow of charge at
+layers whose net electric fields restrict the further flow of charge at
 each interface. This band bending process depends on the work function
 of the metal, so the type of metal determines the type of charge being
 restricted. For example, a high work function metal bends the valence
 band of the semiconductor towards the Fermi level of the metal, creating
 a low barrier for holes but a high barrier for electrons at each
-interface \autocite{Avouris2007,Bargaoui2018}. For current to flow,
-quantum tunnelling must occur through the Schottky barriers. If the
-barrier size is low for electrons and holes, they both flow through the
-channel, which is referred to as `ambipolar' behaviour. However, the
-metal electrodes may cause the Schottky barriers to favour one type over
-another, leading to `unipolar' conduction
+interface \autocite{Avouris2007,Bargaoui2018}. Channel current results
+primarily from quantum tunnelling through these Schottky barriers. The
+Schottky barriers at the metal electrodes result in one type of charge
+dominating flow, referred to as unipolar behaviour. However, if the
+barrier size is low for both holes and electrons, they can flow
+simultaneously through the channel, referred to as ambipolar behaviour
 \autocite{Avouris2007,Heller2008}.
 
 The behaviour of carbon nanotube network transistors is also influenced
@@ -1328,23 +1366,23 @@ by a variety of potential barriers existing at junctions between carbon
 nanotubes. A prominent example is the Schottky barriers existing at
 junctions between metallic and semiconducting nanotubes (m-s junctions)
 \autocite{Fuhrer2000,Topinka2009,Murugathas2019a}. These potential
-barriers cause significantly heightened resistance at these junctions
-relative to other points in the network \autocite{Fuhrer2000,Jang2015}.
-When the channel length is much larger than that of individual
-nanotubes, channel current must pass through junctions along percolation
-pathways. If only one percolation pathway exists across a sparse
-network, the network density is at the `percolation threshold'. If a
-network is below the percolation threshold, the channel will not conduct
-\autocite{Hu2004,Topinka2009,Jang2015}. For a fixed network density well
-above percolation, if a network contains a low proportion of
-semiconducting tubes, percolating pathways only containing metallic
-nanotubes exist. A device with this film will be highly conductive but
-cannot be gated \autocite{Fuhrer2000,Topinka2009}. Increasing the
-proportion of s-CNTs present means m-s junctions become more prevalent.
-The introduced Schottky barriers cause a dramatic conductance drop, and
-gating becomes possible. As the proportion of s-CNTs approaches 100\%,
-semiconducting pathways with no metallic junctions emerge, and
-conductance sharply increases once more \autocite{Topinka2009}.
+barriers cause increased resistance at these junctions relative to other
+points in the network \autocite{Fuhrer2000,Jang2015}. When the channel
+length is much larger than that of individual nanotubes, channel current
+must pass through junctions placed along percolation pathways. If only
+one pathway exists across a sparse network, the network density is at
+the `percolation threshold'. If a network is below the percolation
+threshold, the channel cannot conduct
+\autocite{Hu2004,Topinka2009,Jang2015}. When a network with density well
+above percolation contains a low proportion of semiconducting nanotubes,
+percolating pathways which only contain metallic nanotubes exist. A
+device with this film will be highly conductive but cannot be gated
+\autocite{Fuhrer2000,Topinka2009}. Fixing the density but increasing the
+proportion of s-CNTs means m-s junctions become more prevalent. The
+introduced Schottky barriers cause a dramatic drop in conductance. As
+the proportion of s-CNTs approaches 100\%, semiconducting pathways with
+no metallic junctions emerge, and conductance sharply increases once
+more \autocite{Topinka2009}.
 
 \hypertarget{sec-electrical-characterisation-CNT}{%
 \subsection{Electrical
@@ -1454,90 +1492,117 @@ transistor channel, using a logarithmic scale in (a) and using a linear
 scale in (b) to emphasise different features of the same dataset. The
 subthreshold slope is shown with a black dotted line, while the
 threshold voltages are shown with red dotted lines. The ON and OFF
-regimes are also indicated on both figures.}
+regimes are also indicated on both figures. \(V_{ds}\) = 100 mV was
+placed across the channel.}
 
 \end{figure}
 
 Like graphene transistors, mixed-chirality carbon nanotube transistors
-are naturally ambipolar: they can conduct both electrons and holes.
-Holes travel at highly negative voltages, while electrons travel at
-highly positive voltages. At intermediary voltages, both electrons and
-holes flow \autocite{Yao2021}. Transistor behaviour can be made unipolar
-through doping the semiconducting carbon nanotubes or by choosing an
-electrode metal with a particularly high work function, increasing the
-Schottky barrier for one type of charge
+are naturally ambipolar: they can conduct both electrons and holes. An
+applied gate voltage \(V_g\) alters the Fermi energy of the
+semiconducting nanotubes, changing the size of the Schottky barriers
+present, and therefore changing the amount and type of charge flowing
+through the channel \autocite{Nakanishi2002,Avouris2007,Heller2008}.
+\(I_d\) mainly consists of holes at highly negative gate voltages, and
+mainly consists of electrons at highly positive voltages. At
+intermediary voltages, both electrons and holes flow
+\autocite{Avouris2007,Yao2021}. Transistor behaviour can be made
+unipolar through doping the semiconducting carbon nanotubes or by
+choosing an electrode metal with a particularly high work function,
+increasing the Schottky barrier for one type of charge
 \autocite{Avouris2007,Cao2009,Yao2021}. For example, the use of gold
 electrodes promotes \(p\)-type behaviour over \(n\)-type behaviour due
 to the work function of the metal; ambient adsorption of oxygen will
 weakly dope the semiconducting carbon nanotubes and likewise promote
 \(p\)-type behaviour \autocite{McEuen2002,Cao2009,Shkodra2021}.
 
-In a unipolar transistor, the threshold voltage \(V_t\) is equal to the
-gate voltage required to prevent charge carriers flowing across the
-channel \autocite{Petti2016,Shkodra2021}. The size of the Schottky
-barriers, and therefore current flow, can be controlled by altering the
-Fermi energy of the semiconducting nanotubes using the applied gate
-voltage \(V_g\) \autocite{Nakanishi2002,Avouris2007,Heller2008}. In
-ambipolar devices, two separate threshold voltages exist for each type
-of charge carrier, \(V_{t,h}\) and \(V_{t,e}\)
-\autocite{Reiner-Rozman2015}. In the region between these gate voltages,
-both holes and electrons flow through the channel. If percolating
-pathways consisting entirely of m-CNTs are present, the off current
-\(I_{off}\) flows through these pathways, as conduction through metallic
-nanotubes is largely unaffected by changes in \(V_g\)
-\autocite{Fuhrer2000,Topinka2009}. If there are no unblocked m-CNT
-pathways, \(I_{off}\) is entirely due to Schottky barrier tunnelling
-\autocite{Avouris2007}. \(V_t\) can be estimated by extrapolating the
-trendline of the linear region of the transfer characteristics to the
-\(V_g\) axis. The intercept \(V_{gInt}\) is approximately equal to the
-threshold voltage when \(V_{ds}\) is close to zero
-\autocite{Petti2016,Li2023}. This is only a rough estimate of the actual
-device \(V_t\), but is sufficient for comparing the gating behaviour of
-different devices \autocite{Li2023}.
-
-Various other device parameters can be extracted which reflect the
-morphology of the carbon nanotube network. Partial alignment of a
-random-network carbon nanotube network maximises the transconductance of
-a device, as this creates more semiconducting pathways, increasing
-current while preserving the presence of gateable junctions within the
-network \autocite{Cao2009,Rouhi2010,Rouhi2011a,Jang2015,Li2023}. The
-on-off ratio of a carbon nanotube device is largely decided by the ratio
-of s-CNTs to m-CNTs. The relative proportion of metallic carbon
-nanotubes in the network determines the size of \(I_{off}\). Therefore,
-unlike a graphene device, the off current can be readily reduced by
-eliminating percolating metallic pathways for increased
-\(I_{on}/I_{off}\) \autocite{Hu2004,Cao2009,Rouhi2010,Rouhi2011a}. In a
-liquid-gated environment, the gate leakage current of a sparse carbon
-nanotube transistor can approach \(I_d\), leading to significant device
-noise. A dense network or a graphene device can therefore give enhanced
+A variety of parameters can be extracted which reflect the morphology of
+the carbon nanotube network. Partial alignment of a random-network
+carbon nanotube network maximises the transconductance of a device, as
+this creates more semiconducting pathways, increasing current while
+preserving the presence of gateable junctions within the network
+\autocite{Cao2009,Rouhi2010,Rouhi2011a,Jang2015,Li2023}. The on-off
+ratio of a carbon nanotube device is largely decided by the ratio of
+s-CNTs to m-CNTs. The relative proportion of metallic carbon nanotubes
+in the network determines the size of \(I_{off}\). Therefore, unlike a
+graphene device, the off current can be readily reduced by eliminating
+percolating metallic pathways for increased \(I_{on}/I_{off}\)
+\autocite{Hu2004,Cao2009,Rouhi2010,Rouhi2011a}. In a liquid-gated
+environment, the gate leakage current of a sparse carbon nanotube
+transistor can approach \(I_d\), leading to significant device noise. A
+dense network or a graphene device can therefore give enhanced
 signal-to-noise ratio during sensing \autocite{Ohno2015}. Noyce \emph{et
 al.} found that fully-on back-gated carbon nanotube devices typically
 exhibit a \(\sim\) 3 hour period of steep signal drift, followed by
-steady-state current flow. This settling behaviour was found to be
-reversible and highly characteristic of a particular channel, and could
-be modelled using a sum of three exponentials \autocite{Noyce2019}.
+steady-state current flow. This settling behaviour was both reversible
+and highly characteristic of a particular channel, and could be modelled
+using a sum of three exponentials \autocite{Noyce2019}.
 
-Threshold Voltage: minimum gate-to-source voltage that is needed to
-create a conducting path between the electrodes
+\hypertarget{threshold-voltage}{%
+\subsubsection*{Threshold Voltage}\label{threshold-voltage}}
+\addcontentsline{toc}{subsubsection}{Threshold Voltage}
 
-Quantative measurement of leftward shift in transfer curve Use minima of
-curve in reverse sweep direction (more consistent than reading in
-forward sweep direction) I compared the transfer characteristics after
-then rinse steps to the pristine characteristics Transfer shifts where
-current drops to zero are excluded (indicates delamination/damage to
-channel)
+The threshold voltage \(V_t\) of a unipolar transistor is equal to the
+gate voltage required to prevent the flow of charge carriers across the
+channel, often referred to as turning the device off
+\autocite{Petti2016,Shkodra2021}. In ambipolar devices, two separate
+threshold voltages exist for each type of charge carrier, \(V_{t,h}\)
+and \(V_{t,e}\), which are shown in Figure~\ref{fig-CNT-characteristics}
+on both a linear (a) and logarithmic (b) scale. In the region between
+these gate voltages, known as the subthreshold regime, both holes and
+electrons flow through the channel
+\autocite{Avouris2007,Reiner-Rozman2015}. If percolating pathways
+consisting entirely of m-CNTs are present, \(I_{off}\) flows through
+these pathways, as conduction through metallic nanotubes is largely
+unaffected by changes in \(V_g\) \autocite{Fuhrer2000,Topinka2009}. If
+there are no unblocked m-CNT pathways, \(I_{off}\) is entirely due to
+Schottky barrier tunnelling \autocite{Avouris2007}. \(V_t\) can be
+estimated by extrapolating the trendline of the linear region of the
+transfer characteristics to the \(V_g\) axis. The intercept is
+approximately equal to the threshold voltage when \(V_{ds}\) is close to
+zero, as shown in Figure~\ref{fig-CNT-characteristics} (b)
+\autocite{Sze2006,Petti2016,Li2023}. This is only a rough estimate of
+the actual device \(V_t\), but is sufficient when comparing the gating
+behaviour of different devices \autocite{Li2023}.
 
-Second quantative measurement of leftward shift in transfer curve Use
-curve in reverse sweep direction (more consistent than reading in
-forward sweep direction) Separate readings for left and right hand sides
-of transfer curve (left side = electrons dominant carrier, right side =
-holes dominant carrier) Transfer shifts where current drops to zero are
-excluded (indicates delamination/damage to channel) This gives us a
-quantitative idea of whether the transfer shifts in slides 5/6 are
-stable (remain the same/similar after rinse steps)
+\hypertarget{subthreshold-slope}{%
+\subsubsection*{Subthreshold Slope}\label{subthreshold-slope}}
+\addcontentsline{toc}{subsubsection}{Subthreshold Slope}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch2/NTQ31C5ch1subthreshold_slope.png}
+
+}
+
+\caption{\label{fig-subthreshold-slope}A carbon nanotube network
+transfer sweep with \(V_{ds}\) = 100 mV on a logarithmic scale.
+Threshold voltage is shown with a black dotted line, while subthreshold
+slope is shown with a red dotted line.}
+
+\end{figure}
+
+The subthreshold slope \(S\) is a measure of how rapidly a transistor
+approaches the minimum current \(I_{off}\). The subthreshold slope is
+often referred to using its reciprocal value, the subthreshold swing,
+which is equivalent to the change in \(V_g\) required to change \(I_d\)
+by one order of magnitude. This figure of merit is strongly related to
+the gate capacitance of the device. As the slope exponentially
+approaches the off current in the subthreshold regime, it can be fitted
+with a linear trendline on a logarithimic scale.
+\autocite{Sze2006,Petti2016}. A linear trendline fitted to the logarithm
+of the subthreshold regime is shown in
+Figure~\ref{fig-subthreshold-slope}, where the gradient corresponds to
+subthreshold slope. A high subthreshold slope (greater than 0.01
+decades/mV) reduces power consumption and required operating voltage of
+the sensor device \autocite{Petti2016}. Some studies have found that
+sensor devices showed better signal-to-noise ratio when gated in the
+subthreshold regime, where small voltage changes in response to analyte
+can cause exponential current changes along the subthreshold slope
+\autocite{Heller2009,Gao2010}.
 
 \hypertarget{sec-CNT-sensing-mechanisms}{%
-\subsection{Sensing Behaviour}\label{sec-CNT-sensing-mechanisms}}
+\subsection{Sensing}\label{sec-CNT-sensing-mechanisms}}
 
 As all atoms are at the surface of the carbon nanotube structure,
 nanotubes are very sensitive to their surroundings and therefore
@@ -1545,8 +1610,9 @@ suitable for sensing use \autocite{Cao2009,Yao2021,Shkodra2021}. The
 chirality and diameter of a carbon nanotube affects both its coupling
 with the gate and its surface chemistry, which determines the sensing
 mechanisms available to a single CNT. Only s-CNTs can be
-electrostatically gated; m-CNTs and larger diameter nanotubes are
-typically more reactive \autocite{Cao2009,Li2023}; and the nanotube
+electrostatically gated; m-CNTs, bent nanotubes and larger diameter
+nanotubes are typically more reactive
+\autocite{Cao2009,Zhao2012,Chhikara2013,Li2023}; and the nanotube
 chirality (\(n,m\)) can determine the strength of binding to DNA in a
 base sequence-dependent manner \autocite{Rouhi2011a}. Carbon nanotubes
 have been used for vapour-phase sensing since 2000, when Kong \emph{et
@@ -1581,10 +1647,13 @@ addition of charge carriers to the channel, while the gating mechanism
 results from a nearby charge inducing an opposite polarity charge in the
 channel. Both changes alter the relationship between \(V_g\) and \(I_d\)
 and shift the carrier threshold voltages
-\autocite{Tran2016,Shkodra2021}. However, when Schottky and other
+\autocite{Tran2016,Shkodra2021,Li2023}. However, when Schottky and other
 potential barriers are frequent, barrier modulation may make a
-significant contribution to sensing responses
-\autocite{Boyd2014,Murugathas2019a}.
+significant contribution to sensing responses, especially at densities
+close to the percolation threshold \autocite{Boyd2014,Murugathas2019a}.
+
+\hypertarget{summary}{%
+\section{Summary}\label{summary}}
 
 \cleardoublepage
 \phantomsection
