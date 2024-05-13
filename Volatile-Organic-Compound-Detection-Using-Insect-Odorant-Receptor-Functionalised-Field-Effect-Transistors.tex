@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, interior hidden, enhanced, breakable, boxrule=0pt, sharp corners, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, frame hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, interior hidden, enhanced, sharp corners]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -540,19 +540,6 @@ complete picture of device behaviour, but also may help to ensure
 devices are kept highly sensitive to electrostatic gating effects by
 redistributing charge in the channel \autocite{Kireev2017,Noyce2019}.
 
-A variety of quantitative parameters can be extracted from the transfer
-characteristics of a thin-film transistor. A quantitative summary of a
-range of TFT parameters can be found in the thin-film transistor study
-by Petti \emph{et al.} \autocite{Petti2016}. The parameters of
-particular interest here are transconductance, on-off ratio, threshold
-voltage and subthreshold swing. Transconductance and on-off ratio are
-discussed below, while threshold voltage and subthreshold swing are
-discussed for the carbon nanotube network case specifically in
-Section~\ref{sec-electrical-characterisation-CNT}. Other behaviours
-observed when measuring currents present in a thin-film device are also
-discussed below, including source-gate leakage current and the
-hysteresis and real-time signal drift of source-drain current.
-
 \begin{figure}
 
 \begin{minipage}[t]{0.03\linewidth}
@@ -759,6 +746,19 @@ horizontal line, while the ``off'' current in (d) is shown with a blue
 horizontal line.}
 
 \end{figure}
+
+A variety of quantitative parameters can be extracted from the transfer
+characteristics of a thin-film transistor. A quantitative summary of a
+range of TFT parameters can be found in the thin-film transistor study
+by Petti \emph{et al.} \autocite{Petti2016}. The parameters of
+particular interest here are transconductance, on-off ratio, threshold
+voltage and subthreshold swing. Transconductance and on-off ratio are
+discussed below, while threshold voltage and subthreshold swing are
+discussed for the carbon nanotube network case specifically in
+Section~\ref{sec-electrical-characterisation-CNT}. Other behaviours
+observed when measuring currents present in a thin-film device are also
+discussed below, including source-gate leakage current and the
+hysteresis and real-time signal drift of source-drain current.
 
 \hypertarget{transconductance}{%
 \subsubsection*{Transconductance}\label{transconductance}}
