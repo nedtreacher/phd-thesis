@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, frame hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, interior hidden, enhanced, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}, breakable, enhanced, frame hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -520,26 +520,6 @@ interface, keeping device sensitivity relatively high
 \subsection{Electrical
 Characterisation}\label{electrical-characterisation}}
 
-Both carbon nanotube field effect transistors and graphene field-effect
-transistors are naturally ambipolar. Applying a gate voltage \(V_g\) to
-the gate of an ambipolar thin-film transistor influences the amount and
-type of available charge carriers for conduction
-\autocite{Avouris2007,Tran2016,Heller2009a}. The current-voltage plots
-for a given transistor are known as the `characteristic curves' of the
-transistor. The plot of \(I_d\) against \(V_g\) at constant \(V_{ds}\)
-is known as the `transfer' characteristic curve at that source-drain
-voltage, while the I-V curve of \(I_d\) against \(V_{ds}\) at constant
-\(V_g\) is known as the `source-drain' or `output' characteristic curve
-at that gate voltage \autocite{Petti2016,Shkodra2021}. The transfer
-characteristics are governed by the gate capacitance, as discussed in
-Section~\ref{sec-gating}. Both back-gated and liquid-gated transfer
-characteristics from ambipolar thin-film transistors are shown in
-Figure~\ref{fig-gating-transfer}. Taking regular transfer measurements
-of a graphene or carbon nanotube device is not only useful in building a
-complete picture of device behaviour, but also may help to ensure
-devices are kept highly sensitive to electrostatic gating effects by
-redistributing charge in the channel \autocite{Kireev2017,Noyce2019}.
-
 \begin{figure}
 
 \begin{minipage}[t]{0.03\linewidth}
@@ -572,7 +552,7 @@ redistributing charge in the channel \autocite{Kireev2017,Noyce2019}.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch2/Q5C10ch5transconductance.png}
+\includegraphics{figures/ch2/Q5C10ch8transconductance.png}
 
 }
 
@@ -668,7 +648,7 @@ redistributing charge in the channel \autocite{Kireev2017,Noyce2019}.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch2/Q5C10ch5on_current.png}
+\includegraphics{figures/ch2/Q5C10ch8on_off_current.png}
 
 }
 
@@ -735,30 +715,66 @@ redistributing charge in the channel \autocite{Kireev2017,Noyce2019}.
 \end{minipage}%
 
 \caption{\label{fig-gating-transfer}Examples of field-effect transistor
-transfer characteristics taken at \(V_{ds}\) = 100 mV from two different
-device channels. A linear scale is used in (a) and (b), while a
-logarithmic scale is used in (c) and (d). The curves in (a) and (c) are
-from backgated channels, while the curves in (b) and (d) are from
-liquid-gated channels. The linear fit with gradient corresponding to
-transconductance at \(V_g\) = 0 V is shown in (a) and (b) with a dotted
-red line. The ``on'' current in (c) and (d) is shown with a red
-horizontal line, while the ``off'' current in (d) is shown with a blue
-horizontal line.}
+transfer characteristics taken at \(V_{ds}\) = 100 mV using two
+different carbon nanotube network device channels. A linear scale is
+used in (a) and (b), while a logarithmic scale is used in (c) and (d).
+The curves in (a) and (c) are from a backgated channel, while the curves
+in (b) and (d) are from a liquid-gated channel. The linear fit with
+gradient corresponding to transconductance at \(V_g\) = 0 V is shown in
+(a) and (b) with a dotted red line. The ``on'' current in (c) and (d) is
+shown with a red horizontal line, while the ``off'' current is shown
+with a blue horizontal line.}
 
 \end{figure}
 
-A variety of quantitative parameters can be extracted from the transfer
-characteristics of a thin-film transistor. A quantitative summary of a
-range of TFT parameters can be found in the thin-film transistor study
-by Petti \emph{et al.} \autocite{Petti2016}. The parameters of
-particular interest here are transconductance, on-off ratio, threshold
-voltage and subthreshold swing. Transconductance and on-off ratio are
+Applying a gate voltage \(V_g\) to the gate of an thin-film transistor
+influences the amount and type of available charge carriers for
+conduction \autocite{Avouris2007,Tran2016,Heller2009a}. The
+current-voltage plots of a given transistor are known as `characteristic
+curves'. The plot of \(I_d\) against \(V_g\) at constant \(V_{ds}\) is
+known as the `transfer' characteristic curve at that source-drain
+voltage, while the I-V curve of \(I_d\) against \(V_{ds}\) at constant
+\(V_g\) is known as the `source-drain' or `output' characteristic curve
+\autocite{Petti2016,Shkodra2021}. Both back-gated and liquid-gated
+transfer characteristics from thin-film transistors are shown in
+Figure~\ref{fig-gating-transfer}. The back-gated device exhibits
+unipolar behaviour, where the transistor conducts in only one direction
+along the \(I_d - V_g\) curve, while the liquid-gated device exhibits
+ambipolar behaviour, where conduction occurs along both directions of
+the curve. The liquid-gated device is also able to traverse a wide range
+of currents over a much more limited voltage interval than the
+back-gated device. A variety of quantitative parameters or figures of
+merit can be extracted from the transfer characteristics of a thin-film
+transistor \autocite{Petti2016}. Transconductance and on-off ratio are
 discussed below, while threshold voltage and subthreshold swing are
 discussed for the carbon nanotube network case specifically in
-Section~\ref{sec-electrical-characterisation-CNT}. Other behaviours
-observed when measuring currents present in a thin-film device are also
-discussed below, including source-gate leakage current and the
-hysteresis and real-time signal drift of source-drain current.
+Section~\ref{sec-electrical-characterisation-CNT}.
+
+\hypertarget{on-off-ratio}{%
+\subsubsection*{On-off Ratio}\label{on-off-ratio}}
+\addcontentsline{toc}{subsubsection}{On-off Ratio}
+
+One of the most important figures of merit which can be extracted from
+the transfer characteristic curve of a thin-film FET is the on-off
+current ratio, the ratio of the current through a device when gated
+fully `on', \(I_{on}\), to the current \(I_{off}\) when gated fully
+`off'. \autocite{Petti2016,Shkodra2021}. Having a low off current is
+desirable as it corresponds to low power consumption by the transistor
+\autocite{Rouhi2010}. In Figure~\ref{fig-gating-transfer} (a), there is
+a clear on regime at large negative voltages and an off regime at large
+positive voltages. Although the transfer curve never completely flattens
+in each direction, \(I_{on}\) can be reasonably be estimated by the
+highest current obtained, while \(I_{off}\) can be estimated from the
+lowest current reading. In an ambipolar FET, such as that shown in
+Figure~\ref{fig-gating-transfer} (b), the off current can be defined as
+the minimum current during the transfer sweep, where the majority
+carrier transitions from being holes to electrons or \emph{vice versa}
+\autocite{Petti2016,Zheng2017}. For the backgated channel shown in
+Figure~\ref{fig-gating-transfer} (a), the on-off ratio
+\(I_{on}/I_{off}\) is \(\sim\) 700, while for the liquid-gated device in
+Figure~\ref{fig-gating-transfer} (b), \(I_{on}/I_{off} \sim 3000\). The
+superior on-off ratio is a significant advantage of the liquid-gated
+configuration \autocite{Shkodra2021}.
 
 \hypertarget{transconductance}{%
 \subsubsection*{Transconductance}\label{transconductance}}
@@ -779,36 +795,13 @@ small region around that voltage on the transfer curve. Linear fits for
 transconductance at \(V_g = 0\) V are shown for a back-gated device in
 Figure~\ref{fig-gating-transfer} (a), and a liquid-gated device in
 Figure~\ref{fig-gating-transfer} (b), which give values of \(g_m\) =
-0.05 µS and \(g_m\) = 1 µS respectively. The difference of several
+0.002 µS and \(g_m\) = 1 µS respectively. The difference of several
 orders of magnitude between back-gated and liquid-gated transconductance
 corresponds to the difference of several orders of magnitude between
 back and liquid-gated gate capacitance \autocite{Tran2016,Shkodra2021}.
-Improved transconductance is therefore a significant advantage of the
-use of the liquid-gate.
-
-\hypertarget{on-off-ratio}{%
-\subsubsection*{On-off Ratio}\label{on-off-ratio}}
-\addcontentsline{toc}{subsubsection}{On-off Ratio}
-
-Another important attribute of the transfer characteristic curve for all
-thin-film FETs is the on-off current ratio. On-off current ratio is the
-ratio of the current through a device when gated fully `off' with a
-positive voltage, \(I_{off}\), to the current through the device when
-gated fully `on' with a negative voltage, \(I_{on}\). The off current in
-an ambipolar FET can be defined as the minimum current during the
-transfer sweep, where the majority carrier transitions from being holes
-to electrons or \emph{vice versa} \autocite{Petti2016,Zheng2017}. For
-example, for the channel shown in Figure~\ref{fig-gating-transfer} (b),
-\(I_{on} = 740\) nA and \(I_{off} = 0.2\) nA. Therefore, the on-off
-ratio \(I_{on}/I_{off}\) is \(\sim\) 3000. In contrast, even when 10 V
-is applied, the backgated device shown in
-Figure~\ref{fig-gating-transfer} (a) is never gated fully off. Being
-able to traverse both on and off regimes over a limited voltage interval
-is another advantage of the liquid-gated configuration. Having a low off
-current is desirable as it corresponds to low power consumption by the
-transistor \autocite{Rouhi2010}. Overall, on-off ratio of a device is a
-useful figure of merit for switching which is relatively simple to both
-find and present.
+The ability to achieve high transconductance at relatively low voltage
+is important for the creation of low power sensors, which is another
+advantage of the liquid-gated setup.
 
 \hypertarget{gate-leakage}{%
 \subsubsection*{Gate Leakage}\label{gate-leakage}}
@@ -827,19 +820,42 @@ exceeding the dielectric strength of the oxide, dielectric breakdown can
 occur, where the oxide layer no longer acts as an insulator. Breakdown
 results from voltage-induced oxygen vacancies in the SiO\(_2\) lattice
 forming a conductive path through the insulator \autocite{Padovani2017}.
-In the liquid-gated case, the choice of electrolyte determines the
-appropriate voltage range for electrical characterisation, since
-excessive voltages will drive electrolysis and induce redox reactions.
+Breakdown occured at \(\sim\) 50 V for the back-gated channel in
+Figure~\ref{fig-gating-transfer}. In the liquid-gated case, the
+electrolyte used determines the appropriate voltage range for electrical
+characterisation, since excessive voltages will induce redox reactions.
 For water-based electrolytes, gate voltages must be kept within the
 \(\pm\) 1 V range \autocite{Wang2010,Ohno2015,Shkodra2021}. In normal
-operation, gate current should appear negligible on a linear scale for
-both the back-gated and liquid-gated cases, as shown in
-Figure~\ref{fig-gating-hysteresis}.
+operation, gate current should appear negligible on a linear scale, as
+shown in Figure~\ref{fig-gating-hysteresis}.
 
 \hypertarget{hysteresis-and-baseline-drift}{%
 \subsubsection*{Hysteresis and Baseline
 Drift}\label{hysteresis-and-baseline-drift}}
 \addcontentsline{toc}{subsubsection}{Hysteresis and Baseline Drift}
+
+Thin-film transistor devices typically exhibit some degree of
+hysteresis, where the history of channel current affects future current
+behaviour. Hysteresis in carbon nanotube and graphene field-effect
+transistors is a result of filling or emptying of slow-discharge charge
+traps in the channel environment. These charge traps effectively dope
+the silicon dioxide insulator or the insulator-channel interface, which
+results from gate bias stress or dopant adsorption
+\autocite{McEuen2002,Kim2003,Wang2010,Bartolomeo2011,Bargaoui2018,Peng2018}.
+A capacitive gating effect from charged ions also contributes to
+hysteresis, from the use of a electrolyte-gated environment or from
+charged surface contamination \autocite{Wang2010,Yao2021}. Due to
+hysteresis, sweeping \(V_g\) forwards across a set voltage range will
+result in a different \(I_d - V_g\) characteristic curve than
+subsequently sweeping over \(V_g\) in the reverse direction. Hysteresis
+depends on the voltage range used for characterisation, the sweep rate
+and the environment of the transistor channel
+\autocite{Kim2003,Wang2010}. Hysteresis in both the back-gated and
+liquid-gated cases are shown in Figure~\ref{fig-gating-hysteresis}.
+Hysteresis is significantly lower for the liquid-gated case, which may
+be due to the reduced voltage range used. However, this change may also
+result from a reduction in trap states in the silicon dioxide layer due
+to the use of a liquid-gate.
 
 \begin{figure}
 
@@ -943,35 +959,11 @@ Drift}\label{hysteresis-and-baseline-drift}}
 characteristics taken at \(V_{ds}\) = 100 mV from two different device
 channels on a linear scale. Forward and reverse sweeps are shown for the
 back-gated case (a) and the liquid-gated case (b), with the direction of
-each sweep indicated by an arrow. A sweep rate of \(V_{ds}\) = 100
-mV/sample was used for the back-gated device and a sweep rate of
-\(V_{ds}\) = 10 mV/sample was used for the liquid-gate device. The gate
-current measured during each sweep is also shown with a dotted line.}
+each sweep indicated by an arrow. A sweep rate of \(V_{ds}\) = 10
+mV/sample was used for both transfer curves. The gate current measured
+during each sweep is also shown with a dotted line.}
 
 \end{figure}
-
-Thin-film transistor devices typically exhibit some degree of
-hysteresis, where the history of channel current affects future current
-behaviour. Hysteresis in carbon nanotube and graphene field-effect
-transistors is a result of filling or emptying of slow-discharge charge
-traps in the channel environment. These charge traps effectively dope
-the silicon dioxide insulator or the insulator-channel interface, which
-results from gate bias stress or dopant adsorption
-\autocite{McEuen2002,Kim2003,Wang2010,Bartolomeo2011,Bargaoui2018,Peng2018}.
-A capacitive gating effect from charged ions also contributes to
-hysteresis, from the use of a electrolyte-gated environment or from
-charged surface contamination \autocite{Wang2010,Yao2021}. Due to
-hysteresis, sweeping \(V_g\) forwards across a set voltage range will
-result in a different \(I_d - V_g\) characteristic curve than
-subsequently sweeping over \(V_g\) in the reverse direction. Hysteresis
-depends on the voltage range used for characterisation, the sweep rate
-and the environment of the transistor channel
-\autocite{Kim2003,Wang2010}. Hysteresis in both the back-gated and
-liquid-gated cases are shown in Figure~\ref{fig-gating-hysteresis}.
-Hysteresis is significantly lower for the liquid-gated case, which may
-be due to the reduced voltage range and sweep rate used. However, this
-change may also result from a reduction in trap states in the silicon
-dioxide layer due to the use of a liquid-gate.
 
 Memory effects are also present during current measurement when both
 source-drain and source-gate voltages are kept constant. These changes
@@ -1067,6 +1059,29 @@ include grain boundaries and point defects in the crystal structure
 \hypertarget{sec-electrical-characterisation-graphene}{%
 \subsection{Electrical
 Characterisation}\label{sec-electrical-characterisation-graphene}}
+
+The transfer sweep behaviour of a graphene device is ambipolar and has
+no off regime under standard conditions
+\autocite{Novoselov2004,Bartolomeo2011,Ohno2015}. When a gate voltage
+\(V_g\) is applied to the channel of a graphene device, the Fermi energy
+of the graphene is shifted and surface charge density is altered
+\autocite{Novoselov2004,Heller2010,Ohno2015}. An increase in surface
+charge density means an increase in carriers available for either \(p\)
+or \(n\)-conduction and increased \(I_d\) \autocite{Geim2007}. The
+regions of hole conduction and electron conduction are shown in
+Figure~\ref{fig-graphene-characteristics} (a), alongside the
+corresponding Fermi energy on the simplified graphene bandstructure
+(known as a `Dirac cone'). The transconductance of the curve at \(V_g\)
+= 0 V, \(g_m\) = 1 µS, is similar to the liquid-gated transconductance
+of a carbon nanotube device shown earlier. As graphene lacks a bandgap,
+there is a minimum possible conductance for graphene devices, which
+leads to a relatively small on-off ratio
+\autocite{Novoselov2004,Geim2007}. Folding may further decrease on-off
+ratio due to diffusive transport of carriers along the folds
+\autocite{Zhu2012}. The on-off ratio of the graphene transfer curve
+shown in Figure~\ref{fig-graphene-characteristics} (a) is 5. A bandgap
+can be introduced to a graphene device using a dual-gated configuration,
+increasing the on-off ratio past 100 \autocite{Xia2010}.
 
 \begin{figure}
 
@@ -1177,29 +1192,6 @@ arrows. The relative Fermi energy at each minima is also shown on
 bandstructure insets (adapted from \autocite{Peng2018}).}
 
 \end{figure}
-
-The transfer sweep behaviour of a graphene device is ambipolar and has
-no off regime under standard conditions
-\autocite{Novoselov2004,Bartolomeo2011,Ohno2015}. When a gate voltage
-\(V_g\) is applied to the channel of a graphene device, the Fermi energy
-of the graphene is shifted and surface charge density is altered
-\autocite{Novoselov2004,Heller2010,Ohno2015}. An increase in surface
-charge density means an increase in carriers available for either \(p\)
-or \(n\)-conduction and increased \(I_d\) \autocite{Geim2007}. The
-regions of hole conduction and electron conduction are shown in
-Figure~\ref{fig-graphene-characteristics} (a), alongside the
-corresponding Fermi energy on the simplified graphene bandstructure
-(known as a `Dirac cone'). The transconductance of the curve at \(V_g\)
-= 0 V, \(g_m\) = 1 µS, is similar to the liquid-gated transconductance
-of a carbon nanotube device shown earlier. As graphene lacks a bandgap,
-there is a minimum possible conductance for graphene devices, which
-leads to a relatively small on-off ratio
-\autocite{Novoselov2004,Geim2007}. Folding may further decrease on-off
-ratio due to diffusive transport of carriers along the folds
-\autocite{Zhu2012}. The on-off ratio of the graphene transfer curve
-shown in Figure~\ref{fig-graphene-characteristics} (a) is 5. A bandgap
-can be introduced to a graphene device using a dual-gated configuration,
-increasing the on-off ratio past 100 \autocite{Xia2010}.
 
 \hypertarget{dirac-voltage}{%
 \subsubsection*{Dirac Voltage}\label{dirac-voltage}}
@@ -1322,7 +1314,7 @@ reactions \autocite{Ohno2015}.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\textwidth,height=\textheight]{figures/ch2/carbon_nanotube_wrapping.png}
+{\centering \includegraphics[width=0.55\textwidth,height=\textheight]{figures/ch2/carbon_nanotube_wrapping.png}
 
 }
 
@@ -1630,7 +1622,7 @@ behaviour of different devices \autocite{Li2023}.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.5\textwidth,height=\textheight]{figures/ch2/NTQ31C5ch1subthreshold_slope_alt.png}
+{\centering \includegraphics[width=0.45\textwidth,height=\textheight]{figures/ch2/NTQ31C5ch1subthreshold_slope_alt.png}
 
 }
 
@@ -1641,16 +1633,17 @@ slope is shown with a red dotted line.}
 
 \end{figure}
 
-The subthreshold slope \(S\) is a measure of how rapidly a transistor
-approaches the minimum current \(I_{off}\). The subthreshold slope is
-often referred to using its reciprocal value, the subthreshold swing,
-which is equivalent to the change in \(V_g\) required to change \(I_d\)
-by one order of magnitude. This figure of merit is strongly related to
-the gate capacitance of the device. As the slope exponentially
-approaches the off current in the subthreshold regime, it can be fitted
-with a linear trendline on a logarithimic scale.
-\autocite{Sze2006,Petti2016}. A linear trendline fitted to the logarithm
-of the subthreshold regime is shown in
+The subthreshold slope
+\(S = d\textrm{log}_{10}(I_{d})/dV_g|_{\textrm{max}}\) is a measure of
+how rapidly a transistor approaches the minimum current \(I_{off}\). The
+subthreshold slope is often referred to using its reciprocal value, the
+subthreshold swing, which is equivalent to the change in \(V_g\)
+required to change \(I_d\) by one order of magnitude. This figure of
+merit is strongly related to the gate capacitance of the device. As the
+slope exponentially approaches the off current in the subthreshold
+regime, it can be fitted with a linear trendline on a logarithimic
+scale. \autocite{Sze2006,Petti2016}. A linear trendline fitted to the
+logarithm of the subthreshold regime is shown in
 Figure~\ref{fig-subthreshold-slope}, where the gradient corresponds to
 subthreshold slope. A high subthreshold slope exceeding than 10
 decades/V is ideal for reduced power consumption of the working sensor
