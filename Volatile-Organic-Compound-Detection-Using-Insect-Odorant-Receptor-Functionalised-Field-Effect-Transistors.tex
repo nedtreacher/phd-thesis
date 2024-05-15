@@ -198,7 +198,7 @@ Functionalised Field-Effect Transistors}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}, breakable, enhanced, frame hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, borderline west={3pt}{0pt}{shadecolor}, enhanced, interior hidden, boxrule=0pt, frame hidden, sharp corners]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -224,74 +224,2345 @@ chemistry
 
 \bookmarksetup{startatroot}
 
-\hypertarget{carbon-nanotube-and-graphene-field-effect-transistors}{%
-\chapter{Carbon Nanotube and Graphene Field-Effect
-Transistors}\label{carbon-nanotube-and-graphene-field-effect-transistors}}
+\hypertarget{sec-pristine-characteristics}{%
+\chapter{Characteristics of Pristine Carbon Nanotube \& Graphene Field
+Effect Transistors}\label{sec-pristine-characteristics}}
 
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
-Out of a wide range of available transducer options available for the
-creation of compact, portable and highly-integrated biosensors,
-field-effect transistors are among the most promising. Field-effect
-transistors, initially proposed in the 1930s, consist of two conductive
-electrodes on either side of a semiconducting channel, the `source' and
-`drain' electrodes, alongside an isolated `gate' electrode which is
-typically perpendicular to the channel. An applied electric field from
-the gate electrode capacitively controls channel resistance, giving rise
-to the label `field-effect'. By adjusting gate voltage, the flow of
-charge carriers between source and drain can be varied over several
-orders of magnitude. The ability of this simple structure to obtain a
-large signal response from small changes in channel behaviour means
-field-effect transistors can be used as high-quality amplifiers for
-sensor applications \autocite{Petti2016,Tran2016,Shkodra2021,Yao2021}.
+Several different approaches were followed to fabricate carbon nanotube
+network and graphene field-effect transistors for biosensor use. The
+three carbon nanotube film types used for devices were the
+solvent-deposited, surfactant-deposited and steam-assisted
+surfactant-deposited (steam-deposited) films discussed in the previous
+chapter. As minor changes were made to fabrication processes throughout
+the thesis, the fabrication dates of devices used are stated, alongside
+a brief description of the process used at the time. This chapter looks
+to use the characterisation techniques outlined in the previous chapter
+to compare and contrast the device channel morphologies and electrical
+characteristics resulting from the various methods used.
 
-Carbon nanotube network and graphene field-effect transistors (CNTFETs
-and GFETs) are both examples of a class of field-effect transistors
-called thin-film transistors (TFTs). Thin-film transistors were first
-developed in 1962 \autocite{Weimer1962}, and are closely related to the
-commonly-used metal oxide semiconductor field-effect transistor
-(MOSFET). Unlike MOSFETs, thin-film transistors do not use the substrate
-as the device channel. Instead, current passes through a semiconducting
-film on the surface of the device; the films discussed here are graphene
-and carbon nanotubes, two carbon-based low-dimension nanomaterials.
-Since thin-film transistors do not require a conductive substrate, they
-can be fabricated using light, flexible and stretchable substrates,
-making them significantly more versatile than MOSFETs
-\autocite{Cao2009,Petti2016,Shkodra2021}. Invisible conductive
-thin-films such as metal oxides and carbon nanotube networks can also be
-used to create transparent electronics \autocite{Cao2009}. While the
-principle of modulating current with a gate electrode is shared by the
-MOSFET and TFT, the underlying physics behind the transistor behaviour
-differs between the two. The MOSFET is turned on by the change in
-carrier behaviour when switching from an depletion to an inversion mode,
-while this is not the case for a TFT \autocite{Petti2016}. Details of
-graphene and carbon nanotube TFT switching behaviours can be found in
-the subsequent sections.
+Atomic force microscopy and Raman spectroscopy were performed on the
+carbon nanotube networks to identify the distribution of carbon nanotube
+diameters and the extent to which defects were present on the carbon
+nanotube networks. Electrical characterisation was then used to see how
+the morphology of each film type affected the performance of the
+completed devices. Both back-gated and liquid-gated transfer
+characteristics were compared, and figures of merit from the
+liquid-gated characteristics were examined. Control measurements were
+also taken to verify the behaviour of the pristine device as a sensor in
+both liquid-gated and vapour-phase environments. In the liquid-phase, a
+salt concentration sensing series was performed with a steam-deposited
+carbon nanotube network device. The device characteristics were taken
+and device drift was examined and modelled. The sensing series was
+performed by successively diluting \(1 \times\) PBS electrolyte in the
+polydimethylsiloxane `well' (electrolyte container) while passing a
+current through the device, and measuring the current response to
+dilutions. Various filters were applied to the collected data to better
+understand the signal change. Responses of the device to ethyl hexanoate
+and \emph{trans}-2-hexanal in a vapour phase environment were measured
+and compared to those from the off-the-shelf reference sensors of the
+vapour delivery system.
 
-\hypertarget{sec-general-FETs}{%
-\section{Thin-Film Field-Effect Transistors}\label{sec-general-FETs}}
+\hypertarget{sec-pristine-morphology}{%
+\section{Carbon Nanotube Network Morphology and
+Composition}\label{sec-pristine-morphology}}
 
-\hypertarget{sec-gating}{%
-\subsection{Structure and Gating}\label{sec-gating}}
+\hypertarget{sec-pristine-AFM}{%
+\subsection{Atomic Force Microscopy}\label{sec-pristine-AFM}}
 
-The basic components of the thin-film transistor can be configured in a
-number of different ways. Two of these configurations are the back-gated
-field-effect transistor and the liquid-gated (or electrolyte-gated)
-transistor. The relatively simple back-gated configuration, shown in
-Figure~\ref{fig-gating-schematics} (a), uses the degenerately doped
-silicon substrate as the gate. The channel is isolated from the gate
-with a thin silicon dioxide layer. A liquid-gated device, shown in
-Figure~\ref{fig-gating-schematics} (b), is used for sensitive analyte
-detection in liquid-phase. In the most common form of this
-configuration, a submerged Ag/AgCl reference electrode is used as a
-top-gate. The channel is isolated from the gate by the bulk of an
-electrolyte solution, typically the biofriendly phosphate-buffered
-saline (PBS). Other aqueous salt solutions, polymers and ion-gels are
-also sometimes used as the electrolyte gate. The electrolyte is
-restricted to the channel area using a hydrophobic PDMS microchamber,
-referred to here as a `PDMS well'
-\autocite{Avouris2007,Shkodra2021,Tran2016,Li2023}.
+Figure~\ref{fig-afm-morphology} shows a side-by-side comparison of the
+surface morphology of carbon nanotube films fabricated using the methods
+described in \textbf{?@sec-dep-carbon-nanotubes}. These images were
+collected using an atomic force microscope and processed in the manner
+described in \textbf{?@sec-afm-characterisation}.
+Figure~\ref{fig-bundled-network} shows a film of carbon nanotubes
+deposited in solvent, Figure~\ref{fig-dropcast-network} shows a film of
+carbon nanotubes dropcast in surfactant, and
+Figure~\ref{fig-steaming-network} shows carbon nanotubes dropcast in
+surfactant in the presence of steam. As discussed in previous works
+using solvent-based deposition techniques for depositing carbon
+nanotubes, in each network multi-tube bundles form due to strong mutual
+attraction between nanotubes
+\autocite{Zheng2017,Murugathas2018,Murugathas2019a,Nguyen2021}. However,
+when surfactants are present, they adsorb onto the carbon nanotubes and
+form a highly repulsive structure able to overcome the strong attraction
+between nanotubes. This repulsion keeps the individual carbon nanotubes
+more isolated
+\autocite{Wenseleers2004,Gavrel2013,Hermanson2013-16,Shimizu2013,DiCrescenzo2014}.
+The diameter range provided by the supplier for the individual carbon
+nanotubes used is \(1.2-1.7\) nm, while the length range is \(0.3-5.0\)
+µm (Nanointegris).
+
+\begin{figure}
+
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Ned_NTQ24_20220125_00235.png}
+
+}
+
+}
+
+\subcaption{\label{fig-bundled-network}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Ned_NTQ24_20220125_00235_histogram_initialguess.png}
+
+}
+
+}
+
+\subcaption{\label{fig-bundled-network-histogram}}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Ned_NTQ8C7_w4_pristine_00084_20210428(2).png}
+
+}
+
+}
+
+\subcaption{\label{fig-dropcast-network}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_histogram_initialguess.png}
+
+}
+
+}
+
+\subcaption{\label{fig-dropcast-network-histogram}}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Ned_NGQ14D2_W4_pristine_20220713_00567.png}
+
+}
+
+}
+
+\subcaption{\label{fig-steaming-network}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Ned_NGQ14D2_W4_pristine_20220713_00567_histogram_initialguess.png}
+
+}
+
+}
+
+\subcaption{\label{fig-steaming-network-histogram}}
+\end{minipage}%
+
+\caption{\label{fig-afm-morphology}2.5 µm \(\times\) 2.5 µm atomic force
+microscope (AFM) images of carbon nanotube films deposited using various
+methods, shown side-by-side with histogram height distributions and
+kernel density estimate (KDE) plots corresponding to each image. The
+network shown in (a) with height distribution shown in (b) was deposited
+in solvent, the network shown in (c) with height distribution shown in
+(d) was dropcast in surfactant, and the network shown in (e) with height
+distribution shown in (f) was dropcast in surfactant with steam
+present.}
+
+\end{figure}
+
+It has previously been demonstrated that the diameter range of deposited
+single-walled carbon nanotubes can be modelled via a normal or Gaussian
+distribution \autocite{LeMieux2008,Liu2013,Vobornik2023}. However, when
+the height profiles from the 2.5 µm \(\times\) 2.5 µm AFM images are
+directly extracted and binned, as plotted in black in
+Figure~\ref{fig-afm-morphology}, the histograms obtained do not follow a
+normal distribution. One reason for this result is that the carbon
+nanotubes do not lie perfectly flat on the substrate surface, as the
+silicon dioxide substrate and the carbon nanotubes each possess some
+surface roughness. To find the contribution of substrate surface
+roughness to the height profile histogram corresponding to each network
+deposition method, silicon dioxide substrates were modified using the
+same processes as in Figure~\ref{fig-afm-morphology} but without carbon
+nanotubes present in the solutions used. 2.5 µm \(\times\) 2.5 µm AFM
+images of the modified surfaces are shown in
+Figure~\ref{fig-afm-substrate}.
+
+\begin{figure}
+
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Ned_SiO2_00351_20231016.png}
+
+}
+
+}
+
+\subcaption{\label{fig-sio2-only}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Ned_SiO2_00351_20231016_histogram_initialguess.png}
+
+}
+
+}
+
+\subcaption{\label{fig-sio2-histogram}}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Ned_SiO2_s_surfactant_nosteam_00355_20231016.png}
+
+}
+
+}
+
+\subcaption{\label{fig-surfactant-afm}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Ned_SiO2_s_surfactant_nosteam_00355_20231016_histogram_initialguess.png}
+
+}
+
+}
+
+\subcaption{\label{fig-surfactant-histogram}}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Ned_SiO2_s_surfactant_steam_00357_20231016.png}
+
+}
+
+}
+
+\subcaption{\label{fig-steamed-surfactant}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Ned_SiO2_s_surfactant_steam_00357_20231016_histogram_initialguess.png}
+
+}
+
+}
+
+\subcaption{\label{fig-steamed-surfactant-histogram}}
+\end{minipage}%
+
+\caption{\label{fig-afm-substrate}2.5 µm \(\times\) 2.5 µm atomic force
+microscope (AFM) images of silicon dioxide substrates alongside
+histogram height distributions and KDE plots corresponding to each
+image. The substrate in (a) and (b) was exposed to solvent, the
+substrate in (c) and (d) was exposed to surfactant, and the substrate in
+(e) and (f) was exposed to surfactant with steam present.}
+
+\end{figure}
+
+\begin{equation}\protect\hypertarget{eq-skew}{}{
+f(x) = \frac{2}{\omega}\phi\bigg(\frac{x-\xi}{\omega}\bigg)\Phi\bigg(\alpha\bigg(\frac{x-\xi}{\omega}\bigg)\bigg)
+}\label{eq-skew}\end{equation}
+
+In Figure~\ref{fig-afm-substrate}, it appears that each substrate
+surface has a roughness that follows a normal distribution with some
+degree of skewness. Figure~\ref{fig-sio2-histogram} and
+Figure~\ref{fig-surfactant-histogram} are negatively skewed
+distributions. The equation for a skew-normal distribution is given in
+Equation~\ref{eq-skew}, where \(\alpha\) is the `shape parameter',
+\(\xi\) is the `location parameter', \(\omega\) is the `scale
+parameter', \(\phi(x)\) is the standard normal distribution and
+\(\Phi(x)\) is the corresponding cumulative distribution function.
+\(\alpha\) indicates the skewness of the distribution. \(\xi\) and
+\(\omega\) correspond to the mean and standard deviation of the
+skew-free normal distribution when \(\alpha\) is set equal to zero
+\autocite{Azzalini1999}. The fitted skew-normal distribution in
+Figure~\ref{fig-sio2-histogram} has \(\alpha = -3.2\), \(\xi = 2.2\) nm
+and \(\omega = 0.5\) nm, while in Figure~\ref{fig-surfactant-histogram}
+\(\alpha = -2.2\), \(\xi = 2.2\) nm and \(\omega = 0.5\) nm. The close
+correspondence between \(\xi\) and \(\omega\) for these distributions
+implies that the skewness is a variable imaging or processing artifact
+rather than a physical property of the surface. Without distortion, the
+roughness of a clean SiO\(_2\) surface should follow a normal
+distribution \autocite{Velicky2015}.
+
+Figure~\ref{fig-steamed-surfactant-histogram} has a pronounced positive
+skew with a long tail. The tail appears to result from the contribution
+of residual surfactant aggregates to surface morphology, observed in
+Figure~\ref{fig-steamed-surfactant} and recently discussed elsewhere in
+the literature \autocite{Christensen2022,Vobornik2023}. Attempting to
+fit a skew-normal distribution to this histogram fails when all three
+variables are allowed to vary due to the presence of the tail. Instead,
+previous values obtained for \(\xi\) and \(\omega\) can be set fixed at
+\(\xi\) and \(\omega\) at 2.2 nm and 0.5 nm respectively in the fitting
+process, assuming that these values are characteristic of the imaging
+process used and not the substrate. In this fitting process, therefore,
+only \(\alpha\) was allowed to change. The resulting fitted distribution
+is shown in Figure~\ref{fig-steamed-surfactant-histogram}, with
+\(\alpha = -2.4\). The distribution closely fits the negative tail of
+the histogram, but deviates slightly from the positive tail due to the
+presence of surfactant. This deviation is small and the fit is good
+quality, with an R-squared value of 0.98. The surfactant contamination
+identified here could have negative effects on both sensitivity of
+carbon nanotubes and also could damage the attached biological elements.
+
+\begin{figure}
+
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_mask.png}
+
+}
+
+}
+
+\subcaption{\label{fig-mask}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NTQ24_20220125_00235_cnt_histogram.png}
+
+}
+
+}
+
+\subcaption{\label{fig-solvent-cnt-histogram}}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NTQ8C7_w4_pristine_cnt_histogram.png}
+
+}
+
+}
+
+\subcaption{\label{fig-surfactant-cnt-histogram}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NT14D2_W4_pristine_cnt_histogram.png}
+
+}
+
+}
+
+\subcaption{\label{fig-steamed-surfactant-cnt-histogram}}
+\end{minipage}%
+
+\caption{\label{fig-cnt-histogram}An masked AFM image is shown in (a),
+where the masked carbon nanotube bundles are shaded blue. The mask sets
+a height threshold so that masked features are excluded from the height
+dataset. Histogram height distributions with corresponding KDE plots
+collected via the morphology analysis method outlined by Vobornik
+\emph{et al.} \autocite{Vobornik2023} are shown in (b)-(d). The
+substrate in (b) was exposed to solvent, the substrate in (c) was
+exposed to surfactant, and the substrate in (d) was exposed to
+surfactant with steam present.}
+
+\end{figure}
+
+Using the morphology analysis technique outlined by Vobornik \emph{et
+al.} \autocite{Vobornik2023}, five successive diameter measurements of
+30 carbon nanotube bundles were collected using Gwyddion. Measurements
+were not taken at bundle junctions. A height threshold `mask' was
+defined in Gwyddion to determine average substrate height, as shown in
+Figure~\ref{fig-mask}. This background value was subtracted from our
+diameter measurements to determine the actual bundle height. The mean
+background heights of the solvent-deposited, surfactant-deposited and
+steam-assisted surfactant-deposited bundle diameter histograms were
+\(8.8 \pm 4.0\) nm, \(4.2 \pm 1.8\) nm and \(3.3 \pm 1.0\) nm
+respectively. An increased maximum feature height leads to an increased
+mean background height, and by examining the AFM images in
+Figure~\ref{fig-afm-morphology} it appears this may be due to deep
+artifacts on the surface of the substrate in the vicinity of large
+features. The average of the five height-adjusted values for each carbon
+nanotube bundle was then calculated, and these 30 averages were sorted
+into six equal-sized bins. The binned bundle diameter measurements,
+alongside estimated probability density, are shown in
+Figure~\ref{fig-cnt-histogram}.
+
+From Figure~\ref{fig-cnt-histogram}, it is clear that each histogram
+appears to follow a positively skewed normal distribution, different to
+the skew-free normal distribution expected from previous works
+\autocite{LeMieux2008,Liu2013,Vobornik2023}. The skew is likely another
+artifact from imaging the network with the atomic force microscope. The
+force of the atomic force microscope tip is known to cause larger
+bundles to undergo some degree of compression, and the resulting
+systematic underestimation of their height may be responsible for the
+distribution skewness \autocite{Vobornik2023}. The fitted skew-normal
+distribution in Figure~\ref{fig-solvent-cnt-histogram} has
+\(\alpha = 2.7\) (shape; skew), \(\xi = 4.3\) nm (location; mean),
+\(\omega = 5.9\) nm (scale; standard deviation), the distribution in
+Figure~\ref{fig-surfactant-cnt-histogram} has \(\alpha = 2.4\),
+\(\xi = 2.2\) nm, \(\omega = 2.6\) nm, and the distribution in
+Figure~\ref{fig-steamed-surfactant-cnt-histogram} has \(\alpha = 3.6\),
+\(\xi = 2.2\) nm and \(\omega = 1.5\) nm. The probability density for
+the carbon nanotube bundle histogram drops to approximately zero at or
+before 0 nm, which is physically appropriate.
+
+\begin{verbatim}
+Warning: package 'kableExtra' was built under R version 4.3.3
+\end{verbatim}
+
+\hypertarget{tbl-circle-packing}{}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1053}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1228}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0965}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0965}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1228}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1228}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1228}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.1228}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 16\tabcolsep) * \real{0.0877}}@{}}
+\caption{\label{tbl-circle-packing}The first eight optimised ratios of
+2D packed circle diameter to encompassing circle diameter, given to 3
+s.f. (encompassing circle diameter = \(d\), number of packed circles =
+\(n\), approximate packed circle diameter = \(d_n\)).\\
+}\tabularnewline
+\toprule\noalign{}
+\endfirsthead
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(n\) & \text{2} & \text{3} & \text{4} & \text{5} & \text{6} & \text{7}
+& \text{8} & \text{9} \\
+\(d\)/\(d_n\) & \text{2.00} & 2.15 & 2.41 & \text{2.70} & \text{3.00} &
+\text{3.00} & \text{3.30} & 3.61 \\
+\end{longtable}
+
+Previously, analysis of the morphology of carbon nanotube networks has
+been simplified by assuming the component nanotubes are cylinders,
+follow 2D packing and are of equal diameter \autocite{Murugathas2018}.
+Table~\ref{tbl-circle-packing} shows the relationship between the
+diameter of a bundle of 2D packed cylinders and the constituent
+diameters of up to nine cylinders within that bundle. From looking up
+the relevant \(d\)/\(d_n\) packing ratios, and assuming an average
+carbon nanotube diameter of 1.45 nm, it is possible to use
+Table~\ref{tbl-circle-packing} to find the approximate number of
+nanotubes \emph{n} likely to be present in the mean bundle size
+corresponding to each deposition type \autocite{Graham1998,Specht2023}.
+These estimates are shown in Table~\ref{tbl-histogram-parameters}. Also
+shown in Table~\ref{tbl-histogram-parameters} is an estimate of the
+ratio of single- to multi-tube bundles for each deposition. This
+estimate was obtained by taking the integral of each distribution with a
+lower bound of 2.9 nm, the minimum multi-tube bundle size for 1.45 nm
+diameter nanotubes. As the area under the curve represents the
+probability a bundle will have a particular diameter, this integral
+should give a good estimate of the relative proportion of multi-tube
+bundles. Table~\ref{tbl-histogram-parameters} should be interpreted as
+lower-limit estimates of the size and relative proportion of bundles,
+recalling that the distribution skewness indicates underestimation of
+the true bundle height.
+
+\hypertarget{tbl-histogram-parameters}{}
+\begin{longtable}[t]{>{\raggedright\arraybackslash}p{4cm}>{\centering\arraybackslash}p{3cm}>{\centering\arraybackslash}p{3cm}>{\centering\arraybackslash}p{3cm}}
+\caption{\label{tbl-histogram-parameters}The mean of histogram distributions for carbon nanotube films deposited
+using various methods, alongside estimates for the number of nanotubes
+present per mean bundle and the estimated proportion of multi-tubed
+bundles present across the network. }\tabularnewline
+
+\toprule
+ & Mean Bundle Diameter (nm) & Tubes per Average Bundle & \% Multi-Tube Bundles\\
+\midrule
+Solvent deposited & 8.8 ± 4.0 & 28 & > 96\%\\
+Surfactant deposited & 4.2 ± 1.8 & 5 & > 75\%\\
+Surfactant deposited with steam & 3.3 ± 1.0 & 3 & > 65\%\\
+\bottomrule
+\end{longtable}
+
+Both the carbon nanotube bundle diameter mean and standard deviation are
+small for surfactant-deposited films when compared to the mean and
+standard deviation of solvent-deposited films. However, despite the
+presence of surfactant, it is apparent both from
+Figure~\ref{fig-afm-morphology} and Table~\ref{tbl-histogram-parameters}
+that not all surfactant-dispersed carbon nanotubes are deposited
+individually. Bundling may occur during the process of deposition onto
+the substrate, which could disrupt the repulsive forces from the
+surfactant coating and allow attractive forces to temporarily dominate.
+It is possible that the bundling of surfactant-dispersed carbon
+nanotubes is a consequence of dynamics introduced by the coffee-ring
+effect \autocite{Deegan1997,VanGaalen2021}. The coffee-ring effect
+refers to a build-up of dispersed solid forming around the edges of a
+dispersion evaporating on a surface. This process occurs due to the
+dispersion edges being fixed by surface forces, leading to capillary
+flow outwards to replace liquid evaporating at the edges, bringing solid
+material along with it. The presence of vapour is known to disrupt this
+capillary effect \autocite{Bishop2020}, which may explain why mean
+bundle diameter is lower for the films deposited in surfactant with
+steam present relative to films deposited in surfactant without steam.
+
+The discussion in this section gives us a new understanding of the
+histograms shown in Figure~\ref{fig-afm-morphology}. It is now apparent
+that these histograms are linear combinations of skewed normal
+distributions. These distributions include a negatively-skewed
+distribution corresponding to the substrate surface and a
+positively-skewed distribution corresponding to the carbon nanotube
+bundles. X and Y junctions between overlapping nanotubes may also form a
+similarly skewed normal distribution as part of the full histogram
+\autocite{Murugathas2018}. The complete linear combination could be
+modelled mathematically in order to rapidly extract key parameters from
+atomic force microscope images \autocite{Marchenko2010}, but
+implementing this approach is outside of the scope of this thesis.
+Another outcome of this discussion is awareness that carbon nanotube
+bundling within a network is lowered by the presence of surfactant
+during deposition. Introducing steam when depositing with surfactant
+lowers bundling even further, but also leads to residual surfactant
+pooling and attaching to the substrate surface. These results may both
+be explained by the presence of steam enabling surfactant to follow
+carbon nanotubes to the substrate surface, which keeps them from
+bundling during the attachment process. The unwanted persistence of
+surfactant means that higher temperature vacuum annealing may be
+required for robust biosensors \autocite{Kane2014}.
+
+\hypertarget{sec-pristine-raman}{%
+\subsection{Raman Spectroscopy}\label{sec-pristine-raman}}
+
+\begin{figure}
+
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/bundled_raman.png}
+
+}
+
+}
+
+\subcaption{\label{fig-solvent-deposited}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/singletube_raman.png}
+
+}
+
+}
+
+\subcaption{\label{fig-surfactant-deposited}}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.33\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.35\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/comparison-raman.png}
+
+}
+
+}
+
+\subcaption{\label{fig-dg-peak-comparison}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.33\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-pristine-raman}A series of nine Raman spectra at
+different locations across a 40 µm \(\times\) 100 µm carbon nanotube
+film region, where (a) shows spectra from a film deposited using solvent
+while (b) shows spectra from a film deposited with surfactant in the
+presence of steam. (c) shows the spread of the D-peak/G\(^+\)-peak
+spectral ratios corresponding to each film.}
+
+\end{figure}
+
+Raman spectroscopy was also used to analyse and compare the deposited
+carbon nanotube networks. Raman spectra were collected from a
+solvent-deposited carbon nanotube film and a steam-assisted
+surfactant-deposited film, both on silicon dioxide, in the manner
+described in \textbf{?@sec-raman-characterisation}. These spectra were
+then processed using the Python script mentioned in
+Section~\ref{sec-raman-analysis}. For each location, spectra over two
+wavenumber ranges were collected. A peak corresponding to the silicon
+dioxide substrate, found in the range between 100 cm\(^{-1}\) and 650
+cm\(^{-1}\), was used as a reference peak for the normalisation of
+intensity across the wavenumber range between 1300 cm\(^{-1}\) and 1650
+cm\(^{-1}\). These normalised spectra are shown in
+Figure~\ref{fig-pristine-raman}. In all spectra, a D-band comprising a
+single D-peak is observed at \(\sim\) 1320 cm\(^{-1}\), and a G-band
+comprising two G-peaks, G\(^-\) and G\(^+\), is observed between
+\(\sim\) 1525 cm\(^{-1}\) and \(\sim\) 1650 cm\(^{-1}\). These features
+are characteristic of networks of semiconducting carbon nanotubes
+\autocite{Dresselhaus2005,King2014}.
+
+Closer inspection of the D peak and G peaks can give us important
+information about network composition. G\(^-\) is a minor peak found at
+\(\sim\) 1570 cm\(^{-1}\), while G\(^+\) is a larger feature at \(\sim\)
+1590 cm\(^{-1}\). The G\(^+\) feature describes the in-plane vibration
+of carbon bonds along the length of the carbon nanotubes, while the
+G\(^-\) feature describes the in-plane vibration of bonds about the
+nanotube circumference \autocite{King2014,Swiniarski2021}. The splitting
+between the wavenumber location of the G\(^-\) and G\(^+\) local maxima
+is lower in Figure~\ref{fig-surfactant-deposited} than in
+Figure~\ref{fig-solvent-deposited}, indicating more metallic nanotubes
+are present in the surfactant-deposited network
+\autocite{Swiniarski2021}. The D-peak gives an indication of the defects
+present in the carbon nanotube atomic structure
+\autocite{King2014,Swiniarski2021}. The size of the normalised D-peak
+appears much lower in Figure~\ref{fig-solvent-deposited} than in
+Figure~\ref{fig-surfactant-deposited}, indicating the solvent deposition
+process introduces less defects to the carbon nanotubes than
+surfactant-mediated deposition.
+
+It is also possible to compare the relative magnitude of the D-peak and
+G\(^+\)-peak intensity to quantify carbon nanotube structural disorder,
+which disrupts in-plane lattice vibration
+\autocite{Dresselhaus2005,King2014}. Figure~\ref{fig-dg-peak-comparison}
+gives a summary of the ratios between the D-peak and G\(^+\)-peak across
+all nine positions for the solvent-deposited and surfactant-deposited
+film. It is immediately observed that I\(_{D}\)/I\(_{G}\) is
+significantly larger for the steam-assisted, surfactant-deposited films
+than for the solvent-deposited films. This is a further indication of
+the presence of defects across the steam-deposited network. These
+defects are likely introduced through the introduction of charge
+impurites by surfactant aggregates present around the carbon nanotubes
+\autocite{Christensen2022}. However, at the same time, the range of
+values for the I\(_{D}\)/I\(_{G}\) ratio is lower for the
+steam-deposited network. This spatially homogeneous vibrational
+behaviour implies the steam-deposited network is more evenly distributed
+than the solvent-deposited network, which matches the discussion in
+Section~\ref{sec-pristine-morphology}.
+
+\hypertarget{sec-pristine-electrical-characterisation}{%
+\section{Electrical Characteristics of Pristine
+Devices}\label{sec-pristine-electrical-characterisation}}
+
+\hypertarget{sec-python-analysis}{%
+\subsection{Python Analysis}\label{sec-python-analysis}}
+
+Analysis of electrical measurements was performed using the three
+modules described in Section~\ref{sec-field-effect-transistor-analysis}.
+The first of the three modules is for processing sensing datasets. This
+module cleans, analyses and filters sensing data and produces a variety
+of plots. These plots include normalised plots (type of normalisation
+can be set in the code config file), plots with fitted curves, plots
+with the linear baseline drift removed, plots of signal with analyte
+addition, ``despiked'' plots and ``filtered'' plots. The analysis used
+to produce these plots is described further below. It is possible to add
+annotations to any of these plots using the config file, and it is
+possible to produce a plot with a combination of these modifications.
+The module can also fit exponential and linear trendlines to regions of
+the sensing data, and find the signal change per analyte addition; the
+module then returns spreadsheets containing the results of these
+analyses, including the standard deviation for all calculated
+parameters.
+
+The scipy.optimize.curve\_fit function is used in the first module to
+fit linear and exponential curves to regions of interest of the sensing
+data. For a linear fit \(c_1t + c_2\), initial parameters are simply set
+as \(c_1=1\) and \(c_2=0\). For an exponential fit
+\(I_0\exp{(-t/\tau)} + I_C\), rough approximations are used for the
+initial parameters: \(I_C\) is set as the final current measurement of
+the region of interest, \(I_0\) is set as the initial current
+measurement minus \(I_C\), and \(\tau\) is set as the time where current
+has dropped to \(e^{-1}I_0 + I_C\).
+
+``Despiked'' plots have had spurious datapoints removed through the use
+of an interquartile range rolling filter. The window size of the rolling
+filter used was 40 datapoints, and datapoints in each window with a
+z-score above \(\pm 3\) were removed from the plotted/processed data.
+``Filtered'' plots had noise reduced using a moving median filter. The
+moving median filter is more effective at removing noise than a simple
+moving average, and has advantages over other filters (such as the
+Savitzky-Golay filter) when removing noise from data with sharp edges,
+as is the case for sensing data. Median filtering can also be used for
+baseline drift compensation, though this approach was not used in this
+thesis \autocite{Stone2011}. The moving median filter used had a window
+of 40 datapoints.
+
+Plots of signal with analyte addition were constructed from current data
+after first removing baseline drift and applying a moving median filter.
+A simple difference calculation between the mean of the filtered current
+before an addition and the mean of the filtered current after the
+addition was performed at each addition. These differences were then
+normalised relative to the initial current. The signal with analyte
+addition give reasonably consistent results regardless of whether
+baseline drift was removed from the data, as shown in
+Figure~\ref{fig-spaa-plot-comparison}. We can therefore be confident
+that robust signal with analyte addition plots are robust even in the
+presence of significant drift.
+
+\begin{figure}
+
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NTQ31C1_mean_simple_difference_before_and_after_step_filtered_concentrations.png}
+
+}
+
+}
+
+\subcaption{\label{fig-spaa-no-detrend}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NTQ31C1_mean_simple_difference_before_and_after_step_filtered_concentrations_detrend.png}
+
+}
+
+}
+
+\subcaption{\label{fig-spaa-detrend}}
+\end{minipage}%
+
+\caption{\label{fig-spaa-plot-comparison}A comparison of signal with
+analyte addition plots taken from the same salt concentration sensing
+dataset (the same dataset as used in
+Figure~\ref{fig-salt-conc-sensing}). In (a), a simple difference
+calculation performed on filtered data was used, while in (b) the same
+calculation was performed on filtered data with the baseline drift
+removed, the method used in the body of the thesis.}
+
+\end{figure}
+
+The second module creates combined and individual plots of transfer data
+collected from eight channels on a single device. In combined plots,
+channels which are non-working, due to being shorted or non-conducting,
+are removed via setting a maximum and minimum possible on-current in the
+config file. Various parameters from the transfer characteristics are
+saved as a spreadsheet along with standard error. These parameters
+include on current, off current, subthreshold slope and threshold
+voltage for the carbon nanotube devices, and on current, off current and
+major Dirac point voltage for graphene devices. The device type being
+analysed can be set in the config file.
+
+The third module allows for comparison of transfer measurements taken of
+the same channel before and after some modification. It also calculates
+the shift in either threshold voltage or major Dirac voltage of the
+device.
+
+\hypertarget{graphene-devices}{%
+\subsection{Graphene Devices}\label{graphene-devices}}
+
+\begin{figure}
+
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/JG098_pristine_TXLG01_5mVstep_220920_norinse.png}
+
+}
+
+}
+
+\subcaption{\label{fig-graphene-transfer-1}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/JGQ00D6_pristine_TXLG01_5mVstep_220914_norinse.png}
+
+}
+
+}
+
+\subcaption{\label{fig-graphene-transfer-2}}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/JG098_ch1_absolute_values_with_gate_current.png}
+
+}
+
+}
+
+\subcaption{\label{fig-graphene-transfer-comparison-1}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/JGQ00D6_ch3_absolute_values_with_gate_current.png}
+
+}
+
+}
+
+\subcaption{\label{fig-graphene-transfer-comparison-2}}
+\end{minipage}%
+
+\caption{\label{fig-pristine-graphene}These figures show liquid-gated
+transfer characteristics of channels from two AZ\(^\circledR\) 1518
+encapsulated graphene devices. The characteristics of working device
+channels upon initial exposure to \(1 \times\) PBS are shown in (a) and
+(b). The transfer characteristics of channel 1 in (a) and channel 5 in
+(b) after various degrees of exposure to \(1 \times\) PBS are shown in
+(c) and (d) respectively, with each transfer sweep numbered in the order
+the sweeps were taken. The dashed lines correspond to measurements of
+gate leakage current.}
+
+\end{figure}
+
+Graphene field-effect transistor devices were electrically characterised
+in the manner described in \textbf{?@sec-electrical-characterisation}
+and analysed using the Python code discussed in
+Section~\ref{sec-field-effect-transistor-analysis}.
+
+Figure~\ref{fig-pristine-graphene} shows the liquid-gated transfer
+characteristics of two graphene devices. These devices were fabricated
+prior to Jun 2021. Both devices exhibit the ambipolar characteristics
+typical of liquid-gated graphene devices
+\autocite{Heller2009a,Heller2010,Xia2010,Kireev2017}. As with the carbon
+nanotube network devices, leakage current remained below \(\sim\) 1
+\(\times\) \(10^{-7}\) V across both the forward and reverse sweep.
+Hysteresis between the forward and reverse sweep is caused by trapping
+of charge within and on the surface of the SiO\(_{2}\) dielectric
+\autocite{Bartolomeo2011}. The major Dirac point for these devices is
+slightly to the right of V\(_{\textrm{Dirac}} \approxeq\) 0 V, which
+indicates \(p\)-doping of the channel. This slight \(p\)-doping is a
+result of adsorption of oxygen and water from the air from residual
+resist from photolithography \autocite{Cheng2011,Shin2012,Kireev2017}.
+Some devices exhibited double Dirac behaviour. Here, the global minimum
+of the transfer characteristic is referred to as the `major' Dirac point
+while the second Dirac point is referred to as the `minor' Dirac point.
+
+Figure~\ref{fig-pristine-graphene} also shows the effect of \(1 \times\)
+PBS on the graphene channels. The channels were measured on exposure to
+\(1 \times\) PBS, after exposure to \(1 \times\) PBS for one hour, and
+after the device surface was rinsed and \(1 \times\) PBS was replaced in
+the well one time, two times and three times successively. A slight
+negative shift of the major Dirac point was observed. This effect is
+possibly a result of gate bias stress, where successive transfer sweeps
+introduce charge traps to the graphene layer and alters the current
+level at a given gate voltage \autocite{Bargaoui2018,Noyce2019}.
+Alternatively, Kireev \emph{et al.} found that a series of liquid-gated
+sweeps also reduced the size of the second Dirac point
+\autocite{Kireev2017}. The mechanism behind this change may be the
+emptying of interfacial charge traps as a result of the transfer sweep.
+The emptying of traps can bring the Dirac points of the contact and
+channel region closer together, increasing the consistency of the Fermi
+level across the channel \autocite{Bartolomeo2011,Kireev2017,Peng2018}.
+If the contaminants removed are \(p\)-dopants, which could be due to
+adsorbed oxygen or resist residues, this interpretation would also
+explain the negative shift of the major Dirac point.
+
+\hypertarget{tbl-graphene-parameters}{}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3288}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2192}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2603}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1918}}@{}}
+\caption{\label{tbl-graphene-parameters}Average on-off ratio and major
+Dirac point voltage for AZ® 1518 encapsulated liquid-gated graphene
+transistor channels at various stages of exposure to 1X PBS. Electrical
+characteristics were taken of 6 channels total, three channels from each
+of two devices.}\tabularnewline
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+1XPBS: Initial
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+1XPBS: After 1 hr
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+1XPBS: Rinse
+\end{minipage} \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+1XPBS: Initial
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+1XPBS: After 1 hr
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+1XPBS: Rinse
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+On-Off Ratio (arb.) & 5.1 ± 0.3 & 5.0 ± 0.7 & 5.0 ± 0.6 \\
+Dirac Point Voltage (V) & 0.28 ± 0.04 & 0.31 ± 0.03 & 0.28 ± 0.02 \\
+\end{longtable}
+
+Table~\ref{tbl-graphene-parameters} shows the on-off ratio and major
+Dirac point voltage of the graphene devices. Apart from the
+previously-mentioned slight negative shift of the major Dirac point,
+these values were highly consistent before and after exposure to
+\(1 \times\) PBS.
+
+\hypertarget{sec-cnt-devices}{%
+\subsection{Carbon Nanotube Network Devices}\label{sec-cnt-devices}}
+
+\begin{figure}
+
+\begin{minipage}[t]{0.49\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NTQ24C8_pristine_TXLG01_220211_solvent_gate.png}
+
+}
+
+}
+
+\subcaption{\label{fig-solvent-tx-lg}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.02\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.49\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NTQ22C2_solvent_backgate.png}
+
+}
+
+}
+
+\subcaption{\label{fig-solvent-tx-bg}}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.49\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NTQ5C3_pristine_TXLG01_210602_nosteam_gate.png}
+
+}
+
+}
+
+\subcaption{\label{fig-surf-tx-lg}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.02\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.49\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Q5C10_nosteam_backgate.png}
+
+}
+
+}
+
+\subcaption{\label{fig-surf-tx-bg}}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.49\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NTQ31C6_pristine_TXLG01_230330_steam_gate.png}
+
+}
+
+}
+
+\subcaption{\label{fig-steam-tx-lg}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.02\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.49\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Q18C6_steam_backgate.png}
+
+}
+
+}
+
+\subcaption{\label{fig-steam-tx-bg}}
+\end{minipage}%
+
+\caption{\label{fig-pristine-cnt-characteristics}Liquid-gated (left) and
+back-gated (right) transfer characteristics of AZ\(^\circledR\) 1518
+encapsulated field-effect transistors, where the film was deposited with
+solvent in (a) and (b), deposited with surfactant in (c) and (d), and
+deposited with surfactant in the presence of steam in (e) and (f). A
+step size of 100 mV was used for the backgated sweeps in (a), (c) and
+(e), while a step size of 20 mV was used for the liquid-gated sweeps in
+(b), (d) and (f). Gate current (leakage current) is shown with a dashed
+line. The source-drain voltage used for all sweeps was
+\(V_{ds} = 100 \textrm{mV}\), and \(1 \times\) PBS was used as the
+buffer for the liquid-gated measurements here.}
+
+\end{figure}
+
+Each carbon nanotube device fabricated was electrically characterised as
+described in \textbf{?@sec-electrical-characterisation}, and electrical
+data was analysed using the Python code discussed in
+Section~\ref{sec-field-effect-transistor-analysis}. Devices with a 100
+nm or 300 nm SiO\(_2\) layer were used for liquid gated measurements,
+and devices with a 100 nm SiO\(_2\) layer were used for backgated
+measurements. Figure~\ref{fig-pristine-cnt-characteristics} displays
+multi-channel measurements of representative devices fabricated as
+described in \textbf{?@sec-fabrication}. To ensure a consistent
+comparison, each device here was encapsulated with AZ\(^\circledR\) 1518
+encapsulation before measurements were taken. The channels which did not
+exhibit reliable transistor characteristics are not shown. These
+`non-working' channels were either shorted, due to metal remaining on
+the channel after lift-off, or were very low current, due to a very
+sparse carbon nanotube network. Devices shown here with a
+solvent-deposited carbon nanotube network were fabricated prior to Jan
+2022; devices with a surfactant-deposited network without steam present
+were fabricated prior to Jun 2021; devices with a surfactant-deposited
+network without steam were fabricated prior to Sep 2022.
+
+\begin{figure}
+
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/onoff_CNT.png}
+
+}
+
+}
+
+\subcaption{\label{fig-on-off-ratio}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/SS.png}
+
+}
+
+}
+
+\subcaption{\label{fig-subthreshold-slope}}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.26\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/threshold_V.png}
+
+}
+
+}
+
+\subcaption{\label{fig-threshold-voltage}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.26\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-sweep-parameters}These boxplots illustrate the
+statistical distribution of (a) the on-off ratio, (b) the subthreshold
+slope, and (c) the threshold voltage of AZ\(^\circledR\) 1518
+encapsulated liquid-gated transistor channels corresponding to each type
+of carbon nanotube film deposition. For each deposition type, electrical
+characteristics were taken of 21 channels of at least three separate
+devices. The boxes indicate the 25th and 75th percentile of the
+distribution.}
+
+\end{figure}
+
+\hypertarget{liquid-gated-cntfets}{%
+\subsubsection*{Liquid-Gated CNTFETs}\label{liquid-gated-cntfets}}
+\addcontentsline{toc}{subsubsection}{Liquid-Gated CNTFETs}
+
+The liquid-gated devices in Figure~\ref{fig-solvent-tx-lg},
+Figure~\ref{fig-surf-tx-lg} and Figure~\ref{fig-steam-tx-lg} each
+exhibited ambipolar characteristics, commonly observed in liquid-gated
+carbon nanotube network FETs
+\autocite{Kauffman2008,Heller2009,JongYu2009,Derenskyi2014,Murugathas2018,Albarghouthi2022}.
+When devices were appropriately configured, leakage current (shown by
+the dashed traces) did not exceed \(\sim 1 \times 10^{-7}\) V across the
+forward and reverse sweep. The devices shown which used steam-deposited
+carbon nanotube films showed the least hysteresis.
+Section~\ref{sec-pristine-AFM} demonstrates that the mean diameter of
+the bundles in these films is about 0.9 nm less than the mean bundles in
+films deposited without steam present, and 5.5 nm less than those in
+films deposited in solvent. Hysteresis is known to scale roughly
+linearly with bundle diameter, due to trapped charge increasing as
+bundle density of states is increased \autocite{Pop2009}.
+Steam-deposited devices also showed significantly less
+channel-to-channel variation in electrical characteristics more
+generally. Channel 1 in Figure~\ref{fig-solvent-tx-lg} has a much higher
+off-current than the other channels of the same device, which appears to
+be due to a uncommonly high proportion of metallic carbon nanotubes
+present in the network conduction pathways of this channel
+\autocite{Rouhi2011,Sun2013,Zaumseil2015}.
+
+A summary of key parameters of pristine liquid-gated devices is shown in
+Figure~\ref{fig-sweep-parameters}. The full dataset consists of three
+sets of 21 liquid-gated transfer characteristics of working channels,
+with each set corresponding to the use of a particular method of carbon
+nanotube network deposition in the device fabrication. Measurements from
+at least three devices are included in each set. Each entry in the
+summary corresponds to the average of the specific parameter in the
+forward and reverse sweep direction. When steam was used for surfactant
+deposition of films, the resulting devices showed highly consistent
+channel-to-channel electrical properties. Since the carbon nanotube
+films on these devices are relatively dense, as seen in
+Figure~\ref{fig-steaming-network}, the network should be well above the
+percolation threshold. As many carbon nanotube pathways connect across
+the channel in parallel, small variations in the network morphology have
+less of an impact on the overall channel behaviour
+\autocite{Murugathas2018}. Figure~\ref{fig-cnt-histogram} and
+Table~\ref{tbl-histogram-parameters} indicate that the range of bundle
+sizes is relatively low in the steam-deposited films used in these
+devices, meaning the electrical behaviour of dominant conduction
+pathways is more spatially consistent. The repeatable subthreshold
+regime behaviour between channels seen for steam-deposited devices is a
+desirable attribute for reliable real-time multiplexed biosensing
+\autocite{Kauffman2008,Heller2009,Gao2010}.
+
+Channels from surfactant-deposited film devices usually showed a larger
+on-off ratio and subthreshold slope than those from solvent-deposited
+devices. Decreasing the ratio of gate-sensitive semiconducting carbon
+nanotubes to metallic nanotubes tends to decrease the on-off ratio
+\autocite{LeMieux2008,Rouhi2011,Zaumseil2015,Murugathas2018}.
+Section~\ref{sec-pristine-raman} seems to indicate there are more
+metallic nanotubes present in the surfactant-deposited films than in the
+solvent-deposited films. However, percolating conduction pathways
+dominate device behaviour and nanotube pathways across the channel with
+a lower degree of bundling are less likely to contain metallic tubes
+\autocite{Murugathas2018}. Therefore, the larger on-off ratio for
+surfactant-deposited film devices is likely a result of their reduced
+nanotube bundle size and reduced bundle size variation relative to other
+films, as discussed in Section~\ref{sec-pristine-morphology}. The larger
+subthreshold slope is likely due to increased mobility from a denser
+nanotube network in surfactant-deposited films \autocite{Rouhi2011}, as
+seen in Figure~\ref{fig-steaming-network}. A larger on-off ratio and
+subthreshold slope results in a larger change in conductance in response
+to changes in the transfer characteristic curve. Therefore, the larger
+on-off ratio and subthreshold slope of steam-deposited devices is
+desirable for improved sensor performance
+\autocite{Kauffman2008,Heller2009,Gao2010}.
+
+All channels characterised had a positive threshold voltage
+(\(V_{th}\)). The threshold voltage was largest and most consistent for
+steam-assisted surfactant-deposited films. The relatively high values of
+\(V_{th}\) which correspond to channel measurements from steam-assisted
+surfactant-deposited devices indicates increased \(p\)-doping of the
+network relative to networks deposited via alternative processes
+\autocite{Kang2005,Heller2008,Murugathas2018}. As seen from
+Figure~\ref{fig-steamed-surfactant}-f and
+Figure~\ref{fig-dg-peak-comparison}, the steam deposition process leads
+to the presence of significant, persistent surfactant aggregates. It has
+been previously established that residual surfactant can \(p\)-dope
+carbon nanotubes, alongside enhancing \(p\)-doping from adsorped oxygen
+and water \autocite{Kane2014,Nonoguchi2018,Christensen2022}. The
+presence of residual surfactant may also explain the lowered
+subthreshold slope, and therefore mobility, of the steam-deposited
+devices relative to devices with films deposited in surfactant without
+steam. The analysis by Kane \emph{et al.} shows that the thermal
+annealling at 150°C used in this work to remove residual surfactant is
+likely inadequate for this purpose. Oxidation of devices and vacuum
+annealling at high temperatures (\textgreater{} 600°C) may be required
+for effective desorption of the persistent surfactant
+\autocite{Kane2014,Barnett2018}. Devices using films made using the
+alternative two methods have the advantage of not requiring careful
+treatment to remove surfactant.
+
+\hypertarget{back-gated-cntfets}{%
+\subsubsection*{Back-Gated CNTFETs}\label{back-gated-cntfets}}
+\addcontentsline{toc}{subsubsection}{Back-Gated CNTFETs}
+
+When characterising devices using the vapour delivery system chip
+carrier, the setup arrangement meant all measurements were taken using a
+backgate. Figure~\ref{fig-solvent-tx-bg}, Figure~\ref{fig-surf-tx-bg}
+and Figure~\ref{fig-steam-tx-bg} show that backgated devices exhibit
+\emph{p}-type transistor behaviour. Gate current leakage was negligible,
+as shown by the dashed line staying close to zero across the sweep.
+Significant hysteresis was observed. The hysteresis can be explained by
+the presence of defects or charge traps within and on the surface of the
+silicon dioxide and at interfaces between the silicon dioxide and carbon
+nanotubes \autocite{Lee2007,Lee2012,Ha2014}. The hysteresis observed was
+much greater than for the corresponding liquid-gated sweeps on the
+right. The devices fabricated with a solvent-based deposition were
+switched off at a lower voltage than the devices which used surfactant
+during deposition.
+
+\begin{figure}
+
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Q35C3_nobuffer.png}
+
+}
+
+}
+
+\subcaption{\label{fig-no-buffer}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.47\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Q35C3_buffer.png}
+
+}
+
+}
+
+\subcaption{\label{fig-50uL-buffer}}
+\end{minipage}%
+
+\caption{\label{fig-buffer-effect-on-backgate}Backgated transfer sweeps
+were taken of an single unencapsulated device with a 300 nm SiO\(_2\)
+layer and steam assisted surfactant-deposited carbon nanotube network
+channels before and after being covered in 50 µL \(1 \times\) PBS
+electrolyte.}
+
+\end{figure}
+
+Transfer measurements were taken to determine whether backgated
+measurements could be taken of an unencapsulated device in the vapour
+sensor chamber with \(1 \times\) PBS covering the channels. The use of a
+backgated configuration with channels in a liquid environment is
+generally considered less than ideal, since the sensitivity of the
+device is greatly reduced \autocite{Li2023}.
+Figure~\ref{fig-buffer-effect-on-backgate} shows the behaviour of an
+unencapsulated backgated device with a 300 nm SiO\(_2\) layer before and
+after being covered by 50 µL of \(1 \times\) PBS (phosphate buffered
+saline). The on-off ratio and hysteresis of the channels increase
+significantly. The presence of water increases hysteresis through
+introducing charge traps at the silicon dioxide surface around the
+carbon nanotubes and at the surface of the nanotubes themselves
+\autocite{Kim2003,Lee2007,Franklin2012,Ha2014}. There is also a
+significant increase in current leakage to the backgate for larger
+applied voltages, despite the electrolyte having no visible physical
+contact with the silicon backgate or copper plane. This leakage current
+may simply be due to an increase in relative humidity around the device
+due to the presence of water \autocite{Conseil2014}.
+
+\hypertarget{sec-dummy-sensing}{%
+\section{Aqueous Sensing of Phosphate Buffered Saline
+Concentration}\label{sec-dummy-sensing}}
+
+\hypertarget{sec-baseline-drift}{%
+\subsection{Control Series and Baseline
+Drift}\label{sec-baseline-drift}}
+
+\hypertarget{tbl-threshold-voltages}{}
+\begin{longtable}[]{@{}lrrrrrr@{}}
+\caption{\label{tbl-threshold-voltages}The threshold voltages \(V_{th}\)
+of each working channel of a steam-deposited device, and the difference
+between each \(V_{th}\) and the mean device threshold voltage
+\(V_{th, mean}\).\\
+}\tabularnewline
+\toprule\noalign{}
+Channels & CH1 & CH2 & CH3 & CH5 & CH6 & CH7 \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Channels & CH1 & CH2 & CH3 & CH5 & CH6 & CH7 \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Threshold voltage (mV) & 160 & 150 & 130 & 140 & 180 & 140 \\
+Relative to mean (mV) & 10 & 0 & -20 & -10 & 30 & -10 \\
+\end{longtable}
+
+To verify the sensitivity of the fabricated field-effect transistors and
+therefore verify their suitability for sensing, control measurements
+replicating a typical sensing experiment were taken before
+functionalising the channels of a carbon nanotube network device. The
+first step to verifying device suitability was ensuring the device
+showed no response to \(1 \times\) PBS. This sequence is referred to in
+this thesis as the `PBS control series'. The PDMS well contained 80 µL
+\(1 \times\) PBS at 0 s. The PBS control series ran over the first 1800
+s, with 20 µL phosphate buffer saline (\(1 \times\) PBS) additions at
+100 s, 200 s and 300 s, and 20 µL subtractions at 400 s, 500 s and 600
+s. The device was left untouched over the next 1200 s to allow the
+current level to settle. The gate voltage was held at \(V_g\) = 0 V.
+
+Figure~\ref{fig-transfer-sweeps} shows the transfer sweeps of the six
+working channels of a steam-assisted surfactant-deposited carbon
+nanotube field-effect transistor measured using the NI PXIe. The device
+was fabricated on a substrate with a 300 nm SiO\(_{2}\) layer, the
+carbon nanotube film was deposited using the steam-assisted surfactant
+method and encapsulated with AZ\(^\circledR\) 1518 before measurement.
+The central feature in the transfer characteristics of channels 1 and 7
+are absolute-value measurements of negative current. These are
+unphysical measurements due to equipment error, and can be considered as
+regions where zero current passes through the channel. The threshold
+voltages of the channels are shown in
+Table~\ref{tbl-threshold-voltages}. Table~\ref{tbl-threshold-voltages}
+also shows the difference between the threshold voltage of each channel
+and the mean threshold voltage of the device. The mean threshold voltage
+was \(V_{th}\) = \(150 \pm 20\) mV. As discussed previously, the
+electrical characteristics are highly consistent between the channels
+due to the film deposition method used.
+
+\begin{figure}
+
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NTQ31C1_pristine_TXLG02_230322.png}
+
+}
+
+}
+
+\subcaption{\label{fig-transfer-sweeps}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NTQ31C1_pristine_saltconc_sample_230324_control.png}
+
+}
+
+}
+
+\subcaption{\label{fig-linear-fit}}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.28\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NTQ31C1_pristine_saltconc_sample_230324_linear_fit_exp.png}
+
+}
+
+}
+
+\subcaption{\label{fig-exp-fit}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.28\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-salt-conc-control-series}The transfer
+characteristics in (a) were taken of the steam-deposited carbon nanotube
+field-effect transistor used here for an example of salt concentration
+sensing. The absolute values of measurements are shown, so that negative
+values resulting from measurement error can be visualised. Linear fits
+to the PBS control series from each channel from 1200 s onwards are
+shown in (b), while exponential fits to the PBS control series from
+\(0-1200\) with the linear fit subtracted are shown in (c). No
+significant response to PBS additions are seen at any of the addition
+times from \(100-600\) s.}
+
+\end{figure}
+
+Figure~\ref{fig-linear-fit} shows the PBS control series corresponding
+to each device channel alongside gate current. In both series, there is
+no clear stepwise response to any addition or subtraction of
+\(1 \times\) PBS. Gate leakage current remains negligible across the
+entire control series, with no change in response to \(1 \times\) PBS
+additions. The current has a period of short-term decay followed by much
+longer term baseline drift, similar to observations by Lin \emph{et al.}
+and more recently Noyce \emph{et al.} for parallel arrangements of
+single carbon nanotubes in air or vacuum \autocite{Lin2006,Noyce2019}.
+This effect results from changes in the occupancy of charge traps in and
+around the substrate and carbon nanotubes. The magnitude of baseline
+drift is lower for our devices than for those characterised by Noyce
+\emph{et al.}, which may be a result of numerous device and setup
+differences which affect the presence of charge traps. These differences
+include liquid-gating instead of back-gating, the use of a network of
+carbon nanotubes instead of single nanotubes, a different channel
+length, the use of a 300 nm instead of 90 nm SiO\(_2\) layer, a gate
+voltage of 0.0 V instead of -15.0 V, and the use of an asymmetric,
+liquid-gated transfer sweep over a shorter voltage range to characterise
+devices before each control series was measured \autocite{Noyce2019}.
+
+\hypertarget{tbl-linear-fits}{}
+\begin{longtable}[]{@{}lllllll@{}}
+\caption{\label{tbl-linear-fits}The coefficients of linear fits to the
+PBS control series of each channel between \(1200-1800\) s, where
+\(c_1\) is the gradient and \(c_2\) is the constant term.\\
+}\tabularnewline
+\toprule\noalign{}
+Channels & CH1 & CH2 & CH3 & CH5 & CH6 & CH7 \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Channels & CH1 & CH2 & CH3 & CH5 & CH6 & CH7 \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(c_1\) (pA/s) & -5.1±0.2 & -7.2±0.1 & -6.5±0.1 & -5.0±0.1 & -7.6±0.1 &
+-5.1±0.2 \\
+\(c_2\) (\(\mu\)A) & 0.316 & 0.316 & 0.308 & 0.218 & 0.364 & 0.332 \\
+\end{longtable}
+
+\hypertarget{tbl-exp-fits}{}
+\begin{longtable}[]{@{}lllll@{}}
+\caption{\label{tbl-exp-fits}The coefficients of exponential fits to the
+PBS control series of each channel between \(0-1200\) s, after the
+linear fit has been subtracted, where \(I_0\) is the gradient and
+\(\tau\) is the time constant.\\
+}\tabularnewline
+\toprule\noalign{}
+Channels & CH2 & CH3 & CH6 & CH7 \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Channels & CH2 & CH3 & CH6 & CH7 \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\(I_0\) (nA) & \(6.07\pm0.08\) & \(7.19\pm0.11\) & \(5.75\pm0.12\) &
+\(9.68\pm0.41\) \\
+\(\tau\) (s) & \(450\pm10\) & \(610\pm30\) & \(280\pm10\) &
+\(350\pm30\) \\
+\end{longtable}
+
+As a first-order approximation to the longer time constant exponentials
+discussed by Noyce \emph{et al.} \autocite{Noyce2019}, linear fits were
+performed on each PBS control series from \(1200-1800\) s. These fits
+are tangent to the curve of the sum of the larger time constant
+exponentials, and are a close approximation to this curve when higher
+order terms in the series expansion are approximately zero. This is only
+the case when \(t\ll\tau_i\), where the time interval of interest \(t\)
+is much shorter than the time constants of the larger time constant
+exponentials, \(\tau_i\). These linear fits are shown by the dashed
+yellow lines in Figure~\ref{fig-linear-fit}. The parameters from each
+fit in Figure~\ref{fig-linear-fit} are shown in
+Table~\ref{tbl-linear-fits}, where \(I = c_1t + c_2\). The fits for
+channels 1, 5 and 7 are all in parallel within error. The gradient value
+for each fit in Figure~\ref{fig-linear-fit} is consistent within a 2.6
+pA/s range across all channels. The current data from channel 1 is
+closely approximated by the linear across the entire control series. No
+short-term decay is present for this channel, indicating the channel has
+low net trapped charge. It is unclear why this short-term exponential
+decay behaviour is only absent for channel 1.
+
+The long-term linear fits were next subtracted from the raw control
+series data. Figure~\ref{fig-exp-fit} shows exponential fits to the
+remaining curve from \(0-1800\) s, which was successful for all channels
+except channels 1 and 5. The parameters from each fit are shown in
+Table~\ref{tbl-exp-fits}, where \(I = I_0\exp(-t/\tau)\). Any constant
+term \(I_C\) resulting from the fit was negligible and so could be
+neglected. The exponential fits had characteristic time constants
+\(\tau\) ranging between \(280 - 610\) s. Note that the value of
+peak-to-peak noise is above 5\% of the initial current value for all
+channels. This result indicates that 3 time constants is a sufficient
+length of time for this short-term baseline drift to decay almost
+completely for each channels. At most, \(1830\pm150\) s is required to
+minimise the drift present when sensing is performed, which is fulfilled
+by the chosen length of the control series.
+
+From this analysis it appears that the baseline drift for the
+liquid-gated carbon nanotube devices can generally be approximated as a
+combination of a exponential and linear term. The lack of response to
+\(1 \times\) PBS at any of the six PBS addition and removal times gives
+us confidence that this is a stable baseline which can be used for
+reliable chemical sensing. Furthermore, after \(\sim 1800\) s the
+baseline drift can be reasonably approximated as linear, with a small
+gradient of less than -10 pA/s. The approximately linear current change
+means that it becomes easier to distinguish responses due to analyte
+addition. It can therefore be concluded that the 1800 s length of the
+PBS control series is appropriate for minimising baseline drift for more
+reliable sensing.
+
+\hypertarget{sec-salt-conc-series}{%
+\subsection{Sensing Series}\label{sec-salt-conc-series}}
+
+A salt concentration sensing series were performed from 1800 s onwards,
+directly after the PBS control series. The responses to successive
+dilutions of the liquid-gate electrolyte were recorded to confirm the
+fabricated devices were sensitive to small environmental changes in
+their pristine state, to check for spurious signals, and to ensure gate
+current leakage or other confounding factors were not contributing to
+sensing responses. The PDMS well contained 80 µL \(1 \times\) PBS at
+1800 s. During the series, successive additions of deionised water were
+made to reduce the concentration of PBS in the well. An initial
+\(1 \times\) PBS addition was performed at 2100s, to confirm no changes
+occurred during the PBS control series that would interfere with
+sensing. All additions to the well in the sensing series and resulting
+changes to the PBS concentration in the well are shown in
+Table~\ref{tbl-salt-conc-series}.
+
+\hypertarget{tbl-salt-conc-series}{}
+\begin{longtable}[t]{lcccccc}
+\caption{\label{tbl-salt-conc-series}This table shows the times at which 20 µL additions were made to the
+PDMS well, with 300 s between each addition. The concentration in the
+well after each addition and the change in concentration after each
+addition are also shown. The well contained 80 µL of \(1 \times\) PBS at
+1800 s. }\tabularnewline
+
+\toprule
+\multicolumn{1}{c}{ } & \multicolumn{1}{c}{1X PBS Addition} & \multicolumn{5}{c}{DI Water Additions} \\
+\cmidrule(l{3pt}r{3pt}){2-2} \cmidrule(l{3pt}r{3pt}){3-7}
+ &  &  &  &  &  & \\
+\midrule
+Time (s) & 2100 & 2400 & 2700 & 3000 & 3300 & 3600\\
+Final PBS volume (µL) & 100 & 120 & 140 & 160 & 180 & 200\\
+Final PBS concentration & 1X & 0.83X & 0.71X & 0.63X & 0.56X & 0.50X\\
+Δ PBS concentration & 0 & -0.17X & -0.12X & -0.09X & -0.07X & -0.06X\\
+\bottomrule
+\end{longtable}
+
+\begin{figure}
+
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NTQ31C1_pristine_saltconc_sample_230324.png}
+
+}
+
+}
+
+\subcaption{\label{fig-salt-conc-no-norm}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NTQ31C1_pristine_saltconc_sample_230324_detrend_trunc_arrows_normalised.png}
+
+}
+
+}
+
+\subcaption{\label{fig-salt-conc-detrend}}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NTQ31C1_pristine_saltconc_sample_230324_filtered_detrend_trunc_arrows_normalised.png}
+
+}
+
+}
+
+\subcaption{\label{fig-salt-conc-detrend-filter}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NTQ31C1_mean_simple_difference_before_and_after_step_filtered_concentrations.png}
+
+}
+
+}
+
+\subcaption{\label{fig-salt-conc-signal}}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.25\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/salt_conc_box_plot.png}
+
+}
+
+}
+
+\subcaption{\label{fig-salt-conc-box-plot}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.25\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-salt-conc-sensing}Various visualisations of a
+multiplexed salt concentration sensing series taken from a single
+device. The source-drain voltage \(V_{ds}\) was 100 mV, and gate voltage
+\(V_g\) was 0 V. In (a), the raw current measurements for each channel
+are shown alongside gate current. The same measurements after despiking,
+removal of baseline drift and normalisation to initial current are shown
+in (b), (c) shows the data in (b) after being processed with a moving
+median filter, and (d) shows the signal changes in (c). The signal data
+in (d) is shown in box plot format in (e) alongside a fit to the median
+change in signal for each addition. The R squared value for the fit was
+0.86.}
+
+\end{figure}
+
+Figure~\ref{fig-salt-conc-no-norm} shows a multiplexed salt
+concentration sensing series from the channels of a single
+AZ\(^\circledR\) 1518 encapsulated device, measured with the NI-PXIe.
+The gate voltage used was 0 V, which meant current measurements were
+well above the magnitude of the subthreshold device current. Gate
+current measurements did not exceed 1 nA for the SU8 encapsulated
+devices, and did not exceed 10 nA for the AZ\(^\circledR\) 1518 devices.
+At each of the deionised water addition times, the current traces for at
+least two out of six channels showed a sharp, transient increase in
+current followed by a return to an increased baseline. It is well
+established that changing the salt concentration of the liquid gate has
+an electrostatic gating effect on the carbon nanotubes or graphene, and
+changes the transfer characteristics of the channel. This shift in
+transfer characteristic leads to a real-time signal response to each
+addition \autocite{Heller2009,Heller2010,Kireev2017}.
+
+Using the data in Table~\ref{tbl-linear-fits}, the linear term
+approximating baseline drift (\(c_1t\)) for each channel can be
+subtracted from the data in Figure~\ref{fig-salt-conc-no-norm} to
+account for the downward drift. The mean current level just before 1800
+s then becomes roughly constant. Next, each channel is normalised
+relative to their initial mean current level \(I_{0}\). Artifacts
+resulting from PXIe-2737 module lag, single datapoints which fall well
+below the current level of the immediately preceding and succeeding
+datapoints, are also removed. This `despike' process uses an
+interquartile range filter, which is described in
+Section~\ref{sec-python-analysis}. The resulting dataset is shown in
+Figure~\ref{fig-salt-conc-detrend}. This figure shows that the
+signal-to-noise ratio remains roughly similar across all channels of the
+device. However, the behaviour of the initial transient increase with
+each addition is highly variable across channels and between additions
+for a single channel.
+
+As measurement of the highly variable initial transient is not useful
+for robust sensing purposes, a moving median filter was applied, with
+the implementation of this filter discussed in
+Section~\ref{sec-python-analysis}. The filtered data is shown in
+Figure~\ref{fig-salt-conc-detrend-filter}. Noise and initial transients
+are removed completely, while the clearly defined step to a new current
+baseline is retained. Using the realtime data in
+Figure~\ref{fig-salt-conc-detrend-filter}, a plot of signal against
+addition can be created using the method described in
+Section~\ref{sec-python-analysis}, shown in
+Figure~\ref{fig-salt-conc-signal}. This presentation of the data allows
+us to see the increase at each step relative to \(I_{0}\).
+
+Intriguingly, even though the largest change in PBS concentration
+occurred at the first deionised water addition (see
+Table~\ref{tbl-salt-conc-series}), there was very little signal change
+across all channels, while a relatively large change occurred at the
+second addition. The logarithm of final salt concentration has
+previously been shown to be proportional to conductance change in the
+linear on-regime \autocite{Heller2010}.
+Figure~\ref{fig-salt-conc-box-plot} shows the signal change presented in
+terms of this logarithmic relationship. The median values of the first
+two additions do not line up well with the overall logarithmic trend;
+insufficient mixing in the tightly enclosed PDMS well environment for
+the first few additions may be responsible for this result. Subsequent
+additions may improve mixing in the well, leading to the change in
+concentration at the surface of the channel being more representative of
+the overall concentration in the well.
+
+\begin{figure}
+
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NTQ31C1_pristine_saltconc_sample_230324_detrend_trunc_arrows_normalised_2.png}
+
+}
+
+}
+
+\subcaption{\label{fig-salt-conc-detrend-2}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NTQ31C1_pristine_saltconc_sample_230324_filtered_detrend_trunc_arrows_normalised_2.png}
+
+}
+
+}
+
+\subcaption{\label{fig-salt-conc-detrend-filter-2}}
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.28\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NTQ31C1_pristine_saltconc_sample_230324_single_step.png}
+
+}
+
+}
+
+\subcaption{\label{fig-salt-conc-detrend-filter-single-step}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.28\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-salt-conc-sensing-2}The processed data shown in
+Figure~\ref{fig-salt-conc-detrend} and
+Figure~\ref{fig-salt-conc-detrend-filter} is normalised to \(I_{0}\),
+but an alternative normalisation can more effectively filter out
+remaining drift present. This normalisation presents data relative to
+both \(I_{0}\) and the final current reading \(I_{f}\) using the formula
+\((I - I_{0})/(I_{f} - I_{0})\). Using this normalisation, the data in
+Figure~\ref{fig-salt-conc-detrend} and
+Figure~\ref{fig-salt-conc-detrend-filter} can be displayed instead as
+(a) and (b) respectively. (c) shows a magnified version of the step at
+addition 2 in (a).}
+
+\end{figure}
+
+In Figure~\ref{fig-salt-conc-detrend} and
+Figure~\ref{fig-salt-conc-detrend-filter}, from around the second
+deionised water addition onwards, the drift behaviours of individual
+channels begin to significantly diverge. This deviation from the
+baseline drift subtracted from the raw data occurs either because the
+linear fit is only a first-order approximation which weakens with time,
+or because the additions themselves affect the drift behaviour.
+Displaying the data as discrete signal changes, as in
+Figure~\ref{fig-salt-conc-signal}, is one way of excluding these
+deviations (see Section~\ref{sec-python-analysis}). An alternative way
+of presenting the signal changes, by normalising relative to both
+\(I_{0}\) and the final current reading with the formula
+\((I - I_{0})/(I_{f} - I_{0})\), is shown in
+Figure~\ref{fig-salt-conc-sensing-2}. This approach is useful for
+filtering out remaining unaccounted-for drift behaviour in order to
+compare the short-term transient responses to additions across the
+device channels. Furthermore, it lets us better understand how the
+short-term transient responses affect the longer-term step responses
+discussed earlier.
+
+Figure~\ref{fig-salt-conc-detrend-2} and
+Figure~\ref{fig-salt-conc-detrend-filter-single-step} show that the
+transient responses to DI water additions vary significantly across the
+surface of the device. For example,
+Figure~\ref{fig-salt-conc-detrend-filter-single-step} shows that in
+response to the second DI water addition, channel 7 gives a large
+initial transient response about twice the size of the step increase
+between 2600 and 2800 s. Meanwhile, channels 1 and 2 show no transient
+response above the step increase.
+Figure~\ref{fig-salt-conc-detrend-filter-single-step} indicates
+transient size is based on location across the device, with neighbouring
+channels showing the most similar behaviour. This spatially-dependent
+behaviour may indicate transient responses are determined by the
+location of the channel relative to either the location of water
+additions or the slightly-variable location of the liquid gate. Larger
+and longer-lasting transient responses are not entirely removed by the
+moving median filter, as shown by comparing
+Figure~\ref{fig-salt-conc-detrend-2} to
+Figure~\ref{fig-salt-conc-detrend-filter}, and so careful placement of
+additions is important when sensing to minimise this effect. However,
+even the longest-lasting transients appear to decay to zero within about
+200 s, demonstrating that a 200 s spacing between additions at minimum
+is necessary for reliable real-time liquid-gated sensing using this
+setup.
+
+\hypertarget{signal-to-noise-ratio}{%
+\subsubsection*{Signal-to-Noise Ratio}\label{signal-to-noise-ratio}}
+\addcontentsline{toc}{subsubsection}{Signal-to-Noise Ratio}
+
+\begin{figure}
+
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Q2C10ch8custom.png}
+
+}
+
+}
+
+\subcaption{\label{fig-transfer-sweep-2}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.05\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/saltconc_initial_additions.png}
+
+}
+
+}
+
+\subcaption{\label{fig-salt-conc-SNR}}
+\end{minipage}%
+
+\caption{\label{fig-salt-conc-SNR}The transfer characteristics of a
+single steam-deposited carbon nanotube field-effect transistor channel
+are shown in (a). V\(_{gap}\) is the gate voltage corresponding to the
+center of the transistor bandgap, found at the minimum of the
+characteristic curve. The signal-to-noise ratio of the channel response
+to a deionised water addition after a suitable control series is shown
+in (b). The blue current trace in (b) was performed gating the device
+150 mV away from V\(_{gap}\), while the red current was performed gating
+the device 200 mV away from V\(_{gap}\).}
+
+\end{figure}
+
+To understand the effect of gate voltages on signal-to-noise ratio, two
+PBS control and salt concentration sensing series were performed with
+the same channel at different gate voltages. The transfer
+characteristics of this channel are shown in
+Figure~\ref{fig-transfer-sweep-2}, with coloured dashed lines marking
+the voltages used for gating the transistor during each sesning series.
+Figure~\ref{fig-salt-conc-SNR} shows the initial PBS and DI water
+additions made after 1800 s. Previous work on the signal-to-noise ratio
+for liquid-gated, encapsulated carbon nanotube devices suggests that
+gating devices close to \(V_{gap}\) should give the largest
+signal-to-noise ratio for salt concentration additions
+\autocite{Heller2009}. However, this was not what was observed for our
+carbon nanotube field-effect transitor, as
+Figure~\ref{fig-salt-conc-SNR} shows improved signal-to-noise ratio,
+i.e.~the signal step can be more clearly distinguished, when gated at a
+voltage further removed from \(V_{gap}\). This discrepancy could be a
+result of the use of a network of carbon nanotubes rather than a single
+nanotube; gating may have less of an impact on noise when a network
+morphology is used. Alternatively, it could be a result of a lack of
+mixing in our static well setup leading to inconsistent signal sizes
+with concentration change. Heller \emph{et al.} used a flow cell during
+their signal-to-ratio work \autocite{Heller2009}. By using a flow cell
+with our devices, it would be possible to confirm whether this is the
+case, and this might also help us reduce the size of unwanted transient
+responses resulting from drop-wise additions.
+
+\hypertarget{sec-pristine-EtHex}{%
+\section{Vapour Sensing with Volatile Organic
+Compounds}\label{sec-pristine-EtHex}}
+
+\hypertarget{sec-vapour-drift}{%
+\subsection{Baseline Drift}\label{sec-vapour-drift}}
+
+When sensing vapour in the vapour delivery system, devices have no
+liquid gate, and are instead backgated when taking measurements.
+Therefore, the baseline drift of devices characterised in this manner
+should be considered separately to those characterised in an
+liquid-gated environment. Device baseline drift of a backgated device in
+the vapour sensing chamber is therefore examined here in more detail. A
+AZ\(^\circledR\) 1518 encapsulated carbon nanotube network device was
+used for this discussion. The device was fabricated on a substrate with
+a 300 nm SiO\(_2\) layer, and the carbon nanotube film was deposited
+using the steam-assisted surfactant method. Before measurements were
+taken, the vapour system was purged of vapour, the total dilution flow
+into the chamber was set at 200 sccm as read by the Tylan mass flow
+controller and flow to the PID was set to 150 sccm on the flowmeter. The
+transfer sweep of a channel on this device (channel 6) is shown in
+Figure~\ref{fig-backgate-transfer}, measured using the B1500A
+semiconductor device analyser.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.35\textwidth,height=\textheight]{figures/ch6/Q2C6_backgate_characterisation.png}
+
+}
+
+\caption{\label{fig-backgate-transfer}Transfer sweep of a
+steam-deposited carbon nanotube network field-effect transistor,
+backgated in the vapour delivery system device chamber.}
+
+\end{figure}
+
+::: \{\#fig-bg-baseline-drift
+layout=``{[}{[}-11,3,-1,70,-15{]},{[}-11,3,-1,70,-15{]}{]}
+layout-valign=''top''\}
+
+\includegraphics{figures/(a).png}
+
+\includegraphics{figures/ch6/Q2C6_fitted_curves.png}
+
+\includegraphics{figures/(b).png}
+
+\includegraphics{figures/ch6/Q2C6_fitted_curves_exp.png}
+
+The source-drain and gate current measured for a backgated device
+channel across 3600 s, where V\(_{ds}\) = 100 mV and V\(_g\) = 0 V is
+shown in (a). A linear fit to the data from 2400 s onwards has been
+indicated on (a) with a black dashed line. The linear fit has then been
+subtracted from (a) to give the dataset shown in (b). An exponential fit
+to the dataset in (b) is also shown in black. :::
+
+\textbf{?@fig-bg-baseline-drift} (a) shows 3600 s of baseline drift from
+the same channel when the device was backgated at V\(_g\) = 0 V and a
+source-drain voltage of V\(_{ds}\) = 100 mV was placed across the
+channel. During this period of time, a 200 sccm nitrogen flow was placed
+through the device chamber with the dilution mass flow controller. Gate
+leakage current remains negligible across the entire control series. As
+seen for the liquid-gated device in Section~\ref{sec-baseline-drift},
+there is a period of rapidly-disappearing exponential decay followed by
+a period of stable, approximately linear baseline drift. The baseline
+drift observed here appears to be significantly lower than that seen by
+Noyce \emph{et al.}. This observation suggests that the higher magnitude
+of drift observed by Noyce \emph{et al.} is not primarily due to
+backgating in air, but instead results from the use of a significantly
+different fabrication process for their devices \autocite{Noyce2019}.
+
+A linear least-squares fit was performed on the samples taken between
+2400 s \(-\) 3600 s, and the fit obtained had an R-squared value of
+0.998. The constants obtained for the linear fit, where
+\(I = c_1t + c_2\), were \(c_1 = -17.31\pm0.05\) pAs\(^{-1}\) and
+\(c_2 = 0.779\) µA. Both linear and constant terms are higher than that
+of the average liquid-gated device drift. The linear fit was then
+subtracted from the raw data, and an exponential least-squares fit was
+performed on the remaining dataset. \textbf{?@fig-bg-baseline-drift} (b)
+shows the exponential fit to this remaining dataset from 0 s \(-\) 3600
+s. The constants obtained for the exponential fit
+\(I = I_0exp(-t/\tau)\) were \(I_0 = 7.20 \pm 0.05\) nA and
+\(\tau = 730 \pm 10\) s. The exponential term is similar in size to
+those found for the channels of the liquid-gated device, which may
+indicate the magnitude of this decay behaviour is independent of the
+type of transistor gating. Three time constants equates to
+\(2190 \pm 30\), indicating the length of the control sequence could be
+safely reduced to 2400 s without the short-term exponential drift being
+present during sensing.
+
+This analysis indicates that the baseline drift for the backgated carbon
+nanotube under nitrogen flow can be approximated as a combination of a
+exponential, linear and constant term. Furthermore, while only measured
+here for a single channel, it appears likely that we can expect
+backgated baseline drift behaviour to be similar to the multiplexed
+liquid-gated drifts observed in Section~\ref{sec-baseline-drift}, except
+possibly with a longer time constant for the exponential term. It seems
+that the baseline drift behaviour in these devices is primarily due to
+the general nature of the carbon nanotube network. It appears possible
+that the type of gating used for device characterisation may affect the
+rate at which the exponential term decays. However, further
+experimentation may be needed to confirm this relationship, which is
+outside the scope of this thesis.
+
+\hypertarget{sec-vapour-series}{%
+\subsection{Sensing Series}\label{sec-vapour-series}}
+
+Directly after the 3600 s control series, sensing devices were exposed
+to four intervals of volatile organic vapour flow from the carrier line.
+Two high vapour pressure compounds, ethyl hexanoate and
+\emph{trans}-2-hexen-1-al, were measured separately using two different
+devices. 5 mL of the analyte of interest was placed into the analyte
+bottle on the carrier line before each sensing series. The same settings
+for the vapour delivery system were kept from
+Section~\ref{sec-vapour-drift}. A total flow of 200 sccm between the two
+mass flow controllers was kept through the chamber at all times. During
+each interval 150 sccm flow was placed through the carrier line. Apart
+for the duration of these intervals, flow through the carrier line was
+kept at zero. The intervals were of varying lengths to see how the
+carbon nanotube device responded to various concentrations of vapour in
+the chamber as recorded by the PID. A 1200 s recovery period was placed
+between each carrier flow interval, where 200 sccm flow was placed into
+the chamber from the dilution line. A separate series was also performed
+for each device in an identical manner except without analyte in the
+analyte bottle. The chamber temperature was 22°C \(\pm\) 3°C for all
+measurements.
 
 \begin{figure}
 
@@ -325,7 +2596,7 @@ referred to here as a `PDMS well'
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch2/back-gate-schematic.png}
+\includegraphics{figures/ch6/Q39C11_detrend_trunc_arrows_normalised.png}
 
 }
 
@@ -373,234 +2644,7 @@ referred to here as a `PDMS well'
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch2/liquid-gate-schematic.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-
-\caption{\label{fig-gating-schematics}Schematics (not to scale) showing
-the side-view cross-section of a thin-film field-effect transistor in
-both the (a) back-gated and (b) liquid-gated configuration. A graphene
-monolayer or a carbon nanotube network is used as the transistor
-thin-film. The drain electrode is the gold contact on the left side of
-each figure, while the source electrode is the gold contact on the
-right.}
-
-\end{figure}
-
-Two different voltages are used to adjust transistor operation. The
-first is the `drain bias', \(V_{ds}\), between the drain and source
-electrodes, and the second is the `gate bias', \(V_g\), applied between
-the gate and source electrode. The value of \(V_g\) determines how
-charge carriers flow under the influence of \(V_{ds}\) to produce a
-drain-source current \(I_d\). The relative effect of changes in \(V_g\)
-on source-drain current \(I_d\) is determined by gate capacitance. In
-the general case, gate capacitance is a series combination of geometric
-capacitance, \(C_{G}\), and the quantum capacitance of the channel
-nanomaterial, \(C_{Q}\)
-\autocite{Avouris2007,Cao2009,Heller2009a,Tran2016,Kireev2017,Li2023}.
-Diameter and separation of nanotubes also play a role in the case of
-carbon nanotube networks \autocite{Rouhi2011a}. In an ambipolar
-transistor, a highly negative \(V_g\) will give rise to hole conduction,
-and a highly positive \(V_g\) will give rise to electron
-conduction\autocite{Avouris2007,Yao2021,Li2023}. When
-\(|V_{ds}| < |V_g| - |V_t|\) and the device is gated on, the device is
-in the linear regime. In this regime, \(V_{ds}\) is directly
-proportional to \(I_{d}\), similar to an Ohmic resistor. When
-\(|V_{ds}| > |V_g| - |V_t|\) and the device is on, the device is in the
-saturation regime, where the relationship between \(V_{ds}\) and
-\(I_{d}\) becomes non-linear \autocite{Petti2016,Shkodra2021,Li2023}.
-
-\hypertarget{liquid-gating-and-debye-length}{%
-\subsubsection*{Liquid-Gating and Debye
-Length}\label{liquid-gating-and-debye-length}}
-\addcontentsline{toc}{subsubsection}{Liquid-Gating and Debye Length}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch2/Debye-length-schematic-alt.png}
-
-}
-
-\caption{\label{fig-Debye-length}A diagram of the formation of an
-electric double layer (EDL) under an applied voltage between source and
-liquid-gate electrodes, with a \(p\)-type semiconductor used for the
-channel thin-film. Electric double layers are present at both the
-gate-electrolyte interface and semiconductor-electrolyte interface.
-Adapted from \autocite{Ohno2015,Shkodra2021,Tiwari2022}.}
-
-\end{figure}
-
-Understanding the ionic behaviour of the gate electrolyte used in a
-liquid-gated device setup gives insight into the gating and sensing
-behaviour of the setup. When a voltage is applied at the liquid-gate,
-the charged ions in solution move to form two electric double layers,
-one at the interface between the electrolyte and gate electrode, and one
-at the interface between electrolyte and semiconducting channel, as
-shown in Figure~\ref{fig-Debye-length}. The gate capacitance is a series
-combination of the capacitance of each EDL in series with quantum
-capacitance \(C_{Q}\) \autocite{Heller2010,Kireev2017,Shkodra2021}. The
-Gouy-Chapman-Stern model splits the EDL into two distinct regions, the
-first being a compact layer of ions, the Stern layer, and the second
-being a more diffuse layer, the Gouy-Chapman layer
-\autocite{Tiwari2022}. The surface potential of the solid-electrolyte
-interface exponentially decreases across the diffuse region of the
-double-layer; the characteristic length of this potential screening is
-known as Debye length, \(\lambda_D\). The typical electrolyte Debye
-length is on a nanometer scale, therefore the bulk electrolyte acts as
-an insulator, similar to the silicon dioxide dielectric in the
-back-gated configuration. The Stern layer capacitance is inversely
-proportional to the Debye length, and therefore decreased \(\lambda_D\)
-corresponds to increased gate capacitance
-\autocite{Heller2010,Ohno2015,Shkodra2021,Yao2021}.
-
-\begin{equation}\protect\hypertarget{eq-debye-length}{}{
-\lambda_D = \sqrt{\frac{\epsilon_0\epsilon_rk_bT}{2N_Aq^2I}}
-}\label{eq-debye-length}\end{equation}
-
-The equation for Debye length \(\lambda_D\) in an electrolyte solution
-is given by Equation~\ref{eq-debye-length}, where \(\epsilon_0\) is
-vacuum permittivity, \(\epsilon_r\) is the relative permittivity of the
-electrolyte, \(\k_B\) is the Boltzmann constant, \(T\) is absolute
-temperature in K, \(N_A\) is the Avogadro number, \(q\) is the
-elementary charge and \(I\) is ionic strength in mmol L\(^{-1}\). When
-temperature is kept constant, \(\lambda_D\) only depends on the ionic
-strength of the electrolyte and not on any attributes of the gate
-electrode or channel \autocite{Stern2007,Shkodra2021}. Successive
-dilutions of a particular electrolyte will increase the Debye length:
-for \(1 \times\) PBS, \(\lambda_D\) is \(\sim\) 1 nm, for \(0.1 \times\)
-PBS, \(\lambda_D\) is \(\sim\) 2 nm, for \(0.01 \times\) PBS
-\(\lambda_D\) is \(\sim\) 8 nm and so on. This means gate capacitance is
-directly dependent on the electrolyte used and its concentration
-\autocite{Kireev2017,Shkodra2021}. A \(1 \times\) PBS electrolyte gives
-a gate capacitance several orders of magnitude larger than that of a
-silicon oxide back-gate. A larger capacitance significantly increases
-the effect of electrostatic gating on the channel current, often
-described as increased electrostatic coupling between gate and channel.
-A liquid-gated device with low Debye length will therefore be highly
-sensitive to electrostatic changes across a small voltage range
-\autocite{Heller2010,Ohno2015,Kireev2017,Yao2021}.
-
-However, a decreased Debye length also has disadvantages for sensing.
-Electrostatic potentials outside of the electrolyte-channel electrical
-double layer are effectively screened from the channel. Electrical
-double layers will also form around charged receptors within the
-solution. The combined screening effect means signals due to potential
-changes in charged biomolecules within the bulk electrolyte will have no
-effect on gating of the channel, and therefore no effect on \(I_d\).
-Interactions between the analyte and any receptor element must therefore
-occur within the Debye length, and so a tradeoff exists between channel
-sensitivity and the size of the sensitive region above the channel. Many
-medium or large proteins will require a relatively dilute electrolyte
-for analyte capture to be detected by the channel, which may not reflect
-the intended environment for biosensor application
-\autocite{Stern2007,Piccinini2018,Shkodra2021}. Other approaches to
-increasing Debye length without reducing device sensitivity have
-therefore also been trialled. One approach involves attaching a layer of
-polyethylene glycol polymer (PEG) to the channel, limiting the approach
-of counterions. This increases Debye length at the electrolyte-channel
-interface while preserving the capacitance of the electrolyte-gate
-interface, keeping device sensitivity relatively high
-\autocite{Gao2016,Kesler2020,Albarghouthi2022}.
-
-\hypertarget{electrical-characterisation}{%
-\subsection{Electrical
-Characterisation}\label{electrical-characterisation}}
-
-\begin{figure}
-
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(a).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch2/Q5C10ch8transconductance.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(b).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch2/NTQ31C5ch1transconductance.png}
+\includegraphics{figures/ch6/Q2C6_detrend_trunc_arrows_normalised.png}
 
 }
 
@@ -648,7 +2692,7 @@ Characterisation}\label{electrical-characterisation}}
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch2/Q5C10ch8on_off_current.png}
+\includegraphics{figures/ch6/Q39C11_filtered_detrend_trunc_arrows_normalised.png}
 
 }
 
@@ -696,7 +2740,103 @@ Characterisation}\label{electrical-characterisation}}
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch2/NTQ31C5ch1on_off_current.png}
+\includegraphics{figures/ch6/Q2C6_filtered_detrend_trunc_arrows_normalised.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(e).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Q39C11_mean_simple_difference_before_and_after_step_filtered_concentrations.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(f).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Q2C6_mean_simple_difference_before_and_after_step_filtered_concentrations.png}
 
 }
 
@@ -714,151 +2854,66 @@ Characterisation}\label{electrical-characterisation}}
 
 \end{minipage}%
 
-\caption{\label{fig-gating-transfer}Examples of field-effect transistor
-transfer characteristics taken at \(V_{ds}\) = 100 mV using two
-different carbon nanotube network device channels. A linear scale is
-used in (a) and (b), while a logarithmic scale is used in (c) and (d).
-The curves in (a) and (c) are from a backgated channel, while the curves
-in (b) and (d) are from a liquid-gated channel. The linear fit with
-gradient corresponding to transconductance at \(V_g\) = 0 V is shown in
-(a) and (b) with a dotted red line. The ``on'' current in (c) and (d) is
-shown with a red horizontal line, while the ``off'' current is shown
-with a blue horizontal line.}
+\caption{\label{fig-EtHex-sampling}Device channel responses to intervals
+of flow from the carrier line into the vapour delivery system chamber.
+Intervals begin at 3600 s, 4850 s, 6150 s and 7500 s. The length of each
+interval is indicated above the corresponding normalised current
+response to \emph{trans}-2-hexen-1-al (E2Hex) in (a) and to ethyl
+hexanoate (EtHex) in (b). Each series is shown alongside a control
+series in which no analyte was present in the analyte bottle. The
+dataset after applying a moving median filter is shown in (c) for E2Hex
+and (d) for EtHex. The signal changes corresponding to the current
+responses to each interval are shown in (e) for E2Hex and (f) for
+EtHex.}
 
 \end{figure}
 
-Applying a gate voltage \(V_g\) to the gate of an thin-film transistor
-influences the amount and type of available charge carriers for
-conduction \autocite{Avouris2007,Tran2016,Heller2009a}. The
-current-voltage plots of a given transistor are known as `characteristic
-curves'. The plot of \(I_d\) against \(V_g\) at constant \(V_{ds}\) is
-known as the `transfer' characteristic curve at that source-drain
-voltage, while the I-V curve of \(I_d\) against \(V_{ds}\) at constant
-\(V_g\) is known as the `source-drain' or `output' characteristic curve
-\autocite{Petti2016,Shkodra2021}. Both back-gated and liquid-gated
-transfer characteristics from thin-film transistors are shown in
-Figure~\ref{fig-gating-transfer}. The back-gated device exhibits
-unipolar behaviour, where the transistor conducts in only one direction
-along the \(I_d - V_g\) curve, while the liquid-gated device exhibits
-ambipolar behaviour, where conduction occurs along both directions of
-the curve. The liquid-gated device is also able to traverse a wide range
-of currents over a much more limited voltage interval than the
-back-gated device. A variety of quantitative parameters or figures of
-merit can be extracted from the transfer characteristics of a thin-film
-transistor \autocite{Petti2016}. Transconductance and on-off ratio are
-discussed below, while threshold voltage and subthreshold swing are
-discussed for the carbon nanotube network case specifically in
-Section~\ref{sec-electrical-characterisation-CNT}.
+The results of these interval tests, both with and without analyte, are
+shown in Figure~\ref{fig-EtHex-sampling} (a) for
+\emph{trans}-2-hexen-1-al and Figure~\ref{fig-EtHex-sampling} (b) for
+ethyl hexanoate. These results have been normalised, despiked and have
+had baseline drift corrections applied in the manner described in both
+Section~\ref{sec-python-analysis} and
+Section~\ref{sec-salt-conc-series}. To more clearly discern sensing
+behaviour through the noise present, a moving median filter was applied
+to these datasets, as shown in Figure~\ref{fig-EtHex-sampling} (c) and
+Figure~\ref{fig-EtHex-sampling} (d) for E2Hex and EtHex respectively.
+Most intervals of exposure to carrier line flow correspond to a current
+increase. These increases have been labelled with the length of the
+corresponding interval used. When analyte was present in the analyte
+bottle on the carrier line, the response to each exposure interval was
+generally larger than the response when no analyte is present. Some
+response to carrier line flow is observed even when the analyte bottle
+is empty. As the system lines are purged with a roughing pump before
+sensing, and both lines are checked for vapour before sensing during the
+PID, it appears these small responses may be due to a slow leak of
+volatiles from the fumehood environment into the carrier line when not
+in use.
 
-\hypertarget{on-off-ratio}{%
-\subsubsection*{On-off Ratio}\label{on-off-ratio}}
-\addcontentsline{toc}{subsubsection}{On-off Ratio}
-
-One of the most important figures of merit which can be extracted from
-the transfer characteristic curve of a thin-film FET is the on-off
-current ratio, the ratio of the current through a device when gated
-fully `on', \(I_{on}\), to the current \(I_{off}\) when gated fully
-`off'. \autocite{Petti2016,Shkodra2021}. Having a low off current is
-desirable as it corresponds to low power consumption by the transistor
-\autocite{Rouhi2010}. In Figure~\ref{fig-gating-transfer} (a), there is
-a clear on regime at large negative voltages and an off regime at large
-positive voltages. Although the transfer curve never completely flattens
-in each direction, \(I_{on}\) can be reasonably be estimated by the
-highest current obtained, while \(I_{off}\) can be estimated from the
-lowest current reading. In an ambipolar FET, such as that shown in
-Figure~\ref{fig-gating-transfer} (b), the off current can be defined as
-the minimum current during the transfer sweep, where the majority
-carrier transitions from being holes to electrons or \emph{vice versa}
-\autocite{Petti2016,Zheng2017}. For the backgated channel shown in
-Figure~\ref{fig-gating-transfer} (a), the on-off ratio
-\(I_{on}/I_{off}\) is \(\sim\) 700, while for the liquid-gated device in
-Figure~\ref{fig-gating-transfer} (b), \(I_{on}/I_{off} \sim 3000\). The
-superior on-off ratio is a significant advantage of the liquid-gated
-configuration \autocite{Shkodra2021}.
-
-\hypertarget{transconductance}{%
-\subsubsection*{Transconductance}\label{transconductance}}
-\addcontentsline{toc}{subsubsection}{Transconductance}
-
-In the linear regime, transconductance at a specific gate voltage is
-given by \(g_m = |dI_{d}/dV_g|\). Transconductance indicates how
-responsive the device is to electrostatic gating at a given gate
-voltage. In other words, when \(g_m\) is large, small changes in \(V_g\)
-can significantly modulate channel current \(I_d\), which is useful for
-sensing \autocite{Heller2009a,Ohno2015,Kireev2017}. Transconductance at
-a given gate voltage is also proportional to the mobility (movement) of
-charge carriers in the device channel, and therefore depends on the
-scattering properties of the material
-\autocite{Rouhi2010,Petti2016,Li2023}. The transconductance at a
-specific gate voltage can be found from performing a linear fit in a
-small region around that voltage on the transfer curve. Linear fits for
-transconductance at \(V_g = 0\) V are shown for a back-gated device in
-Figure~\ref{fig-gating-transfer} (a), and a liquid-gated device in
-Figure~\ref{fig-gating-transfer} (b), which give values of \(g_m\) =
-0.002 µS and \(g_m\) = 1 µS respectively. The difference of several
-orders of magnitude between back-gated and liquid-gated transconductance
-corresponds to the difference of several orders of magnitude between
-back and liquid-gated gate capacitance \autocite{Tran2016,Shkodra2021}.
-The ability to achieve high transconductance at relatively low voltage
-is important for the creation of low power sensors, which is another
-advantage of the liquid-gated setup.
-
-\hypertarget{gate-leakage}{%
-\subsubsection*{Gate Leakage}\label{gate-leakage}}
-\addcontentsline{toc}{subsubsection}{Gate Leakage}
-
-Application of higher voltages to the gate in both the liquid-gate and
-back-gate cases can result in significant leakage currents through the
-gate. These currents mean that the insulating layer at the gate
-producing the capacitive effect no longer acts as an insulator,
-adversely affecting transistor behaviour and contributing to sensor
-drift that may be mistaken for signal responses to analyte
-\autocite{Noyce2019,Shkodra2021,Albarghouthi2022}. In the case of
-back-gated devices, gate leakage occurs due to conduction through the
-oxide dielectric. If the gate voltage produces an electric field
-exceeding the dielectric strength of the oxide, dielectric breakdown can
-occur, where the oxide layer no longer acts as an insulator. Breakdown
-results from voltage-induced oxygen vacancies in the SiO\(_2\) lattice
-forming a conductive path through the insulator \autocite{Padovani2017}.
-Breakdown occured at \(\sim\) 50 V for the back-gated channel in
-Figure~\ref{fig-gating-transfer}. In the liquid-gated case, the
-electrolyte used determines the appropriate voltage range for electrical
-characterisation, since excessive voltages will induce redox reactions.
-For water-based electrolytes, gate voltages must be kept within the
-\(\pm\) 1 V range \autocite{Wang2010,Ohno2015,Shkodra2021}. In normal
-operation, gate current should appear negligible on a linear scale, as
-shown in Figure~\ref{fig-gating-hysteresis}.
-
-\hypertarget{hysteresis-and-baseline-drift}{%
-\subsubsection*{Hysteresis and Baseline
-Drift}\label{hysteresis-and-baseline-drift}}
-\addcontentsline{toc}{subsubsection}{Hysteresis and Baseline Drift}
-
-Thin-film transistor devices typically exhibit some degree of
-hysteresis, where the history of channel current affects future current
-behaviour. Hysteresis in carbon nanotube and graphene field-effect
-transistors is a result of filling or emptying of slow-discharge charge
-traps in the channel environment. These charge traps effectively dope
-the silicon dioxide insulator or the insulator-channel interface, which
-results from gate bias stress or dopant adsorption
-\autocite{McEuen2002,Kim2003,Wang2010,Bartolomeo2011,Bargaoui2018,Peng2018}.
-A capacitive gating effect from charged ions also contributes to
-hysteresis, from the use of a electrolyte-gated environment or from
-charged surface contamination \autocite{Wang2010,Yao2021}. Due to
-hysteresis, sweeping \(V_g\) forwards across a set voltage range will
-result in a different \(I_d - V_g\) characteristic curve than
-subsequently sweeping over \(V_g\) in the reverse direction. Hysteresis
-depends on the voltage range used for characterisation, the sweep rate
-and the environment of the transistor channel
-\autocite{Kim2003,Wang2010}. Hysteresis in both the back-gated and
-liquid-gated cases are shown in Figure~\ref{fig-gating-hysteresis}.
-Hysteresis is significantly lower for the liquid-gated case, which may
-be due to the reduced voltage range used. However, this change may also
-result from a reduction in trap states in the silicon dioxide layer due
-to the use of a liquid-gate.
+Vapour concentration measurements from PID, shown in
+Figure~\ref{fig-EtHex-sampling-PID}, also indicate that an ionisable gas
+is reaching the chamber during each interval, even when the analyte
+bottle is left empty. As discussed in
+\textbf{?@sec-responses-to-vapour}, some baseline drift is seen after
+each addition, which is particularly significant for the second two
+carrier line intervals in Figure~\ref{fig-EtHex-sampling-PID} (a). The
+baseline immediately before each peak was therefore subtracted from the
+maximum concentration measured during each interval to give the values
+shown above each peak. These values are taken to represent the nominal
+change in chamber concentration as a result of each exposure interval.
 
 \begin{figure}
 
+\begin{minipage}[t]{0.11\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
 \begin{minipage}[t]{0.03\linewidth}
 
 {\centering 
@@ -883,13 +2938,13 @@ to the use of a liquid-gate.
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.45\linewidth}
+\begin{minipage}[t]{0.70\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch2/Q5C10_hysteresis.png}
+\includegraphics{figures/ch6/input_time_comparison_E2Hex.png}
 
 }
 
@@ -897,7 +2952,17 @@ to the use of a liquid-gate.
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.01\linewidth}
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.11\linewidth}
 
 {\centering 
 
@@ -931,13 +2996,13 @@ to the use of a liquid-gate.
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.45\linewidth}
+\begin{minipage}[t]{0.70\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch2/NTQ31C5_hysteresis.png}
+\includegraphics{figures/ch6/input_time_comparison_EtHex.png}
 
 }
 
@@ -945,7 +3010,7 @@ to the use of a liquid-gate.
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.01\linewidth}
+\begin{minipage}[t]{0.15\linewidth}
 
 {\centering 
 
@@ -955,779 +3020,203 @@ to the use of a liquid-gate.
 
 \end{minipage}%
 
-\caption{\label{fig-gating-hysteresis}Field-effect transistor transfer
-characteristics taken at \(V_{ds}\) = 100 mV from two different device
-channels on a linear scale. Forward and reverse sweeps are shown for the
-back-gated case (a) and the liquid-gated case (b), with the direction of
-each sweep indicated by an arrow. A sweep rate of \(V_{ds}\) = 10
-mV/sample was used for both transfer curves. The gate current measured
-during each sweep is also shown with a dotted line.}
+\caption{\label{fig-EtHex-sampling-PID}Nominal concentration
+measurements by the photoionisation detector taken from the device
+chamber during device current sampling from 3600 s onwards. Measurements
+both with and without \emph{trans}-2-hexen-1-al (E2Hex) in the analyte
+bottle are shown in (a), while measurements both with and without ethyl
+hexanoate (EtHex) are shown in (b). The maximum nominal concentration
+reached during each carrier flow interval is indicated above each peak.}
 
 \end{figure}
 
-Memory effects are also present during current measurement when both
-source-drain and source-gate voltages are kept constant. These changes
-appear as a slow change in current, and are referred to here as either
-signal drift or baseline drift. In more extreme cases, baseline drift
-can obscure or even be confused with current changes attributable to
-analyte interaction during real-time sensing \autocite{Noyce2019}.
-Signal drift occurs both in ambient conditions and in a vacuum
-environment, and cannot be accounted for by changes in room temperature
-and ambient lighting alone. While research into signal drift is ongoing,
-it appears to be a hysteretic effect resulting from changes in trap
-states over time \autocite{Lin2006,Bargaoui2018,Noyce2019}. The high
-demand for characterisation equipment in a standard device laboratory
-means that waiting over three hours for baseline drift to settle is
-impractical, and furthermore, extended periods of voltage application
-may degrade bio-functionalised devices \autocite{Noyce2019}. Since trap
-states are unavoidable to a degree \autocite{DiMaria1993,Collins2000},
-data analysis that accounts for baseline drift was therefore explored in
-some detail in this thesis.
-
-\hypertarget{graphene-field-effect-transistors}{%
-\section{Graphene Field-Effect
-Transistors}\label{graphene-field-effect-transistors}}
-
-\hypertarget{graphene-properties}{%
-\subsection{Graphene Properties}\label{graphene-properties}}
-
-Graphene is a 2-dimensional material which consists of covalently bonded
-carbon atoms in a dense lattice of hexagonal cells
-\autocite{McEuen2002,Novoselov2004,Geim2007,Tran2016}. Graphene can be
-used to create a variety of low-dimensional graphitic nanomaterials,
-including carbon nanotubes \autocite{McEuen2002} (see
-Section~\ref{sec-carbon-nanotubes}). Monolayer and bilayer graphene are
-zero band-gap semiconductors, where traversing the electronic
-bandstructure in different directions gives rise to either metallic or
-semiconducting behaviour \autocite{McEuen2002,Peng2018}. Adding more
-graphene layers adds more complexity to the bandstructure, with
-significant overlap between bands and reduced carrier mobility. When 10
-or more layers are present, the structure behaves as 3D graphite
-\autocite{Geim2007,Ohno2015}. First isolated and used as a thin-film
-transistor channel in 2004 \autocite{Novoselov2004}, monolayer graphene
-has many desirable electronic properties. Charge carrier transport is
-ballistic over submicrometer distances at room temperature, and as
-graphene is metallic even at the Dirac point, this transport is not
-inhibited by a Schottky barrier at the metal contacts of a device
-\autocite{Novoselov2004,Geim2007,Peng2018}. Graphene is also a highly
-chemically stable material. In particular, it will not readily oxidise
-in an electrolyte solution due to having a large `electrochemical
-window'; in other words, it is too chemically stable to take part in
-electrochemical reactions within a large range of applied voltages
-\autocite{Ohno2015,Tran2016}.
-
-\hypertarget{graphene-folds}{%
-\subsubsection*{Graphene Folds}\label{graphene-folds}}
-\addcontentsline{toc}{subsubsection}{Graphene Folds}
+Each signal response corresponds to a change in conductance through the
+exposed carbon nanotubes within the device channel. These conductance
+changes occur due to the molecular adsorption of analyte vapour onto the
+external and internal surfaces of the nanotubes. The vapour can dope the
+semiconducting carbon nanotubes in the channel, causing a shift in the
+channel threshold voltage, and can cause carrier scattering when
+adsorped onto the metallic nanotubes present. Binding of analyte to a
+gas sensing material can be reversible or irreversible. In general,
+adsorption onto carbon nanotube sensors is irreversible. This
+irreversibility means after a response to analyte, readings from the
+sensor will not return to the original baseline within the same
+timescale as the sensing response, even after stopping analyte flow to
+the chamber \autocite{Agnihotri2005,Lee2005}. From
+Figure~\ref{fig-EtHex-sampling}, it is clear that the carbon nanotube
+sensor configuration used here is primarily irreversible, where the
+current level does not return to baseline within a period of 1200 s
+after analyte exposure.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.5\textwidth,height=\textheight]{figures/ch2/modified_NGW8D4_1mM_rhodamineB_centralchannel3_postMsurfactantclean5min_2.4sexposure_20X_221111.png}
+{\centering \includegraphics[width=0.55\textwidth,height=\textheight]{figures/ch6/EtHex-ratio-comparison.png}
 
 }
 
-\caption{\label{fig-graphene-folds}Fluorescence image of a strip of
-graphene on silicon dioxide surface functionalised with Rhodamine B dye.
-Bright lines are visible on the left side of the graphene surface which
-correspond to preferential attachment of dye along the graphene folds.}
+\caption{\label{fig-EtHex-ratio-comparison}Device response against
+maximum concentration measurement corresponding to each interval of
+carrier flow, where control responses to carrier line flow from an empty
+analyte bottle have been subtracted. The experimental results have been
+fitted with a Freundlich isotherm. The chamber temperature was 22°C ±
+2°C during collection of all data used here.}
 
 \end{figure}
 
-Graphene folding (also referred to as warping or wrinkling) of up to
-\(\sim\) 6 nanometers in height occurs at many locations on a graphene
-monolayer \autocite{Zhu2012}. These folds primarily result from the
-chemical vapour deposition process onto copper used in the creation of
-graphene films. The thermal contraction of copper exceeds that of
-graphene during the rapid cooling that takes place after deposition.
-Since the graphene is pinned to the surface, this leads to slight
-folding of the monolayer \autocite{Zhao2012,Zhu2012,Chhikara2013}.
-Transferring graphene from the rough copper to a relatively smooth
-Si/SiO\(_2\) wafer may also contribute to wrinkling
-\autocite{Zhao2012,Kireev2017}. These folds help to mechanically
-stabilise the graphene layer, but have significant negative effects on
-charge transport \autocite{Geim2007,Chhikara2013,Zhu2012}. Folds also
-exhibit enhanced reactivity due to their low radius of curvature
-\autocite{Zhao2012}. This is demonstrated in
-Figure~\ref{fig-graphene-folds}, where the fluorescent Rhodamine B dye
-preferentially bonds to folded regions, leading to particularly dense
-functionalisation in these regions. This behaviour has been previously
-observed for the decoration of graphene with pentacene molecules
-\autocite{Chhikara2013}. Other defects influencing surface reactivity
-include grain boundaries and point defects in the crystal structure
-\autocite{Zhao2012,Chhikara2013,Kireev2017}.
-
-\hypertarget{sec-electrical-characterisation-graphene}{%
-\subsection{Electrical
-Characterisation}\label{sec-electrical-characterisation-graphene}}
-
-The transfer sweep behaviour of a graphene device is ambipolar and has
-no off regime under standard conditions
-\autocite{Novoselov2004,Bartolomeo2011,Ohno2015}. When a gate voltage
-\(V_g\) is applied to the channel of a graphene device, the Fermi energy
-of the graphene is shifted and surface charge density is altered
-\autocite{Novoselov2004,Heller2010,Ohno2015}. An increase in surface
-charge density means an increase in carriers available for either \(p\)
-or \(n\)-conduction and increased \(I_d\) \autocite{Geim2007}. The
-regions of hole conduction and electron conduction are shown in
-Figure~\ref{fig-graphene-characteristics} (a), alongside the
-corresponding Fermi energy on the simplified graphene bandstructure
-(known as a `Dirac cone'). The transconductance of the curve at \(V_g\)
-= 0 V, \(g_m\) = 1 µS, is similar to the liquid-gated transconductance
-of a carbon nanotube device shown earlier. As graphene lacks a bandgap,
-there is a minimum possible conductance for graphene devices, which
-leads to a relatively small on-off ratio
-\autocite{Novoselov2004,Geim2007}. Folding may further decrease on-off
-ratio due to diffusive transport of carriers along the folds
-\autocite{Zhu2012}. The on-off ratio of the graphene transfer curve
-shown in Figure~\ref{fig-graphene-characteristics} (a) is 5. A bandgap
-can be introduced to a graphene device using a dual-gated configuration,
-increasing the on-off ratio past 100 \autocite{Xia2010}.
-
-\begin{figure}
-
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(a).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch2/Graphene_transfer_1.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(b).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch2/Graphene_transfer_2.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-
-\caption{\label{fig-graphene-characteristics}Liquid-gated transfer
-characteristics of two graphene field-effect transistor channels. In
-(a), the Dirac point voltage is indicated by a red dotted line, and
-regions of hole conduction and electron conduction are also shown. The
-relative Fermi energy in each region is shown on graphene bandstructure
-insets (adapted from \autocite{Geim2007,Ohno2015}). The graphene channel
-in (b) has double conduction minima, which are highlighted with red
-arrows. The relative Fermi energy at each minima is also shown on
-bandstructure insets (adapted from \autocite{Peng2018}).}
-
-\end{figure}
-
-\hypertarget{dirac-voltage}{%
-\subsubsection*{Dirac Voltage}\label{dirac-voltage}}
-\addcontentsline{toc}{subsubsection}{Dirac Voltage}
-
-The minimum conductance obtainable by gating in a graphene device occurs
-at what is known as the charge neutrality or Dirac point, where the
-population of charge carriers is at a minimum
-\autocite{Novoselov2004,Bartolomeo2011,Ohno2015,Kireev2017}. At gate
-voltages close to the Dirac voltage, both electrons and holes are
-present, and at the Dirac point, there are equal concentrations of each
-carrier present \autocite{Novoselov2004,Bartolomeo2011,Peng2018}. As
-shown in Figure~\ref{fig-graphene-characteristics} (a), as the gate
-voltage moves left away from the Dirac voltage and Fermi energy is
-shifted into the valence band, holes begin to dominate conduction, while
-as gate voltage is moved to the right of the Dirac voltage, where Fermi
-energy is shifted into the conduction band, electrons dominate
-\autocite{Novoselov2004,Bartolomeo2011,Feng2014,Zhang2015}. At points
-far from the Dirac voltage, conductivity increases linearly
-\autocite{Novoselov2004,Bartolomeo2011,Peng2018}. Typically, a monolayer
-graphene channel conducts holes at zero gate voltage, which results from
-the presence of \(p\)-dopants such as oxygen and water adsorbed from the
-air and resist residues. By removing these dopants, the Dirac point
-feature can be brought closer to the zero gate voltage position on the
-transfer curve, indicating graphene is naturally a mixed-carrier
-conductor
-\autocite{Novoselov2004,Bartolomeo2011,Zhang2015,Kireev2017,Peng2018}.
-
-\hypertarget{double-dirac-points}{%
-\subsubsection*{Double Dirac Points}\label{double-dirac-points}}
-\addcontentsline{toc}{subsubsection}{Double Dirac Points}
-
-Some graphene devices naturally exhibit a double-minimum feature in the
-transfer characteristic curve, corresponding to two separate Dirac
-points \autocite{Bartolomeo2011,Feng2014,Zhang2015,Kireev2017,Peng2018}.
-This effect is due to doping of graphene by charge transfer from the
-metal contacts. In shorter length channels, metal doping affects the
-entire channel length. Band bending from channel doping near the metal
-contact results in a consistent Fermi level across the channel, meaning
-only a single Dirac point is present in the transfer characteristic
-curve. However, for longer channels, metal doping no longer occurs
-across the entire channel length \autocite{Bartolomeo2011,Peng2018}.
-This discrepancy leads to a difference in Fermi level between the
-metal-doped graphene and graphene in the unaffected channel region
-\autocite{Bartolomeo2011,Feng2014,Peng2018,Zhang2015}. The difference in
-Fermi levels results in the introduction of a second Dirac point. The
-relative level of doping in the metal-doped and unaffected channel
-regions determines the relative \(V_g\) position of each local minimum
-on the \(I_d - V_g\) curve \autocite{Bartolomeo2011,Peng2018,Zhang2015}.
-
-Figure~\ref{fig-graphene-characteristics} (b) shows a double-minimum
-transfer characteristic with each Dirac point indicated. At large
-negative \(V_g\), the Fermi energy level is far from the Dirac point
-energy of both the channel and contact regions, and holes dominate
-conduction. As \(V_g\) and the Fermi energy approach and then pass the
-Dirac point corresponding to the left minimum \(V_{D,-}\), the available
-carriers likewise decrease to a minimum and begin to increase again in
-one region \(R_1\), but continuously decrease in the other region
-\(R_2\). The shape of the curve between \(V_{D,-}\) and the right local
-minimum \(V_{D,+}\) then depends on the relative rate of increasing
-electron and decreasing hole populations, where the graphene is
-\(n\)-doped in \(R_1\) and \(p\)-doped in \(R_2\). At the local minimum
-on the right, \(V_{D,+}\), the carriers in \(R_2\) now reach a minimum,
-while carriers in \(R_1\) continue to increase. At voltages well beyond
-\(V_{D,+}\), electrons then dominate conduction in both regions
-\autocite{Bartolomeo2011,Zhang2015,Peng2018}.
-
-\hypertarget{sensing-behaviour}{%
-\subsection{Sensing Behaviour}\label{sensing-behaviour}}
-
-The large surface-to-volume ratio of graphene makes it highly sensitive
-to intermolecular interactions and therefore appropriate for use in
-sensing applications \autocite{Ohno2015,Tran2016}. An analyte molecule
-can be detected using a graphene channel by observing the change in
-current that occurs when the presence of a charged analyte alters the
-channel Fermi level \autocite{Heller2010,Ohno2015}. Sensing may be
-dominated by interactions occurring at the graphene folds
-\autocite{Zhao2012}. The small on-off ratio of graphene is a drawback
-when used in field-effect transistor sensing applications as compared
-with carbon nanotube transistors \autocite{Novoselov2004}. If a
-dual-gate configuration is used, however, on-off ratio can be increased
-significantly by introducing a bandgap. The presence of a bandgap means
-a Schottky barrier is introduced at the graphene-electrode interface,
-whose modulation can then also contribute as a potential sensing
-mechanism (see Section~\ref{sec-cnt-network-details} for a discussion of
-Schottky barriers) \autocite{Xia2010}.
-
-\hypertarget{random-network-carbon-nanotube-field-effect-transistors}{%
-\section{Random-Network Carbon Nanotube Field-Effect
-Transistors}\label{random-network-carbon-nanotube-field-effect-transistors}}
-
-\hypertarget{sec-carbon-nanotubes}{%
-\subsection{Carbon Nanotube Properties}\label{sec-carbon-nanotubes}}
-
-Since their initial identification in 1991 \autocite{Iijima1991}, a wide
-range of applications for carbon nanotubes (CNTs) have been proposed,
-due to their small mass, elasticity, strength, and unique electronic
-properties. A single-walled carbon nanotube (SWCNT) consists of a
-monolayer graphene sheet rolled up into a cylinder, while a multi-walled
-carbon nanotube (MWCNT) consists of several monolayer graphene cylinders
-where smaller cylinders are coaxially contained by larger cylinders
-\autocite{Dekker1999,Avouris2007,Cao2009,Rouhi2010,Shkodra2021}.
-Multi-walled carbon nanotubes can suffer from significant scattering at
-defects leading to diffusive electron motion \autocite{Dekker1999}.
-However, single-walled carbon nanotubes are relatively defect-free, and
-carrier transport within nanotubes is near-ballistic at room
-temperature, resulting in high carrier mobility
-\autocite{Dekker1999,Avouris2007,Cao2009,Rouhi2010,Shkodra2021}. The
-momentum of charge carriers in a single-walled carbon nanotube is
-quantised, confining carriers to 2-dimensional slices across the
-3-dimensional graphene bandstructure. If a slice contains a bandgap, the
-carbon nanotube behaves as a semiconductor (s-CNT); if not, the nanotube
-behaves as a metal (m-CNT) \autocite{McEuen2002}. The high
-surface-to-volume ratio of small-diameter single-walled carbon nanotubes
-makes them extremely sensitive and therefore particularly suitable for
-sensing applications \autocite{Cao2009,Yao2021,Shkodra2021}. Like
-graphene, carbon nanotubes have a large potential window, and can be
-used safely in a liquid-gate environment without undergoing redox
-reactions \autocite{Ohno2015}.
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.55\textwidth,height=\textheight]{figures/ch2/carbon_nanotube_wrapping.png}
-
-}
-
-\caption{\label{fig-carbon-nanotube-wrapping}Diagram illustrating how a
-graphene sheet can be rolled up at various angles to form carbon
-nanotubes. The two black dotted lines represent boundaries which can be
-cut across and then brought into contact to form a cylinder. The
-cylinder here is referred to by the integer pair (6,4), as the chiral
-vector \(C_h\), the vector perpendicular to the cut through the sheet,
-is given by \(C_h = 6a_1+4a_2\). The chiral vector forms the
-circumference of the rolled carbon nanotube. The left edge in the zigzag
-(\(n\),0) and armchair (\(n\),\(n\)) cases are shown with a blue and
-purple dotted line respectively. The location of the right edge
-(diameter of the nanotube) is determined by the value chosen for \(n\).
-Adapted from \autocite{Dekker1999,Lu2012}.}
-
-\end{figure}
-
-The chirality and diameter of a carbon nanotube determines its
-electronic bandstructure and whether it has semiconducting or metallic
-characteristics
-\autocite{Martel1998,Dekker1999,McEuen2002,Avouris2007,Shkodra2021,Li2023}.
-The chirality indices of a nanotube (\(n\),\(m\)) determines the chiral
-angle at which hexagons wind around the nanotube relative to the
-longitudinal axis of the nanotube. This chiral angle is the angle
-between the chiral vector
-\(\textbf{C}_h = n\textbf{a}_1+m\textbf{a}_2\), which maps to the
-circumference of the nanotube, and the basis vector \(\textbf{a}_1\),
-which is parallel to a row of hexagons. The size of the chiral angle
-\(\theta\) is given by Equation~\ref{eq-chiral-angle}, the diameter of
-the resulting carbon nanotube is given by \(d=|C_h|/\pi\)
-\autocite{Lu2012}.
-
-\begin{equation}\protect\hypertarget{eq-chiral-angle}{}{
-\theta = \arcsin\frac{\sqrt{3}m}{2\sqrt{n^2+nm+m^2}}, \space n > m
-}\label{eq-chiral-angle}\end{equation}
-
-When \(m=0\), \(\theta = 0°\), and the resulting carbon nanotube has a
-`zigzag' structure; when \(m=n\), \(\theta = 30°\), and the carbon
-nanotube has an `armchair' structure. When \(\theta\) is between
-\(0°-30°\), the structure is referred to as `chiral'
-\autocite{Dekker1999,Lu2012}. When \(n-m=3z\), where \(z\) is an
-integer, the resulting carbon nanotube is metallic \(-\) for example, if
-\(n=5\) and \(m=5\), \(z=0\), therefore the tube is metallic. All other
-nanotubes are semiconducting, including the (6,4) chiral nanotube
-described in Figure~\ref{fig-carbon-nanotube-wrapping}. Out of the
-chiral arrangements available, two-thirds of the possible structures are
-semiconducting while one-third is metallic \autocite{Dekker1999}.
-
-\hypertarget{sec-cnt-network-details}{%
-\subsection{Carbon Nanotube Network
-Transistors}\label{sec-cnt-network-details}}
-
-The first carbon nanotube transistors from the 1990s onwards used a
-single carbon nanotube as the device channel
-\autocite{Martel1998,Tans1998}. However, this approach led to
-significant device-to-device variation and low current density devices.
-An alternative approach is to use a large-scale network of carbon
-nanotubes as the transistor channel. Here, the individual electrical
-properties of the CNTs are averaged out across the network and the large
-area of coverage ensures high currents. Furthermore, the large exposed
-area increases the likelihood of interactions with the local environment
-in sensing applications
-\autocite{Hu2004,Cao2009,Murugathas2019a,Li2023}. Carbon nanotube
-networks can either be aligned or randomly deposited
-\autocite{Cao2009,Shkodra2021}; in this thesis, randomly deposited
-networks were fabricated using facile solution-deposition methods
-\autocite{Zheng2017,Cassie2023}. Important attributes of a carbon
-nanotube film include the density of the network (number of nanotubes
-per unit area), the ratio of metallic to semiconducting nanotubes
-present, and the distribution of nanotube diameters present
-\autocite{Cao2009,Shkodra2021}. The strong van der Waals forces between
-carbon nanotubes lead to them bundling together within a network. These
-bundles may contain many nanotubes of different size and chirality
-\autocite{Fuhrer2000,Hu2004,Cao2009,Murugathas2019a}.
-
-In a network carbon nanotube device with metal electrodes, transistor
-switching is primarily governed by band bending at the interfaces
-between each electrode and the semiconducting carbon nanotubes
-\autocite{Avouris2007,Bargaoui2018}. The Fermi level difference between
-materials leads to free electrons flowing across each interface until
-the Fermi levels equilibrate and a electric dipole layer forms. The net
-electric fields of this layer create a space charge region in the
-channel, forming a Schottky barrier which prevents the further flow of a
-particular type of charge at each interface. The nature of the band
-bending and resulting Schottky barrier depends on the work function of
-the metal \autocite{Cowley1999,Zhang2012}. A high work function metal
-bends the valence band of the semiconductor towards the Fermi level of
-the metal, creating a low barrier for holes but a high barrier for
-electrons \autocite{Avouris2007,Zhang2012,Bargaoui2018}. Channel current
-results primarily from quantum tunnelling through Schottky barriers. The
-Schottky barriers at the metal electrodes result in one type of charge
-dominating flow, referred to as unipolar behaviour. However, if the
-barrier size is low for both holes and electrons, they can flow
-simultaneously through the channel, which is referred to as ambipolar
-behaviour \autocite{Avouris2007,Heller2008}.
-
-The behaviour of carbon nanotube network transistors is also influenced
-by a variety of potential barriers existing at junctions between carbon
-nanotubes. A prominent example is the Schottky barriers existing at
-junctions between metallic and semiconducting nanotubes (m-s junctions)
-\autocite{Fuhrer2000,Topinka2009,Murugathas2019a}. These potential
-barriers cause increased resistance at these junctions relative to other
-points in the network \autocite{Fuhrer2000,Jang2015}. When the channel
-length is much larger than that of individual nanotubes, channel current
-must pass through junctions placed along percolation pathways. If only
-one pathway exists across a sparse network, the network density is at
-the `percolation threshold'. If a network is below the percolation
-threshold, the channel cannot conduct
-\autocite{Hu2004,Topinka2009,Jang2015}. When a network with density well
-above percolation contains a low proportion of semiconducting nanotubes,
-percolating pathways which only contain metallic nanotubes exist. A
-device with this film will be highly conductive but cannot be gated
-\autocite{Fuhrer2000,Topinka2009}. Fixing the density but increasing the
-proportion of s-CNTs means m-s junctions become more prevalent. The
-introduced Schottky barriers cause a dramatic drop in conductance. As
-the proportion of s-CNTs approaches 100\%, semiconducting pathways with
-no metallic junctions emerge, and conductance sharply increases once
-more \autocite{Topinka2009}.
-
-\hypertarget{sec-electrical-characterisation-CNT}{%
-\subsection{Electrical
-Characterisation}\label{sec-electrical-characterisation-CNT}}
-
-\begin{figure}
-
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(a).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch2/CNT_transfer_1.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(b).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch2/CNT_transfer_2.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-
-\caption{\label{fig-CNT-characteristics}Liquid-gated transfer
-characteristics of a single carbon nanotube network field-effect
-transistor channel, using a logarithmic scale in (a) and using a linear
-scale in (b) to emphasise different features of the same dataset. The
-subthreshold slope is shown with a black dotted line, while the
-threshold voltages are shown with red dotted lines. The ON and OFF
-regimes are also indicated on both figures. \(V_{ds}\) = 100 mV was
-placed across the channel.}
-
-\end{figure}
-
-Like graphene transistors, mixed-chirality carbon nanotube transistors
-are naturally ambipolar: they can conduct both electrons and holes. An
-applied gate voltage \(V_g\) alters the Fermi energy of the
-semiconducting nanotubes, changing the size of the Schottky barriers
-present, and therefore changing the amount and type of charge flowing
-through the channel \autocite{Nakanishi2002,Avouris2007,Heller2008}.
-\(I_d\) mainly consists of holes at highly negative gate voltages, and
-mainly consists of electrons at highly positive voltages. At
-intermediary voltages, both electrons and holes flow
-\autocite{Avouris2007,Yao2021}. Transistor behaviour can be made
-unipolar through doping the semiconducting carbon nanotubes or by
-choosing an electrode metal with a particularly high work function,
-increasing the Schottky barrier for one type of charge
-\autocite{Avouris2007,Cao2009,Yao2021}. For example, the use of gold
-electrodes promotes \(p\)-type behaviour over \(n\)-type behaviour due
-to the work function of the metal; ambient adsorption of oxygen will
-weakly dope the semiconducting carbon nanotubes and likewise promote
-\(p\)-type behaviour \autocite{McEuen2002,Cao2009,Shkodra2021}.
-
-A variety of parameters can be extracted which reflect the morphology of
-the carbon nanotube network. Partial alignment of a random-network
-carbon nanotube network maximises the transconductance of a device, as
-this creates more semiconducting pathways, increasing current while
-preserving the presence of gateable junctions within the network
-\autocite{Cao2009,Rouhi2010,Rouhi2011a,Jang2015,Li2023}. The on-off
-ratio of a carbon nanotube device is largely decided by the ratio of
-s-CNTs to m-CNTs. The relative proportion of metallic carbon nanotubes
-in the network determines the size of \(I_{off}\). Therefore, unlike a
-graphene device, the off current can be readily reduced by eliminating
-percolating metallic pathways for increased \(I_{on}/I_{off}\)
-\autocite{Hu2004,Cao2009,Rouhi2010,Rouhi2011a}. In a liquid-gated
-environment, the gate leakage current of a sparse carbon nanotube
-transistor can approach \(I_d\), leading to significant device noise. A
-dense network or a graphene device can therefore give enhanced
-signal-to-noise ratio during sensing \autocite{Ohno2015}. Noyce \emph{et
-al.} found that fully-on back-gated carbon nanotube devices typically
-exhibit a \(\sim\) 3 hour period of steep signal drift, followed by
-steady-state current flow. This settling behaviour was both reversible
-and highly characteristic of a particular channel, and could be modelled
-using a sum of three exponentials \autocite{Noyce2019}.
-
-\hypertarget{threshold-voltage}{%
-\subsubsection*{Threshold Voltage}\label{threshold-voltage}}
-\addcontentsline{toc}{subsubsection}{Threshold Voltage}
-
-The threshold voltage \(V_t\) of a unipolar transistor is equal to the
-gate voltage required to prevent the flow of charge carriers across the
-channel, often referred to as turning the device off
-\autocite{Petti2016,Shkodra2021}. In ambipolar devices, two separate
-threshold voltages exist for each type of charge carrier, \(V_{t,h}\)
-and \(V_{t,e}\), which are shown in Figure~\ref{fig-CNT-characteristics}
-on both a linear (a) and logarithmic (b) scale. In the region between
-these gate voltages, known as the subthreshold regime, both holes and
-electrons flow through the channel
-\autocite{Avouris2007,Reiner-Rozman2015}. If percolating pathways
-consisting entirely of m-CNTs are present, \(I_{off}\) flows through
-these pathways, as conduction through metallic nanotubes is largely
-unaffected by changes in \(V_g\) \autocite{Fuhrer2000,Topinka2009}. If
-there are no unblocked m-CNT pathways, \(I_{off}\) is entirely due to
-Schottky barrier tunnelling \autocite{Avouris2007}. \(V_t\) can be
-estimated by extrapolating the trendline of the linear region of the
-transfer characteristics to the \(V_g\) axis. The intercept is
-approximately equal to the threshold voltage when \(V_{ds}\) is close to
-zero, as shown in Figure~\ref{fig-CNT-characteristics} (b)
-\autocite{Sze2006,Petti2016,Li2023}. This is only a rough estimate of
-the actual device \(V_t\), but is sufficient when comparing the gating
-behaviour of different devices \autocite{Li2023}.
-
-\hypertarget{subthreshold-slope}{%
-\subsubsection*{Subthreshold Slope}\label{subthreshold-slope}}
-\addcontentsline{toc}{subsubsection}{Subthreshold Slope}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.45\textwidth,height=\textheight]{figures/ch2/NTQ31C5ch1subthreshold_slope_alt.png}
-
-}
-
-\caption{\label{fig-subthreshold-slope}A carbon nanotube network
-transfer sweep with \(V_{ds}\) = 100 mV on a logarithmic scale.
-Threshold voltage is shown with a black dotted line, while subthreshold
-slope is shown with a red dotted line.}
-
-\end{figure}
-
-The subthreshold slope
-\(S = d\textrm{log}_{10}(I_{d})/dV_g|_{\textrm{max}}\) is a measure of
-how rapidly a transistor approaches the minimum current \(I_{off}\). The
-subthreshold slope is often referred to using its reciprocal value, the
-subthreshold swing, which is equivalent to the change in \(V_g\)
-required to change \(I_d\) by one order of magnitude. This figure of
-merit is strongly related to the gate capacitance of the device. As the
-slope exponentially approaches the off current in the subthreshold
-regime, it can be fitted with a linear trendline on a logarithimic
-scale. \autocite{Sze2006,Petti2016}. A linear trendline fitted to the
-logarithm of the subthreshold regime is shown in
-Figure~\ref{fig-subthreshold-slope}, where the gradient corresponds to
-subthreshold slope. A high subthreshold slope exceeding than 10
-decades/V is ideal for reduced power consumption of the working sensor
-device \autocite{Petti2016}. The subthreshold slope of the transfer
-sweep in Figure~\ref{fig-subthreshold-slope} is 8 decades/V. Some
-studies have found that sensor devices showed better signal-to-noise
-ratio when gated in the subthreshold regime, where small voltage changes
-in response to analyte can cause exponential current changes along the
-subthreshold slope \autocite{Heller2009,Gao2010}.
-
-\hypertarget{sec-CNT-sensing-mechanisms}{%
-\subsection{Sensing}\label{sec-CNT-sensing-mechanisms}}
-
-As all atoms are at the surface of the carbon nanotube structure,
-nanotubes are very sensitive to their surroundings and therefore
-suitable for sensing use \autocite{Cao2009,Yao2021,Shkodra2021}. The
-chirality and diameter of a carbon nanotube affects both its coupling
-with the gate and its surface chemistry, which determines the sensing
-mechanisms available to a single CNT. Only s-CNTs can be
-electrostatically gated; m-CNTs, bent nanotubes and larger diameter
-nanotubes are typically more reactive
-\autocite{Cao2009,Zhao2012,Chhikara2013,Li2023}; and the nanotube
-chirality (\(n,m\)) can determine the strength of binding to DNA in a
-base sequence-dependent manner \autocite{Rouhi2011a}. Carbon nanotubes
-have been used for vapour-phase sensing since 2000, when Kong \emph{et
-al.} found that the resistance over a single CNT channel was modified
-when exposed to gas molecules like NO\(_2\) and NH\(_3\)
-\autocite{Kong2000}. In a range of gas sensor applications, carbon
-nanotubes can detect the presence of analyte down to the parts per
-billion level \autocite{Chen2019,Yao2021}. However, in general, device
-specificity of response is low, where nanotubes respond to many
-different analytes in a similar manner. To enhance specificity, surface
-functionalisation is often performed using either inorganic or
-biological materials, such as enzymes, antibodies, aptamers and proteins
-\autocite{Cao2009,Shkodra2021,Yao2021}.
-
-For carbon nanotube network transistors, sensing mechanisms include
-electrostatic gating, charge transfer, Schottky barrier modulation,
-capacitance modulation and charge scattering. Response mechanisms may
-take place at the gate, the junctions between channel and contact, or at
-the semiconductor channel
-\autocite{Heller2008,Battie2011,Boyd2014,Tran2016,Li2023}. Modification
-of the channel-metal Schottky barrier can dominate sensing activity, and
-this can complicate the identification of mechanisms underlying the
-sensing behaviour \autocite{Cao2009,Boyd2014,Schroeder2019}. The
-encapsulation layer shown in Figure~\ref{fig-gating-schematics} is added
-to separate the electrodes from the channel-metal junction and prevent
-these responses \autocite{Heller2008,Shkodra2021}. If there are few
-Schottky barriers present in the network of an encapsulated device, the
-predominant sensing mechanism is either charge transfer from the analyte
-to channel \autocite{Allen2007,Battie2011} or electrostatic gating
-\autocite{Heller2008}. The charge transfer mechanism involves direct
-addition of charge carriers to the channel, while the gating mechanism
-results from a nearby charge inducing an opposite polarity charge in the
-channel. Both changes alter the relationship between \(V_g\) and \(I_d\)
-and shift the carrier threshold voltages
-\autocite{Tran2016,Shkodra2021,Li2023}. However, when Schottky and other
-potential barriers are frequent, barrier modulation may make a
-significant contribution to sensing responses, especially at densities
-close to the percolation threshold \autocite{Boyd2014,Murugathas2019a}.
-
-\hypertarget{summary}{%
-\section{Summary}\label{summary}}
-
-Graphene and carbon nanotube network field-effect transistors are both
-ideal as the transducer element in sensing applications due to their
-excellent electrical properties and high sensitivity. These thin-film
-FETs can be used as sensor platforms in either a back-gated or
-liquid-gated configuration, where the liquid-gated configuration is used
-in aqueous sensing applications. A key attribute of the liquid-gated
-configuration is Debye length, which must be optimised for maximum
-transistor sensitivity. Important device parameters of the graphene and
-carbon nanotube network FETs include transconductance, on-off ratio,
-gate leakage currents, current hysteresis, threshold voltage and
-sub-threshold slope. The voltage corresponding to the Dirac point (or
-points) of graphene is another important figure of merit for graphene
-field-effect transistors. Various attributes of the morphology of
-graphene and carbon nanotube networks contribute to the unique
-electrical and sensing properties exhibited by these transistors,
-including folding of graphene and junctions between nanotubes of
-different chirality. The use of these transducers in past odorant
-receptor biosensor applications is discussed in
-\textbf{?@sec-iOR-sensors}, while fabrication of the transducers used
-here is detailed in \textbf{?@sec-fabrication}.
+Assuming that the signal response is directly proportional to the degree
+of surface coverage by adsorbed analyte on the carbon nanotube network
+\autocite{Lee2005}, it should be possible to model the relationship
+between signal response (Figure~\ref{fig-EtHex-sampling}) and
+concentration in the device chamber
+(Figure~\ref{fig-EtHex-sampling-PID}) with an adsorption isotherm
+\autocite{Agnihotri2005}. The Freundlich adsorption isotherm
+(Equation~\ref{eq-freundlich}) models adsorption onto a heterogeneous
+surface, and has previously been used to model adsorption of volatile
+organic molecules onto single-walled carbon nanotubes. \(K_F\) is the
+adsorption capacity and \(1/n\) is adsorption intensity. \(1/n\) can be
+used to understand the heterogeneity of adsorbate sites
+\autocite{Ayawei2017,Sabzehmeidani2021}. The vapour response factor,
+which is equal to 1.6 for a 10.6 eV photoionisation detector (PID), is
+denoted as \(k_{RF}\). As the PID has been run uncalibrated, a factor
+\(k_{D}\) has been included to account for linear span drift. As span
+drift due to window contamination can cause concentration readings to be
+reduced up to 30\% after six months of PID operation, it is expected
+that \(k_{D}\) falls within the range of 0.2 \(-\) 1 for the sensing
+configuration used \autocite{PIDmanual,Ionscience}.
+
+\begin{equation}\protect\hypertarget{eq-freundlich}{}{
+q_e = K_F(k_Dk_{RF}C_e)^{1/n}
+}\label{eq-freundlich}\end{equation}
+
+To examine only the device response directly attributable to the
+presence of analyte vapour, the average response resulting from carrier
+line exposure with no analyte present was subtracted from each device
+current reading. The same was then done for the vapour concentration
+readings from the PID. Due to the equivalence of the three final
+concentration measurements in Figure~\ref{fig-EtHex-sampling-PID} (a),
+\(0.11\pm0.01\) ppm, no isotherm could be fitted to the E2Hex dataset.
+An average response above control of \(0.74\pm0.18\)\% was found for
+these E2Hex intervals, where the high error margin resulted from the
+relatively high level of noise in the collected data. The best-fit
+Freundlich isotherm for EtHex concentration readings against device
+channel responses is shown in Figure~\ref{fig-EtHex-ratio-comparison}.
+The linear least-squares fit had an R-squared value of 0.89 and a value
+for \(1/n\) of \(0.7\). A value for \(1/n\) above \(\sim\) 0.2 indicates
+a carbon nanotube sensor has a relatively high maximum adsorption
+capacity. This results from using a nanotube network morphology with a
+relatively high external surface area \autocite{Agnihotri2005}. The
+small size of the carbon nanotubes used in the network gives it a high
+external surface area, which explains the relatively high value obtained
+for \(1/n\).
+
+\hypertarget{conclusion}{%
+\section{Conclusion}\label{conclusion}}
+
+To ensure fabricated transistors were suitable for biosensing purposes,
+the morphology and electrical properties of the pristine carbon nanotube
+and graphene transistors were investigated.
+
+The morphology of the carbon nanotube networks were found to have a
+significant impact on the electrical characteristics of the devices,
+which was determined through comparison of the skew-normal height
+profile of the carbon nanotube network and the key electrical parameters
+of a range of carbon nanotube devices. When networks were highly bundled
+(\(>90\)\%), there was a large range of carbon nanotube bundle diameters
+present in the network. This large variation in the size of conducting
+pathways resulted in a wide range of on-off ratios and threshold
+voltages for the liquid-gated devices created using these carbon
+nanotube films. In contrast, devices using films fabricated with a
+relatively low percentage of bundling (\(<75\) \%) showed highly
+consistent on-off ratios and threshold voltages, along with low
+hysteresis, due to the relatively consistent bundle diameters and high
+density of these networks. These low-bundling networks were found to
+have a mean bundle distribution height of \(3.3 \pm 1.0\) nm. When
+performing multiplexed sensing, consistent channel behaviour is highly
+desirable since comparing sensing behaviour between channels is more
+straightforward.
+
+However, atomic force microscope imaging and Raman spectroscopy also
+indicated that less bundled networks had the most surface contamination
+present. Aggregated surfactant present on the surface had a height of
+more than 4 nm, and introduced significant defects to the carbon
+nanotube network. The introduction of \(p\)-dopants to the carbon
+nanotubes by surfactant appears to have significantly increased the
+threshold voltage of steam-assisted surfactant-deposited network devices
+relative to steam-free surfactant-deposited network devices. Since the
+presence of surfactant could negatively impact biosensing, techniques to
+remove contaminants should be explored in more detail. Oxidation and
+thermal annealing of carbon nanotube films at high temperatures could be
+used to resolve this issue, and this is discussed further in
+\textbf{?@sec-future-work-fabrication}. The presence of electrolyte on
+the surface of a backgated transistor for use in vapour sensing was also
+found to significantly adversely affect its electrical characteristics.
+
+Constant voltage real-time measurements of the carbon nanotube
+field-effect transistor devices had a characteristic drift that could be
+modelled using a exponential and linear term. This was true for both
+liquid-gated and back-gated devices. The linear term of liquid-gated
+baseline drift had a reasonably consistent gradient between device
+channels, with a mean value of \(-6.1 \pm 1.2\) pAs\^{}\{-1\},
+indicating that similar drift behaviour should be reproducible between
+devices fabricated in the same manner. The time constant of the
+exponential term for liquid-gated drift ranged from
+\(\tau = 280 \pm 10\) s to \(\tau = 610 \pm 30\) s for the device
+characterised. The linear term of back-gated baseline drift in nitrogen
+found for a single channel was \(-17.31\pm0.05\) pAs\^{}\{-1\}, higher
+than all measurements for liquid-gated linear drift. The exponential
+term found was \(\tau = 730 \pm 10\) s, higher than that of the
+liquid-gated channels. These results indicate a control series length of
+1800 s is appropriate for minimising the effects of baseline drift on
+liquid-gated sensing, while a control series length of 2400 s is
+sufficient in the case of a backgated device under nitrogen flow.
+
+A PBS dilution sensing series indicated that the carbon nanotube
+transistor devices were highly sensitive to environmental changes in an
+aqueous environment. Successive additions of deionised water to the
+\(1 \times\) PBS present in the well gave signal responses of up to
+2.5\% above the control response. The signal response was found to be
+proportional to the logarithm of concentration, giving a fit to the
+median response sizes with an \(R^2 = 0.86\). Deviations from this trend
+can possibly be explained by the enclosed sensing environment preventing
+sufficient mixing of electrolyte concentrations within the PDMS well,
+which could possibly be addressed by using a flow cell for sensing work.
+It was also seen that the signal size relative to baseline drift was
+highly consistent between channels. This is a promising result when it
+comes to ensuring consistent multiplexing, but it cannot be guaranteed
+that this behaviour carries over to sensing with biofunctionalised
+devices.
+
+Furthermore, vapour sensing with \emph{trans}-2-hexen-1-al and ethyl
+hexanoate using a photoionisation-based reference sensor showed that the
+transistor devices were highly sensitive to low concentrations of
+vapour. Exposure of the carbon nanotube device to parts-per-million
+concentrations of both compounds resulted in irreversible signal
+responses of up to 1\% above the corresponding control measurement. Each
+signal response coincided with a local maximum in chamber vapour
+concentration as measured by the photoionisation detector. It was found
+that the relationship between signal response to vapour and their
+corresponding maximum concentration value could be modelled using a
+Freundlich adsorption isotherm, where the R-squared value of the model
+with the dataset was 0.89. An adsorption intensity of \(1/n = 0.7\) was
+found for the sensor response to ethyl hexanoate, indicating that the
+carbon nanotube morphology used is particularly sensitive. Again, this
+is promising for the sensitivity of these devices when
+biofunctionalised, but may pose issues with regard to the selectivity of
+these devices.
+
+Graphene field-effect transistor devices were often found to possess a
+double-minima feature, which appears to be the result of a lack of
+doping from the metal contacts in the center of the device channels.
+These double Dirac points are unlikely to have an significant effect on
+the sensing behaviour of graphene devices. The graphene device
+characteristics were found to be consistent after 1 hour exposure to
+\(1 \times\) PBS with minimal drift, with an on-off ratio of 5 and major
+Dirac point voltage of 0.3 V. There was some indications from the
+transfer characteristics that \(p\)-dopants were present on the graphene
+surface. Salt concentration and vapour sensing with graphene FETs is not
+shown in this thesis, but it is important to perform this experiment and
+use similar analysis techniques if there are any concerns about the
+sensitivity of a fabricated batch of graphene devices.
 
 \cleardoublepage
 \phantomsection
