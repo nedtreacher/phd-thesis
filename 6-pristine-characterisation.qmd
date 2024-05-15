@@ -1,6 +1,8 @@
 ---
 keep-tex: true
 format: pdf
+execute:
+  warning: false
 ---
 
 #	Characteristics of Pristine Carbon Nanotube & Graphene Field Effect Transistors {#sec-pristine-characteristics}
@@ -15,40 +17,64 @@ Atomic force microscopy and Raman spectroscopy were performed on the carbon nano
 
 ### Atomic Force Microscopy {#sec-pristine-AFM}
 
-@fig-afm-morphology shows a side-by-side comparison of the surface morphology of carbon nanotube films fabricated using the methods described in @sec-dep-carbon-nanotubes. These images were collected using an atomic force microscope and processed in the manner described in @sec-afm-characterisation. @fig-bundled-network shows a film of carbon nanotubes deposited in solvent, @fig-dropcast-network shows a film of carbon nanotubes dropcast in surfactant, and @fig-steaming-network shows carbon nanotubes dropcast in surfactant in the presence of steam. As discussed in previous works using solvent-based deposition techniques for depositing carbon nanotubes, in each network multi-tube bundles form due to strong mutual attraction between nanotubes [@Zheng2017; @Murugathas2018; @Murugathas2019a; @Nguyen2021]. However, when surfactants are present, they adsorb onto the carbon nanotubes and form a highly repulsive structure able to overcome the strong attraction between nanotubes. This repulsion keeps the individual carbon nanotubes more isolated [@Wenseleers2004; @Gavrel2013; @Hermanson2013-16; @Shimizu2013; @DiCrescenzo2014]. The diameter range provided by the supplier for the individual carbon nanotubes used is $1.2-1.7$ nm, while the length range is $0.3-5.0$ µm (Nanointegris).  
+@fig-afm-morphology shows a side-by-side comparison of the surface morphology of carbon nanotube films fabricated using the methods described in @sec-dep-carbon-nanotubes. These images were collected using an atomic force microscope and processed in the manner described in @sec-afm-characterisation. @fig-afm-morphology (a) shows a film of carbon nanotubes deposited in solvent, @fig-afm-morphology (c) shows a film of carbon nanotubes dropcast in surfactant, and@fig-afm-morphology (e) shows carbon nanotubes dropcast in surfactant in the presence of steam. As discussed in previous works using solvent-based deposition techniques for depositing carbon nanotubes, in each network multi-tube bundles form due to strong mutual attraction between nanotubes [@Zheng2017; @Murugathas2018; @Murugathas2019a; @Nguyen2021]. However, when surfactants are present, they adsorb onto the carbon nanotubes and form a highly repulsive structure able to overcome the strong attraction between nanotubes. This repulsion keeps the individual carbon nanotubes more isolated [@Wenseleers2004; @Gavrel2013; @Hermanson2013-16; @Shimizu2013; @DiCrescenzo2014]. The diameter range provided by the supplier for the individual carbon nanotubes used is $1.2-1.7$ nm, while the length range is $0.3-5.0$ µm (Nanointegris).  
 
-::: {#fig-afm-morphology layout="[[47.5,-5,47.5], [47.5,-5,47.5], [47.5,-5,47.5]]"}
+::: {#fig-afm-morphology layout="[[3,-1,45,-1,3,-1,45,-1], [3,-1,45,-1,3,-1,45,-1], [3,-1,45,-1,3,-1,45,-1]]"}
 
-![](figures/ch6/Ned_NTQ24_20220125_00235.png){#fig-bundled-network}
+![](figures/(a).png)
 
-![](figures/ch6/Ned_NTQ24_20220125_00235_histogram_initialguess.png){#fig-bundled-network-histogram}
+![](figures/ch6/Ned_NTQ24_20220125_00235.png)
 
-![](figures/ch6/Ned_NTQ8C7_w4_pristine_00084_20210428(2).png){#fig-dropcast-network}
+![](figures/(b).png)
 
-![](figures/ch6/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_histogram_initialguess.png){#fig-dropcast-network-histogram}
+![](figures/ch6/Ned_NTQ24_20220125_00235_histogram_initialguess.png)
 
-![](figures/ch6/Ned_NGQ14D2_W4_pristine_20220713_00567.png){#fig-steaming-network}
+![](figures/(c).png)
 
-![](figures/ch6/Ned_NGQ14D2_W4_pristine_20220713_00567_histogram_initialguess.png){#fig-steaming-network-histogram} 
+![](figures/ch6/Ned_NTQ8C7_w4_pristine_00084_20210428(2).png)
+
+![](figures/(d).png)
+
+![](figures/ch6/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_histogram_initialguess.png)
+
+![](figures/(e).png)
+
+![](figures/ch6/Ned_NGQ14D2_W4_pristine_20220713_00567.png)
+
+![](figures/(f).png)
+
+![](figures/ch6/Ned_NGQ14D2_W4_pristine_20220713_00567_histogram_initialguess.png)
 
 2.5 µm $\times$ 2.5 µm atomic force microscope (AFM) images of carbon nanotube films deposited using various methods, shown side-by-side with histogram height distributions and kernel density estimate (KDE) plots corresponding to each image. The network shown in (a) with height distribution shown in (b) was deposited in solvent, the network shown in (c) with height distribution shown in (d) was dropcast in surfactant, and the network shown in (e) with height distribution shown in (f) was dropcast in surfactant with steam present.
 :::
 
 It has previously been demonstrated that the diameter range of deposited single-walled carbon nanotubes can be modelled via a normal or Gaussian distribution [@LeMieux2008; @Liu2013; @Vobornik2023]. However, when the height profiles from the 2.5 µm $\times$ 2.5 µm AFM images are directly extracted and binned, as plotted in black in @fig-afm-morphology, the histograms obtained do not follow a normal distribution. One reason for this result is that the carbon nanotubes do not lie perfectly flat on the substrate surface, as the silicon dioxide substrate and the carbon nanotubes each possess some surface roughness. To find the contribution of substrate surface roughness to the height profile histogram corresponding to each network deposition method, silicon dioxide substrates were modified using the same processes as in @fig-afm-morphology but without carbon nanotubes present in the solutions used. 2.5 µm $\times$ 2.5 µm AFM images of the modified surfaces are shown in @fig-afm-substrate.
 
-::: {#fig-afm-substrate layout="[[47.5,-5,47.5], [47.5,-5,47.5], [47.5,-5,47.5]]" v-align="bottom"}
+::: {#fig-afm-substrate layout="[[3,-1,45,-1,3,-1,45,-1], [3,-1,45,-1,3,-1,45,-1], [3,-1,45,-1,3,-1,45,-1]]"}
 
-![](figures/ch6/Ned_SiO2_00351_20231016.png){#fig-sio2-only}
+![](figures/(a).png)
 
-![](figures/ch6/Ned_SiO2_00351_20231016_histogram_initialguess.png){#fig-sio2-histogram}
+![](figures/ch6/Ned_SiO2_00351_20231016.png)
 
-![](figures/ch6/Ned_SiO2_s_surfactant_nosteam_00355_20231016.png){#fig-surfactant-afm}
+![](figures/(b).png)
 
-![](figures/ch6/Ned_SiO2_s_surfactant_nosteam_00355_20231016_histogram_initialguess.png){#fig-surfactant-histogram}
+![](figures/ch6/Ned_SiO2_00351_20231016_histogram_initialguess.png)
 
-![](figures/ch6/Ned_SiO2_s_surfactant_steam_00357_20231016.png){#fig-steamed-surfactant}
+![](figures/(c).png)
 
-![](figures/ch6/Ned_SiO2_s_surfactant_steam_00357_20231016_histogram_initialguess.png){#fig-steamed-surfactant-histogram} 
+![](figures/ch6/Ned_SiO2_s_surfactant_nosteam_00355_20231016.png)
+
+![](figures/(d).png)
+
+![](figures/ch6/Ned_SiO2_s_surfactant_nosteam_00355_20231016_histogram_initialguess.png)
+
+![](figures/(e).png)
+
+![](figures/ch6/Ned_SiO2_s_surfactant_steam_00357_20231016.png)
+
+![](figures/(f).png)
+
+![](figures/ch6/Ned_SiO2_s_surfactant_steam_00357_20231016_histogram_initialguess.png)
 
 2.5 µm $\times$ 2.5 µm atomic force microscope (AFM) images of silicon dioxide substrates alongside histogram height distributions and KDE plots corresponding to each image. The substrate in (a) and (b) was exposed to solvent, the substrate in (c) and (d) was exposed to surfactant, and the substrate in (e) and (f) was exposed to surfactant with steam present.
 :::
@@ -57,26 +83,71 @@ $$
 f(x) = 2\phi(x)\Phi(\alpha x)
 $$ {#eq-skew}
 
-In @fig-afm-substrate, it appears that each substrate surface has a roughness that follows a normal distribution with some degree of skewness. @fig-sio2-histogram and @fig-surfactant-histogram are negatively skewed distributions. The equation for a skew-normal distribution is given in @eq-skew, where $\alpha$ is the 'slant parameter' which indicates the skewness of the distribution, $\phi(x)$ is the standard normal distribution and $\Phi(x)$ is the corresponding cumulative distribution function. To modify this distribution for the most general case, the 'location parameter' $\xi$ and 'scale parameter' $\omega$ are introduced, which correspond to the mean and standard deviation of the skew-free normal distribution when $\alpha$ is set equal to zero. These parameters are inserted into @eq-skew by setting $x \rightarrow (x-\xi)/\omega$ and replacing the factor 2 with $2/\omega$ [@Azzalini2013]. The fitted skew-normal distribution in @fig-sio2-histogram has $\alpha = -3.2$, $\xi = 2.2$ nm and $\omega = 0.5$ nm, while in @fig-surfactant-histogram $\alpha = -2.2$, $\xi = 2.2$ nm and $\omega = 0.5$ nm. The close correspondence between $\xi$ and $\omega$ for these distributions implies that the skewness is a variable imaging or processing artifact rather than a physical property of the surface. Without distortion, the roughness of a clean SiO$_2$ surface should follow a normal distribution [@Velicky2015].
+In @fig-afm-substrate, it appears that each substrate surface has a roughness that follows a normal distribution with some degree of skewness. @fig-afm-substrate (b) and @fig-afm-substrate (d) are negatively skewed distributions. The equation for a skew-normal distribution is given in @eq-skew, where $\alpha$ is the 'slant parameter' which indicates the skewness of the distribution, $\phi(x)$ is the standard normal distribution and $\Phi(x)$ is the corresponding cumulative distribution function. To modify this distribution for the most general case, the 'location parameter' $\xi$ and 'scale parameter' $\omega$ are introduced, which correspond to the mean and standard deviation of the skew-free normal distribution when $\alpha$ is set equal to zero. These parameters are inserted into @eq-skew by setting $x \rightarrow (x-\xi)/\omega$ and replacing the factor 2 with $2/\omega$ [@Azzalini2013]. The fitted skew-normal distribution in @fig-afm-substrate (b) has $\alpha = -3.2$, $\xi = 2.2$ nm and $\omega = 0.5$ nm, while in @fig-afm-substrate (d) $\alpha = -2.2$, $\xi = 2.2$ nm and $\omega = 0.5$ nm. The close correspondence between $\xi$ and $\omega$ for these distributions implies that the skewness is a variable imaging or processing artifact rather than a physical property of the surface. Without distortion, the roughness of a clean SiO$_2$ surface should follow a normal distribution [@Velicky2015].
 
-@fig-steamed-surfactant-histogram has a pronounced positive skew with a long tail. The tail appears to result from the contribution of residual surfactant aggregates to surface morphology, observed in @fig-steamed-surfactant and recently discussed elsewhere in the literature [@Christensen2022; @Vobornik2023]. Attempting to fit a skew-normal distribution to this histogram fails when all three variables are allowed to vary due to the presence of the tail. Instead, previous values obtained for $\xi$ and $\omega$ can be set fixed at $\xi$ and $\omega$ at 2.2 nm and 0.5 nm respectively in the fitting process, assuming that these values are characteristic of the imaging process used and not the substrate. In this fitting process, therefore, only $\alpha$ was allowed to change. The resulting fitted distribution is shown in @fig-steamed-surfactant-histogram, with $\alpha = -2.4$. The distribution closely fits the negative tail of the histogram, but deviates slightly from the positive tail due to the presence of surfactant. This deviation is small and the fit is good quality, with an R-squared value of 0.98. The surfactant contamination identified here could have negative effects on both sensitivity of carbon nanotubes and also could damage the attached biological elements.
+@fig-afm-substrate (f) has a pronounced positive skew with a long tail. The tail appears to result from the contribution of residual surfactant aggregates to surface morphology, observed in @fig-afm-substrate (e) and recently discussed elsewhere in the literature [@Christensen2022; @Vobornik2023]. Attempting to fit a skew-normal distribution to this histogram fails when all three variables are allowed to vary due to the presence of the tail. Instead, previous values obtained for $\xi$ and $\omega$ can be set fixed at $\xi$ and $\omega$ at 2.2 nm and 0.5 nm respectively in the fitting process, assuming that these values are characteristic of the imaging process used and not the substrate. In this fitting process, therefore, only $\alpha$ was allowed to change. The resulting fitted distribution is shown in @fig-afm-substrate (f), with $\alpha = -2.4$. The distribution closely fits the negative tail of the histogram, but deviates slightly from the positive tail due to the presence of surfactant. This deviation is small and the fit is good quality, with an R-squared value of 0.98. The surfactant contamination identified here could have negative effects on both sensitivity of carbon nanotubes and also could damage the attached biological elements.
 
-::: {#fig-cnt-histogram layout="[[47.5,-5,47.5], [47.5,-5,47.5]]" v-align="bottom"}
+::: {#fig-cnt-mask layout="[[3,-1,45,-1,3,-1,45,-1], [3,-1,45,-1,3,-1,45,-1], [3,-1,45,-1,3,-1,45,-1]]"}
 
-![](figures/ch6/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_mask.png){#fig-mask}
+![](figures/(a).png)
 
-![](figures/ch6/NTQ24_20220125_00235_cnt_histogram.png){#fig-solvent-cnt-histogram}
+![](figures/ch6/Ned_NTQ24_20220125_00235_artifacts.png)
 
-![](figures/ch6/NTQ8C7_w4_pristine_cnt_histogram.png){#fig-surfactant-cnt-histogram}
+![](figures/(b).png)
 
-![](figures/ch6/NT14D2_W4_pristine_cnt_histogram.png){#fig-steamed-surfactant-cnt-histogram}  
+![](figures/ch6/Ned_NTQ24_20220125_00235_2.png)
 
-An masked AFM image is shown in (a), where the masked carbon nanotube bundles are shaded blue. The mask sets a height threshold so that masked features are excluded from the height dataset. Histogram height distributions with corresponding KDE plots collected via the morphology analysis method outlined by Vobornik *et al.* [@Vobornik2023] are shown in (b)-(d). The substrate in (b) was exposed to solvent, the substrate in (c) was exposed to surfactant, and the substrate in (d) was exposed to surfactant with steam present.
+![](figures/(c).png)
+
+![](figures/ch6/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_artifacts.png)
+
+![](figures/(d).png)
+
+![](figures/ch6/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_2.png)
+
+![](figures/(e).png)
+
+![](figures/ch6/Ned_NGQ14D2_W4_pristine_20220713_00567_artifacts.png)
+
+![](figures/(f).png)
+
+![](figures/ch6/Ned_NGQ14D2_W4_pristine_20220713_00567_2.png)
+
+A mask, shaded green, sets a height threshold so that masked features are hidden from the height dataset. The network in (a)-(b) was solvent-deposited, the network in (c)-(d) surfactant-deposited, and the network in (e)-(f) surfactant-deposited with steam present. Height thresholds have been chosen so that deep trough-like artifacts are masked in (a), (c) and (e), while height thresholds which exclude the full average background height of each network are shown in (b), (d) and (f).
 :::
 
-Using the morphology analysis technique outlined by Vobornik *et al.* [@Vobornik2023], five successive diameter measurements of 30 carbon nanotube bundles were collected using Gwyddion. Measurements were not taken at bundle junctions. A height threshold 'mask' was defined in Gwyddion to determine average substrate height, as shown in @fig-mask. This background value was subtracted from our diameter measurements to determine the actual bundle height. The mean background heights of the solvent-deposited, surfactant-deposited and steam-assisted surfactant-deposited bundle diameter histograms were $8.8 \pm 4.0$ nm, $4.2 \pm 1.8$ nm and $3.3 \pm 1.0$ nm respectively. An increased maximum feature height leads to an increased mean background height, and by examining the AFM images in @fig-afm-morphology it appears this may be due to deep artifacts on the surface of the substrate in the vicinity of large features. The average of the five height-adjusted values for each carbon nanotube bundle was then calculated, and these 30 averages were sorted into six equal-sized bins. The binned bundle diameter measurements, alongside estimated probability density, are shown in @fig-cnt-histogram. 
+Following the morphology analysis technique outlined by Vobornik *et al.* [@Vobornik2023], background values were found which corresponded to the substrate roughness of each network. Taking the average of each substrate surface height corresponding to solvent-deposition, surfactant-deposition and steam-assisted surfactant-deposition films gave values of $1.8 \pm 0.3$ nm, $1.9 \pm 0.3$ nm and $1.8 \pm 0.5$ nm respectively. From @fig-afm-morphology, it is also apparent that measuring relatively large features with the atomic force microscope leads to deep image artifacts in the vicinity of these features which appear as rounded streaks unrelated to surface roughness. These artifacts have been highlighted for the solvent-deposition, surfactant-deposition and steam-assisted surfactant-deposition films using a coloured height threshold or 'mask' added with the Gwyddion software package in @fig-cnt-mask (a), @fig-cnt-mask (c) and @fig-cnt-mask (e). The maximum artifact height in each figure was $6.3 \pm 0.7$ nm, $2.6 \pm 0.3$ nm and $0.9 \pm 0.3$ nm.  By adding the median substrate height to the maximum artifact height, the mean background value can be found. This value can be used to distinguish the carbon nanotube bundles in the network from the substrate, demonstrated for each background value with a Gwyddion mask in @fig-cnt-mask (b), @fig-cnt-mask (d) and @fig-cnt-mask (f).
 
-From @fig-cnt-histogram, it is clear that each histogram appears to follow a positively skewed normal distribution, different to the skew-free normal distribution expected from previous works [@LeMieux2008; @Liu2013;  @Vobornik2023]. The skew is likely another artifact from imaging the network with the atomic force microscope. The force of the atomic force microscope tip is known to cause larger bundles to undergo some degree of compression, and the resulting systematic underestimation of their height may be responsible for the distribution skewness [@Vobornik2023]. The fitted skew-normal distribution in @fig-solvent-cnt-histogram has $\alpha = 2.7$ (slant; skew), $\xi = 4.3$ nm (location; mean), $\omega = 5.9$ nm (scale; standard deviation), the distribution in @fig-surfactant-cnt-histogram has $\alpha = 2.4$, $\xi = 2.2$ nm, $\omega = 2.6$ nm, and the distribution in @fig-steamed-surfactant-cnt-histogram has $\alpha = 3.6$, $\xi = 2.2$ nm and $\omega = 1.5$ nm. The probability density for the carbon nanotube bundle histogram drops to approximately zero at or before 0 nm, which is physically appropriate. 
+::: {#fig-cnt-histogram layout="[[3,-1,45,-1,3,-1,45,-1], [3,-1,45,-1,3,-1,45,-1], [3,-1,45,-1,3,-1,45,-1]]"}
+
+![](figures/(a).png)
+
+![](figures/ch6/Ned_NTQ24_20220125_00235.png)
+
+![](figures/(b).png)
+
+![](figures/ch6/NTQ24_20220125_00235_cnt_histogram.png)
+
+![](figures/(c).png)
+
+![](figures/ch6/Ned_NTQ8C7_w4_pristine_00084_20210428(2).png)
+
+![](figures/(d).png)
+
+![](figures/ch6/NTQ8C7_w4_pristine_cnt_histogram.png)
+
+![](figures/(e).png)
+
+![](figures/ch6/Ned_NGQ14D2_W4_pristine_20220713_00567.png)
+
+![](figures/(f).png)
+
+![](figures/ch6/NT14D2_W4_pristine_cnt_histogram.png)
+
+Histogram height distributions for each carbon nanotube network with corresponding kernel density estimate plots collected via the morphology analysis method outlined by Vobornik *et al.* [@Vobornik2023]. The histogram for the solvent-deposited network in (a) is shown in (b), the histogram for the surfactant-deposited network in (c) is shown in (d), and the histogram for the steam-assisted surfactant-deposited network shown in (e) is shown in (f). The red dotted line represents the lower bound for multi-tube bundles, assuming the minimum nanotube diameter is 1.45 nm.
+:::
+
+Five successive diameter measurements of 30 carbon nanotube bundles were collected using Gwyddion. Measurements were not taken at bundle junctions. The average of five values for each carbon nanotube bundle was then taken and the corresponding background height of the substrate subtracted. The 30 height values were sorted into five equal-sized bins, as shown in @fig-cnt-histogram. Each histogram appears to follow a moderately positive-skewed normal distribution, different to the skew-free normal distribution found in previous works [@LeMieux2008; @Liu2013; @Vobornik2023]. The skew is likely to be another imaging artifact. The force of the atomic force microscope tip is known to cause larger bundles to undergo some degree of compression, and the resulting systematic underestimation of their height may be responsible for the distribution skewness [@Vobornik2023]. The fitted skew-normal distribution in @fig-cnt-histogram (b) has $\alpha = 2.5$ (slant, indicates skew), $\xi = 4.7$ nm (location, indicates mean), $\omega = 5.9$ nm (scale, indicates standard deviation), the distribution in @fig-cnt-histogram (c) has $\alpha = 2.4$, $\xi = 2.2$ nm, $\omega = 2.6$ nm, and the distribution in @fig-cnt-histogram (d) has $\alpha = 3.5$, $\xi = 2.9$ nm and $\omega = 1.5$ nm. The probability density for the carbon nanotube bundle histogram drops to approximately zero at or before 0 nm, indicating each fit is physically realistic. 
 
 ```{r}
 #| label: tbl-circle-packing
@@ -93,8 +164,11 @@ circle_packing <- circle_packing[rowSums(is.na(circle_packing)) == 0,]
 knitr::kable(circle_packing, col.names = NULL, format = "simple")
 ```
 
-Previously, analysis of the morphology of carbon nanotube networks has been simplified by assuming the component nanotubes are cylinders, follow 2D packing and are of equal diameter [@Murugathas2018]. @tbl-circle-packing shows the relationship between the diameter of a bundle of 2D packed cylinders and the constituent diameters of up to nine cylinders within that bundle. From looking up the relevant $d$/$d_n$ packing ratios, and assuming an average carbon nanotube diameter of 1.45 nm, it is possible to use @tbl-circle-packing to find the approximate number of nanotubes *n* likely to be present in the mean bundle size corresponding to each deposition type [@Graham1998; @Specht2023]. These estimates are shown in @tbl-histogram-parameters. Also shown in @tbl-histogram-parameters is an estimate of the ratio of single- to multi-tube bundles for each deposition. This estimate was obtained by taking the integral of each distribution with a lower bound of 2.9 nm, the minimum multi-tube bundle size for 1.45 nm diameter nanotubes. As the area under the curve represents the probability a bundle will have a particular diameter, this integral should give a good estimate of the relative proportion of multi-tube bundles. @tbl-histogram-parameters should be interpreted as lower-limit estimates of the size and relative proportion of bundles, recalling that the distribution skewness indicates underestimation of the true bundle height. 
+Analysis of carbon nanotube network morphology can be simplified by assuming the component nanotubes are cylinders, follow 2D packing and are of equal diameter [@Murugathas2018]. @tbl-circle-packing shows the relationship between the diameter of a bundle of 2D packed cylinders and their constituent diameters. By using the relevant $d$/$d_n$ packing ratio, and assuming an average carbon nanotube diameter of 1.45 nm, it is possible to use @tbl-circle-packing to find the approximate number of nanotubes *n* likely to be present in the simple average bundle size corresponding to each deposition type [@Graham1998; @Specht2023]. These estimates are shown in @tbl-histogram-parameters. Also shown in @tbl-histogram-parameters is an estimate of the ratio of single- to multi-tube bundles for each deposition. This estimate was obtained by taking the integral of each probability distribution with a lower bound of 2.9 nm, the minimum multi-tube bundle size for 1.45 nm diameter nanotubes, indicated with a red dotted line in @fig-cnt-histogram. As the area under the curve represents the probability a bundle will have a particular diameter, the ratio of this integral to the integral over the entire interval should give a reasonable estimate of the relative proportion of multi-tube bundles. @tbl-histogram-parameters should be interpreted as lower-limit estimates, remembering that bundle sizes are likely being underestimated [@Vobornik2023]. 
 
+Both the carbon nanotube bundle diameter mean and standard deviation are small for surfactant-deposited films when compared to the mean and standard deviation of solvent-deposited films. However, despite the presence of surfactant, it is apparent both from @fig-afm-morphology and @tbl-histogram-parameters that most surfactant-dispersed carbon nanotubes are not deposited individually. It is possible that the bundling of surfactant-dispersed carbon nanotubes occurs as nanotubes are deposited onto the surface due to the coffee-ring effect. The coffee-ring effect refers to a build-up of dispersed solid forming around the edges of a dispersion evaporating on a surface. The dispersion edges are fixed by surface forces, leading to capillary flow outwards to replace liquid evaporating at the edges, which carries solid material alongside [@Deegan1997; @VanGaalen2021]. This process could disrupt the repulsive forces from the surfactant coating and allow attractive forces to temporarily dominate. Though water vapour is known to disrupt this capillary effect [@Bishop2020], bundling does not seem to be significantly reduced by the presence of steam (@tbl-histogram-parameters). However, steam appears to increase nanotube surface density significantly. The surface coverage values for each network are shown in @tbl-histogram-parameters, found by comparing the surface area of the masked area in @fig-cnt-mask with the full image surface area.
+
+The discussion in this section gives us a new understanding of the histograms shown in @fig-afm-morphology. It appears that these histograms are linear combinations of skewed normal distributions. These distributions include a negatively-skewed distribution corresponding to the substrate surface and a positively-skewed distribution corresponding to the carbon nanotube bundles. The trough-like image artifacts as well as X and Y junctions between overlapping nanotubes may also form similarly skewed normal distributions as part of the complete image histogram [@Murugathas2018]. The linear combination of histograms could be modelled mathematically in order to rapidly extract key parameters from atomic force microscope images [@Marchenko2010], but implementing this approach is outside of the scope of this thesis. Introducing steam when depositing with surfactant increases the density of network deposition, but also leads to residual surfactant pooling and attaching to the substrate surface. These results may both be explained by the presence of steam enabling surfactant to follow carbon nanotubes to the substrate surface, which keeps them from bundling during the attachment process. The unwanted persistence of surfactant means that higher temperature vacuum annealing may be required for robust biosensors [@Kane2014].
 ```{r}
 #| label: setup
 #| include: false
@@ -106,39 +180,39 @@ histogram_parameters <- histogram_parameters[rowSums(is.na(histogram_parameters)
 ```
 
 ```{r}
-#| tbl-cap: The mean of histogram distributions for carbon nanotube films deposited using various methods, alongside estimates for the number of nanotubes present per mean bundle and the estimated proportion of multi-tubed bundles present across the network.
+#| tbl-cap: The mean of histogram distributions for carbon nanotube films deposited using various methods, alongside estimates for the number of nanotubes present per mean bundle, the estimated proportion of multi-tubed bundles present across the network and the proportion of substrate covered by the nanotubes.
 #| label: tbl-histogram-parameters
 
 histogram_parameters %>% 
   kable(
     booktabs = TRUE, #LaTeX "booktabs formatting"
     row.names = FALSE, #remove row labels
-    linesep = "", #no linespace
-    align = c(rep("l", 1), rep("c", 3)), #aligns col 1 left, all others center
+    linesep = "", #no linespaces
+    align = c(rep("l", 1), rep("c", 4)), #aligns col 1 left, all others center
     col.names = c("", names(.)[-1]), #dataframe sets names of each column
-  ) %>% column_spec(1, width = "4cm") %>% column_spec(2, width = "3cm") %>% column_spec(3, width = "3cm") %>% column_spec(4, width = "3cm")
+  ) %>% column_spec(1, width = "3.5cm") %>% column_spec(2, width = "2.2cm") %>% column_spec(3, width = "2.2cm") %>% column_spec(4, width = "2.2cm") %>% column_spec(5, width = "2.2cm")
 ```
-
-Both the carbon nanotube bundle diameter mean and standard deviation are small for surfactant-deposited films when compared to the mean and standard deviation of solvent-deposited films. However, despite the presence of surfactant, it is apparent both from @fig-afm-morphology and @tbl-histogram-parameters that not all surfactant-dispersed carbon nanotubes are deposited individually. Bundling may occur during the process of deposition onto the substrate, which could disrupt the repulsive forces from the surfactant coating and allow attractive forces to temporarily dominate. It is possible that the bundling of surfactant-dispersed carbon nanotubes is a consequence of dynamics introduced by the coffee-ring effect [@Deegan1997; @VanGaalen2021]. The coffee-ring effect refers to a build-up of dispersed solid forming around the edges of a dispersion evaporating on a surface. This process occurs due to the dispersion edges being fixed by surface forces, leading to capillary flow outwards to replace liquid evaporating at the edges, bringing solid material along with it. The presence of vapour is known to disrupt this capillary effect [@Bishop2020], which may explain why mean bundle diameter is lower for the films deposited in surfactant with steam present relative to films deposited in surfactant without steam.
-
-The discussion in this section gives us a new understanding of the histograms shown in @fig-afm-morphology. It is now apparent that these histograms are linear combinations of skewed normal distributions. These distributions include a negatively-skewed distribution corresponding to the substrate surface and a positively-skewed distribution corresponding to the carbon nanotube bundles. X and Y junctions between overlapping nanotubes may also form a similarly skewed normal distribution as part of the full histogram [@Murugathas2018]. The complete linear combination could be modelled mathematically in order to rapidly extract key parameters from atomic force microscope images [@Marchenko2010], but implementing this approach is outside of the scope of this thesis. Another outcome of this discussion is awareness that carbon nanotube bundling within a network is lowered by the presence of surfactant during deposition. Introducing steam when depositing with surfactant lowers bundling even further, but also leads to residual surfactant pooling and attaching to the substrate surface. These results may both be explained by the presence of steam enabling surfactant to follow carbon nanotubes to the substrate surface, which keeps them from bundling during the attachment process. The unwanted persistence of surfactant means that higher temperature vacuum annealing may be required for robust biosensors [@Kane2014].
 
 ### Raman Spectroscopy {#sec-pristine-raman}
 
-::: {#fig-pristine-raman layout="[[47.5,-5,47.5], [-32.5,35,-32.5]]"}
-
-![](figures/ch6/bundled_raman.png){#fig-solvent-deposited}
-
-![](figures/ch6/singletube_raman.png){#fig-surfactant-deposited}
-
-![](figures/ch6/comparison-raman.png){#fig-dg-peak-comparison}
-
-A series of nine Raman spectra at different locations across a 40 µm $\times$ 100 µm carbon nanotube film region, where (a) shows spectra from a film deposited using solvent while (b) shows spectra from a film deposited with surfactant in the presence of steam. (c) shows the spread of the D-peak/G$^+$-peak spectral ratios corresponding to each film.
-:::
-
 Raman spectroscopy was also used to analyse and compare the deposited carbon nanotube networks. Raman spectra were collected from a solvent-deposited carbon nanotube film and a steam-assisted surfactant-deposited film, both on silicon dioxide, in the manner described in @sec-raman-characterisation. These spectra were then processed using the Python script mentioned in @sec-raman-analysis. For each location, spectra over two wavenumber ranges were collected. A peak corresponding to the silicon dioxide substrate, found in the range between 100 cm$^{-1}$ and 650 cm$^{-1}$, was used as a reference peak for the normalisation of intensity across the wavenumber range between 1300 cm$^{-1}$ and 1650 cm$^{-1}$. These normalised spectra are shown in @fig-pristine-raman. In all spectra, a D-band comprising a single D-peak is observed at $\sim$ 1320 cm$^{-1}$, and a G-band comprising two G-peaks, G$^-$ and G$^+$, is observed between $\sim$ 1525 cm$^{-1}$ and $\sim$ 1650 cm$^{-1}$. These features are characteristic of networks of semiconducting carbon nanotubes [@Dresselhaus2005; @King2014]. 
 
-Closer inspection of the D peak and G peaks can give us important information about network composition. G$^-$ is a minor peak found at $\sim$ 1570 cm$^{-1}$, while G$^+$ is a larger feature at $\sim$ 1590 cm$^{-1}$. The G$^+$ feature describes the in-plane vibration of carbon bonds along the length of the carbon nanotubes, while the G$^-$ feature describes the in-plane vibration of bonds about the nanotube circumference [@King2014; @Swiniarski2021]. The splitting between the wavenumber location of the G$^-$ and G$^+$ local maxima is lower in @fig-surfactant-deposited than in @fig-solvent-deposited, indicating more metallic nanotubes are present in the surfactant-deposited network [@Swiniarski2021]. The D-peak gives an indication of the defects present in the carbon nanotube atomic structure [@King2014; @Swiniarski2021]. The size of the normalised D-peak appears much lower in @fig-solvent-deposited than in @fig-surfactant-deposited, indicating the solvent deposition process introduces less defects to the carbon nanotubes than surfactant-mediated deposition. 
+::: {#fig-pristine-raman layout="[[3,-1,45,-1,3,-1,45,-1]]"}
+
+![](figures/(a).png)
+
+![](figures/ch6/bundled_raman.png)
+
+![](figures/(b).png)
+
+![](figures/ch6/singletube_raman.png)
+
+A series of nine Raman spectra at different locations across a 40 µm $\times$ 100 µm carbon nanotube film region, where (a) shows spectra from a film deposited using solvent while (b) shows spectra from a film deposited with surfactant in the presence of steam.
+:::
+
+Closer inspection of the D peak and G peaks can give us important information about network composition. G$^-$ is a minor peak found at $\sim$ 1570 cm$^{-1}$, while G$^+$ is a larger feature at $\sim$ 1590 cm$^{-1}$. The G$^+$ feature describes the in-plane vibration of carbon bonds along the length of the carbon nanotubes, while the G$^-$ feature describes the in-plane vibration of bonds about the nanotube circumference [@King2014; @Swiniarski2021]. The splitting between the wavenumber location of the G$^-$ and G$^+$ local maxima is lower in @fig-pristine-raman (b) than in @fig-pristine-raman (a), indicating more metallic nanotubes are present in the surfactant-deposited network [@Swiniarski2021]. The D-peak gives an indication of the defects present in the carbon nanotube atomic structure [@King2014; @Swiniarski2021]. The size of the normalised D-peak appears much lower in @fig-pristine-raman (a) than in @fig-pristine-raman (b), indicating the solvent deposition process introduces less defects to the carbon nanotubes than surfactant-mediated deposition. 
+
+![A histogram showing the range of D-peak/G$^+$-peak spectral ratios corresponding to each film.](figures/ch6/comparison-raman.png){#fig-raman-comparison width="40%"}
 
 It is also possible to compare the relative magnitude of the D-peak and G$^+$-peak intensity to quantify carbon nanotube structural disorder, which disrupts in-plane lattice vibration [@Dresselhaus2005; @King2014]. @fig-dg-peak-comparison gives a summary of the ratios between the D-peak and G$^+$-peak across all nine positions for the solvent-deposited and surfactant-deposited film. It is immediately observed that I$_{D}$/I$_{G}$ is significantly larger for the steam-assisted, surfactant-deposited films than for the solvent-deposited films. This is a further indication of the presence of defects across the steam-deposited network. These defects are likely introduced through the introduction of charge impurites by surfactant aggregates present around the carbon nanotubes [@Christensen2022]. However, at the same time, the range of values for the I$_{D}$/I$_{G}$ ratio is lower for the steam-deposited network. This spatially homogeneous vibrational behaviour implies the steam-deposited network is more evenly distributed than the solvent-deposited network, which matches the discussion in @sec-pristine-morphology.
 
@@ -249,11 +323,11 @@ These boxplots illustrate the statistical distribution of (a) the on-off ratio, 
 
 The liquid-gated devices in [@fig-solvent-tx-lg], [@fig-surf-tx-lg] and [@fig-steam-tx-lg] each exhibited ambipolar characteristics, commonly observed in liquid-gated carbon nanotube network FETs [@Kauffman2008; @Heller2009; @JongYu2009; @Derenskyi2014; @Murugathas2018; @Albarghouthi2022]. When devices were appropriately configured, leakage current (shown by the dashed traces) did not exceed $\sim 1 \times 10^{-7}$ V across the forward and reverse sweep. The devices shown which used steam-deposited carbon nanotube films showed the least hysteresis. @sec-pristine-AFM demonstrates that the mean diameter of the bundles in these films is about 0.9 nm less than the mean bundles in films deposited without steam present, and 5.5 nm less than those in films deposited in solvent. Hysteresis is known to scale roughly linearly with bundle diameter, due to trapped charge increasing as bundle density of states is increased [@Pop2009]. Steam-deposited devices also showed significantly less channel-to-channel variation in electrical characteristics more generally. Channel 1 in @fig-solvent-tx-lg has a much higher off-current than the other channels of the same device, which appears to be due to a uncommonly high proportion of metallic carbon nanotubes present in the network conduction pathways of this channel [@Rouhi2011; @Sun2013; @Zaumseil2015]. 
 
-A summary of key parameters of pristine liquid-gated devices is shown in @fig-sweep-parameters. The full dataset consists of three sets of 21 liquid-gated transfer characteristics of working channels, with each set corresponding to the use of a particular method of carbon nanotube network deposition in the device fabrication. Measurements from at least three devices are included in each set. Each entry in the summary corresponds to the average of the specific parameter in the forward and reverse sweep direction. When steam was used for surfactant deposition of films, the resulting devices showed highly consistent channel-to-channel electrical properties. Since the carbon nanotube films on these devices are relatively dense, as seen in @fig-steaming-network, the network should be well above the percolation threshold. As many carbon nanotube pathways connect across the channel in parallel, small variations in the network morphology have less of an impact on the overall channel behaviour [@Murugathas2018]. @fig-cnt-histogram and @tbl-histogram-parameters indicate that the range of bundle sizes is relatively low in the steam-deposited films used in these devices, meaning the electrical behaviour of dominant conduction pathways is more spatially consistent. The repeatable subthreshold regime behaviour between channels seen for steam-deposited devices is a desirable attribute for reliable real-time multiplexed biosensing [@Kauffman2008; @Heller2009; @Gao2010].
+A summary of key parameters of pristine liquid-gated devices is shown in @fig-sweep-parameters. The full dataset consists of three sets of 21 liquid-gated transfer characteristics of working channels, with each set corresponding to the use of a particular method of carbon nanotube network deposition in the device fabrication. Measurements from at least three devices are included in each set. Each entry in the summary corresponds to the average of the specific parameter in the forward and reverse sweep direction. When steam was used for surfactant deposition of films, the resulting devices showed highly consistent channel-to-channel electrical properties. Since the carbon nanotube films on these devices are relatively dense, as seen in @fig-afm-morphology (e), the network should be well above the percolation threshold. As many carbon nanotube pathways connect across the channel in parallel, small variations in the network morphology have less of an impact on the overall channel behaviour [@Murugathas2018]. @fig-cnt-histogram and @tbl-histogram-parameters indicate that the range of bundle sizes is relatively low in the steam-deposited films used in these devices, meaning the electrical behaviour of dominant conduction pathways is more spatially consistent. The repeatable subthreshold regime behaviour between channels seen for steam-deposited devices is a desirable attribute for reliable real-time multiplexed biosensing [@Kauffman2008; @Heller2009; @Gao2010].
 
-Channels from surfactant-deposited film devices usually showed a larger on-off ratio and subthreshold slope than those from solvent-deposited devices. Decreasing the ratio of gate-sensitive semiconducting carbon nanotubes to metallic nanotubes tends to decrease the on-off ratio [@LeMieux2008; @Rouhi2011; @Zaumseil2015; @Murugathas2018]. @sec-pristine-raman seems to indicate there are more metallic nanotubes present in the surfactant-deposited films than in the solvent-deposited films. However, percolating conduction pathways dominate device behaviour and nanotube pathways across the channel with a lower degree of bundling are less likely to contain metallic tubes [@Murugathas2018]. Therefore, the larger on-off ratio for surfactant-deposited film devices is likely a result of their reduced nanotube bundle size and reduced bundle size variation relative to other films, as discussed in @sec-pristine-morphology. The larger subthreshold slope is likely due to increased mobility from a denser nanotube network in surfactant-deposited films [@Rouhi2011], as seen in @fig-steaming-network. A larger on-off ratio and subthreshold slope results in a larger change in conductance in response to changes in the transfer characteristic curve. Therefore, the larger on-off ratio and subthreshold slope of steam-deposited devices is desirable for improved sensor performance [@Kauffman2008; @Heller2009; @Gao2010].
+Channels from surfactant-deposited film devices usually showed a larger on-off ratio and subthreshold slope than those from solvent-deposited devices. Decreasing the ratio of gate-sensitive semiconducting carbon nanotubes to metallic nanotubes tends to decrease the on-off ratio [@LeMieux2008; @Rouhi2011; @Zaumseil2015; @Murugathas2018]. @sec-pristine-raman seems to indicate there are more metallic nanotubes present in the surfactant-deposited films than in the solvent-deposited films. However, percolating conduction pathways dominate device behaviour and nanotube pathways across the channel with a lower degree of bundling are less likely to contain metallic tubes [@Murugathas2018]. Therefore, the larger on-off ratio for surfactant-deposited film devices is likely a result of their reduced nanotube bundle size and reduced bundle size variation relative to other films, as discussed in @sec-pristine-morphology. The larger subthreshold slope is likely due to increased mobility from a denser nanotube network in surfactant-deposited films [@Rouhi2011], as seen in @fig-afm-morphology (e). A larger on-off ratio and subthreshold slope results in a larger change in conductance in response to changes in the transfer characteristic curve. Therefore, the larger on-off ratio and subthreshold slope of steam-deposited devices is desirable for improved sensor performance [@Kauffman2008; @Heller2009; @Gao2010].
 
-All channels characterised had a positive threshold voltage ($V_{th}$). The threshold voltage was largest and most consistent for steam-assisted surfactant-deposited films. The relatively high values of $V_{th}$ which correspond to channel measurements from steam-assisted surfactant-deposited devices indicates increased $p$-doping of the network relative to networks deposited via alternative processes [@Kang2005; @Heller2008; @Murugathas2018]. As seen from [@fig-steamed-surfactant]-f and @fig-dg-peak-comparison, the steam deposition process leads to the presence of significant, persistent surfactant aggregates. It has been previously established that residual surfactant can $p$-dope carbon nanotubes, alongside enhancing $p$-doping from adsorped oxygen and water [@Kane2014; @Nonoguchi2018; @Christensen2022]. The presence of residual surfactant may also explain the lowered subthreshold slope, and therefore mobility, of the steam-deposited devices relative to devices with films deposited in surfactant without steam. The analysis by Kane *et al.* shows that the thermal annealling at 150°C used in this work to remove residual surfactant is likely inadequate for this purpose. Oxidation of devices and vacuum annealling at high temperatures (> 600°C) may be required for effective desorption of the persistent surfactant [@Kane2014; @Barnett2018]. Devices using films made using the alternative two methods have the advantage of not requiring careful treatment to remove surfactant.
+All channels characterised had a positive threshold voltage ($V_{th}$). The threshold voltage was largest and most consistent for steam-assisted surfactant-deposited films. The relatively high values of $V_{th}$ which correspond to channel measurements from steam-assisted surfactant-deposited devices indicates increased $p$-doping of the network relative to networks deposited via alternative processes [@Kang2005; @Heller2008; @Murugathas2018]. As seen from @fig-afm-substrate (e)-(f) and @fig-dg-peak-comparison, the steam deposition process leads to the presence of significant, persistent surfactant aggregates. It has been previously established that residual surfactant can $p$-dope carbon nanotubes, alongside enhancing $p$-doping from adsorped oxygen and water [@Kane2014; @Nonoguchi2018; @Christensen2022]. The presence of residual surfactant may also explain the lowered subthreshold slope, and therefore mobility, of the steam-deposited devices relative to devices with films deposited in surfactant without steam. The analysis by Kane *et al.* shows that the thermal annealling at 150°C used in this work to remove residual surfactant is likely inadequate for this purpose. Oxidation of devices and vacuum annealling at high temperatures (> 600°C) may be required for effective desorption of the persistent surfactant [@Kane2014; @Barnett2018]. Devices using films made using the alternative two methods have the advantage of not requiring careful treatment to remove surfactant.
 
 ####  Back-Gated CNTFETs {.unnumbered}
 
@@ -428,7 +502,7 @@ When sensing vapour in the vapour delivery system, devices have no liquid gate, 
 
 ![Transfer sweep of a steam-deposited carbon nanotube network field-effect transistor, backgated in the vapour delivery system device chamber.](figures/ch6/Q2C6_backgate_characterisation.png){#fig-backgate-transfer width=35%}
 
-::: {#fig-bg-baseline-drift layout="[[-11,3,-1,70,-15],[-11,3,-1,70,-15]] layout-valign="top"}
+::: {#fig-bg-baseline-drift layout="[[-11,3,-1,70,-15],[-11,3,-1,70,-15]]"}
 
 ![](figures/(a).png)
 
@@ -513,7 +587,7 @@ To examine only the device response directly attributable to the presence of ana
 
 To ensure fabricated transistors were suitable for biosensing purposes, the morphology and electrical properties of the pristine carbon nanotube and graphene transistors were investigated. 
 
-The morphology of the carbon nanotube networks were found to have a significant impact on the electrical characteristics of the devices, which was determined through comparison of the skew-normal height profile of the carbon nanotube network and the key electrical parameters of a range of carbon nanotube devices. When networks were highly bundled ($>90$%), there was a large range of carbon nanotube bundle diameters present in the network. This large variation in the size of conducting pathways resulted in a wide range of on-off ratios and threshold voltages for the liquid-gated devices created using these carbon nanotube films. In contrast, devices using films fabricated with a relatively low percentage of bundling ($<75$ %) showed highly consistent on-off ratios and threshold voltages, along with low hysteresis, due to the relatively consistent bundle diameters and high density of these networks. These low-bundling networks were found to have a mean bundle distribution height of $3.3 \pm 1.0$ nm. When performing multiplexed sensing, consistent channel behaviour is highly desirable since comparing sensing behaviour between channels is more straightforward.
+The morphology of the carbon nanotube networks were found to have a significant impact on the electrical characteristics of the devices, which was determined through comparison of the skew-normal height profile of the carbon nanotube network and the key electrical parameters of a range of carbon nanotube devices. When networks were highly bundled ($>95$%), there was a large range of carbon nanotube bundle diameters present in the network. This large variation in the size of conducting pathways resulted in a wide range of on-off ratios and threshold voltages for the liquid-gated devices created using these carbon nanotube films. In contrast, devices using films fabricated with a lower percentage of bundling ($<95$ %) showed highly consistent on-off ratios and threshold voltages, along with low hysteresis, due to the relatively consistent bundle diameters and high density of these networks. These low-bundling networks were found to have a average bundle height of $4 \pm 2$ nm. When performing multiplexed sensing, consistent channel behaviour is highly desirable since comparing sensing behaviour between channels is more straightforward.
 
 However, atomic force microscope imaging and Raman spectroscopy also indicated that less bundled networks had the most surface contamination present. Aggregated surfactant present on the surface had a height of more than 4 nm, and introduced significant defects to the carbon nanotube network.  The introduction of $p$-dopants to the carbon nanotubes by surfactant appears to have significantly increased the threshold voltage of steam-assisted surfactant-deposited network devices relative to steam-free surfactant-deposited network devices. Since the presence of surfactant could negatively impact biosensing, techniques to remove contaminants should be explored in more detail. Oxidation and thermal annealing of carbon nanotube films at high temperatures could be used to resolve this issue, and this is discussed further in @sec-future-work-fabrication. The presence of electrolyte on the surface of a backgated transistor for use in vapour sensing was also found to significantly adversely affect its electrical characteristics.
 
