@@ -9,7 +9,7 @@ format: pdf
 
 In @sec-thin-film-transistors, it was established that as carbon nanotubes and graphene are highly sensitive and are easily modified with biomaterials, they make an ideal platform for biosensing [@Kauffman2008; @Ohno2010]. In the early 2000s, it was established that sensitive and selective biosensors could be created by modifying a carbon nanotube field-effect transistor channel with protein receptors [@Chen2003; @Kauffman2008]. In the following two decades, a wide range of other biological receptors have been attached to carbon nanotube FETs and graphene FETs for the creation of biosensors, including enzymes [@Lee2009; @Zhang2015a; @Dudina2019], antibodies [@Kim2008; @Jin2015; @Tsang2019] and aptameric DNA [@Maehashi2007; @Gao2016; @Nguyen2021]. These miniaturised 'lab on a chip' devices are of particular interest due to their low cost, rapid use time, simple operation and small size compared with more traditional biological analysis methods [@Kauffman2008]. It is hoped that these sensors could be deployed outside the laboratory in a range of front-line settings requiring rapid and reliable detection. Examples include rapid diagnostic testing at a busy medical clinic [@Lim2014], or biological threat detection across a large shipment of imported fruit [@B3; @Queensland].
 
-Rapid developments in this biosensor technology and parallel developments in the understanding of animal olfaction led to these transistors being used in bioelectronic nose applications from the late 2000s onwards [@Yoon2009; @Jin2012; @Lee2012b; @Park2012]. 'Bioelectronic nose' is a general term which refers to the use of an biologically-modified electronic array to detect specific odor traces in a highly selective and sensitive manner [@Dung2018]. As the name suggests, odor response signals should be highly similar to the electrochemical signals received by olfactory neurons in an animal nose [@Dung2018]. Metal oxide transistors were first used to detect odorants in a mammal-like bioelectronic nose in the early 1980s [@Persaud1982]. A biomimetic approach to bioelectronic nose development couples the CNT FET or GFET signal-amplifying transducer element with elements of the animal olfactory system. These sensitive elements include olfactory cells [@Wang2007], odorant binding proteins (OBPs) [@Larisika2015; @Kotlowski2018] and odorant receptor proteins (olfactory receptors, ORs) [@Yang2018; @Murugathas2020]. These olfactory biosensors are usually operated in gas-phase or vapour-phase environments, and are used to detect volatile odors in the air at ppb or ppt concentrations in the same manner as an animal nose [@Dung2018].
+Rapid developments in this biosensor technology and parallel developments in the understanding of animal olfaction led to these transistors being used in bioelectronic nose applications from the late 2000s onwards [@Yoon2009; @Jin2012; @Lee2012b; @Park2012]. 'Bioelectronic nose' is a general term which refers to the use of an biologically-modified electronic array to detect specific odor traces in a highly selective and sensitive manner [@Dung2018]. As the name suggests, odor response signals should be highly similar to the electrochemical signals received by olfactory neurons in an animal nose [@Dung2018]. Metal oxide transistors were first used to detect odorants in a mammal-like bioelectronic nose in the early 1980s [@Persaud1982]. A biomimetic approach to bioelectronic nose development couples the CNT FET or GFET signal-amplifying transducer element with elements of the animal olfactory system. These sensitive elements include olfactory cells [@Wang2007], odorant binding proteins (OBPs) [@Larisika2015; @Kotlowski2018] and odorant receptor proteins (olfactory receptors, ORs) [@Yang2018; @Murugathas2020]. The aim for novel olfactory-based biosensors is to detect volatile odors in the air at ppb or ppt concentrations, giving it the same utility as an animal nose [@Dung2018].
 
 ## Odorant Receptors {#sec-odorant-receptors}
 
@@ -21,11 +21,11 @@ Odorant receptors (ORs) are an essential part of the olfactory systems of most a
 
 Odorant receptors are transmembrane proteins, and therefore require a lipid membrane to stablised the proteins and preserve their structure [@Dung2018]. Odorant receptors can be expressed in cells and isolated alongside with the native cell membranefor sensor use, or embedded in an artificial lipid membrane format that mimics a cell membrane. These artificial membranes include micelles, lipid cubic phases, nanovesicles (including nanoliposomes), and nanodiscs. The insoluble transmembrane proteins can also be held in a specific detergent environment to preserve their structure and function [@Dung2018].
 
-![Liposomes and micelles are made up of a lipid membrane, which acts as a substitute for the cell membrane *in vitro*. Adapted from [@Micelle].](figures/ch3/OSC_Microbio_07_03_micelle_edit.png){#fig-micelle width=100%}
+![Liposomes and micelles are made up of a lipid membrane, which acts as a substitute for the cell membrane *in vitro*. Adapted from [@Micelle].](figures/ch3/OSC_Microbio_07_03_micelle_edit.png){#fig-micelle width=55%}
 
 Nanodiscs have a particularly high stability compared to other formats as their disc-shaped lipid bilayer is encompassed by a membrane scaffold protein (MSP) [@Nath2007; @Bayburt2010]. The stability of this format means it is frequently used in the fabrication of biosensor devices, which are often described as being particularly reliable and long-lived [@Goldsmith2011; @Yang2018; @Moon2020; @Cheema2021]. Another advantage of nanodiscs is that the membrane scaffold protein can be attached to biosensor surfaces at specific affinity tags, for example, the MSP hexahistidine tag ('his-tag') [@Bayburt2010]. Unlike other artificial membranes, there is also little variation between the size of individual nanodiscs [@Nath2007]. Depending on the type of MSP used, a nanodisc measures between 10-20 nm across and can hold either a single or several odorant receptors [@Nath2007; @Bayburt2010]. @fig-msp-iOR-nanodisc shows the structure of a nanodisc with contained odorant receptors.
 
-![A nanodisc containing an insect odorant receptor transmembrane protein. MSP $-$ membrane scaffold protein. Reproduced with permission from [@Murugathas2019a].](figures/ch3/iOR_nanodisc.png){#fig-msp-iOR-nanodisc width=60%}
+![A nanodisc containing an insect odorant receptor transmembrane protein. MSP $-$ membrane scaffold protein. Reproduced with permission from [@Murugathas2019a].](figures/ch3/iOR_nanodisc.png){#fig-msp-iOR-nanodisc width=40%}
 
 ## Odorant Receptor Carbon Nanotube and Graphene Biosensors
 
@@ -33,16 +33,38 @@ Nanodiscs have a particularly high stability compared to other formats as their 
 
 Odorant receptors are highly sensitive and selective, making them suitable as the biological sensing elements in a bioelectronic nose [@Dung2018]. There are multiple advantages to the use of odorant receptors over a whole olfactory cell, including their smaller size and relatively high stability [@Dung2018]. Odorant receptors can be expressed and isolated for sensor use using heterologous cell systems, where a host cell replicates a protein from transfected RNA or DNA material. The most commonly used expression cells are human embryonic kidney (HEK) cells, *E. Coli* bacteria and *S. cerevisiae* (baker's yeast) [@Dung2018].
 
-For a bioelectronic nose to operate, sufficient coupling must exist between the bioreceptor element and the sensor transducer. Odorant receptors can be 
+For a bioelectronic nose to operate, sufficient coupling must exist between the bioreceptor element and the sensor transducer. Odorant receptors can be directly attached by physical adsorption; however, this approach is difficult to control, and can result in weak coupling between the odorant receptors and the transducer [@Dung2018]. Alternatively, a bifunctional linker element may mediate the attachment between functional groups of the bioreceptor and the transducer in a biochemical process referred to as functionalisation [@Star2003a]. The linker chemical interacts with the carbon-ring surface either through stronger covalent bonding or weaker non-covalent bonding. A more thorough comparison of covalent and non-covalent linker functionalisation can be found in @sec-noncovalent-functionalisation. 
 
-A bifunctional linker element may mediate the attachment between functional groups of the bioreceptor and the transducer in a biochemical process referred to as functionalisation [@Star2003a]. Functionalisation may either involve stronger covalent bonding or weaker non-covalent bonding of the linker to the to the carbon-ring surface. Functionalisation is discussed in more detail in @sec-noncovalent-functionalisation.
+```{r}
+#| label: setup-31
+#| include: false
+
+library(tidyverse)
+library(kableExtra)
+
+functionalisation_types <- read.csv("tables/ch3/functionalisation_types.csv", sep=",", check.names = FALSE)
+functionalisation_types <- functionalisation_types[rowSums(is.na(functionalisation_types)) == 0,]
+```
+
+```{r}
+#| tbl-cap: A comparison of the advantages and disadvantages of different approaches for immobilising odorant receptors onto carbon nanotube or graphene transducers. (Simplicity = the amount of cost, time and effort involved in functionalisation; Stability = the ability for the sensor to operate over a long time and under a range of conditions;  Specificity = the ability to attach the receptor in a controlled and directional manner; Strength = the strength of attachment between receptor and transducer; Synergy = the ability for the receptor to attach without negatively impacting transducer operation.)
+#| label: tbl-functionalisation-types
+#| echo: false
+
+functionalisation_types %>% 
+  kable(
+    booktabs = TRUE, #LaTeX "booktabs formatting"
+    linesep = "" #no linespaces 
+  ) %>% column_spec(1, width = "5.4cm") %>% column_spec(2, width = "1.45cm") %>% column_spec(3, width = "1.3cm") %>% column_spec(4, width = "1.45cm") %>% column_spec(5, width = "1.3cm") %>% column_spec(6, width = "1.3cm")
+```
+
 
 \newpage
 \KOMAoptions{paper=landscape,pagesize}
 
 ```{r warning=FALSE}
 #| label: tbl-or-biosensors
-#| tbl-cap: Summary of past fabrication methods for odorant receptor-functionalised carbon nanotube and graphene biosensors. GA = glutaraldehyde, DAN = 1,5-diaminonaphthalene, DMT-MM = 4-(4,6-dimethoxy-1,3,5-triazin-2-yl)-4 methylmorpholinium chloride, NTA = nitrilotriacetic acid, PDL = poly-D-lysine, Ab = Antibody fragments, CNTFET = carbon nanotube field-effect transistor, GFET = graphene field-effect transistor.
+#| tbl-cap: Summary of past fabrication methods for odorant receptor-functionalised carbon nanotube and graphene biosensors. GA = glutaraldehyde, DAN = 1,5-diaminonaphthalene, DMT-MM = 4-(4,6-dimethoxy-1,3,5-triazin-2-yl)-4 methylmorpholinium chloride, NTA = nitrilotriacetic acid, PDL = poly-D-lysine, Ab = Antibody fragments, CNTFET = carbon nanotube field-effect transistor, GFET = graphene field-effect transistor, TX = transfer characteristics.
 
 knitr::opts_chunk$set(echo = FALSE)
 library(knitr)
@@ -57,6 +79,7 @@ knitr::kable(or_table,
                            "Transducer",
                            "OR Type",
                            "OR Format",
+                           "Verification",
                            "LOD"), format = "simple") 
     
 ```
@@ -73,7 +96,7 @@ In the nanovesicle or liposome-based odorant receptor biosensors shown here, the
 
 #### Vapour Environment {.unnumbered}
 
-![Real-time responses to 2 ppm eugenol vapour by an mOR174-9 nanodisc-functionalised single-CNT field effect transistor. The response to eugenol on day 69 (red triangles) indicates that the device retains the ability to respond to eugenol 10 weeks after functionalisation [@Goldsmith2011].](figures/ch3/eugenol.png){#fig-eugenol-responses width=60%}
+![Real-time responses to 2 ppm eugenol vapour by an mOR174-9 nanodisc-functionalised single-CNT field effect transistor. The response to eugenol on day 69 (red triangles) indicates that the device retains the ability to respond to eugenol 10 weeks after functionalisation. Reproduced with permission from [@Goldsmith2011].](figures/ch3/eugenol.png){#fig-eugenol-responses width=40%}
 
 Goldsmith *et al.* have previously demonstrated it is possible to specifically detect eugenol vapour using a single-CNT device functionalised with mOR174-9 odorant receptors in either a surfactant (digitonin) or nanodisc format. In the first study of this kind, the mOR CNT FETs were exposed to nitrogen flow at 50% relative humidity. The resistance across a device gated at $V_g$ = 0 V was measured while a specific concentration of the positive ligand eugenol was added to the constant flow for 100 s, then removed from the flow for 100 s. This cycle was repeated five times. @fig-eugenol-responses shows that significant real-time current increases of up to $\sim$ 9% were observed during each cycle of exposure to eugenol. The device still responded to eugenol cycles after 69 days of storage in 25% (v/v) ethanol at 4°C. This nicely-behaved and persistent activity may result from the long-lived nanodisc format used [@Goldsmith2011]. As far as the author knows, there has been no investigation up until now into whether this behaviour can be replicated for insect odorant receptor devices. It is not clear that iORs can simply be substituted for  mORs for vapour sensing. The reasons for this distinction are made in the subsequent section.   
 
@@ -81,7 +104,7 @@ Goldsmith *et al.* have previously demonstrated it is possible to specifically d
 
 ### *In Vivo* Structure and Function
 
-Insect odorant (or olfactory) receptors (iORs) are a diverse range of odorant-sensitive transmembrane proteins located in dendrite cells of sensory hairs, known as sensilla, on the antennae and maxillary palps of an insect [@Clyne1999; @Wicher2021]. Insects possess a specific set of iORs tailored towards their ecological role (iORx, where the “x” denotes the OR variant), as well as a co-receptor known as “ORCO” (Odorant Receptor Co-Receptor). In the insect, a given iORx is activated by volatile compounds, while the ORCO co-receptor is insensitive to VOCs but couples with iORx to form a heteromeric complex, which activates intracellular signalling via its ion channel activity. *In vivo*, the complex is required for VOC detection and operates as a non-selective cation channel. This channel opens to allow ions to travel across the cell membrane in response to iOR interaction with VOCs [@Smart2008; @Wicher2008; @Sato2008; @Carraher2015; @Butterwick2018 @Wicher2021; @Cheema2021]. 
+Insect odorant (or olfactory) receptors (iORs) are a diverse range of odorant-sensitive transmembrane proteins located in dendrite cells of sensory hairs, known as sensilla, on the antennae and maxillary palps of an insect [@Clyne1999; @Wicher2021]. Insects possess a specific set of iORs tailored towards their ecological role (iORx, where the “x” denotes the OR variant), as well as a co-receptor known as “ORCO” (Odorant Receptor Co-Receptor). In the insect, a given iORx is activated by volatile compounds, while the ORCO co-receptor is insensitive to VOCs but couples with iORx to form a heteromeric complex, which activates intracellular signalling via its ion channel activity. *In vivo*, the complex is required for VOC detection and operates as a non-selective cation channel. This channel opens to allow ions to travel across the cell membrane in response to iOR interaction with VOCs [@Smart2008; @Wicher2008; @Sato2008; @Carraher2015; @Butterwick2018; @Wicher2021; @Cheema2021]. 
 
 iORs were initially thought to be similar in structure to vertebrate odorant receptors, but is now known that iORs have a completely different topology and mechanism to GPCRs, despite also possessing seven-transmembrane domains. Their configuration in the membrane is inverted. Equivalently, the carboxyl group or 'C terminus' of the iOR sits outside the membrane of a cell, and the anime group or 'N terminus' of the iOR sits inside the cell membrane [@Glatz2011; @Butterwick2018; @Carraher2015].
 
@@ -109,7 +132,7 @@ As in the case of vertebrate ORs, recent studies have shown that iORs each inter
 
 ![](figures/ch3/Empty_ND_GFET.png)
 
-Transfer characteristic curves before and after functionalisation of (a) an OR22a nanodisc-functionalised CNT network FET, (b) an OR22a nanodisc-functionalised graphene FET, (c) an empty nanodisc-functionalised CNT network FET and (d) an empty nanodisc-functionalised graphene FET [@Murugathas2019a; @Murugathas2020].
+Transfer characteristic curves before and after functionalisation of (a) an OR22a nanodisc-functionalised CNT network FET, (b) an OR22a nanodisc-functionalised graphene FET, (c) an empty nanodisc-functionalised CNT network FET and (d) an empty nanodisc-functionalised graphene FET. Reproduced with permission from [@Murugathas2019a; @Murugathas2020].
 :::
 
 Functionalisation of a FET device channel with iORs significantly alters the transfer characteristics of that channel. Murugathas *et al.* found that successful functionalisation of a CNTFET device with iORs would typically increase the device on-current, increase its on-off ratio and cause a significant negative shift in threshold voltage, as shown in @fig-functionalisation-literature (a) [@Murugathas2019a]. Meanwhile, successful functionalisation of a graphene device with iORs would typically dramatically decrease the device on-current and cause a negative shift in Dirac voltage, as seen in @fig-functionalisation-literature (b) [@Murugathas2020]. These changes are not simply the result of linker attachment to the channel surface [@Murugathas2019a]. It is thought that the negative shift of both threshold and Dirac voltages are caused by the N-terminus amine groups on the odorant receptors or amine groups on the nanodisc membrane scaffold proteins donating electrons to the device channel, which has a similar effect to doping the channel with impurities [@Bradley2004; @Murugathas2019a; @Murugathas2020]. Note that very similar changes occur when functionalising with empty nanodiscs which contain no odorant receptors, shown in @fig-functionalisation-literature (c) and @fig-functionalisation-literature (d). Unless the odorant receptors attach preferentially to the network over nanodiscs, it appears the gating effect is predominantly due to the large-scale attachment of nanodisc membranes.
@@ -132,7 +155,7 @@ Functionalisation of a FET device channel with iORs significantly alters the tra
 
 ![](figures/ch3/OR22a_realtime_normalised_GFET_2.png)
 
-Real-time responses to concentrations of methyl hexanoate in $1 \times$ phosphate buffer saline (PBS) with 1% v/v DMSO by (a) an OR22a nanodisc-functionalised CNT network FET and (b) an OR22a nanodisc-functionalised graphene FET, alongside the normalised signal response curves corresponding to (c) CNT network FETs and (d) graphene FETs. The response curves show the cumulative responses of OR22a-functionalised devices to both the positive ligand methyl hexanoate (green) and negative ligand *trans*-2-hexan-1-al (black). They also show the cumulative response of a empty nanodisc functionalised device to methyl hexanoate (purple) [@Murugathas2019a; @Murugathas2020].
+Real-time responses to concentrations of methyl hexanoate in $1 \times$ phosphate buffer saline (PBS) with 1% v/v DMSO by (a) an OR22a nanodisc-functionalised CNT network FET and (b) an OR22a nanodisc-functionalised graphene FET, alongside the normalised signal response curves corresponding to (c) CNT network FETs and (d) graphene FETs. The response curves show the cumulative responses of OR22a-functionalised devices to both the positive ligand methyl hexanoate (green) and negative ligand *trans*-2-hexan-1-al (black). They also show the cumulative response of a empty nanodisc functionalised device to methyl hexanoate (purple). Reproduced with permission from [@Murugathas2019a; @Murugathas2020].
 :::
 
 Interactions between iORs attached to the channel, such as OR22a, and positive ligands added to the electrolyte environment, such as methyl hexanoate (MeHex), can alter the current flowing through the channel. These current changes can be monitored over time and interpreted as real-time sensor responses. @fig-iOR-sensing-literature (a) and (b) show the respective responses of the OR22a-functionalised CNT FET and graphene FET in @fig-functionalisation-literature to methyl hexanoate in real-time. This result demonstrates that iOR-FETs are sensitive down to the femtomolar scale in an aqueous environment. @fig-iOR-sensing-literature (c) and (d) compare the average methyl hexanoate responses of multiple devices to that of relevant controls. It was verified that the OR22a-functionalised devices would not respond to *trans*-2-hexan-1-al, the negative ligand for OR22a; it was also verified that empty nanodiscs would not respond non-selectively to the positive ligand [@Murugathas2019a; @Murugathas2020]. 
