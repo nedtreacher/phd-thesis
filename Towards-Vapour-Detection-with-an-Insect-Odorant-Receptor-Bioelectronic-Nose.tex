@@ -198,7 +198,7 @@ Bioelectronic Nose}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, breakable, boxrule=0pt, interior hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, sharp corners, breakable, frame hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -247,10 +247,11 @@ chip' devices are of particular interest due to their low cost, rapid
 use time, simple operation and small size compared with more traditional
 biological analysis methods \autocite{Kauffman2008}. It is hoped that
 these sensors could be deployed outside the laboratory in a range of
-front-line settings requiring rapid and reliable detection. Examples
-include rapid diagnostic testing at a busy medical clinic
-\autocite{Lim2014}, or biological threat detection across a large
-shipment of imported fruit \autocite{B3,Queensland}.
+front-line settings requiring rapid and reliable detection
+\autocite{Dung2018}. Specific examples include rapid diagnostic testing
+at a busy medical clinic \autocite{Lim2014}, or the mass detection of
+biological threats across a large shipment of imported fruit
+\autocite{B3,Queensland}.
 
 Rapid developments in this biosensor technology and parallel
 developments in the understanding of animal olfaction led to these
@@ -297,16 +298,16 @@ an odor \autocite{Buck1991,Dung2018}.
 \hypertarget{sec-artificial-membranes}{%
 \subsection{Artificial Membranes}\label{sec-artificial-membranes}}
 
-Odorant receptors are transmembrane proteins, and therefore require a
-lipid membrane to stablised the proteins and preserve their structure
-\autocite{Dung2018}. Odorant receptors can be expressed in cells and
-isolated alongside with the native cell membranefor sensor use, or
-embedded in an artificial lipid membrane format that mimics a cell
-membrane. These artificial membranes include micelles, lipid cubic
-phases, nanovesicles (including nanoliposomes), and nanodiscs. The
-insoluble transmembrane proteins can also be held in a specific
-detergent environment to preserve their structure and function
-\autocite{Dung2018}.
+Odorant receptors are transmembrane proteins, and therefore require
+stabilisation from a lipid membrane to preserve their structure when
+solubilised \autocite{Fruh2011,Dung2018}. Odorant receptors can be
+expressed in cells and isolated alongside with the native cell membrane
+for sensor use, or embedded in an artificial lipid membrane format that
+mimics a cell membrane. These artificial membranes include micelles,
+nanovesicles (including nanoliposomes), lipid cubic phases, amphipols,
+and nanodiscs. The insoluble transmembrane proteins can also be held in
+a specific detergent environment to preserve their structure and
+function \autocite{Fruh2011,Dung2018}.
 
 \begin{figure}
 
@@ -320,25 +321,37 @@ lipid membrane, which acts as a substitute for the cell membrane
 
 \end{figure}
 
+Amphipols (Apols) are synthetic polymers with a hydrophilic backbone and
+grafted hydrophobic side chains. This gives the polymer an amphiphilic
+nature, enabling them to stability bind the transmembrane protein into a
+soluble complex. This configuration has been used to non-covalently
+immobilise a transmembrane protein for surface plasmon resonance via
+strepavidin-biotin bonding \autocite{Fruh2011}.
+
 Nanodiscs have a particularly high stability compared to other formats
-as their disc-shaped lipid bilayer is encompassed by a membrane scaffold
-protein (MSP) \autocite{Nath2007,Bayburt2010}. The stability of this
-format means it is frequently used in the fabrication of biosensor
-devices, which are often described as being particularly reliable and
-long-lived \autocite{Goldsmith2011,Yang2018,Moon2020,Cheema2021}.
-Another advantage of nanodiscs is that the membrane scaffold protein can
-be attached to biosensor surfaces at specific affinity tags, for
-example, the MSP hexahistidine tag (`his-tag') \autocite{Bayburt2010}.
-Unlike other artificial membranes, there is also little variation
-between the size of individual nanodiscs \autocite{Nath2007}. Depending
-on the type of MSP used, a nanodisc measures between 10-20 nm across and
+as their disc-shaped lipid bilayer is encompassed by an membrane
+scaffold protein (MSP) \autocite{Nath2007,Bayburt2010}. The amphiphilic
+membrane scaffold protein protects the exposed hydrophobic side chains
+of the nanodisc when solubilised\autocite{Fruh2011}. The relative
+stability of this format means it is frequently used in the fabrication
+of biosensor devices, which are often described as being particularly
+reliable and long-lived
+\autocite{Goldsmith2011,Yang2018,Moon2020,Cheema2021}. Another advantage
+of nanodiscs is that the membrane scaffold protein can be attached to
+biosensor surfaces at specific affinity tags, for example, the MSP
+hexahistidine tag (`his-tag') \autocite{Bayburt2010,Fruh2011}. Unlike
+other artificial membranes, there is also little variation between the
+size of individual nanodiscs \autocite{Nath2007,Fruh2011}. Depending on
+the type of MSP used, a nanodisc measures between 10-20 nm across and
 can hold either a single or several odorant receptors
-\autocite{Nath2007,Bayburt2010}. Figure~\ref{fig-msp-iOR-nanodisc} shows
-the structure of a nanodisc with contained odorant receptors.
+\autocite{Nath2007,Bayburt2010}. Nanodiscs have been found to be
+significantly less prone to non-specific binding (see
+Section~\ref{sec-non-specific-binding}) than micelles
+\autocite{Fruh2011}.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.4\textwidth,height=\textheight]{figures/ch3/iOR_nanodisc.png}
+{\centering \includegraphics[width=0.42\textwidth,height=\textheight]{figures/ch3/iOR_nanodisc.png}
 
 }
 
@@ -372,25 +385,31 @@ receptors can be directly attached by physical adsorption; however, this
 approach is difficult to control, and can result in weak coupling
 between the odorant receptors and the transducer \autocite{Dung2018}.
 Alternatively, a bifunctional linker element may mediate the attachment
-between functional groups of the bioreceptor and the transducer in a
-biochemical process referred to as functionalisation
-\autocite{Star2003a}. The linker chemical interacts with the carbon-ring
-surface either through stronger covalent bonding or weaker non-covalent
-bonding. A more thorough comparison of covalent and non-covalent linker
-functionalisation can be found in
-\textbf{?@sec-noncovalent-functionalisation}.
+between functional groups of the bioreceptor and the carbon-ring surface
+of the transducer in a biochemical process referred to as
+functionalisation \autocite{Star2003a}. In this thesis, the amino
+functional group is of particular interest, but there are many other
+nucleophilic functional groups available for binding, including
+carboxyls, hydroxyls, thiols/sulfhydryls, phenols, imidazoles and so on
+\autocite{Fruh2011,Dung2018}. The linker chemical interacts with the
+transducer either through stronger covalent bonding or weaker
+non-covalent bonding. The relative advantages and disadvantages of each
+type of receptor immobilisation can be found in
+Table~\ref{tbl-functionalisation-types}, while a more thorough
+comparison of covalent and non-covalent linker functionalisation can be
+found in \textbf{?@sec-noncovalent-functionalisation}.
 
 \hypertarget{tbl-functionalisation-types}{}
 \begin{longtable}[t]{>{\raggedright\arraybackslash}p{5.4cm}>{\raggedright\arraybackslash}p{1.45cm}>{\raggedright\arraybackslash}p{1.3cm}>{\raggedright\arraybackslash}p{1.45cm}>{\raggedright\arraybackslash}p{1.3cm}>{\raggedright\arraybackslash}p{1.3cm}}
 \caption{\label{tbl-functionalisation-types}A comparison of the advantages and disadvantages of different approaches
 for immobilising odorant receptors onto carbon nanotube or graphene
-transducers. Simplicity = the amount of cost, time and effort involved
+transducers. (Simplicity = the amount of cost, time and effort involved
 in functionalisation; Stability = the ability for the sensor to operate
 over a long time and under a range of conditions; Specificity = the
 ability to attach the receptor in a controlled and directional manner;
 Strength = the strength of attachment between receptor and transducer;
 Synergy = the ability for the receptor to attach without negatively
-impacting transducer operation. }\tabularnewline
+impacting transducer operation or restricting receptor activity.) }\tabularnewline
 
 \toprule
 Attachment Type & Simplicity & Strength & Specificity & Stability & Synergy\\
@@ -408,7 +427,8 @@ Linker, covalently tethered & Medium & High & High & High & Low\\
 \begin{longtable}[]{@{}llllllll@{}}
 \caption{\label{tbl-or-biosensors}Summary of past fabrication methods
 for odorant receptor-functionalised carbon nanotube and graphene
-biosensors. GA = glutaraldehyde, DAN = 1,5-diaminonaphthalene, DMT-MM =
+biosensors. PBASE = 1-pyrenebutanoic acid N-hydroxysuccinimide ester, GA
+= glutaraldehyde, DAN = 1,5-diaminonaphthalene, DMT-MM =
 4-(4,6-dimethoxy-1,3,5-triazin-2-yl)-4 methylmorpholinium chloride, NTA
 = nitrilotriacetic acid, PDL = poly-D-lysine, Ab = Antibody fragments,
 CNTFET = carbon nanotube field-effect transistor, GFET = graphene
@@ -435,9 +455,9 @@ Fluorescence & 1 fM \\
 0.1 fM \\
 & & Goodwin, 2021. \cite{Goodwin2021} & GFET & Human & Cell membrane &
 AFM, Raman & 0.5 pM \\
-& PBASE & Murugathas, 2019. \cite{Murugathas2019a} & CNTFET & Insect &
-Nanodiscs & TX, AFM & 1 fM \\
-& & Murugathas, 2020. \cite{Murugathas2020} & GFET & Insect &
+& PBASE & Murugathas, 2019. \cite{Murugathas2019a} & CNTFET &
+\textit{Insect} & Nanodiscs & TX, AFM & 1 fM \\
+& & Murugathas, 2020. \cite{Murugathas2020} & GFET & \textit{Insect} &
 Nanovesicles, Nanodiscs & TX, AFM & 1 fM \\
 & & Ahn, 2020. \cite{Ahn2020} & GFET & Human & Nanovesicles & TX, SEM &
 100 fM \\
@@ -446,7 +466,8 @@ fM \\
 & DMT-MM & Yoon, 2009. \cite{Yoon2009} & CNTFET & Human & Cell membrane
 & TX, SEM & 10 fM \\
 Covalent & Diazonium salt/Ni-NTA & Goldsmith, 2011. \cite{Goldsmith2011}
-& CNTFET & Mouse & Micelles, Nanodiscs & TX & \textasciitilde7 ppb \\
+& CNTFET & Mouse & Micelles, Nanodiscs & TX, AFM & \textasciitilde7
+ppb \\
 & & Son, 2017. \cite{Son2017} & CNTFET & Human & Micelles & TX, AFM & 10
 fM \\
 & PDL & Jin, 2012. \cite{Jin2012} & CNTFET & Human & Nanovesicles & SEM
@@ -468,19 +489,43 @@ Nanodiscs & TX, AFM, SEM & 1 fM \\
 \newpage
 \KOMAoptions{paper=portrait,pagesize}
 
+Table~\ref{tbl-or-biosensors} gives a summary of all published
+odorant-receptor functionalised carbon nanotube and graphene
+field-effect transistor-based sensors to date. The vast majority of
+published works on this topic come from the Tai Hyun Park group at Seoul
+National University. The Park group has mainly focused on CNT FETs
+functionalised with nanovesicle-stabilised human odorant receptors, but
+has used a range of different covalent and non-covalent
+functionalisation techniques when producing the sensors. Three
+functionalisation methods have been used by both the Park group and
+another research group: non-covalent functionalisation of odorant
+receptors in the cell membrane with glutaraldehyde-conjugated
+1,5-diaminonaphthalene \autocite{Kwon2015,Goodwin2021}, non-covalent
+functionalisation of nanovesicle-stablised odorant receptors with
+1-pyrenebutanoic acid N-hydroxysuccinimide ester
+\autocite{Murugathas2020,Yoo2022}, and covalent functionalisation of
+micelle-stabilised odorant receptors with nickel/nitrilotriacetic acid
+modified diazonium salt \autocite{Goldsmith2011,Son2017}. Interestingly,
+no single paper compares multiple possible functionalisation techniques
+keeping the transducer, analyte, odorant receptor and lipid membrane
+used the same, making it difficult to directly compare the quality of
+various attachment methods. The functionalisation procedure resulting in
+the lowest limit of detection was non-covalent \autocite{Park2012}, but
+covalent techniques have more consistently led to lower limits of
+detection. Furthermore, non-covalent functionalisation has never been
+used for vapour sensing with odorant receptors.
+
 \hypertarget{sec-biosensor-methods}{%
-\subsection{Sensing Methods}\label{sec-biosensor-methods}}
+\subsection{Sensing Behaviour}\label{sec-biosensor-methods}}
 
-In the nanovesicle or liposome-based odorant receptor biosensors shown
-here, the presence of analyte triggers cell signalling which leads to
-accumulation of ionic charge in the nanovesicle which the transducer
-detects. The biosensors using other formats receive a signal from
-binding of analyte to the receptor, which alters the distribution of
-charge relative to the transducer \autocite{Dung2018}.
+Nanovesicle-based odorant receptor biosensors can be used to mimic the
+natural behaviour of an odorant receptor, where the presence of analyte
+causes the flow of ions into the nanovesicle which the transducer
+detects \autocite{Lim2015,Dung2018}. These ion-channel-coupled sensors
 
-\hypertarget{aqueous-environment}{%
-\subsubsection*{Aqueous Environment}\label{aqueous-environment}}
-\addcontentsline{toc}{subsubsection}{Aqueous Environment}
+The biosensors using other formats receive a signal from binding of
+analyte to the receptor, which alters the distribution of charge
+relative to the transducer .
 
 \hypertarget{vapour-environment}{%
 \subsubsection*{Vapour Environment}\label{vapour-environment}}
@@ -488,16 +533,110 @@ charge relative to the transducer \autocite{Dung2018}.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.4\textwidth,height=\textheight]{figures/ch3/eugenol.png}
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(a).png}
 
 }
 
-\caption{\label{fig-eugenol-responses}Real-time responses to 2 ppm
-eugenol vapour by an mOR174-9 nanodisc-functionalised single-CNT field
-effect transistor. The response to eugenol on day 69 (red triangles)
-indicates that the device retains the ability to respond to eugenol 10
-weeks after functionalisation. Reproduced with permission from
-\autocite{Goldsmith2011}.}
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.40\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch3/afm-nanodisc-goldsmith.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.50\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch3/eugenol-goldsmith.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-eugenol-responses}The functionalisation of mOR174-9
+nanodiscs onto single-CNT field effect transistor onto a carbon nanotube
+for vapour sensing application is demonstrated with an atomic force
+microscope image in (a), while (b) shows real-time responses of the
+sensor to 2 ppm eugenol vapour. The response to eugenol on day 69 (red
+triangles) indicates that the device retains the ability to respond to
+eugenol 10 weeks after functionalisation. Reproduced with permission
+from \autocite{Goldsmith2011}.}
 
 \end{figure}
 
@@ -509,9 +648,9 @@ CNT FETs were exposed to nitrogen flow at 50\% relative humidity. The
 resistance across a device gated at \(V_g\) = 0 V was measured while a
 specific concentration of the positive ligand eugenol was added to the
 constant flow for 100 s, then removed from the flow for 100 s. This
-cycle was repeated five times. Figure~\ref{fig-eugenol-responses} shows
-that significant real-time current increases of up to \(\sim\) 9\% were
-observed during each cycle of exposure to eugenol. The device still
+cycle was repeated five times. Figure~\ref{fig-eugenol-responses} (a)
+shows that significant real-time current increases of up to \(\sim\) 9\%
+were observed during each cycle of exposure to eugenol. The device still
 responded to eugenol cycles after 69 days of storage in 25\% (v/v)
 ethanol at 4°C. This nicely-behaved and persistent activity may result
 from the long-lived nanodisc format used \autocite{Goldsmith2011}. As
@@ -528,6 +667,20 @@ Biosensors}\label{insect-odorant-receptor-biosensors}}
 \hypertarget{in-vivo-structure-and-function-1}{%
 \subsection{\texorpdfstring{\emph{In Vivo} Structure and
 Function}{In Vivo Structure and Function}}\label{in-vivo-structure-and-function-1}}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.6\textwidth,height=\textheight]{figures/ch3/OR_diagram.png}
+
+}
+
+\caption{\label{fig-iOR-membrane}The tuning OR and odorant receptor
+coreceptor (ORCO) on the native cell membrane, with C-terminus and
+N-terminus indicated. The red arrow indicates the location of ion
+transport across the membrane. Adapted from
+\autocite{Wicher2008,Brito2016}.}
+
+\end{figure}
 
 Insect odorant (or olfactory) receptors (iORs) are a diverse range of
 odorant-sensitive transmembrane proteins located in dendrite cells of
@@ -549,9 +702,11 @@ odorant receptors, but is now known that iORs have a completely
 different topology and mechanism to GPCRs, despite also possessing
 seven-transmembrane domains. Their configuration in the membrane is
 inverted. Equivalently, the carboxyl group or `C terminus' of the iOR
-sits outside the membrane of a cell, and the anime group or `N terminus'
+sits outside the membrane of a cell, and the amine group or `N terminus'
 of the iOR sits inside the cell membrane
-\autocite{Glatz2011,Butterwick2018,Carraher2015}.
+\autocite{Glatz2011,Butterwick2018,Carraher2015}. The \emph{in vivo}
+configuration of the odorant receptor on the cell membrane is
+illustrated in Figure~\ref{fig-iOR-membrane}.
 
 Each odorant receptor of the \emph{Drosophilia melanogaster} sensilla
 will respond to a variety of odor compound. Odors which provoke a
@@ -568,8 +723,8 @@ details the various \emph{Drosophilia melanogaster} odorant receptors
 and their response profile to a range of volatile compounds can be
 consulted online \autocite{Munch2016}.
 
-\hypertarget{aqueous-sensing}{%
-\subsection{Aqueous Sensing}\label{aqueous-sensing}}
+\hypertarget{sensing-behaviour}{%
+\subsection{Sensing Behaviour}\label{sensing-behaviour}}
 
 As in the case of vertebrate ORs, recent studies have shown that iORs
 each interact with a specific VOC or a specific range of VOCs and can
@@ -1048,10 +1203,6 @@ it was also verified that empty nanodiscs would not respond
 non-selectively to the positive ligand
 \autocite{Murugathas2019a,Murugathas2020}.
 
-\hypertarget{sensing-mechanisms}{%
-\subsubsection*{Sensing Mechanisms}\label{sensing-mechanisms}}
-\addcontentsline{toc}{subsubsection}{Sensing Mechanisms}
-
 The reduction in the channel current of a functionalised FET upon
 exposure to a positive ligand is notably different to the signal
 transduction mechanism of iORs \emph{in vivo}, since ORCO does not
@@ -1084,22 +1235,26 @@ adsorption of the analyte or ambient contamination from numerous
 elements used in fabricating the biosensor can lead to signal responses
 not attributable to the mechanism of interest (see
 \textbf{?@sec-CNT-sensing-mechanisms}), leading to false positives when
-sensing \autocite{Chen2004,Star2003a,Shkodra2021}. Non-specific
+sensing \autocite{Star2003a,Chen2004,Fruh2011,Shkodra2021}. Non-specific
 adsorption can occur on the channel as well as the the source-drain and
 gate electrodes \autocite{Chen2004}. A variety of measures can be taken
 to prevent NSB from occurring. Once bioreceptors have been attached to
 the channel, remaining exposed carbon nanotubes can be passivated with
 chemical coatings such as Tween-20 \autocite{Chen2004}, PEG
-\autocite{Star2003a}, and ethanolamine \autocite{Maehashi2007,Das2011}.
-If measuring multiple channels in a multiplexed array, one channel can
-be left uncoated to compare the sensing response in a process known as
-`internal referencing' \autocite{Shkodra2021}.
+\autocite{Star2003a,Lee2012b}, and ethanolamine
+\autocite{Maehashi2007,Das2011}. If measuring multiple channels in a
+multiplexed array, one channel can be left uncoated to compare the
+sensing response in a process known as `internal referencing'
+\autocite{Shkodra2021}.
 
 Non-specific binding is particularly significant for
 protein-functionalised devices. Proteins may be spontaneously adsorbed
 onto carbon nanotube or graphene surfaces during functionalisation in a
 manner which is not linker-mediated
-\autocite{Bradley2004,Star2003a,Chen2004}. Such adsorption is known to
+\autocite{Bradley2004,Star2003a,Chen2004}. Non-covalently bound proteins
+may also detach and reattach to available surfaces in a non-specific
+manner when exposed to a high ionic strength electrolyte
+post-functionalisation \autocite{Dung2018}. Such adsorption is known to
 reduce the conductance of device channels containing semiconducting
 carbon nanotubes, which may result from electron transfer between amino
 acid residues and the nanotube network. The significance of this effect
