@@ -198,7 +198,7 @@ Bioelectronic Nose}
 \begin{document}
 \frontmatter
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, boxrule=0pt, interior hidden, enhanced, breakable, borderline west={3pt}{0pt}{shadecolor}, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, sharp corners, boxrule=0pt, interior hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, enhanced]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -744,9 +744,10 @@ nanovesicle-based carbon nanotube field-effect biosensor of Lim \emph{et
 al.}. (a) shows a schematic of the different elements and signalling
 pathways present in the sensor, (b) shows an atomic force microscope
 image of the functionalised device, (c) shows real-time conductance
-changes resulting from amyl butyrate additions with relevant controls,
-and (d) shows the dose-dependent response pattern to amyl butyrate.
-Reproduced with permission from \autocite{Lim2015}.}
+changes resulting from amyl butyrate additions to the electrolyte gate
+against relevant controls, and (d) shows the dose-dependent response
+pattern to amyl butyrate. Reproduced with permission from
+\autocite{Lim2015}.}
 
 \end{figure}
 
@@ -1022,12 +1023,12 @@ using non-covalently attached GA-modified DAN linker; (b) compares
 transfer characteristics of the device with graphene only (GM), graphene
 with DAN linker (GM/DAN), and after modification with one of two
 different ORs (hOR2AG1, hOR3A1); (c) shows the real-time responses of
-the hOR2AG1-modified transistor (sub-SB2) to various concentrations of
-amyl butyrate (AB) analyte; (d) shows the real-time responses of the
-hOR3A1-modified transistor (sub-SB3) to various concentrations of
-helional (HE) analyte; and (e) shows the dose-dependent response curve
-corresponding to the sub-SB2 and sub-SB3 sensors. Reproduced with
-permission from \autocite{Kwon2015}.}
+the liquid-gated hOR2AG1-modified transistor (sub-SB2) to various
+concentrations of amyl butyrate (AB) analyte; (d) shows the real-time
+responses of the hOR3A1-modified transistor (sub-SB3) to various
+concentrations of helional (HE) analyte; and (e) shows the
+dose-dependent response curve corresponding to the sub-SB2 and sub-SB3
+sensors. Reproduced with permission from \autocite{Kwon2015}.}
 
 \end{figure}
 
@@ -1056,6 +1057,312 @@ behaviour was seen, where a logarithmic increase in signal response is
 observed for sub-femtomolar or femtomolar concentration analyte
 additions, which gives way to saturation behaviour with picomolar
 additions.
+
+\begin{figure}
+
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(a).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch3/yoo2022-micelle-cnt.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch3/yoo2022-AFM.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(c).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch3/yoo2022-TX.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(d).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch3/yoo2022-DMMP.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(e).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch3/yoo2022-DMMP-2.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(f).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch3/yoo2022-DMMP-3.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-yoo-micelle}Schematics of the micelle-based carbon
+nanotube field-effect transistor of Yoo \emph{et al.}. (a) shows the
+functionalisation of detergent micelles onto the carbon nanotube network
+channel; (b) shows the same height profile across an atomic force
+microscope image of the carbon nanotube network before and after
+functionalisation with micelles using PBASE; (c) shows the liquid-gated
+transfer characteristic of a device channel before and after
+functionalisation with PBASE and micelles; (d) shows real-time responses
+of the functionalised, liquid-gated channel to additions of dimethyl
+methylphosphonate (DMMP) analyte; (e) shows the dose-dependent response
+curve to DMMP; and (f) shows a control series demonstrating the
+selective behaviour of the sensor (EB = ethyl butyrate, AB = amyl
+butyrate). Reproduced with permission from \autocite{Yoo2022}.}
+
+\end{figure}
 
 \hypertarget{vapour-environment}{%
 \subsubsection*{Vapour Environment}\label{vapour-environment}}

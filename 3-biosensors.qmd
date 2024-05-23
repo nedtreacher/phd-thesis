@@ -107,7 +107,7 @@ knitr::kable(or_table,
 
 ![](figures/ch3/nanovesicle-amyl-butyrate-2-lim2015.png)
 
-Schematics detailing the nanovesicle-based carbon nanotube field-effect biosensor of Lim *et al.*. (a) shows a schematic of the different elements and signalling pathways present in the sensor, (b) shows an atomic force microscope image of the functionalised device, (c) shows real-time conductance changes resulting from amyl butyrate additions with relevant controls, and (d) shows the dose-dependent response pattern to amyl butyrate. Reproduced with permission from [@Lim2015].
+Schematics detailing the nanovesicle-based carbon nanotube field-effect biosensor of Lim *et al.*. (a) shows a schematic of the different elements and signalling pathways present in the sensor, (b) shows an atomic force microscope image of the functionalised device, (c) shows real-time conductance changes resulting from amyl butyrate additions to the electrolyte gate against relevant controls, and (d) shows the dose-dependent response pattern to amyl butyrate. Reproduced with permission from [@Lim2015].
 :::
 
 Nanovesicle-based odorant receptor biosensors can be used to directly mimic the natural behaviour of an odorant receptor, where the presence of analyte leads to a flow of ions into an olfactory cell [@Lim2015; @Dung2018]. Lim *et al.* functionalised a carbon nanotube field-effect transistor with nanovesicles featuring a human odorant receptor hOR2AG1 covalently coupled with a potassium ion channel at the intracellular C-terminus, as well as an endogenous calcium ion channel, as shown in @fig-lim-ion-channel (a). These nanovesicles were attached to the random carbon nanotube network through a charge-charge interaction with poly-D-lysine, demonstrated with the atomic force microscope image shown in @fig-lim-ion-channel (b). Binding of amyl butyrate to hOR2AG1 causes the OR to change conformation, opening the coupled potassium ion channel and gating the transistor channel. The real-time signal responses associated with amyl butyrate binding are shown by the red trace in @fig-lim-ion-channel (c). Intracellular signalling by the odorant receptors means that target binding also opens the calcium ion channel, and responses are therefore seen when just calcium ions are present. However, without potassium or calcium ions present, ion inflow cannot occur and no conductance change occurs. @fig-lim-ion-channel (d) shows the relative response size to amyl butyrate with different ions available [@Lim2015]. 
@@ -134,10 +134,41 @@ Nanovesicle-based odorant receptor biosensors can be used to directly mimic the 
 
 ![](figures/ch3/kwon2015-dose.png)
 
-Schematics showing the odorant receptor-functionalised graphene field-effect biosensor of Kwon *et al.*. (a) shows the functionalisation of odorant receptors onto graphene using non-covalently attached GA-modified DAN linker; (b) compares transfer characteristics of the device with graphene only (GM), graphene with DAN linker (GM/DAN), and after modification with one of two different ORs (hOR2AG1, hOR3A1); (c) shows the real-time responses of the hOR2AG1-modified transistor (sub-SB2) to various concentrations of amyl butyrate (AB) analyte; (d) shows the real-time responses of the hOR3A1-modified transistor (sub-SB3) to various concentrations of helional (HE) analyte; and (e) shows the dose-dependent response curve corresponding to the sub-SB2 and sub-SB3 sensors. Reproduced with permission from [@Kwon2015].
+Schematics showing the odorant receptor-functionalised graphene field-effect biosensor of Kwon *et al.*. (a) shows the functionalisation of odorant receptors onto graphene using non-covalently attached GA-modified DAN linker; (b) compares transfer characteristics of the device with graphene only (GM), graphene with DAN linker (GM/DAN), and after modification with one of two different ORs (hOR2AG1, hOR3A1); (c) shows the real-time responses of the liquid-gated hOR2AG1-modified transistor (sub-SB2) to various concentrations of amyl butyrate (AB) analyte; (d) shows the real-time responses of the hOR3A1-modified transistor (sub-SB3) to various concentrations of helional (HE) analyte; and (e) shows the dose-dependent response curve corresponding to the sub-SB2 and sub-SB3 sensors. Reproduced with permission from [@Kwon2015].
 :::
 
 Odorant receptors can also be expressed in the native cell membrane and attached directly to the biosensor channel. Here, the changes in odorant receptor conformation that result from analyte binding cause affects the distance between charges on the odorant receptor and the transducer channel, gating the channel [@Kwon2015; @Dung2018]. Kwon *et al.* functionalised graphene field-effect transistors with human odorant receptors hOR2AG1 and hOR3A1 using non-covalently attached 1,5-diaminonaphthalene (DAN) modified with glutaraldehyde as a linker, as shown in @fig-kwon-multiplexed (a). The odorant receptors attach to the GA-modified DAN via a Schiff-base reaction [@Subasi2022]. OR attachment was demonstrated by SEM imaging as well as a significant change in device resistance, shown in @fig-kwon-multiplexed (b). Both hOR2AG1 and hOR3A1 showed real-time responses to their corresponding target analyte at sub-femtomolar concentrations, as shown in @fig-kwon-multiplexed (c) and @fig-kwon-multiplexed (d) respectively. No responses were seen from linker-modified graphene to similar analyte concentrations. The dose-dependent response curve of both these odorant receptor sensors is shown in @fig-kwon-multiplexed (e). As in @fig-lim-ion-channel (d), a Langmuir-type dose response behaviour was seen, where a logarithmic increase in signal response is observed for sub-femtomolar or femtomolar concentration analyte additions, which gives way to saturation behaviour with picomolar additions.
+
+::: {#fig-yoo-micelle layout="[[3,-1,45,-1,3,-1,45,-1],[3,-1,45,-1,3,-1,45,-1],[3,-1,45,-1,3,-1,45,-1]]"}
+
+![](figures/(a).png)
+
+![](figures/ch3/yoo2022-micelle-cnt.png)
+
+![](figures/(b).png)
+
+![](figures/ch3/yoo2022-AFM.png)
+
+![](figures/(c).png)
+
+![](figures/ch3/yoo2022-TX.png)
+
+![](figures/(d).png)
+
+![](figures/ch3/yoo2022-DMMP.png)
+
+![](figures/(e).png)
+
+![](figures/ch3/yoo2022-DMMP-2.png)
+
+![](figures/(f).png)
+
+![](figures/ch3/yoo2022-DMMP-3.png)
+
+Schematics of the micelle-based carbon nanotube field-effect transistor of Yoo *et al.*. (a) shows the functionalisation of detergent micelles onto the carbon nanotube network channel; (b) shows the same height profile across an atomic force microscope image of the carbon nanotube network before and after functionalisation with micelles using PBASE; (c) shows the liquid-gated transfer characteristic of a device channel before and after functionalisation with PBASE and micelles; (d) shows real-time responses of the functionalised, liquid-gated channel to additions of dimethyl methylphosphonate (DMMP) analyte; (e) shows the dose-dependent response curve to DMMP; and (f) shows a control series demonstrating the selective behaviour of the sensor (EB = ethyl butyrate, AB = amyl butyrate). Reproduced with permission from [@Yoo2022].
+:::
+
+Biosensors have also been produced where odorant receptors are held in a detergent micelle format instead of the native cell membrane. The mechanism behind sensing here is the same as for odorant receptors in the cell membrane, where a conformational change in the odorant receptors leads to channel gating [@Dung2018; @Yoo2022].
 
 #### Vapour Environment {.unnumbered}
 
