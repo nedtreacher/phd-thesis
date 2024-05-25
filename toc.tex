@@ -1,0 +1,64 @@
+$if(toc)$
+$if(toc-title)$
+\renewcommand*\contentsname{$toc-title$}
+$endif$
+$if(beamer)$
+\begin{frame}[allowframebreaks]
+$if(toc-title)$
+  \frametitle{$toc-title$}
+$endif$
+  \tableofcontents[hideallsubsections]
+\end{frame}
+$else$
+{
+$if(colorlinks)$
+\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$$endif$}
+$endif$
+\setcounter{tocdepth}{$toc-depth$}
+\addcontentsline{toc}{chapter}{Table of Contents}
+\tableofcontents
+}
+$endif$
+$endif$
+$if(lof)$
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+$endif$
+$if(lot)$
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+$endif$
+
+\clearpage
+\newpage
+\thispagestyle{empty} % Hide header and footer on this page
+\mbox{~}
+\clearpage
+\newpage
+
+%----------------------------------------------
+%   List of Abbreviations
+%----------------------------------------------
+\thispagestyle{plain} % Hide header and footer on this page
+
+\begin{center}
+% Manually add a section to the table of contents
+\addcontentsline{toc}{chapter}{List of Abbreviations}
+\Large{List of Abbreviations}
+\end{center}
+
+\vspace*{\baselineskip}
+
+This is a thesis skeleton written with quarto.
+Make a copy of this thesis repo and start to write!
+
+Make a new paragraph by leaving a blank line.
+
+\clearpage
+\newpage
+\thispagestyle{empty} % Hide header and footer on this page
+\mbox{~}
+\clearpage
+\newpage
+
+
