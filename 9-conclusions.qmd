@@ -13,28 +13,60 @@ format: pdf
 
 ### Biosensor Sensitivity and Transducer Morphology 
 
+- graphene folds
+- density of carbon nanotube network, ratio of metallic to semiconducting tubes, nanotube bundle diameters
+- metallic cnts and bundled CNTs more reactive
+- carbon nanotube junctions
 
 ### Biosensor Drift and Transducer Hysteresis
 
+- charge traps from gate bias or dopant adsorption
+- baseline drift due to changes in trap states
+- 3 hour signal drift followed by steady-state, reversible and modelled with three exponentials
+
 
 ### Biosensor Functionalisation and Transducer Cleanliness
+
+- threshold voltage shift compares gating behaviour of devices
+- most functionalisation procedures used to attach odorant receptors are non-covalent
+- more consistent limit of detection for covalent attachment
+- all vapour sensing with nanodiscs has used covalent functionalisation 
+- non-specific binding: misoriented attachment, substrate attachment  
+- non-covalent functionalisation $-$ $\sim$ 7 ppb by Goldsmith *et al.*
 
 
 ## Future Work {#sec-future-work}
 
 ### Device Fabrication {#sec-future-work-fabrication}
 
+#### Encapsulation for Fluorescence Microscopy {.unnumbered}
+
 ### Functionalisation
 
 #### Surface Contamination {.unnumbered}
 
-Non-Destructive Cleaning of Carbon Nanotube Surfaces: Removal of Organic Contaminants and Chemical Residue with Oxygen Radicals 
+Non-Destructive Cleaning of Carbon Nanotube Surfaces: Removal of Organic Contaminants and Chemical Residue with Oxygen Radicals (paper)
+
 
 #### Covalent Approaches {.unnumbered}
 
+- use of Cu2+/amine-NTA (Nα,Nα-Bis(carboxymethyl)-L-lysine hydrate) with diazonium salt
+
+- use of antibody fragments
+
+- systematic comparison of the effectiveness of different covalent techniques (quality of functionalisation vs channel mobility post-functionalisation)
+
+#### Investigating OR-ORCO Complex {.unnumbered}
+
+- Lim *et al.* [@Jin2012; @Park2012a; @Lim2014; @Lim2015; @Son2015; @Ahn2015] but with ORCO ion channel and iOR in liposomes instead of Kir potassium ion channel and hOR
+
+- Could try using sodium, calcium and potassium ions just as the ORCO channel does *in vivo*, (also VUAA1), gives a better idea of the behaviour and role of ORCO [@Wicher2021]
+
+- are other intracellular components or ion channels required for operation??
+
 #### Multiplexing {.unnumbered}
 
-A scent in nature contains a mixture of many different volatile organic compounds in vapour at different concentrations. A major goal for a vapour-phase iOR biosensor is therefore to perform multiplexed measurements with different iORs in different channels to simultaneously measure and distinguish between mixtures of volatile organic compounds [@Kwon2015; @Hurot2020; @Hirata2021]. A similar approach could be taken to that of Son *et al.*, but for insect odorant receptors [@Son2017]. A difficulty that could arise here is that iORs may specifically bind with multiple VOCs. When interacting with an iOR, different volatiles can 'antagonise' each other; some iORs will not respond to a volatile compound if another specific compound is present [@Kwon2015; @Munch2016; @Son2017; @Hirata2021]. This means a multiplexed iOR biosensor would first need to be tested individually against different volatile compounds, and then with mixtures of volatile compounds to detect any antagonistic behaviours in a systematic manner. This approach towards ensuring selectivity should also be taken towards the creation of multiplexed devices more generally [@Shkodra2021].
+A scent in nature contains a mixture of many different volatile organic compounds in vapour at different concentrations. A major goal for a vapour-phase iOR biosensor is therefore to perform multiplexed measurements with different iORs in different channels to simultaneously measure and distinguish between mixtures of volatile organic compounds [@Kwon2015; @Hurot2020; @Hirata2021]. A similar approach could be taken to that of Kwon *et al.* and Son *et al.*, but for insect odorant receptors [@Kwon2015; @Son2017]. A difficulty that could arise here is that iORs may specifically bind with multiple VOCs. When interacting with an iOR, different volatiles can 'antagonise' each other; some iORs will not respond to a positive ligand if another specific ligand is present [@Kwon2015; @Munch2016; @Son2017; @Hirata2021]. This means a multiplexed iOR biosensor would first need to be tested individually against different volatile compounds, and then with mixtures of volatile compounds to detect any antagonistic behaviours in a systematic manner. This approach towards ensuring selectivity should also be taken towards the creation of multiplexed devices more generally [@Shkodra2021].
 
 ### Vapour Sensing {#sec-future-work-vapour}
 
@@ -44,9 +76,11 @@ Replace all three mass flow controllers with two MFCs with maximum flow both equ
 
 #### Device Configuration {.unnumbered}
 
-Insect odorant receptors are stabilised by having their lipid membrane maintained in an aqueous environment. Exposing iORs to vapour-phase compounds outside this environment may cause them significant damage without the use of a protective membrane protein [@Sato2014; @Warden2019]. A capture layer can be used to mimic the mucus within the insect sensillum lymph, which protects the dendrite cells [@Sato2014; @Hurot2020; @Cali2020; @Shkodra2021]. This capture layer could also be used as a liquid-gate to maximise device sensitivity. A gate electrode can be photolithographically patterned onto the device surface alongside the source and drain electrodes for this purpose, making contact with the capture layer through an additional gap in the device encapsulation [@Shkodra2021]. Only slight alterations would have to be made to the device design outlined in this thesis for implementation. A potential difficulty with this approach might be ensuring rapid odorant diffusion through the layer to the iOR-FET surface, especially when compounds are insoluble [@Pelosi2018; @Warden2019; @Cali2020; @Hurot2020; @Yamada2021; @Spencer2021]. Yamada *et al.* used hydrophobic microslits at the liquid-vapour interface to promote mixing of compounds within an aqueous environment [@Yamada2021]. 
+Insect odorant receptors are stabilised by having their lipid membrane maintained in an aqueous environment. Exposing iORs to vapour-phase compounds outside this environment may cause them significant damage without the use of a protective membrane protein [@Sato2014; @Warden2019]. A capture layer can be used to mimic the mucus within the insect sensillum lymph, which protects the dendrite cells [@Sato2014; @Hurot2020; @Cali2020; @Shkodra2021]. This capture layer could also be used as a liquid-gate to maximise device sensitivity. A gate electrode can be photolithographically patterned onto the device surface alongside the source and drain electrodes for this purpose, making contact with the capture layer through an additional gap in the device encapsulation [@Shkodra2021]. Only slight alterations would have to be made to the device design outlined in this thesis for implementation. 
 
 A variety of possible capture layer solutions for vapour-phase field-effect transistor sensors can be found in the literature. Lee *et al.* and Kuznetsov *et al.* integrated an aqueous membrane held by polycarbonate and SiO$_2$/Si$_3$N$_4$/SiO$_2$ into their sensor, which prevented electrolyte evaporation [@Lee2015; @Kuznetsov2018]. Bio-gels or ionic liquids (ILs) are other potential candidates. Sato *et al.* used an agarose hydrogel in a microchamber array as a capture layer [@Sato2014; @Hirata2021]. Ionic liquids have low vapour pressure, high capacitance, as well as high electrochemical stability. Hwang *et al.* and White *et al.* used 1-Butyl-3-methylimidazolium bis(trifluoromethylsulfonyl)imide (BMIM) as the electrolytic gate for thin-film field-effect transistors [@Hwang2014; @White2015]. Alternative ionic liquid candidates may need to be identified which are biologically compatible. 
+
+A potential difficulty with this approach might be ensuring rapid odorant diffusion through the layer to the iOR-FET surface, especially when compounds are insoluble [@Pelosi2018; @Warden2019; @Cali2020; @Hurot2020; @Yamada2021; @Spencer2021]. Yamada *et al.* used hydrophobic microslits at the liquid-vapour interface to promote mixing of compounds within an aqueous environment [@Yamada2021]. It may also be possible to use odorant binding proteins to carry volatile compounds to the odorant receptors, just as *Drosophilia Melanogaster* does *in vivo* [@Larisika2015; @Brito2016; @Sankaran2011; @Kotlowski2018; @Pelosi2018; @Cali2020].
 
  
 
