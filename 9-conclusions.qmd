@@ -37,7 +37,7 @@ format: pdf
 
 ## Future Work {#sec-future-work}
 
-### Device Fabrication {#sec-future-work-fabrication}
+### Device Fabrication and Functionalisation {#sec-future-work-fabrication}
 
 #### Improved Encapsulation {.unnumbered}
 
@@ -48,8 +48,6 @@ Need special SU8
 use previous OR fluorescence test paper with PEG and GFP-ORs to check for successful passivation of SiO$_2$
 
 could also use PEG-FITC and GFP-ORs to check for passivation of unmodified carbon nanotubes (without GFP-ORs)
-
-### Functionalisation
 
 #### Surface Contamination {.unnumbered}
 
@@ -74,7 +72,7 @@ Non-Destructive Cleaning of Carbon Nanotube Surfaces: Removal of Organic Contami
 
 #### Multiplexing {.unnumbered}
 
-A scent in nature contains a mixture of many different volatile organic compounds in vapour at different concentrations. A major goal for a vapour-phase iOR biosensor is therefore to perform multiplexed measurements with different iORs in different channels to simultaneously measure and distinguish between mixtures of volatile organic compounds [@Kwon2015; @Hurot2020; @Hirata2021]. A similar approach could be taken to that of Kwon *et al.* and Son *et al.*, but for insect odorant receptors [@Kwon2015; @Son2017]. A difficulty that could arise here is that iORs may specifically bind with multiple VOCs. When interacting with an iOR, different volatiles can 'antagonise' each other; some iORs will not respond to a positive ligand if another specific ligand is present [@Kwon2015; @Munch2016; @Son2017; @Hirata2021]. This means a multiplexed iOR biosensor would first need to be tested individually against different volatile compounds, and then with mixtures of volatile compounds to detect any antagonistic behaviours in a systematic manner. This approach towards ensuring selectivity should also be taken towards the creation of multiplexed devices more generally [@Shkodra2021].
+A scent in nature contains a mixture of many different volatile organic compounds in vapour at different concentrations. A major goal for a vapour-phase iOR biosensor is therefore to perform multiplexed measurements with different iORs in different channels to simultaneously measure and distinguish between mixtures of volatile organic compounds [@Kwon2015; @Hurot2020; @Hirata2021]. A similar approach could be taken to that of Kwon *et al.* and Son *et al.*, but for insect odorant receptors [@Kwon2015; @Son2017]. A difficulty that could arise here is that iORs may specifically bind with multiple VOCs. When interacting with an iOR, different volatiles can 'antagonise' each other; some iORs will not respond to a positive ligand if another specific ligand is present [@Kwon2015; @Munch2016; @Son2017; @Hirata2021]. This means a multiplexed iOR biosensor would first need to be tested individually against different volatile compounds, and then with mixtures of volatile compounds to detect any antagonistic behaviours in a systematic manner. Care should be taken to avoid the coffee-ring effect when functionalising individual channels of a device (@sec-coffee-ring). The use of small, deep microchannels in clean PDMS, which keep functionalisation material close to the channel, may be essential for consistent functionalisation.
 
 ### Vapour Sensing {#sec-future-work-vapour}
 
@@ -84,7 +82,9 @@ Replace all three mass flow controllers with two MFCs with maximum flow both equ
 
 More consistent, used by Goldsmith *et al.*
 
-#### Device Configuration {.unnumbered}
+May need to replace PVC with stainless steel tubing, introduce a vapour trap to the system before the vacuum pump for use with more corrosive volatile compounds able to significantly degrade PVC at low concentrations
+
+#### Capture Layer {.unnumbered}
 
 Insect odorant receptors are stabilised by having their lipid membrane maintained in an aqueous environment. Exposing iORs to vapour-phase compounds outside this environment may cause them significant damage without the use of a protective membrane protein [@Sato2014; @Warden2019]. A capture layer can be used to mimic the mucus within the insect sensillum lymph, which protects the dendrite cells [@Sato2014; @Hurot2020; @Cali2020; @Shkodra2021]. This capture layer could also be used as a liquid-gate to maximise device sensitivity. A gate electrode can be photolithographically patterned onto the device surface alongside the source and drain electrodes for this purpose, making contact with the capture layer through an additional gap in the device encapsulation [@Shkodra2021]. Only slight alterations would have to be made to the device design outlined in this thesis for implementation. 
 
@@ -93,6 +93,10 @@ A variety of possible capture layer solutions for vapour-phase field-effect tran
 A potential difficulty with this approach might be ensuring rapid odorant diffusion through the layer to the iOR-FET surface, especially when compounds are insoluble [@Pelosi2018; @Warden2019; @Cali2020; @Hurot2020; @Yamada2021; @Spencer2021]. Yamada *et al.* used hydrophobic microslits at the liquid-vapour interface to promote mixing of compounds within an aqueous environment [@Yamada2021]. It may also be possible to use odorant binding proteins to carry volatile compounds to the odorant receptors, just as *Drosophilia Melanogaster* does *in vivo* [@Larisika2015; @Brito2016; @Sankaran2011; @Kotlowski2018; @Pelosi2018; @Cali2020].
 
  #### Multiplexing {.unnumbered}
+
+![Breakout board for vapour delivery system device. Source electrode terminals are labelled S, drain electrode terminals are labelled D, the gate electrode terminal is labelled G and disconnected terminals are labelled 0. Each number corresponds to a different device channel.](figures/ch9/multiplex-breakout.png){#fig-vapour-sensor-breakout}
+
+already possible to connect four channels at once through custom breakout board, sufficient to test three ORs simultaneously alongside empty ORs
 
 ![Multiplexing with a second analyte bottle and four-way valve.](figures/ch9/multiplex-vapoursensor.png){#fig-vapour-sensor multiplexing}
 
