@@ -39,7 +39,15 @@ format: pdf
 
 ### Device Fabrication {#sec-future-work-fabrication}
 
-#### Encapsulation for Fluorescence Microscopy {.unnumbered}
+#### Improved Encapsulation {.unnumbered}
+
+Ceramic encapsulation with HfO$_2$ (see ceramic encapsulation paper)
+
+Need special SU8
+
+use previous OR fluorescence test paper with PEG and GFP-ORs to check for successful passivation of SiO$_2$
+
+could also use PEG-FITC and GFP-ORs to check for passivation of unmodified carbon nanotubes (without GFP-ORs)
 
 ### Functionalisation
 
@@ -70,9 +78,11 @@ A scent in nature contains a mixture of many different volatile organic compound
 
 ### Vapour Sensing {#sec-future-work-vapour}
 
-#### System Layout {.unnumbered}
+#### Flow System {.unnumbered}
 
-Replace all three mass flow controllers with two MFCs with maximum flow both equal to either 1000 or 10000 sccm. One MFC should be kept at a constant flow rate through the dilution line at all times during a sensing experiment. The other should also be kept at a constant flow rate at all times, but feed into a computer-automated solenoid valve which is able to switch the flow between multiple lines. Under normal operation, this second MFC should also be directed through the dilution line. During a sensing series, it should then be redirected through one of a series of carrier lines. Each carrier line only ever contains one analyte, to prevent cross-contamination between lines. 
+Replace all three mass flow controllers with two MFCs with maximum flow both equal to either 1000 or 10000 sccm. One MFC should be kept at a constant flow rate through the dilution line at all times during a sensing experiment. The other should also be kept at a constant flow rate at all times, but feed into a computer-automated solenoid valve which is able to switch the flow between multiple lines. Under normal operation, this second MFC should also be directed through the dilution line. During a sensing series, it should then be redirected through the carrier line. 
+
+More consistent, used by Goldsmith *et al.*
 
 #### Device Configuration {.unnumbered}
 
@@ -82,8 +92,17 @@ A variety of possible capture layer solutions for vapour-phase field-effect tran
 
 A potential difficulty with this approach might be ensuring rapid odorant diffusion through the layer to the iOR-FET surface, especially when compounds are insoluble [@Pelosi2018; @Warden2019; @Cali2020; @Hurot2020; @Yamada2021; @Spencer2021]. Yamada *et al.* used hydrophobic microslits at the liquid-vapour interface to promote mixing of compounds within an aqueous environment [@Yamada2021]. It may also be possible to use odorant binding proteins to carry volatile compounds to the odorant receptors, just as *Drosophilia Melanogaster* does *in vivo* [@Larisika2015; @Brito2016; @Sankaran2011; @Kotlowski2018; @Pelosi2018; @Cali2020].
 
- 
+ #### Multiplexing {.unnumbered}
 
+![Multiplexing with a second analyte bottle and four-way valve.](figures/ch9/multiplex-vapoursensor.png){#fig-vapour-sensor multiplexing}
 
+Install a second analyte bottle branching off from the existing carrier line, place 4-way valve after analyte bottles which runs one analyte bottle to exhaust and one to chamber
 
+Can alternate between analyte and nitrogen with flow through the analyte bottle, and therefore the amount of vapour passing out of the bottle, largely unchanged across a sensing run
+
+Can alternate between two analytes (control analyte and response analyte) with flow through each uninterrupted
+
+Each carrier line only ever contains one analyte, to prevent cross-contamination between lines. 
+
+With a 16-way or 32-way valve, more analyte bottles could be added and therefore multiplexing with more ORs in a single experimental run
 
