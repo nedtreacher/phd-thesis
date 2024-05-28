@@ -177,6 +177,8 @@ Once the rate of flow through the device chamber had been calibrated, the correc
 
 #### Relative Humidity Indicator {.unnumbered}
 
+To test the relative humidity indicator (RHI), all valves out of the chamber were sealed except for the valve for the relative humidity indicator chamber. This meant all flow coming out of the system would pass through the relative humidity indicator chamber (P = 0 sccm and exhaust goes to RHI in @fig-chamber-schematic). Continuous nitrogen flow was then placed through the chamber until relative humidity dropped to about 20%. 10 mL of deionised water was placed into the analyte bottle. A series of different flow rates through each line was sent to the chamber, with the sequence of flow rates shown in @tbl-RHI-flow-sequence (t = time, C = carrier line flow rate, D = dilution line flow rate). Note that between 200 s and 600 s, the total flow rate remains the same, but the ratio of dilution to carrier flow differs.
+
 | t (s)| C (sccm)| D (sccm) |
 |-------|-------|--------|
 | 200  | 0       | 400      |
@@ -186,8 +188,6 @@ Once the rate of flow through the device chamber had been calibrated, the correc
 | 200  | 200     | 0        |
 
 : Flow sequence for testing relative humidity indicator. {#tbl-RHI-flow-sequence}
-
-To test the relative humidity indicator (RHI), all valves out of the chamber were sealed except for the valve for the relative humidity indicator chamber. This meant all flow coming out of the system would pass through the relative humidity indicator chamber (P = 0 sccm and exhaust goes to RHI in @fig-chamber-schematic). Continuous nitrogen flow was then placed through the chamber until relative humidity dropped to about 20%. 10 mL of deionised water was placed into the analyte bottle. A series of different flow rates through each line was sent to the chamber, with the sequence of flow rates shown in @tbl-RHI-flow-sequence (t = time, C = carrier line flow rate, D = dilution line flow rate). Note that between 200 s and 600 s, the total flow rate remains the same, but the ratio of dilution to carrier flow differs.
 
 ![Relative humidity readouts from the relative humidity indicator juxtaposed with flow rates from the dilution line and carrier lines of the vapour system, with 10 mL deionised water in the carrier line analyte bottle.](figures/ch5/RHI_verification.png){#fig-RHI-verification width=65%}
 
