@@ -11,18 +11,28 @@ format: pdf
 
 - key results
 
-### Biosensor Sensitivity and Transducer Morphology 
+### Biosensor Performance and Transducer Morphology 
 
 - graphene folds
 - density of carbon nanotube network, ratio of metallic to semiconducting tubes, nanotube bundle diameters
 - metallic cnts and bundled CNTs more reactive
 - carbon nanotube junctions
+- bundle heights can be measured with AFM and modelled using normal or skew-normal distributions
+
+- mean bundle diameter for solvent-deposited device $9.1\pm4.0$ nm, equivalent to 30 carbon nanotubes in a 2D packed cylinder, while mean bundle diameter for surfactant-deposited device $4.1\pm2.0$ nm, equivalent to 5 nanotubes in a 2D packed cylinder: the repulsive surfactant adsorbs to nanotubes and prevents carbon nanotubes fron bundling together in solution, some bundling appears to occur during deposition maybe due to outward capillary flow of coffee-ring effect
+- Introducing steam while depositing carbon nanotubes increases nanotube coverage from below 50% to 70%, but leaves surfactant
+- Raman: Average $I_D/I_G$ ratio increases for surfactant-deposited films due to the introduction of defects due to surfactant, lower splitting between G$^-$ and G$^+$ peaks indicates more metallic nanotubes in surfactant-deposited networks
+- Steam/surfactant deposited devices showed less variability in electrical characteristics due to their dense morphology seen from AFM, where small variations have less impact on electrical behaviour, desirable for reproducibility and multiplexed sensing 
+- Steam/surfactant deposited devices had a relatively large average on-off ratio (> 100) and subthreshold slope ($\sim$ 7 dec V$^{-1}$), which correspond to low power consumption
+
 
 ### Biosensor Drift and Transducer Hysteresis
 
 - charge traps from gate bias or dopant adsorption
 - baseline drift due to changes in trap states
 - 3 hour signal drift followed by steady-state, reversible and modelled with three exponentials
+
+- hysteresis significantly affected by the presence of water when backgated due to introduced charge traps
 
 
 ### Biosensor Functionalisation and Transducer Cleanliness
@@ -33,6 +43,10 @@ format: pdf
 - all vapour sensing with nanodiscs has used covalent functionalisation 
 - non-specific binding: misoriented attachment, substrate attachment  
 - non-covalent functionalisation $-$ $\sim$ 7 ppb by Goldsmith *et al.*
+
+- AFM evidence for surfactant, long tail up to 8 nm in histogram
+- graphene devices seen to be slightly $p$-doped from their rightwards shifted major Dirac point, could be photoresist
+- steam-assisted surfactant-deposited devices heavily $p$-doped, average $V_t$ = 0.37 V, could be resist or surfactant residue
 
 
 ## Future Work {#sec-future-work}
@@ -51,7 +65,9 @@ could also use PEG-FITC and GFP-ORs to check for passivation of unmodified carbo
 
 #### Surface Contamination {.unnumbered}
 
-Non-Destructive Cleaning of Carbon Nanotube Surfaces: Removal of Organic Contaminants and Chemical Residue with Oxygen Radicals (paper)
+Could model surface contamination using a linear combination of normal or skew-normal distributions [@Marchenko2010]. Alternatively, could improve microscopy and get closer to normal distribution by altering the force applied by microscope tip [@Vobornik2023]. 
+
+Oxidation approaches [@Petkov2005; @Kane2014; @Barnett2018]
 
 
 #### Covalent Approaches {.unnumbered}
