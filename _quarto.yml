@@ -13,7 +13,7 @@ book:
     # - 3-biosensors.qmd
     # - 4-fabrication.qmd
     # - 5-vapour-sensing.qmd
-     - 6-pristine-characterisation.qmd
+    # - 6-pristine-characterisation.qmd
     # - 7-functionalisation-verification.qmd
     # - 8-functionalisation-testing.qmd
     # - 9-conclusions.qmd
@@ -50,12 +50,13 @@ format:
     keep-tex: true 
     toc: true
     toc-title: Table of Contents
-    lot : true
+    lot: true
     lof: true
     biblio-title: References
     papersize: a4
     prefer-html: true
     header-includes: |
+      \usepackage{fancyhdr}
       \usepackage{titling}
       \setlength{\droptitle}{-2cm}
       \preauthor{
