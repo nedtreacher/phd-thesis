@@ -300,7 +300,7 @@ Nina!
 \newpage
 
 \pagestyle{headings}
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, breakable, boxrule=0pt, interior hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners, enhanced]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, boxrule=0pt, interior hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners, frame hidden, enhanced]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -427,6 +427,7 @@ Nina!
     PPB  & Pyrene-PEG-Biotin  \\[5pt]
     PPF  & Pyrene-PEG-FITC  \\[5pt]
     PPN  & Pyrene-PEG-NTA  \\[5pt]
+    PPR  & Pyrene-PEG-Rhodamine  \\[5pt]
     PTFE  & Polytetrafluoroethylene (Teflon™)  \\[5pt]
     PVC  & Polyvinyl chloride  \\[5pt]
     RH  & Relative Humidity  \\[5pt]
@@ -1513,11 +1514,7 @@ use of PBA/EDC over PBASE, as they found it was less prone to hydrolysis
 and gave a larger reaction yield when binding ferrocene to graphene. A
 potential downside of using PBA/EDC for protein immobilisation is that
 EDC has numerous ways of interacting with proteins, and not all of these
-are necessarily desirable; furthermore, the addition of NHS may also
-cause other issues, such as precipitation of the reaction compound
-\autocite{Hermanson2013-4}. The greater range of process variables
-involved in the functionalisation also adds to the complexity of
-reproducing past results.
+are necessarily desirable.
 
 \newpage
 \KOMAoptions{paper=landscape,pagesize}
@@ -1572,6 +1569,11 @@ DMSO & Graphene & 5 & 1 & 50 & 50 & 90 & Fenzl, 2017.
 \newpage
 \KOMAoptions{paper=portrait,pagesize}
 
+Furthermore, the addition of NHS may also cause other issues, such as
+precipitation of the reaction compound \autocite{Hermanson2013-4}. The
+greater range of process variables involved in the functionalisation
+also adds to the complexity of reproducing past results.
+
 \hypertarget{raman-spectroscopy}{%
 \subsection{Raman Spectroscopy}\label{raman-spectroscopy}}
 
@@ -1582,10 +1584,11 @@ DMSO & Graphene & 5 & 1 & 50 & 50 & 90 & Fenzl, 2017.
 }
 
 \caption{\label{fig-linker-raman}This box plot shows the distribution of
-D-band peak to G\(^+\)-band peak ratio, I\(_D\)/I\(_G\), across nine
+\(D\)-band peak to \(G^+\)-band peak ratio, \(I_D/I_G\), across nine
 locations for a selection of chemically-modified carbon nanotube films.
-The D-band and G-band intensities for all samples were first normalised
-to the intensity peak corresponding to the SiO\(_2\) substrate.}
+The \(D\)-band and \(G\)-band intensities for all samples were first
+normalised to the intensity peak corresponding to the SiO\(_2\)
+substrate.}
 
 \end{figure}
 
@@ -1664,6 +1667,60 @@ carbon nanotube sidewalls by surrounding water molecules
 there also appears to be an increase in hole mobility, which may be due
 to the pyrene groups increasing connectivity within the carbon nanotube
 network \autocite{Murugathas2019a}.
+
+Subsequently, the device was rinsed with \(1 \times\) PBS and exposed to
+20 mM EDC and 40 mM NHS in \(1 \times\) PBS electrolyte for 30 minutes.
+Figure~\ref{fig-pba-functionalisation-threshold-shift} (b) shows the
+change resulting from subsequent EDC/NHS exposure. When EDC/NHS is
+added, a threshold shift of \(\Delta\)V \(\sim\) -0.08 V was observed on
+multiple channels. The exposure to EDC/NHS negatively shifts the
+transfer characteristic curve, most likely due to the PBA present
+reacting to form positively-charged \emph{O}-acylisourea esters and
+negatively gating the attached carbon nanotube network
+\autocite{Heller2008,Hermanson2013-4}.
+Figure~\ref{fig-pba-functionalisation-threshold-shift} (c) shows that
+this shift is not significantly affected by further exposure of the
+channel to PBS. The lack of a change in gating may imply that hydrolysis
+over the course of one hour is insufficient to hydrolyse a significant
+proportion of the attached \emph{O}-acylisourea or PBASE back to PBA,
+leaving them available for reaction with biomolecule amine groups. A
+further test could be performed to see if leaving the device submerged
+in water over a longer time period to check if ester hydrolysis
+eventually affects threshold voltage in a significant manner, but this
+was considered to be outside the scope of this work.
+
+\hypertarget{attachment-of-peglyated-pyrene-based-linkers}{%
+\section{Attachment of PEGlyated Pyrene-Based
+Linkers}\label{attachment-of-peglyated-pyrene-based-linkers}}
+
+\hypertarget{sec-NTA-biotin-PEG}{%
+\subsection{Pyrene-NTA, Pyrene-Biotin and
+PEGylation}\label{sec-NTA-biotin-PEG}}
+
+Through chemical coupling/conjugation, it is possible to replace the NHS
+ester group on PBASE with other groups that can undergo binding
+reactions with proteins. Unlike PBASE, these groups do not suffer the
+drawback of being readily hydrolysed. For example, PBASE can be modified
+with N\(\alpha\),N\(\alpha\)-Bis(carboxymethyl)-L-lysine hydrate (also
+known as N-(5-Amino-1-carboxypentyl)iminodiacetic acid, amine-NTA,
+AB-NTA) to produce pyrene-nitrilotriacetic acid. The attached NTA group
+is able to chelate with metal ions such as Cu\(^{2+}\) or Ni\(^{2+}\),
+which then can then coordinate with polyhistidine-tags attached to a
+protein \autocite{Holzinger2011,Fruh2011,Amano2016,Chang2017}. Use of
+Cu\(^{2+}\) ions over Ni\(^{2+}\) gives stronger histidine bonding and
+less non-specific adsorption \autocite{Chang2017}. Functionalisation
+using the NTA-Ni\(^{2+}\) chemistry was successfully used to attach
+mammalian odorant receptors to a single carbon nanotube for detection of
+eugenol vapour in real-time \autocite{Goldsmith2011}. Pyrene-biotin
+(pyrene butanol biotin ester) can also be produced for attaching avidin
+or strepavidin \autocite{Holzinger2011}. As avidin and strepavidin are
+tetrameric, they can be attached to both pyrene-biotin and biotinylated
+avi-tagged proteins simultaneously via strong non-covalent bonding,
+therefore linking the transducer and receptor
+\autocite{Star2003a,Dundas2013,Hermanson2013-11,Fairhead2015}. As the
+presence of his-tags and avi-tags on proteins can be readily controlled,
+these methods offer improved specificity and directionality over the
+traditional amide bonding seen earlier.
 
 \begin{figure}
 
@@ -1871,60 +1928,6 @@ the threshold voltages calculated by finding the intercept of each fit.}
 
 \end{figure}
 
-Subsequently, the device was rinsed with \(1 \times\) PBS and exposed to
-20 mM EDC and 40 mM NHS in \(1 \times\) PBS electrolyte for 30 minutes.
-Figure~\ref{fig-pba-functionalisation-threshold-shift} (b) shows the
-change resulting from subsequent EDC/NHS exposure. When EDC/NHS is
-added, a threshold shift of \(\Delta\)V \(\sim\) -0.08 V was observed on
-multiple channels. The exposure to EDC/NHS negatively shifts the
-transfer characteristic curve, most likely due to the PBA present
-reacting to form positively-charged \emph{O}-acylisourea esters and
-negatively gating the attached carbon nanotube network
-\autocite{Heller2008,Hermanson2013-4}.
-Figure~\ref{fig-pba-functionalisation-threshold-shift} (c) shows that
-this shift is not significantly affected by further exposure of the
-channel to PBS. The lack of a change in gating may imply that hydrolysis
-over the course of one hour is insufficient to hydrolyse a significant
-proportion of the attached \emph{O}-acylisourea or PBASE back to PBA,
-leaving them available for reaction with biomolecule amine groups. A
-further test could be performed to see if leaving the device submerged
-in water over a longer time period to check if ester hydrolysis
-eventually affects threshold voltage in a significant manner, but this
-was considered to be outside the scope of this work.
-
-\hypertarget{attachment-of-peglyated-pyrene-based-linkers}{%
-\section{Attachment of PEGlyated Pyrene-Based
-Linkers}\label{attachment-of-peglyated-pyrene-based-linkers}}
-
-\hypertarget{sec-NTA-biotin-PEG}{%
-\subsection{Pyrene-NTA, Pyrene-Biotin and
-PEGylation}\label{sec-NTA-biotin-PEG}}
-
-Through chemical coupling/conjugation, it is possible to replace the NHS
-ester group on PBASE with other groups that can undergo binding
-reactions with proteins. Unlike PBASE, these groups do not suffer the
-drawback of being readily hydrolysed. For example, PBASE can be modified
-with N\(\alpha\),N\(\alpha\)-Bis(carboxymethyl)-L-lysine hydrate (also
-known as N-(5-Amino-1-carboxypentyl)iminodiacetic acid, amine-NTA,
-AB-NTA) to produce pyrene-nitrilotriacetic acid. The attached NTA group
-is able to chelate with metal ions such as Cu\(^{2+}\) or Ni\(^{2+}\),
-which then can then coordinate with polyhistidine-tags attached to a
-protein \autocite{Holzinger2011,Fruh2011,Amano2016,Chang2017}. Use of
-Cu\(^{2+}\) ions over Ni\(^{2+}\) gives stronger histidine bonding and
-less non-specific adsorption \autocite{Chang2017}. Functionalisation
-using the NTA-Ni\(^{2+}\) chemistry was successfully used to attach
-mammalian odorant receptors to a single carbon nanotube for detection of
-eugenol vapour in real-time \autocite{Goldsmith2011}. Pyrene-biotin
-(pyrene butanol biotin ester) can also be produced for attaching avidin
-or strepavidin \autocite{Holzinger2011}. As avidin and strepavidin are
-tetrameric, they can be attached to both pyrene-biotin and biotinylated
-avi-tagged proteins simultaneously via strong non-covalent bonding,
-therefore linking the transducer and receptor
-\autocite{Star2003a,Dundas2013,Hermanson2013-11,Fairhead2015}. As the
-presence of his-tags and avi-tags on proteins can be readily controlled,
-these methods offer improved specificity and directionality over the
-traditional amide bonding seen earlier.
-
 It is also possible to attach biocompatible \autocite{Chen2004}
 polyethylene glycol (PEG) chains to a pyrene group and modify them with
 reactive groups such as NTA and biotin to attach proteins in the manner
@@ -1958,26 +1961,6 @@ Microscopy}\label{sec-impediments}}
 
 \hypertarget{sec-fluorescence-remarks}{%
 \subsection{General Overview}\label{sec-fluorescence-remarks}}
-
-Various dyes and fluorescent tags were used to investigate approaches
-for identifying successful attachment of biomolecules to a carbon
-nanotube or graphene surface with fluorescence microscopy. The dyes
-included fluorescein isothiocyanate (FITC), Rhodamine B and Cyanine 3
-(Cy3). Green fluorescent protein was also used for this testing process.
-It is important to note that these dyes and the GFP chromophore all
-contain benzene rings which are able to \(\pi\)-stack with carbon rings
-to some degree
-\autocite{Nakayama-Ratchford2007,Tang2012,Khrenova2019,Qiu2019}.
-However, there is also significant variation in the extent to which this
-\(\pi\)-stacking occurs, which can be seen by comparing
-Figure~\ref{fig-FITC-rhodamine-B} (a) and
-Figure~\ref{fig-FITC-rhodamine-B} (b). Here, a clear, specific
-interaction is seen between Rhodamine B and graphene, but little
-interaction between FITC and graphene is observed, even when a longer
-exposure time is used. Whether the addition of pyrene linker groups
-these dyes, or dye-modified biomolecules, was therefore investigated in
-further detail. This process then led to the identification of multiple
-issues that could impede a successful device functionalisation.
 
 \begin{figure}
 
@@ -2084,6 +2067,26 @@ these dyes. In (a), an FITC filter and 6.5 s exposure time was used, and
 in (b) a Texas Red filter and 1.4 s exposure time was used.}
 
 \end{figure}
+
+Various dyes and fluorescent tags were used to investigate approaches
+for identifying successful attachment of biomolecules to a carbon
+nanotube or graphene surface with fluorescence microscopy. The dyes
+included fluorescein isothiocyanate (FITC), Rhodamine B and Cyanine 3
+(Cy3). Green fluorescent protein was also used for this testing process.
+It is important to note that these dyes and the GFP chromophore all
+contain benzene rings which are able to \(\pi\)-stack with carbon rings
+to some degree
+\autocite{Nakayama-Ratchford2007,Tang2012,Khrenova2019,Qiu2019}.
+However, there is also significant variation in the extent to which this
+\(\pi\)-stacking occurs, which can be seen by comparing
+Figure~\ref{fig-FITC-rhodamine-B} (a) and
+Figure~\ref{fig-FITC-rhodamine-B} (b). Here, a clear, specific
+interaction is seen between Rhodamine B and graphene, but little
+interaction between FITC and graphene is observed, even when a longer
+exposure time is used. Whether the addition of pyrene linker groups
+these dyes, or dye-modified biomolecules, was therefore investigated in
+further detail. This process then led to the identification of multiple
+issues that could impede a successful device functionalisation.
 
 Both SU8 and AZ\(^\circledR\) 1518 photoresist fluoresced under a
 variety of microscope filters, resulting from light interacting with the
@@ -2793,24 +2796,18 @@ Graphene}\label{sec-hydrophobicity}}
 \end{minipage}%
 
 \caption{\label{fig-silicon-dioxide-interaction}Fluorescence images of a
-1000 µm \(\times\) 100 µm graphene channel. (a) and (b) were
-functionalised with 1 mM pyrene-PEG-rhodamine in \(1 \times\) PBS.The
-graphene film in (a) was not oxygen plasma cleaned before
-functionalisation, while the graphene film in (b) was oxygen plasma
-cleaned at 5 W for 15 s at 300 mTorr pressure immediately before
-functionalisation. Insets show a 10 µL droplet placed on an
-unencapsulated carbon nanotube device before (a) and after (b) the same
-oxygen plasma treatment procedure. (c) shows a SiO\(_2\) surface which
-had never been exposed to carbon nanotubes, graphene or photoresist
-after exposure to 1 mM pyrene-PEG-rhodamine in \(1 \times\) PBS. (a),
-(b) and (c) were taken using a Texas Red filter and a 1.8 s exposure
-time. (d) was functionalised with 1 mM pyrene-PEG-FITC in \(1 \times\)
-PBS after oxygen plasma treatment, taken using an FITC filter and a 1.6
-s exposure time. Graphene films on a substrate functionalised with 1 mM
-pyrene-PEG-FITC in \(1 \times\) PBS after oxygen plasma treatment were
-then cleaned with m-CNT dispersion surfactant (NanoIntegris), shown in
-(e) and (f), where a FITC filter was used, with 7.5 s and 7.75 s
-exposure times respectively.}
+1000 µm \(\times\) 100 µm graphene channel. (a) was not oxygen plasma
+cleaned before functionalisation with pyrene-PEG-rhodamine (PPR), while
+(b) was oxygen plasma cleaned immediately before PPR functionalisation.
+Insets show a water droplet on an unencapsulated device before (a) and
+after (b) the being treated with O\(_2\) plasma. (c) shows a pristine
+SiO\(_2\) surface after PPR exposure. (a), (b) and (c) were taken using
+a Texas Red filter and a 1.8 s exposure time. (d) was functionalised
+with 1 mM PPF in PBS after oxygen plasma treatment. (e) and (f) were
+functionalised with 1 mM PPF after oxygen plasma treatment, then cleaned
+with surfactant (m-CNT surfactant, NanoIntegris). (d), (e) and (f) were
+taken using an FITC filter, with 1.6 s, 7.5 s and 7.75 s exposure times
+respectively.}
 
 \end{figure}
 
@@ -3055,32 +3052,31 @@ several steps were taken to identify a rapid and simple method for
 verifying successful functionalisation, and to locate any potential
 barriers to a successful functionalisation.
 
-I first compared the advantages and disadvantages of the various linker
-molecules under investigation. The use of hydrogen NMR gave indications
-that water was present in PBASE samples prepared in DMSO. Concerns
-around the impact of the hydrolysis of PBASE on functionalisation mean
-that the presence of water is strongly undesirable. An alternative
-functionalisation approach less prone to hydrolysis is the reaction of
-PBA with EDC in the presence of NHS. However, this process has its own
-disadvantages, such as undesirable protein interactions and the
-increased amount of steps and process variables involved. Pyrene-NTA is
-also less prone to hydrolysis than PBASE but unlike PBASE or PBA/EDC
-interacts with a specific protein tag, the histidine tag. PEGlyation of
-the pyrene-NTA linker also means that the entire functionalisation
-process can be performed in aqueous solution, avoiding the introduction
-of non-organic solvents. This approach is desirable, since the
-non-aqueous solvents traditionally used for functionalisation may have
-negative impacts on device behaviour. For example, carbon nanotube
-device channel transfer characteristics were found to undergo a
-significant shift of \(\Delta V = -0.15 \pm 0.02\) when exposed to DMSO
-or MeOH for 1 hour.
+The advantages and disadvantages of these linker molecules were first
+compared. Hydrogen NMR indicated that water was present in PBASE samples
+prepared in DMSO. The potential for PBASE to hydrolyse during
+functionalisation means that the presence of water is strongly
+undesirable. The reaction of PBA with EDC in the presence of NHS is an
+alternative functionalisation approach which is less prone to
+hydrolysis. However, this process has its own disadvantages, such as
+undesirable protein interactions and the increased amount of steps and
+process variables involved. Pyrene-NTA is also less prone to hydrolysis
+than PBASE, but unlike PBASE or PBA/EDC, interacts with a specific
+protein tag (his-tag). PEGlyation of the pyrene-NTA linker also means
+that the entire functionalisation process can be performed in aqueous
+solution, avoiding the introduction of non-organic solvents. This
+approach is desirable, since the non-aqueous solvents traditionally used
+for functionalisation may have negative impacts on device behaviour. For
+example, carbon nanotube device channel transfer characteristics were
+found to undergo a significant shift of \(\Delta V = -0.15 \pm 0.02\)
+when exposed to DMSO or MeOH for 1 hour.
 
-Next, I verified that the pyrene groups of the linker molecules of
+Next, it was verified that the pyrene groups of the linker molecules of
 interest were attaching successfully to either carbon nanotubes or
 graphene. Raman spectroscopy showed that incubating a highly-bundled
 carbon nanotube film in 5 mM PBASE or PBA in DMSO for 1 hour increased
-I\(_D\)/I\(_G\) by a factor of \(\sim 3\) relative to the DMSO-only
-case. Incubating a steam-deposited carbon nanotube device in a 1 mM
+\(I_D/I_G\) by a factor of \(\sim 3\) relative to the DMSO-only case.
+Incubating a steam-deposited carbon nanotube device in a 1 mM
 concentration of PBASE in methanol or DMSO for 1 hour was found to cause
 a significant increase in device on-current relative to the solvent-only
 case, and a similar increase in on-current was seen for 5 mM PBA in DMSO
@@ -3095,13 +3091,13 @@ relative to the background using a 1 s exposure time.
 Various obstacles to successful functionalisation were also encountered
 and addressed using fluorescence microscopy. Photoresist contamination
 was addressed with exposure and development steps before
-functionalisation (no exposure for SU8 encapsulated devices).
-Hydrophobicity of graphene films was addressed by plasma treatment
-before functionalisation in aqueous solution. A surfactant rinse was
-used to distinguish between weak substrate-linker interaction and
-\(\pi\)-stacking between linker and the channel. Finally, coffee-ring
-distribution of linker was addressed by always submerging the device in
-linker when functionalising.
+functionalisation, with the exposure skipped for negative-resist
+encapsulated devices. Hydrophobicity of graphene films was addressed by
+plasma treatment before functionalisation in aqueous solution. A
+surfactant rinse was used to distinguish between weak substrate-linker
+interaction and \(\pi\)-stacking between linker and the channel.
+Finally, coffee-ring distribution of linker was addressed by always
+fully submerging the device in linker when functionalising.
 
 \bookmarksetup{startatroot}
 
