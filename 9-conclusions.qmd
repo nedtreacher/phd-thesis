@@ -61,6 +61,20 @@ format: pdf
 
 - devices shown to be sensitive to PBS additions (electrostatic gating) and adsorption of vapour, however direct charge transfer may not be involved!!! just because a device is sensitive does not mean it is clean and functionalisable
 
+- unclear whether dense PBASE surface coverage is desirable, possible that the use of an excessive PBASE or PBA concentration leads to multilayer coverage which reduces the quality of functionalisation
+
+-MeOH and DMSO can both be adsorbed to the channel, causing a change in transfer characteristics due to capacitive gating
+
+- Raman and pyrene-PEG-FITC fluorescence microscopy showed that pyrene linker was attaching to the channel
+
+- PEG or pyrene-PEG often used for the prevention of non-specific binding
+
+- biomolecules will preferentially stick to residual resist over the channel if not sufficiently hardbaked, shown with fluorescence microscopy
+
+- long-chain alkanes from air make channel hydrophobic and repel functionalisation material in aqueous solution, can be removed with low power plasma
+
+-non-specific binding occurs between pyrene-based linker and the SiO$_2$ substrate
+
 
 ## Future Work {#sec-future-work}
 
@@ -70,7 +84,7 @@ format: pdf
 
 Ceramic encapsulation with HfO$_2$ (see ceramic encapsulation paper)
 
-Need special SU8
+Need special SU8 as SU8-2150 and AZ$^\circledR$ 1518 photoresist both fluoresce
 
 use previous OR fluorescence test paper with PEG and GFP-ORs to check for successful passivation of SiO$_2$
 
@@ -85,7 +99,9 @@ Thermal oxidation [@Kane2014; @Barnett2018], cleaning with oxygen radicals [@Pet
 
 #### Covalent Approaches {.unnumbered}
 
-- use of Cu2+/AB-NTA (Nα,Nα-Bis(carboxymethyl)-L-lysine hydrate) with diazonium salt
+- use of Cu2+/AB-NTA (Nα,Nα-Bis(carboxymethyl)-L-lysine hydrate) with diazonium salt used to functionalise single carbon nanotube for detection of eugenol vapour in real-time [@Goldsmith2011]
+
+NTA chelates with metal ions, with a particularly strong bond to Cu$^{2+}$ [@Chang2017]
 
 - use of antibody fragments
 

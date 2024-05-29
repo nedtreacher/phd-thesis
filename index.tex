@@ -300,7 +300,7 @@ Nina!
 \newpage
 
 \pagestyle{headings}
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, breakable, boxrule=0pt, interior hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners, enhanced]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, frame hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners, interior hidden, enhanced, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -1513,11 +1513,7 @@ use of PBA/EDC over PBASE, as they found it was less prone to hydrolysis
 and gave a larger reaction yield when binding ferrocene to graphene. A
 potential downside of using PBA/EDC for protein immobilisation is that
 EDC has numerous ways of interacting with proteins, and not all of these
-are necessarily desirable; furthermore, the addition of NHS may also
-cause other issues, such as precipitation of the reaction compound
-\autocite{Hermanson2013-4}. The greater range of process variables
-involved in the functionalisation also adds to the complexity of
-reproducing past results.
+are necessarily desirable.
 
 \newpage
 \KOMAoptions{paper=landscape,pagesize}
@@ -1571,6 +1567,11 @@ DMSO & Graphene & 5 & 1 & 50 & 50 & 90 & Fenzl, 2017.
 
 \newpage
 \KOMAoptions{paper=portrait,pagesize}
+
+Furthermore, the addition of NHS may also cause other issues, such as
+precipitation of the reaction compound \autocite{Hermanson2013-4}. The
+greater range of process variables involved in the functionalisation
+also adds to the complexity of reproducing past results.
 
 \hypertarget{raman-spectroscopy}{%
 \subsection{Raman Spectroscopy}\label{raman-spectroscopy}}
@@ -3056,24 +3057,23 @@ verifying successful functionalisation, and to locate any potential
 barriers to a successful functionalisation.
 
 I first compared the advantages and disadvantages of the various linker
-molecules under investigation. The use of hydrogen NMR gave indications
-that water was present in PBASE samples prepared in DMSO. Concerns
-around the impact of the hydrolysis of PBASE on functionalisation mean
-that the presence of water is strongly undesirable. An alternative
-functionalisation approach less prone to hydrolysis is the reaction of
-PBA with EDC in the presence of NHS. However, this process has its own
-disadvantages, such as undesirable protein interactions and the
-increased amount of steps and process variables involved. Pyrene-NTA is
-also less prone to hydrolysis than PBASE but unlike PBASE or PBA/EDC
-interacts with a specific protein tag, the histidine tag. PEGlyation of
-the pyrene-NTA linker also means that the entire functionalisation
-process can be performed in aqueous solution, avoiding the introduction
-of non-organic solvents. This approach is desirable, since the
-non-aqueous solvents traditionally used for functionalisation may have
-negative impacts on device behaviour. For example, carbon nanotube
-device channel transfer characteristics were found to undergo a
-significant shift of \(\Delta V = -0.15 \pm 0.02\) when exposed to DMSO
-or MeOH for 1 hour.
+molecules under investigation. Hydrogen NMR indicated that water was
+present in PBASE samples prepared in DMSO. The potential for PBASE to
+hydrolyse during functionalisation means that the presence of water is
+strongly undesirable. The reaction of PBA with EDC in the presence of
+NHS is an alternative functionalisation approach which is less prone to
+hydrolysis. However, this process has its own disadvantages, such as
+undesirable protein interactions and the increased amount of steps and
+process variables involved. Pyrene-NTA is also less prone to hydrolysis
+than PBASE, but unlike PBASE or PBA/EDC, interacts with a specific
+protein tag (his-tag). PEGlyation of the pyrene-NTA linker also means
+that the entire functionalisation process can be performed in aqueous
+solution, avoiding the introduction of non-organic solvents. This
+approach is desirable, since the non-aqueous solvents traditionally used
+for functionalisation may have negative impacts on device behaviour. For
+example, carbon nanotube device channel transfer characteristics were
+found to undergo a significant shift of \(\Delta V = -0.15 \pm 0.02\)
+when exposed to DMSO or MeOH for 1 hour.
 
 Next, I verified that the pyrene groups of the linker molecules of
 interest were attaching successfully to either carbon nanotubes or
