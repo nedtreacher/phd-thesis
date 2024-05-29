@@ -300,7 +300,7 @@ Nina!
 \newpage
 
 \pagestyle{headings}
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, boxrule=0pt, interior hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners, frame hidden, enhanced]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, boxrule=0pt, enhanced, breakable, interior hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -712,27 +712,26 @@ highlighted in the image with a red dashed outline.}
 
 \end{figure}
 
-1-pyrenebutanoic acid N-hydroxysuccinimide ester (also known
-commercially and in the literature as 1-pyrenebutyric acid
-N-hydroxysuccinimide ester and 1-pyrenebutanoic acid succinimidyl ester,
-alongside acronyms PBASE, PBSE, PyBASE, PASE, PYSE, PSE, Pyr-NHS and
-PANHS) is a aromatic molecule commonly used for tethering biomolecules
-to the carbon rings of graphene and carbon nanotubes. Using
-computational modelling, two locally stable molecular conformations were
-found to exist, shown in Figure~\ref{fig-pbase-structure} (a) and
-Figure~\ref{fig-pbase-structure} (b) respectively. The straight
-conformation in Figure~\ref{fig-pbase-structure} (a) has a Hartree-Fock
-energy of -3427728.67 kJ/mol, while the bent conformation in
-Figure~\ref{fig-pbase-structure} (b) has a Hartree-Fock energy of
--3427729.66 kJ/mol. The difference between computed Hartree-Fock
-energies is 1.0 kJ/mol, small enough that the existence of both
-molecular conformations is feasible. Similar straight and bent
-structures have previously been modelled for PBASE attached to graphene
-\autocite{Oishi2022}. The pyrene moiety, highlighted with a red dashed
-outline in Figure~\ref{fig-pbase-structure}, non-covalently bonds to the
-carbon rings of the transducer. The N-hydroxysuccinimide (NHS) ester
-group, seen on the right-hand side of Figure~\ref{fig-pbase-structure},
-is highly reactive with amine groups. It undergoes a nucleophilic
+1-pyrenebutanoic acid N-hydroxysuccinimide ester (also known as
+1-pyrenebutyric acid N-hydroxysuccinimide ester and 1-pyrenebutanoic
+acid succinimidyl ester, and by the acronyms PBASE, PBSE, PyBASE, PASE,
+PYSE, PSE, Pyr-NHS and PANHS) is a aromatic molecule commonly used for
+tethering biomolecules to the carbon rings of graphene and carbon
+nanotubes. Two locally stable molecular conformations were found to
+exist using computational modelling, shown in
+Figure~\ref{fig-pbase-structure} (a) and
+Figure~\ref{fig-pbase-structure} (b) respectively. The Hartree-Fock
+energy of the straight conformation in Figure~\ref{fig-pbase-structure}
+(a) is -3427728.67 kJ/mol, while the Hartree-Fock energy of the bent
+conformation in Figure~\ref{fig-pbase-structure} (b) is -3427729.66
+kJ/mol. The difference between energies is small enough that the
+existence of both molecular conformations is feasible. Similar straight
+and bent structures have previously been modelled for PBASE attached to
+graphene \autocite{Oishi2022}. The pyrene moiety, highlighted with a red
+dashed outline in Figure~\ref{fig-pbase-structure}, non-covalently bonds
+to the carbon rings of the transducer. The N-hydroxysuccinimide (NHS)
+ester group, seen on the right-hand side of
+Figure~\ref{fig-pbase-structure}, can undergo a nucleophilic
 substitution reaction with primary amines attached to biomolecules,
 tethering them with an amide or imide bond
 \autocite{Chen2001,Hermanson2013-16,Hermanson2013-3,Shkodra2021,Mishyn2022}.
@@ -803,7 +802,11 @@ react further with amine groups
 group functionalisation is performed at close to neutral pH, within a
 \(\sim\) 1 hour period, and with a high concentration of bioreceptor
 present, competing hydrolysis should not have a significantly adverse
-impact on the functionalisation process \autocite{Hermanson2013-3}.
+impact on the functionalisation process \autocite{Hermanson2013-3}. If
+PBASE is exposed to water during storage,
+1-Ethyl-3-(3-dimethylaminopropyl)carbodiimide (EDC) can be used to
+restore the NHS ester and enable the substitution reaction to take place
+(see Section~\ref{sec-PBA}).
 
 \newpage
 \KOMAoptions{paper=landscape,pagesize}
@@ -869,17 +872,7 @@ DMSO & CNT & 10 & - & 1 & DI water & Lopez, 2015. \cite{Lopez2015} \\
 \newpage
 \KOMAoptions{paper=portrait,pagesize}
 
-However, if PBASE is exposed to water during storage over a significant
-length of time, the presence of
-1-Ethyl-3-(3-dimethylaminopropyl)carbodiimide (EDC) can be used to
-restore the NHS ester and enable the substitution reaction to take place
-(see discussion of PBA/EDC in Section~\ref{sec-PBA}).
-
-\hypertarget{sec-PBASE-purity}{%
-\subsection{Examining 1-Pyrenebutanoic Acid N-Hydroxysuccinimide Ester
-Purity}\label{sec-PBASE-purity}}
-
-\begin{figure}
+\begin{figure}[H]
 
 \begin{minipage}[t]{0.03\linewidth}
 
@@ -1036,6 +1029,10 @@ correspond to sample impurities.}
 
 \end{figure}
 
+\hypertarget{sec-PBASE-purity}{%
+\subsection{Examining 1-Pyrenebutanoic Acid N-Hydroxysuccinimide Ester
+Purity}\label{sec-PBASE-purity}}
+
 I purchased PBASE from two suppliers, Sigma-Aldrich and Setareh Biotech.
 Sigma listed DMF and methanol as suitable solvents for dissolving PBASE,
 alongside chloroform and dimethyl sulfoxide (DMSO). Setareh Biotech
@@ -1095,65 +1092,7 @@ change in the transfer curve, it seems the residual polar solvent
 molecules capacitively gate the channel
 \autocite{Artyukhin2006,Heller2008}. Besteman \emph{et al.} reported
 observing a similar effect from prolonged exposure of a single carbon
-nanotube to dimethylformamide (DMF) \autocite{Besteman2003}. Atomic
-force microscopy also indicates that solvent lingers after device
-cleaning. Figure~\ref{fig-afm-solvent} shows that after 1 hour exposure
-to DMSO, the feature height of the network is significantly increased.
-
-Capactive gating results from dense coverage of adsorped molecules on
-the carbon nanotube surface which have a low permittivity relative to
-the surrounding electrolyte \autocite{Heller2008}. The relative
-permittivity of MeOH and DMSO are \(\sim\) 33 \autocite{Mohsen-Nia2010}
-and \(\sim\) 47 \autocite{Hunger2010} respectively, which are both much
-lower than the relative permittivity of PBS, \(\sim\) 80
-\autocite{Shkodra2021}. From Figure~\ref{fig-PBASE-vs-solvent-only} (a)
-and Figure~\ref{fig-PBASE-vs-solvent-only} (b), the threshold shift
-values found resulting from exposure to each solvent, taking the average
-of forward and reverse sweep values from a single device, were
-\(\Delta V = -0.15 \pm 0.02\) V and \(\Delta V = -0.15 \pm 0.01\) V for
-MeOH and DMSO respectively. The average threshold shift value for a
-second device exposed to MeOH was \(\Delta V = -0.16 \pm 0.02\) V,
-indicating that this threshold shift result is reproducible.
-
-Using the same characterisation process as in this work, Murugathas
-\emph{et al.} \autocite{Murugathas2019a} showed that the attachment of
-PBASE to a solvent-deposited carbon nanotube network had little effect
-on channel threshold voltage, implying the presence of PBASE had not
-significantly influenced channel gating. Here, an average threshold
-voltage shift of \(-0.06\pm0.04\) V is seen after PBASE
-functionalisation in MeOH and \(-0.06\pm0.01\) V after PBASE
-functionalisation in DMSO. These threshold voltage shifts are small
-compared to solvent only. It is possible that the attachment of PBASE
-prevents solvent adsorption, and has a small negative gating effect on
-the channel. Alternatively, while the solvent negatively gates the
-channel, resulting in a threshold shift of -0.15 V, the PBASE may be
-counteracting this by positively gating the channel, resulting in a
-threshold shift of +0.09 V. Murugathas \emph{et al.} also observed a
-slight increase in channel conductance after PBASE functionalisation
-\autocite{Murugathas2019a}. Figure~\ref{fig-PBASE-vs-solvent-only} also
-shows a slight increase in channel conductance post-functionalisation in
-both Figure~\ref{fig-PBASE-vs-solvent-only} (c) and
-Figure~\ref{fig-PBASE-vs-solvent-only} (d) relative to the solvent-only
-case in Figure~\ref{fig-PBASE-vs-solvent-only} (a) and
-Figure~\ref{fig-PBASE-vs-solvent-only} (b). This result implies that the
-presence of PBASE molecules increases channel mobility and therefore
-conductance \autocite{Heller2008}.
-
-The absorption of organic solvent by the carbon nanotube network has
-unknown but potentially negative implications for biosensor
-functionalisation. Use of organic solvents in functionalisation can also
-attack the encapsulation layer of devices, promoting gate current
-leakage. In light of these issues, recent work has begun to explore
-alternative aqueous-based methods for functionalisation of biosensors
-\autocite{Khan2021}. The discussion here also illustrates the importance
-of considering each substance used when electrical characterising a
-device to verify if functionalisation has worked. The qualitative
-presence of a change in characteristics (or lack of one) over the full
-process is not sufficient to make conclusive remarks regarding
-successful functionalisation. A full set of electrical control
-measurements are required for an understanding of electronic changes
-occuring during the functionalisation process, in the manner of Besteman
-\emph{et al.} \autocite{Besteman2003}.
+nanotube to dimethylformamide (DMF) \autocite{Besteman2003}.
 
 \begin{figure}
 
@@ -1361,110 +1300,60 @@ forward and reverse sweep values).}
 
 \end{figure}
 
-\begin{figure}
+Capactive gating results from dense coverage of adsorped molecules on
+the carbon nanotube surface which have a low permittivity relative to
+the surrounding electrolyte \autocite{Heller2008}. The relative
+permittivity of MeOH and DMSO are \(\sim\) 33 \autocite{Mohsen-Nia2010}
+and \(\sim\) 47 \autocite{Hunger2010} respectively, which are both much
+lower than the relative permittivity of PBS, \(\sim\) 80
+\autocite{Shkodra2021}. From Figure~\ref{fig-PBASE-vs-solvent-only} (a)
+and Figure~\ref{fig-PBASE-vs-solvent-only} (b), the threshold shift
+values found resulting from exposure to each solvent, taking the average
+of forward and reverse sweep values from a single device, were
+\(\Delta V = -0.15 \pm 0.02\) V and \(\Delta V = -0.15 \pm 0.01\) V for
+MeOH and DMSO respectively. The average threshold shift value for a
+second device exposed to MeOH was \(\Delta V = -0.16 \pm 0.02\) V,
+indicating that this threshold shift result is reproducible.
 
-\begin{minipage}[t]{0.03\linewidth}
+Using the same characterisation process as in this work, Murugathas
+\emph{et al.} \autocite{Murugathas2019a} showed that the attachment of
+PBASE to a solvent-deposited carbon nanotube network had little effect
+on channel threshold voltage, implying the presence of PBASE had not
+significantly influenced channel gating. Here, an average threshold
+voltage shift of \(-0.06\pm0.04\) V is seen after PBASE
+functionalisation in MeOH and \(-0.06\pm0.01\) V after PBASE
+functionalisation in DMSO. These threshold voltage shifts are small
+compared to solvent only. It is possible that the attachment of PBASE
+prevents solvent adsorption, and has a small negative gating effect on
+the channel. Alternatively, while the solvent negatively gates the
+channel, resulting in a threshold shift of -0.15 V, the PBASE may be
+counteracting this by positively gating the channel, resulting in a
+threshold shift of +0.09 V. Murugathas \emph{et al.} also observed a
+slight increase in channel conductance after PBASE functionalisation
+\autocite{Murugathas2019a}. Figure~\ref{fig-PBASE-vs-solvent-only} also
+shows a slight increase in channel conductance post-functionalisation in
+both Figure~\ref{fig-PBASE-vs-solvent-only} (c) and
+Figure~\ref{fig-PBASE-vs-solvent-only} (d) relative to the solvent-only
+case in Figure~\ref{fig-PBASE-vs-solvent-only} (a) and
+Figure~\ref{fig-PBASE-vs-solvent-only} (b). This result implies that the
+presence of PBASE molecules increases channel mobility and therefore
+conductance \autocite{Heller2008}.
 
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(a).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Danica_NTQ14D6_90sCNT_20220915_00596.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(b).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Danica_NTQ14D6_DMSO_W4_20220915_00607.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-
-\caption{\label{fig-afm-solvent}2.5 µm x 2.5 µm atomic force microscope
-images of a surfactant-deposited carbon nanotube film before (a) and
-after (b) 1 hour submersed in dimethyl sulfoxide (DMSO). Image blurring
-in (b) appears to be due to the presence of adsorped DMSO.}
-
-\end{figure}
+The absorption of organic solvent by the carbon nanotube network has
+unknown but potentially negative implications for biosensor
+functionalisation. Use of organic solvents in functionalisation can also
+attack the encapsulation layer of devices, promoting gate current
+leakage. In light of these issues, recent work has begun to explore
+alternative aqueous-based methods for functionalisation of biosensors
+\autocite{Khan2021}. The discussion here also illustrates the importance
+of considering each substance used when electrical characterising a
+device to verify if functionalisation has worked. The qualitative
+presence of a change in characteristics (or lack of one) over the full
+process is not sufficient to make conclusive remarks regarding
+successful functionalisation. A full set of electrical control
+measurements are required for an understanding of electronic changes
+occuring during the functionalisation process, in the manner of Besteman
+\emph{et al.} \autocite{Besteman2003}.
 
 \hypertarget{sec-PBA}{%
 \section{Attachment of 1-Pyrenebutyric Acid}\label{sec-PBA}}
@@ -1484,37 +1373,7 @@ then react with an amine group on a biomolecule and form an amide bond
 that, unlike PBASE, it is possible to functionalise with EDC dissolved
 in water rather than in an organic solvent. However, like PBASE, EDC and
 the \emph{O}-acylisourea intermediate are prone to hydrolysis,
-especially in acidic conditions. Therefore, like PBASE, it should be
-stored at −20°C, and warmed to room temperature to prevent condensation
-build-up, since exposure to condensation will hydrolyse the reagent
-\autocite{Hermanson2013-4}. Furthermore, by adding N-Hydroxysuccinimide
-(NHS) or N-hydroxysulfosuccinimide (sulfo-NHS) to the reaction vessel,
-PBASE is formed as an active intermediate, which is less prone to
-hydrolysis and increases the PBA/EDC reaction yield
-\autocite{Sehgal1994,Hermanson2013-4,Hermanson2013-14}.
-
-A full comparison of functionalisation procedures used for linking
-carbon nanotube and graphene devices to aptamers and proteins with PBA
-is given in Table~\ref{tbl-pba-functionalisation}. To the best of my
-knowledge, this table is as complete a summary as possible of
-1-pyrenebutyric acid functionalisation processes for carbon nanotube and
-graphene field-effect transistor biochemical sensors. By comparing
-Table~\ref{tbl-pbase-functionalisation} and
-Table~\ref{tbl-pba-functionalisation}, it is clear that PBASE is more
-widely used for non-covalent functionalisation than PBA/EDC.
-
-As was the case for PBASE, there are a wide range of process variables
-used for the functionalisation process, with little justification used
-for variables chosen. Also notable is the frequent use of polyethylene
-glycol (PEG) or pyrene-PEG for prevention of non-specific binding (NSB).
-Non-specific binding is discussed further in
-\textbf{?@sec-non-specific-binding}. Despite being less widely used,
-Mishyn \emph{et al.} \autocite{Mishyn2022} state a preference for the
-use of PBA/EDC over PBASE, as they found it was less prone to hydrolysis
-and gave a larger reaction yield when binding ferrocene to graphene. A
-potential downside of using PBA/EDC for protein immobilisation is that
-EDC has numerous ways of interacting with proteins, and not all of these
-are necessarily desirable.
+especially in acidic conditions.
 
 \newpage
 \KOMAoptions{paper=landscape,pagesize}
@@ -1569,10 +1428,41 @@ DMSO & Graphene & 5 & 1 & 50 & 50 & 90 & Fenzl, 2017.
 \newpage
 \KOMAoptions{paper=portrait,pagesize}
 
-Furthermore, the addition of NHS may also cause other issues, such as
-precipitation of the reaction compound \autocite{Hermanson2013-4}. The
-greater range of process variables involved in the functionalisation
-also adds to the complexity of reproducing past results.
+Therefore, like PBASE, it should be stored at −20°C, and warmed to room
+temperature to prevent condensation build-up, since exposure to
+condensation will hydrolyse the reagent \autocite{Hermanson2013-4}.
+Furthermore, by adding N-Hydroxysuccinimide (NHS) or
+N-hydroxysulfosuccinimide (sulfo-NHS) to the reaction vessel, PBASE is
+formed as an active intermediate, which is less prone to hydrolysis and
+increases the PBA/EDC reaction yield
+\autocite{Sehgal1994,Hermanson2013-4,Hermanson2013-14}.
+
+A full comparison of functionalisation procedures used for linking
+carbon nanotube and graphene devices to aptamers and proteins with PBA
+is given in Table~\ref{tbl-pba-functionalisation}. To the best of my
+knowledge, this table is as complete a summary as possible of
+1-pyrenebutyric acid functionalisation processes for carbon nanotube and
+graphene field-effect transistor biochemical sensors. By comparing
+Table~\ref{tbl-pbase-functionalisation} and
+Table~\ref{tbl-pba-functionalisation}, it is clear that PBASE is more
+widely used for non-covalent functionalisation than PBA/EDC.
+
+As was the case for PBASE, there are a wide range of process variables
+used for the functionalisation process, with little justification used
+for variables chosen. Also notable is the frequent use of polyethylene
+glycol (PEG) or pyrene-PEG for prevention of non-specific binding (NSB).
+Non-specific binding is discussed further in
+\textbf{?@sec-non-specific-binding}. Despite being less widely used,
+Mishyn \emph{et al.} \autocite{Mishyn2022} state a preference for the
+use of PBA/EDC over PBASE, as they found it was less prone to hydrolysis
+and gave a larger reaction yield when binding ferrocene to graphene. A
+potential downside of using PBA/EDC for protein immobilisation is that
+EDC has numerous ways of interacting with proteins, and not all of these
+are necessarily desirable. Furthermore, the addition of NHS may also
+cause other issues, such as precipitation of the reaction compound
+\autocite{Hermanson2013-4}. The greater range of process variables
+involved in the functionalisation also adds to the complexity of
+reproducing past results.
 
 \hypertarget{raman-spectroscopy}{%
 \subsection{Raman Spectroscopy}\label{raman-spectroscopy}}
@@ -1648,79 +1538,6 @@ each compound.
 \hypertarget{sec-PBA-characterisation}{%
 \subsection{Electrical
 Characterisation}\label{sec-PBA-characterisation}}
-
-Figure~\ref{fig-pba-functionalisation-threshold-shift} shows the
-transfer characteristics of a carbon nanotube transistor channel at
-various stages of a PBA/EDC functionalisation, where a excess of
-N-hydroxysuccinimide (NHS) was added alongside EDC. A solvent-deposited
-carbon nanotube film was used for the device. The PBA was dissolved in
-DMSO, and the device channels were exposed to this solution for 1 hour.
-The electrical change resulting from PBA exposure is shown in
-Figure~\ref{fig-pba-functionalisation-threshold-shift} (a). The
-threshold shift with the addition of 5 mM PBA in DMSO for 1 hour is
-equivalent to the shift seen when only DMSO is added, \(\Delta V\) =
--0.15 V. The lack of a significant threshold shift attributable to the
-PBA is a result of pyrene having a neutral charge state. Any
-contributions from the charged carboxyl group are screened from the
-carbon nanotube sidewalls by surrounding water molecules
-\autocite{Lerner2012}. However, as in the case of the addition of PBASE,
-there also appears to be an increase in hole mobility, which may be due
-to the pyrene groups increasing connectivity within the carbon nanotube
-network \autocite{Murugathas2019a}.
-
-Subsequently, the device was rinsed with \(1 \times\) PBS and exposed to
-20 mM EDC and 40 mM NHS in \(1 \times\) PBS electrolyte for 30 minutes.
-Figure~\ref{fig-pba-functionalisation-threshold-shift} (b) shows the
-change resulting from subsequent EDC/NHS exposure. When EDC/NHS is
-added, a threshold shift of \(\Delta\)V \(\sim\) -0.08 V was observed on
-multiple channels. The exposure to EDC/NHS negatively shifts the
-transfer characteristic curve, most likely due to the PBA present
-reacting to form positively-charged \emph{O}-acylisourea esters and
-negatively gating the attached carbon nanotube network
-\autocite{Heller2008,Hermanson2013-4}.
-Figure~\ref{fig-pba-functionalisation-threshold-shift} (c) shows that
-this shift is not significantly affected by further exposure of the
-channel to PBS. The lack of a change in gating may imply that hydrolysis
-over the course of one hour is insufficient to hydrolyse a significant
-proportion of the attached \emph{O}-acylisourea or PBASE back to PBA,
-leaving them available for reaction with biomolecule amine groups. A
-further test could be performed to see if leaving the device submerged
-in water over a longer time period to check if ester hydrolysis
-eventually affects threshold voltage in a significant manner, but this
-was considered to be outside the scope of this work.
-
-\hypertarget{attachment-of-peglyated-pyrene-based-linkers}{%
-\section{Attachment of PEGlyated Pyrene-Based
-Linkers}\label{attachment-of-peglyated-pyrene-based-linkers}}
-
-\hypertarget{sec-NTA-biotin-PEG}{%
-\subsection{Pyrene-NTA, Pyrene-Biotin and
-PEGylation}\label{sec-NTA-biotin-PEG}}
-
-Through chemical coupling/conjugation, it is possible to replace the NHS
-ester group on PBASE with other groups that can undergo binding
-reactions with proteins. Unlike PBASE, these groups do not suffer the
-drawback of being readily hydrolysed. For example, PBASE can be modified
-with N\(\alpha\),N\(\alpha\)-Bis(carboxymethyl)-L-lysine hydrate (also
-known as N-(5-Amino-1-carboxypentyl)iminodiacetic acid, amine-NTA,
-AB-NTA) to produce pyrene-nitrilotriacetic acid. The attached NTA group
-is able to chelate with metal ions such as Cu\(^{2+}\) or Ni\(^{2+}\),
-which then can then coordinate with polyhistidine-tags attached to a
-protein \autocite{Holzinger2011,Fruh2011,Amano2016,Chang2017}. Use of
-Cu\(^{2+}\) ions over Ni\(^{2+}\) gives stronger histidine bonding and
-less non-specific adsorption \autocite{Chang2017}. Functionalisation
-using the NTA-Ni\(^{2+}\) chemistry was successfully used to attach
-mammalian odorant receptors to a single carbon nanotube for detection of
-eugenol vapour in real-time \autocite{Goldsmith2011}. Pyrene-biotin
-(pyrene butanol biotin ester) can also be produced for attaching avidin
-or strepavidin \autocite{Holzinger2011}. As avidin and strepavidin are
-tetrameric, they can be attached to both pyrene-biotin and biotinylated
-avi-tagged proteins simultaneously via strong non-covalent bonding,
-therefore linking the transducer and receptor
-\autocite{Star2003a,Dundas2013,Hermanson2013-11,Fairhead2015}. As the
-presence of his-tags and avi-tags on proteins can be readily controlled,
-these methods offer improved specificity and directionality over the
-traditional amide bonding seen earlier.
 
 \begin{figure}
 
@@ -1919,14 +1736,86 @@ traditional amide bonding seen earlier.
 \caption{\label{fig-pba-functionalisation-threshold-shift}Electrical
 transfer characteristics of a carbon nanotube transistor before
 functionalisation alongside the transfer characteristics (a) after being
-submerged in DMSO containing 5 mM PBA for 1 hour in red, (b) after being
-submerged in \(1 \times\) PBS containing 20 mM EDC and 40 mM NHS for 30
-min in blue, and (c) after being submerged in fresh \(1 \times\) PBS for
-1 hour in green. The dashed lines in (d) are linear fits tangent to the
-subthreshold slope of each characteristic curve, and are shown alongside
-the threshold voltages calculated by finding the intercept of each fit.}
+submerged in DMSO with 5 mM PBA in red, (b) after being submerged in PBS
+with 20 mM EDC and 40 mM NHS in blue, and (c) after being submerged in
+fresh PBS in green. The dashed lines in (d) are linear fits to the
+subthreshold slope of each curve, and are shown alongside the threshold
+voltages corresponding to each fit.}
 
 \end{figure}
+
+Figure~\ref{fig-pba-functionalisation-threshold-shift} shows the
+transfer characteristics of a carbon nanotube transistor channel at
+various stages of a PBA/EDC functionalisation, where a excess of
+N-hydroxysuccinimide (NHS) was added alongside EDC. A solvent-deposited
+carbon nanotube film was used for the device. The PBA was dissolved in
+DMSO, and the device channels were exposed to this solution for 1 hour.
+The electrical change resulting from PBA exposure is shown in
+Figure~\ref{fig-pba-functionalisation-threshold-shift} (a). The
+threshold shift with the addition of 5 mM PBA in DMSO for 1 hour is
+equivalent to the shift seen when only DMSO is added, \(\Delta V\) =
+-0.15 V. The lack of a significant threshold shift attributable to the
+PBA is a result of pyrene having a neutral charge state. Any
+contributions from the charged carboxyl group are screened from the
+carbon nanotube sidewalls by surrounding water molecules
+\autocite{Lerner2012}. However, as in the case of the addition of PBASE,
+there also appears to be an increase in hole mobility, which may be due
+to the pyrene groups increasing connectivity within the carbon nanotube
+network \autocite{Murugathas2019a}.
+
+Subsequently, the device was rinsed with \(1 \times\) PBS and exposed to
+20 mM EDC and 40 mM NHS in \(1 \times\) PBS electrolyte for 30 minutes.
+Figure~\ref{fig-pba-functionalisation-threshold-shift} (b) shows the
+change resulting from subsequent EDC/NHS exposure. When EDC/NHS is
+added, a threshold shift of \(\Delta\)V \(\sim\) -0.08 V was observed on
+multiple channels. The exposure to EDC/NHS negatively shifts the
+transfer characteristic curve, most likely due to the PBA present
+reacting to form positively-charged \emph{O}-acylisourea esters and
+negatively gating the attached carbon nanotube network
+\autocite{Heller2008,Hermanson2013-4}.
+Figure~\ref{fig-pba-functionalisation-threshold-shift} (c) shows that
+this shift is not significantly affected by further exposure of the
+channel to PBS. The lack of a change in gating may imply that hydrolysis
+over the course of one hour is insufficient to hydrolyse a significant
+proportion of the attached \emph{O}-acylisourea or PBASE back to PBA,
+leaving them available for reaction with biomolecule amine groups. A
+further test could be performed to see if leaving the device submerged
+in water over a longer time period to check if ester hydrolysis
+eventually affects threshold voltage in a significant manner, but this
+was considered to be outside the scope of this work.
+
+\hypertarget{attachment-of-peglyated-pyrene-based-linkers}{%
+\section{Attachment of PEGlyated Pyrene-Based
+Linkers}\label{attachment-of-peglyated-pyrene-based-linkers}}
+
+\hypertarget{sec-NTA-biotin-PEG}{%
+\subsection{Pyrene-NTA, Pyrene-Biotin and
+PEGylation}\label{sec-NTA-biotin-PEG}}
+
+Through chemical coupling/conjugation, it is possible to replace the NHS
+ester group on PBASE with other groups that can undergo binding
+reactions with proteins. Unlike PBASE, these groups do not suffer the
+drawback of being readily hydrolysed. For example, PBASE can be modified
+with N\(\alpha\),N\(\alpha\)-Bis(carboxymethyl)-L-lysine hydrate (also
+known as N-(5-Amino-1-carboxypentyl)iminodiacetic acid, amine-NTA,
+AB-NTA) to produce pyrene-nitrilotriacetic acid. The attached NTA group
+is able to chelate with metal ions such as Cu\(^{2+}\) or Ni\(^{2+}\),
+which then can then coordinate with polyhistidine-tags attached to a
+protein \autocite{Holzinger2011,Fruh2011,Amano2016,Chang2017}. Use of
+Cu\(^{2+}\) ions over Ni\(^{2+}\) gives stronger histidine bonding and
+less non-specific adsorption \autocite{Chang2017}. Functionalisation
+using the NTA-Ni\(^{2+}\) chemistry was successfully used to attach
+mammalian odorant receptors to a single carbon nanotube for detection of
+eugenol vapour in real-time \autocite{Goldsmith2011}. Pyrene-biotin
+(pyrene butanol biotin ester) can also be produced for attaching avidin
+or strepavidin \autocite{Holzinger2011}. As avidin and strepavidin are
+tetrameric, they can be attached to both pyrene-biotin and biotinylated
+avi-tagged proteins simultaneously via strong non-covalent bonding,
+therefore linking the transducer and receptor
+\autocite{Star2003a,Dundas2013,Hermanson2013-11,Fairhead2015}. As the
+presence of his-tags and avi-tags on proteins can be readily controlled,
+these methods offer improved specificity and directionality over the
+traditional amide bonding seen earlier.
 
 It is also possible to attach biocompatible \autocite{Chen2004}
 polyethylene glycol (PEG) chains to a pyrene group and modify them with
@@ -1961,6 +1850,41 @@ Microscopy}\label{sec-impediments}}
 
 \hypertarget{sec-fluorescence-remarks}{%
 \subsection{General Overview}\label{sec-fluorescence-remarks}}
+
+Various dyes and fluorescent tags were used to investigate approaches
+for identifying successful attachment of biomolecules to a carbon
+nanotube or graphene surface with fluorescence microscopy. The dyes
+included fluorescein isothiocyanate (FITC), Rhodamine B and Cyanine 3
+(Cy3). Green fluorescent protein was also used for this testing process.
+It is important to note that these dyes and the GFP chromophore all
+contain benzene rings which are able to \(\pi\)-stack with carbon rings
+to some degree
+\autocite{Nakayama-Ratchford2007,Tang2012,Khrenova2019,Qiu2019}.
+However, there is also significant variation in the extent to which this
+\(\pi\)-stacking occurs, which can be seen by comparing
+Figure~\ref{fig-FITC-rhodamine-B} (a) and
+Figure~\ref{fig-FITC-rhodamine-B} (b). Here, a clear, specific
+interaction is seen between Rhodamine B and graphene, but little
+interaction between FITC and graphene is observed, even when a longer
+exposure time is used. Whether the addition of pyrene linker groups
+these dyes, or dye-modified biomolecules, was therefore investigated in
+further detail. This process then led to the identification of multiple
+issues that could impede a successful device functionalisation.
+
+Both SU8 and AZ\(^\circledR\) 1518 photoresist fluoresced under a
+variety of microscope filters, resulting from light interacting with the
+photoactive component present in both resists \autocite{Pai2007}. This
+background fluorescence was found to drown out fluorescence from a
+dye-functionalised device channel, and so photoresist encapsulated
+devices were not used for fluorescence imaging. (Consider a photograph
+of a dim outdoor lamp; if the photograph was taken on a starless night,
+the light from the lamp would show up clearly, but with the sun out the
+light would be very difficult to see regardless of how the photograph
+was taken). A different type of encapsulation could potentially be used
+to verify linker attachment with fluorescence after a device has been
+encapsulated. These alternative encapsulation methods for use with
+fluorescence microscopy are discussed in
+\textbf{?@sec-future-work-fabrication}.
 
 \begin{figure}
 
@@ -2068,44 +1992,28 @@ in (b) a Texas Red filter and 1.4 s exposure time was used.}
 
 \end{figure}
 
-Various dyes and fluorescent tags were used to investigate approaches
-for identifying successful attachment of biomolecules to a carbon
-nanotube or graphene surface with fluorescence microscopy. The dyes
-included fluorescein isothiocyanate (FITC), Rhodamine B and Cyanine 3
-(Cy3). Green fluorescent protein was also used for this testing process.
-It is important to note that these dyes and the GFP chromophore all
-contain benzene rings which are able to \(\pi\)-stack with carbon rings
-to some degree
-\autocite{Nakayama-Ratchford2007,Tang2012,Khrenova2019,Qiu2019}.
-However, there is also significant variation in the extent to which this
-\(\pi\)-stacking occurs, which can be seen by comparing
-Figure~\ref{fig-FITC-rhodamine-B} (a) and
-Figure~\ref{fig-FITC-rhodamine-B} (b). Here, a clear, specific
-interaction is seen between Rhodamine B and graphene, but little
-interaction between FITC and graphene is observed, even when a longer
-exposure time is used. Whether the addition of pyrene linker groups
-these dyes, or dye-modified biomolecules, was therefore investigated in
-further detail. This process then led to the identification of multiple
-issues that could impede a successful device functionalisation.
-
-Both SU8 and AZ\(^\circledR\) 1518 photoresist fluoresced under a
-variety of microscope filters, resulting from light interacting with the
-photoactive component present in both resists \autocite{Pai2007}. This
-background fluorescence was found to drown out fluorescence from a
-dye-functionalised device channel, and so photoresist encapsulated
-devices were not used for fluorescence imaging. (Consider a photograph
-of a dim outdoor lamp; if the photograph was taken on a starless night,
-the light from the lamp would show up clearly, but with the sun out the
-light would be very difficult to see regardless of how the photograph
-was taken.) A different type of encapsulation could potentially be used
-to verify linker attachment with fluorescence after a device has been
-encapsulated. These alternative encapsulation methods for use with
-fluorescence microscopy are discussed in
-\textbf{?@sec-future-work-fabrication}.
-
 \hypertarget{sec-photoresist-contamination}{%
 \subsection{Photoresist
 Contamination}\label{sec-photoresist-contamination}}
+
+An functionalisation issue quickly encountered when characterising
+pyrene-PEG-FITC (PPF) interaction with sensing channels via fluorescence
+microscopy was an unwanted secondary interaction between the linker and
+residual photoresist. Figure~\ref{fig-photoresist-contamination} (a) and
+Figure~\ref{fig-photoresist-contamination} (b) are fluorescence images
+of SU8 encapsulation (using the pre-2023 mask) before and after being
+exposed to PPF. Despite the same microscope settings being used to take
+the images (filter, ISO, contrast, exposure time), the SU8 exposed to
+PPF appears much brighter than the pristine SU8. This result indicates
+that the linker appears to have an extensive interaction with the
+photoresist via an unknown mechanism. No fluorescence is seen from the
+device channel. The length of exposure time required to see fluorescence
+from the modified channel would lead to fluorescence from the modified
+linker attached to the photoresist (as well as the photoresist itself)
+flooding the image with light. Therefore, it is not clear whether the
+carbon nanotubes have been functionalised with the dye-modified linker.
+However, out of caution we can assume that the presence of this
+secondary interaction is not desirable.
 
 \begin{figure}
 
@@ -2410,25 +2318,6 @@ device in (f) was hardbaked before aptamer exposure. An mCherry filter
 and 30 s exposure time were used for for (e)-(f).}
 
 \end{figure}
-
-An functionalisation issue quickly encountered when characterising
-pyrene-PEG-FITC (PPF) interaction with sensing channels via fluorescence
-microscopy was an unwanted secondary interaction between the linker and
-residual photoresist. Figure~\ref{fig-photoresist-contamination} (a) and
-Figure~\ref{fig-photoresist-contamination} (b) are fluorescence images
-of SU8 encapsulation (using the pre-2023 mask) before and after being
-exposed to PPF. Despite the same microscope settings being used to take
-the images (filter, ISO, contrast, exposure time), the SU8 exposed to
-PPF appears much brighter than the pristine SU8. This result indicates
-that the linker appears to have an extensive interaction with the
-photoresist via an unknown mechanism. No fluorescence is seen from the
-device channel. The length of exposure time required to see fluorescence
-from the modified channel would lead to fluorescence from the modified
-linker attached to the photoresist (as well as the photoresist itself)
-flooding the image with light. Therefore, it is not clear whether the
-carbon nanotubes have been functionalised with the dye-modified linker.
-However, out of caution we can assume that the presence of this
-secondary interaction is not desirable.
 
 A similar interaction was seen between AZ\(^\circledR\) 1518 photoresist
 and fluorescent-tagged, amine-terminated aptamer. An unencapsulated
