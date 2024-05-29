@@ -22,9 +22,9 @@ format: pdf
 - mean bundle diameter for solvent-deposited device $9.1\pm4.0$ nm, equivalent to 30 carbon nanotubes in a 2D packed cylinder, while mean bundle diameter for surfactant-deposited device $4.1\pm2.0$ nm, equivalent to 5 nanotubes in a 2D packed cylinder: the repulsive surfactant adsorbs to nanotubes and prevents carbon nanotubes fron bundling together in solution, some bundling appears to occur during deposition maybe due to outward capillary flow of coffee-ring effect
 - Introducing steam while depositing carbon nanotubes increases nanotube coverage from below 50% to 70%, but leaves surfactant
 - Raman: Average $I_D/I_G$ ratio increases for surfactant-deposited films due to the introduction of defects due to surfactant, lower splitting between G$^-$ and G$^+$ peaks indicates more metallic nanotubes in surfactant-deposited networks
-- Steam/surfactant deposited devices showed less variability in electrical characteristics due to their dense morphology seen from AFM, where small variations have less impact on electrical behaviour, desirable for reproducibility and multiplexed sensing 
-- Steam/surfactant deposited devices had a relatively large average on-off ratio (> 100) and subthreshold slope ($\sim$ 7 dec V$^{-1}$), which correspond to low power consumption
-- transconductance lowered for surfactant-deposited devices ($\sim$ 1 µS vs > 2 µS), could be due to unwanted doping from surfactant and water due to the deposition process
+- Steam/surfactant deposited devices showed less variability in on-off ratio due to their dense morphology, where small variations have less impact on electrical behaviour, desirable for reproducibility and multiplexed sensing 
+- Steam/surfactant deposited devices had a relatively large average on-off ratio (> 100) and subthreshold slope ($\sim$ 7 dec V$^{-1}$) due to being less bundled, which corresponds to low power consumption
+- transconductance lowered for surfactant-deposited devices ($\sim$ 1 µS vs > 2 µS)
 
 
 ### Biosensor Drift and Transducer Hysteresis
@@ -32,8 +32,14 @@ format: pdf
 - charge traps from gate bias or dopant adsorption
 - baseline drift due to changes in trap states
 - 3 hour signal drift followed by steady-state, reversible and modelled with three exponentials
-
+- hysteresis increases with bundle diameter due to trapped charge increasing, surfactant-deposited devices preferable
 - hysteresis significantly affected by the presence of water when backgated due to introduced charge traps
+
+- baseline drift linear term was consistent between channels on a single device with mean value of $-6.1 \pm 1.2$ pAs^{-1}, indicating long-term drift consistent between channels fabricated in the same manner
+
+- Largest time constant for short-term exponential drift term for pristine liquid-gated device up to $\tau = 610 \pm 30$ s, pristine back-gated was $\tau = 730 \pm 10$ s (1800 s and 2400 s control series appropriate)
+
+
 
 
 ### Biosensor Functionalisation and Transducer Cleanliness
@@ -45,9 +51,10 @@ format: pdf
 - non-specific binding: misoriented attachment, substrate attachment  
 - non-covalent functionalisation $-$ $\sim$ 7 ppb by Goldsmith *et al.*
 
-- AFM evidence for surfactant, long tail up to 8 nm in histogram
-- graphene devices seen to be slightly $p$-doped from their rightwards shifted major Dirac point, could be photoresist
-- steam-assisted surfactant-deposited devices heavily $p$-doped, average $V_t$ = 0.37 V, could be resist or surfactant residue
+- AFM evidence for adsorped water vapour and/or surfactant, long histogram tail more than 5 nm in height
+- Raman evidence for adsorped water vapour and/or surfactant, $I_{D}/I_{G}$ ratio increased for steam-assisted surfactant deposited device
+- graphene devices seen to be slightly $p$-doped from their rightwards shifted major Dirac point, could be adsorbed photoresist
+- steam-assisted surfactant-deposited devices heavily $p$-doped, average $V_t$ = 0.37 V relative to $V_t$ = 0.27 V for solvent-deposited, could be resist, steam adsorption or surfactant residue
 
 
 ## Future Work {#sec-future-work}
@@ -68,7 +75,7 @@ could also use PEG-FITC and GFP-ORs to check for passivation of unmodified carbo
 
 Could model surface contamination using a linear combination of normal or skew-normal distributions [@Marchenko2010]. Alternatively, could improve microscopy and get closer to normal distribution by altering the force applied by microscope tip [@Vobornik2023]. 
 
-Oxidation approaches [@Petkov2005; @Kane2014; @Barnett2018]
+Thermal oxidation [@Kane2014; @Barnett2018], cleaning with oxygen radicals [@Petkov2005]
 
 
 #### Covalent Approaches {.unnumbered}
