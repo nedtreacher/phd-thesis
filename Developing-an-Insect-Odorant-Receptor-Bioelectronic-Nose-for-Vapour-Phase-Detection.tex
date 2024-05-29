@@ -300,7 +300,7 @@ Nina!
 \newpage
 
 \pagestyle{headings}
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, sharp corners, borderline west={3pt}{0pt}{shadecolor}, breakable, interior hidden, frame hidden, enhanced]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, boxrule=0pt, enhanced, borderline west={3pt}{0pt}{shadecolor}, breakable, sharp corners, frame hidden]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -3692,17 +3692,17 @@ across the entire control series, with no change in response to
 followed by much longer term baseline drift, similar to observations by
 Lin \emph{et al.} and more recently Noyce \emph{et al.} for parallel
 arrangements of single carbon nanotubes in air or vacuum
-\autocite{Lin2006,Noyce2019}. This effect results from changes in the
-occupancy of charge traps in and around the substrate and carbon
-nanotubes. The magnitude of baseline drift is lower for our devices than
-for those characterised by Noyce \emph{et al.}, which may be a result of
-numerous device and setup differences which affect the presence of
-charge traps. These differences include liquid-gating instead of
-back-gating, the use of a network of carbon nanotubes instead of single
-nanotubes, a different channel length, the use of a 300 nm instead of 90
-nm SiO\(_2\) layer, a gate voltage of 0.0 V instead of -15.0 V, and the
-use of an asymmetric, liquid-gated transfer sweep over a shorter voltage
-range to characterise devices before each control series was measured
+\autocite{Lin2006,Noyce2019}. This effect results from hysteretic
+changes in the occupancy of charge traps in and around the substrate and
+carbon nanotubes. The magnitude of baseline drift is lower for our
+devices than for those characterised by Noyce \emph{et al.}, which may
+be a result of numerous device and setup differences which affect the
+presence of charge traps. These differences include the use of
+liquid-gating instead of back-gating, a network of carbon nanotubes
+instead of single nanotubes, a different channel length, a 300 nm
+instead of 90 nm SiO\(_2\) layer, a gate voltage of 0.0 V instead of
+-15.0 V, and an asymmetric, liquid-gated transfer sweep over a shorter
+voltage range when characterising devices before each control series
 \autocite{Noyce2019}.
 
 As a first-order approximation to the longer time constant exponentials
@@ -3723,8 +3723,8 @@ gradient value for each fit in Figure~\ref{fig-salt-conc-control-series}
 current data from channel 1 is closely approximated by the linear across
 the entire control series. No short-term decay is present for this
 channel, indicating the channel has low net trapped charge. It is
-unclear why this short-term exponential decay behaviour is only absent
-for channel 1.
+unclear why trapped charge is significantly lower for channel 1 than
+across the rest of the device.
 
 \hypertarget{tbl-linear-fits}{}
 \begin{longtable}[]{@{}lllllll@{}}
@@ -3830,7 +3830,7 @@ addition are also shown. The well contained 80 µL of \(1 \times\) PBS at
 \toprule
 \multicolumn{1}{c}{ } & \multicolumn{1}{c}{1X PBS} & \multicolumn{5}{c}{DI Water Additions} \\
 \cmidrule(l{3pt}r{3pt}){2-2} \cmidrule(l{3pt}r{3pt}){3-7}
- &  &  &  &  &  & \\
+Addition \# & 1 & 2 & 3 & 4 & 5 & 6\\
 \midrule
 Time (s) & 2100 & 2400 & 2700 & 3000 & 3300 & 3600\\
 Final PBS volume (µL) & 100 & 120 & 140 & 160 & 180 & 200\\
@@ -4118,7 +4118,7 @@ for a single channel.
 
 \end{minipage}%
 \newline
-\begin{minipage}[t]{0.11\linewidth}
+\begin{minipage}[t]{0.14\linewidth}
 
 {\centering 
 
@@ -4152,7 +4152,7 @@ for a single channel.
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.70\linewidth}
+\begin{minipage}[t]{0.65\linewidth}
 
 {\centering 
 
@@ -4166,7 +4166,7 @@ for a single channel.
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.15\linewidth}
+\begin{minipage}[t]{0.17\linewidth}
 
 {\centering 
 
@@ -5362,25 +5362,24 @@ created using these carbon nanotube films had highly variable on-off
 ratios due to the large variation in the conductive pathways available.
 In contrast, devices using films fabricated using surfactant with steam
 present showed lower bundling (\(<95\) \% bundled), high network density
-(\(>50\) \% coverage) and less variation in bundle diameter, with an
-average bundle diameter of \(4 \pm 2\) nm. These films were used to
-create devices with improved device-to-device reproducibility of device
-characteristics, particularly on-off ratio. These devices also exhibited
-lower hysteresis, due to the relatively consistent bundle diameters and
-high density of these networks. When performing multiplexed sensing,
-consistent channel behaviour is highly desirable since comparing sensing
-behaviour between channels is more straightforward.
+(\(>50\) \% coverage) and less variation in bundle diameter (\(\pm 2\)
+nm). These films were used to create devices with improved
+device-to-device reproducibility of device characteristics, particularly
+on-off ratio. These devices also exhibited lower hysteresis, due to the
+relatively consistent bundle diameters and high density of these
+networks. When performing multiplexed sensing, consistent channel
+behaviour is highly desirable since comparing sensing behaviour between
+channels is more straightforward.
 
 However, less bundled networks had the most surface contamination
-present. Atomic force microscopy indicated contamination due to
-steam-assisted deposition had a height of more than 5 nm. Raman
-spectroscopy showed that steam deposition led to increased defects in
-the network, with a significantly increased \(D\)-peak to \(G^+\)-peak
-height ratio. The average threshold voltage for steam-assisted
-surfactant-deposited network devices was \(V_t\) = 0.37 V, significantly
-higher than the average threshold voltage for solvent-deposited devices
-of \(V_t\) = 0.27 V, indicating these defects \(p\)-dope the network.
-The shift in threshold voltage was found to reduce device
+present. Atomic force microscopy indicated the presence of contamination
+due to steam-assisted deposition. Raman spectroscopy showed that steam
+deposition led to increased defects in the network, with a significantly
+increased \(D\)-peak to \(G^+\)-peak height ratio. The average threshold
+voltage for steam-assisted surfactant-deposited network devices
+wassignificantly higher than the average threshold voltage for
+solvent-deposited devices, indicating these defects \(p\)-dope the
+network. The shift in threshold voltage was found to reduce device
 transconductance, a parameter which should be maximised for optimal
 sensing. Furthermore, the presence of surfactant or even trapped water
 could potentially have negative impacts on device functionalisation,
@@ -5392,69 +5391,51 @@ used to resolve this issue, and this is discussed further in
 
 Constant voltage real-time measurements of the carbon nanotube
 field-effect transistor devices had a characteristic drift that could be
-modelled using a exponential and linear term. This was true for both
-liquid-gated and back-gated devices. The linear term of liquid-gated
-baseline drift had a reasonably consistent gradient between device
-channels, with a mean value of \(-6.1 \pm 1.2\) pAs\^{}\{-1\},
-indicating that similar drift behaviour should be reproducible between
-devices fabricated in the same manner. The time constant of the
-exponential term for liquid-gated drift ranged from
-\(\tau = 280 \pm 10\) s to \(\tau = 610 \pm 30\) s for the device
-characterised. The linear term of back-gated baseline drift in nitrogen
-found for a single channel was \(-17.31\pm0.05\) pAs\^{}\{-1\}, higher
-than all measurements for liquid-gated linear drift. The exponential
-term found was \(\tau = 730 \pm 10\) s, higher than that of the
-liquid-gated channels. These results indicate a control series length of
-1800 s is appropriate for minimising the effects of baseline drift on
-liquid-gated sensing, while a control series length of 2400 s is
-sufficient in the case of a backgated device under nitrogen flow.
+modelled using both a linear and exponential term. This was true for
+both liquid-gated and back-gated devices. The linear term of
+liquid-gated baseline drift had a reasonably consistent gradient between
+device channels, indicating that similar drift behaviour should be
+reproducible between devices fabricated in the same manner. The
+exponential behaviour was less consistent, indicating that this
+hysteresis behaviour is less closely correlated with the fabrication
+process. A control series length of 1800 s was used, as this period was
+sufficient to minimise exponential drift during sensing for all the
+channels tested. The linear and exponential terms for back-gated
+baseline drift under nitrogen flow were significantly higher than all
+measurements for liquid-gated drift. A longer control series length of
+2400 s was therefore used to minimise exponential drift when vapour
+sensing.
 
-A PBS dilution sensing series indicated that the carbon nanotube
-transistor devices were highly sensitive to environmental changes in an
-aqueous environment. Successive additions of deionised water to the
-\(1 \times\) PBS present in the well gave signal responses of up to
-2.5\% above the control response. The signal response was found to be
-proportional to the logarithm of concentration, giving a fit to the
-median response sizes with an \(R^2 = 0.86\). Deviations from this trend
-can possibly be explained by the enclosed sensing environment preventing
-sufficient mixing of PBS concentrations within the PDMS well, which
-could possibly be addressed by using a flow cell for sensing work. It
-was also seen that the signal size relative to baseline drift was highly
-consistent between channels. This is a promising result when it comes to
-ensuring consistent multiplexing, but it cannot be guaranteed that this
-behaviour carries over to sensing with biofunctionalised devices.
-
-Furthermore, vapour sensing with \emph{trans}-2-hexen-1-al and ethyl
-hexanoate using a photoionisation-based reference sensor showed that the
-transistor devices were highly sensitive to low concentrations of
-vapour. Exposure of the carbon nanotube device to parts-per-million
-concentrations of both compounds resulted in irreversible signal
-responses of up to 1\% above the corresponding control measurement. Each
-signal response coincided with a local maximum in chamber vapour
-concentration as measured by the photoionisation detector. It was found
-that the relationship between signal response to vapour and their
-corresponding maximum concentration value could be modelled using a
-Freundlich adsorption isotherm, where the R-squared value of the model
-with the dataset was 0.89. An adsorption intensity of \(1/n = 0.7\) was
-found for the sensor response to ethyl hexanoate, indicating that the
-carbon nanotube morphology used is particularly sensitive. Again, this
-is promising for the sensitivity of these devices when
-biofunctionalised, but may pose issues with regard to the selectivity of
-these devices.
+Both a PBS dilution sensing series and vapour sensing with
+\emph{trans}-2-hexen-1-al and ethyl hexanoate were used to verify that
+the carbon nanotube transistor devices were highly sensitive to changes
+in both aqueous and vapour environments. The expected logarithmic signal
+response behaviour was observed when detecting dilutions of PBS in a
+liquid-gate environment. Signal size relative to baseline drift was
+highly consistent between channels, which is promising for multiplexing
+work. Deviations from the logarithmic trend possibly indicated
+insufficient mixing within the PDMS well during sensing, which may be
+addressed in future aqueous sensing work by using a flow cell. When
+vapour phase sensing, transducers were found to be sensitive to
+parts-per-million vapour concentrations as measured by the
+photoionisation detector. These experiments are useful controls for the
+biofunctionalised devices. As these devices are highly sensitive, it is
+important to be able to discern whether a signal response is due to
+modification of an attached biomolecule or whether the carbon nanotubes
+themselves are responding.
 
 Graphene field-effect transistor devices were often found to possess a
 double-minima feature, which appears to be the result of a lack of
 doping from the metal contacts in the center of the device channels.
-These double Dirac points are unlikely to have an significant effect on
+These double Dirac points are unlikely to have any significant effect on
 the sensing behaviour of graphene devices. The graphene device
-characteristics were found to be consistent after 1 hour exposure to
-\(1 \times\) PBS with minimal drift, with an on-off ratio of 5 and major
-Dirac point voltage of 0.3 V. There was some indications from the
-transfer characteristics that \(p\)-dopants were present on the graphene
-surface. Salt concentration and vapour sensing with graphene FETs is not
-shown in this thesis, but it is important to perform this experiment and
-use similar analysis techniques if there are any concerns about the
-sensitivity of a fabricated batch of graphene devices.
+characteristics were found to be highly consistent after 1 hour exposure
+to PBS with minimal drift. There was some indications from the transfer
+characteristics that \(p\)-dopants were present on the graphene surface.
+Salt concentration and vapour sensing with graphene FETs is not shown in
+this thesis, but it is important to perform this experiment and use
+similar analysis techniques to verify the sensitivity of a fabricated
+batch of graphene devices.
 
 \bookmarksetup{startatroot}
 
