@@ -455,9 +455,10 @@ salt_conc_series <- salt_conc_series[rowSums(is.na(salt_conc_series)) == 0,]
 salt_conc_series %>% 
   kable(
     booktabs = TRUE, #LaTeX "booktabs formatting"
+    col.names = c("Addition #", "1", "2","3","4","5","6"),
     linesep = "",    #no linespace
-    align = c(rep("l", 1), rep("c", 6)), #aligns col 1 left, all others center
-    col.names = NULL #removes csv column names
+    align = c(rep("l", 1), rep("c", 6))#, #aligns col 1 left, all others center
+    #col.names = NULL #removes csv column names
   ) %>%
   add_header_above(c(" " = 1, "1X PBS" = 1, "DI Water Additions" = 5), bold = FALSE)
 ```
@@ -483,7 +484,7 @@ A multiplexed salt concentration sensing series across eight channels of a steam
 
 Using the data in @tbl-linear-fits, the linear term approximating baseline drift ($c_1t$) for each channel can be subtracted from the data in @fig-salt-conc-sensing (a) to account for the downward drift. The mean current level just before 1800 s then becomes roughly constant. Next, each channel is normalised relative to their initial mean current level $I_{0}$. Artifacts resulting from PXIe-2737 module lag, single datapoints which fall well below the current level of the immediately preceding and succeeding datapoints, are also removed. This 'despike' process uses an interquartile range filter, which is described in @sec-python-analysis. The resulting dataset is shown in @fig-salt-conc-sensing (b). This figure shows that the signal-to-noise ratio remains roughly similar across all channels of the device. However, the behaviour of the initial transient increase with each addition is highly variable across channels and between additions for a single channel.
 
-::: {#fig-salt-conc-signal layout="[[-11,3,-1,70,-15],[-11,3,-1,70,-15]]"}
+::: {#fig-salt-conc-signal layout="[[-11,3,-1,70,-15],[-14,3,-1,66,-17]]"}
 
 ![](figures/(a).png)
 
@@ -637,5 +638,5 @@ Constant voltage real-time measurements of the carbon nanotube field-effect tran
 
 Both a PBS dilution sensing series and vapour sensing with *trans*-2-hexen-1-al and ethyl hexanoate were used to verify that the carbon nanotube transistor devices were highly sensitive to changes in both aqueous and vapour environments. The expected logarithmic signal response behaviour was observed when detecting dilutions of PBS in a liquid-gate environment. Signal size relative to baseline drift was highly consistent between channels, which is promising for multiplexing work. Deviations from the logarithmic trend possibly indicated insufficient mixing within the PDMS well during sensing, which may be addressed in future aqueous sensing work by using a flow cell. When vapour phase sensing, transducers were found to be sensitive to parts-per-million vapour concentrations as measured by the photoionisation detector. These experiments are useful controls for the biofunctionalised devices. As these devices are highly sensitive, it is important to be able to discern whether a signal response is due to modification of an attached biomolecule or whether the carbon nanotubes themselves are responding.
 
-Graphene field-effect transistor devices were often found to possess a double-minima feature, which appears to be the result of a lack of doping from the metal contacts in the center of the device channels. These double Dirac points are unlikely to have any significant effect on the sensing behaviour of graphene devices. The graphene device characteristics were found to be highly consistent after 1 hour exposure to PBS with minimal drift. There was some indications from the transfer characteristics that $p$-dopants were present on the graphene surface. Salt concentration and vapour sensing with graphene FETs is not shown in this thesis, but it is important to perform this experiment and use similar analysis techniques to verify the sensitivity of a fabricated batch of graphene devices. 
+Graphene field-effect transistor devices were often found to possess a double-minima feature, which appears to be the result of a lack of doping from the metal contacts in the center of the device channels. These double Dirac points are unlikely to have any significant effect on the sensing behaviour of graphene devices. The graphene device characteristics were found to be highly consistent after 1 hour exposure to PBS with minimal drift. There was some indications from the transfer characteristics that $p$-dopants were present on the graphene surface. Salt concentration and vapour sensing with graphene FETs are not shown in this thesis, but it is important to perform similar control experiments when using a batch of graphene devices for biofunctionalised sensing. 
 
