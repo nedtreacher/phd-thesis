@@ -9,25 +9,19 @@ format: pdf
 
 ### General Overview
 
-- key results
+I started writing this thesis with one broad aim $-$ to couple insect odorant receptors with either a carbon nanotube or graphene field-effect transistor for sensing in the vapour phase. Through this process, I hoped to gain new physical insights into the transducer and receptor elements used, through careful examination of the biosensors which resulted from their coupling. At the end of this investigation, three broad themes have emerged:
+
+- Slight variations in transducer morphology have a substantial impact on biosensor sensitivity and power consumption.
+
+- Intrinsic transducer hysteresis leads to biosensor current drift, which can be modelled and corrected for when interpreting sensing data.
+
+- Surface contamination can affect transducer functionalisation and lead to significant variability in biosensor quality.
+
+These findings and their relation to the goal of creating a reliable biosensor for a vapour-phase detection system are each detailed in this section.
 
 ### Biosensor Performance and Transducer Morphology 
 
-- graphene folds
-- density of carbon nanotube network, ratio of metallic to semiconducting tubes, nanotube bundle diameters
-- metallic cnts and bundled CNTs more reactive
-- carbon nanotube junctions
-- bundle heights can be measured with AFM and modelled using normal or skew-normal distributions
-
-- mean bundle diameter for solvent-deposited device $9.1\pm4.0$ nm, equivalent to 30 carbon nanotubes in a 2D packed cylinder, while mean bundle diameter for surfactant-deposited device $4.1\pm2.0$ nm, equivalent to 5 nanotubes in a 2D packed cylinder: the repulsive surfactant adsorbs to nanotubes and prevents carbon nanotubes fron bundling together in solution, some bundling appears to occur during deposition maybe due to outward capillary flow of coffee-ring effect
-- Introducing steam while depositing carbon nanotubes increases nanotube coverage from below 50% to 70%, but leaves surfactant
-- Raman: Average $I_D/I_G$ ratio increases for surfactant-deposited films due to the introduction of defects due to surfactant, lower splitting between G$^-$ and G$^+$ peaks indicates more metallic nanotubes in surfactant-deposited networks
-- Steam/surfactant deposited devices showed less variability in on-off ratio due to their dense morphology, where small variations have less impact on electrical behaviour, desirable for reproducibility and multiplexed sensing 
-- Steam/surfactant deposited devices had a relatively large average on-off ratio (> 100) and subthreshold slope ($\sim$ 7 dec V$^{-1}$) due to being less bundled, which corresponds to low power consumption
-- transconductance lowered for surfactant-deposited devices ($\sim$ 1 µS vs > 2 µS)
-
-- devices shown to be sensitive to PBS additions (a flow cell may be needed to increase sensitivity) and adsorption of vapour
-
+Carbon nanotube networks and graphene are used as the thin-film for sensing field-effect transistors due to their highly sensitive surface. However, particular features present on each film may enhance or reduce the sensitivity of the transistor. They may also affect the power required to maximise device sensitivity. The process used for randomly depositing carbon nanotubes influences multiple aspects of the resulting network morphology, including the density and homogeneity of the network, the diameter of bundled carbon nanotubes, the level of doping present and the relative proportion of metallic to semiconducting nanotubes. These variables were investigated atomic force microscopy, Raman spectroscopy and electrical characterisation. Devices with carbon nanotubes deposited using surfactant in the presence of steam were found to have relatively dense and homogeneous networks which gave rise to highly consistent electrical characteristics, desirable for biosensor reproducibility and multiplexing. Carbon nanotube bundle diameters were also much smaller in these networks, which gave them a relatively large on-off ratio and subthreshold slope, figures of merit which correspond to low power operation. However, steam-assisted surfactant-deposited devices were found to have significant $p$-doping, possibly from surfactant, which negatively impacts device perofmr
 
 ### Biosensor Drift and Transducer Hysteresis
 
@@ -43,8 +37,10 @@ format: pdf
 
 - pristine back-gated device drift more significant for both linear and exponential term
 
+- long-term liquid-gated drift may be affected by functionalisation, reduces the quality of the approximation
 
-### Biosensor Functionalisation and Transducer Cleanliness
+
+### Biosensor Functionalisation and Transducer Contamination
 
 - threshold voltage shift compares gating behaviour of devices
 - most functionalisation procedures used to attach odorant receptors are non-covalent
@@ -57,7 +53,6 @@ format: pdf
 - Raman evidence for adsorped water vapour and/or surfactant, $I_{D}/I_{G}$ ratio increased for steam-assisted surfactant deposited device
 - graphene devices seen to be slightly $p$-doped from their rightwards shifted major Dirac point, could be adsorbed photoresist
 - steam-assisted surfactant-deposited devices heavily $p$-doped, average $V_t$ = 0.37 V relative to $V_t$ = 0.27 V for solvent-deposited, could be resist, steam adsorption or surfactant residue
-
 
 - devices shown to be sensitive to PBS additions (electrostatic gating) and adsorption of vapour, however direct charge transfer may not be involved!!! just because a device is sensitive does not mean it is clean and functionalisable
 
@@ -74,6 +69,14 @@ format: pdf
 - long-chain alkanes from air make channel hydrophobic and repel functionalisation material in aqueous solution, can be removed with low power plasma
 
 -non-specific binding occurs between pyrene-based linker and the SiO$_2$ substrate
+
+- variability in successful functionalisation seen for iOR biosensors using the standard PBASE in methanol method, PBASE and nanodiscs attach but do not significantly gate the network
+
+- possible coatings originally included surfactant, solvent, photoresist, multilayered or hydrolysed PBASE, and hydrophobic long-chain alkanes, all were eliminated by sensing experiments until only alkane hydrocarbons, multilayer linker attachment and photoresist were left as possibilities
+
+- oxygen plasma cleaning was unreliable due to impact on mobility
+
+- no response for vapour sensing, either needs covalent functionalisation with protective membrane or capture layer
 
 
 ## Future Work {#sec-future-work}
