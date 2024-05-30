@@ -9,7 +9,7 @@ format: pdf
 
 ### General Overview
 
-I started writing this thesis with one broad aim $-$ to couple insect odorant receptors with either a carbon nanotube or graphene field-effect transistor for sensing in the vapour phase. Through this process, I hoped to gain new physical insights into the transducer and receptor elements used, through careful examination of the biosensors which resulted from their coupling. At the end of this investigation, three broad themes have emerged:
+I started writing this thesis with one broad aim $-$ to couple insect odorant receptors with either a carbon nanotube or graphene field-effect transistor for highly selective sensing in the vapour phase. Through this process, I hoped to gain new physical insights into the transducer and receptor elements used, through careful examination of the biosensors which resulted from their coupling. At the end of this investigation, three broad themes have emerged:
 
 - Slight variations in transducer morphology have a substantial impact on biosensor sensitivity and power consumption.
 
@@ -21,67 +21,23 @@ These findings and their relation to the goal of creating a reliable biosensor f
 
 ### Biosensor Performance and Transducer Morphology 
 
-Carbon nanotube networks and graphene are used as the thin-film for sensing field-effect transistors due to their highly sensitive surface. However, particular features present on each film may enhance or reduce the sensitivity of the transistor. They may also affect the power required to maximise device sensitivity. The process used for randomly depositing carbon nanotubes influences multiple aspects of the resulting network morphology, including the density and homogeneity of the network, the diameter of bundled carbon nanotubes, the level of doping present and the relative proportion of metallic to semiconducting nanotubes. These variables were investigated atomic force microscopy, Raman spectroscopy and electrical characterisation. Devices with carbon nanotubes deposited using surfactant in the presence of steam were found to have relatively dense and homogeneous networks which gave rise to highly consistent electrical characteristics, desirable for biosensor reproducibility and multiplexing. Carbon nanotube bundle diameters were also much smaller in these networks, which gave them a relatively large on-off ratio and subthreshold slope, figures of merit which correspond to low power operation. However, steam-assisted surfactant-deposited devices were found to have significant $p$-doping, possibly from surfactant, which negatively impacts device perofmr
+Carbon nanotube networks and graphene are used as the thin-film for sensing field-effect transistors due to their highly sensitive surface. Features present on each film were found to enhance or reduce the sensitivity of the transistor in a low-power configuration. The process used for randomly depositing carbon nanotubes influences multiple aspects of the resulting network morphology, including the density and homogeneity of the network, the diameter of bundled carbon nanotubes, the level of doping present and the relative proportion of metallic to semiconducting nanotubes. These variables were investigated atomic force microscopy, Raman spectroscopy and electrical characterisation. Devices with carbon nanotubes deposited using surfactant in the presence of steam were found to have relatively dense and homogeneous networks which gave rise to highly consistent electrical characteristics, desirable for biosensor reproducibility and multiplexing. Carbon nanotube bundle diameters were also much smaller in these networks, which gave them a relatively large on-off ratio and subthreshold slope, figures of merit which correspond to low power operation. However, steam-assisted surfactant-deposited devices were found to have significant $p$-doping, possibly from surfactant. Removing the source of this $p$-doping would further enhance the sensitive and low power performance of these devices.
 
 ### Biosensor Drift and Transducer Hysteresis
 
-- charge traps from gate bias or dopant adsorption
-- baseline drift due to changes in trap states
-- 3 hour signal drift followed by steady-state, reversible and modelled with three exponentials
-- hysteresis increases with bundle diameter due to trapped charge increasing, surfactant-deposited devices preferable
-- hysteresis significantly affected by the presence of water when backgated due to introduced charge traps
-
-- baseline drift linear term was consistent between channels on a single device with mean value of $-6.1 \pm 1.2$ pAs^{-1}, indicating long-term drift consistent between channels fabricated in the same manner
-
-- Largest time constant for short-term exponential drift term for pristine liquid-gated device up to $\tau = 610 \pm 30$ s, pristine back-gated was $\tau = 730 \pm 10$ s (1800 s and 2400 s control series appropriate)
-
-- pristine back-gated device drift more significant for both linear and exponential term
-
-- long-term liquid-gated drift may be affected by functionalisation, reduces the quality of the approximation
-
+All devices characterised showed a degree of hysteresis, which was especially significant for solvent-deposited carbon nanotube network devices as well as any device when backgated. This hysteresis is a result of the evolving occupancy of charge traps, which are introduced to the device by gate bias or adsorbed dopants. This changing occupancy leads to a slow drift in current level when the transistor is operated with constant voltages at both the drain and gate. If left until reaching a steady state, this baseline drift can be modelled using a linear combination of three exponentials. However, it is not feasible to wait more than three hours for a biosensor to warm up with each use. A series expansion was used to model the drift over a shorter period of time, where the two longer time constant exponentials were approximated as linear. This meant only having to wait until the first exponential had decayed before sensing, which typically took <30 minutes for a pristine, liquid-gated steam-deposited carbon nanotube device. Each exponential term may correspond to charge traps introduced at different stages of fabrication and functionalisation. For example, long-term drift was consistent across channels fabricated simultaneously, but appeared to be affected by functionalisation.
 
 ### Biosensor Functionalisation and Transducer Contamination
 
-- threshold voltage shift compares gating behaviour of devices
-- most functionalisation procedures used to attach odorant receptors are non-covalent
-- more consistent limit of detection for covalent attachment
-- all vapour sensing with nanodiscs has used covalent functionalisation 
-- non-specific binding: misoriented attachment, substrate attachment  
-- non-covalent functionalisation $-$ $\sim$ 7 ppb by Goldsmith *et al.*
+While the pristine surfactant-deposited carbon nanotube transistors were consistently sensitive to changes in both an aqueous and vapour environment, their selective detection ability after non-covalent functionalisation with iORs was highly variable. Using atomic force microscopy, Raman spectroscopy, electrical characterisation and fluorescence microscopy it was found that the PBASE linker was successfully attaching iOR nanodiscs to the carbon nanotube network. While functionalisation caused significant gating of the network for devices which were successful sensors, it was not seen for devices which showed no selective sensing behaviour, despite the evidence that iOR nanodiscs were present in both cases. It was therefore hypothesised that an unknown coating on the transducer was allowing iOR nanodiscs to stick to the network, but not form a direct electrical connection. A pristine carbon nanotube device with such a coating could still be highly sensitive to electrostatic or capacitive gating. However, it has previously been noted that the primary sensing mechanism of iORs appears to be through direct charge transfer. If an insulating coating layer is present, it may prevent charge from passing between the iORs and the channel. 
 
-- AFM evidence for adsorped water vapour and/or surfactant, long histogram tail more than 5 nm in height
-- Raman evidence for adsorped water vapour and/or surfactant, $I_{D}/I_{G}$ ratio increased for steam-assisted surfactant deposited device
-- graphene devices seen to be slightly $p$-doped from their rightwards shifted major Dirac point, could be adsorbed photoresist
-- steam-assisted surfactant-deposited devices heavily $p$-doped, average $V_t$ = 0.37 V relative to $V_t$ = 0.27 V for solvent-deposited, could be resist, steam adsorption or surfactant residue
-
-- devices shown to be sensitive to PBS additions (electrostatic gating) and adsorption of vapour, however direct charge transfer may not be involved!!! just because a device is sensitive does not mean it is clean and functionalisable
-
-- unclear whether dense PBASE surface coverage is desirable, possible that the use of an excessive PBASE or PBA concentration leads to multilayer coverage which reduces the quality of functionalisation
-
--MeOH and DMSO can both be adsorbed to the channel, causing a change in transfer characteristics due to capacitive gating
-
-- Raman and pyrene-PEG-FITC fluorescence microscopy showed that pyrene linker was attaching to the channel
-
-- PEG or pyrene-PEG often used for the prevention of non-specific binding
-
-- biomolecules will preferentially stick to residual resist over the channel if not sufficiently hardbaked, shown with fluorescence microscopy
-
-- long-chain alkanes from air make channel hydrophobic and repel functionalisation material in aqueous solution, can be removed with low power plasma
-
--non-specific binding occurs between pyrene-based linker and the SiO$_2$ substrate
-
-- variability in successful functionalisation seen for iOR biosensors using the standard PBASE in methanol method, PBASE and nanodiscs attach but do not significantly gate the network
-
-- possible coatings originally included surfactant, solvent, photoresist, multilayered or hydrolysed PBASE, and hydrophobic long-chain alkanes, all were eliminated by sensing experiments until only alkane hydrocarbons, multilayer linker attachment and photoresist were left as possibilities
-
-- oxygen plasma cleaning was unreliable due to impact on mobility
-
-- no response for vapour sensing, either needs covalent functionalisation with protective membrane or capture layer
-
+Multiple potential candidates for this unwanted coating were identified throughout the course of this thesis, including residual surfactant, solvent or photoresist, multilayer or hydrolysed PBASE and hydrophobic long-chain alkanes. Sensing experiments were then performed that systematically eliminated possible candidates. It was found that neither avoiding the introduction of surfactant or ensuring PBASE did not hydrolyse led to consistent biosensors. Finally, a method was tested that eliminated the remaining possible candidates through the use of a oxygen plasma clean step prior to functionalisation, as well as the use of iORs in surfactant solution with linker pre-attached. This process resulted in a successful sensor in an aqueous environment, which is further indication that either photoresist residue, a hydrocarbon coating, a PBASE layer or the membrane format of iORs is the cause of sensor variability. The impact of oxygen plasma on device mobility and the vunerability of the unprotected iORs means that this method does produce reliable vapour-phase sensors. A covalent, directionally-oriented method of immobilising nanodiscs could be used instead, which has previously been successful for vapour-phase biosensing with mORs. Alternatively, a less destructive cleaning process could be identified to ensure consistent non-covalent functionalisation, used alongside a bio-friendly vapour capture layer for vapour-phase sensing without the use of nanodiscs.
 
 ## Future Work {#sec-future-work}
 
 ### Device Fabrication and Functionalisation {#sec-future-work-fabrication}
+
+
 
 #### Improved Encapsulation {.unnumbered}
 
