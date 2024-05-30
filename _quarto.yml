@@ -20,6 +20,7 @@ book:
   appendices:
     - app1-vapour-sensor-components.qmd
     - app2-FET-analysis-software.qmd
+    - references.qmd
 bibliography: references.bib
 cite-method: biblatex
 biblatexoptions:
@@ -46,6 +47,7 @@ format:
     template-partials:
       - before-body.tex
       - toc.tex
+      - biblio.tex
     keep-tex: true 
     toc: true
     toc-title: Table of Contents

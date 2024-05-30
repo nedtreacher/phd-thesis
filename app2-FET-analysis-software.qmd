@@ -19,7 +19,3 @@ The purpose of this code is to analyse a series of Raman spectra taken at differ
 ## Field-Effect Transistor Analysis {#sec-field-effect-transistor-analysis}
 
 The purpose of this code is to analyse electrical measurements taken of field-effect transistor (FET) devices. Electrical measurements were either taken from the Keysight 4156C Semiconductor Parameter Analyser, National Instruments NI-PXIe or Keysight B1500A Semiconductor Device Analyser as discussed in @sec-electrical-characterisation; the code is able to analyse data in .csv format taken from all three measurement setups. The main Python file in the code base consists of three related but independent modules: the first analyses and plots sensing data from the FET devices, the second analyses and plots transfer characteristics from channels across a device, and the third compares individual channel characteristics before and after a modification or after each of several modifications. The code base also features a separate config file and style sheet which govern the behaviour of the main code. The code base was designed collaboratively by myself and Erica Cassie over GitHub using the Sourcetree Git GUI.
-
-\thispagestyle{empty}
-\phantomsection
-\addcontentsline{toc}{chapter}{References}
