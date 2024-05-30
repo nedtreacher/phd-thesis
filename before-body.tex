@@ -17,8 +17,6 @@ $endif$
 %   Abstract
 %----------------------------------------------
 
-\thispagestyle{plain}
-
 \begin{flushleft}
 % Manually add a section to the table of contents
 \pagenumbering{roman}
@@ -28,14 +26,13 @@ $endif$
 
 \vspace*{\baselineskip}
 
-This is a thesis skeleton written with quarto.
-Make a copy of this thesis repo and start to write!
+The ability to detect volatile organic compounds in a highly sensitive and selective manner is desirable for a variety of different applications, including diagnosing illnesses at a remote clinic, monitoring air in an industrial workplace, or identifying biomarkers from invasive organisms at a biosecurity checkpoint. This thesis therefore investigates the coupling of insect odorant receptors (iORs) with carbon nanotube network field-effect transistors (CNT FETs) and graphene field-effect transistors (GFETs) to create a sensitive and selective vapour-phase sensor or ‘bioelectronic nose’. \\[5pt] The properties of three distinct carbon nanotube network morphologies were compared to understand their relative suitability as transducer thin films for the bioelectronic nose. The first morphology was obtained by depositing ultrasonicated carbon nanotubes in solvent, the second by depositing carbon nanotubes in surfactant solution, and the third by depositing with surfactant in the presence of steam. Compared to the other morphologies used, the steam-assisted deposition devices were found to have highly consistent device-to-device electrical properties due to their relatively low bundling and dense coverage of the substrate (>70\%). The steam-assisted deposition devices, however, were found to be more highly \textit{p}-doped than the other morphologies, with a relatively large liquid-gated threshold voltage (0.37 V). The sensitivity of the transducer was verified using an aqueous phosphate buffered saline (PBS) dilution series which followed a logarithmic trend. To account for baseline drift due to hysteresis, the device was left at a constant voltage for 30 minutes before the dilution series. By allowing baseline drift to settle over this period, it could be reasonably approximated as linear, estimated using a linear fit and removed from the data. \\[5pt] A vapour delivery system was also adapted for the purpose of testing the bioelectronic nose in a vapour environment. A photoionisation detector (PID) and a relative humidity and temperature indicator (RHI) were added to the existing system, which could be used to non-selectively detect vapours for comparison with measurements taken by the bioelectronic nose. Two new mass flow controllers (MFCs) were also added to the system to allow for a greater range of flow rates. A new electronic control system was also created to integrate the new MFCs and RHI. In the upgraded vapour delivery system, MFC-controlled nitrogen flow bubbles through analyte, carrying vapour into a device characterisation chamber, and then into a manifold leading to the PID and RHI. A steam-assisted deposition CNT FET was found to be sensitive to ppb concentrations of ethyl hexanoate (EtHex) and \textit{trans}-2-hexen-1-al (E2Hex). Baseline drift from hysteresis was found to be significantly larger when backgated in the vapour delivery system, and a 40 minute period was therefore used when waiting for baseline drift to settle. \\[5pt] One of the major challenges encountered in this thesis was the variability in quality of the non-covalent functionalisation method used. 1-pyrenebutanoic acid N-hydroxysuccinimide ester (PBASE) was primarily used as a linker molecule to attach the iORs to carbon nanotubes and graphene. This linker is widely used in the literature, but there is little agreement on the optimal process variables to use. It was verified that PBASE and iOR nanodiscs were successfully attaching to the transistor channel with a method previously used for iOR functionalisation. However, devices functionalised in an identical manner would rarely operate as expected and usually showed no sensing activity. It was found that devices which showed no sensing activity also exhibited no change in transfer characteristics after functionalisation, despite iOR nanodiscs being present. A possible explanation for this behaviour is the presence of a contamination layer which electrically isolates iOR nanodiscs from the transducer material. A device functionalised with pyrene-PEG-biotin (PPB) and avi-tagged OR10a after the use of a destructive oxygen plasma cleaning step responded to low fM concentrations of methyl salicylate (MeSal), further supporting this hypothesis. It was concluded that successful and reproducible vapour sensing using non-covalent functionalisation may require a robust, non-destructive cleaning method for the transducer platform.
 
-Make a new paragraph by leaving a blank line.
-
-\newpage
+\fancyhf{} %clear all headers and footers fields
 \thispagestyle{fancy} % Change header and footer on this page
-\markboth{  }{Abstract}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[L]{\textit{Abstract}} % Set header content
+\fancyfoot[L]{\thepage} %prints the page number on the right side of the header
 
 \clearpage
 \newpage
@@ -58,44 +55,7 @@ Make a new paragraph by leaving a blank line.
 
 \vspace*{\baselineskip}
 
-B3 partnership!
-
-At the university
-
-Rifat, Alex - vapour sensor design and construction
-Peter Coard - electronics work
-Erica Cassie - FET sensing setup
-Rob Keyzers and Jennie Ramirez-Garcia - NMR spectra
-Patricia Hunt - Computational chemistry
-Erica Happe - steaming method
-Danica- AFM imaging
-Sushila Pillai - Fluorescence microscope training
-Jenna and Ali - Device functionalisation
-
-Interns
-Lotte Boer
-Liam Anderson
-Hayden Young
-
-Nick Grinter - vapour sensor setup
-Grant Franklin - vapour sensor setup
-Alan Rennie and Alex Puglisi - vapour sensor setup
-
-Family and friends
-
-Oldest friends - Bennett, Jaquille
-High school friends
-Undergrad friends
-Friends on Discord
-Je - gym
-Aikido group (Ian, Lee, Jak, Tim)
-Extended whanau
-Mum and Dad
-Nina!
-
-\newpage
-\thispagestyle{fancy} % Change header and footer on this page
-\markboth{  }{Acknowledgements}
+Acknowledgements go here
 
 \clearpage
 \newpage
@@ -105,4 +65,5 @@ Nina!
 \newpage
 
 \pagestyle{headings}
+
 
