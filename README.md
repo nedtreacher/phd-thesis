@@ -4,7 +4,7 @@
 
 <!-- badges: end -->
 
-The quartothesis is adapted from a Masters Thesis used from the Department of Biological Sciences, University of Bergen ([GitHub](https://biostats-r.github.io/biostats/github/index.html). Various formatting changes have been made to ensure that the thesis template is appropriate for a physics PhD Thesis, including the use of IEEE referencing (ieee.csl). Various .tex file partials have also been added (before_body.tex, biblio.tex) to add an abstract, acknowledgements and ensure the chapter order is correct. R and Python code is run in each chapter independently. 
+The quartothesis is adapted from a Masters Thesis used from the Department of Biological Sciences, University of Bergen ([GitHub](https://biostats-r.github.io/biostats/github/index.html)). Various formatting changes have been made to ensure that the thesis template is appropriate for a physics PhD Thesis, including the use of IEEE referencing (ieee.csl). Various .tex file partials have also been added (before_body.tex, biblio.tex) to add an abstract, acknowledgements and ensure the chapter order is correct. R and Python code is run in each chapter independently. 
 
 The thesis is controlled via the \_quarto.yml file. In this file, the following elements can be edited:
 
