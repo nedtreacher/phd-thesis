@@ -40,9 +40,9 @@ execute:
   show: false # change to false to hide code
 
 format:
-  html:
-    theme: cosmo
-  pdf: 
+  #html:
+    #theme: cosmo
+  pdf:
     documentclass: scrbook
     template-partials:
       - before-body.tex
