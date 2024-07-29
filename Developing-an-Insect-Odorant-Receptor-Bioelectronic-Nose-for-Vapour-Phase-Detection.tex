@@ -256,7 +256,7 @@ Acknowledgements go here
 
 \pagestyle{headings}
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, interior hidden, breakable, enhanced, sharp corners, borderline west={3pt}{0pt}{shadecolor}, frame hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, enhanced, boxrule=0pt, sharp corners, breakable, borderline west={3pt}{0pt}{shadecolor}, interior hidden]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -564,6 +564,53 @@ work described in this thesis.
 
 \hypertarget{vapour-system-hardware}{%
 \chapter{Vapour System Hardware}\label{vapour-system-hardware}}
+
+\hypertarget{tbl-vapour-sensor-components}{}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.5930}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.2209}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.1860}}@{}}
+\caption{\label{tbl-vapour-sensor-components}Major components used in
+construction of the vapour delivery system described in this
+thesis.}\tabularnewline
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+Description
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Part No.
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Manufacturer
+\end{minipage} \\
+\midrule()
+\endfirsthead
+\toprule()
+\begin{minipage}[b]{\linewidth}\raggedright
+Description
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Part No.
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Manufacturer
+\end{minipage} \\
+\midrule()
+\endhead
+Mass flow controller, 20 sccm full scale & GE50A-013201SBV020 & MKS
+Instruments \\
+Mass flow controller, 200 sccm full scale & GE50A-013202SBV020 & MKS
+Instruments \\
+Mass flow controller, 500 sccm full scale & FC-2901V & Tylan \\
+Analogue flowmeter, 240 sccm max. flow & 116261-30 & Dwyer \\
+Micro diaphragm pump & P200-B3C5V-35000 & Xavitech \\
+Analogue flow controller, for micro diaphragm pump & X3000450 &
+Xavitech \\
+10 mL Schott bottle & 218010802 & Duran \\
+PTFE connection cap system & Z742273 & Duran \\
+Baseline VOC-TRAQ flow cell, purple & 043-950 & Ametek Mocon \\
+Baseline VOC-TRAQ flow cell, red & 043-951 & Ametek Mocon \\
+Humidity and temperature sensor & T9602-5-A & Telaire \\
+Enclosure, for humidity and temperature sensor & MC001189 & Multicomp
+Pro \\
+\bottomrule()
+\end{longtable}
 
 \hypertarget{python-code-for-data-analysis}{%
 \chapter{Python Code for Data

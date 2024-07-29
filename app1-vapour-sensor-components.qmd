@@ -24,9 +24,9 @@ column_widths <- c("5.5cm", "4.5cm", "3.75cm")
 
 component_table %>% 
   kable(
-    booktabs = TRUE, #LaTeX "booktabs formatting"
-    linesep = "", #no linespace
+    booktabs = TRUE, # LaTeX "booktabs formatting"
+    include.rownames = FALSE,
     col.names = c("Description", "Part No.", "Manufacturer"),
-    escape = FALSE) %>% 
-  column_spec(column = 1:3, width = column_widths)
+    escape = FALSE
+    )
 ```
