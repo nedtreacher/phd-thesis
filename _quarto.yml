@@ -1,7 +1,6 @@
 project:
   type: book
   output-dir: docs
-
 book:
   title: "Developing an Insect Odorant Receptor Bioelectronic Nose for Vapour-Phase Detection"
   author: "Eddyn Oswald Perkins Treacher"
@@ -14,35 +13,32 @@ book:
      #- 4-fabrication.qmd
      #- 5-vapour-sensing.qmd
      #- 6-pristine-characterisation.qmd
-     #- 7-functionalisation-verification.qmd
+     - 7-functionalisation-verification.qmd
      #- 8-functionalisation-testing.qmd
-     - 9-conclusions.qmd
+     #- 9-conclusions.qmd
   appendices:
     - app1-vapour-sensor-components.qmd
     - app2-FET-analysis-software.qmd
     - references.qmd
-#bibliography: references.bib
+bibliography: references.bib
 cite-method: biblatex
 biblatexoptions:
   #- citestyle=numeric
   #- sorting=none  # Optional: to preserve the order of citations as they appear in the document
   - citestyle = ieee
   - urldate = iso8601
-
 #mainfont: lmroman17-regular.otf
 #sansfont: lmroman17-regular.otf
-
 mainfont: Latin Modern Roman
 sansfont: Latin Modern Roman
-
 execute:
   echo: false # change to false to hide code
   show: false # change to false to hide code
-
 format:
   #html:
     #theme: cosmo
   pdf:
+    #include-in-header: header.tex
     documentclass: scrbook
     template-partials:
       - before-body.tex
@@ -65,7 +61,6 @@ format:
         \Large
         \vspace{10mm}
         by
-
         \vspace{20mm}
       }
       \postauthor{
@@ -96,5 +91,4 @@ format:
     link-citations: true
     reference-section-title: "References"
     prefer-html: true
-
 editor: visual

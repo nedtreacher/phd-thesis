@@ -7,7 +7,6 @@
 ]{scrbook}
 
 \usepackage{amsmath,amssymb}
-\usepackage{lmodern}
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
@@ -17,6 +16,10 @@
   \usepackage{unicode-math}
   \defaultfontfeatures{Scale=MatchLowercase}
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else  
+    % xetex/luatex font selection
   \setmainfont[]{Latin Modern Roman}
   \setsansfont[]{Latin Modern Roman}
 \fi
@@ -97,7 +100,6 @@
   \Large
   \vspace{10mm}
   by
-
   \vspace{20mm}
 }
 \postauthor{
@@ -165,10 +167,12 @@
 \@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
 \makeatother
 \makeatletter
-\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
 \makeatother
 \makeatletter
 \@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
 \makeatother
 \makeatletter
 \makeatother
@@ -299,7 +303,7 @@ I chose to start my doctoral studies just a few months into a global pandemic. C
 
 \pagestyle{headings}
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, breakable, borderline west={3pt}{0pt}{shadecolor}, enhanced, interior hidden, frame hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, borderline west={3pt}{0pt}{shadecolor}, interior hidden, boxrule=0pt, breakable, enhanced, sharp corners]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -604,57 +608,106 @@ work described in this thesis.
 
 \bookmarksetup{startatroot}
 
-\hypertarget{sec-thin-film-transistors}{%
-\chapter{Carbon Nanotube and Graphene Field-Effect
-Transistors}\label{sec-thin-film-transistors}}
+\hypertarget{sec-noncovalent-functionalisation}{%
+\chapter{Non-Covalent Functionalisation of Carbon Nanotube and Graphene
+Films}\label{sec-noncovalent-functionalisation}}
 
 \hypertarget{introduction-1}{%
 \section{Introduction}\label{introduction-1}}
 
-Out of a wide range of transducer options available for the creation of
-compact, portable and highly-integrated biosensors, field-effect
-transistors are among the most promising. Field-effect transistors
-(FETs), initially proposed in the 1930s, consist of two conductive
-electrodes on either side of a semiconducting channel, the `source' and
-`drain' electrodes, alongside an isolated `gate' electrode which is
-typically perpendicular to the channel. An applied electric field from
-the gate electrode capacitively controls channel resistance, giving rise
-to the label `field-effect'. By adjusting gate voltage, the flow of
-charge carriers between source and drain can be varied over several
-orders of magnitude. The ability of this simple structure to obtain a
-large signal response from small changes in channel behaviour means
-field-effect transistors can be used as high-quality amplifiers for
-sensor applications
-\autocite{Kauffman2008,Petti2016,Tran2016,Shkodra2021,Yao2021}.
+In \textbf{?@sec-fabrication}, methods of fabricating carbon nanotube
+and graphene devices were discussed, and in
+\textbf{?@sec-pristine-characteristics}, it was demonstrated that these
+devices are highly sensitive to environmental changes in both liquid and
+vapour-phase environments. However, for specific sensing, the devices
+require biochemical functionalisation. The sensing signal is picked up
+by attached receptors, while the transistors act as transducers for the
+received signal. Receptors previously used with carbon nanotube and
+graphene devices include aptamers
+\autocite{Khan2021,Nguyen2021,Shkodra2021,Nekrasov2021,Mishyn2022,Cassie2023}
+and a range of proteins \autocite{Lerner2014,Ahn2020,Tong2020,Wang2020},
+including animal odorant receptors
+\autocite{Goldsmith2011,Lee2018,Murugathas2019a,Murugathas2020,Moon2020,Yoo2022}.
+A common approach to attaching receptors to the transducer involves the
+use of a linker molecule to tether the receptor to the transducer.
+Verifying that this linker molecule is bridging between the transducer
+and the receptor element is important for a complete understanding of
+the behaviour of these sensors. This verification involves providing
+evidence for effective attachment of linker molecule to the transducing
+device channel, then showing successful tethering of odorant receptors
+and other biomolecules to the attached linker molecule.
 
-Carbon nanotube network and graphene field-effect transistors (CNT FETs
-and GFETs) are both examples of a class of field-effect transistors
-called thin-film transistors (TFTs). Thin-film transistors were first
-developed in 1962 \autocite{Weimer1962}, and are closely related to the
-commonly-used metal oxide semiconductor field-effect transistor
-(MOSFET). Unlike MOSFETs, thin-film transistors do not use the substrate
-as the device channel. Instead, current passes through a semiconducting
-film on the surface of the device; the films discussed here are graphene
-and carbon nanotubes, two carbon-based low-dimension nanomaterials.
-Since thin-film transistors do not require a conductive substrate, they
-can be fabricated using light, flexible and stretchable substrates,
-making them significantly more versatile than MOSFETs
-\autocite{Kauffman2008,Cao2009,Petti2016,Shkodra2021}. Invisible
-conductive thin-films such as metal oxides and carbon nanotube networks
-can also be used to create transparent electronics \autocite{Cao2009}.
-While the principle of modulating current with a gate electrode is
-shared by the MOSFET and TFT, the underlying physics behind the
-transistor behaviour differs between the two. The MOSFET is turned on by
-the change in carrier behaviour when switching from a depletion to an
-inversion mode, while this is not the case for a TFT
-\autocite{Petti2016}. Details of graphene and carbon nanotube TFT
-switching behaviours can be found in the subsequent sections.
+This chapter therefore takes some time exploring the following selection
+of available linker molecules for specific biosensing: 1-Pyrenebutanoic
+Acid N-hydroxysuccinimide Ester (PBASE), 1-Pyrenebutyric Acid (PBA),
+Pyrene-PEG-NTA (PPN) and Pyrene-PEG-Biotin (PPB). The mechanisms
+underlying functionalisation with each linker are described. A
+literature review and analysis techniques including Raman spectroscopy,
+fluorescence microscopy and electrical characterisation are used to
+understand the impact of various experimental parameters on the
+functionalisation process. Electrical characterisation of linker
+attachment to the transducer was also performed to act as a comparison
+tool when performing functionalisation with insect odorant receptors.
+Numerous obstacles to successful functionalisation are identified and
+discussed, including PBASE hydrolysis, linker coverage, non-specific
+attachment, photoresist contamination, channel hydrophobicity and the
+coffee-ring effect. Approaches to overcome these obstacles were
+identified, tested and the results characterised. This process provided
+assurance that successful attachment of linker molecule to the carbon
+nanotube network or graphene channel could be achieved.
 
-\hypertarget{sec-general-FETs}{%
-\section{Thin-Film Field-Effect Transistors}\label{sec-general-FETs}}
+\hypertarget{sec-non-covalent-bonding}{%
+\section{\texorpdfstring{Non-Covalent Bonding and
+\(\pi\)-Stacking}{Non-Covalent Bonding and \textbackslash pi-Stacking}}\label{sec-non-covalent-bonding}}
 
-\hypertarget{sec-gating}{%
-\subsection{Structure and Gating}\label{sec-gating}}
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\textwidth,height=\textheight]{figures/ch7/pyrene-cnt.png}
+
+}
+
+\caption{\label{fig-pi-interaction-cnt}Attachment of pyrene-based linker
+molecule pyrene-X and receptor Y to a carbon nanotube, representing the
+transducer element of a field-effect transistor. Source: Adapted from
+\autocite{Carbonnanotube}.}
+
+\end{figure}
+
+Linker molecules may be attached via covalent or non-covalent bonding to
+carbon nanomaterials, such as carbon nanotubes and graphene. Covalent
+bonding is stronger than non-covalent bonding, and therefore gives a
+more permanent attachment between linker molecules and the transducer.
+Unlike covalent attachment, non-covalent attachment preserves the
+polycyclic \(sp^2\) bonding of carbon atoms in graphene and carbon
+nanotubes and therefore the electrical properties of the channel
+\autocite{DiCrescenzo2014,Yao2021,Shkodra2021,Li2023}. For example, one
+group found covalent bonding of diazonium linker caused a \(\sim 50\) \%
+drop in graphene channel mobility \autocite{Lerner2014}. In comparison,
+only a \(\sim 5\) \% drop in mobility was seen for attachment of a
+mixture of linkers containing pyrene to a graphene channel via
+non-covalent \(\pi\) stacking \autocite{Thodkar2021}. \(\pi\)-stacking
+or \(\pi-\pi\) interaction\footnote{It has been argued that this label
+  is unhelpfully specific and a misrepresentation of what can be simply
+  classed as a type of Van Der Waals bonding
+  \autocite{Martinez2012,Perez2015}. However, as the use of the term is
+  widespread in the literature, it is also used here for the sake of
+  clarity.} describes a type of non-covalent bonding which occurs due to
+dispersion forces between unsaturated polycyclic molecules
+\autocite{Perez2015}. A wide range of linker molecules with aromatic
+moieties, such as pyrene, have been used for modification of polycyclic
+carbon nanotubes and graphene via \(\pi\)-stacking
+\autocite{Hermanson2013-16,Perez2015,Zhou2019,Mishyn2022}.
+Figure~\ref{fig-pi-interaction-cnt} demonstrates the relationship
+between a pyrene-based linker molecule to the transducer and receptor
+elements. Pyrene-based \(\pi\)-stacking underlies all the
+functionalisation processes used in this thesis.
+
+\hypertarget{sec-PBASE}{%
+\section{Attachment of 1-Pyrenebutanoic Acid N-Hydroxysuccinimide
+Ester}\label{sec-PBASE}}
+
+\hypertarget{sec-PBASE-attachment}{%
+\subsection{Comparing Attachment Methods}\label{sec-PBASE-attachment}}
 
 \begin{figure}
 
@@ -664,7 +717,7 @@ switching behaviours can be found in the subsequent sections.
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/(a).png}
+\includegraphics{figures/(a).png}
 
 }
 
@@ -688,7 +741,7 @@ switching behaviours can be found in the subsequent sections.
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch2/back-gate-schematic.png}
+\includegraphics{figures/ch7/pbase_stable_1_pyrene.png}
 
 }
 
@@ -712,7 +765,7 @@ switching behaviours can be found in the subsequent sections.
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/(b).png}
+\includegraphics{figures/(b).png}
 
 }
 
@@ -736,7 +789,7 @@ switching behaviours can be found in the subsequent sections.
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch2/liquid-gate-schematic.png}
+\includegraphics{figures/ch7/pbase_stable_2_pyrene.png}
 
 }
 
@@ -754,172 +807,397 @@ switching behaviours can be found in the subsequent sections.
 
 \end{minipage}%
 
-\caption{\label{fig-gating-schematics}Schematics (not to scale) showing
-the side-view cross-section of a thin-film field-effect transistor in
-both the (a) back-gated and (b) liquid-gated configuration. Here, a
-graphene monolayer or a carbon nanotube network is used as the
-transistor thin-film. The drain electrode is the gold contact on the
-left side of each figure, while the source electrode is the gold contact
-on the right.}
+\caption{\label{fig-pbase-structure}Two conformations of PBASE molecule
+with geometry optimised via \emph{ab initio} calculations performed with
+Gaussian 16 software \autocite{g16}. White balls correspond to hydrogen,
+grey to carbon, red to oxygen and blue to nitrogen. The pyrene moiety is
+highlighted in the image with a red dashed outline.}
 
 \end{figure}
 
-Two basic configurations of the thin-film transistor are the back-gated
-field-effect transistor and the liquid-gated (or electrolyte-gated)
-transistor. The relatively simple back-gated configuration, shown in
-Figure~\ref{fig-gating-schematics} (a), uses the degenerately doped Si
-substrate as the gate. The channel is isolated from the gate with a thin
-SiO\(_2\) layer. A liquid-gated device, shown in
-Figure~\ref{fig-gating-schematics} (b), is used for sensitive
-liquid-phase analyte detection. A submerged Ag/AgCl reference electrode
-is generally used as a top-gate in this configuration. The channel is
-isolated from the gate by the bulk of an electrolyte solution, which can
-be restricted to the channel area using a hydrophobic
-polydimethylsiloxane microchamber or `PDMS well'. The electrolyte used
-is typically the biofriendly phosphate-buffered saline (PBS), but other
-aqueous salt solutions, polymers and ion-gels have also been used
-\autocite{Avouris2007,Shkodra2021,Tran2016,Li2023}. Transistor operation
-is controlled by a `drain' bias \(V_{ds}\), placed between the drain and
-source electrodes, and a `gate' bias \(V_g\), placed between the gate
-and source electrodes. Gate capacitance determines the influence of
-\(V_g\) on drain-source current \(I_d\). In general, gate capacitance is
-a series combination of geometric capacitance, \(C_{G}\), and the
-quantum capacitance of the channel nanomaterial, \(C_{Q}\)
-\autocite{Avouris2007,Cao2009,Heller2009a,Tran2016,Kireev2017,Li2023}.
+1-pyrenebutanoic acid N-hydroxysuccinimide ester (also known as
+1-pyrenebutyric acid N-hydroxysuccinimide ester and 1-pyrenebutanoic
+acid succinimidyl ester, and by the acronyms PBASE, PBSE, PyBASE, PASE,
+PYSE, PSE, Pyr-NHS and PANHS) is an aromatic molecule commonly used for
+tethering biomolecules to the carbon rings of graphene and carbon
+nanotubes. Two locally stable molecular conformations were found to
+exist using computational modelling, shown in
+Figure~\ref{fig-pbase-structure} (a) and
+Figure~\ref{fig-pbase-structure} (b) respectively. The Hartree-Fock
+energy of the straight conformation in Figure~\ref{fig-pbase-structure}
+(a) is -3427728.67 kJ/mol, while the Hartree-Fock energy of the bent
+conformation in Figure~\ref{fig-pbase-structure} (b) is -3427729.66
+kJ/mol. The difference between energies is small enough that the
+existence of both molecular conformations is feasible. Similar straight
+and bent structures have previously been modelled for PBASE attached to
+graphene \autocite{Oishi2022}. The pyrene moiety, highlighted with a red
+dashed outline in Figure~\ref{fig-pbase-structure}, non-covalently bonds
+to the carbon rings of the transducer. The N-hydroxysuccinimide (NHS)
+ester group, seen on the right-hand side of
+Figure~\ref{fig-pbase-structure}, can undergo a nucleophilic
+substitution reaction with primary amines attached to biomolecules,
+tethering them with an amide or imide bond
+\autocite{Chen2001,Hermanson2013-16,Hermanson2013-3,Shkodra2021,Mishyn2022}.
 
-\hypertarget{liquid-gating-and-debye-length}{%
-\subsubsection*{Liquid-Gating and Debye
-Length}\label{liquid-gating-and-debye-length}}
-\addcontentsline{toc}{subsubsection}{Liquid-Gating and Debye Length}
+The non-covalent functionalisation of proteins onto a single-walled
+carbon nanotube using PBASE was first reported by Chen \emph{et al.} in
+2001 \autocite{Chen2001}. Two successful methods for protein
+functionalisation and immobilisation were reported, with the only
+differences being the solvent used to dissolve the PBASE powder
+(dimethylformamide, methanol) and the final concentration of the
+resulting solutions (6 mM, 1 mM respectively). PBASE powder appears to
+dissolve poorly in methanol at higher concentrations, which might
+explain the use of different concentrations of PBASE with each solvent.
+An extensive comparison of methods used in the literature for PBASE
+functionalisation of carbon nanotube and graphene devices with aptamers
+and proteins is given in Table~\ref{tbl-pbase-functionalisation}.
+Several listed works directly cite Chen \emph{et al.} when discussing
+functionalisation with PBASE
+\autocite{Besteman2003,Cella2010,Campos2019,Zheng2016,Ohno2010}. The
+other works listed do not explicitly reference Chen \emph{et al.} in
+their methodology; however, the frequency of methods describing the use
+of 6 mM PBASE in dimethylformamide (DMF) and 1 mM PBASE in methanol
+indicate that other groups often emulate the original process from Chen
+\emph{et al.}.
 
-Understanding the ionic behaviour of the gate electrolyte used in a
-liquid-gated device setup gives insight into the gating and sensing
-behaviour of the setup. When a voltage is applied at the liquid-gate,
-the charged ions in solution move to form two electric double layers,
-one at the interface between the electrolyte and gate electrode, and one
-at the interface between electrolyte and semiconducting channel, as
-shown in Figure~\ref{fig-Debye-length}. The gate capacitance is a series
-combination of the capacitance of each EDL in series with quantum
-capacitance \(C_{Q}\) \autocite{Heller2010,Kireev2017,Shkodra2021}. The
-Gouy-Chapman-Stern model splits the EDL into two distinct regions, the
-first being a compact layer of ions, the Stern layer, and the second
-being a more diffuse layer, the Gouy-Chapman layer
-\autocite{Tiwari2022}. The surface potential of the solid-electrolyte
-interface exponentially decreases across the diffuse region of the
-double-layer; the characteristic length of this potential screening is
-known as Debye length, \(\lambda_D\). The typical electrolyte Debye
-length is on a nanometer scale, therefore the bulk electrolyte acts as
-an insulator, similar to the SiO\(_2\) dielectric in the back-gated
-configuration. The Stern layer capacitance is inversely proportional to
-the Debye length, and therefore decreased \(\lambda_D\) corresponds to
-increased gate capacitance
-\autocite{Heller2010,Ohno2015,Shkodra2021,Yao2021}.
+However, it is also apparent from
+Table~\ref{tbl-pbase-functionalisation} that there is a large degree of
+variation in the methods used for PBASE functionalisation. Various
+electrical characterisation, microscopy and spectroscopy techniques have
+been used to demonstrate successful functionalisation. Until recently,
+there has been little justification provided for the selection of
+variables used in the functionalisation procedure (\emph{e.g.} length of
+time submerged in solvent containing PBASE), despite the wide-ranging
+use of this process in the literature
+\autocite{Hinnemo2017,Zhen2018,Wang2020}. Furthermore, a detailed
+investigation of PBASE functionalisation process variables has only been
+undertaken for graphene-based devices
+\autocite{Zhen2018,Hao2020,Wang2020,Mishyn2022}. This is surprising,
+given that multiple sources make an explicit link between sensitivity of
+functionalised devices and the density of surface functionalisation with
+PBASE \autocite{White2008,Hermanson2013-3,Chen2014}.
 
-\begin{figure}
+Zhen \emph{et al.} \autocite{Zhen2018}, Wang \emph{et al.}
+\autocite{Wang2020} and Mishyn \emph{et al.} \autocite{Mishyn2022} have
+all claimed that carefully tuning the surface concentration of PBASE is
+required to avoid multilayer coverage of the graphene surface, as this
+negatively impacts sensing. Mishyn \emph{et al.} \autocite{Mishyn2022}
+used cyclic voltammetry to demonstrate that less receptor attachment to
+the graphene surface occurs when multiple layers of PBASE are present.
+However, none of these groups have presented analyte sensing results
+from their functionalised graphene devices. In contrast, Hao \emph{et
+al.} \autocite{Hao2020} found that maximising the PBASE surface coverage
+of a channel resulted in more sensitive aptameric sensing, thereby
+reaching the opposite conclusion. The inconsistency in these recent
+findings mean more work is needed to understand the PBASE
+functionalisation process to achieve optimal biosensor sensitivity. It
+may also be the case that a specific functionalisation process is
+required for optimal sensitivity with the use of a specific type of
+receptor.
 
-{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{./figures/ch2/Debye-length-schematic-alt.png}
+Once fastened to a bioreceptor via an amide or imide bond, the
+attachment to the linker molecule is not easily broken. However, prior
+to use in functionalisation processes, the NHS ester may react with any
+water present. This ester hydrolysis converts PBASE to its corresponding
+carboxylic acid, 1-pyrenebutyric acid (PBA), leaving it unavailable to
+react further with amine groups
+\autocite{Hermanson2013-3,Hermanson2013-5,Mishyn2022}. If the amine
+group functionalisation is performed at close to neutral pH, within a
+\(\sim\) 1 hour period, and with a high concentration of bioreceptor
+present, competing hydrolysis should not have a significantly adverse
+impact on the functionalisation process \autocite{Hermanson2013-3}. If
+PBASE is exposed to water during storage,
+1-Ethyl-3-(3-dimethylaminopropyl)carbodiimide (EDC) can be used to
+restore the NHS ester and enable the substitution reaction to take place
+(see Section~\ref{sec-PBA}).
+
+\newpage
+\thispagestyle{empty}
+\KOMAoptions{paper=landscape,pagesize}
+
+\{\centering
+
+\hypertarget{tbl-pbase-functionalisation}{}
+\begin{longtable}[]{@{}lllllll@{}}
+\caption{\label{tbl-pbase-functionalisation}Comparison of PBASE
+functionalisation processes used for immobilisation of proteins and
+aptamers onto carbon nanotubes and graphene. Experimentally optimised
+variables are marked with a star (*). Blank entries indicate there was
+no mention of the parameter in a particular paper.}\tabularnewline
+\toprule\noalign{}
+Solvent & Channel & Conc. (mM) & Incubation type & Time (hr) & Rinse
+steps & References \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Solvent & Channel & Conc. (mM) & Incubation type & Time (hr) & Rinse
+steps & References \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+DMF & CNT & 5 & Immersed & 1 & PBS & Maehashi, 2007.
+\cite{Maehashi2007} \\
+& & 6 & Immersed & 1 & DMF, PBS & García-Aljaro, 2010.
+\cite{Garcia-Aljaro2010} \\
+& & 6 & Immersed & 1 & DMF & Chen, 2001. \cite{Chen2001} \\
+& & 6 & Immersed & 1 & DMF & Cella, 2010. \cite{Cella2010} \\
+& & 6 & Immersed & 1 & DMF & Das, 2011. \cite{Das2011} \\
+& & 6 & - & 2 & DMF & Besteman, 2003. \cite{Besteman2003} \\
+& Graphene & - & - & 2 & DMF & Tsang, 2019. \cite{Tsang2019} \\
+& & - & - & 20 & - & Wiedman, 2017. \cite{Wiedman2017} \\
+& & 0.2 & Immersed & 20 & DMF, IPA, DI water & Gao, 2018.
+\cite{Gao2018} \\
+& & 1 & Dropcast & 6 & DMF, IPA, DI water & Nekrasov, 2021.
+\cite{Nekrasov2021} \\
+& & 5 & Immersed & 1 & DMF, DI water & Hwang, 2016. \cite{Hwang2016} \\
+& & 5* & Immersed & 3* & DMF & Hao, 2020. \cite{Hao2020} \\
+& & 5 & Immersed & 4* & DMF, DI water & Mishyn, 2022.
+\cite{Mishyn2022} \\
+& & 6 & Dropcast & 2 & DMF, DI water & Nur Nasufiya, 2020.
+\cite{NurNasyifa2020} \\
+& & 10 & Dropcast & 2 & DMF, DI water & Campos, 2019.
+\cite{Campos2019} \\
+& & 10 & Immersed & 2 & DMF, PBS & Kuscu, 2020. \cite{Kuscu2020} \\
+& & 10 & Immersed & 1 & DMF & Xu, 2017. \cite{Xu2017} \\
+& & 10 & Immersed & 12 & DMF, EtOH, DI water & Khan, 2020.
+\cite{Khan2020} \\
+& & 50 & Immersed & 4* & MeOH & Wang, 2020. \cite{Wang2020} \\
+2-Methoxyethanol & Graphene & 1 & Immersed & 1 & DI water & Ono, 2020.
+\cite{Ono2020} \\
+Methanol & CNT & 1 & Immersed & 1 & MeOH, DI water & Zheng, 2016.
+\cite{Zheng2016} \\
+& & 1 & Immersed & 2 & MeOH & Kim, 2009. \cite{Kim2009} \\
+& & 100 & Dropcast & 1 & DI water & Yoo, 2022. \cite{Yoo2022} \\
+& Graphene & 5 & Immersed & 2 & - & Sethi, 2020. \cite{Sethi2020} \\
+& & 5 & Immersed & 1 & MeOH, PBS & Ohno, 2010. \cite{Ohno2010} \\
+DMSO & CNT & 10 & - & 1 & DI water & Lopez, 2015. \cite{Lopez2015} \\
+& & 10 & Immersed & 1 & PBS & Strack, 2013. \cite{Strack2013} \\
+\end{longtable}
+
+\} \newpage \KOMAoptions{paper=portrait,pagesize}
+
+\begin{figure}[H]
+
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(a).png}
 
 }
 
-\caption{\label{fig-Debye-length}A diagram of the formation of an
-electric double layer (EDL) under an applied voltage between source and
-liquid-gate electrodes, with a \(p\)-type semiconductor used for the
-channel thin-film. Electric double layers are present at both the
-gate-electrolyte interface and semiconductor-electrolyte interface.
-Adapted from \autocite{Ohno2015,Shkodra2021,Tiwari2022}.}
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.92\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch7/labelled_modified_sigma_pbase_nmr.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.04\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.92\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch7/labelled_modified_setareh_pbase_nmr.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.04\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(c).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.92\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch7/labelled_modified_dmso_nmr.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.04\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-pbase-nmr}\(^{1}\)H Nuclear Magnetic Resonance (NMR)
+spectra, performed with DMSO-d\(_6\) used as the NMR solvent. (a) and
+(b) show NMR spectrum for commercially purchased PBASE, from
+Sigma-Aldrich and Setareh Biotech respectively, while (c) shows the
+blank spectrum taken with only DMSO-d\(_6\) present. Spectra were taken
+by Jennie Ramirez-Garcia, School of Chemical and Physical Sciences, Te
+Herenga Waka - Victoria University of Wellington. Unlabelled peaks
+correspond to sample impurities.}
 
 \end{figure}
 
-The equation for Debye length \(\lambda_D\) in an electrolyte solution
-is given by Equation~\ref{eq-debye-length}.
+\hypertarget{sec-PBASE-purity}{%
+\subsection{Examining 1-Pyrenebutanoic Acid N-Hydroxysuccinimide Ester
+Purity}\label{sec-PBASE-purity}}
 
-\begin{equation}\protect\hypertarget{eq-debye-length}{}{
-\lambda_D = \sqrt{\frac{\epsilon_0\epsilon_rk_bT}{2N_Aq^2I}}
-}\label{eq-debye-length}\end{equation}
+I purchased PBASE from two suppliers, Sigma-Aldrich and Setareh Biotech.
+Sigma listed DMF and methanol as suitable solvents for dissolving PBASE,
+alongside chloroform and dimethyl sulfoxide (DMSO). Setareh Biotech
+indicated methanol can be used for dissolving PBASE. The two suppliers
+had conflicting information for suitable storage of PBASE, where Sigma
+recommended room temperature storage, while Setareh Biotech recommended
+storage of -5 to -30°C alongside protection from light and moisture. I
+used nuclear magnetic resonance (NMR) spectroscopy to verify the purity
+of PBASE from various suppliers. As water can react with PBASE to form
+unwanted byproducts, it appears that protection from moisture is
+particularly important. A particular emphasis was placed on detecting
+water presence in the received samples, considering the long travel time
+of the PBASE with uncertain storage conditions.
 
-Here, \(\epsilon_0\) is vacuum permittivity, \(\epsilon_r\) is the
-relative permittivity of the electrolyte, \(\k_B\) is the Boltzmann
-constant, \(T\) is absolute temperature in K, \(N_A\) is the Avogadro
-number, \(q\) is the elementary charge and \(I\) is ionic strength in
-mmol L\(^{-1}\). When temperature is kept constant, \(\lambda_D\) only
-depends on the ionic strength of the electrolyte and not on any
-attributes of the gate electrode or channel
-\autocite{Stern2007,Shkodra2021}. Successive dilutions of a particular
-electrolyte will increase the Debye length: for \(1 \times\) PBS,
-\(\lambda_D\) is \(\sim\) 1 nm, for \(0.1 \times\) PBS, \(\lambda_D\) is
-\(\sim\) 2 nm, for \(0.01 \times\) PBS \(\lambda_D\) is \(\sim\) 8 nm
-and so on. This means gate capacitance is directly dependent on the
-electrolyte used and its concentration
-\autocite{Kireev2017,Shkodra2021}. A \(1 \times\) PBS electrolyte gives
-a gate capacitance several orders of magnitude larger than that of a
-SiO\(_2\) back-gate. A larger capacitance significantly increases the
-effect of electrostatic gating on the channel current, often described
-as increased electrostatic coupling between gate and channel. A
-liquid-gated device with low Debye length will therefore be highly
-sensitive to electrostatic changes across a small voltage range
-\autocite{Heller2010,Ohno2015,Kireev2017,Yao2021}.
+Figure~\ref{fig-pbase-nmr} compares the shapes of hydrogen NMR spectra
+of PBASE from each supplier when dissolved in deuterated DMSO, alongside
+a blank deuterated DMSO spectrum. Both PBASE samples possessed
+characteristic chemical shift features between \(2.1-2.2\) ppm,
+\(2.8-2.9\) ppm, and \(3.4-3.5\) ppm. These chemical shifts roughly
+correspond to those seen in previous NMR spectra for PBASE
+\autocite{NMR2}. The feature at 2.50 ppm represents the deuterated DMSO
+solvent, while the single peak between \(3.3-3.4\) ppm represents the
+water present in the sample. By comparing the area of these peaks, a
+rough estimate of the amount of water originally present in the PBASE
+sample can be obtained. The H\(_{2}\)O:DMSO ratio is 1:7 in the blank
+spectrum, but \(\sim\) 1:3 in the provided samples, possibly indicating
+the introduction of water to the PBASE during production or storage.
+However, DMSO is strongly hygroscopic and slight differences in DMSO
+storage time, as well as differences in humidity during sample
+preparation, may have had a significant impact on this result
+\autocite{Lebel1962}. Other impurities are also seen on both PBASE
+spectra, though their small size indicates they make up only a small
+percentage of each sample. Strack \emph{et al.} \autocite{Strack2013}
+recommend leaving frozen PBASE at room temperature for 15 minutes before
+exposing it to air to prevent condensation near the PBASE, as this can
+cause unnecessary H\(_2\)O contamination.
 
-However, a decreased Debye length also has disadvantages for sensing.
-Electrostatic potentials outside of the electrolyte-channel electrical
-double layer are effectively screened from the channel. Electrical
-double layers will also form around charged receptors within the
-solution. The combined screening effect means signals due to potential
-changes in charged biomolecules within the bulk electrolyte will have no
-effect on gating of the channel, and therefore no effect on \(I_d\).
-Interactions between the analyte and any receptor element must therefore
-occur within the Debye length, and so a tradeoff exists between channel
-sensitivity and the size of the sensitive region above the channel. Many
-medium or large proteins will require a relatively dilute electrolyte
-for analyte capture to be detected by the channel, which may not reflect
-the intended environment for biosensor application
-\autocite{Stern2007,Piccinini2018,Shkodra2021}. Other approaches to
-increasing Debye length without reducing device sensitivity have
-therefore also been trialled. One approach involves attaching a layer of
-polyethylene glycol polymer (PEG) to the channel, limiting the approach
-of counterions. This increases Debye length at the electrolyte-channel
-interface while preserving the capacitance of the electrolyte-gate
-interface, keeping device sensitivity relatively high
-\autocite{Gao2016,Filipiak2018,Kesler2020,Albarghouthi2022}.
-
-\hypertarget{electrical-characterisation}{%
+\hypertarget{sec-PBASE-electrical-characterisation}{%
 \subsection{Electrical
-Characterisation}\label{electrical-characterisation}}
+Characterisation}\label{sec-PBASE-electrical-characterisation}}
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.65\textwidth,height=\textheight]{./figures/ch2/linear_region_edit.png}
-
-}
-
-\caption{\label{fig-linear-region}The linear and saturation operation
-regimes of an \(n\)-type metal oxide semiconductor TFT, \(V_{t} \sim 0\)
-V. Current has been normalised with respect to channel width (W).
-Reproduced with permission from \autocite{Petti2016}.}
-
-\end{figure}
-
-The current-voltage plots of a given transistor are known as its
-`characteristic curves'. The I-V curve of \(I_d\) against \(V_{ds}\) at
-constant \(V_g\) is known as the `source-drain' or `output'
-characteristic curve, while \(I_d\) against \(V_g\) at constant
-\(V_{ds}\) is known as the `transfer' characteristic curve at that
-source-drain voltage \autocite{Kauffman2008,Petti2016,Shkodra2021}.
-Applying a gate voltage \(V_g\) to the gate of an thin-film transistor
-influences the amount and type of available charge carriers for
-conduction \autocite{Avouris2007,Tran2016,Heller2009a}. In an ambipolar
-transistor, a highly negative \(V_g\) will give rise to hole conduction,
-and a highly positive \(V_g\) will give rise to electron conduction
-\autocite{Avouris2007,Yao2021,Li2023}. The minimum \(V_g\) required to
-turn the flow of current in a thin-film transistor `on' is referred to
-as the threshold voltage \(V_t\)
-\autocite{Petti2016,Shkodra2021,Li2023}. Threshold voltage is discussed
-in more detail in Section~\ref{sec-electrical-characterisation-CNT}.
-When \(|V_{ds}| < |V_g| - |V_t|\) while \(|V_g|>|V_t|\), the device is
-in the linear regime. Here, \(V_{ds}\) is directly proportional to
-\(I_{d}\), similar to an Ohmic resistor. When
-\(|V_{ds}| > |V_g| - |V_t|\) and \(|V_g|>|V_t|\), the device is in the
-saturation regime, where the relationship between \(V_{ds}\) and
-\(I_{d}\) becomes non-linear \autocite{Petti2016,Shkodra2021,Li2023}.
+The electrical characteristics of the carbon nanotube or graphene
+transistor are often used to verify successful functionalisation and
+make a statement about the effect of chemical modification on the
+channel. However, this verification usually does not account for the
+effect of the solvent on the transistor channel.
+Figure~\ref{fig-PBASE-vs-solvent-only} (a) and
+Figure~\ref{fig-PBASE-vs-solvent-only} (b) show that by exposing a
+steam-deposited carbon nanotube network channel to solvents commonly
+used in PBASE functionalisation processes
+(Table~\ref{tbl-pbase-functionalisation}), such as methanol (MeOH) or
+dimethyl sulfoxide (DMSO), a significant negative shift in channel
+threshold voltage occurs even after thorough rinsing with deionised
+water. It appears that the carbon nanotubes have adsorped solvent which
+persists even after thoroughly rinsing the device. From the shape of the
+change in the transfer curve, it seems the residual polar solvent
+molecules capacitively gate the channel
+\autocite{Artyukhin2006,Heller2008}. Besteman \emph{et al.} reported
+observing a similar effect from prolonged exposure of a single carbon
+nanotube to dimethylformamide (DMF) \autocite{Besteman2003}.
 
 \begin{figure}
 
@@ -929,7 +1207,7 @@ saturation regime, where the relationship between \(V_{ds}\) and
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/(a).png}
+\includegraphics{figures/(a).png}
 
 }
 
@@ -953,7 +1231,7 @@ saturation regime, where the relationship between \(V_{ds}\) and
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch2/Q5C10ch8transconductance.png}
+\includegraphics{figures/ch7/Q23D5_ch1_MeOHonly.png}
 
 }
 
@@ -977,7 +1255,7 @@ saturation regime, where the relationship between \(V_{ds}\) and
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/(b).png}
+\includegraphics{figures/(b).png}
 
 }
 
@@ -1001,7 +1279,7 @@ saturation regime, where the relationship between \(V_{ds}\) and
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch2/NTQ31C5ch1transconductance.png}
+\includegraphics{figures/ch7/Q23D12_ch1_DMSOonly.png}
 
 }
 
@@ -1025,7 +1303,7 @@ saturation regime, where the relationship between \(V_{ds}\) and
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/(c).png}
+\includegraphics{figures/(c).png}
 
 }
 
@@ -1049,7 +1327,7 @@ saturation regime, where the relationship between \(V_{ds}\) and
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch2/Q5C10ch8on_off_current.png}
+\includegraphics{figures/ch7/Q2C6_ch2_MeOHPBASE.png}
 
 }
 
@@ -1073,7 +1351,7 @@ saturation regime, where the relationship between \(V_{ds}\) and
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/(d).png}
+\includegraphics{figures/(d).png}
 
 }
 
@@ -1097,7 +1375,7 @@ saturation regime, where the relationship between \(V_{ds}\) and
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch2/NTQ31C5ch1on_off_current.png}
+\includegraphics{figures/ch7/Q23D7_ch3_DMSOPBASE.png}
 
 }
 
@@ -1115,358 +1393,256 @@ saturation regime, where the relationship between \(V_{ds}\) and
 
 \end{minipage}%
 
-\caption{\label{fig-gating-transfer}Examples of field-effect transistor
-transfer characteristics taken at \(V_{ds}\) = 100 mV using two carbon
-nanotube network device channels fabricated in the same manner. A linear
-scale is used in (a) and (b), while a logarithmic scale is used in (c)
-and (d). The curves in (a) and (c) are from a backgated channel, while
-the curves in (b) and (d) are from a liquid-gated channel. The linear
-fit with gradient corresponding to transconductance at \(V_g\) = 0 V is
-shown in (a) and (b) with a dotted red line. The ``on'' current in (c)
-and (d) is shown with a red horizontal line, while the ``off'' current
-is shown with a blue horizontal line.}
+\caption{\label{fig-PBASE-vs-solvent-only}The electrical transfer
+characteristics of carbon nanotube transistors (\(V_{ds}\) = 100 mV)
+before and after being submerged in MeOH (a) or DMSO (b) for one hour
+and subsequently rinsed with deionised water. The change in
+characteristics of similar transistor channels after being submerged in
+these same solvents containing 1 mM PBASE for one hour and then rinsed
+are shown in (c) and (d) respectively. Average threshold voltages for
+each transfer characteristic curve are also shown (taking the average of
+forward and reverse sweep values).}
 
 \end{figure}
 
-The linear and saturation regions for a metal oxide thin-film transistor
-are shown in Figure~\ref{fig-linear-region}. In this thesis, constant
-\(V_g\) measurements from thin-film transistors were typically taken
-when \(V_{ds}\) was small and the TFT was in the linear operation
-regime. Figure~\ref{fig-gating-transfer} (a) and (c) show back-gated
-transfer characteristics of a thin-film transistor, and
-Figure~\ref{fig-gating-transfer} (b) and (d) show liquid-gated TFT
-transfer characteristics. The back-gated device exhibits unipolar
-behaviour, where the transistor conducts in only one direction along the
-\(I_d - V_g\) curve, while the liquid-gated device exhibits ambipolar
-behaviour, where conduction occurs along both directions of the curve.
-The liquid-gated device is also able to traverse a wide range of
-currents over a much more limited voltage interval than the back-gated
-device. A variety of quantitative parameters or figures of merit can be
-extracted from the transfer characteristics of a thin-film transistor
-\autocite{Petti2016}. Transconductance and on-off ratio are discussed
-below, while threshold voltage and subthreshold swing are discussed for
-the carbon nanotube network case in
-Section~\ref{sec-electrical-characterisation-CNT}.
+Capactive gating results from dense coverage of adsorped molecules on
+the carbon nanotube surface which have a low permittivity relative to
+the surrounding electrolyte \autocite{Heller2008}. The relative
+permittivity of MeOH and DMSO are \(\sim\) 33 \autocite{Mohsen-Nia2010}
+and \(\sim\) 47 \autocite{Hunger2010} respectively, which are both much
+lower than the relative permittivity of PBS, \(\sim\) 80
+\autocite{Shkodra2021}. From Figure~\ref{fig-PBASE-vs-solvent-only} (a)
+and Figure~\ref{fig-PBASE-vs-solvent-only} (b), the threshold shift
+values found resulting from exposure to each solvent, taking the average
+of forward and reverse sweep values from a single device, were
+\(\Delta V = -0.15 \pm 0.02\) V and \(\Delta V = -0.15 \pm 0.01\) V for
+MeOH and DMSO respectively. The average threshold shift value for a
+second device exposed to MeOH was \(\Delta V = -0.16 \pm 0.02\) V,
+indicating that this threshold shift result is reproducible.
 
-One of the most important figures of merit which can be extracted from
-the transfer characteristic curve of a thin-film FET is the on-off
-current ratio, the ratio of the current through a device when the
-transistor is gated fully `on', \(I_{on}\), to the current \(I_{off}\)
-when gated fully `off'. \autocite{Kauffman2008,Petti2016,Shkodra2021}.
-Having a low off current is desirable as it corresponds to low power
-consumption by the transistor \autocite{Rouhi2010}. In
-Figure~\ref{fig-gating-transfer} (a), there is a clear on regime at
-large negative voltages and an off regime at large positive voltages.
-Although the transfer curve never completely flattens in each direction,
-\(I_{on}\) can be reasonably be estimated by the highest current
-obtained, while \(I_{off}\) can be estimated from the lowest current
-reading. In an ambipolar FET, such as that shown in
-Figure~\ref{fig-gating-transfer} (b), the off current can be defined as
-the minimum current during the transfer sweep, where the majority
-carrier transitions from being holes to electrons or \emph{vice versa}
-\autocite{Petti2016,Zheng2017}. For the backgated channel shown in
-Figure~\ref{fig-gating-transfer} (a), the on-off ratio
-\(I_{on}/I_{off}\) is \(\sim\) 700, while for the liquid-gated device in
-Figure~\ref{fig-gating-transfer} (b), \(I_{on}/I_{off} \sim 3000\). The
-superior on-off ratio is a significant advantage of the liquid-gated
-configuration \autocite{Shkodra2021}.
+Using the same characterisation process as in this work, Murugathas
+\emph{et al.} \autocite{Murugathas2019a} showed that the attachment of
+PBASE to a solvent-deposited carbon nanotube network had little effect
+on channel threshold voltage, implying the presence of PBASE had not
+significantly influenced channel gating. Here, an average threshold
+voltage shift of \(-0.06\pm0.04\) V is seen after PBASE
+functionalisation in MeOH and \(-0.06\pm0.01\) V after PBASE
+functionalisation in DMSO. These threshold voltage shifts are small
+compared to solvent only. It is possible that the attachment of PBASE
+prevents solvent adsorption, and has a small negative gating effect on
+the channel. Alternatively, while the solvent negatively gates the
+channel, resulting in a threshold shift of -0.15 V, the PBASE may be
+counteracting this by positively gating the channel, resulting in a
+threshold shift of +0.09 V. Murugathas \emph{et al.} also observed a
+slight increase in channel conductance after PBASE functionalisation
+\autocite{Murugathas2019a}. Figure~\ref{fig-PBASE-vs-solvent-only} also
+shows a slight increase in channel conductance post-functionalisation in
+both Figure~\ref{fig-PBASE-vs-solvent-only} (c) and
+Figure~\ref{fig-PBASE-vs-solvent-only} (d) relative to the solvent-only
+case in Figure~\ref{fig-PBASE-vs-solvent-only} (a) and
+Figure~\ref{fig-PBASE-vs-solvent-only} (b). This result implies that the
+presence of PBASE molecules increases channel mobility and therefore
+conductance \autocite{Heller2008}.
 
-In the linear regime, transconductance at a specific gate voltage is
-given by \(g_m = |dI_{d}/dV_g|\). Transconductance indicates how
-responsive the device is to electrostatic gating at a given gate
-voltage. In other words, when \(g_m\) is large, small changes in \(V_g\)
-can significantly modulate channel current \(I_d\), which is useful for
-sensing \autocite{Heller2009a,Ohno2015,Kireev2017}. Transconductance at
-a given gate voltage is also proportional to the mobility (movement) of
-charge carriers in the device channel, and therefore depends on the
-scattering properties of the material
-\autocite{Rouhi2010,Petti2016,Li2023}. The transconductance at a
-specific gate voltage can be found from performing a linear fit in a
-small region around that voltage on the transfer curve. Linear fits for
-transconductance at \(V_g = 0\) V, the operating voltage used for
-sensing in this thesis, are shown for a back-gated device in
-Figure~\ref{fig-gating-transfer} (a), and a liquid-gated device in
-Figure~\ref{fig-gating-transfer} (b). The corresponding transconductance
-values of \(g_m\) = 0.002 µS and \(g_m\) = 1 µS respectively. The
-difference of several orders of magnitude between back-gated and
-liquid-gated transconductance corresponds to the difference of several
-orders of magnitude between back and liquid-gated gate capacitance
-\autocite{Tran2016,Shkodra2021}. The ability to achieve high
-transconductance at relatively low voltage is important for the creation
-of low power sensors, which is another advantage of the liquid-gated
-setup.
+The absorption of organic solvent by the carbon nanotube network has
+unknown but potentially negative implications for biosensor
+functionalisation. Use of organic solvents in functionalisation can also
+attack the encapsulation layer of devices, promoting gate current
+leakage. In light of these issues, recent work has begun to explore
+alternative aqueous-based methods for functionalisation of biosensors
+\autocite{Khan2021}. The discussion here also illustrates the importance
+of considering each substance used when electrical characterising a
+device to verify if functionalisation has worked. The qualitative
+presence of a change in characteristics (or lack of one) over the full
+process is not sufficient to make conclusive remarks regarding
+successful functionalisation. A full set of electrical control
+measurements are required for an understanding of electronic changes
+occuring during the functionalisation process, in the manner of Besteman
+\emph{et al.} \autocite{Besteman2003}.
 
-Application of higher voltages to the gate in both the liquid-gate and
-back-gate cases can result in significant leakage currents through the
-gate. These currents mean that the insulating layer at the gate
-producing the capacitive effect no longer acts as an insulator,
-adversely affecting transistor behaviour and contributing to sensor
-drift that may be mistaken for signal responses to analyte
-\autocite{Noyce2019,Shkodra2021,Albarghouthi2022}. In the case of
-back-gated devices, gate leakage occurs due to conduction through the
-oxide dielectric. If the gate voltage produces an electric field
-exceeding the dielectric strength of the oxide, dielectric breakdown can
-occur, where the oxide layer no longer acts as an insulator. Breakdown
-results from voltage-induced oxygen vacancies in the SiO\(_2\) lattice
-forming a conductive path through the insulator \autocite{Padovani2017}.
-Breakdown occured at \(\sim\) 50 V for the back-gated channel in
-Figure~\ref{fig-gating-transfer}. In the liquid-gated case, the
-electrolyte used determines the appropriate voltage range for electrical
-characterisation, since excessive voltages will induce redox reactions.
-For water-based electrolytes, gate voltages must be kept within the
-\(\pm\) 1 V range \autocite{Wang2010,Ohno2015,Shkodra2021}. In normal
-operation, gate current should appear negligible on a linear scale, as
-shown in Figure~\ref{fig-gating-hysteresis}.
+\hypertarget{sec-PBA}{%
+\section{Attachment of 1-Pyrenebutyric Acid}\label{sec-PBA}}
+
+\hypertarget{comparing-attachment-methods}{%
+\subsection{Comparing Attachment
+Methods}\label{comparing-attachment-methods}}
+
+Another linker molecule that can be used to attach receptor molecules to
+a carbon nanotube or graphene channel is 1-pyrenebutyric acid (PBA or
+PyBA). As with PBASE, the pyrene group of PBA has a \(\pi\) interaction
+with the carbon rings of the channel surface. It is possible to react
+PBA with 1-ethyl-3-(3-dimethylaminopropyl) carbodiimide hydrochloride
+(EDC or EDAC) to form an \emph{O}-acylisourea intermediate, which can
+then react with an amine group on a biomolecule and form an amide bond
+\autocite{Sehgal1994,Hermanson2013-4}. The water solubility of EDC means
+that, unlike PBASE, it is possible to functionalise with EDC dissolved
+in water rather than in an organic solvent. However, like PBASE, EDC and
+the \emph{O}-acylisourea intermediate are prone to hydrolysis,
+especially in acidic conditions.
+
+\newpage
+\thispagestyle{empty}
+\KOMAoptions{paper=landscape,pagesize}
+
+\hfill\break
+\hfill\break
+
+\hypertarget{tbl-pba-functionalisation}{}
+\begin{longtable}[]{@{}llllllll@{}}
+\caption{\label{tbl-pba-functionalisation}Comparison of 1-pyrenebutyric
+acid (PBA) functionalisation processes used for immobilisation of
+proteins, enzymes and aptamers onto carbon nanotubes and graphene.
+1-ethyl-3-(3-dimethylaminopropyl) carbodiimide hydrochloride (EDC) and
+NHS were co-mingled in PBS or DI water in each process - some papers
+used N-hydroxysulfosuccinimide instead of N-hydroxysuccinimide, and both
+compounds are abbreviated as NHS in this table for simplicity. Device
+exposure times to each solution are shown next to the solution
+concentration. Blank entries indicate there was no mention of the
+parameter in a particular paper. \(^†\)PEG or PEG pyrene were used to
+reduce non-specific binding. \(^{††}\)Several pyrene-based linkers were
+compared and PBA gave an optimal functionalisation
+result.}\tabularnewline
+\toprule\noalign{}
+Solvent & Channel & PBA (mM) & Time (hr) & EDC (mM) & NHS (mM) & Time
+(min) & References \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Solvent & Channel & PBA (mM) & Time (hr) & EDC (mM) & NHS (mM) & Time
+(min) & References \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+DMF & Graphene & 0.6 & 1 & - & - & 120 & Gao, 2016\(^†\).
+\cite{Gao2016} \\
+& & 5 & 2 & 2 & 5 & 30 & Mishyn, 2022. \cite{Mishyn2022} \\
+& CNT & 100 & 3 & 200 & - & 30 & Min, 2012. \cite{Min2012} \\
+& Graphene, CNT & 7.6 & 2 & 8 & 20 & 120 & Xu, 2014. \cite{Xu2014} \\
+DI water & CNT & - & - & 32 & 12 & Overnight & Pacios, 2012\(^†\).
+\cite{Pacios2012} \\
+Ethanol & CNT & 1 & 1 & 100 & 100 & 20 & Filipiak, 2018\(^†\).
+\cite{Filipiak2018} \\
+Acetonitrile & Graphene & 1 & 1 & 400 & 100 & 60 & Tong, 2020\(^{††}\).
+\cite{Tong2020} \\
+Borax & CNT & 2 & 24 & 2.5 & - & 1080 & Liu, 2011\(^†\).
+\cite{Liu2011} \\
+DMSO & Graphene & 5 & 1 & 50 & 50 & 90 & Fenzl, 2017.
+\cite{Fenzl2017} \\
+\end{longtable}
+
+\newpage
+\KOMAoptions{paper=portrait,pagesize}
+
+Therefore, like PBASE, it should be stored at −20°C, and warmed to room
+temperature to prevent condensation build-up, since exposure to
+condensation will hydrolyse the reagent \autocite{Hermanson2013-4}.
+Furthermore, by adding N-Hydroxysuccinimide (NHS) or
+N-hydroxysulfosuccinimide (sulfo-NHS) to the reaction vessel, PBASE is
+formed as an active intermediate, which is less prone to hydrolysis and
+increases the PBA/EDC reaction yield
+\autocite{Sehgal1994,Hermanson2013-4,Hermanson2013-14}.
+
+A full comparison of functionalisation procedures used for linking
+carbon nanotube and graphene devices to aptamers and proteins with PBA
+is given in Table~\ref{tbl-pba-functionalisation}. To the best of my
+knowledge, this table is as complete a summary as possible of
+1-pyrenebutyric acid functionalisation processes for carbon nanotube and
+graphene field-effect transistor biochemical sensors. By comparing
+Table~\ref{tbl-pbase-functionalisation} and
+Table~\ref{tbl-pba-functionalisation}, it is clear that PBASE is more
+widely used for non-covalent functionalisation than PBA/EDC.
+
+As was the case for PBASE, there are a wide range of process variables
+used for the functionalisation process, with little justification used
+for variables chosen. Also notable is the frequent use of polyethylene
+glycol (PEG) or pyrene-PEG for prevention of non-specific binding (NSB).
+Non-specific binding is discussed further in
+\textbf{?@sec-non-specific-binding}. Despite being less widely used,
+Mishyn \emph{et al.} \autocite{Mishyn2022} state a preference for the
+use of PBA/EDC over PBASE, as they found it was less prone to hydrolysis
+and gave a larger reaction yield when binding ferrocene to graphene. A
+potential downside of using PBA/EDC for protein immobilisation is that
+EDC has numerous ways of interacting with proteins, and not all of these
+are necessarily desirable. Furthermore, the addition of NHS may also
+cause other issues, such as precipitation of the reaction compound
+\autocite{Hermanson2013-4}. The greater range of process variables
+involved in the functionalisation also adds to the complexity of
+reproducing past results.
+
+\hypertarget{raman-spectroscopy}{%
+\subsection{Raman Spectroscopy}\label{raman-spectroscopy}}
 
 \begin{figure}
 
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{./figures/(a).png}
+{\centering \includegraphics[width=0.5\textwidth,height=\textheight]{figures/ch7/comparison_raman.png}
 
 }
 
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{./figures/ch2/Q5C10_hysteresis.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{./figures/(b).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{./figures/ch2/NTQ31C5_hysteresis.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-
-\caption{\label{fig-gating-hysteresis}Field-effect transistor transfer
-characteristics taken at \(V_{ds}\) = 100 mV from two different device
-channels on a linear scale. Forward and reverse sweeps are shown for the
-back-gated case (a) and the liquid-gated case (b), with the direction of
-each sweep indicated by an arrow. A sweep rate of \(V_{ds}\) = 10
-mV/sample was used for both transfer curves. The gate current measured
-during each sweep is also shown with a dotted line.}
+\caption{\label{fig-linker-raman}This box plot shows the distribution of
+D-band peak to G\(^+\)-band peak ratio, \(I_D/I_G\), across nine
+locations for a selection of chemically-modified carbon nanotube films.
+The D-band and G-band intensities for all samples were first normalised
+to the intensity peak corresponding to the SiO\(_2\) substrate.}
 
 \end{figure}
 
-Thin-film transistor devices typically exhibit some degree of
-hysteresis, where the history of channel current affects future current
-behaviour. Hysteresis in carbon nanotube and graphene field-effect
-transistors is a result of filling or emptying of slow-discharge charge
-traps in the channel environment. These charge traps effectively dope
-the SiO\(_2\) insulator or the insulator-channel interface, which
-results from gate bias stress or dopant adsorption
-\autocite{McEuen2002,Kim2003,Wang2010,Bartolomeo2011,Bargaoui2018,Peng2018}.
-A capacitive gating effect from charged ions also contributes to
-hysteresis, from the use of a electrolyte-gated environment or from
-charged surface contamination \autocite{Wang2010,Yao2021}. Due to
-hysteresis, sweeping \(V_g\) forwards across a set voltage range will
-result in a different \(I_d - V_g\) characteristic curve than
-subsequently sweeping over \(V_g\) in the reverse direction. Hysteresis
-depends on the voltage range used for characterisation, the sweep rate
-and the environment of the transistor channel
-\autocite{Kim2003,Wang2010}. The effect of hysteresis on \(I_d\) when
-sweeping gate voltage is shown in Figure~\ref{fig-gating-hysteresis}.
-The measured hysteresis is significantly lower in the liquid-gated case,
-possibly due to the smaller voltage range. However, this change may also
-result from a reduction in trap states in the SiO\(_2\) layer due to the
-use of a liquid-gate.
+Raman spectroscopy was used to verify the attachment of PBA to a carbon
+nanotube network film with a SiO\(_2\) substrate in the manner outlined
+in \textbf{?@sec-raman-characterisation}. As highly-bundled devices were
+found to have less defects present prior to modification, as discussed
+in \textbf{?@sec-pristine-raman}, solvent-deposited films were used for
+the verification of pyrene attachment to prevent the initial presence of
+defects influencing the analysis. Droplets of DMSO solution were placed
+on three (solvent-deposited) carbon nanotube films taken from the same
+wafer. The DMSO solution on one film contained 5 mM PBA, the solution on
+another film contained 5 mM PBASE, and the DMSO on the final film
+contained no linker molecule. After incubation for 1 hour, films were
+rinsed for 15 s with DMSO, then for 15 s with IPA to remove excess DMSO
+while avoiding hydrolysis of the PBASE. After the first set of Raman
+spectra was taken, the film initially exposed to PBA was further exposed
+to a solution of 20 mM EDC and 40 mM NHS in \(1 \times\) phosphate
+buffer saline (PBS) electrolyte for 30 minutes, and a second set of
+Raman spectra was taken for this film. As in
+\textbf{?@sec-pristine-raman}, two spectra taken at each position were
+processed according to Section~\ref{sec-raman-analysis}, and the
+SiO\(_2\) reference peak measured in the wavenumber range 100
+cm\(^{-1}\) \(-\) 650 cm\(^{-1}\) was used to normalise the D-band and
+G-band peaks from the wavenumber range 1300 cm\(^{-1}\) \(-\) 1650
+cm\(^{-1}\). The ratio between the average intensity of the D-peak and
+the G\(^+\)-peak at each position was calculated, and the distribution
+of ratio values corresponding to each modified film is shown in
+Figure~\ref{fig-linker-raman}.
 
-Memory effects are also present during current measurement when both
-source-drain and source-gate voltages are kept constant. These changes
-appear as a slow change in current, and are referred to here as either
-signal drift or baseline drift. In more extreme cases, baseline drift
-can obscure or even be confused with current changes attributable to
-analyte interaction during real-time sensing \autocite{Noyce2019}.
-Signal drift occurs both in ambient conditions and in a vacuum
-environment, and cannot be accounted for by changes in room temperature
-and ambient lighting alone. While research into signal drift is ongoing,
-it appears to be a hysteretic effect resulting from changes in trap
-states over time \autocite{Lin2006,Bargaoui2018,Noyce2019}. The high
-demand for characterisation equipment in a standard device laboratory
-means that waiting over three hours for baseline drift to settle is
-impractical, and furthermore, extended periods of voltage application
-may degrade bio-functionalised devices \autocite{Noyce2019}. Since trap
-states are unavoidable to some extent
-\autocite{DiMaria1993,Collins2000}, data analysis that accounts for
-baseline drift was therefore explored in some detail in this thesis.
+There is a \(\sim 3 \times\) increase in the intensity ratio \(I_D/I_G\)
+for both the films modified with PBASE and PBA compared to the film
+which was only exposed to DMSO. Previous works have found that a change
+in the intensity ratio indicates successful \(\pi\)-stacking on the
+carbon nanotube surface, as it indicates surface modification of the
+carbon nanotubes has occurred \autocite{Wei2010,Lan2013}. Wei \emph{et
+al.} \autocite{Wei2010} found functionalisation with PBASE altered the
+ratio by a factor of \(\sim 1.5 \times\), while Lan \emph{et al.}
+\autocite{Lan2013} found that functionalisation with PBA altered the
+ratio by a factor of \(\sim 0.8 \times\). The reason for the large
+difference between results is not immediately clear, but may result from
+the significant differences in the pristine composition and morphology
+of carbon nanotube networks used in each publication, and differences in
+the functionalisation method used. Across all scan locations in
+Figure~\ref{fig-linker-raman}, the value found for \(I_D/I_G\) is
+consistently \(\sim 0.095\) for both PBA and PBASE. Furthermore,
+subsequent Raman measurements of the PBA-modified film after further
+functionalisation with EDC/NHS do not show a significant change in
+\(I_D/I_G\). These results indicate that presence of the NHS ester has
+little effect on the Raman shift. Raman spectroscopy therefore cannot be
+used to distinguish between the presence of PBA and PBASE on the device
+surface. However, it is clear that functionalisation of the carbon
+nanotube network with both the PBA and PBASE has led to measurable
+\(pi\)-stacking between the network and the pyrene group attached to
+each compound.
 
-\hypertarget{graphene-field-effect-transistors}{%
-\section{Graphene Field-Effect
-Transistors}\label{graphene-field-effect-transistors}}
-
-\hypertarget{graphene-properties}{%
-\subsection{Graphene Properties}\label{graphene-properties}}
-
-Graphene is a 2-dimensional material which consists of covalently bonded
-carbon atoms in a dense lattice of hexagonal cells
-\autocite{McEuen2002,Novoselov2004,Geim2007,Tran2016}. Graphene can be
-used to create a variety of low-dimensional graphitic nanomaterials,
-including carbon nanotubes \autocite{McEuen2002} (see
-Section~\ref{sec-carbon-nanotubes}). Monolayer and bilayer graphene are
-zero band-gap semiconductors, where traversing the electronic
-bandstructure in different directions gives rise to either metallic or
-semiconducting behaviour \autocite{McEuen2002,Peng2018}. Adding more
-graphene layers adds more complexity to the bandstructure, with
-significant overlap between bands and reduced carrier mobility. When 10
-or more layers are present, the structure behaves as 3-dimensional
-graphite \autocite{Geim2007,Ohno2015}. First isolated and used as a
-thin-film transistor channel in 2004 \autocite{Novoselov2004}, monolayer
-graphene has many desirable electronic properties. Charge carrier
-transport is ballistic over submicrometer distances at room temperature,
-and as graphene is metallic even at the Dirac point, this transport is
-not inhibited by a Schottky barrier at the metal contacts of a device
-\autocite{Novoselov2004,Geim2007,Peng2018}. Graphene is also a highly
-chemically stable material. In particular, it will not readily oxidise
-in an electrolyte solution due to having a large `electrochemical
-window'; in other words, it is too chemically stable to take part in
-electrochemical reactions within a large range of applied voltages
-\autocite{Ohno2015,Tran2016}.
-
-\hypertarget{graphene-folds}{%
-\subsubsection*{Graphene Folds}\label{graphene-folds}}
-\addcontentsline{toc}{subsubsection}{Graphene Folds}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.5\textwidth,height=\textheight]{./figures/ch2/modified_NGW8D4_1mM_rhodamineB_centralchannel3_postMsurfactantclean5min_2.4sexposure_20X_221111.png}
-
-}
-
-\caption{\label{fig-graphene-folds}Fluorescence image of a strip of
-graphene on SiO\(_2\) surface functionalised with Rhodamine B dye.
-Bright lines are visible on the left side of the graphene surface which
-correspond to preferential attachment of dye along the graphene folds.}
-
-\end{figure}
-
-Graphene folding (also referred to as warping or wrinkling) of up to
-\(\sim\) 6 nanometers in height occurs at many locations on a graphene
-monolayer \autocite{Zhu2012}. These folds primarily result from the
-chemical vapour deposition (CVD) process onto copper used in the
-creation of graphene films. The thermal contraction of copper exceeds
-that of graphene during the rapid cooling that takes place after
-deposition. Since the graphene is pinned to the surface, this leads to
-slight folding of the monolayer
-\autocite{Zhao2012,Zhu2012,Chhikara2013}. Transferring graphene from the
-rough copper to a relatively smooth Si/SiO\(_2\) wafer may also
-contribute to wrinkling \autocite{Zhao2012,Kireev2017}. These folds help
-to mechanically stabilise the graphene layer, but have significant
-negative effects on charge transport
-\autocite{Geim2007,Chhikara2013,Zhu2012}. Folds also exhibit enhanced
-reactivity due to their low radius of curvature \autocite{Zhao2012}.
-This is demonstrated in Figure~\ref{fig-graphene-folds}, where the
-fluorescent Rhodamine B dye preferentially bonds to folded regions,
-leading to particularly dense functionalisation in these regions. This
-behaviour has previously been observed for the decoration of graphene
-with pentacene molecules \autocite{Chhikara2013}. Other defects
-influencing surface reactivity include grain boundaries and point
-defects in the crystal structure
-\autocite{Zhao2012,Chhikara2013,Kireev2017}.
-
-\hypertarget{sec-electrical-characterisation-graphene}{%
+\hypertarget{sec-PBA-characterisation}{%
 \subsection{Electrical
-Characterisation}\label{sec-electrical-characterisation-graphene}}
-
-The transfer sweep behaviour of a graphene device is ambipolar and has
-no off regime under standard conditions
-\autocite{Novoselov2004,Bartolomeo2011,Ohno2015}. When a gate voltage
-\(V_g\) is applied to the channel of a graphene device, the Fermi energy
-of the graphene is shifted and surface charge density is altered
-\autocite{Novoselov2004,Heller2010,Ohno2015}. An increase in surface
-charge density means an increase in carriers available for either \(p\)
-or \(n\)-conduction and increased \(I_d\) \autocite{Geim2007}. The
-regions of hole conduction and electron conduction are shown in
-Figure~\ref{fig-graphene-characteristics} (a), alongside the
-corresponding Fermi energy on the simplified graphene bandstructure
-(known as a `Dirac cone'). The transconductance of the curve at \(V_g\)
-= 0 V, \(g_m\) = 1 µS, is similar to the liquid-gated transconductance
-of a carbon nanotube device shown earlier. As graphene lacks a bandgap,
-there is a minimum possible conductance for graphene devices, which
-leads to a relatively small on-off ratio
-\autocite{Novoselov2004,Geim2007}. Folding may further decrease on-off
-ratio due to diffusive transport of carriers along the folds
-\autocite{Zhu2012}. The on-off ratio of the graphene transfer curve
-shown in Figure~\ref{fig-graphene-characteristics} (a) is 5. A bandgap
-can be introduced to a graphene device using a dual-gated configuration,
-increasing the on-off ratio past 100 \autocite{Xia2010}.
+Characterisation}\label{sec-PBA-characterisation}}
 
 \begin{figure}
 
@@ -1476,7 +1652,7 @@ increasing the on-off ratio past 100 \autocite{Xia2010}.
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/(a).png}
+\includegraphics{figures/(a).png}
 
 }
 
@@ -1500,7 +1676,7 @@ increasing the on-off ratio past 100 \autocite{Xia2010}.
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch2/Graphene_transfer_1.png}
+\includegraphics{figures/ch7/NTQ24C10_ch3_comparison_1.png}
 
 }
 
@@ -1524,7 +1700,7 @@ increasing the on-off ratio past 100 \autocite{Xia2010}.
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/(b).png}
+\includegraphics{figures/(b).png}
 
 }
 
@@ -1548,7 +1724,7 @@ increasing the on-off ratio past 100 \autocite{Xia2010}.
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch2/Graphene_transfer_2.png}
+\includegraphics{figures/ch7/NTQ24C10_ch3_comparison_2.png}
 
 }
 
@@ -1565,309 +1741,14 @@ increasing the on-off ratio past 100 \autocite{Xia2010}.
 }
 
 \end{minipage}%
-
-\caption{\label{fig-graphene-characteristics}Liquid-gated transfer
-characteristics of two graphene field-effect transistor channels. In
-(a), the Dirac point voltage is indicated by a red dotted line, and
-regions of hole conduction and electron conduction are also shown. The
-relative Fermi energy in each region is shown on graphene bandstructure
-insets (Adapted from \autocite{Geim2007,Ohno2015}). The graphene channel
-in (b) has double conduction minima, which are highlighted with red
-arrows. The relative Fermi energy at each minima is also shown on
-bandstructure insets (Adapted from \autocite{Peng2018}).}
-
-\end{figure}
-
-The minimum conductance obtainable by gating in a graphene device occurs
-at what is known as the charge neutrality or Dirac point, where the
-population of charge carriers is at a minimum
-\autocite{Novoselov2004,Bartolomeo2011,Ohno2015,Kireev2017}. At gate
-voltages close to the Dirac voltage, both electrons and holes are
-present, and at the Dirac point, there are equal concentrations of each
-carrier present \autocite{Novoselov2004,Bartolomeo2011,Peng2018}. As
-shown in Figure~\ref{fig-graphene-characteristics} (a), as the gate
-voltage moves left away from the Dirac voltage and Fermi energy is
-shifted into the valence band, holes begin to dominate conduction, while
-as gate voltage is moved to the right of the Dirac voltage, where Fermi
-energy is shifted into the conduction band, electrons dominate
-\autocite{Novoselov2004,Bartolomeo2011,Feng2014,Zhang2015}. At points
-far from the Dirac voltage, conductivity increases linearly
-\autocite{Novoselov2004,Bartolomeo2011,Peng2018}. Typically, a monolayer
-graphene channel conducts holes at zero gate voltage, which results from
-the presence of \(p\)-dopants such as oxygen and water adsorbed from the
-air and resist residues. By removing these dopants, the Dirac point
-feature can be brought closer to the zero gate voltage position on the
-transfer curve, indicating graphene is naturally a mixed-carrier
-conductor
-\autocite{Novoselov2004,Bartolomeo2011,Zhang2015,Kireev2017,Peng2018}.
-
-Some graphene devices naturally exhibit a double-minimum feature in the
-transfer characteristic curve, corresponding to two separate Dirac
-points \autocite{Bartolomeo2011,Feng2014,Zhang2015,Kireev2017,Peng2018}.
-This effect is due to doping of graphene by charge transfer from the
-metal contacts. In shorter length channels, metal doping affects the
-entire channel length. Band bending from channel doping near the metal
-contact results in a consistent Fermi level across the channel, meaning
-only a single Dirac point is present in the transfer characteristic
-curve. However, for longer channels, metal doping no longer occurs
-across the entire channel length \autocite{Bartolomeo2011,Peng2018}.
-This discrepancy leads to a difference in Fermi level between the
-metal-doped graphene and graphene in the unaffected channel region
-\autocite{Bartolomeo2011,Feng2014,Peng2018,Zhang2015}. The difference in
-Fermi levels results in the introduction of a second Dirac point. The
-relative level of doping in the metal-doped and unaffected channel
-regions determines the relative \(V_g\) position of each local minimum
-on the \(I_d - V_g\) curve \autocite{Bartolomeo2011,Peng2018,Zhang2015}.
-
-Figure~\ref{fig-graphene-characteristics} (b) shows a double-minimum
-transfer characteristic with each Dirac point indicated. At large
-negative \(V_g\), the Fermi energy level is far from the Dirac point
-energy of both the channel and contact regions, and holes dominate
-conduction. As \(V_g\) and the Fermi energy approach and then pass the
-Dirac point corresponding to the left minimum \(V_{D,-}\), the available
-carriers likewise decrease to a minimum and begin to increase again in
-one region \(R_1\), but continuously decrease in the other region
-\(R_2\). The shape of the curve between \(V_{D,-}\) and the right local
-minimum \(V_{D,+}\) then depends on the relative rate of increasing
-electron and decreasing hole populations, where the graphene is
-\(n\)-doped in \(R_1\) and \(p\)-doped in \(R_2\). At the local minimum
-on the right, \(V_{D,+}\), the carriers in \(R_2\) now reach a minimum,
-while carriers in \(R_1\) continue to increase. At voltages well beyond
-\(V_{D,+}\), electrons then dominate conduction in both regions
-\autocite{Bartolomeo2011,Zhang2015,Peng2018}.
-
-\hypertarget{sensing-behaviour}{%
-\subsection{Sensing Behaviour}\label{sensing-behaviour}}
-
-The large surface-to-volume ratio of graphene makes it highly sensitive
-to intermolecular interactions and therefore appropriate for use in
-sensing applications \autocite{Ohno2015,Tran2016}. An analyte molecule
-can be detected using a graphene channel by observing the change in
-current that occurs when the presence of a charged analyte alters the
-channel Fermi level \autocite{Heller2010,Ohno2015}. Sensing may be
-dominated by interactions occurring at the graphene folds
-\autocite{Zhao2012}. The small on-off ratio of graphene is a drawback
-when used in field-effect transistor sensing applications when compared
-with carbon nanotube transistors \autocite{Novoselov2004}. If a
-dual-gate configuration is used, however, on-off ratio can be increased
-significantly by introducing a bandgap. The presence of a bandgap means
-a Schottky barrier is introduced at the graphene-electrode interface,
-whose modulation can then also contribute as a potential sensing
-mechanism (see Section~\ref{sec-cnt-network-details} for a discussion of
-Schottky barriers) \autocite{Xia2010}.
-
-\hypertarget{carbon-nanotube-field-effect-transistors}{%
-\section{Carbon Nanotube Field-Effect
-Transistors}\label{carbon-nanotube-field-effect-transistors}}
-
-\hypertarget{sec-carbon-nanotubes}{%
-\subsection{Carbon Nanotube Properties}\label{sec-carbon-nanotubes}}
-
-Since their initial identification in 1991 \autocite{Iijima1991}, a wide
-range of applications for carbon nanotubes (CNTs) have been proposed,
-due to their small mass, elasticity, strength, and unique electronic
-properties. A single-walled carbon nanotube (SWCNT) consists of a
-monolayer graphene sheet rolled up into a cylinder, while a multi-walled
-carbon nanotube (MWCNT) consists of several monolayer graphene cylinders
-where smaller cylinders are coaxially contained by larger cylinders
-\autocite{Dekker1999,Avouris2007,Cao2009,Rouhi2010,Shkodra2021}.
-Multi-walled carbon nanotubes can suffer from significant scattering at
-defects leading to diffusive electron motion \autocite{Dekker1999}.
-However, single-walled carbon nanotubes are relatively defect-free, and
-carrier transport within nanotubes is near-ballistic at room
-temperature, resulting in high carrier mobility
-\autocite{Dekker1999,Avouris2007,Cao2009,Rouhi2010,Shkodra2021}. The
-momentum of charge carriers in a single-walled carbon nanotube is
-quantised, confining carriers to 2-dimensional slices across the
-3-dimensional graphene bandstructure. If a slice contains a bandgap, the
-carbon nanotube behaves as a semiconductor (s-CNT); if not, the nanotube
-behaves as a metal (m-CNT) \autocite{McEuen2002}. The high
-surface-to-volume ratio of small-diameter single-walled carbon nanotubes
-makes them extremely sensitive and therefore particularly suitable for
-sensing applications \autocite{Cao2009,Yao2021,Shkodra2021}. Like
-graphene, carbon nanotubes have a large potential window, and can be
-used safely in a liquid-gate environment without undergoing redox
-reactions \autocite{Ohno2015}.
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.55\textwidth,height=\textheight]{./figures/ch2/carbon_nanotube_wrapping.png}
-
-}
-
-\caption{\label{fig-carbon-nanotube-wrapping}Diagram illustrating how a
-graphene sheet can be rolled up at various angles to form carbon
-nanotubes. The two black dotted lines represent boundaries which can be
-cut across and then brought into contact to form a cylinder. The
-cylinder here is referred to by the integer pair (6,4), as the chiral
-vector \(C_h\), the vector perpendicular to the cut through the sheet,
-is given by \(C_h = 6a_1+4a_2\). The chiral vector forms the
-circumference of the rolled carbon nanotube. The left edge in the zigzag
-(\(n\),0) and armchair (\(n\),\(n\)) cases are shown with a blue and
-purple dotted line respectively. The location of the right edge
-(diameter of the nanotube) is determined by the value chosen for \(n\).
-Adapted from \autocite{Dekker1999,Lu2012}.}
-
-\end{figure}
-
-The chirality and diameter of a carbon nanotube determines its
-electronic bandstructure and whether it has semiconducting or metallic
-characteristics
-\autocite{Martel1998,Dekker1999,McEuen2002,Avouris2007,Shkodra2021,Li2023}.
-The chirality indices of a nanotube (\(n\),\(m\)) determines the chiral
-angle at which hexagons wind around the nanotube relative to the
-longitudinal axis of the nanotube. This chiral angle is the angle
-between the chiral vector
-\(\textbf{C}_h = n\textbf{a}_1+m\textbf{a}_2\), which maps to the
-circumference of the nanotube, and the basis vector \(\textbf{a}_1\),
-which is parallel to a row of hexagons. The size of the chiral angle
-\(\theta\) is given by Equation~\ref{eq-chiral-angle}, the diameter of
-the resulting carbon nanotube is given by \(d=|C_h|/\pi\)
-\autocite{Lu2012}.
-
-\begin{equation}\protect\hypertarget{eq-chiral-angle}{}{
-\theta = \arcsin\frac{\sqrt{3}m}{2\sqrt{n^2+nm+m^2}}, \space n > m
-}\label{eq-chiral-angle}\end{equation}
-
-When \(m=0\), \(\theta = 0°\), and the resulting carbon nanotube has a
-`zigzag' structure; when \(m=n\), \(\theta = 30°\), and the carbon
-nanotube has an `armchair' structure. When \(\theta\) is between
-\(0°-30°\), the structure is referred to as `chiral'
-\autocite{Dekker1999,Lu2012}. When \(n-m=3z\), where \(z\) is an
-integer, the resulting carbon nanotube is metallic \(-\) for example, if
-\(n=5\) and \(m=5\), \(z=0\), therefore the tube is metallic. All other
-nanotubes are semiconducting, including the (6,4) chiral nanotube
-described in Figure~\ref{fig-carbon-nanotube-wrapping}. Out of the
-chiral arrangements available, two-thirds of the possible structures are
-semiconducting while one-third is metallic \autocite{Dekker1999}.
-
-\hypertarget{sec-cnt-network-details}{%
-\subsection{Carbon Nanotube Network
-Transistors}\label{sec-cnt-network-details}}
-
-The first carbon nanotube transistors were created in 1998, and used a
-single carbon nanotube as the device channel
-\autocite{Martel1998,Tans1998,Kauffman2008}. Over the following decade,
-there was a general move away from the use of a single-tube as the
-transistor channel towards that of a large-scale network of carbon
-nanotubes. In these networks, the individual electrical properties of
-the CNTs are averaged out across the network, reducing device-to-device
-variation. Furthermore, the large area of coverage ensures high channel
-mobility and is preferable in sensing applications
-\autocite{Hu2004,Cao2009,Murugathas2019,Li2023}. The carbon nanotube
-network used for the channel can either be directionally-aligned or
-randomly deposited \autocite{Cao2009,Shkodra2021}; in this thesis,
-randomly deposited networks were fabricated using facile
-solution-deposition methods \autocite{Zheng2017,Cassie2023}. Important
-attributes of a carbon nanotube film include the density of the network
-(number of nanotubes per unit area), the ratio of metallic to
-semiconducting nanotubes present, and the distribution of nanotube
-diameters present \autocite{Cao2009,Shkodra2021}. The strong van der
-Waals forces between carbon nanotubes lead to them bundling together
-within a network. These bundles may contain many nanotubes of different
-size and chirality \autocite{Fuhrer2000,Hu2004,Cao2009,Murugathas2019}.
-
-The band bending which occurs at the interface between the metal
-electrodes of the device and the semiconducting carbon nanotubes is
-primarily responsible for CNT FET switching behaviour
-\autocite{Avouris2007,Bargaoui2018}. The Fermi level difference between
-materials leads to free electrons flowing across each interface until
-the Fermi levels equilibrate and a electric dipole layer forms. The net
-electric field created at each interface creates a space charge region
-in the channel, forming a Schottky barrier which prevents the further
-flow of a particular type of charge at each interface. The nature of the
-band bending and resulting Schottky barrier depends on the work function
-of the metal \autocite{Cowley1999,Kauffman2008,Zhang2012}. A high work
-function metal bends the valence band of the semiconductor towards the
-Fermi level of the metal, creating a low barrier for holes but a high
-barrier for electrons \autocite{Avouris2007,Zhang2012,Bargaoui2018}.
-Channel current results primarily from quantum tunnelling through
-Schottky barriers. The Schottky barriers at the metal electrodes result
-in one type of charge dominating flow, referred to as unipolar
-behaviour. However, if the barrier size is low for both holes and
-electrons, they can flow simultaneously through the channel, which is
-referred to as ambipolar behaviour \autocite{Avouris2007,Heller2008}.
-
-The behaviour of carbon nanotube network transistors is also influenced
-by a variety of potential barriers existing at junctions between carbon
-nanotubes. A prominent example is the Schottky barriers existing at
-junctions between metallic and semiconducting nanotubes (m-s junctions)
-\autocite{Fuhrer2000,Topinka2009,Murugathas2019}. These potential
-barriers cause increased resistance at these junctions relative to other
-points in the network \autocite{Fuhrer2000,Jang2015}. When the channel
-length is much larger than that of individual nanotubes, channel current
-must pass through junctions placed along percolation pathways. If only
-one pathway exists across a sparse network, the network density is at
-the `percolation threshold'. If a network is below the percolation
-threshold, the channel cannot conduct
-\autocite{Hu2004,Topinka2009,Jang2015}. When a network with density well
-above percolation contains a low proportion of semiconducting nanotubes,
-percolating pathways which only contain metallic nanotubes exist. A
-device with this film will be highly conductive but cannot be gated
-\autocite{Fuhrer2000,Topinka2009}. Fixing the density but increasing the
-proportion of s-CNTs means m-s junctions become more prevalent. The
-introduced Schottky barriers cause a dramatic drop in conductance. As
-the proportion of s-CNTs approaches 100\%, semiconducting pathways with
-no metallic junctions emerge, and conductance sharply increases once
-more \autocite{Topinka2009}.
-
-\hypertarget{sec-electrical-characterisation-CNT}{%
-\subsection{Electrical
-Characterisation}\label{sec-electrical-characterisation-CNT}}
-
-Like graphene transistors, mixed-chirality carbon nanotube transistors
-are naturally ambipolar: they can conduct both electrons and holes. An
-applied gate voltage \(V_g\) alters the Fermi energy of the
-semiconducting nanotubes, modulating the width of the Schottky barriers
-present, and therefore changing the amount and type of charge flowing
-through the channel \autocite{Nakanishi2002,Kauffman2008,Heller2008}.
-Diameter and separation of nanotubes both influence the gate capacitance
-of carbon nanotube networks alongside geometric capacitance \(C_{G}\)
-and quantum capacitance \(C_{Q}\) \autocite{Rouhi2011a}. \(I_d\) mainly
-consists of holes at highly negative gate voltages, and mainly consists
-of electrons at highly positive voltages. At intermediary voltages, both
-electrons and holes flow \autocite{Avouris2007,Yao2021}. Transistor
-behaviour can be made unipolar through doping the semiconducting carbon
-nanotubes or by choosing an electrode metal with a particularly high
-work function, increasing the Schottky barrier for one type of charge
-\autocite{Avouris2007,Kauffman2008,Cao2009,Yao2021}. For example, the
-use of gold electrodes promotes \(p\)-type behaviour over \(n\)-type
-behaviour due to the work function of the metal; ambient adsorption of
-oxygen will weakly dope the semiconducting carbon nanotubes and likewise
-promote \(p\)-type behaviour
-\autocite{McEuen2002,Kauffman2008,Cao2009,Shkodra2021}.
-
-A variety of parameters can be extracted which reflect the morphology of
-the carbon nanotube network. Partial alignment of a random-network
-carbon nanotube network maximises the transconductance of a device, as
-this creates more semiconducting pathways, increasing current while
-preserving the presence of gateable junctions within the network
-\autocite{Cao2009,Rouhi2010,Rouhi2011a,Jang2015,Li2023}. The on-off
-ratio of a carbon nanotube device is largely decided by the ratio of
-s-CNTs to m-CNTs. The relative proportion of metallic carbon nanotubes
-in the network determines the size of \(I_{off}\). Therefore, unlike a
-graphene device, the off current can be readily reduced by eliminating
-percolating metallic pathways for increased \(I_{on}/I_{off}\)
-\autocite{Hu2004,Kauffman2008,Cao2009,Rouhi2011a}. In a liquid-gated
-environment, the gate leakage current of a sparse carbon nanotube
-transistor can approach \(I_d\), leading to significant device noise. A
-dense network or a graphene device can therefore give enhanced
-signal-to-noise ratio during sensing \autocite{Ohno2015}. Noyce \emph{et
-al.} found that fully-on back-gated carbon nanotube devices typically
-exhibit a \(\sim\) 3 hour period of steep signal drift, followed by
-steady-state current flow. This settling behaviour was both reversible
-and highly characteristic of a particular channel, and could be modelled
-using a sum of three exponentials \autocite{Noyce2019}.
-
-\begin{figure}
-
+\newline
 \begin{minipage}[t]{0.03\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/(a).png}
+\includegraphics{figures/(c).png}
 
 }
 
@@ -1891,7 +1772,7 @@ using a sum of three exponentials \autocite{Noyce2019}.
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch2/CNT_transfer_1.png}
+\includegraphics{figures/ch7/NTQ24C10_ch3_comparison_3.png}
 
 }
 
@@ -1915,7 +1796,7 @@ using a sum of three exponentials \autocite{Noyce2019}.
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/(b).png}
+\includegraphics{figures/(d).png}
 
 }
 
@@ -1939,7 +1820,7 @@ using a sum of three exponentials \autocite{Noyce2019}.
 
 \raisebox{-\height}{
 
-\includegraphics{./figures/ch2/CNT_transfer_2.png}
+\includegraphics{figures/ch7/NTQ24C10_ch3_comparison_4.png}
 
 }
 
@@ -1957,505 +1838,1265 @@ using a sum of three exponentials \autocite{Noyce2019}.
 
 \end{minipage}%
 
-\caption{\label{fig-CNT-characteristics}Liquid-gated transfer
-characteristics of a single carbon nanotube network field-effect
-transistor channel, using a logarithmic scale in (a) and using a linear
-scale in (b) to emphasise different features of the same dataset. The
-subthreshold slope is shown with a black dotted line, while the
-threshold voltages are shown with red dotted lines. The ON and OFF
-regimes are also indicated on both figures. \(V_{ds}\) = 100 mV was
-placed across the channel.}
+\caption{\label{fig-pba-functionalisation-threshold-shift}Electrical
+transfer characteristics of a carbon nanotube transistor before
+functionalisation alongside the transfer characteristics (a) after being
+submerged in DMSO with 5 mM PBA in red, (b) after being submerged in PBS
+with 20 mM EDC and 40 mM NHS in blue, and (c) after being submerged in
+fresh PBS in green. The dashed lines in (d) are linear fits to the
+subthreshold slope of each curve, and are shown alongside the threshold
+voltages corresponding to each fit.}
 
 \end{figure}
 
-The threshold voltage \(V_t\) of a unipolar transistor is equal to the
-gate voltage required to prevent the flow of charge carriers across the
-channel, often referred to as turning the device off
-\autocite{Petti2016,Shkodra2021}. In ambipolar devices, two separate
-threshold voltages exist for each type of charge carrier, \(V_{t,h}\)
-and \(V_{t,e}\), which are shown in Figure~\ref{fig-CNT-characteristics}
-on both a linear (a) and logarithmic (b) scale. In the region between
-these gate voltages, known as the subthreshold regime, both holes and
-electrons flow through the channel
-\autocite{Avouris2007,Reiner-Rozman2015}. If percolating pathways
-consisting entirely of m-CNTs are present, \(I_{off}\) flows through
-these pathways, as conduction through metallic nanotubes is largely
-unaffected by changes in \(V_g\) \autocite{Fuhrer2000,Topinka2009}. If
-there are no unblocked m-CNT pathways, \(I_{off}\) is entirely due to
-Schottky barrier tunnelling \autocite{Avouris2007}. \(V_t\) can be
-estimated by extrapolating the trendline of the linear region of the
-transfer characteristics to the \(V_g\) axis. The intercept is
-approximately equal to the threshold voltage when \(V_{ds}\) is close to
-zero, as shown in Figure~\ref{fig-CNT-characteristics} (b)
-\autocite{Sze2006,Petti2016,Li2023}. This is only a rough estimate of
-the actual device \(V_t\), but is sufficient when comparing the gating
-behaviour of different devices \autocite{Li2023}.
+Figure~\ref{fig-pba-functionalisation-threshold-shift} shows the
+transfer characteristics of a carbon nanotube transistor channel at
+various stages of a PBA/EDC functionalisation, where a excess of
+N-hydroxysuccinimide (NHS) was added alongside EDC. A solvent-deposited
+carbon nanotube film was used for the device. The PBA was dissolved in
+DMSO, and the device channels were exposed to this solution for 1 hour.
+The electrical change resulting from PBA exposure is shown in
+Figure~\ref{fig-pba-functionalisation-threshold-shift} (a). The
+threshold shift with the addition of 5 mM PBA in DMSO for 1 hour is
+equivalent to the shift seen when only DMSO is added, \(\Delta V\) =
+-0.15 V. The lack of a significant threshold shift attributable to the
+PBA is a result of pyrene having a neutral charge state. Any
+contributions from the charged carboxyl group are screened from the
+carbon nanotube sidewalls by surrounding water molecules
+\autocite{Lerner2012}. However, as in the case of the addition of PBASE,
+there also appears to be an increase in hole mobility, which may be due
+to the pyrene groups increasing connectivity within the carbon nanotube
+network \autocite{Murugathas2019a}.
+
+Subsequently, the device was rinsed with \(1 \times\) PBS and exposed to
+20 mM EDC and 40 mM NHS in \(1 \times\) PBS electrolyte for 30 minutes.
+Figure~\ref{fig-pba-functionalisation-threshold-shift} (b) shows the
+change resulting from subsequent EDC/NHS exposure. When EDC/NHS is
+added, a threshold shift of \(\Delta\)V \(\sim\) -0.08 V was observed on
+multiple channels. The exposure to EDC/NHS negatively shifts the
+transfer characteristic curve, most likely due to the PBA present
+reacting to form positively-charged \emph{O}-acylisourea esters and
+negatively gating the attached carbon nanotube network
+\autocite{Heller2008,Hermanson2013-4}.
+Figure~\ref{fig-pba-functionalisation-threshold-shift} (c) shows that
+this shift is not significantly affected by further exposure of the
+channel to PBS. The lack of a change in gating may imply that hydrolysis
+over the course of one hour is insufficient to hydrolyse a significant
+proportion of the attached \emph{O}-acylisourea or PBASE back to PBA,
+leaving them available for reaction with biomolecule amine groups. A
+further test could be performed to see if leaving the device submerged
+in water over a longer time period to check if ester hydrolysis
+eventually affects threshold voltage in a significant manner, but this
+was considered to be outside the scope of this work.
+
+\hypertarget{attachment-of-peglyated-pyrene-based-linkers}{%
+\section{Attachment of PEGlyated Pyrene-Based
+Linkers}\label{attachment-of-peglyated-pyrene-based-linkers}}
+
+\hypertarget{sec-NTA-biotin-PEG}{%
+\subsection{Pyrene-NTA, Pyrene-Biotin and
+PEGylation}\label{sec-NTA-biotin-PEG}}
+
+Through chemical coupling/conjugation, it is possible to replace the NHS
+ester group on PBASE with other groups that can undergo binding
+reactions with proteins. Unlike PBASE, these groups do not suffer the
+drawback of being readily hydrolysed. For example, PBASE can be modified
+with N\(\alpha\),N\(\alpha\)-Bis(carboxymethyl)-L-lysine hydrate (also
+known as N-(5-Amino-1-carboxypentyl)iminodiacetic acid, amine-NTA,
+AB-NTA) to produce pyrene-nitrilotriacetic acid. The attached NTA group
+is able to chelate with metal ions such as Cu\(^{2+}\) or Ni\(^{2+}\),
+which then can then coordinate with polyhistidine-tags attached to a
+protein \autocite{Holzinger2011,Fruh2011,Amano2016,Chang2017}. Use of
+Cu\(^{2+}\) ions over Ni\(^{2+}\) gives stronger histidine bonding and
+less non-specific adsorption \autocite{Chang2017}. Functionalisation
+using the NTA-Ni\(^{2+}\) chemistry was successfully used to attach
+mammalian odorant receptors to a single carbon nanotube for detection of
+eugenol vapour in real-time \autocite{Goldsmith2011}. Pyrene-biotin
+(pyrene butanol biotin ester) can also be produced for attaching avidin
+or strepavidin \autocite{Holzinger2011}. As avidin and strepavidin are
+tetrameric, they can be attached to both pyrene-biotin and biotinylated
+avi-tagged proteins simultaneously via strong non-covalent bonding,
+therefore linking the transducer and receptor
+\autocite{Star2003a,Dundas2013,Hermanson2013-11,Fairhead2015}. As the
+presence of his-tags and avi-tags on proteins can be readily controlled,
+these methods offer improved specificity and directionality over the
+traditional amide bonding seen earlier.
+
+It is also possible to attach biocompatible \autocite{Chen2004}
+polyethylene glycol (PEG) chains to a pyrene group and modify them with
+reactive groups such as NTA and biotin to attach proteins in the manner
+outlined in the previous paragraph
+\autocite{Hermanson2013-18,Meran2018}. Once modified with PEG, the
+hydrophilicity of the PEG increases the water solubility of pyrene
+linkers, making it possible to perform a full functionalisation
+procedure exclusively in aqueous solution
+\autocite{Chen2004,Hermanson2013-18}. By setting the length of the PEG
+chain, the size of the linker molecule can be controlled - selection of
+a short chain is important for ensuring attached receptors remain within
+the Debye length of the transducer \autocite{Shkodra2021}. Note that PEG
+naturally repels proteins and can also bond to carbon nanotubes, and
+both behaviours have uncertain implications for successful protein
+functionalisation \autocite{Chen2004}. However, functionalisation of
+both carbon nanotube and graphene transducers with pyrene-PEG-biotin
+(PPB) has previously been used for the successful detection of
+streptavidin \autocite{Star2003a,Miki2019}. PEG is also charge neutral,
+so its presence is not expected to significantly affect device
+characteristics \autocite{Chen2004}.
+
+The PEGlyated linkers used in the following sections were purchased
+pre-prepared. Pyrene-PEG-NTA (2 kDa) was purchased from Nanocs, while
+pyrene-PEG-FITC (2 kDa, 10 kDa), pyrene-PEG-rhodamine (3.4 kDa),
+mPEG-Pyrene (10 kDa) and pyrene-PEG-biotin (10 kDa) were purchased from
+Creative PEGworks.
+
+\hypertarget{sec-impediments}{%
+\section{Identifying Functionalisation Obstacles using Fluorescence
+Microscopy}\label{sec-impediments}}
+
+\hypertarget{sec-fluorescence-remarks}{%
+\subsection{General Overview}\label{sec-fluorescence-remarks}}
+
+Various dyes and fluorescent tags were used to investigate approaches
+for identifying successful attachment of biomolecules to a carbon
+nanotube or graphene surface with fluorescence microscopy. The dyes
+included fluorescein isothiocyanate (FITC), Rhodamine B and Cyanine 3
+(Cy3). Green fluorescent protein was also used for this testing process.
+It is important to note that these dyes and the GFP chromophore all
+contain benzene rings which are able to \(\pi\)-stack with carbon rings
+to some degree
+\autocite{Nakayama-Ratchford2007,Tang2012,Khrenova2019,Qiu2019}.
+However, there is also significant variation in the extent to which this
+\(\pi\)-stacking occurs, which can be seen by comparing
+Figure~\ref{fig-FITC-rhodamine-B} (a) and
+Figure~\ref{fig-FITC-rhodamine-B} (b). Here, a clear, specific
+interaction is seen between Rhodamine B and graphene, but little
+interaction between FITC and graphene is observed, even when a longer
+exposure time is used. Whether the addition of pyrene linker groups
+these dyes, or dye-modified biomolecules, was therefore investigated in
+further detail. This process then led to the identification of multiple
+issues that could impede a successful device functionalisation.
+
+Both SU8 and AZ\(^\circledR\) 1518 photoresist fluoresced under a
+variety of microscope filters, resulting from light interacting with the
+photoactive component present in both resists \autocite{Pai2007}. This
+background fluorescence was found to drown out fluorescence from a
+dye-functionalised device channel, and so photoresist encapsulated
+devices were not used for fluorescence imaging. (Consider a photograph
+of a dim outdoor lamp; if the photograph was taken on a starless night,
+the light from the lamp would show up clearly, but with the sun out the
+light would be very difficult to see regardless of how the photograph
+was taken). A different type of encapsulation could potentially be used
+to verify linker attachment with fluorescence after a device has been
+encapsulated. These alternative encapsulation methods for use with
+fluorescence microscopy are discussed in
+\textbf{?@sec-future-work-fabrication}.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.45\textwidth,height=\textheight]{./figures/ch2/NTQ31C5ch1subthreshold_slope_alt.png}
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(a).png}
 
 }
 
-\caption{\label{fig-subthreshold-slope}A carbon nanotube network
-transfer sweep with \(V_{ds}\) = 100 mV on a logarithmic scale.
-Threshold voltage is shown with a black dotted line, while subthreshold
-slope is shown with a red dotted line.}
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch7/NGW8D1_FITC_6.5sexposure_10X_221121.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch7/NGW8D4_rhodamineB_cornergraphene_221110.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-FITC-rhodamine-B}Four 200 µm \(\times\) 200 µm
+graphene squares modified with the dyes (a) fluorescein isothiocyanate
+(FITC) and (b) Rhodamine B. No pyrene/PEG/pyrene-PEG was attached to
+these dyes. In (a), an FITC filter and 6.5 s exposure time was used, and
+in (b) a Texas Red filter and 1.4 s exposure time was used.}
 
 \end{figure}
 
-The subthreshold slope
-\(S = d\textrm{log}_{10}(I_{d})/dV_g|_{\textrm{max}}\) is a measure of
-how rapidly a transistor approaches the minimum current \(I_{off}\). The
-subthreshold slope is often referred to using its reciprocal value, the
-subthreshold swing, which is equivalent to the change in \(V_g\)
-required to change \(I_d\) by one order of magnitude. This figure of
-merit is strongly related to the gate capacitance of the device. As the
-slope exponentially approaches the off current in the subthreshold
-regime, it can be fitted with a linear trendline on a logarithimic
-scale. \autocite{Sze2006,Petti2016}. A linear trendline fitted to the
-logarithm of the subthreshold regime is shown in
-Figure~\ref{fig-subthreshold-slope}, where the gradient corresponds to
-subthreshold slope. A high subthreshold slope exceeding than 10
-decades/V is ideal for reduced power consumption of the working sensor
-device \autocite{Petti2016}. The subthreshold slope of the transfer
-sweep in Figure~\ref{fig-subthreshold-slope} is 8 decades/V. Heller
-\emph{et al.} and Gao \emph{et al.} found that sensor devices showed
-better signal-to-noise ratio when gated in the subthreshold regime, as
-small voltage changes in response to analyte led to exponential current
-changes along the subthreshold slope \autocite{Heller2009,Gao2010}.
+\hypertarget{sec-photoresist-contamination}{%
+\subsection{Photoresist
+Contamination}\label{sec-photoresist-contamination}}
 
-\hypertarget{sec-CNT-sensing-mechanisms}{%
-\subsection{Sensing}\label{sec-CNT-sensing-mechanisms}}
+An functionalisation issue quickly encountered when characterising
+pyrene-PEG-FITC (PPF) interaction with sensing channels via fluorescence
+microscopy was an unwanted secondary interaction between the linker and
+residual photoresist. Figure~\ref{fig-photoresist-contamination} (a) and
+Figure~\ref{fig-photoresist-contamination} (b) are fluorescence images
+of SU8 encapsulation (using the pre-2023 mask) before and after being
+exposed to PPF. Despite the same microscope settings being used to take
+the images (filter, ISO, contrast, exposure time), the SU8 exposed to
+PPF appears much brighter than the pristine SU8. This result indicates
+that the linker appears to have an extensive interaction with the
+photoresist via an unknown mechanism. No fluorescence is seen from the
+device channel. The length of exposure time required to see fluorescence
+from the modified channel would lead to fluorescence from the modified
+linker attached to the photoresist (as well as the photoresist itself)
+flooding the image with light. Therefore, it is not clear whether the
+carbon nanotubes have been functionalised with the dye-modified linker.
+However, out of caution we can assume that the presence of this
+secondary interaction is not desirable.
 
-As all atoms are at the surface of the carbon nanotube structure,
-nanotubes are very sensitive to their surroundings and easily modified,
-making them useful in biosensor applications
-\autocite{Cao2009,Yao2021,Shkodra2021}. The chirality and diameter of a
-carbon nanotube affects both its coupling with the gate and its surface
-chemistry, which determines the sensing mechanisms available to a single
-CNT. Only s-CNTs can be electrostatically gated; m-CNTs, bent nanotubes
-and larger diameter nanotubes are typically more reactive
-\autocite{Cao2009,Zhao2012,Chhikara2013,Li2023}; and the nanotube
-chirality (\(n,m\)) can determine the strength of binding to DNA in a
-base sequence-dependent manner \autocite{Rouhi2011a}. Carbon nanotubes
-have been used for vapour-phase sensing since 2000, when Kong \emph{et
-al.} found that the resistance over a single CNT channel was modified
-when exposed to gas molecules like NO\(_2\) and NH\(_3\)
-\autocite{Kong2000}. Carbon nanotubes have been used to detect the
-presence of analyte down to the parts per billion level in a variety of
-gas sensor applications \autocite{Chen2019,Yao2021}. However, in
-general, the specificity of such a sensor is low, as nanotubes respond
-to many different analytes in a similar manner. To enhance specificity,
-surface functionalisation is often performed using either inorganic or
-biological materials, such as enzymes, antibodies, aptamers and proteins
-\autocite{Cao2009,Shkodra2021,Yao2021}.
+\begin{figure}
 
-For carbon nanotube network transistors, sensing mechanisms include
-electrostatic gating, charge transfer, Schottky barrier modulation,
-modulation of channel capacitance relative to the electrolyte and charge
-scattering. Response mechanisms may take place at the gate, the
-junctions between channel and contact, or at the semiconductor channel
-\autocite{Heller2008,Battie2011,Boyd2014,Tran2016,Li2023}. Modification
-of the channel-metal Schottky barrier can dominate sensing activity, and
-this can complicate the identification of mechanisms underlying the
-sensing behaviour \autocite{Cao2009,Boyd2014,Schroeder2019}. The
-encapsulation layer shown in Figure~\ref{fig-gating-schematics} is added
-to separate the electrodes from the channel-metal junction and prevent
-these responses \autocite{Heller2008,Shkodra2021}. In an encapsulated
-device, the predominant sensing mechanism is either charge transfer from
-the analyte to channel \autocite{Allen2007,Battie2011} or electrostatic
-gating \autocite{Heller2008}. The charge transfer mechanism involves
-direct addition of charge carriers to the channel, while the gating
-mechanism results from a nearby charge inducing an opposite polarity
-charge in the channel. Both changes alter the relationship between
-\(V_g\) and \(I_d\) and shift the carrier threshold voltage(s)
-\autocite{Tran2016,Shkodra2021,Li2023}. Modulation of Schottky and other
-potential barriers present in the network may also make a significant
-contribution to sensing responses, especially when a network is close to
-its percolation threshold \autocite{Boyd2014,Murugathas2019}.
+\begin{minipage}[t]{0.03\linewidth}
 
-\hypertarget{summary}{%
-\section{Summary}\label{summary}}
+{\centering 
 
-Graphene and carbon nanotube network field-effect transistors are both
-ideal as the transducer element in sensing applications due to their
-excellent electrical properties and high sensitivity. These thin-film
-FETs can be used as sensor platforms in either a back-gated or
-liquid-gated configuration, where the liquid-gated configuration is used
-in aqueous sensing applications. A key attribute of the liquid-gated
-configuration is Debye length, which must be optimised for maximum
-transistor sensitivity. Important device parameters of the graphene and
-carbon nanotube network FETs include transconductance, on-off ratio,
-gate leakage currents, current hysteresis, threshold voltage and
-sub-threshold slope. The voltage corresponding to the Dirac point (or
-points) of graphene is another important figure of merit for graphene
-field-effect transistors. Various attributes of the morphology of
-graphene and carbon nanotube networks contribute to the unique
-electrical and sensing properties exhibited by these transistors,
-including graphene folds and junctions between nanotubes of different
-chirality. The use of these transducers in past odorant receptor
-biosensor applications is discussed in \textbf{?@sec-iOR-sensors}, while
-fabrication of the transducers used here is detailed in
-\textbf{?@sec-fabrication}.
+\raisebox{-\height}{
 
-\bookmarksetup{startatroot}
+\includegraphics{figures/(a).png}
 
-\hypertarget{conclusions-and-future-work}{%
-\chapter{Conclusions and Future
-Work}\label{conclusions-and-future-work}}
+}
 
-\hypertarget{sec-conclusions}{%
-\section{Conclusions}\label{sec-conclusions}}
+}
 
-\hypertarget{general-overview}{%
-\subsection{General Overview}\label{general-overview}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
 
-I started writing this thesis with one broad aim \(-\) to couple insect
-odorant receptors with either a carbon nanotube or graphene field-effect
-transistor for highly selective sensing in the vapour phase. Through
-this process, I hoped to gain new physical insights into the transducer
-and receptor elements used, through careful examination of the
-biosensors which resulted from their coupling. At the end of this
-investigation, three broad themes have emerged:
+{\centering 
 
-\begin{itemize}
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch7/modified_SU8only_FITCfilter_channel2_350ms_12.6X_221207.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch7/modified_CNT20_1mMPPF_channel8_350ms_12.6X_221124.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(c).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch7/modified_Ccontrol_ch2_mCherry_10sexposure_highcontrast_12.6X.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(d).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch7/modified_C1_ch5_mCherry_10sexposure_highcontrast_12.6X.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(e).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch7/modified_softbake1minacetonerinse_aptamer_ch3_mCherry_30sexposure_highcontrast_ISO200_12.6X.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(f).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch7/modified_hardbake_aptamer_ch3_mCherry_30sexposure_highcontrast_ISO200_12.6X.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-photoresist-contamination}A fluorescence image of a
+SU8-encapsulated carbon nanotube device is shown in (a), while (b) shows
+the same channel after modification with an solution of 1 mM
+Pyrene-PEG-FITC. A 0.35 s exposure time and FITC filter were used for
+(a)-(b). The fluorescence image in (c) shows an unencapsulated channel,
+while (d) shows the same channel after Cy3-tagged aptamer exposure. A 10
+s exposure time and mCherry filter were used for (c)-(d). The
+fluorescence images in (e) and (f) show devices pre-coated with a thin
+layer of photoresist then submerged in Cy3-tagged aptamer, where the
+device in (f) was hardbaked before aptamer exposure. An mCherry filter
+and 30 s exposure time were used for for (e)-(f).}
+
+\end{figure}
+
+A similar interaction was seen between AZ\(^\circledR\) 1518 photoresist
+and fluorescent-tagged, amine-terminated aptamer. An unencapsulated
+carbon nanotube network device, fabricated using the pre-Jun 2022
+process outlined in \textbf{?@sec-fabrication}, was incubated with 500
+nM Cy3-tagged aptamer in Tris solution at 4°C overnight. The aptamer was
+first denatured by heating in a water bath at 95°C for 5 minutes then
+cooling in an ice bath for 10 minutes before use.
+Figure~\ref{fig-photoresist-contamination} (c) and
+Figure~\ref{fig-photoresist-contamination} (d) are fluorescence images
+of the device channel region before and after exposure to aptamer. A
+thick red ring is visible around the electrodes after functionalisation,
+despite no PBASE being used to tether the amine-terminated aptamer. It
+appears that these bright patches correspond to patches of residual
+photoresist which have not been completely removed from the carbon
+nanotube square by the development process. These patches have then
+interacted with the aptamer, causing them to appear bright under the
+fluorescence microscope. Beyond potentially interfering with
+functionalisation, photoresist residue blocking a device channel will
+prevent interaction with the Tris solution and prevent sensing.
+
+To test whether residual resist could be prevented from interacting with
+aptamer by crosslinking the resist, two unencapsulated devices were
+prepared as follows. Devices were first spincoated with AZ\(^\circledR\)
+1518 in the manner described in \textbf{?@sec-fabrication}. Next, the
+majority of resist was removed by soaking the device in acetone for 1
+minute. This process left a thin coating of photoresist on the devices.
+One of these devices was then hardbaked at 200°C for 1 hour. Both
+devices were subsequently functionalised in the following manner:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
 \item
-  Slight variations in transducer morphology have a substantial impact
-  on biosensor sensitivity and power consumption.
+  Unencapsulated device was submerged in 1 mM PBASE in methanol solution
+  for 1 hour.
 \item
-  Intrinsic transducer hysteresis leads to biosensor current drift,
-  which can be modelled and corrected for when interpreting sensing
-  data.
+  The device was then rinsed with methanol and Tris.
 \item
-  Surface contamination can affect transducer functionalisation and lead
-  to significant variability in biosensor quality.
-\end{itemize}
+  1 µM Cy3-tagged aptamer was denatured by heating in a water bath at
+  95°C for 5 minutes then cooling in an ice bath for 10 minutes before
+  use.
+\item
+  The device was incubated with aptamer in Tris at 4°C overnight.
+\end{enumerate}
 
-These findings and their relation to the goal of creating a reliable
-biosensor for a vapour-phase detection system are each detailed in this
-section.
+Fluorescence microscope images of channels from each device are shown in
+Figure~\ref{fig-photoresist-contamination} (e) and
+Figure~\ref{fig-photoresist-contamination} (f), where the latter is the
+device hardbaked before functionalisation. By comparing the two images,
+it is apparent that hardbaking the AZ\(^\circledR\) 1518 photoresist
+significantly reduces the amount of fluorescent aptamer attached to the
+surface. This result is an indication that sufficient heating of the
+photoresist can prevent it interacting with PBASE or amine-tagged
+biological material. However, there is still some Cy3-tagged aptamer
+fluorescence visible in Figure~\ref{fig-photoresist-contamination} (f).
+It appears that hardbaking has not completely prevented photoresist from
+interacting with the aptamer. It is possible that heating from the
+bottom of the device is insufficient to hardbake the photoresist layer
+completely, an effect that would be amplified for the thick photoresist
+layer on encapsulated devices. Therefore, from Jun 2023 onwards devices
+were vacuum annealed for 1 hour at 150°C prior to functionalisation.
+This approach was taken to ensure photoresist was heated from above as
+well as below and made chemically inert across its surface.
 
-\hypertarget{biosensor-performance-and-transducer-morphology}{%
-\subsection{Biosensor Performance and Transducer
-Morphology}\label{biosensor-performance-and-transducer-morphology}}
+This result demonstrates the use of fluorescence microscopy as a tool to
+detect residue and test suitable residue elimination measures. Further
+testing showed that performing a 1 minute flood exposure (for positive
+resist only) then placing a device in AZ\(^\circledR\) 326 developer for
+3 minutes was highly effective at removing photoresist residue. Both
+these development and annealing techniques were used for all
+functionalised devices in subsequent sections.
 
-Carbon nanotube networks and graphene are used as the thin-film for
-sensing field-effect transistors due to their highly sensitive surface.
-Features present on each film were found to enhance or reduce the
-sensitivity of the transistor in a low-power configuration. The process
-used for randomly depositing carbon nanotubes influences multiple
-aspects of the resulting network morphology, including the density and
-homogeneity of the network, the diameter of bundled carbon nanotubes,
-the level of doping present and the relative proportion of metallic to
-semiconducting nanotubes. These variables were investigated atomic force
-microscopy, Raman spectroscopy and electrical characterisation. Devices
-with carbon nanotubes deposited using surfactant in the presence of
-steam were found to have relatively dense and homogeneous networks which
-gave rise to highly consistent electrical characteristics, desirable for
-biosensor reproducibility and multiplexing. Carbon nanotube bundle
-diameters were also much smaller in these networks, which gave them a
-relatively large on-off ratio and subthreshold slope, figures of merit
-which correspond to low power operation. However, steam-assisted
-surfactant-deposited devices were found to have significant
-\(p\)-doping, possibly from surfactant. Removing the source of this
-\(p\)-doping would further enhance the sensitive and low power
-performance of these devices.
-
-\hypertarget{biosensor-drift-and-transducer-hysteresis}{%
-\subsection{Biosensor Drift and Transducer
-Hysteresis}\label{biosensor-drift-and-transducer-hysteresis}}
-
-All devices characterised showed a degree of hysteresis, which was
-especially significant for solvent-deposited carbon nanotube network
-devices as well as any device when backgated. This hysteresis is a
-result of the evolving occupancy of charge traps, which are introduced
-to the device by gate bias or adsorbed dopants. This changing occupancy
-leads to a slow drift in current level when the transistor is operated
-with constant voltages at both the drain and gate. If left until
-reaching a steady state, this baseline drift can be modelled using a
-linear combination of three exponentials. However, it is not feasible to
-wait more than three hours for a biosensor to warm up with each use. A
-series expansion was used to model the drift over a shorter period of
-time, where the two longer time constant exponentials were approximated
-as linear. This meant only having to wait until the first exponential
-had decayed before sensing, which typically took \textless30 minutes for
-a pristine, liquid-gated steam-deposited carbon nanotube device. Each
-exponential term may correspond to charge traps introduced at different
-stages of fabrication and functionalisation. For example, long-term
-drift was consistent across channels fabricated simultaneously, but
-appeared to be affected by functionalisation.
-
-\hypertarget{biosensor-functionalisation-and-transducer-contamination}{%
-\subsection{Biosensor Functionalisation and Transducer
-Contamination}\label{biosensor-functionalisation-and-transducer-contamination}}
-
-While the pristine surfactant-deposited carbon nanotube transistors were
-consistently sensitive to changes in both an aqueous and vapour
-environment, their selective detection ability after non-covalent
-functionalisation with iORs was highly variable. Using atomic force
-microscopy, Raman spectroscopy, electrical characterisation and
-fluorescence microscopy it was found that the PBASE linker was
-successfully attaching iOR nanodiscs to the carbon nanotube network.
-While functionalisation caused significant gating of the network for
-devices which were successful sensors, it was not seen for devices which
-showed no selective sensing behaviour, despite the evidence that iOR
-nanodiscs were present in both cases. It was therefore hypothesised that
-an unknown coating on the transducer was allowing iOR nanodiscs to stick
-to the network, but not form a direct electrical connection. A pristine
-carbon nanotube device with such a coating could still be highly
-sensitive to electrostatic or capacitive gating. However, it has
-previously been noted that the primary sensing mechanism of iORs appears
-to be through direct charge transfer. If an insulating coating layer is
-present, it may prevent charge from passing between the iORs and the
-channel.
-
-Multiple potential candidates for this unwanted coating were identified
-throughout the course of this thesis, including residual surfactant,
-solvent or photoresist, multilayer or hydrolysed PBASE and hydrophobic
-long-chain alkanes. Sensing experiments were then performed that
-systematically eliminated possible candidates. It was found that neither
-avoiding the introduction of surfactant or ensuring PBASE did not
-hydrolyse led to consistent biosensors. Finally, a method was tested
-that eliminated the remaining possible candidates through the use of a
-oxygen plasma clean step prior to functionalisation, as well as the use
-of iORs in surfactant solution with linker pre-attached. This process
-resulted in a successful sensor in an aqueous environment, which is
-further indication that either photoresist residue, a hydrocarbon
-coating, a PBASE layer or the membrane format of iORs is the cause of
-sensor variability. The impact of oxygen plasma on device mobility and
-the vunerability of the unprotected iORs means that this method does
-produce reliable vapour-phase sensors. A covalent,
-directionally-oriented method of immobilising nanodiscs could be used
-instead, which has previously been successful for vapour-phase
-biosensing with mORs. Alternatively, a less destructive cleaning process
-could be identified to ensure consistent non-covalent functionalisation,
-used alongside a bio-friendly vapour capture layer for vapour-phase
-sensing without the use of nanodiscs.
-
-\hypertarget{sec-future-work}{%
-\section{Future Work}\label{sec-future-work}}
-
-\hypertarget{sec-future-work-fabrication}{%
-\subsection{Device Fabrication and
-Functionalisation}\label{sec-future-work-fabrication}}
-
-Throughout the course of this thesis, several aspects of the fabrication
-and functionalisation were identified as having potential for
-improvement. Further investigation into these approaches by future
-researchers could lead to improved biosensor performance and a deeper
-understanding of the device physics of the sensor. The encapsulation of
-device electrodes is critical for improving the performance of a device,
-preventing gate leakage through the liquid-gate and avoiding modulation
-of the electrode-channel Schottky barrier while sensing
-\autocite{Lim2014,Albarghouthi2022,Heller2008}. Albarghouthi \emph{et
-al.} outline an alternative encapsulation approach which leads to very
-low gate leakage currents which could be adapted for use with our
-sensing devices \autocite{Albarghouthi2022}. Here, a multilayered
-encapsulation with HfO\(_2\), SU8 and PEG is used to encapsulated the
-device. The only change to the existing process required is the addition
-of a patterning step to leave the channel region exposed, similar to
-that seen in \textbf{?@sec-encapsulation}. Furthermore, if a
-nonfluorescent SU8 was used instead of SU8-2150 \autocite{Vobornik2023},
-devices could be characterised with fluorescence microscopy after
-encapsulation, which would be highly advantageous for verifying
-functionalisation. After passivation with PEG, highly specific
-attachment of fluorescence-tagged iORs could be verified in a similar
-manner to that used by Lee \emph{et al.} directly prior to sensing
-\autocite{Lee2012b}. If PEG passivation and linker are deposited
-simultaneously, as in the approach by Filipiak \emph{et al.}
-\autocite{Filipiak2018}, multiplexed fluorescence microscopy could be
-used to determine the proportion of channel coverage by linker compared
-with PEG passivation.
-
-Surface contamination was identified as one of the major factors
-interfering with successful device functionalisation in this thesis. To
-improve the reproducibility and yield of non-covalent functionalisation
-processes, and to improve device performance more generally, an
-effective cleaning method needs to be identified which is able to remove
-most contaminants and move the threshold voltage of devices towards 0 V.
-This approach should not significantly affect the mobility of the
-device. Barnett \emph{et al.} used air oxidation and annealing to remove
-surfactant dopants from a carbon nanotube network, which was highly
-effective at restoring the threshold voltage to 0 V
-\autocite{Barnett2018}. Petkov proposed oxygen radical cleaning of
-organic contaminants as an alternative to destructive oxygen plasma
-cleaning, which was shown by scanning electron microscopy (SEM) to
-successfully remove surface hydrocarbons \autocite{Petkov2005}. Current
-annealing has also proven to be an effective means of both reducing the
-contact resistance of TFT devices \autocite{Schnitzspan2020} and can be
-used to evaporate surface contaminants and restore threshold voltage to
-0 V for both a back-gated \autocite{Ramamoorthy2018} and liquid-gated
-\autocite{Kireev2017} configurations. If available to the researcher,
-these techniques should all be explored to identify the most effective
-and least destructive cleaning technique.
-
-Surface contamination becomes less signficant if alternative
-functionalisation methods to linker \emph{pi}-stacking are used for
-functionalisation. The use of diazonium coupled with metal ion chelated
-AB-NTA (N\(\alpha\),N\(\alpha\)-Bis(carboxymethyl)-L-lysine hydrate) is
-known to be an effective way of covalently attaching nanodisc-held
-vertebrate odorant receptors to carbon nanotubes
-\autocite{Goldsmith2011}. As successful covalent binding is indicated by
-a significant change in channel mobility, it becomes much easier to
-distinguish between successful and unsuccessful channel
-functionalisation than in the non-covalent case. Here, Cu\(^{2+}\) could
-be used as the metal ion as it has a stronger binding strength than
-other metal ions, such as Ni\(^{2+}\)
-\autocite{Chang2017,Aravinda2009,Baur2010}. Another covalent approach
-involves tethering nanodisc-held odorant receptors to gold floating
-electrodes using antibody fragments
-\autocite{Yang2017,Yang2018,Lee2018}. Non-covalent approaches which do
-not require direct charge transfer mechanisms for sensing could also be
-investigated. A similar functionalisation approach using nanovesicles
-(liposomes) could be taken to that of Lim \emph{et al.}
-\autocite{Lim2015}, where the Kir ion channel and hORs are replaced with
-an ORCO ion channel and iORs \autocite{Wicher2021}. If ion flow occurs
-within the Debye length, the resulting changes in charge could be
-detected with electrostatic gating, even if no direct electrical
-connection to the transducer channel exists.
-
-\hypertarget{sec-future-work-vapour}{%
-\subsection{Vapour Sensing}\label{sec-future-work-vapour}}
-
-Further work could also be done to further improve the vapour delivery
-system. This work could include changes to the system configuration
-overall, as well as changes to the setup of the device in the
-characterisation chamber.
-
-The maximum flow rates of the mass flow controllers currently present in
-the system are too low to carry some of the volatile compounds of
-interest for testing with the iORs. For example, the vapour pressure of
-methyl salicylate, agonist for OR10a, was found to be too low to be
-successfully delivered by the existing vapour delivery system
-\autocite{MeSal}. All three mass controllers could be replaced two MFCs
-which have an identical maximum flow of either 1000 or 10000 sccm. This
-may require the PVC tubing to be replaced with stainless steel to cope
-with higher pressures, with check valves added to avoid the system being
-over-pressurised. These two MFCs could be operated in the manner
-outlined by Goldsmith \emph{et al.} for a constant and uninterrupted
-flow of nitrogen \autocite{Goldsmith2011}. In this setup, the first MFC
-maintains a constant flow rate through the dilution line at all times
-during a sensing experiment. The second MFC is also kept at a constant
-flow rate at all times, but feeds into a computer-automated solenoid
-valve which is able to switch the flow between the dilution and carrier
-line. The second MFC is then only directed through the carrier line
-during the relevant intervals of a sensing series.
-
-Exposing iORs to vapour-phase compounds outside of a protective lipid
-membrane environment may cause them significant damage
-\autocite{Sato2014,Warden2019}. A capture layer can be used to mimic the
-mucus within the insect sensillum lymph, which protects the dendrite
-cells \emph{in vivo} \autocite{Shkodra2021,Sato2014,Hurot2020,Cali2020}.
-A variety of possible capture layer solutions for vapour-phase
-field-effect transistor sensors can be found in the literature. Lee
-\emph{et al.} and Kuznetsov \emph{et al.} integrated an aqueous membrane
-held by polycarbonate and SiO\(_2\)/Si\(_3\)N\(_4\)/SiO\(_2\) into their
-sensor, which prevented electrolyte evaporation
-\autocite{Lee2015,Kuznetsov2018}. Bio-gels or ionic liquids (ILs) are
-other potential candidates for mucus-like capture layers. Sato \emph{et
-al.} and Hirata \emph{et al.} used an agarose hydrogel in a microchamber
-array as a capture layer \autocite{Sato2014,Hirata2021}. Ionic liquids
-have low vapour pressure, high capacitance, as well as high
-electrochemical stability. Both 1-Butyl-3-methylimidazolium
-bis(trifluoromethylsulfonyl imide (BMIM) \autocite{Hwang2014,White2015}
-and 1-ethyl-3-methylimidazolium tetrafluoroborate (EMIM)
-\autocite{Inaba2014,Kiga2012} have been used as the electrolytic gate
-for thin-film field-effect transistors. However, alternative ionic
-liquid candidates may need to be identified which are compatible with
-the biological elements of the sensor \autocite{Gomes2019,Shukla2020}.
-Ionic liquids also show a degree of selectivity towards volatile
-compounds, which needs to be accounted for when used as a capture layer
-\autocite{Kulkarni2007}.
-
-The capture layer could also be used as a liquid-gate to maximise device
-sensitivity. A gate electrode can be photolithographically patterned
-onto the device surface alongside the source and drain electrodes for
-this purpose, making contact with the capture layer through an
-additional gap in the device encapsulation \autocite{Shkodra2021}. Only
-slight alterations would have to be made to the device design outlined
-in this thesis for implementation. A potential difficulty with this
-approach might be ensuring rapid odorant diffusion through the layer to
-the iOR-FET surface, especially when compounds are insoluble
-\autocite{Yamada2021,Hurot2020,Warden2019,Cali2020,Lee2015,Spencer2021}.
-Yamada \emph{et al.} used hydrophobic microslits at the liquid-vapour
-interface to promote mixing of compounds within an aqueous environment
-\autocite{Yamada2021}. It may also be possible to use odorant binding
-proteins to carry volatile compounds to the odorant receptors, which is
-how volatiles are carried from the surface of the sensillum and through
-the mucus membrane to the odorant receptors \emph{in vivo}
-\autocite{Larisika2015,Kotlowski2018,Brito2016,Cali2020,Pelosi2018,Sankaran2011}.
-
-\hypertarget{multiplexing}{%
-\subsection{Multiplexing}\label{multiplexing}}
-
-A scent in nature contains a mixture of many different volatile organic
-compounds in vapour at different concentrations. A future vapour-phase
-iOR biosensor should therefore be able to perform multiplexed
-measurements with different iORs in different channels, to
-simultaneously measure and distinguish between mixtures of volatile
-organic compounds \autocite{Kwon2015,Hurot2020,Hirata2021}. A similar
-approach could be taken to that of Kwon \emph{et al.} and Son \emph{et
-al.}, but for insect odorant receptors \autocite{Kwon2015,Son2017}. Care
-should be taken to avoid the coffee-ring effect when functionalising
-individual channels of a device (\textbf{?@sec-coffee-ring}). The use of
-small, deep microchannels in clean PDMS, which keep functionalisation
-material close to the channel, may be essential for consistent
-functionalisation. A difficulty that could arise when multiplexing is
-that iORs can specifically bind with multiple VOCs. When interacting
-with an iOR, different volatiles can `antagonise' each other; some iORs
-will not respond to a positive ligand if another specific ligand is
-present \autocite{Kwon2015,Son2017,Munch2016,Hirata2021}. This means a
-multiplexed iOR biosensor would first need to be tested individually
-against different volatile compounds, and then with mixtures of volatile
-compounds to detect any antagonistic behaviours in a systematic manner.
+\hypertarget{sec-hydrophobicity}{%
+\subsection{Hydrophobicity of Carbon Nanotubes and
+Graphene}\label{sec-hydrophobicity}}
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\textwidth,height=\textheight]{./figures/ch9/multiplex-breakout.png}
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(a).png}
 
 }
 
-\caption{\label{fig-vapour-sensor-breakout}Breakout board for vapour
-delivery system device. Source electrode terminals are labelled S, drain
-electrode terminals are labelled D, the gate electrode terminal is
-labelled G and disconnected terminals are labelled 0. Each number
-corresponds to a different device channel.}
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch7/modified_NGW8D9_edgechannel_post10min50Cacetonerinse_221109.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch7/modified_NGW8D7_edgechannel_lowerexposuretime_221108.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(c).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch7/modified_SiO2_1mMPPR_2_221109.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(d).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch7/modified_NGW6D4_PyPEGFITC_channel2_1.6sexposure_10X_221122.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(e).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch7/modified_NGW6D7_PyPEGFITC_channel3top_postmsurfclean_7.5sexposure_20X_221123.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(f).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch7/modified_NGW6D7_PyPEGFITC_channel1_postmsurfclean_7.75sexposure_40X_221123.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-silicon-dioxide-interaction}Fluorescence images of a
+1000 µm \(\times\) 100 µm graphene channel. (a) was not oxygen plasma
+cleaned before functionalisation with pyrene-PEG-rhodamine (PPR), while
+(b) was oxygen plasma cleaned immediately before PPR functionalisation.
+Insets show a water droplet on an unencapsulated device before (a) and
+after (b) the being treated with O\(_2\) plasma. (c) shows a pristine
+SiO\(_2\) surface after PPR exposure. (a), (b) and (c) were taken using
+a Texas Red filter and a 1.8 s exposure time. (d) was functionalised
+with 1 mM PPF in PBS after oxygen plasma treatment. (e) and (f) were
+functionalised with 1 mM PPF after oxygen plasma treatment, then cleaned
+with surfactant (m-CNT surfactant, NanoIntegris). (d), (e) and (f) were
+taken using an FITC filter, with 1.6 s, 7.5 s and 7.75 s exposure times
+respectively.}
 
 \end{figure}
 
-This thesis used an existing setup for aqueous sensing which could
-already be used for eight-channel multiplexed measurements. For the
-vapour delivery system chamber, it is already possible to connect four
-channels at once through a custom breakout board, shown in
-Figure~\ref{fig-vapour-sensor-breakout}. Both setups should be
-sufficient for testing three iOR-functionalised channels simultaneously
-alongside an empty iOR-functionalised channel. To switch between
-analytes in a single vapour-phase sensing run with uninterrupted flow, a
-second analyte bottle could be installed which branches off from the
-existing carrier line. A solenoid-controlled 4-way valve could be placed
-after these analyte bottles, which runs the vapour flow from one analyte
-bottle to the exhaust and one into chamber at all times, as illustrated
-in Figure~\ref{fig-vapour-sensor-multiplexing}. In this way, the amount
-of flow passing into the chamber is largely unchanged across a sensing
-run. An advantage of this setup is that each carrier line only ever
-contains one analyte to prevent cross-contamination between lines. For
-multiplexing with more than two analytes, more analyte bottles could be
-added and a 16-way or 32-way valve used.
+As PEGlyated linker dissolves well in aqueous solution, initial
+fluorescence imaging focused on functionalising devices with these
+linkers dissolved in \(1 \times\) PBS. It was hoped that by keeping the
+device channels in a pH-controlled environment, the channel surface
+would be made more suitable for the attached receptors.
+Figure~\ref{fig-silicon-dioxide-interaction} (a) shows a graphene film
+after exposure to pyrene-PEG-rhodamine (PPR) in \(1 \times\) PBS
+solution for 1 hour. The pyrene-PEG-rhodamine has interacted with the
+SiO\(_2\) substrate (discussed further in
+Section~\ref{sec-pyrene-interactions}) but not the graphene film. The
+graphene has not attached to the pyrene or rhodamine due to the highly
+hydrophobic graphene surface repelling the surrounding solution,
+preventing \(\pi\)-stacking from occurring. The hydrophobicity of the
+graphene surface is not intrinsic to graphene. Instead, it results from
+a hydrocarbon layer which forms on the channel surface when exposed to
+air, primarily composed of long-chain alkanes
+\autocite{Ashraf2014,Palinkas2022}. A hydrophobic layer wiil also form
+on carbon nanotube networks \autocite{Stando2019,Park2022}. Treatment
+with oxygen plasma at 5 W for 15 s has previously been found to remove
+this hydrocarbon layer, restoring the intrinsic hydrophilicity of
+graphene \autocite{Shin2010}. Storing the graphene surface in deionised
+water rather than air prevents the return of this hydrocarbon layer
+\autocite{Ashraf2014}. The use of a relatively low power plasma ensures
+damage to the graphene layer is minimised.
+
+Treatment of an unencapsulated carbon nanotube network device at 5 W for
+15 s at 300 mTorr greatly reduced the contact angle of a water droplet
+placed on the device surface. The water droplet before and after plasma
+treatment is shown inset in Figure~\ref{fig-silicon-dioxide-interaction}
+(a) and Figure~\ref{fig-silicon-dioxide-interaction} (b) respectively. A
+graphene film was then functionalised with pyrene-PEG-rhodamine in
+\(1 \times\) PBS in the same manner as for the film in
+Figure~\ref{fig-silicon-dioxide-interaction} (a), except with the same
+plasma treatment performed on the film less than 1 minute before
+functionalisation. The result is shown in
+Figure~\ref{fig-silicon-dioxide-interaction} (b). The graphene now
+appears to interact with the pyrene-PEG-rhodamine. These results both
+indicate that the plasma treatment is increasing the hydrophilicity of
+the device surface, improving the ability of pyrene-PEG-rhodamine to
+\(\pi\)-stack with graphene. The disadvantage of this procedure is that
+the plasma cleaning introduces defects to the graphene surface which may
+be undesirable for device electrical behaviour. Furthermore, it was
+often found that devices functionalised in this manner had their
+conductance drop significantly after functionalisation, even though
+plasma treatment itself did not significantly alter device conductance.
+Solvent was therefore used for the initial linker functionalisation in
+\textbf{?@sec-biosensing-iORs}, as a plasma cleaning step was not
+required for linker attachment.
+
+\hypertarget{sec-pyrene-interactions}{%
+\subsection{Substrate Interaction with Linker
+Molecules}\label{sec-pyrene-interactions}}
+
+Another issue that arose when verifying surface functionalisation was
+the interaction between pyrene linker and the SiO\(_2\) substrate. This
+interaction meant it was difficult to discern whether the pyrene group
+was interacting in a specific manner with the channel film. It was
+confirmed that pyrene-PEG was interacting with SiO\(_2\), rather than
+residual photoresist or nanomaterial, by performing a
+pyrene-PEG-rhodamine functionalisation on pristine SiO\(_2\), as shown
+in Figure~\ref{fig-silicon-dioxide-interaction} (c). The PEGlyated
+linker supplier suggested that the surface should be thoroughly rinsed
+with surfactant to remove weakly-bound pyrene-PEG-FITC attached to the
+SiO\(_2\), while preserving the pyrene-PEG-FITC strongly attached via
+\(\pi\)-stacking to the graphene or carbon nanotube film
+\autocite{CreativePEGworks2022}. The following process was then used to
+remove pyrene-PEG-FITC from the SiO\(_2\): the film was rinsed with DI
+water for 30 s, then placed in m-CNT dispersion solution (NanoIntegris)
+for 5 minutes at 70°C while agitating with a pipette, and finally rinsed
+with DI water, ethanol, acetone, IPA and nitrogen dried. A the graphene
+region before cleaning is shown in
+Figure~\ref{fig-silicon-dioxide-interaction} (d), while the results of
+cleaning are shown in Figure~\ref{fig-silicon-dioxide-interaction} (e)
+and Figure~\ref{fig-silicon-dioxide-interaction} (f). The majority of
+pyrene-PEG-FITC was removed in regions with no graphene, but remained
+where graphene was present, indicating specific, \(\pi\)-stacking
+interaction took place between the pyrene-PEG-FITC and graphene.
+However, this surfactant rinse step was not used when performing
+functionalisation with biological materials, to prevent damage to the
+lipid membranes used.
+
+\hypertarget{sec-coffee-ring}{%
+\subsection{Coffee-Ring Effect}\label{sec-coffee-ring}}
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.6\textwidth,height=\textheight]{./figures/ch9/multiplex-vapoursensor.png}
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(a).png}
 
 }
 
-\caption{\label{fig-vapour-sensor-multiplexing}Multiplexing with a
-second analyte bottle and four-way valve.}
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch7/modified_GFPNi2+1_5sexposure_12.6X_mediumcontrast_18_230324.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch7/modified_GFPNi2+1_5sexposure_12.6X_mediumcontrast_20_230324.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-GFP-coffee-ring}Both (a) and (b) show a build-up of
+his-tag GFP at the edges of the droplet region where pyrene-PEG-NTA had
+been present, taken using an GFP filter and a 5 s exposure time. On the
+right hand side of (b), no his-tag GFP is visible on the metal
+electrode, as no pyrene-PEG attaches to the metal electrodes.}
 
 \end{figure}
 
-\appendix
+From Table~\ref{tbl-pbase-functionalisation}, full device submersion
+appears to be the most common approach for functionalisation with
+solution containing linker molecules like PBASE. However, some groups
+placed small droplets of solution onto the device channels when
+functionalisation, and this approach was tested as part of the
+fluorescence verification work. For functionalisation with his-tagged
+green fluorescent protein, after plasma cleaning at 5 W for 15 s at 300
+mTorr, a 4 µL droplet of 100 µM pyrene-PEG-NTA in \(1 \times\) PBS was
+placed on each graphene device channel and left covered in a humid
+environment for 15 minutes. The device was then rinsed with \(1 \times\)
+PBS, submerged in 10 mM NiSO\(_4\) in \(1 \times\) PBS for 1 hour,
+rinsed in \(1 \times\) PBS, then submerged in 10 mL of 100 ng/mL his-tag
+GFP solution (Thermofisher) overnight. Fluorescence microscope imaging
+showed that a ring of biomaterial would build up around the outer edge
+of regions where pyrene-PEG-NTA had been present, as seen in
+Figure~\ref{fig-GFP-coffee-ring}.
+
+It appears this non-specific binding is a result of the his-tag GFP
+attaching to a dense region of pyrene-PEG-NTA at the edge of the
+functionalisation droplet. This accretion of pyrene-PEG-NTA at the edge
+of the droplet is a result of the coffee-ring effect, where the
+evaporation of the droplet leads to transport of particles to the
+droplet edges via capillary flow \autocite{Deegan1997,Shimobayashi2018}.
+As this gradient in surface coverage of attached proteins has unknown
+consequences for sensing, in the subsequent chapter devices were always
+functionalised by submerging them in solution instead of dropcasting.
+
+\hypertarget{sec-conclusion}{%
+\section{Conclusion}\label{sec-conclusion}}
+
+It has been well-established in the literature that the \(\pi\)-stacking
+reaction mechanism between pyrene-based linkers and graphene and carbon
+nanotube network field-effect transistors can be used to create working
+biosensors. The previous use of various linker molecules for biosensor
+functionalisation was investigated. Despite the wide use of
+1-pyrenebutanoic acid N-hydroxysuccinimide ester (PBASE) and
+1-pyrenebutyric acid (PBA) for functionalisation of biosensors, the
+literature shows a significant variation in the methods used for
+attachment of linker molecules to a transistor channel. The most common
+methods, using 6 mM PBASE dissolved in dimethylformamide or 1 mM PBASE
+in methanol, stem directly from the first documented use of PBASE for
+functionalisation of carbon nanotube biosensors. In the last 6 years,
+more research has been done into optimising the PBASE methodology for
+graphene devices, but there is still disagreement in the literature over
+whether minimising or maximising PBASE coverage on a graphene device
+channel is desirable for sensing. Due to disagreement in the literature
+around suitable non-covalent methods for biosensor functionalisation,
+several steps were taken to identify a rapid and simple method for
+verifying successful functionalisation, and to locate any potential
+barriers to a successful functionalisation.
+
+The advantages and disadvantages of these linker molecules were first
+compared. Hydrogen NMR indicated that water was present in PBASE samples
+prepared in DMSO. The potential for PBASE to hydrolyse during
+functionalisation means that the presence of water is strongly
+undesirable. The reaction of PBA with EDC in the presence of NHS is an
+alternative functionalisation approach which is less prone to
+hydrolysis. However, this process has its own disadvantages, such as
+undesirable protein interactions and the increased amount of steps and
+process variables involved. Pyrene-NTA is also less prone to hydrolysis
+than PBASE, but unlike PBASE or PBA/EDC, interacts with a specific
+protein tag (his-tag). PEGlyation of the pyrene-NTA linker also means
+that the entire functionalisation process can be performed in aqueous
+solution, avoiding the introduction of non-organic solvents. This
+approach is desirable, since the non-aqueous solvents traditionally used
+for functionalisation may have negative impacts on device behaviour. For
+example, carbon nanotube device channel transfer characteristics were
+found to undergo a significant shift of \(\Delta V = -0.15 \pm 0.02\)
+when exposed to DMSO or MeOH for 1 hour.
+
+Next, it was verified that the pyrene groups of the linker molecules of
+interest were attaching successfully to either carbon nanotubes or
+graphene. Raman spectroscopy showed that incubating a highly-bundled
+carbon nanotube film in 5 mM PBASE or PBA in DMSO for 1 hour increased
+\(I_D/I_G\) by a factor of \(\sim 3\) relative to the DMSO-only case.
+Incubating a steam-deposited carbon nanotube device in a 1 mM
+concentration of PBASE in methanol or DMSO for 1 hour was found to cause
+a significant increase in device on-current relative to the solvent-only
+case, and a similar increase in on-current was seen for 5 mM PBA in DMSO
+relative to the DMSO-only case. When a PBA-functionalised device was
+placed in aqueous solution with 20 mM EDC and 40 mM NHS for 30 minutes,
+a further increase in on-current was seen. Fluorescence microscopy was
+used to demonstrate the successful attachment of pyrene-PEG to graphene
+using an attached FITC probe, where immersing a graphene film in 1 mM
+pyrene-PEG in ethanol led to the channels becoming brightly fluorescent
+relative to the background using a 1 s exposure time.
+
+Various obstacles to successful functionalisation were also encountered
+and addressed using fluorescence microscopy. Photoresist contamination
+was addressed with exposure and development steps before
+functionalisation, with the exposure skipped for negative-resist
+encapsulated devices. Hydrophobicity of graphene films was addressed by
+plasma treatment before functionalisation in aqueous solution. A
+surfactant rinse was used to distinguish between weak substrate-linker
+interaction and \(\pi\)-stacking between linker and the channel.
+Finally, coffee-ring distribution of linker was addressed by always
+fully submerging the device in linker when functionalising.
+
+\cleardoublepage
+\phantomsection
 \addcontentsline{toc}{part}{Appendices}
+\appendix
 
 \hypertarget{vapour-system-hardware}{%
 \chapter{Vapour System Hardware}\label{vapour-system-hardware}}
@@ -2468,7 +3109,7 @@ second analyte bottle and four-way valve.}
 \caption{\label{tbl-vapour-sensor-components}Major components used in
 construction of the vapour delivery system described in this
 thesis.}\tabularnewline
-\toprule()
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Description
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -2476,9 +3117,9 @@ Part No.
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Manufacturer
 \end{minipage} \\
-\midrule()
+\midrule\noalign{}
 \endfirsthead
-\toprule()
+\toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 Description
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
@@ -2486,8 +3127,10 @@ Part No.
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
 Manufacturer
 \end{minipage} \\
-\midrule()
+\midrule\noalign{}
 \endhead
+\bottomrule\noalign{}
+\endlastfoot
 Mass flow controller, 20 sccm full scale & GE50A-013201SBV020 & MKS
 Instruments \\
 Mass flow controller, 200 sccm full scale & GE50A-013202SBV020 & MKS
@@ -2504,7 +3147,6 @@ Baseline VOC-TRAQ flow cell, red & 043-951 & Ametek Mocon \\
 Humidity and temperature sensor & T9602-5-A & Telaire \\
 Enclosure, for humidity and temperature sensor & MC001189 & Multicomp
 Pro \\
-\bottomrule()
 \end{longtable}
 
 \hypertarget{python-code-for-data-analysis}{%
@@ -2570,6 +3212,8 @@ by myself and Erica Cassie over GitHub using the Sourcetree Git GUI.
 \addcontentsline{toc}{chapter}{References}
 
 \markboth{References}{References}
+
+\printbibliography[heading=none]
 
 
 \backmatter

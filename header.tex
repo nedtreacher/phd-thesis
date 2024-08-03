@@ -1,0 +1,14 @@
+\usepackage{graphicx}
+\usepackage{subcaption}
+\captionsetup[subfigure]{justification=raggedright,singlelinecheck=false,position=top}
+\usepackage{etoolbox}
+\usepackage{float} % For [H] option
+
+% Ensure all subfigures are aligned at the top
+\makeatletter
+\newcommand{\topalignedsubfigure}[2]{%
+  \begin{minipage}[t]{#1}%
+    \includegraphics[width=\linewidth]{#2}%
+  \end{minipage}%
+}
+\makeatother
