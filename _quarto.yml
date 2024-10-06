@@ -8,12 +8,12 @@ book:
   date-format: "MMM YYYY"
   chapters:
      - index.qmd
-     #- 2-transistors.qmd
+     - 2-transistors.qmd
      #- 3-biosensors.qmd
      #- 4-fabrication.qmd
      #- 5-vapour-sensing.qmd
      #- 6-pristine-characterisation.qmd
-     - 7-functionalisation-verification.qmd
+     #- 7-functionalisation-verification.qmd
      #- 8-functionalisation-testing.qmd
      #- 9-conclusions.qmd
   appendices:
@@ -83,6 +83,12 @@ format:
         \includegraphics[width=3in,height=1.5in]{figures/VUW-logo.png}\\
         \end{center}
         }
+
+      \renewcommand{\topfraction}{.8}
+      \renewcommand{\floatpagefraction}{.8}
+      \clubpenalty=9996
+      \widowpenalty=9999
+
   docx:
     toc: false
     number-sections: false
