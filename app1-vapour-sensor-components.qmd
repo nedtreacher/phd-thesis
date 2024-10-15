@@ -11,7 +11,7 @@ format: pdf
 library(tidyverse)
 library(kableExtra)
 
-component_table <- read.csv("tables/ch5/vapour_system_components.csv", sep=",")
+component_table <- read.csv("tables/app1/vapour_system_components.csv", sep=",")
 component_table <- component_table[rowSums(is.na(component_table)) == 0,]
 ```
 

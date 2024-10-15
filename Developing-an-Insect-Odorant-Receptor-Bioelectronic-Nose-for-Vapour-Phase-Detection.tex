@@ -304,7 +304,7 @@ The immense support I received from Melissa Jordan and Colm Carraher from the In
 
 \pagestyle{headings}
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, sharp corners, breakable, frame hidden, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, borderline west={3pt}{0pt}{shadecolor}, interior hidden, frame hidden, breakable, sharp corners, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -347,7 +347,7 @@ The immense support I received from Melissa Jordan and Colm Carraher from the In
     AFM  & Atomic Force Microscope/Microscopy  \\[5pt]
     AH  & Absolute Humidity  \\[5pt]
     Avi-tag  & Avidin-tag  \\[5pt]
-    BMIM  & 1-Butyl-3-methylimidazolium bis(trifluoromethylsulfonyl)imide  \\[5pt]
+    BMIM  & 1-butyl-3-methylimidazolium bis(trifluoromethylsulfonyl)imide  \\[5pt]
     CAD  & Computer Aided Design \\[5pt]
     CNT  & Carbon Nanotube  \\[5pt]
     CVD  & Chemical Vapour Deposition  \\[5pt]
@@ -794,7 +794,7 @@ all be explored to identify the most effective and least destructive
 cleaning technique.
 
 Surface contamination becomes less significant if functionalisation
-methods are used which do not involve linker \emph{pi}-stacking. For
+methods are used which do not involve linker \(\pi\)-stacking. For
 example, diazonium coupled with metal ion chelated AB-NTA
 (N\(\alpha\),N\(\alpha\)-Bis(carboxymethyl)-L-lysine hydrate) has been
 used as a covalent linker to create sensitive vapour-phase biosensors
@@ -877,9 +877,9 @@ onto the device surface alongside the source and drain electrodes for
 this purpose, making contact with the capture layer through an
 additional gap in the device encapsulation \autocite{Shkodra2021}. Only
 slight alterations to the current design are required for successful
-implementation. A potential difficulty with this approach might be
-ensuring rapid odorant diffusion through the layer to the iOR-FET
-surface, especially when compounds are insoluble
+implementation of the capture layer. A potential difficulty with this
+approach might be ensuring rapid odorant diffusion through the layer to
+the iOR-FET surface, especially when compounds are insoluble
 \autocite{Yamada2021,Hurot2020,Warden2019,Cali2020,Lee2015,Spencer2021}.
 Yamada \emph{et al.} used hydrophobic microslits at the liquid-vapour
 interface to promote mixing of compounds within an aqueous environment
@@ -1012,8 +1012,6 @@ PTFE connection cap system & Z742273 & Duran \\
 Baseline VOC-TRAQ flow cell, purple & 043-950 & Ametek Mocon \\
 Baseline VOC-TRAQ flow cell, red & 043-951 & Ametek Mocon \\
 Humidity and temperature sensor & T9602-5-A & Telaire \\
-Enclosure, for humidity and temperature sensor & MC001189 & Multicomp
-Pro \\
 \end{longtable}
 
 \hypertarget{python-code-for-data-analysis}{%
