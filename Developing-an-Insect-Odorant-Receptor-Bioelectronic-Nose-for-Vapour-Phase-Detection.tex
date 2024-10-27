@@ -304,7 +304,7 @@ The immense support I received from Melissa Jordan and Colm Carraher from the In
 
 \pagestyle{headings}
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, frame hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, interior hidden, enhanced, frame hidden, boxrule=0pt, sharp corners, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -1793,23 +1793,6 @@ ambipolar, it is possible for both holes and electrons to flow across
 the channel; highly negative gate voltages lead to hole conduction while
 positive voltages lead to electron conduction \autocite{Avouris2007}.
 
-The relative height of the Schottky barriers present at the electrical
-contacts influences the magnitude of on-current obtainable by a device.
-An important factor in determining the Schottky barrier height of a
-device is the type of metal used for the contact, with the relationship
-between the type of metal used and resulting device on-current shown in
-Figure~\ref{fig-band-bending}. Titanium has a relatively low work
-function of 4.33 eV, leading to larger Schottky barriers at the
-electrodes and relatively low device on-current, while platinum has a
-relatively high work function of 5.65 eV, leading to smaller Schottky
-barriers and relatively high device on-current \autocite{Bargaoui2018}.
-The Schottky barrier height also influences the size of hole on-current
-relative to electron on-current. A high work function metal bends the
-valence band of the semiconductor towards the Fermi level of the metal,
-creating a low barrier for holes but a high barrier for electrons,
-leading to a much higher hole on-current relative to electron on-current
-\autocite{Avouris2007,Zhang2012,Bargaoui2018}.
-
 \begin{figure}
 
 \begin{minipage}[t]{0.03\linewidth}
@@ -1915,6 +1898,28 @@ and \(E_g\) is bandgap size. Figures reproduced with permission from
 \autocite{Bargaoui2018}.}
 
 \end{figure}
+
+The relative height of the Schottky barriers present at the electrical
+contacts influences the magnitude of on-current obtainable by a device.
+An important factor in determining the Schottky barrier height of a
+device is the type of metal used for the contact, with the relationship
+between the type of metal used and resulting device on-current shown in
+Figure~\ref{fig-band-bending}. Titanium has a relatively low work
+function of 4.3 eV, leading to larger Schottky barriers at the
+electrodes and relatively low device on-current, while platinum has a
+relatively high work function of 5.7 eV, leading to smaller Schottky
+barriers and relatively high device on-current \autocite{Bargaoui2018}.
+The Schottky barrier height also influences the size of hole on-current
+relative to electron on-current. A high work function metal like
+palladium bends the valence band of the semiconductor towards the Fermi
+level of the metal, creating a low barrier for holes but a high barrier
+for electrons, leading to a much higher hole on-current relative to
+electron on-current
+\autocite{Chen2005,Avouris2007,Zhang2012,Bargaoui2018}. A low work
+function metal like aluminium, on the other hand, has a relatively low
+work function, giving rise to a larger on-current for electrons and
+smaller on-current for holes
+\autocite{Avouris2007,Chen2005,Bargaoui2018}.
 
 The behaviour of carbon nanotube network transistors is also influenced
 by a variety of potential barriers existing at junctions between carbon
