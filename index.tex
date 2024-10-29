@@ -303,7 +303,7 @@ I started this project with minimal formal training in biological science, comin
 
 \pagestyle{headings}
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, frame hidden, breakable, enhanced, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, interior hidden, frame hidden, enhanced, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -2712,30 +2712,6 @@ Nanodiscs & 1 fM \\
 \hypertarget{sec-biosensor-methods}{%
 \subsection{Sensing Behaviour}\label{sec-biosensor-methods}}
 
-Vertebrate odorant receptors have previously been coupled with
-nanovesicle ion channels for selective analyte detection
-\autocite{Lim2015,Dung2018}. Lim \emph{et al.} synthesised nanovesicles
-featuring the human odorant receptor hOR2AG1, covalently coupled with a
-potassium ion channel and placed alongside an endogenous calcium ion
-channel. This configuration is shown in Figure~\ref{fig-lim-ion-channel}
-(a). These nanovesicles were attached to the carbon nanotube network of
-a thin-film device via charge-charge interaction with poly-D-lysine,
-demonstrated with the atomic force microscope image in
-Figure~\ref{fig-lim-ion-channel} (b). Binding of amyl butyrate to
-hOR2AG1 causes the OR to change conformation, opening the coupled
-potassium ion channel and causing ions to flow into the nanovesicle,
-resulting in transistor channel gating. The real-time signal responses
-associated with channel gating due to ion flow are shown in
-Figure~\ref{fig-lim-ion-channel} (c) and
-Figure~\ref{fig-lim-ion-channel} (d). Intracellular signalling by the
-odorant receptors means that target binding also activates the calcium
-ion channel, and so the presence of calcium ions is sufficient for a
-sensing response. In all electrolytes used to obtain a signal response,
-ions are present in high concentrations relative to analyte, ensuring
-ions are readily available for signalling processes. Without potassium
-or calcium ions present, ion inflow cannot occur, so no conductance
-change is observed \autocite{Lim2015}.
-
 \begin{figure}
 
 \begin{minipage}[t]{0.03\linewidth}
@@ -2943,6 +2919,30 @@ in each experimental series. Reproduced with permission from
 \autocite{Lim2015}.}
 
 \end{figure}
+
+Vertebrate odorant receptors have previously been coupled with
+nanovesicle ion channels for selective analyte detection
+\autocite{Lim2015,Dung2018}. Lim \emph{et al.} synthesised nanovesicles
+featuring the human odorant receptor hOR2AG1, covalently coupled with a
+potassium ion channel and placed alongside an endogenous calcium ion
+channel. This configuration is shown in Figure~\ref{fig-lim-ion-channel}
+(a). These nanovesicles were attached to the carbon nanotube network of
+a thin-film device via charge-charge interaction with poly-D-lysine,
+demonstrated with the atomic force microscope image in
+Figure~\ref{fig-lim-ion-channel} (b). Binding of amyl butyrate to
+hOR2AG1 causes the OR to change conformation, opening the coupled
+potassium ion channel and causing ions to flow into the nanovesicle,
+resulting in transistor channel gating. The real-time signal responses
+associated with channel gating due to ion flow are shown in
+Figure~\ref{fig-lim-ion-channel} (c) and
+Figure~\ref{fig-lim-ion-channel} (d). Intracellular signalling by the
+odorant receptors means that target binding also activates the calcium
+ion channel, and so the presence of calcium ions is sufficient for a
+sensing response. In all electrolytes used to obtain a signal response,
+ions are present in high concentrations relative to analyte, ensuring
+ions are readily available for signalling processes. Without potassium
+or calcium ions present, ion inflow cannot occur, so no conductance
+change is observed \autocite{Lim2015}.
 
 \begin{figure}
 
