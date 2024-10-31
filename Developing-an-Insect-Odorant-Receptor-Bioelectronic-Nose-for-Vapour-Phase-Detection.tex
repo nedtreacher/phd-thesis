@@ -303,7 +303,7 @@ I started this project with minimal formal training in biological science, comin
 
 \pagestyle{headings}
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, frame hidden, breakable, enhanced, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, sharp corners, borderline west={3pt}{0pt}{shadecolor}, frame hidden, interior hidden, breakable, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -796,13 +796,9 @@ source electrodes, and a `gate' bias \(V_g\), placed between the gate
 and source electrodes. Gate capacitance determines the influence of
 \(V_g\) on drain-source current \(I_d\). In general, gate capacitance is
 a series combination of geometric capacitance, \(C_{G}\), and the
-quantum capacitance\footnote{Quantum or electrochemical capacitance is
-  the change in charge with respect to the electrochemical potential of
-  a system. The quantum capacitance must be placed in series with the
-  geometric capacitance for low density-of-states systems, such as 2D
-  nanomaterials \autocite{Luryi1988,Xia2009,Miranda2016}.} of the
-channel nanomaterial, \(C_{Q}\)
-\autocite{Avouris2007,Cao2009,Heller2009a,Tran2016,Kireev2017,Li2023}.
+quantum capacitance of the channel nanomaterial, \(C_{Q}\) (the change
+in charge with respect to the electrochemical potential of a system)
+\autocite{Avouris2007,Cao2009,Heller2009a,Tran2016,Miranda2016,Kireev2017,Li2023}.
 
 \hypertarget{liquid-gating-and-debye-length}{%
 \subsubsection*{Liquid-Gating and Debye
@@ -2712,30 +2708,6 @@ Nanodiscs & 1 fM \\
 \hypertarget{sec-biosensor-methods}{%
 \subsection{Sensing Behaviour}\label{sec-biosensor-methods}}
 
-Vertebrate odorant receptors have previously been coupled with
-nanovesicle ion channels for selective analyte detection
-\autocite{Lim2015,Dung2018}. Lim \emph{et al.} synthesised nanovesicles
-featuring the human odorant receptor hOR2AG1, covalently coupled with a
-potassium ion channel and placed alongside an endogenous calcium ion
-channel. This configuration is shown in Figure~\ref{fig-lim-ion-channel}
-(a). These nanovesicles were attached to the carbon nanotube network of
-a thin-film device via charge-charge interaction with poly-D-lysine,
-demonstrated with the atomic force microscope image in
-Figure~\ref{fig-lim-ion-channel} (b). Binding of amyl butyrate to
-hOR2AG1 causes the OR to change conformation, opening the coupled
-potassium ion channel and causing ions to flow into the nanovesicle,
-resulting in transistor channel gating. The real-time signal responses
-associated with channel gating due to ion flow are shown in
-Figure~\ref{fig-lim-ion-channel} (c) and
-Figure~\ref{fig-lim-ion-channel} (d). Intracellular signalling by the
-odorant receptors means that target binding also activates the calcium
-ion channel, and so the presence of calcium ions is sufficient for a
-sensing response. In all electrolytes used to obtain a signal response,
-ions are present in high concentrations relative to analyte, ensuring
-ions are readily available for signalling processes. Without potassium
-or calcium ions present, ion inflow cannot occur, so no conductance
-change is observed \autocite{Lim2015}.
-
 \begin{figure}
 
 \begin{minipage}[t]{0.03\linewidth}
@@ -2912,7 +2884,103 @@ change is observed \autocite{Lim2015}.
 
 \raisebox{-\height}{
 
+\includegraphics{figures/ch3/lim2015-potassium1.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(e).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
 \includegraphics{figures/ch3/nanovesicle-amyl-butyrate-2-lim2015.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(f).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch3/lim2015-potassium2.png}
 
 }
 
@@ -2934,15 +3002,39 @@ change is observed \autocite{Lim2015}.
 nanovesicle-based carbon nanotube field-effect biosensor of Lim \emph{et
 al.} (a) shows a schematic of the different elements and signalling
 pathways present in the sensor, (b) shows an atomic force microscope
-image of the functionalised device, (c) shows real-time conductance
-changes resulting from amyl butyrate additions to the electrolyte gate
-against relevant controls, and (d) shows the dose-dependent response
-pattern to amyl butyrate. The key in (c) and (d) indicates the
-concentration of ions available to flow through nanovesicle ion channels
-in each experimental series. Reproduced with permission from
-\autocite{Lim2015}.}
+image of the functionalised device. Real-time conductance changes
+resulting from amyl butyrate additions to the electrolyte gate are
+compared against relevant controls in (c) and (d), while the
+dose-dependent response patterns to amyl butyrate corresponding to (c)
+and (d) are shown in (e) and (f) respectively. The key in (c)-(f)
+indicates the concentration of ions available to flow through
+nanovesicle ion channels in each experimental series. Reproduced with
+permission from \autocite{Lim2015}.}
 
 \end{figure}
+
+Vertebrate odorant receptors have previously been coupled with
+nanovesicle ion channels for selective analyte detection
+\autocite{Lim2015,Dung2018}. Lim \emph{et al.} synthesised nanovesicles
+featuring the human odorant receptor hOR2AG1, covalently coupled with a
+potassium ion channel and placed alongside an endogenous calcium ion
+channel. This configuration is shown in Figure~\ref{fig-lim-ion-channel}
+(a). These nanovesicles were attached to the carbon nanotube network of
+a thin-film device via charge-charge interaction with poly-D-lysine,
+demonstrated with the atomic force microscope image in
+Figure~\ref{fig-lim-ion-channel} (b). Binding of amyl butyrate to
+hOR2AG1 causes the OR to change conformation, opening the coupled
+potassium ion channel and causing ions to flow into the nanovesicle,
+resulting in transistor channel gating. The real-time signal responses
+associated with channel gating due to ion flow are shown in
+Figure~\ref{fig-lim-ion-channel} (c)-(f). Intracellular signalling by
+the odorant receptors means that target binding also activates the
+calcium ion channel, and so the presence of calcium ions is sufficient
+for a sensing response. In all electrolytes used to obtain a signal
+response, ions are present in high concentrations relative to analyte,
+ensuring ions are readily available for signalling processes. Without
+either potassium or calcium ions present, ion inflow cannot occur, so no
+conductance change is observed \autocite{Lim2015}.
 
 \begin{figure}
 
@@ -3503,8 +3595,8 @@ functionalisation with PBASE and micelles; (d) shows real-time responses
 of the functionalised, liquid-gated channel to additions of dimethyl
 methylphosphonate (DMMP) analyte; (e) shows the dose-dependent response
 curve to DMMP; and (f) shows a control series demonstrating the
-selective behaviour of the sensor, where EB is ethyl butyrate and AB is
-amyl butyrate. Reproduced with permission from \autocite{Yoo2022}.}
+selective behaviour of the sensor (EB is ethyl butyrate, AB is amyl
+butyrate). Reproduced with permission from \autocite{Yoo2022}.}
 
 \end{figure}
 
@@ -3692,6 +3784,20 @@ Biosensors}\label{sec-insect-OR-biosensors}}
 \hypertarget{insect-odorant-receptors}{%
 \subsection{Insect Odorant Receptors}\label{insect-odorant-receptors}}
 
+\begin{figure}
+
+{\centering \includegraphics[width=0.65\textwidth,height=\textheight]{figures/ch3/OR_diagram.png}
+
+}
+
+\caption{\label{fig-iOR-membrane}The tuning OR and odorant receptor
+coreceptor (ORCO) on the native cell membrane, with C-terminus and
+N-terminus indicated. The red arrow indicates the location of ion
+transport across the membrane. Adapted from
+\autocite{Brito2016,Wicher2021}.}
+
+\end{figure}
+
 Insect odorant (or olfactory) receptors (iORs) are a diverse range of
 odorant-sensitive seven-transmembrane proteins located in the dendrite
 cells of insect sensory hairs, known as sensilla
@@ -3716,20 +3822,6 @@ The tuning iORs respond to (or are inhibited by) a huge variety of odors
 analyte means artificial neural network processing may be required for
 accurate readouts from a self-contained, lab-on-a-chip iOR biosensor
 \autocite{Bachtiar2016}.
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.55\textwidth,height=\textheight]{figures/ch3/OR_diagram.png}
-
-}
-
-\caption{\label{fig-iOR-membrane}The tuning OR and odorant receptor
-coreceptor (ORCO) on the native cell membrane, with C-terminus and
-N-terminus indicated. The red arrow indicates the location of ion
-transport across the membrane. Adapted from
-\autocite{Brito2016,Wicher2021}.}
-
-\end{figure}
 
 Vertebrate odorant receptor proteins are terminated with an amine group
 outside the cell membrane, known as the N-terminus, and terminated with
@@ -3984,6 +4076,32 @@ nanodisc membrane also possesses amine residues \autocite{Bayburt2010},
 so in some cases immobilisation may be directly between the PBASE linker
 and nanodisc membrane.
 
+Functionalisation of a FET device channel with iORs significantly alters
+the transfer characteristics of that channel. Murugathas \emph{et al.}
+found that successful functionalisation of a CNT FET device with iORs
+would typically increase the device on-current, increase its on-off
+ratio and cause a significant negative shift in threshold voltage, as
+shown in Figure~\ref{fig-functionalisation-literature} (a)
+\autocite{Murugathas2019a}. Meanwhile, successful functionalisation of a
+graphene device with iORs would typically dramatically decrease the
+device on-current and cause a negative shift in Dirac voltage, as seen
+in Figure~\ref{fig-functionalisation-literature} (b)
+\autocite{Murugathas2020}. These changes are not simply the result of
+linker attachment to the channel surface \autocite{Murugathas2019a}. It
+is thought that the negative shift of both threshold and Dirac voltages
+are caused by the N-terminus amine groups on the odorant receptors or
+amine groups on the nanodisc membrane scaffold proteins donating
+electrons to the device channel, which has a similar effect to doping
+the channel with impurities
+\autocite{Bradley2004,Murugathas2019a,Murugathas2020}. Note that very
+similar changes occur when functionalising with empty nanodiscs which
+contain no odorant receptors, shown in
+Figure~\ref{fig-functionalisation-literature} (c) and
+Figure~\ref{fig-functionalisation-literature} (d). Unless the odorant
+receptors attach preferentially to the network over nanodiscs, it
+appears the gating effect is predominantly due to the large-scale
+attachment of nanodisc membranes.
+
 \begin{figure}
 
 \begin{minipage}[t]{0.03\linewidth}
@@ -4187,32 +4305,6 @@ nanodisc-functionalised CNT network FET. Reproduced with permission from
 \autocite{Murugathas2019a,Murugathas2020}.}
 
 \end{figure}
-
-Functionalisation of a FET device channel with iORs significantly alters
-the transfer characteristics of that channel. Murugathas \emph{et al.}
-found that successful functionalisation of a CNT FET device with iORs
-would typically increase the device on-current, increase its on-off
-ratio and cause a significant negative shift in threshold voltage, as
-shown in Figure~\ref{fig-functionalisation-literature} (a)
-\autocite{Murugathas2019a}. Meanwhile, successful functionalisation of a
-graphene device with iORs would typically dramatically decrease the
-device on-current and cause a negative shift in Dirac voltage, as seen
-in Figure~\ref{fig-functionalisation-literature} (b)
-\autocite{Murugathas2020}. These changes are not simply the result of
-linker attachment to the channel surface \autocite{Murugathas2019a}. It
-is thought that the negative shift of both threshold and Dirac voltages
-are caused by the N-terminus amine groups on the odorant receptors or
-amine groups on the nanodisc membrane scaffold proteins donating
-electrons to the device channel, which has a similar effect to doping
-the channel with impurities
-\autocite{Bradley2004,Murugathas2019a,Murugathas2020}. Note that very
-similar changes occur when functionalising with empty nanodiscs which
-contain no odorant receptors, shown in
-Figure~\ref{fig-functionalisation-literature} (c) and
-Figure~\ref{fig-functionalisation-literature} (d). Unless the odorant
-receptors attach preferentially to the network over nanodiscs, it
-appears the gating effect is predominantly due to the large-scale
-attachment of nanodisc membranes.
 
 \hypertarget{sensing-behaviour-1}{%
 \subsection{Sensing Behaviour}\label{sensing-behaviour-1}}

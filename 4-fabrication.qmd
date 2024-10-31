@@ -3,7 +3,7 @@ keep-tex: true
 format: pdf
 ---
 
-# Fabrication and Characterisation of Carbon Nanotube Network and Graphene Field-Effect Transistors {#sec-fabrication}
+# Fabrication and Characterisation of Thin-Film Transistors {#sec-fabrication}
 
 ## Introduction
 
@@ -11,7 +11,7 @@ This chapter discusses the fabrication processes for both the carbon nanotube ne
 
 The nitrogen ($\geq$ 99.99%) and oxygen (99.7%) used in fabrication work  was supplied by BOC Limited New Zealand. All acetone and isopropanol used for wafer/device processing had a minimum 99.9% purity (HPLC grade). Deionised (DI) water was taken from a Synergy$^\circledR$ UV Water Purification System. The DI water had a measured conductivity of $(1.4\pm0.1)\textrm{ } \textrm{µS cm}^{-1}$, compared to tap water with a measured conductivity of $(7.8\pm0.2)\textrm{ } \textrm{µS cm}^{-1}$.
 
-## Photolithography for Carbon Nanotube and Graphene Field-Effect Transistors {#sec-photolithography}
+## Photolithography for Fabrication of Thin-Film Transistors {#sec-photolithography}
 
 ### General Overview
 
@@ -119,9 +119,9 @@ Meanwhile, 5 µg of 99% semiconducting carbon nanotube bucky paper (NanoIntegris
 
 Two different approaches were used to attach the surfactant-dispersed carbon nanotubes (CNTs) to the substrate surface. The first approach was a simple drop-casting method, while the second was performed in the presence of steam ('steam-assisted'). In both approaches, the quarter wafers were first rinsed with ultrapure deionised water (DI water), acetone and IPA. Next, they were placed into a small plasma cleaner (Plasma Etch, Inc, PE-50 Compact Benchtop Plasma Cleaning System) or reactive ion etcher (Oxford Instruments, Plasmalab 80 Plus) and exposed to O$_2$ plasma at 100 W for at least 2 min under 300 mTorr pressure to make the surface hydrophilic. 1 mL of poly-$L$-lysine (PLL) was immediately deposited onto each quarter wafer and left for 5 minutes. The quarter wafers were then rinsed for 30 s with DI water and dried with N$_2$ gas. The presence of the PLL on the plasma cleaned surface strengthens the surface adhesion of semiconducting single carbon nanotubes after the surfactant dispersion has been dropcast onto the substrate.
 
-For carbon nanotube network films deposited in surfactant without steam present, 2 mL of IsoNanotubes-S 90% or 99% dispersion (NanoIntegris) was decanted into a small bottle and sonicated for 5 s to break up bundles of CNTs[^3]. An even spread of 400 µL carbon nanotube dispersion was placed in the centre of the PLL-functionalised quarter wafer, covered with a glass dish and left for 10 minutes. The dispersion was then rinsed off with DI water and IPA, and the quarter wafer was dried with N$_2$ gas. Next, the quarter wafer was annealed in a vacuum oven at 150°C for 1 hour to remove residual surfactant. This method often leads to an inhomogeneous spread of CNTs across the quarter wafer surface, which is demonstrated by the variability in electrical properties of the resulting devices. For further discussion of this variability, see @sec-cnt-devices.
+For carbon nanotube network films deposited in surfactant without steam present, 2 mL of IsoNanotubes-S 90% or 99% dispersion (NanoIntegris) was decanted into a small bottle and sonicated for 5 s to break up bundles of CNTs[^2]. An even spread of 400 µL carbon nanotube dispersion was placed in the centre of the PLL-functionalised quarter wafer, covered with a glass dish and left for 10 minutes. The dispersion was then rinsed off with DI water and IPA, and the quarter wafer was dried with N$_2$ gas. Next, the quarter wafer was annealed in a vacuum oven at 150°C for 1 hour to remove residual surfactant. This method often leads to an inhomogeneous spread of CNTs across the quarter wafer surface, which is demonstrated by the variability in electrical properties of the resulting devices. For further discussion of this variability, see @sec-cnt-devices.
 
-[^3]: The composition of the surfactant used in the dispersion is proprietary to NanoIntegris.
+[^2]: The composition of the surfactant used in the dispersion is proprietary to NanoIntegris.
 
 ::: {#fig-steaming-method layout="[[3,-1,45,-1,3,-1,45,-1]]"}
 
