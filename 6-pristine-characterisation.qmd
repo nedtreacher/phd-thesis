@@ -537,93 +537,6 @@ The transfer characteristics of a single steam-deposited carbon nanotube field-e
 
 To explore the effect of gate voltage on signal-to-noise ratio in the subthreshold regime, two PBS control and salt concentration sensing series were performed with the same channel at different gate voltages, shown in @fig-salt-conc-SNR (a) with coloured dashed lines. @fig-salt-conc-SNR (b) shows the initial PBS and DI water additions made after 1800 s. Previous work on the signal-to-noise ratio for liquid-gated, encapsulated carbon nanotube devices suggests that gating devices close to $V_{gap}$ should give a larger signal-to-noise ratio for salt concentration changes [@Heller2009]. However, in this case, improved signal-to-noise ratio was observed when gated at a voltage further removed from $V_{gap}$. This discrepancy could be a result of the use of a network of carbon nanotubes rather than a single nanotube, where gating may have less of an impact on noise. Alternatively, it could be a result of a lack of mixing in the well setup used, leading to inconsistent signal sizes with concentration change. Heller *et al.* used a flow cell during their signal-to-ratio work [@Heller2009]. By using a flow cell with our devices, it would be possible to understand the role of mixing in the salt concentration work shown in this section.
 
-##	Vapour Sensing with Volatile Organic Compounds {#sec-pristine-EtHex}
-
-### Baseline Drift {#sec-vapour-drift}
-
-When sensing vapour in the vapour delivery system, devices have no liquid gate, and are instead backgated when taking measurements. Therefore, the baseline drift of devices characterised in this manner should be considered separately to those characterised in an liquid-gated environment. Device baseline drift of a backgated device in the vapour sensing chamber is therefore examined here in more detail. A AZ$^\circledR$ 1518 encapsulated carbon nanotube network device was used for this discussion. The device was fabricated on a substrate with a 300 nm SiO$_2$ layer, and the carbon nanotube film was deposited using the steam-assisted surfactant method. Before measurements were taken, the vapour system was purged of vapour, the total dilution flow into the chamber was set at 200 sccm as read by the Tylan mass flow controller and flow to the PID was set to 150 sccm on the flowmeter. Sensing measurements were taken using the B1500A semiconductor device analyser.
-
-::: {#fig-bg-baseline-drift layout="[[-11,3,-1,70,-15],[-11,3,-1,70,-15]]"}
-
-![](figures/(a).png)
-
-![](figures/ch6/Q2C6_fitted_curves.png)
-
-![](figures/(b).png)
-
-![](figures/ch6/Q2C6_fitted_curves_exp.png)
-
-The source-drain and gate current measured for a backgated device channel across 3600 s, where $V_{ds}$ = 100 mV and $V_g$ = 0 V is shown in (a). A linear fit to the data from 2400 s onwards has been indicated on (a) with a black dashed line. The linear fit has then been subtracted from (a) to give the dataset shown in (b). An exponential fit to the dataset in (b) is also shown in black.
-:::
-
-@fig-bg-baseline-drift (a) shows 3600 s of baseline drift from the same channel when the device was backgated at $V_g$ = 0 V and a source-drain voltage of $V_{ds}$ = 100 mV was placed across the channel. During this period of time, a 200 sccm nitrogen flow was placed through the device chamber with the dilution mass flow controller. Gate leakage current remains negligible across the entire control series. As seen for the liquid-gated device in @sec-baseline-drift, there is a period of rapidly-disappearing exponential decay followed by a period of stable, approximately linear baseline drift. The baseline drift observed here appears to be significantly lower than that seen by Noyce *et al.*. This observation suggests that the higher magnitude of drift observed by Noyce *et al.* is not primarily due to backgating in air, but instead results from the use of a significantly different fabrication process for their devices [@Noyce2019]. 
-
-A linear least-squares fit was performed on the samples taken between 2400 s $-$ 3600 s, and the fit obtained had an R-squared value of 0.998. The constants obtained for the linear fit, where $I = c_1t + c_2$, were $c_1 = -17.31\pm0.05$ pAs$^{-1}$ and $c_2 = 0.779$ µA. Both linear and constant terms are higher than that of the average liquid-gated device drift. The linear fit was then subtracted from the raw data, and an exponential least-squares fit was performed on the remaining dataset. @fig-bg-baseline-drift (b) shows the exponential fit to this remaining dataset from 0 s $-$ 3600 s. The constants obtained for the exponential fit $I = I_0exp(-t/\tau)$ were $I_0 = 7.20 \pm 0.05$ nA and $\tau = 730 \pm 10$ s. The exponential term is similar in size to those found for the channels of the liquid-gated device, which may indicate the magnitude of this decay behaviour is independent of the type of transistor gating. Three time constants equates to $2190 \pm 30$, indicating the length of the control sequence could be safely reduced to 2400 s without the short-term exponential drift being present during sensing.
-
-This analysis indicates that the baseline drift for the backgated carbon nanotube under nitrogen flow can be approximated as a combination of a exponential, linear and constant term. Furthermore, while only measured here for a single channel, it appears likely that we can expect backgated baseline drift behaviour to be similar to the multiplexed liquid-gated drifts observed in @sec-baseline-drift, except possibly with a longer time constant for the exponential term. It seems that the baseline drift behaviour in these devices is primarily due to the general nature of the carbon nanotube network. It appears possible that the type of gating used for device characterisation may affect the rate at which the exponential term decays. However, further experimentation may be needed to confirm this relationship, which is outside the scope of this thesis.
-
-### Sensing Series {#sec-vapour-series}
-
-Directly after the 3600 s control series, sensing devices were exposed to four intervals of volatile organic vapour flow from the carrier line. Two high vapour pressure compounds, ethyl hexanoate (0.21 kPa at room temperature [@EtHex]) and *trans*-2-hexen-1-al (0.88 kPa at room temperature [@E2Hex]), were measured separately using two different devices. 5 mL of the analyte of interest was placed into the analyte bottle on the carrier line before each sensing series. The same settings for the vapour delivery system were kept from @sec-vapour-drift. A total flow of 200 sccm between the two mass flow controllers was kept through the chamber at all times. During each interval 150 sccm flow was placed through the carrier line. Apart for the duration of these intervals, flow through the carrier line was kept at zero. The intervals were of varying lengths to see how the carbon nanotube device responded to various concentrations of vapour in the chamber as recorded by the PID. A 1200 s recovery period was placed between each carrier flow interval, where 200 sccm flow was placed into the chamber from the dilution line. A separate series was also performed for each device in an identical manner except without analyte in the analyte bottle. The chamber temperature was 22°C $\pm$ 3°C for all measurements.
-
-::: {#fig-EtHex-sampling layout="[[3,-1,45,-1,3,-1,45,-1],[3,-1,45,-1,3,-1,45,-1],[3,-1,45,-1,3,-1,45,-1]]"}
-
-![](figures/(a).png)
-
-![](figures/ch6/Q39C11_detrend_trunc_arrows_normalised.png)
-
-![](figures/(b).png)
-
-![](figures/ch6/Q2C6_detrend_trunc_arrows_normalised.png)
-
-![](figures/(c).png)
-
-![](figures/ch6/Q39C11_filtered_detrend_trunc_arrows_normalised.png)
-
-![](figures/(d).png)
-
-![](figures/ch6/Q2C6_filtered_detrend_trunc_arrows_normalised.png)
-
-![](figures/(e).png)
-
-![](figures/ch6/Q39C11_mean_simple_difference_before_and_after_step_filtered_concentrations.png)
-
-![](figures/(f).png)
-
-![](figures/ch6/Q2C6_mean_simple_difference_before_and_after_step_filtered_concentrations.png)
-
-Device channel responses to intervals of flow from the carrier line into the vapour delivery system chamber. Intervals begin at 3600 s, 4850 s, 6150 s and 7500 s. The length of each interval is indicated above the corresponding normalised current response to *trans*-2-hexen-1-al (E2Hex) in (a) and to ethyl hexanoate (EtHex) in (b). Each series is shown alongside a control series in which no analyte was present in the analyte bottle. The dataset after applying a moving median filter is shown in (c) for E2Hex and (d) for EtHex. The signal changes corresponding to the current responses to each interval are shown in (e) for E2Hex and (f) for EtHex. 
-:::
-
-The results of these interval tests, both with and without analyte, are shown in @fig-EtHex-sampling (a) for *trans*-2-hexen-1-al and @fig-EtHex-sampling (b) for ethyl hexanoate. These results have been normalised, despiked and have had baseline drift corrections applied in the manner described in both @sec-python-analysis and @sec-salt-conc-series. To more clearly discern sensing behaviour through the noise present, a moving median filter was applied to these datasets, as shown in @fig-EtHex-sampling (c) and @fig-EtHex-sampling (d) for E2Hex and EtHex respectively. Most intervals of exposure to carrier line flow correspond to a current increase. These increases have been labelled with the length of the corresponding interval used. When analyte was present in the analyte bottle on the carrier line, the response to each exposure interval was generally larger than the response when no analyte is present. Some response to carrier line flow is observed even when the analyte bottle is empty. As the system lines are purged with a roughing pump before sensing, and both lines are checked for vapour before sensing during the PID, it appears these small responses may be due to a slow leak of volatiles from the fumehood environment into the carrier line when not in use. 
-
-Vapour concentration measurements from PID, shown in @fig-EtHex-sampling-PID, also indicate that an ionisable gas is reaching the chamber during each interval, even when the analyte bottle is left empty. As discussed in @sec-responses-to-vapour, some baseline drift is seen after each addition, which is particularly significant for the second two carrier line intervals in @fig-EtHex-sampling-PID (a). The baseline immediately before each peak was therefore subtracted from the maximum concentration measured during each interval to give the values shown above each peak. These values are taken to represent the nominal change in chamber concentration as a result of each exposure interval.   
-
-::: {#fig-EtHex-sampling-PID layout="[[-11,3,-1,70,-15],[-11,3,-1,70,-15]]"}
-
-![](figures/(a).png)
-
-![](figures/ch6/input_time_comparison_E2Hex.png)
-
-![](figures/(b).png)
-
-![](figures/ch6/input_time_comparison_EtHex.png)
-
-Nominal concentration measurements by the photoionisation detector taken from the device chamber during device current sampling from 3600 s onwards. Measurements both with and without *trans*-2-hexen-1-al (E2Hex) in the analyte bottle are shown in (a), while measurements both with and without ethyl hexanoate (EtHex) are shown in (b). The maximum nominal concentration reached during each carrier flow interval is indicated above each peak.
-:::
-
-Each signal response corresponds to a change in conductance through the exposed carbon nanotubes within the device channel. These conductance changes occur due to the molecular adsorption of analyte vapour onto the external and internal surfaces of the nanotubes. The vapour can dope the semiconducting carbon nanotubes in the channel, causing a shift in the channel threshold voltage, and can cause carrier scattering when adsorped onto the metallic nanotubes present. Binding of analyte to a gas sensing material can be reversible or irreversible. In general, adsorption onto carbon nanotube sensors is irreversible. This irreversibility means after a response to analyte, readings from the sensor will not return to the original baseline within the same timescale as the sensing response, even after stopping analyte flow to the chamber [@Agnihotri2005; @Lee2005]. From @fig-EtHex-sampling, it is clear that the carbon nanotube sensor configuration used here is primarily irreversible, where the current level does not return to baseline within a period of 1200 s after analyte exposure.
-
-![Device response against maximum concentration measurement corresponding to each interval of carrier flow, where control responses to carrier line flow from an empty analyte bottle have been subtracted. The chamber temperature was 22°C ± 2°C during collection of all data used here.](figures/ch6/EtHex-ratio-comparison.png){#fig-EtHex-ratio-comparison width=55%}
-
-Assuming that the signal response is directly proportional to the degree of surface coverage by adsorbed analyte on the carbon nanotube network [@Lee2005], the relationship between signal response (@fig-EtHex-sampling) and concentration in the device chamber (@fig-EtHex-sampling-PID) can be modelled with a adsorption isotherm [@Agnihotri2005]. The Freundlich adsorption isotherm (@eq-freundlich) models adsorption onto a heterogeneous surface, and has previously been used to model adsorption of volatile organic molecules onto single-walled carbon nanotubes. $K_F$ is the adsorption capacity and $1/n$ is adsorption intensity. $1/n$ can be used to understand the heterogeneity of adsorbate sites [@Ayawei2017; @Sabzehmeidani2021]. The vapour response factor, which is equal to 1.6 for a 10.6 eV photoionisation detector (PID), is denoted as $k_{RF}$. As the PID has been run uncalibrated, a factor $k_{D}$ has been included to account for linear span drift. As span drift due to window contamination can cause concentration readings to be reduced up to 30% after six months of PID operation, it is expected that $k_{D}$ falls within the range of 0.2 $-$ 1 for the sensing configuration used [@PIDmanual; @Ionscience].
-
-$$
-q_e = K_F(k_Dk_{RF}C_e)^{1/n}
-$$ {#eq-freundlich}
-
-To examine only the device response directly attributable to the presence of analyte vapour, the average response resulting from carrier line exposure with no analyte present was subtracted from each device current reading. The same was then done for the vapour concentration readings from the PID. Due to the equivalence of the three final concentration measurements in @fig-EtHex-sampling-PID (a), $0.11\pm0.01$ ppm, no isotherm could be fitted to the E2Hex dataset. An average response above control of $0.74\pm0.18$% was found for these E2Hex intervals, where the high error margin resulted from the relatively high level of noise in the collected data. A best-fit Freundlich isotherm to EtHex concentration readings against device channel responses is shown in @fig-EtHex-ratio-comparison. The data collected does not contradict the possibility that it follows a Freudlich isotherm. This dataset is limited, collected primarily to demonstrate the responsiveness of carbon nanotubes to vapour. Further investigation into this relationship was outside of the scope of this thesis, but further work could be done to more rigorously confirm whether the Freundlich isotherm is a valid model for relating the PID response to the pristine carbon nanotube sensor response of this system.
-
 ## Conclusion
 
 To ensure fabricated transistors were suitable for biosensing purposes, the morphology and electrical properties of the pristine carbon nanotube and graphene transistors were investigated. 
@@ -634,7 +547,7 @@ However, less bundled networks had the most surface contamination present. Atomi
 
 Constant voltage real-time measurements of the carbon nanotube field-effect transistor devices had a characteristic drift that could be modelled using both a linear and exponential term. This was true for both liquid-gated and back-gated devices. The linear term of liquid-gated baseline drift had a reasonably consistent gradient between device channels, indicating that similar drift behaviour should be reproducible between devices fabricated in the same manner. The exponential behaviour was less consistent, indicating that this hysteresis behaviour is less closely correlated with the fabrication process. A control series length of 1800 s was used, as this period was sufficient to minimise exponential drift during sensing for all the channels tested. The linear and exponential terms for back-gated baseline drift under nitrogen flow were significantly higher than all measurements for liquid-gated drift. A longer control series length of 2400 s was therefore used to minimise exponential drift when vapour sensing.
 
-Both a PBS dilution sensing series and vapour sensing with *trans*-2-hexen-1-al and ethyl hexanoate were used to verify that the carbon nanotube transistor devices were highly sensitive to changes in both aqueous and vapour environments. The expected logarithmic signal response behaviour was observed when detecting dilutions of PBS in a liquid-gate environment. Signal size relative to baseline drift was highly consistent between channels, which is promising for multiplexing work. Deviations from the logarithmic trend possibly indicated insufficient mixing within the PDMS well during sensing, which may be addressed in future aqueous sensing work by using a flow cell. When vapour phase sensing, transducers were found to be sensitive to parts-per-million vapour concentrations as measured by the photoionisation detector. These experiments are useful controls for the biofunctionalised devices. As these devices are highly sensitive, it is important to be able to discern whether a signal response is due to modification of an attached biomolecule or whether the carbon nanotubes themselves are responding.
+A PBS dilution sensing series was used to verify that the carbon nanotube transistor devices were highly sensitive to changes in an aqueous environment. The expected logarithmic signal response behaviour was observed when detecting dilutions of PBS in a liquid-gate environment. Signal size relative to baseline drift was highly consistent between channels, which is promising for multiplexing work. Deviations from the logarithmic trend possibly indicated insufficient mixing within the PDMS well during sensing, which may be addressed in future aqueous sensing work by using a flow cell. This experiment is a useful control for sensing using functionalised devices. It is important to confirm that the devices are highly sensitive, while also being able to discern whether a signal response is due to interaction with an attached biomolecule or whether the carbon nanotubes themselves are responding.
 
 Graphene field-effect transistor devices were often found to possess a double-minima feature, which appears to be the result of a lack of doping from the metal contacts in the center of the device channels. These double Dirac points are unlikely to have any significant effect on the sensing behaviour of graphene devices. The graphene device characteristics were found to be highly consistent after 1 hour exposure to PBS with minimal drift. There was some indications from the transfer characteristics that $p$-dopants were present on the graphene surface. Salt concentration and vapour sensing with graphene FETs are not shown in this thesis, but it is important to perform similar device verification and control testing when using a batch of graphene devices for biofunctionalised sensing. 
 
