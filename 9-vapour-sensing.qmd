@@ -10,7 +10,7 @@ format: pdf
 
 ## Sensor Responses to Vapour Flow {#sec-responses-to-vapour}
 
-![Simplified schematic showing the flow into and out of the device chamber and manifold of the delivery system. The input flows from the carrier and dilution line are represented by C and D, and the output flow through the PID is represented by P. The exhaust can either flow past the relative humidity indicator or straight to the fumehood. This diagram assumes that flow through leaks in the chamber and manifold is low enough to be considered negligible, which was confirmed by leak testing with bubble solution.](figures/ch5/chamber-manifold-v2.png){#fig-chamber-schematic width=100%}
+![Simplified schematic showing the flow into and out of the device chamber and manifold of the delivery system. The input flows from the carrier and dilution line are represented by C and D, and the output flow through the PID is represented by P. The exhaust can either flow past the relative humidity indicator or straight to the fumehood. This diagram assumes that flow through leaks in the chamber and manifold is low enough to be considered negligible, which was confirmed by leak testing with bubble solution.](figures/ch9/chamber-manifold-v2.png){#fig-chamber-schematic width=100%}
 
 Once the rate of flow through the device chamber had been calibrated, the correct operation of the reference sensors used in the system was verified. Various flow rates in and out of the chamber were used to calibrate and verify the reference sensors. These flows in and out of the chamber are labelled on the simplified schematic in @fig-chamber-schematic. Note that the labels on this schematic assume that nitrogen compression at any point within this schematic is negligible. @sec-calibration shows that a 200 sccm flow into the chamber corresponds to an actual rate for C + D of $\sim$ 230 sccm. If a 150 sccm flow rate as measured by the flowmeter is pumped out through the PID, @sec-calibration shows that P $\sim$ 110 sccm. This means that $\sim$ 50% of the flow through the chamber exits via the PID. If a 100 sccm flowmeter rate is pumped through the PID, P $\sim$ 70 sccm, and therefore $\sim$ 30% of the chamber flow exits through the PID.
 
@@ -28,7 +28,7 @@ To test the relative humidity indicator (RHI), all valves out of the chamber wer
 
 : Flow sequence for testing relative humidity indicator. {#tbl-RHI-flow-sequence}
 
-![Relative humidity readouts from the relative humidity indicator juxtaposed with flow rates from the dilution line and carrier lines of the vapour system, with 10 mL deionised water in the carrier line analyte bottle.](figures/ch5/RHI_verification.png){#fig-RHI-verification width=65%}
+![Relative humidity readouts from the relative humidity indicator juxtaposed with flow rates from the dilution line and carrier lines of the vapour system, with 10 mL deionised water in the carrier line analyte bottle.](figures/ch9/RHI_verification.png){#fig-RHI-verification width=65%}
 
 @fig-RHI-verification shows that the Telaire sensor records decreased humidity after flow exclusively from the dilution line and increased humidity after flow from the analyte bottle. It also shows that in regular 200 s intervals, the rate of relative humidity change increases and then begins to stabilise. Each accelerated change in relative humidity occurs about 50 s after a corresponding increase in flow through the carrier line. It appears a 50 s period passes before an increased concentration of water vapour due to increased carrier flow first reaches the relative humidity indicator. Over the full 800 s of carrier line flow, relative humidity increases from a minimum of $14.0\pm2.0$% to a maximum of $43.6\pm2.0$%. The temperature in the chamber remained between 21.0\pm0.5°C and 22.0\pm0.5°C over the entire measurement period. Combining equations @eq-absolute-humidity and @eq-water-vapour-pressure from @sec-reference-sensors, we find that the absolute humidity in the chamber reaches a low of $2.6\pm0.4$ gm$^{-3}$ at 238.1 s, 38.1 s after the initial onset of carrier flow, and a high of $8.4\pm0.5$ gm$^{-3}$ at 998.8 s, after 798.8 s of carrier flow through the chamber. The clear response of the Telaire RHI to increased water vapour flow confirms that this sensor is working. 
 
@@ -40,11 +40,11 @@ To test the photoionisation detector, the device chamber and carrier line were f
 
 ![](figures/(a).png)
 
-![](figures/ch5/240223_240226_comparison_unnormalised.png)
+![](figures/ch9/240223_240226_comparison_unnormalised.png)
 
 ![](figures/(b).png)
 
-![](figures/ch5/240223_240226_comparison.png)
+![](figures/ch9/240223_240226_comparison.png)
 
 The response of the photoionisation detector to ethyl hexanoate vapour over 600 s of exposure is shown relative to the 200 sccm nitrogen flow baseline in (a), and normalised with respect to the maximum reading in (b).
 :::
@@ -57,7 +57,7 @@ However, this is not unexpected. As discussed in @sec-reference-sensors, the PID
 
 A further series of tests were performed to verify whether it was possible to compare different concentrations of vapour in the chamber using the PID. All testing was performed on the same day to minimise sensitivity drift. For each test, the system was purged of vapour and the total dilution flow into the chamber was set at 200 sccm as read by the Tylan mass flow controller. Flow out of the chamber to the PID was set at 100 sccm as read by the micropump flowmeter, and the almost-constant nitrogen baseline after 10 minutes was set as the PID zero point. 5 mL of the volatile organic compound ethyl hexanoate (EtHex) was placed into the analyte bottle. During each test, 200 sccm was continuously flowed through the dilution line, except during three evenly spaced intervals of equal length. During these intervals, 150 sccm flow was placed through the carrier line and 50 sccm flow placed through the dilution line. In each test, the input interval time was varied to examine its effect on maximum vapour concentration recorded by the PID. As it took longer for the PID to return to a constant baseline with increased input intervals, when the input interval was increased, the spacing between intervals was also increased.
 
-![The response of the photoionisation detector to 3 evenly-spaced intervals of ethyl hexanoate vapour entering the device chamber, relative to a 200 sccm nitrogen flow baseline. Input intervals were either 50 s, 100 s or 200 s in length. During each input interval, 150 sccm carrier flow and 50 sccm dilution flow were placed through the chamber.](figures/ch5/input_time_comparison.png){#fig-concentration-comparison width=70%}
+![The response of the photoionisation detector to 3 evenly-spaced intervals of ethyl hexanoate vapour entering the device chamber, relative to a 200 sccm nitrogen flow baseline. Input intervals were either 50 s, 100 s or 200 s in length. During each input interval, 150 sccm carrier flow and 50 sccm dilution flow were placed through the chamber.](figures/ch9/input_time_comparison.png){#fig-concentration-comparison width=70%}
 
 The results of three tests, with input intervals of 50 s, 100 s and 200 s, are shown in @fig-concentration-comparison. Each interval of carrier flow corresponds to a rapid increase in concentration, which reaches a peak, then decreases. The maximum concentration reached for each interval is shown above the corresponding peak. Note that the maximum concentration label does not correspond to the difference between the original baseline and the maximum concentration of each peak. Instead, it corresponds to the difference between the concentration measurement at a set time before the onset of carrier flow and the maximum concentration reached. For each test, this set time is 5% of the spacing time used, 50 s, 150 s and 300 s respectively. This approach was taken to account for what appears to be drift from the original 0 ppm baseline. This variable baseline drift was particularly significant for the 100 s interval measurements, where concentration measurements settled to a new baseline of $\sim$ 0.05 ppm after the third peak.
 

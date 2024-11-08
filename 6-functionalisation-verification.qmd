@@ -23,11 +23,11 @@ $\pi$-stacking or $\pi-\pi$ interaction[^2] is a specific type of non-covalent b
 
 ![](figures/(a).png)
 
-![](figures/ch7/pbase_stable_1_pyrene.png)
+![](figures/ch6/pbase_stable_1_pyrene.png)
 
 ![](figures/(b).png)
 
-![](figures/ch7/pbase_stable_2_pyrene.png)
+![](figures/ch6/pbase_stable_2_pyrene.png)
 
 Two conformations of PBASE molecule with geometry optimised via *ab initio* calculations performed with Gaussian 16 software [@g16]. White balls correspond to hydrogen, grey to carbon, red to oxygen and blue to nitrogen. The pyrene moiety is highlighted in the image with a red dashed outline.
 :::
@@ -53,7 +53,7 @@ Once fastened to a bioreceptor via an amide or imide bond, the attachment to the
 knitr::opts_chunk$set(echo = FALSE)
 library(knitr)
 
-pbase_table <- read.csv("tables/ch7/pbase_table.csv", sep=",")
+pbase_table <- read.csv("tables/ch6/pbase_table.csv", sep=",")
 pbase_table <- pbase_table[rowSums(is.na(pbase_table)) == 0,]
 
 knitr::kable(pbase_table, 
@@ -74,15 +74,15 @@ knitr::kable(pbase_table,
 
 ![](figures/(a).png)
 
-![](figures/ch7/labelled_modified_sigma_pbase_nmr.png)
+![](figures/ch6/labelled_modified_sigma_pbase_nmr.png)
 
 ![](figures/(b).png)
 
-![](figures/ch7/labelled_modified_setareh_pbase_nmr.png)
+![](figures/ch6/labelled_modified_setareh_pbase_nmr.png)
 
 ![](figures/(c).png)
 
-![](figures/ch7/labelled_modified_dmso_nmr.png)
+![](figures/ch6/labelled_modified_dmso_nmr.png)
 
 $^{1}$H Nuclear Magnetic Resonance (NMR) spectra, performed with DMSO-d$_6$ used as the NMR solvent. (a) and (b) show NMR spectrum for commercially purchased PBASE, from Sigma-Aldrich and Setareh Biotech respectively, while (c) shows the blank spectrum taken with only DMSO-d$_6$ present. Spectra were taken by Jennie Ramirez-Garcia, School of Chemical and Physical Sciences, Te Herenga Waka - Victoria University of Wellington. Unlabelled peaks correspond to sample impurities.
 :::
@@ -101,19 +101,19 @@ The electrical characteristics of the carbon nanotube or graphene transistor are
 
 ![](figures/(a).png)
 
-![](figures/ch7/Q23D5_ch1_MeOHonly.png)
+![](figures/ch6/Q23D5_ch1_MeOHonly.png)
 
 ![](figures/(b).png)
 
-![](figures/ch7/Q23D12_ch1_DMSOonly.png)
+![](figures/ch6/Q23D12_ch1_DMSOonly.png)
 
 ![](figures/(c).png)
 
-![](figures/ch7/Q2C6_ch2_MeOHPBASE.png)
+![](figures/ch6/Q2C6_ch2_MeOHPBASE.png)
 
 ![](figures/(d).png)
 
-![](figures/ch7/Q23D7_ch3_DMSOPBASE.png)
+![](figures/ch6/Q23D7_ch3_DMSOPBASE.png)
 
 The electrical transfer characteristics of carbon nanotube transistors ($V_{ds}$ = 100 mV) before and after being submerged in MeOH (a) or DMSO (b) for one hour and subsequently rinsed with deionised water. The change in characteristics of similar transistor channels after being submerged in these same solvents containing 1 mM PBASE for one hour and then rinsed are shown in (c) and (d) respectively. Average threshold voltages for each transfer characteristic curve are also shown (taking the average of forward and reverse sweep values).
 :::
@@ -144,7 +144,7 @@ Another linker molecule that can be used to attach receptor molecules to a carbo
 knitr::opts_chunk$set(echo = FALSE)
 library(knitr)
 
-pba_table <- read.csv("tables/ch7/pba_table.csv", sep=",")
+pba_table <- read.csv("tables/ch6/pba_table.csv", sep=",")
 pba_table <- pba_table[rowSums(is.na(pba_table)) == 0,]
 
 knitr::kable(pba_table, 
@@ -172,7 +172,7 @@ As was the case for PBASE, there are a wide range of process variables used for 
 
 ###	Raman Spectroscopy
 
-![This box plot shows the distribution of D-band peak to G$^+$-band peak ratio, $I_D/I_G$, across nine locations for a selection of chemically-modified carbon nanotube films. The D-band and G-band intensities for all samples were first normalised to the intensity peak corresponding to the SiO$_2$ substrate.](figures/ch7/comparison_raman.png){#fig-linker-raman width="50%"}
+![This box plot shows the distribution of D-band peak to G$^+$-band peak ratio, $I_D/I_G$, across nine locations for a selection of chemically-modified carbon nanotube films. The D-band and G-band intensities for all samples were first normalised to the intensity peak corresponding to the SiO$_2$ substrate.](figures/ch6/comparison_raman.png){#fig-linker-raman width="50%"}
 
 Raman spectroscopy was used to verify the attachment of PBA to a carbon nanotube network film with a SiO$_2$ substrate in the manner outlined in @sec-raman-characterisation. As highly-bundled devices were found to have less defects present prior to modification, as discussed in @sec-pristine-raman, solvent-deposited films were used for the verification of pyrene attachment to prevent the initial presence of defects influencing the analysis. Droplets of DMSO solution were placed on three (solvent-deposited) carbon nanotube films taken from the same wafer. The DMSO solution on one film contained 5 mM PBA, the solution on another film contained 5 mM PBASE, and the DMSO on the final film contained no linker molecule. After incubation for 1 hour, films were rinsed for 15 s with DMSO, then for 15 s with IPA to remove excess DMSO while avoiding hydrolysis of the PBASE. After the first set of Raman spectra was taken, the film initially exposed to PBA was further exposed to a solution of 20 mM EDC and 40 mM NHS in $1 \times$ phosphate buffer saline (PBS) electrolyte for 30 minutes, and a second set of Raman spectra was taken for this film.  As in @sec-pristine-raman, two spectra taken at each position were processed according to @sec-raman-analysis, and the SiO$_2$ reference peak measured in the wavenumber range 100 cm$^{-1}$ $-$ 650 cm$^{-1}$ was used to normalise the D-band and G-band peaks from the wavenumber range 1300 cm$^{-1}$ $-$ 1650 cm$^{-1}$. The ratio between the average intensity of the D-peak and the G$^+$-peak at each position was calculated, and the distribution of ratio values corresponding to each modified film is shown in @fig-linker-raman.
 
@@ -184,19 +184,19 @@ There is a $\sim 3 \times$ increase in the intensity ratio $I_D/I_G$ for both th
 
 ![](figures/(a).png)
 
-![](figures/ch7/NTQ24C10_ch3_comparison_1.png)
+![](figures/ch6/NTQ24C10_ch3_comparison_1.png)
 
 ![](figures/(b).png)
 
-![](figures/ch7/NTQ24C10_ch3_comparison_2.png)
+![](figures/ch6/NTQ24C10_ch3_comparison_2.png)
 
 ![](figures/(c).png)
 
-![](figures/ch7/NTQ24C10_ch3_comparison_3.png)
+![](figures/ch6/NTQ24C10_ch3_comparison_3.png)
 
 ![](figures/(d).png)
 
-![](figures/ch7/NTQ24C10_ch3_comparison_4.png)
+![](figures/ch6/NTQ24C10_ch3_comparison_4.png)
 
 Electrical transfer characteristics of a carbon nanotube transistor before functionalisation alongside the transfer characteristics (a) after being submerged in DMSO with 5 mM PBA in red, (b) after being submerged in PBS with 20 mM EDC and 40 mM NHS in blue, and (c) after being submerged in fresh PBS in green. The dashed lines in (d) are linear fits to the subthreshold slope of each curve, and are shown alongside the threshold voltages corresponding to each fit.
 :::
@@ -227,11 +227,11 @@ Both SU8 and AZ$^\circledR$ 1518 photoresist fluoresced under a variety of micro
 
 ![](figures/(a).png)
 
-![](figures/ch7/NGW8D1_FITC_6.5sexposure_10X_221121.png)
+![](figures/ch6/NGW8D1_FITC_6.5sexposure_10X_221121.png)
 
 ![](figures/(b).png)
 
-![](figures/ch7/NGW8D4_rhodamineB_cornergraphene_221110.png)
+![](figures/ch6/NGW8D4_rhodamineB_cornergraphene_221110.png)
 
 Four 200 µm $\times$ 200 µm graphene squares modified with the dyes (a) fluorescein isothiocyanate (FITC) and (b) Rhodamine B. No pyrene/PEG/pyrene-PEG was attached to these dyes. In (a), an FITC filter and 6.5 s exposure time was used, and in (b) a Texas Red filter and 1.4 s exposure time was used.
 :::
@@ -244,27 +244,27 @@ An functionalisation issue quickly encountered when characterising pyrene-PEG-FI
 
 ![](figures/(a).png)
 
-![](figures/ch7/modified_SU8only_FITCfilter_channel2_350ms_12.6X_221207.png)
+![](figures/ch6/modified_SU8only_FITCfilter_channel2_350ms_12.6X_221207.png)
 
 ![](figures/(b).png)
 
-![](figures/ch7/modified_CNT20_1mMPPF_channel8_350ms_12.6X_221124.png)
+![](figures/ch6/modified_CNT20_1mMPPF_channel8_350ms_12.6X_221124.png)
 
 ![](figures/(c).png)
 
-![](figures/ch7/modified_Ccontrol_ch2_mCherry_10sexposure_highcontrast_12.6X.png)
+![](figures/ch6/modified_Ccontrol_ch2_mCherry_10sexposure_highcontrast_12.6X.png)
 
 ![](figures/(d).png)
 
-![](figures/ch7/modified_C1_ch5_mCherry_10sexposure_highcontrast_12.6X.png)
+![](figures/ch6/modified_C1_ch5_mCherry_10sexposure_highcontrast_12.6X.png)
 
 ![](figures/(e).png)
 
-![](figures/ch7/modified_softbake1minacetonerinse_aptamer_ch3_mCherry_30sexposure_highcontrast_ISO200_12.6X.png)
+![](figures/ch6/modified_softbake1minacetonerinse_aptamer_ch3_mCherry_30sexposure_highcontrast_ISO200_12.6X.png)
 
 ![](figures/(f).png)
 
-![](figures/ch7/modified_hardbake_aptamer_ch3_mCherry_30sexposure_highcontrast_ISO200_12.6X.png)
+![](figures/ch6/modified_hardbake_aptamer_ch3_mCherry_30sexposure_highcontrast_ISO200_12.6X.png)
 
 A fluorescence image of a SU8-encapsulated carbon nanotube device is shown in (a), while (b) shows the same channel after modification with an solution of 1 mM Pyrene-PEG-FITC. A 0.35 s exposure time and FITC filter were used for (a)-(b). The fluorescence image in (c) shows an unencapsulated channel, while (d) shows the same channel after Cy3-tagged aptamer exposure. A 10 s exposure time and mCherry filter were used for (c)-(d). The fluorescence images in (e) and (f) show devices pre-coated with a thin layer of photoresist then submerged in Cy3-tagged aptamer, where the device in (f) was hardbaked before aptamer exposure. An mCherry filter and 30 s exposure time were used for for (e)-(f).
 :::
@@ -291,27 +291,27 @@ This result demonstrates the use of fluorescence microscopy as a tool to detect 
 
 ![](figures/(a).png)
 
-![](figures/ch7/modified_NGW8D9_edgechannel_post10min50Cacetonerinse_221109.png)
+![](figures/ch6/modified_NGW8D9_edgechannel_post10min50Cacetonerinse_221109.png)
 
 ![](figures/(b).png)
 
-![](figures/ch7/modified_NGW8D7_edgechannel_lowerexposuretime_221108.png)
+![](figures/ch6/modified_NGW8D7_edgechannel_lowerexposuretime_221108.png)
 
 ![](figures/(c).png)
 
-![](figures/ch7/modified_SiO2_1mMPPR_2_221109.png)
+![](figures/ch6/modified_SiO2_1mMPPR_2_221109.png)
 
 ![](figures/(d).png)
 
-![](figures/ch7/modified_NGW6D4_PyPEGFITC_channel2_1.6sexposure_10X_221122.png)
+![](figures/ch6/modified_NGW6D4_PyPEGFITC_channel2_1.6sexposure_10X_221122.png)
 
 ![](figures/(e).png)
 
-![](figures/ch7/modified_NGW6D7_PyPEGFITC_channel3top_postmsurfclean_7.5sexposure_20X_221123.png)
+![](figures/ch6/modified_NGW6D7_PyPEGFITC_channel3top_postmsurfclean_7.5sexposure_20X_221123.png)
 
 ![](figures/(f).png)
 
-![](figures/ch7/modified_NGW6D7_PyPEGFITC_channel1_postmsurfclean_7.75sexposure_40X_221123.png)
+![](figures/ch6/modified_NGW6D7_PyPEGFITC_channel1_postmsurfclean_7.75sexposure_40X_221123.png)
 
 Fluorescence images of a 1000 µm $\times$ 100 µm graphene channel. (a) was not oxygen plasma cleaned before functionalisation with pyrene-PEG-rhodamine (PPR), while (b) was oxygen plasma cleaned immediately before PPR functionalisation. Insets show a water droplet on an unencapsulated device before (a) and after (b) the being treated with O$_2$ plasma. (c) shows a pristine SiO$_2$ surface after PPR exposure. (a), (b) and (c) were taken using a Texas Red filter and a 1.8 s exposure time. (d) was functionalised with 1 mM PPF in PBS after oxygen plasma treatment. (e) and (f) were functionalised with 1 mM PPF after oxygen plasma treatment, then cleaned with surfactant (m-CNT surfactant, NanoIntegris). (d), (e) and (f) were taken using an FITC filter, with 1.6 s, 7.5 s and 7.75 s exposure times respectively.
 :::
@@ -330,11 +330,11 @@ Another issue that arose when verifying surface functionalisation was the intera
 
 ![](figures/(a).png)
 
-![](figures/ch7/modified_GFPNi2+1_5sexposure_12.6X_mediumcontrast_18_230324.png)
+![](figures/ch6/modified_GFPNi2+1_5sexposure_12.6X_mediumcontrast_18_230324.png)
 
 ![](figures/(b).png)
 
-![](figures/ch7/modified_GFPNi2+1_5sexposure_12.6X_mediumcontrast_20_230324.png)
+![](figures/ch6/modified_GFPNi2+1_5sexposure_12.6X_mediumcontrast_20_230324.png)
 
 Both (a) and (b) show a build-up of his-tag GFP at the edges of the droplet region where pyrene-PEG-NTA had been present, taken using an GFP filter and a 5 s exposure time. On the right hand side of (b), no his-tag GFP is visible on the metal electrode, as no pyrene-PEG attaches to the metal electrodes.
 :::
