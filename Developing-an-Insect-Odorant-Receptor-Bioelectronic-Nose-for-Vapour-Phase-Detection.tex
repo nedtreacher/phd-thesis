@@ -303,7 +303,7 @@ I started this project with minimal formal training in biological science, comin
 
 \pagestyle{headings}
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, frame hidden, borderline west={3pt}{0pt}{shadecolor}, interior hidden, enhanced, breakable, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, interior hidden, boxrule=0pt, enhanced, borderline west={3pt}{0pt}{shadecolor}, frame hidden, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -681,7 +681,7 @@ mutual attraction between nanotubes
 when surfactants are present, they adsorb onto the carbon nanotubes and
 form a highly repulsive structure able to overcome the strong attraction
 between nanotubes. This repulsion keeps the individual carbon nanotubes
-more isolated
+relatively isolated
 \autocite{Wenseleers2004,Gavrel2013,Hermanson2013-16,Shimizu2013,DiCrescenzo2014,Yang2023}.
 The diameter range provided by the supplier for the individual carbon
 nanotubes used is \(1.2-1.7\) nm, while the length range is \(0.3-5.0\)
@@ -1300,8 +1300,8 @@ microscope (AFM) images of SiO\(_2\) substrates alongside histogram
 height distributions and KDE plots corresponding to each image. The
 substrate in (a) and (b) was exposed to solvent, the substrate in (c)
 and (d) was exposed to surfactant, and the substrate in (e) and (f) was
-exposed to surfactant with steam present. The inset in (f) shows the
-long tail due to surfactant.}
+exposed to surfactant with steam present. The inset in (f) shows a
+close-up view of the long tail of the distribution.}
 
 \end{figure}
 
@@ -1317,18 +1317,18 @@ The equation for a skew-normal distribution is given in
 Equation~\ref{eq-skew}, where \(\alpha\) is the `slant parameter' which
 indicates the skewness of the distribution, \(\phi(x)\) is the standard
 normal distribution and \(\Phi(x)\) is the corresponding cumulative
-distribution function. To modify this distribution for the most general
-case, the `location parameter' \(\xi\) and `scale parameter' \(\omega\)
-are introduced, which correspond to the mean and standard deviation of
-the skew-free normal distribution when \(\alpha\) is set equal to zero.
-These parameters are inserted into Equation~\ref{eq-skew} by setting
-\(x \rightarrow (x-\xi)/\omega\) and replacing the factor 2 with
-\(2/\omega\) \autocite{Azzalini2013}. The fitted skew-normal
-distribution in Figure~\ref{fig-afm-substrate} (b) has
-\(\alpha = -3.2\), \(\xi = 2.2\) nm and \(\omega = 0.5\) nm, while in
-Figure~\ref{fig-afm-substrate} (d) \(\alpha = -2.2\), \(\xi = 2.2\) nm
-and \(\omega = 0.5\) nm. The close correspondence between \(\xi\) and
-\(\omega\) for these distributions implies that the skewness is a
+distribution function. In the most general case, Equation~\ref{eq-skew}
+can be modified with the `location parameter' \(\xi\) and `scale
+parameter' \(\omega\). These variables respectively correspond to the
+mean and standard deviation of the skew-free normal distribution when
+\(\alpha\) is set equal to zero. These parameters are inserted into
+Equation~\ref{eq-skew} by setting \(x \rightarrow (x-\xi)/\omega\) and
+replacing the factor 2 with \(2/\omega\) \autocite{Azzalini2013}. The
+fitted skew-normal distribution in Figure~\ref{fig-afm-substrate} (b)
+has \(\alpha = -3.2\), \(\xi = 2.2\) nm and \(\omega = 0.5\) nm, while
+in Figure~\ref{fig-afm-substrate} (d) \(\alpha = -2.2\), \(\xi = 2.2\)
+nm and \(\omega = 0.5\) nm. The close correspondence of \(\xi\) and
+\(\omega\) between these distributions implies that the skewness is a
 variable imaging or processing artifact rather than a physical property
 of the surface. Without distortion, the roughness of a clean SiO\(_2\)
 surface should follow a normal distribution \autocite{Velicky2015}.
@@ -1337,21 +1337,22 @@ Figure~\ref{fig-afm-substrate} (f) has a pronounced positive skew
 \(\sim\) 5.5 nm in length. The tail results from the droplets observed
 in Figure~\ref{fig-afm-substrate} (e), which may be condensation from
 the steam or surfactant residue trapped by the steam environment
-\autocite{Christensen2022,Vobornik2023}. Attempting to fit a skew-normal
-distribution to this histogram fails when all three variables are
-allowed to vary due to the presence of the tail. Instead, previous
-values obtained for \(\xi\) and \(\omega\) can be set fixed at \(\xi\)
-and \(\omega\) at 2.2 nm and 0.5 nm respectively in the fitting process,
-assuming that these values are characteristic of the imaging process
-used and not the substrate. In this fitting process, therefore, only
-\(\alpha\) was allowed to change. The resulting fitted distribution is
-shown in Figure~\ref{fig-afm-substrate} (f), with \(\alpha = -2.4\). The
+\autocite{Christensen2022,Vobornik2023}. If the contamination identified
+here is surfactant, this could have negative effects on both sensitivity
+of carbon nanotubes and also could damage the attached biological
+elements. Attempting to fit a skew-normal distribution to this histogram
+fails when all three variables are allowed to vary, which results from
+the presence of the tail. Instead, previous values obtained for \(\xi\)
+and \(\omega\) can be fixed at \(\xi\) and \(\omega\) at 2.2 nm and 0.5
+nm respectively in the fitting process, assuming that these values are
+characteristic of the imaging process used and not the substrate. In
+this fitting process, therefore, only \(\alpha\) was allowed to change.
+The resulting fitted distribution is shown in
+Figure~\ref{fig-afm-substrate} (f), with \(\alpha = -2.4\). The
 distribution closely fits the negative tail of the histogram, but
 deviates from the positive tail due to the presence of the droplets.
 This deviation is small and the fit is otherwise good quality, with an
-R-squared value of 0.98. If the contamination identified here is
-surfactant, this could have negative effects on both sensitivity of
-carbon nanotubes and also could damage the attached biological elements.
+R-squared value of 0.98.
 
 \begin{figure}
 
@@ -1385,7 +1386,7 @@ carbon nanotubes and also could damage the attached biological elements.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch5/Ned_NTQ24_20220125_00235_artifacts.png}
+\includegraphics{figures/ch5/Ned_NTQ24_20220125_00235_1.png}
 
 }
 
@@ -1433,7 +1434,7 @@ carbon nanotubes and also could damage the attached biological elements.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch5/Ned_NTQ24_20220125_00235_2.png}
+\includegraphics{figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_1.png}
 
 }
 
@@ -1481,7 +1482,7 @@ carbon nanotubes and also could damage the attached biological elements.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_artifacts.png}
+\includegraphics{figures/ch5/Ned_NTQ24_20220125_00235_2.png}
 
 }
 
@@ -1577,7 +1578,7 @@ carbon nanotubes and also could damage the attached biological elements.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch5/Ned_NGQ14D2_W4_pristine_20220713_00567_artifacts.png}
+\includegraphics{figures/ch5/Ned_NTQ24_20220125_00235_3.png}
 
 }
 
@@ -1625,7 +1626,7 @@ carbon nanotubes and also could damage the attached biological elements.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch5/Ned_NGQ14D2_W4_pristine_20220713_00567_2.png}
+\includegraphics{figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_3.png}
 
 }
 
@@ -1645,38 +1646,58 @@ carbon nanotubes and also could damage the attached biological elements.
 
 \caption{\label{fig-cnt-mask}A mask, shaded green, sets a height
 threshold so that masked features are hidden from the height dataset.
-The network in (a)-(b) was solvent-deposited, the network in (c)-(d)
-surfactant-deposited, and the network in (e)-(f) surfactant-deposited
-with steam present. Height thresholds have been chosen so that deep
-trough-like artifacts are masked in (a), (c) and (e), while height
-thresholds which exclude the full average background height of each
-network are shown in (b), (d) and (f).}
+The network in (a), (c) and (e) was solvent-deposited, while the network
+in (b), (d) and (f) was surfactant-deposited. The maximum substrate
+height of each network is masked in (a) and (b), the median background
+height is masked in (c) and (d), while outlier artifacts have been
+masked in (e) and (f).}
 
 \end{figure}
 
-Following the morphology analysis technique outlined by Vobornik
-\emph{et al.} \autocite{Vobornik2023}, background values were found
-which corresponded to the substrate roughness of each network. Taking
-the average of each substrate surface height corresponding to
-solvent-deposition, surfactant-deposition and steam-assisted
-surfactant-deposition films gave values of \(1.8 \pm 0.3\) nm,
-\(1.9 \pm 0.3\) nm and \(1.8 \pm 0.5\) nm respectively. From
-Figure~\ref{fig-afm-morphology}, it is also apparent that measuring
-relatively large features with the atomic force microscope leads to deep
-image artifacts in the vicinity of these features which appear as
-rounded streaks unrelated to surface roughness. These artifacts have
-been highlighted for the solvent-deposition, surfactant-deposition and
-steam-assisted surfactant-deposition films using a coloured height
-threshold or `mask' added with the Gwyddion software package in
-Figure~\ref{fig-cnt-mask} (a), Figure~\ref{fig-cnt-mask} (c) and
-Figure~\ref{fig-cnt-mask} (e). The maximum artifact height in each
-figure was \(6.3 \pm 0.7\) nm, \(2.6 \pm 0.3\) nm and \(0.9 \pm 0.3\)
-nm. By adding the median substrate height to the maximum artifact
-height, the mean background value can be found. This value can be used
-to distinguish the carbon nanotube bundles in the network from the
-substrate, demonstrated for each background value with a Gwyddion mask
-in Figure~\ref{fig-cnt-mask} (b), Figure~\ref{fig-cnt-mask} (d) and
-Figure~\ref{fig-cnt-mask} (f).
+In the atomic force microscope images of the more highly bundled
+networks, it is easy to distinguish the carbon nanotube bundles from the
+substrate background by eye. Therefore, it was reasonably
+straightforward to use techniques previously outlined by Vobornik
+\emph{et al.} for network morphology analysis \autocite{Vobornik2023}.
+In the Gwyddion software package, a coloured height threshold or `mask'
+was defined that entirely covered all regions of exposed substrate. The
+mask corresponding to each film is shown in Figure~\ref{fig-cnt-mask}
+(a) and (b). The median substrate height within the masked region was
+\(8.9 \pm 0.1\) nm for the solvent-deposited film, and \(4.3 \pm 0.1\)
+nm for the surfactant-deposited film. The median height threshold is
+shown using another mask in Figure~\ref{fig-cnt-mask} (c) and
+Figure~\ref{fig-cnt-mask} (d). These values are dramatically different
+from the median substrate height of \(1.9 \pm 0.3\) nm obtained from the
+distributions in Figure~\ref{fig-afm-substrate}. From comparing the
+atomic force microscope images in Figure~\ref{fig-afm-substrate} with
+Figure~\ref{fig-cnt-mask}, it appears unlikely that this difference
+primarily results from a dramatic increase in substrate surface
+roughness after carbon nanotube deposition. Instead, it is suggested
+here that the difference between these values results from the imaging
+process.
+
+In Figure~\ref{fig-afm-morphology}, deep streaks with rounded edges can
+often be found in the close vicinity of larger nanotube bundles and
+junctions. These appear to be deep image artifacts resulting from the
+microscope having difficulty adjusting when moving from measuring a
+large feature to a much smaller one, behaviour which is well-documented
+\autocite{Ukraintsev2012}. These streaks result from the imaging process
+and are offset from the actual substrate height. Imaging artifacts are
+highlighted using a mask in Figure~\ref{fig-cnt-mask} (e) and
+Figure~\ref{fig-cnt-mask} (f), with heights of \(6.4 \pm 0.4\) nm and
+\(2.7 \pm 0.2\) nm for the solvent-deposited and surfactant-deposited
+films respectively. By adding the median substrate height from
+Figure~\ref{fig-afm-substrate} to the artifact heights, average
+background values of \(8.3 \pm 0.7\) nm and \(4.6 \pm 0.5\) are
+obtained, both within error of the median substrate heights obtained
+from Figure~\ref{fig-cnt-mask}. It can therefore be said with confidence
+that the median value obtained from the substrate mask is an accurate
+measure of substrate height, and can be used to quantitatively compare
+the carbon nanotube bundles in the network with the height of the
+surrounding substrate.
+
+These values can be used to more accurately distinguish between the
+height of the carbon nanotubes and the surrounding substrate.
 
 \begin{figure}
 
@@ -2011,7 +2032,7 @@ diameter of a bundle of 2D packed cylinders and their constituent
 diameters. By using the relevant \(d\)/\(d_n\) packing ratio, and
 assuming an average carbon nanotube diameter of 1.45 nm, it is possible
 to use Table~\ref{tbl-circle-packing} to find the approximate number of
-nanotubes \emph{n} likely to be present in the simple average bundle
+nanotubes, \emph{n}, likely to be present in the simple average bundle
 size corresponding to each deposition type
 \autocite{Graham1998,Specht2023}. These estimates are shown in
 Table~\ref{tbl-histogram-parameters}. Also shown in
@@ -2075,21 +2096,20 @@ The surface coverage values for each network are shown in
 Table~\ref{tbl-histogram-parameters}, found by comparing the surface
 area of the masked area in Figure~\ref{fig-cnt-mask} with the full image
 surface area. These values show that introducing steam to the surfactant
-deposition process doubles the surface coverage of the SiO\(_2\)
-substrate by the carbon nanotubes. The relatively low surface coverage
-seen in Figure~\ref{fig-cnt-histogram} (c) can be explained by the
-coffee-ring effect. The coffee-ring effect refers to a build-up of
-dispersed solid forming around the edges of a dispersion evaporating on
-a surface. The dispersion edges are fixed by surface forces, leading to
-capillary flow outwards to replace liquid evaporating at the edges,
-which carries solid material alongside
-\autocite{Deegan1997,VanGaalen2021}. Water vapour is known to disrupt
-this capillary effect \autocite{Bishop2020}, which reduces the flow of
-carbon nanotubes to the edges of the substrate. A reduction in the
-coffee-ring effect leads to carbon nanotubes being deposited more evenly
-across the surface of the substrate. A even surface coverage gives a
-denser network on average, explaining the denser network seen in
-Figure~\ref{fig-cnt-histogram} (e).
+deposition process doubles the coverage of the nanotubes across the
+substrate surface. The relatively low surface coverage seen in
+Figure~\ref{fig-cnt-histogram} (c) can be explained by the coffee-ring
+effect. The coffee-ring effect refers to a build-up of dispersed solid
+forming around the edges of a dispersion evaporating on a surface. The
+dispersion edges are fixed by surface forces, leading to capillary flow
+outwards to replace liquid evaporating at the edges, which carries solid
+material alongside \autocite{Deegan1997,VanGaalen2021}. Water vapour is
+known to disrupt this capillary effect \autocite{Bishop2020}, which
+reduces the flow of carbon nanotubes to the edges of the substrate. A
+reduction in the coffee-ring effect leads to carbon nanotubes being
+deposited more evenly across the surface of the substrate. A even
+surface coverage gives a denser network on average, explaining the
+denser network seen in Figure~\ref{fig-cnt-histogram} (e).
 
 \hypertarget{tbl-histogram-parameters}{}
 \begin{longtable}[t]{>{\raggedright\arraybackslash}p{3.5cm}>{\centering\arraybackslash}p{2.2cm}>{\centering\arraybackslash}p{2.2cm}>{\centering\arraybackslash}p{2.2cm}>{\centering\arraybackslash}p{2.2cm}}
@@ -2815,10 +2835,10 @@ exposure to \(1 \times\) PBS.
 
 \hypertarget{tbl-graphene-parameters}{}
 \begin{longtable}[]{@{}
-  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2553}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2447}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2766}}
-  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2234}}@{}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3158}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2237}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2632}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.1974}}@{}}
 \caption{\label{tbl-graphene-parameters}Average on-off ratio and major
 Dirac point voltage for AZ® 1518 encapsulated liquid-gated graphene
 transistor channels at various stages of exposure to 1\(\times\) PBS.
@@ -2827,22 +2847,22 @@ channels from each of two devices.}\tabularnewline
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-\(1 imes\) PBS: Initial
+1X PBS: Initial
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-\(1 imes\) PBS: After 1 hr
+1X PBS: After 1 hr
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-\(1 imes\) PBS: Rinse
+1X PBS: Rinse
 \end{minipage} \\
 \midrule\noalign{}
 \endfirsthead
 \toprule\noalign{}
 \begin{minipage}[b]{\linewidth}\raggedright
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-\(1 imes\) PBS: Initial
+1X PBS: Initial
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-\(1 imes\) PBS: After 1 hr
+1X PBS: After 1 hr
 \end{minipage} & \begin{minipage}[b]{\linewidth}\centering
-\(1 imes\) PBS: Rinse
+1X PBS: Rinse
 \end{minipage} \\
 \midrule\noalign{}
 \endhead
@@ -3178,7 +3198,7 @@ shown here with a solvent-deposited carbon nanotube network were
 fabricated prior to Jan 2022; devices with a surfactant-deposited
 network without steam present were fabricated prior to Jun 2021; devices
 with a surfactant-deposited network without steam were fabricated prior
-to S
+to Sep 2022.
 
 When characterising devices using the vapour delivery system chip
 carrier, the setup arrangement meant all measurements were taken using a
@@ -3667,7 +3687,7 @@ this thesis as the `PBS control series'. The PDMS well contained 80 µL
 s, with 20 µL \(1 \times\) PBS additions at 100 s, 200 s and 300 s, and
 20 µL subtractions at 400 s, 500 s and 600 s. The device was left
 untouched over the next 1200 s to allow the current level to settle. The
-gate voltage was held at \$V\_g
+gate voltage was held at \(V_g\) = 0 V.
 
 \begin{figure}
 
@@ -4681,13 +4701,13 @@ setup.
 
 \caption{\label{fig-salt-conc-SNR}The transfer characteristics of a
 single steam-deposited carbon nanotube field-effect transistor channel
-are shown in (a). \(V_{gap}\) is the gate voltage corresponding to the
-center of the transistor bandgap, found at the minimum of the
+are shown in (a). \(V_{\textrm{gap}}\) is the gate voltage corresponding
+to the center of the transistor bandgap, found at the minimum of the
 characteristic curve. The signal-to-noise ratio of the channel response
 to a deionised water addition after a suitable control series is shown
 in (b). The blue current trace in (b) was performed gating the device
-150 mV away from \(V_{gap}\), while the red current was performed gating
-the device 200 mV away from \(V_{gap}\).}
+150 mV away from \(V_{\textrm{gap}}\), while the red current was
+performed gating the device 200 mV away from \(V_{\textrm{gap}}\).}
 
 \end{figure}
 
@@ -4701,11 +4721,11 @@ for liquid-gated, encapsulated carbon nanotube devices suggests that
 gating devices close to \(V_{gap}\) should give a larger signal-to-noise
 ratio for salt concentration changes \autocite{Heller2009}. However, in
 this case, improved signal-to-noise ratio was observed when gated at a
-voltage further removed from \(V_{gap}\). This discrepancy could be a
-result of the use of a network of carbon nanotubes rather than a single
-nanotube, where gating may have less of an impact on noise.
-Alternatively, it could be a result of a lack of mixing in the well
-setup used, leading to inconsistent signal sizes with concentration
+voltage further removed from \(V_{\textrm{gap}}\). This discrepancy
+could be a result of the use of a network of carbon nanotubes rather
+than a single nanotube, where gating may have less of an impact on
+noise. Alternatively, it could be a result of a lack of mixing in the
+well setup used, leading to inconsistent signal sizes with concentration
 change. Heller \emph{et al.} used a flow cell during their
 signal-to-ratio work \autocite{Heller2009}. By using a flow cell with
 our devices, it would be possible to understand the role of mixing in
