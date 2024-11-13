@@ -303,7 +303,7 @@ I started this project with minimal formal training in biological science, comin
 
 \pagestyle{headings}
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, interior hidden, borderline west={3pt}{0pt}{shadecolor}, breakable, enhanced, frame hidden, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, borderline west={3pt}{0pt}{shadecolor}, interior hidden, frame hidden, enhanced, sharp corners, boxrule=0pt]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -347,6 +347,7 @@ I started this project with minimal formal training in biological science, comin
     AH  & Absolute Humidity  \\[5pt]
     Avi-tag  & Avidin-tag  \\[5pt]
     BMIM  & 1-butyl-3-methylimidazolium bis(trifluoromethylsulfonyl)imide  \\[5pt]
+    BWF  & Breit-Wigner-Fano  \\[5pt]
     CAD  & Computer Aided Design \\[5pt]
     CNT  & Carbon Nanotube  \\[5pt]
     CVD  & Chemical Vapour Deposition  \\[5pt]
@@ -367,7 +368,6 @@ I started this project with minimal formal training in biological science, comin
     EIS  & Electrochemical Impedance Spectroscopy  \\[5pt]
     EtHex  & Ethyl Hexanoate  \\[5pt]
     EtOH  & Ethanol  \\[5pt]
-    FET  & Field-Effect Transistor  \\[5pt]
   \end{tabular}
 \end{table}
 
@@ -379,6 +379,7 @@ I started this project with minimal formal training in biological science, comin
 \fancyfoot[L]{\thepage} %prints the page number on the right side of the header
 \begin{table}[H]
   \begin{tabular}{@{}p{0.25\textwidth} p{0.75\textwidth}@{}}  % Adjust the width as needed
+    FET  & Field-Effect Transistor  \\[5pt]
     FITC  & Fluorescein isothiocyanate  \\[5pt]
     GA  & Glutaraldehyde  \\[5pt]
     GFET  & Graphene Field-Effect Transistor  \\[5pt]
@@ -410,7 +411,6 @@ I started this project with minimal formal training in biological science, comin
     PBA  & 1-Pyrenebutyric Acid  \\[5pt]
     PBASE  & 1-Pyrenebutanoic Acid N-hydroxysuccinimide Ester  \\[5pt]
     PBS  & Phosphate-Buffered Saline  \\[5pt]
-    PCB  & Printed Circuit Board   \\[5pt]
   \end{tabular}
 \end{table}
 
@@ -422,6 +422,7 @@ I started this project with minimal formal training in biological science, comin
 \fancyfoot[R]{\thepage} %prints the page number on the right side of the header
 \begin{table}[H]
   \begin{tabular}{@{}p{0.25\textwidth} p{0.75\textwidth}@{}}  % Adjust the width as needed
+    PCB  & Printed Circuit Board   \\[5pt]
     PDL & Poly-\textit{D}-lysine  \\[5pt]
     PDMS  & Polydimethylsiloxane   \\  [5pt]
     PEG  & Polyethylene Glycol  \\[5pt] 
@@ -1659,30 +1660,31 @@ masked in (e) and (f).}
 In the atomic force microscope images of the more highly bundled
 networks, it is easy to distinguish the carbon nanotube bundles from the
 substrate background by eye. Therefore, it was reasonably
-straightforward to use techniques previously outlined by Vobornik
-\emph{et al.} for network morphology analysis \autocite{Vobornik2023}.
-In the Gwyddion software package, a coloured height threshold or
-``mask'' was defined that entirely covered all regions of exposed
-substrate. The mask corresponding to each film is shown in
-Figure~\ref{fig-cnt-mask} (a)-(b). The median substrate height within
-the masked region was \(8.9 \pm 0.1\) nm for the solvent-deposited film,
-and \(4.3 \pm 0.1\) nm for the surfactant-deposited film. The median
-height threshold is shown using another mask in
-Figure~\ref{fig-cnt-mask} (c)-(d). These values are dramatically
-different from the median substrate height of \(1.9 \pm 0.3\) nm
-obtained from the distributions in Figure~\ref{fig-afm-substrate}. From
-comparing the atomic force microscope images in
-Figure~\ref{fig-afm-substrate} with Figure~\ref{fig-cnt-mask}, it
-appears unlikely that this difference primarily results from a dramatic
-increase in substrate surface roughness after carbon nanotube
-deposition. Instead, it is suggested here that the difference between
-these values results from the imaging process.
+straightforward to use techniques similar to those previously outlined
+by Vobornik \emph{et al.} for network morphology analysis
+\autocite{Vobornik2023}. In the Gwyddion software package, a coloured
+height threshold or ``mask'' was defined that minimally covered all
+regions of exposed substrate. The mask corresponding to each film is
+shown in Figure~\ref{fig-cnt-mask} (a)-(b). The median substrate height
+within the masked region was \(8.9 \pm 0.1\) nm for the
+solvent-deposited film, and \(4.3 \pm 0.1\) nm for the
+surfactant-deposited film. The median height threshold is shown using
+another mask in Figure~\ref{fig-cnt-mask} (c)-(d). These values are
+dramatically different from the median substrate height of
+\(1.9 \pm 0.3\) nm obtained from the distributions in
+Figure~\ref{fig-afm-substrate}. From comparing the atomic force
+microscope images in Figure~\ref{fig-afm-substrate} with
+Figure~\ref{fig-cnt-mask}, it appears unlikely that this difference
+primarily results from a dramatic increase in substrate surface
+roughness after carbon nanotube deposition. Instead, it is suggested
+here that the difference between these values results from the imaging
+process.
 
-In Figure~\ref{fig-afm-morphology}, deep streaks with rounded edges can
-often be found in the close vicinity of larger nanotube bundles and
-junctions. These features appear to be imaging artifacts, which
-sometimes sit at heights well below the actual substrate surface. The
-artifacts result from the microscope tip taking inaccurate surface
+In Figure~\ref{fig-afm-morphology}, deep streaks or scars with rounded
+edges can often be found in the close vicinity of larger nanotube
+bundles and junctions. These features appear to be imaging artifacts,
+which sometimes sit at heights well below the actual substrate surface.
+The artifacts result from the microscope tip taking inaccurate surface
 measurements when moving from scanning a large feature to scanning a
 much smaller one \autocite{Ukraintsev2012}. Imaging artifacts are
 highlighted using a mask in Figure~\ref{fig-cnt-mask} (e)-(f), with
@@ -1690,9 +1692,9 @@ heights of \(6.4 \pm 0.4\) nm and \(2.7 \pm 0.2\) nm for the
 solvent-deposited and surfactant-deposited films respectively. By adding
 the median substrate height from Figure~\ref{fig-afm-substrate} to the
 artifact heights, average background values of \(8.3 \pm 0.7\) nm and
-\(4.6 \pm 0.5\) are obtained for each film, both within error of the
-median substrate heights obtained from Figure~\ref{fig-cnt-mask}. It can
-be stated with confidence that the median value obtained from the
+\(4.6 \pm 0.5\) nm are obtained for each film, both within error of the
+median substrate heights obtained using Figure~\ref{fig-cnt-mask}. It
+can be stated with confidence that the median value obtained from the
 substrate mask is representative of the actual average substrate level
 relative to the carbon nanotubes present, unaffected by image artifact
 outliers. These median values can be used to compare the height of
@@ -1732,7 +1734,7 @@ substrate, following the same approach as Vobornik \emph{et al.}
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch5/Ned_NTQ24_20220125_00235.png}
+\includegraphics{figures/ch5/Ned_NTQ24_20220125_00235_4.png}
 
 }
 
@@ -1828,7 +1830,7 @@ substrate, following the same approach as Vobornik \emph{et al.}
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2).png}
+\includegraphics{figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_4.png}
 
 }
 
@@ -1905,14 +1907,15 @@ assuming the minimum nanotube diameter is 1.45 nm.}
 
 \end{figure}
 
-Five successive diameter measurements of 30 carbon nanotube bundles were
-collected using Gwyddion. Measurements were not taken at bundle
-junctions. The average of five values for each carbon nanotube bundle
-was then taken and the corresponding background height of the substrate
-subtracted. The 30 height values were sorted into five equal-sized bins,
-as shown in Figure~\ref{fig-cnt-histogram}. Each histogram appears to
-follow a moderately positive-skewed normal distribution, different to
-the skew-free normal distribution found in previous works
+Five successive diameter measurements of 30 carbon nanotube bundles
+distributed evenly across the network were collected using Gwyddion.
+Measurements were not taken at bundle junctions. The average of five
+values for each carbon nanotube bundle was then taken and the
+corresponding background height of the substrate subtracted. The 30
+height values were sorted into five equal-sized bins, as shown in
+Figure~\ref{fig-cnt-histogram}. Each histogram appears to follow a
+moderately positive-skewed normal distribution, different to the
+skew-free normal distribution found in previous works
 \autocite{LeMieux2008,Liu2013,Vobornik2023}. The skew is likely to be
 another imaging artifact. The force of the atomic force microscope tip
 is known to cause larger bundles to undergo some degree of compression,
@@ -1922,7 +1925,7 @@ fitted skew-normal distribution in Figure~\ref{fig-cnt-histogram} (b)
 has \(\alpha = 2.5\) (slant, indicates skew), \(\xi = 4.0\) nm
 (location, indicates mean), and \(\omega = 5.8\) nm (scale, indicates
 standard deviation), while the distribution in
-Figure~\ref{fig-cnt-histogram} (c) has \(\alpha = 2.2\), \(\xi = 2.4\)
+Figure~\ref{fig-cnt-histogram} (d) has \(\alpha = 2.2\), \(\xi = 2.4\)
 nm, and \(\omega = 2.5\) nm. The probability density for the carbon
 nanotube bundle histogram drops to approximately zero at 0 nm, an
 indication that each fit is physically realistic.
@@ -1954,6 +1957,22 @@ s.f. (encompassing circle diameter = \(d\), number of packed circles =
 \text{3.00} & \text{3.30} & 3.61 \\
 \end{longtable}
 
+\hypertarget{tbl-histogram-parameters}{}
+\begin{longtable}[t]{>{\raggedright\arraybackslash}p{3.5cm}>{\centering\arraybackslash}p{2.2cm}>{\centering\arraybackslash}p{2.2cm}>{\centering\arraybackslash}p{2.2cm}>{\centering\arraybackslash}p{2.2cm}}
+\caption{\label{tbl-histogram-parameters}The median of histogram distributions for solvent-deposited and
+surfactant-deposited carbon nanotube films, alongside rough estimates
+for the number of nanotubes present per median bundle, the estimated
+proportion of multi-tube bundles present across the network and the
+proportion of substrate covered by the nanotubes. }\tabularnewline
+
+\toprule
+ & Median Bundle Diameter (nm) & Tubes per Median Bundle & \% Multi-Tube Bundles & \% Nanotube Coverage\\
+\midrule
+Solvent-deposited & 7.8 ± 4.0 & 21 & > 95\% & 22 – 61\%\\
+Surfactant-deposited & 3.9 ± 1.8 & 4 & > 78\% & 27 – 64\%\\
+\bottomrule
+\end{longtable}
+
 Analysis of carbon nanotube network morphology can be simplified by
 assuming the component nanotubes are cylinders, follow 2D packing and
 are of equal diameter \autocite{Murugathas2018}.
@@ -1975,35 +1994,27 @@ comparing the projected surface area of the masks in
 Figure~\ref{fig-cnt-mask} (a)-(d) with the full image area.
 
 These estimates are all shown in Table~\ref{tbl-histogram-parameters},
-with the caveat that bundle size is likely being underestimated
-\autocite{Vobornik2023}. Both the carbon nanotube bundle diameter median
-and standard deviation are small for surfactant-deposited films when
-compared to the median and standard deviation of solvent-deposited
-films. However, despite the presence of surfactant, it is apparent both
-from Figure~\ref{fig-cnt-histogram} and
+with the caveat that median bundle diameter is likely being
+underestimated due to tip compression \autocite{Vobornik2023}.
+Alternative estimates for median bundle diameter can be obtained by
+inverting the mask shown in Figure~\ref{fig-cnt-mask} (a)-(b), as shown
+in Figure~\ref{fig-cnt-histogram} (a) and (c), and finding the median
+heights of each masked region, which are \(15.9 \pm 0.1\) nm and
+\(8.2 \pm 0.1\) nm respectively. By subtracting the median substrate
+height of each image, \(8.9 \pm 0.1\) nm and \(4.3 \pm 0.1\) nm,
+alternative median bundle diameters of \(7.0 \pm 0.2\) nm and
+\(3.9 \pm 0.2\) nm are found, closely in line with the values in
+Table~\ref{tbl-histogram-parameters}. Both the carbon nanotube bundle
+diameter median and standard deviation are small for
+surfactant-deposited films when compared to the median and standard
+deviation of solvent-deposited films. However, despite the presence of
+surfactant, it is apparent both from Figure~\ref{fig-cnt-histogram} and
 Table~\ref{tbl-histogram-parameters} that most surfactant-dispersed
 carbon nanotubes are not deposited individually. It is possible that the
 bundling of surfactant-dispersed carbon nanotubes occurs as nanotubes
 are deposited onto the surface, as this bonding process may disrupt the
 repulsive forces from the surfactant coating and allow attractive forces
 to temporarily dominate.
-
-\hypertarget{tbl-histogram-parameters}{}
-\begin{longtable}[t]{>{\raggedright\arraybackslash}p{3.5cm}>{\centering\arraybackslash}p{2.2cm}>{\centering\arraybackslash}p{2.2cm}>{\centering\arraybackslash}p{2.2cm}>{\centering\arraybackslash}p{2.2cm}}
-\caption{\label{tbl-histogram-parameters}The median of histogram distributions for solvent-deposited and
-surfactant-deposited carbon nanotube films, alongside rough estimates
-for the number of nanotubes present per median bundle, the estimated
-proportion of multi-tube bundles present across the network and the
-proportion of substrate covered by the nanotubes. }\tabularnewline
-
-\toprule
- & Median Bundle Diameter (nm) & Tubes per Median Bundle & \% Multi-Tube Bundles & \% Nanotube Coverage\\
-\midrule
-Solvent-deposited & 7.8 ± 4.0 & 21 & > 95\% & 22 – 61\%\\
-Surfactant-deposited & 3.9 ± 1.8 & 4 & > 78\% & 27 – 64\%\\
-Steam-deposited & 1.2 ± 0.3 & 1 & < 50\% & 15 – 58\%\\
-\bottomrule
-\end{longtable}
 
 \hypertarget{dense-nanotube-networks}{%
 \subsubsection*{Dense Nanotube Networks}\label{dense-nanotube-networks}}
@@ -2013,15 +2024,15 @@ Both the solvent-deposited and surfactant-deposited networks seen in
 Figure~\ref{fig-afm-morphology} (a)-(d) are relatively sparse compared
 to the steam-deposited film in Figure~\ref{fig-afm-morphology} (e)-(f).
 Because it becomes difficult to distinguish between small nanotubes and
-the surrounding substrate, it is not clear whether the method of
-Vobornik \emph{et al.} can be used. The steam-deposited film appears as
-a dense network of single and less-bundled nanotubes, with larger
-bundles scattered throughout. A similar masking approach to the one used
-earlier can be used, where all regions of the image not covered by
-highly bundled nanotubes are masked, as shown in
+the surrounding substrate, it is not immediately clear whether the
+method of Vobornik \emph{et al.} can be used. The steam-deposited film
+appears as a dense network of single and less-bundled nanotubes, with
+larger bundles scattered throughout. A similar masking approach to the
+one used earlier can be used, where all regions of the image not covered
+by highly bundled nanotubes are masked, as shown in
 Figure~\ref{fig-dense-network} (a). The median height of the masked
 region is \(2.9 \pm 0.1\) nm, with this height shaded in
-Figure~\ref{fig-dense-network} (b). Imaging artifacts of \(0.7 \pm 0.2\)
+Figure~\ref{fig-dense-network} (b). Artifacts of height \(0.7 \pm 0.2\)
 nm are also present in the top-left corner of the image, as shown in
 Figure~\ref{fig-dense-network} (c). Subtracting artifacts from the
 median height gives \(2.2 \pm 0.3\) nm, which is within the margin of
@@ -2234,38 +2245,21 @@ substrate is shown in (d).}
 Taking binned diameter measurements of the larger bundles in the same
 manner as earlier leads to the figure in Figure~\ref{fig-dense-network}
 (d). Unlike the skew-normal distributions seen earlier, the distribution
-in Figure~\ref{fig-dense-network} (d) falls to zero at \(\sim\) 2. This
-unphysical result comes from undercounting the large population of
-smaller nanotubes, which is due to it being difficult to distinguish
-less-bundled nanotubes from the substrate background. It is still
-possible to use masking to obtain a more accurate estimate of the median
-bundle height present. The median height of the region not shaded green
-in Figure~\ref{fig-dense-network} (b) is \(4.1 \pm 0.2\) nm. The median
+in Figure~\ref{fig-dense-network} (d) falls to zero at \(\sim\) 2 nm.
+This unphysical result comes from undercounting the large population of
+smaller nanotubes, which occurs due to the difficulty distinguishing
+between less-bundled nanotubes and the substrate background. It is still
+possible to use masking to obtain an estimate of the median bundle
+height present. The median height of the region not shaded green in
+Figure~\ref{fig-dense-network} (a) is \(6.0 \pm 0.1\) nm. The median
 height of the substrate, \(2.9 \pm 0.1\) nm, can then be subtracted for
-a median bundle diameter of \(1.2 \pm 0.3\) nm, the diameter of a single
-carbon nanotube. As the median bundle diameter is the minimum possible
-value, this implies that the majority of bundles present consist of a
-single carbon nanotube, in other words, are not
-bundled.@tbl-histogram-parameters shows that a majority of bundles are
-multi-tubed in the solvent-deposited and surfactant-deposited films seen
-earlier, indicating the presence of steam significantly reduces
-nanotube-nanotube bundling.
-
-It is possible that the lack of bundling seen in
-Figure~\ref{fig-dense-network} is due to a removal of coffee-ring
-effect. The coffee-ring effect refers to a build-up of dispersed solid
-forming around the edges of a dispersion evaporating on a surface. The
-dispersion edges are fixed by surface forces, leading to capillary flow
-outwards to replace liquid evaporating at the edges, which carries solid
-material along with the liquid \autocite{Deegan1997,VanGaalen2021}.
-Water vapour is known to disrupt this capillary effect
-\autocite{Bishop2020}, which reduces the flow of carbon nanotubes to the
-edges of the substrate. A reduction in the coffee-ring effect leads to
-carbon nanotubes being deposited more evenly across the surface of the
-substrate, which can be seen clearly in Figure~\ref{fig-afm-morphology}.
-By removing the forces associated with the coffee-ring effect, the
-surfactant may have an improved ability to keep carbon nanotubes
-separate during the bonding process.
+a median bundle diameter of \(3.1 \pm 0.2\) nm, slightly less than the
+median bundle diameter found for the surfactant-deposited film without
+steam. The surface coverage of the steam-deposited network is also
+similar to that of the surfactant-deposited network, falling somewhere
+between 15\%, the surface area unmasked in
+Figure~\ref{fig-dense-network} (a), and 58\%, the surface area unmasked
+in Figure~\ref{fig-dense-network} (b).
 
 The discussion in this section gives us a new understanding of the
 histograms shown in Figure~\ref{fig-afm-morphology}. It appears that
@@ -2280,11 +2274,11 @@ distributions as part of the complete image histogram
 modelled mathematically in order to rapidly extract key parameters from
 atomic force microscope images \autocite{Marchenko2010}, but
 implementing this approach is outside of the scope of this thesis.
-Introducing steam when depositing with surfactant decreases bundling and
-promotes even surface coverage, but also leads to increased adsorption
-of water and possibly surfactant onto the substrate and network. Finding
-a method of removing the unwanted surfactant or moisture present may be
-required for robust biosensors \autocite{Kane2014,Barnett2018}.
+Introducing steam when depositing with surfactant visibly promotes even
+surface coverage, but also leads to increased adsorption of water and
+possibly surfactant onto the substrate and network. Finding a method of
+removing the unwanted surfactant or moisture present may be required for
+robust biosensors \autocite{Kane2014,Barnett2018}.
 
 \hypertarget{sec-pristine-raman}{%
 \subsection{Raman Spectroscopy}\label{sec-pristine-raman}}
@@ -2304,8 +2298,8 @@ are shown in Figure~\ref{fig-pristine-raman}. In all spectra, a D-band
 comprising a single D-peak is observed at \(\sim\) 1320 cm\(^{-1}\), and
 a G-band comprising two G-peaks, G\(^-\) and G\(^+\), is observed
 between \(\sim\) 1525 cm\(^{-1}\) and \(\sim\) 1650 cm\(^{-1}\). These
-features are characteristic of networks of semiconducting carbon
-nanotubes \autocite{Dresselhaus2005,King2014}.
+features are characteristic of networks of metallic and semiconducting
+carbon nanotubes \autocite{Dresselhaus2005,King2014}.
 
 \begin{figure}
 
@@ -2497,38 +2491,47 @@ Figure~\ref{fig-pristine-raman} can give us important information about
 network composition. G\(^-\) is a minor peak found at \(\sim\) 1570
 cm\(^{-1}\), while G\(^+\) is a larger feature at \(\sim\) 1590
 cm\(^{-1}\). The G\(^+\) feature describes the in-plane vibration of
-carbon bonds along the length of the carbon nanotubes, while the G\(^-\)
-feature describes the in-plane vibration of bonds about the nanotube
-circumference \autocite{King2014,Swiniarski2021}. The splitting between
-the wavenumber location of the G\(^-\) and G\(^+\) local maxima is lower
-in Figure~\ref{fig-pristine-raman} (b) than in
-Figure~\ref{fig-pristine-raman} (a), indicating more metallic nanotubes
-are present in the surfactant-deposited network
+carbon bonds along the length of the carbon nanotubes and is associated
+with semiconducting nanotubes, while the G\(^-\) feature describes the
+in-plane vibration of bonds about the nanotube circumference and is
+associated with metallic nanotubes \autocite{King2014,Swiniarski2021}.
+The G\(^+\) feature has a sharp Lorentzian lineshape, while the G\(^-\)
+feature has an asymmetric Breit-Wigner-Fano (BWF) lineshape
+\autocite{Blackburn2006,Swiniarski2021}. The splitting between the
+wavenumber location of the G\(^-\) and G\(^+\) local maxima is lower in
+Figure~\ref{fig-pristine-raman} (b) than in
+Figure~\ref{fig-pristine-raman} (a), which may indicate more metallic
+nanotubes are present in the surfactant-deposited network
 \autocite{Swiniarski2021}. The D-peak gives an indication of the defects
-present in the carbon nanotube atomic structure
-\autocite{King2014,Swiniarski2021}. The size of the normalised D-peak
-appears much lower in Figure~\ref{fig-pristine-raman} (a) than in
-Figure~\ref{fig-pristine-raman} (b), indicating the solvent deposition
-process introduces less defects to the carbon nanotubes than
+present in the carbon nanotube atomic structure, which disrupt in-plane
+lattice vibration \autocite{King2014,Swiniarski2021}. The size of the
+normalised D-peak appears much lower in Figure~\ref{fig-pristine-raman}
+(a) than in Figure~\ref{fig-pristine-raman} (b), indicating the solvent
+deposition process introduces less defects to the carbon nanotubes than
 surfactant-mediated deposition.
 
-It is also possible to compare the relative magnitude of the D-peak and
-G\(^+\)-peak intensity to quantify carbon nanotube structural disorder,
-which disrupts in-plane lattice vibration
+Carbon nanotube structural disorder can be quantified by comparing the
+relative magnitude of the D-peak and G\(^+\)-peak intensity
 \autocite{Dresselhaus2005,King2014}. Figure~\ref{fig-pristine-raman} (c)
-compares the ratios between the D-peak and G\(^+\)-peak across all nine
-positions for the solvent-deposited and surfactant-deposited film. It is
-immediately observed that \(I_D/I_G\) is significantly larger for the
-steam-assisted, surfactant-deposited films than for the
-solvent-deposited films, an indication of defects across the
-steam-deposited network. These defects are likely charge impurities
-introduced by adsorbed water or surfactant present around the carbon
-nanotubes \autocite{Christensen2022}. However, at the same time, the
-range of values for the \(I_D/I_G\) ratio is lower for the
+compares the ratio between D-peak and G\(^+\)-peak intensity across all
+nine positions across the solvent-deposited and the surfactant-deposited
+films. The spread of values for the \(I_D/I_G\) ratio is lower for the
 steam-deposited network. This spatially homogeneous vibrational
-behaviour implies the steam-deposited network is more evenly distributed
-than the solvent-deposited network, which matches the discussion in
-Section~\ref{sec-pristine-morphology}.
+behaviour reflects the steam-deposited film being more evenly
+distributed, as discussed in Section~\ref{sec-pristine-morphology}. It
+is also observed that \(I_D/I_G\) is larger for the steam-deposited
+films than for the solvent-deposited films, indicating more defects are
+present in the steam-deposited film. These defects may be charge
+impurities introduced by adsorbed water or surfactant
+\autocite{Christensen2022}. The size of the G\(^-\) feature relative to
+the G\(^+\) feature can also be used to detect charge polarisation due
+to surfactant presence, though since the G\(^-\) feature is also
+sensitive to bundle size, it cannot be used for a direct comparison of
+surfactant presence for the films in Figure~\ref{fig-pristine-raman}.
+However, if the defects are surfactant, the \(I_{G^-}/I_{G^+}\) ratio
+could be useful for comparing films of similar morphology before and
+after cleaning steps aimed at removing surfactant, with possible
+cleaning approaches discussed in \textbf{?@sec-future-work-fabrication}.
 
 \hypertarget{sec-pristine-electrical-characterisation}{%
 \section{Electrical Characteristics of Pristine
@@ -4882,21 +4885,19 @@ significant impact on the electrical characteristics of the devices,
 determined by comparison of the skew-normal height profile of the carbon
 nanotube network and the key electrical parameters of a selection of
 carbon nanotube devices. When carbon nanotubes were deposited in
-solvent, the resulting networks were highly bundled (\(>95\) \%
-bundled), network density was low (\(<50\) \% coverage) and there were
-large variations in bundle diameter (\(\pm 4\) nm). Liquid-gated devices
+solvent, the resulting networks were highly bundled (\(>95\) \% bundled)
+and there were large variations in bundle diameter. Liquid-gated devices
 created using these carbon nanotube films had highly variable on-off
 ratios due to the large variation in the conductive pathways available.
 In contrast, devices using films fabricated using surfactant with steam
-present showed lower bundling (\(<95\) \% bundled), high network density
-(\(>50\) \% coverage) and less variation in bundle diameter (\(\pm 2\)
-nm). These films were used to create devices with improved
-device-to-device reproducibility of device characteristics, particularly
-on-off ratio. These devices also exhibited lower hysteresis, due to the
-relatively consistent bundle diameters and high density of these
-networks. When performing multiplexed sensing, consistent channel
-behaviour is highly desirable since comparing sensing behaviour between
-channels is more straightforward.
+present showed lower bundling and less variation in bundle diameter.
+These films were used to create devices with improved device-to-device
+reproducibility of device characteristics, particularly on-off ratio.
+These devices also exhibited lower hysteresis, due to the relatively
+consistent bundle diameters and high density of these networks. When
+performing multiplexed sensing, consistent channel behaviour is highly
+desirable since comparing sensing behaviour between channels is more
+straightforward.
 
 However, less bundled networks had the most surface contamination
 present. Atomic force microscopy indicated the presence of contamination
