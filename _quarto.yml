@@ -86,7 +86,13 @@ format:
         }
 
       \renewcommand{\topfraction}{.8}
+      \renewcommand{\bottomfraction}{.7}
+      \renewcommand{\textfraction}{.15}
       \renewcommand{\floatpagefraction}{.8}
+      \setcounter{topnumber}{3}
+      \setcounter{bottomnumber}{3}
+      \setcounter{totalnumber}{4}
+
       \clubpenalty=9996
       \widowpenalty=9999
 

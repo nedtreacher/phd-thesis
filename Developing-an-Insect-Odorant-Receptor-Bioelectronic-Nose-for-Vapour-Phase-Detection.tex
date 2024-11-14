@@ -124,7 +124,13 @@
   }
 
 \renewcommand{\topfraction}{.8}
+\renewcommand{\bottomfraction}{.7}
+\renewcommand{\textfraction}{.15}
 \renewcommand{\floatpagefraction}{.8}
+\setcounter{topnumber}{3}
+\setcounter{bottomnumber}{3}
+\setcounter{totalnumber}{4}
+
 \clubpenalty=9996
 \widowpenalty=9999
 \makeatletter
@@ -303,7 +309,7 @@ I started this project with minimal formal training in biological science, comin
 
 \pagestyle{headings}
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, borderline west={3pt}{0pt}{shadecolor}, interior hidden, frame hidden, enhanced, sharp corners, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, frame hidden, interior hidden, boxrule=0pt, breakable, enhanced, sharp corners]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -548,13 +554,13 @@ thin-film.
 \textbf{Chapter 3} investigates existing odorant receptor-coupled
 thin-film field-effect transistors in the literature. First, the
 biological structure of odorant receptors and membrane formats for their
-protection in vitro are discussed. Details are then provided regarding
-the construction and operation of existing vertebrate odorant receptor
-TFT biosensors. The structure and function of the insect odorant
-receptor is then contrasted with the vertebrate odorant receptor, and
-existing insect odorant receptor TFT biosensors in the literature are
-discussed. The chapter finishes with a brief discussion of non-specific
-binding and its role in hindering biosensor activity.
+protection \emph{in vitro} are discussed. Details are then provided
+regarding the construction and operation of existing vertebrate odorant
+receptor TFT biosensors. The structure and function of the insect
+odorant receptor is then contrasted with the vertebrate odorant
+receptor, and existing insect odorant receptor TFT biosensors in the
+literature are discussed. The chapter finishes with a brief discussion
+of non-specific binding and its role in hindering biosensor activity.
 
 \textbf{Chapter 4} describes the fabrication of the CNT FET and GFET
 transducers used in this thesis and the characterisation techniques used
@@ -621,8 +627,8 @@ work described in this thesis.
 \bookmarksetup{startatroot}
 
 \hypertarget{sec-pristine-characteristics}{%
-\chapter{Characteristics of Pristine Carbon Nanotube \& Graphene Field
-Effect Transistors}\label{sec-pristine-characteristics}}
+\chapter{Characteristics of Pristine Thin-Film
+Transistors}\label{sec-pristine-characteristics}}
 
 \hypertarget{introduction-1}{%
 \section{Introduction}\label{introduction-1}}
@@ -1650,9 +1656,10 @@ R-squared value of 0.98.
 \caption{\label{fig-cnt-mask}A mask, shaded green, sets a height
 threshold so that masked features are hidden from the height dataset.
 The network in (a), (c) and (e) was solvent-deposited, while the network
-in (b), (d) and (f) was surfactant-deposited. The maximum substrate
-height of each network is masked in (a) and (b), the median background
-height is masked in (c) and (d), while outlier artifacts have been
+in (b), (d) and (f) was surfactant-deposited. The maximum possible
+substrate height of each network is masked in (a) and (b), the maximum
+possible substrate height excluding all carbon nanotubes is masked in
+(c) and (d), while artifacts below the substrate surface have been
 masked in (e) and (f).}
 
 \end{figure}
@@ -1662,22 +1669,22 @@ networks, it is easy to distinguish the carbon nanotube bundles from the
 substrate background by eye. Therefore, it was reasonably
 straightforward to use techniques similar to those previously outlined
 by Vobornik \emph{et al.} for network morphology analysis
-\autocite{Vobornik2023}. In the Gwyddion software package, a coloured
-height threshold or ``mask'' was defined that minimally covered all
-regions of exposed substrate. The mask corresponding to each film is
-shown in Figure~\ref{fig-cnt-mask} (a)-(b). The median substrate height
-within the masked region was \(8.9 \pm 0.1\) nm for the
-solvent-deposited film, and \(4.3 \pm 0.1\) nm for the
-surfactant-deposited film. The median height threshold is shown using
-another mask in Figure~\ref{fig-cnt-mask} (c)-(d). These values are
-dramatically different from the median substrate height of
-\(1.9 \pm 0.3\) nm obtained from the distributions in
-Figure~\ref{fig-afm-substrate}. From comparing the atomic force
-microscope images in Figure~\ref{fig-afm-substrate} with
-Figure~\ref{fig-cnt-mask}, it appears unlikely that this difference
-primarily results from a dramatic increase in substrate surface
-roughness after carbon nanotube deposition. Instead, it is suggested
-here that the difference between these values results from the imaging
+\autocite{Vobornik2023}. In Gwyddion, two coloured height thresholds or
+``masks'' were defined, one which covered all exposed substrate along
+with small bundles, shown for each film in Figure~\ref{fig-cnt-mask}
+(a)-(b), and one which covered all substrate but excluded all bundles,
+shown for each film in Figure~\ref{fig-cnt-mask} (c)-(d). The median
+substrate height of the combined masked region from both films was
+\(8.4 \pm 0.5\) nm for the solvent-deposited film, and \(4.3 \pm 0.1\)
+nm for the surfactant-deposited film. The median was used instead of the
+mean to exclude outlier measurements. These values are dramatically
+different from the median substrate height of \(1.9 \pm 0.3\) nm
+obtained from the distributions in Figure~\ref{fig-afm-substrate}. From
+comparing the atomic force microscope images in
+Figure~\ref{fig-afm-substrate} with Figure~\ref{fig-cnt-mask}, it does
+not appear a dramatic increase in substrate surface roughness has
+occurred after carbon nanotube deposition. Instead, it is suggested here
+that the difference between these values results from the imaging
 process.
 
 In Figure~\ref{fig-afm-morphology}, deep streaks or scars with rounded
@@ -1734,7 +1741,7 @@ substrate, following the same approach as Vobornik \emph{et al.}
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch5/Ned_NTQ24_20220125_00235_4.png}
+\includegraphics{figures/ch5/Ned_NTQ24_20220125_00235.png}
 
 }
 
@@ -1830,7 +1837,7 @@ substrate, following the same approach as Vobornik \emph{et al.}
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2)_4.png}
+\includegraphics{figures/ch5/Ned_NTQ8C7_w4_pristine_00084_20210428(2).png}
 
 }
 
@@ -1922,13 +1929,13 @@ is known to cause larger bundles to undergo some degree of compression,
 and the resulting systematic underestimation of their height may be
 responsible for the distribution skewness \autocite{Vobornik2023}. The
 fitted skew-normal distribution in Figure~\ref{fig-cnt-histogram} (b)
-has \(\alpha = 2.5\) (slant, indicates skew), \(\xi = 4.0\) nm
-(location, indicates mean), and \(\omega = 5.8\) nm (scale, indicates
+has \(\alpha = 2.7\) (slant, indicates skew), \(\xi = 4.3\) nm
+(location, indicates mean), and \(\omega = 5.9\) nm (scale, indicates
 standard deviation), while the distribution in
-Figure~\ref{fig-cnt-histogram} (d) has \(\alpha = 2.2\), \(\xi = 2.4\)
-nm, and \(\omega = 2.5\) nm. The probability density for the carbon
+Figure~\ref{fig-cnt-histogram} (d) has \(\alpha = 2.5\), \(\xi = 2.2\)
+nm, and \(\omega = 2.6\) nm. The probability density for the carbon
 nanotube bundle histogram drops to approximately zero at 0 nm, an
-indication that each fit is physically realistic.
+indication that the dataset is representative of the actual film.
 
 \hypertarget{tbl-circle-packing}{}
 \begin{longtable}[]{@{}
@@ -1957,22 +1964,6 @@ s.f. (encompassing circle diameter = \(d\), number of packed circles =
 \text{3.00} & \text{3.30} & 3.61 \\
 \end{longtable}
 
-\hypertarget{tbl-histogram-parameters}{}
-\begin{longtable}[t]{>{\raggedright\arraybackslash}p{3.5cm}>{\centering\arraybackslash}p{2.2cm}>{\centering\arraybackslash}p{2.2cm}>{\centering\arraybackslash}p{2.2cm}>{\centering\arraybackslash}p{2.2cm}}
-\caption{\label{tbl-histogram-parameters}The median of histogram distributions for solvent-deposited and
-surfactant-deposited carbon nanotube films, alongside rough estimates
-for the number of nanotubes present per median bundle, the estimated
-proportion of multi-tube bundles present across the network and the
-proportion of substrate covered by the nanotubes. }\tabularnewline
-
-\toprule
- & Median Bundle Diameter (nm) & Tubes per Median Bundle & \% Multi-Tube Bundles & \% Nanotube Coverage\\
-\midrule
-Solvent-deposited & 7.8 ± 4.0 & 21 & > 95\% & 22 – 61\%\\
-Surfactant-deposited & 3.9 ± 1.8 & 4 & > 78\% & 27 – 64\%\\
-\bottomrule
-\end{longtable}
-
 Analysis of carbon nanotube network morphology can be simplified by
 assuming the component nanotubes are cylinders, follow 2D packing and
 are of equal diameter \autocite{Murugathas2018}.
@@ -1981,7 +1972,8 @@ diameter of a bundle of 2D packed cylinders and their constituent
 diameters. Assuming an average carbon nanotube diameter of 1.45 nm, it
 is possible to use Table~\ref{tbl-circle-packing} to find the
 approximate number of nanotubes, \emph{n}, present in the median bundle
-size of a film \autocite{Graham1998,Specht2023}. An estimate of the
+diameter of a film, where the median bundle diameter is taken from the
+distributions in Figure~\ref{fig-cnt-histogram}. An estimate of the
 relative proportion of multi-tube bundles in a film can be found by
 taking the integral of each probability distribution with a lower bound
 of 2.9 nm, the minimum multi-tube bundle size for 1.45 nm diameter
@@ -1997,16 +1989,15 @@ These estimates are all shown in Table~\ref{tbl-histogram-parameters},
 with the caveat that median bundle diameter is likely being
 underestimated due to tip compression \autocite{Vobornik2023}.
 Alternative estimates for median bundle diameter can be obtained by
-inverting the mask shown in Figure~\ref{fig-cnt-mask} (a)-(b), as shown
-in Figure~\ref{fig-cnt-histogram} (a) and (c), and finding the median
-heights of each masked region, which are \(15.9 \pm 0.1\) nm and
-\(8.2 \pm 0.1\) nm respectively. By subtracting the median substrate
-height of each image, \(8.9 \pm 0.1\) nm and \(4.3 \pm 0.1\) nm,
-alternative median bundle diameters of \(7.0 \pm 0.2\) nm and
-\(3.9 \pm 0.2\) nm are found, closely in line with the values in
-Table~\ref{tbl-histogram-parameters}. Both the carbon nanotube bundle
-diameter median and standard deviation are small for
-surfactant-deposited films when compared to the median and standard
+finding the median heights of the combined unmasked regions from
+Figure~\ref{fig-cnt-mask} (a) and (c) and from Figure~\ref{fig-cnt-mask}
+(b) and (d), which are \(12.7 \pm 2.6\) nm and \(8.0 \pm 0.9\) nm
+respectively. By subtracting the median substrate height of each image,
+\(8.4 \pm 0.5\) nm and \(4.3 \pm 0.1\) nm, alternative median bundle
+diameters of \(4.3 \pm 3.1\) nm and \(3.7 \pm 1.0\) nm are found, within
+error of the values in Table~\ref{tbl-histogram-parameters}. Both the
+carbon nanotube bundle diameter median and standard deviation are small
+for surfactant-deposited films when compared to the median and standard
 deviation of solvent-deposited films. However, despite the presence of
 surfactant, it is apparent both from Figure~\ref{fig-cnt-histogram} and
 Table~\ref{tbl-histogram-parameters} that most surfactant-dispersed
@@ -2015,6 +2006,22 @@ bundling of surfactant-dispersed carbon nanotubes occurs as nanotubes
 are deposited onto the surface, as this bonding process may disrupt the
 repulsive forces from the surfactant coating and allow attractive forces
 to temporarily dominate.
+
+\hypertarget{tbl-histogram-parameters}{}
+\begin{longtable}[t]{>{\raggedright\arraybackslash}p{3.5cm}>{\centering\arraybackslash}p{2.2cm}>{\centering\arraybackslash}p{2.2cm}>{\centering\arraybackslash}p{2.2cm}>{\centering\arraybackslash}p{2.2cm}}
+\caption{\label{tbl-histogram-parameters}The median of histogram distributions for solvent-deposited and
+surfactant-deposited carbon nanotube films, alongside rough estimates
+for the number of nanotubes present per median bundle, the estimated
+proportion of multi-tube bundles present across the network and the
+proportion of substrate covered by the nanotubes. }\tabularnewline
+
+\toprule
+ & Median Bundle Diameter (nm) & Tubes per Median Bundle & \% Multi-Tube Bundles & \% Nanotube Coverage\\
+\midrule
+Solvent-deposited & 8.3 ± 4.5 & 24 & > 97\% & < 66\%\\
+Surfactant-deposited & 3.9 ± 1.9 & 4 & > 77\% & < 40\%\\
+\bottomrule
+\end{longtable}
 
 \hypertarget{dense-nanotube-networks}{%
 \subsubsection*{Dense Nanotube Networks}\label{dense-nanotube-networks}}
@@ -2027,17 +2034,18 @@ Because it becomes difficult to distinguish between small nanotubes and
 the surrounding substrate, it is not immediately clear whether the
 method of Vobornik \emph{et al.} can be used. The steam-deposited film
 appears as a dense network of single and less-bundled nanotubes, with
-larger bundles scattered throughout. A similar masking approach to the
-one used earlier can be used, where all regions of the image not covered
-by highly bundled nanotubes are masked, as shown in
-Figure~\ref{fig-dense-network} (a). The median height of the masked
-region is \(2.9 \pm 0.1\) nm, with this height shaded in
-Figure~\ref{fig-dense-network} (b). Artifacts of height \(0.7 \pm 0.2\)
-nm are also present in the top-left corner of the image, as shown in
-Figure~\ref{fig-dense-network} (c). Subtracting artifacts from the
-median height gives \(2.2 \pm 0.3\) nm, which is within the margin of
-error of the actual median substrate height of \(1.9 \pm 0.3\) nm taken
-from Figure~\ref{fig-afm-substrate}.
+larger bundles scattered throughout. A similar dual-masking approach as
+that used earlier can be applied. As before, the first mask covers all
+exposed substrate including small bundles, as shown in
+Figure~\ref{fig-dense-network} (a). In the case of the dense network,
+the second mask is set empty, assuming that in the most extreme case
+almost the entire surface is densely covered with carbon nanotubes. The
+median height of the masked substrate is then \(2.9 \pm 0.1\) nm.
+Artifact regions are highlighted in the top-left corner of
+Figure~\ref{fig-dense-network} (b) which have a height of
+\(0.7 \pm 0.2\) nm. Subtracting artifacts from the median height gives
+\(2.2 \pm 0.3\) nm, in range of the median substrate height of
+\(1.9 \pm 0.3\) nm taken from Figure~\ref{fig-afm-substrate}.
 
 \begin{figure}
 
@@ -2167,7 +2175,7 @@ from Figure~\ref{fig-afm-substrate}.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch5/Ned_NGQ14D2_W4_pristine_20220713_00567_3.png}
+\includegraphics{figures/ch5/NT14D2_W4_pristine_cnt_histogram.png}
 
 }
 
@@ -2215,7 +2223,7 @@ from Figure~\ref{fig-afm-substrate}.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch5/NT14D2_W4_pristine_cnt_histogram.png}
+\includegraphics{figures/ch5/Ned_NGQ14D2_W4_pristine_20220713_00567_3.png}
 
 }
 
@@ -2234,32 +2242,35 @@ from Figure~\ref{fig-afm-substrate}.
 \end{minipage}%
 
 \caption{\label{fig-dense-network}The dense steam-deposited network is
-covered with a mask showing the maximum height of the substrate and
-less-bundled carbon nanotubes in (a), a mask showing the median height
-of this region in (b), and a mask highlighting imaging artifacts in (c).
-A histogram of bundle measurements above the maximum height of the
-substrate is shown in (d).}
+covered with a mask showing the maximum possible height of the substrate
+in (a), a mask highlighting imaging artifacts in (b). A histogram of
+bundle measurements above the median substrate height is shown in (c),
+while a mask covering all regions with height greater than the median
+carbon nanotube diameter is shown in (d).}
 
 \end{figure}
 
-Taking binned diameter measurements of the larger bundles in the same
-manner as earlier leads to the figure in Figure~\ref{fig-dense-network}
-(d). Unlike the skew-normal distributions seen earlier, the distribution
-in Figure~\ref{fig-dense-network} (d) falls to zero at \(\sim\) 2 nm.
-This unphysical result comes from undercounting the large population of
-smaller nanotubes, which occurs due to the difficulty distinguishing
-between less-bundled nanotubes and the substrate background. It is still
+Taking binned diameter measurements of the larger bundles as seen
+earlier results in Figure~\ref{fig-dense-network} (c). Unlike the
+skew-normal distributions seen earlier, the distribution in
+Figure~\ref{fig-dense-network} (c) falls to zero at \(\sim\) 1 nm. This
+unphysical result comes from undercounting the large population of
+smaller nanotubes, which occurs due to difficulty distinguishing between
+less-bundled nanotubes and the substrate background. It is still
 possible to use masking to obtain an estimate of the median bundle
-height present. The median height of the region not shaded green in
-Figure~\ref{fig-dense-network} (a) is \(6.0 \pm 0.1\) nm. The median
-height of the substrate, \(2.9 \pm 0.1\) nm, can then be subtracted for
-a median bundle diameter of \(3.1 \pm 0.2\) nm, slightly less than the
-median bundle diameter found for the surfactant-deposited film without
-steam. The surface coverage of the steam-deposited network is also
-similar to that of the surfactant-deposited network, falling somewhere
-between 15\%, the surface area unmasked in
-Figure~\ref{fig-dense-network} (a), and 58\%, the surface area unmasked
-in Figure~\ref{fig-dense-network} (b).
+height present. The median height of the combined unmasked regions in
+Figure~\ref{fig-dense-network} (a)-(b) is \(4.1 \pm 0.2\) nm. The median
+height of the substrate, \(2.2 \pm 0.3\) nm, can then be subtracted for
+a median bundle diameter of \(1.9 \pm 0.5\) nm. The mask in
+Figure~\ref{fig-dense-network} (d) highlights all regions in the network
+of height at or above the median bundle diameter estimate. The median
+bundle diameter estimate is approximately half the median bundle
+diameter of the surfactant-deposited film without steam. This result
+implies the presence of steam disrupts the bundling of carbon nanotubes
+during deposition. However, it is also possible that no substrate is
+visible in Figure~\ref{fig-dense-network}, and the two films have
+similar bundle sizes once the resulting height offset is taken into
+account.
 
 The discussion in this section gives us a new understanding of the
 histograms shown in Figure~\ref{fig-afm-morphology}. It appears that
@@ -2542,11 +2553,12 @@ Devices}\label{sec-pristine-electrical-characterisation}}
 
 Analysis of electrical measurements was performed using the three Python
 modules described in Section~\ref{sec-field-effect-transistor-analysis}.
-The device type being analysed, carbon nanotube or graphene, can be set
-in the config file. The config file can also be used to add annotations
-to any plot, to set the procedure for normalising a sensing dataset, and
-the size of the filter window used for the filters described below. In
-this work, a filter window of 40 datapoints was used.
+For all three modules, the type of device being analysed (carbon
+nanotube or graphene) can be set in the config file. The config file can
+also be used to add annotations to any plot, to set the procedure for
+normalising a sensing dataset, and the size of the filter window used
+for the filters described below. In this work, a filter window of 40
+datapoints was used.
 
 The first of the three modules is for processing sensing datasets. Types
 of plots produced include normalised plots, plots with fitted curves,
@@ -2587,16 +2599,6 @@ present.
 
 \begin{figure}
 
-\begin{minipage}[t]{0.11\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
 \begin{minipage}[t]{0.03\linewidth}
 
 {\centering 
@@ -2621,7 +2623,7 @@ present.
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.70\linewidth}
+\begin{minipage}[t]{0.45\linewidth}
 
 {\centering 
 
@@ -2635,17 +2637,7 @@ present.
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.15\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.11\linewidth}
+\begin{minipage}[t]{0.01\linewidth}
 
 {\centering 
 
@@ -2679,7 +2671,7 @@ present.
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.70\linewidth}
+\begin{minipage}[t]{0.45\linewidth}
 
 {\centering 
 
@@ -2693,7 +2685,7 @@ present.
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.15\linewidth}
+\begin{minipage}[t]{0.01\linewidth}
 
 {\centering 
 
@@ -2726,11 +2718,6 @@ or major Dirac voltage of the device.
 
 \hypertarget{graphene-devices}{%
 \subsection{Graphene Devices}\label{graphene-devices}}
-
-Graphene field-effect transistor devices were electrically characterised
-in the manner described in \textbf{?@sec-electrical-characterisation}
-and analysed using the Python code discussed in
-Section~\ref{sec-field-effect-transistor-analysis}.
 
 \begin{figure}
 
@@ -2926,18 +2913,21 @@ Section~\ref{sec-field-effect-transistor-analysis}.
 
 \end{minipage}%
 
-\caption{\label{fig-pristine-graphene}These figures show liquid-gated
-transfer characteristics of channels from two AZ\(^\circledR\) 1518
-encapsulated graphene devices. The characteristics of working device
-channels upon initial exposure to \(1 \times\) PBS are shown in (a) and
-(b). The transfer characteristics of channel 1 in (a) and channel 5 in
-(b) after various degrees of exposure to \(1 \times\) PBS are shown in
-(c) and (d) respectively, with each transfer sweep numbered in the order
-the sweeps were taken. The dashed lines correspond to measurements of
-gate leakage current.}
+\caption{\label{fig-pristine-graphene}Figures (a) and (b) show
+liquid-gated transfer characteristics of channels from two
+AZ\(^\circledR\) 1518 encapsulated graphene devices. The transfer
+characteristics of channel 1 in (a) and channel 5 in (b) after various
+degrees of exposure to \(1 \times\) PBS are shown in (c) and (d)
+respectively, with each transfer sweep numbered in the order the sweeps
+were taken. The dashed lines correspond to measurements of gate leakage
+current.}
 
 \end{figure}
 
+Graphene field-effect transistor devices were electrically characterised
+in the manner described in \textbf{?@sec-electrical-characterisation}
+and analysed using the Python code discussed in
+Section~\ref{sec-field-effect-transistor-analysis}.
 Figure~\ref{fig-pristine-graphene} (a) and (b) show the liquid-gated
 transfer characteristics of two graphene devices. These devices were
 fabricated prior to Jun 2021. Both devices exhibit the ambipolar
@@ -3321,47 +3311,6 @@ buffer for the liquid-gated measurements here.}
 
 \end{figure}
 
-Each carbon nanotube device fabricated was electrically characterised as
-described in \textbf{?@sec-electrical-characterisation}, and electrical
-data was analysed using the Python code discussed in
-Section~\ref{sec-field-effect-transistor-analysis}. Devices with a 100
-nm or 300 nm SiO\(_2\) layer were used for liquid gated measurements,
-and devices with a 100 nm SiO\(_2\) layer were used for backgated
-measurements. Figure~\ref{fig-pristine-cnt-characteristics} displays
-multi-channel measurements of representative devices fabricated as
-described in \textbf{?@sec-fabrication}. To ensure a consistent
-comparison, all device measurements shown here are from devices
-fabricated and encapsulated using only AZ\(^\circledR\) 1518
-photoresist. The channels which did not exhibit reliable transistor
-characteristics are not shown. These `non-working' channels were either
-shorted, due to metal remaining on the channel after lift-off, or were
-very low current, due to a very sparse carbon nanotube network. Devices
-shown here with a solvent-deposited carbon nanotube network were
-fabricated prior to Jan 2022; devices with a surfactant-deposited
-network without steam present were fabricated prior to Jun 2021; devices
-with a surfactant-deposited network without steam were fabricated prior
-to Sep 2022.
-
-When characterising devices using the vapour delivery system chip
-carrier, the setup arrangement meant all measurements were taken using a
-backgate. Figure~\ref{fig-pristine-cnt-characteristics} (a),
-Figure~\ref{fig-pristine-cnt-characteristics} (c) and
-Figure~\ref{fig-pristine-cnt-characteristics} (e) show that backgated
-devices exhibit \emph{p}-type transistor behaviour. Gate current leakage
-was negligible, as shown by the dashed line staying close to zero across
-the sweep. The hysteresis observed was much greater than for the
-corresponding liquid-gated sweeps on the left. This hysteresis can be
-explained by the presence of defects or charge traps within and on the
-surface of the gate-insulating SiO\(_2\) and at interfaces between
-SiO\(_2\) and carbon nanotubes. The occupancy of these charge traps
-evolves over time with applied gate voltage
-\autocite{Lee2007,Lee2012,Ha2014}. The devices fabricated with a
-solvent-based deposition had a significantly lower off-current than the
-surfactant-deposited devices, which may result from very few metallic
-nanotubes being present in the less-dense network \autocite{Rouhi2011}
-used to create the device with characteristics shown in
-Figure~\ref{fig-pristine-cnt-characteristics} (a).
-
 \begin{figure}
 
 \begin{minipage}[t]{0.03\linewidth}
@@ -3466,73 +3415,6 @@ layer and steam assisted surfactant-deposited carbon nanotube network
 channels before and after being covered in 50 µL \(1 \times\) PBS.}
 
 \end{figure}
-
-Transfer measurements were taken to determine whether backgated
-measurements could be taken of an unencapsulated device in the vapour
-sensor chamber with \(1 \times\) PBS covering the channels. The use of a
-backgated configuration with channels in a liquid environment is
-generally considered less than ideal, since the sensitivity of the
-device is greatly reduced \autocite{Li2023}.
-Figure~\ref{fig-buffer-effect-on-backgate} (a) and (b) respectively show
-the behaviour of an unencapsulated backgated device before and after
-being covered by 50 µL of \(1 \times\) PBS. The on-off ratio and
-hysteresis of the channels both increase significantly. The presence of
-water increases hysteresis through introducing charge traps at the
-SiO\(_2\) surface around the carbon nanotubes and at the surface of the
-nanotubes themselves \autocite{Kim2003,Lee2007,Franklin2012,Ha2014}.
-There is also a significant increase in current leakage to the backgate
-for larger applied voltages, despite the PBS having no visible physical
-contact with the Si backgate or Cu plane. This leakage current may
-simply be due to an increase in relative humidity around the device
-\autocite{Conseil2014}.
-
-The liquid-gated devices in
-Figure~\ref{fig-pristine-cnt-characteristics} (b),
-Figure~\ref{fig-pristine-cnt-characteristics} (d) and
-Figure~\ref{fig-pristine-cnt-characteristics} (f) each exhibited
-ambipolar characteristics, commonly observed in liquid-gated carbon
-nanotube network FETs
-\autocite{Kauffman2008,Heller2009,JongYu2009,Derenskyi2014,Murugathas2018,Albarghouthi2022}.
-When devices were appropriately configured, leakage current (shown by
-the dashed traces) did not exceed \(\sim 1 \times 10^{-7}\) V across the
-forward and reverse sweeps. The devices shown which used steam-deposited
-carbon nanotube films consistently showed the least hysteresis.
-Section~\ref{sec-pristine-AFM} demonstrates that the mean diameter of
-the bundles in these films is \(\sim\) 5 nm less than those in films
-deposited in solvent. Hysteresis is known to scale roughly linearly with
-bundle diameter, due to trapped charge increasing as bundle density of
-states is increased \autocite{Pop2009}. Steam-deposited devices also
-showed significantly less channel-to-channel variation in electrical
-characteristics more generally. Channel 1 in
-Figure~\ref{fig-pristine-cnt-characteristics} (b) has a much higher
-off-current than the other channels of the same device, which appears to
-be due to a unusually high proportion of metallic carbon nanotubes
-present in the network conduction pathways of this channel
-\autocite{Rouhi2011,Zaumseil2015}.
-
-A summary of key parameters of pristine liquid-gated devices is shown in
-Figure~\ref{fig-sweep-parameters}. The full dataset consists of three
-sets of 21 liquid-gated transfer characteristics of working channels,
-with each set corresponding to the use of a particular method of carbon
-nanotube network deposition in the device fabrication. Measurements from
-at least three devices are included in each set. Each entry in the
-summary corresponds to the average of the specific parameter in the
-forward and reverse sweep direction. When steam was used for surfactant
-deposition of films, the resulting devices showed highly consistent
-channel-to-channel electrical properties. Since the carbon nanotube
-films on these devices are relatively dense, as seen in
-Table~\ref{tbl-histogram-parameters}, the network should be well above
-the percolation threshold. As many carbon nanotube pathways connect
-across the channel in parallel, small variations in the network
-morphology have less of an impact on the overall channel behaviour
-\autocite{Murugathas2018}. Figure~\ref{fig-cnt-histogram} and
-Table~\ref{tbl-histogram-parameters} indicate that the range of bundle
-sizes is relatively low in the steam-deposited films used in these
-devices, meaning the electrical behaviour of dominant conduction
-pathways is more spatially consistent. The highly consistent and
-reproducible subthreshold regime behaviour between channels seen for
-steam-deposited devices is a desirable attribute for reliable real-time
-multiplexed biosensing \autocite{Kauffman2008,Heller2009,Gao2010}.
 
 \begin{figure}
 
@@ -3740,6 +3622,114 @@ and 75th percentile of the distribution.}
 
 \end{figure}
 
+Each carbon nanotube device fabricated was electrically characterised as
+described in \textbf{?@sec-electrical-characterisation}, and electrical
+data was analysed using the Python code discussed in
+Section~\ref{sec-field-effect-transistor-analysis}. Devices with a 100
+nm or 300 nm SiO\(_2\) layer were used for liquid gated measurements,
+and devices with a 100 nm SiO\(_2\) layer were used for backgated
+measurements. Figure~\ref{fig-pristine-cnt-characteristics} displays
+multi-channel measurements of representative devices fabricated as
+described in \textbf{?@sec-fabrication}. To ensure a consistent
+comparison, all device measurements shown here are from devices
+fabricated and encapsulated using only AZ\(^\circledR\) 1518
+photoresist. The channels which did not exhibit reliable transistor
+characteristics are not shown. These `non-working' channels were either
+shorted, due to metal remaining on the channel after lift-off, or were
+very low current, due to a very sparse carbon nanotube network. Devices
+shown here with a solvent-deposited carbon nanotube network were
+fabricated prior to Jan 2022; devices with a surfactant-deposited
+network without steam present were fabricated prior to Jun 2021; devices
+with a surfactant-deposited network without steam were fabricated prior
+to Sep 2022.
+
+When characterising devices using the vapour delivery system chip
+carrier, the setup arrangement meant all measurements were taken using a
+backgate. Figure~\ref{fig-pristine-cnt-characteristics} (a),
+Figure~\ref{fig-pristine-cnt-characteristics} (c) and
+Figure~\ref{fig-pristine-cnt-characteristics} (e) show that backgated
+devices exhibit \emph{p}-type transistor behaviour. Gate current leakage
+was negligible, as shown by the dashed line staying close to zero across
+the sweep. The hysteresis observed was much greater than for the
+corresponding liquid-gated sweeps on the left. This hysteresis can be
+explained by the presence of defects or charge traps within and on the
+surface of the gate-insulating SiO\(_2\) and at interfaces between
+SiO\(_2\) and carbon nanotubes. The occupancy of these charge traps
+evolves over time with applied gate voltage
+\autocite{Lee2007,Lee2012,Ha2014}. The devices fabricated with a
+solvent-based deposition had a significantly lower off-current than the
+surfactant-deposited devices, which may result from very few metallic
+nanotubes being present in the less-dense network \autocite{Rouhi2011}
+used to create the device with characteristics shown in
+Figure~\ref{fig-pristine-cnt-characteristics} (a).
+
+Transfer measurements were taken to determine whether backgated
+measurements could be taken of an unencapsulated device in the vapour
+sensor chamber with \(1 \times\) PBS covering the channels. The use of a
+backgated configuration with channels in a liquid environment is
+generally considered less than ideal, since the sensitivity of the
+device is greatly reduced \autocite{Li2023}.
+Figure~\ref{fig-buffer-effect-on-backgate} and (b) show the behaviour of
+an unencapsulated backgated device before and after being covered by 50
+µL of \(1 \times\) PBS. The on-off ratio and hysteresis of the channels
+both increase significantly. The presence of water increases hysteresis
+through introducing charge traps at the SiO\(_2\) surface around the
+carbon nanotubes and at the surface of the nanotubes themselves
+\autocite{Kim2003,Lee2007,Franklin2012,Ha2014}. There is also a
+significant increase in current leakage to the backgate for larger
+applied voltages, despite the PBS having no visible physical contact
+with the Si backgate or Cu plane. This leakage current may simply be due
+to an increase in relative humidity around the device
+\autocite{Conseil2014}.
+
+The liquid-gated devices in
+Figure~\ref{fig-pristine-cnt-characteristics} (b),
+Figure~\ref{fig-pristine-cnt-characteristics} (d) and
+Figure~\ref{fig-pristine-cnt-characteristics} (f) each exhibited
+ambipolar characteristics, commonly observed in liquid-gated carbon
+nanotube network FETs
+\autocite{Kauffman2008,Heller2009,JongYu2009,Derenskyi2014,Murugathas2018,Albarghouthi2022}.
+When devices were appropriately configured, leakage current (shown by
+the dashed traces) did not exceed \(\sim 1 \times 10^{-7}\) V across the
+forward and reverse sweeps. The devices shown which used steam-deposited
+carbon nanotube films consistently showed the least hysteresis.
+Section~\ref{sec-pristine-AFM} demonstrates that the mean diameter of
+the bundles in these films is \(\sim\) 5 nm less than those in films
+deposited in solvent. Hysteresis is known to scale roughly linearly with
+bundle diameter, due to trapped charge increasing as bundle density of
+states is increased \autocite{Pop2009}. Steam-deposited devices also
+showed significantly less channel-to-channel variation in electrical
+characteristics more generally. Channel 1 in
+Figure~\ref{fig-pristine-cnt-characteristics} (b) has a much higher
+off-current than the other channels of the same device, which appears to
+be due to a unusually high proportion of metallic carbon nanotubes
+present in the network conduction pathways of this channel
+\autocite{Rouhi2011,Zaumseil2015}.
+
+A summary of key parameters of pristine liquid-gated devices is shown in
+Figure~\ref{fig-sweep-parameters}. The full dataset consists of three
+sets of 21 liquid-gated transfer characteristics of working channels,
+with each set corresponding to the use of a particular method of carbon
+nanotube network deposition in the device fabrication. Measurements from
+at least three devices are included in each set. Each entry in the
+summary corresponds to the average of the specific parameter in the
+forward and reverse sweep direction. When steam was used for surfactant
+deposition of films, the resulting devices showed highly consistent
+channel-to-channel electrical properties. Since the carbon nanotube
+films on these devices are relatively dense, as seen in
+Table~\ref{tbl-histogram-parameters}, the network should be well above
+the percolation threshold. As many carbon nanotube pathways connect
+across the channel in parallel, small variations in the network
+morphology have less of an impact on the overall channel behaviour
+\autocite{Murugathas2018}. Figure~\ref{fig-cnt-histogram} and
+Table~\ref{tbl-histogram-parameters} indicate that the range of bundle
+sizes is relatively low in the steam-deposited films used in these
+devices, meaning the electrical behaviour of dominant conduction
+pathways is more spatially consistent. The highly consistent and
+reproducible subthreshold regime behaviour between channels seen for
+steam-deposited devices is a desirable attribute for reliable real-time
+multiplexed biosensing \autocite{Kauffman2008,Heller2009,Gao2010}.
+
 Channels from surfactant-deposited film devices usually showed a larger
 on-off ratio and subthreshold slope than those from solvent-deposited
 devices. Increasing the ratio of gate-sensitive semiconducting carbon
@@ -3817,19 +3807,6 @@ Concentration}\label{sec-dummy-sensing}}
 \hypertarget{sec-baseline-drift}{%
 \subsection{Control Series and Baseline
 Drift}\label{sec-baseline-drift}}
-
-To verify the sensitivity of the fabricated field-effect transistors and
-therefore test their suitability for sensing, control measurements
-replicating a typical sensing experiment were taken before
-functionalising the channels of a carbon nanotube network device. The
-first step to verifying device suitability was ensuring the device
-showed no response to \(1 \times\) PBS. This sequence is referred to in
-this thesis as the `PBS control series'. The PDMS well contained 80 µL
-\(1 \times\) PBS at 0 s. The PBS control series ran over the first 1800
-s, with 20 µL \(1 \times\) PBS additions at 100 s, 200 s and 300 s, and
-20 µL subtractions at 400 s, 500 s and 600 s. The device was left
-untouched over the next 1200 s to allow the current level to settle. The
-gate voltage was held at \(V_g\) = 0 V.
 
 \begin{figure}
 
@@ -3962,6 +3939,19 @@ times from \(100-600\) s.}
 
 \end{figure}
 
+To verify the sensitivity of the fabricated field-effect transistors and
+therefore test their suitability for sensing, control measurements
+replicating a typical sensing experiment were taken before
+functionalising the channels of a carbon nanotube network device. The
+first step to verifying device suitability was ensuring the device
+showed no response to \(1 \times\) PBS. This sequence is referred to in
+this thesis as the `PBS control series'. The PDMS well contained 80 µL
+\(1 \times\) PBS at 0 s. The PBS control series ran over the first 1800
+s, with 20 µL \(1 \times\) PBS additions at 100 s, 200 s and 300 s, and
+20 µL subtractions at 400 s, 500 s and 600 s. The device was left
+untouched over the next 1200 s to allow the current level to settle. The
+gate voltage was held at \(V_g\) = 0 V.
+
 Figure~\ref{fig-salt-conc-control-series} (a) shows the PBS control
 series corresponding to each device channel alongside gate current. In
 both series, there is no clear stepwise response to any addition or
@@ -4083,20 +4073,6 @@ series is appropriate for further experimental work.
 \hypertarget{sec-salt-conc-series}{%
 \subsection{Sensing Series}\label{sec-salt-conc-series}}
 
-A salt concentration sensing series was performed from 1800 s onwards,
-directly after the PBS control series. The responses to successive
-dilutions of the PBS gate were recorded to confirm the fabricated
-devices were sensitive to small environmental changes in their pristine
-state, to check for spurious signals, and to ensure gate current leakage
-or other confounding factors were not contributing to sensing responses.
-The PDMS well contained 80 µL \(1 \times\) PBS at 1800 s. During the
-series, successive additions of deionised water were made to reduce the
-concentration of PBS in the well. An initial \(1 \times\) PBS addition
-was performed at 2100s, to confirm no changes occurred during the PBS
-control series that would interfere with sensing. All additions to the
-well in the sensing series and resulting changes to the PBS
-concentration in the well are shown in Table~\ref{tbl-salt-conc-series}.
-
 \hypertarget{tbl-salt-conc-series}{}
 \begin{longtable}[t]{lcccccc}
 \caption{\label{tbl-salt-conc-series}This table shows the times at which 20 µL additions were made to the
@@ -4117,6 +4093,20 @@ Final PBS concentration & 1X & 0.83X & 0.71X & 0.63X & 0.56X & 0.50X\\
 Δ PBS concentration & 0 & -0.17X & -0.12X & -0.09X & -0.07X & -0.06X\\
 \bottomrule
 \end{longtable}
+
+A salt concentration sensing series was performed from 1800 s onwards,
+directly after the PBS control series. The responses to successive
+dilutions of the PBS gate were recorded to confirm the fabricated
+devices were sensitive to small environmental changes in their pristine
+state, to check for spurious signals, and to ensure gate current leakage
+or other confounding factors were not contributing to sensing responses.
+The PDMS well contained 80 µL \(1 \times\) PBS at 1800 s. During the
+series, successive additions of deionised water were made to reduce the
+concentration of PBS in the well. An initial \(1 \times\) PBS addition
+was performed at 2100s, to confirm no changes occurred during the PBS
+control series that would interfere with sensing. All additions to the
+well in the sensing series and resulting changes to the PBS
+concentration in the well are shown in Table~\ref{tbl-salt-conc-series}.
 
 \begin{figure}
 
@@ -4320,23 +4310,6 @@ transfer characteristics of the channel. This shift in transfer
 characteristic leads to a real-time signal response to each addition
 \autocite{Heller2009,Heller2010,Kireev2017}.
 
-Using the data in Table~\ref{tbl-linear-fits}, the linear term
-approximating baseline drift (\(c_1t\)) for each channel can be
-subtracted from the data in Figure~\ref{fig-salt-conc-sensing} (a) to
-account for the downward drift. The mean current level just before 1800
-s then becomes roughly constant. Next, each channel is normalised
-relative to their initial mean current level \(I_{0}\). Artifacts
-resulting from PXIe-2737 module lag, single datapoints which fall well
-below the current level of the immediately preceding and succeeding
-datapoints, are also removed. This `despike' process uses an
-interquartile range filter, which is described in
-Section~\ref{sec-python-analysis}. The resulting dataset is shown in
-Figure~\ref{fig-salt-conc-sensing} (b). This figure shows that the
-signal-to-noise ratio remains roughly similar across all channels of the
-device. However, the behaviour of the initial transient increase with
-each addition is highly variable across channels and between additions
-for a single channel.
-
 \begin{figure}
 
 \begin{minipage}[t]{0.11\linewidth}
@@ -4461,6 +4434,23 @@ data is then shown in box plot format in (b) alongside a fit to the
 median change in signal for each addition, where \(R^2\) = 0.86.}
 
 \end{figure}
+
+Using the data in Table~\ref{tbl-linear-fits}, the linear term
+approximating baseline drift (\(c_1t\)) for each channel can be
+subtracted from the data in Figure~\ref{fig-salt-conc-sensing} (a) to
+account for the downward drift. The mean current level just before 1800
+s then becomes roughly constant. Next, each channel is normalised
+relative to their initial mean current level \(I_{0}\). Artifacts
+resulting from PXIe-2737 module lag, single datapoints which fall well
+below the current level of the immediately preceding and succeeding
+datapoints, are also removed. This `despike' process uses an
+interquartile range filter, which is described in
+Section~\ref{sec-python-analysis}. The resulting dataset is shown in
+Figure~\ref{fig-salt-conc-sensing} (b). This figure shows that the
+signal-to-noise ratio remains roughly similar across all channels of the
+device. However, the behaviour of the initial transient increase with
+each addition is highly variable across channels and between additions
+for a single channel.
 
 \begin{figure}
 
@@ -4643,9 +4633,9 @@ Figure~\ref{fig-salt-conc-sensing} (b) and
 Figure~\ref{fig-salt-conc-sensing} (c) is normalised to \(I_{0}\), but
 an alternative normalisation can more effectively filter out remaining
 drift present. This normalisation presents data relative to both
-\(I_{0}\) and the final current reading \$I\_\{f\}\$ using the formula
-\$(I - I\_\{0\})/(I\_\{f\} - I\_\{0\})\$. Using this normalisation, the
-data in Figure~\ref{fig-salt-conc-sensing} (b) and
+\(I_{0}\) and the final current reading \(I_{f}\) using the formula
+\((I - I_0)/(I_f - I_0)\). Using this normalisation, the data in
+Figure~\ref{fig-salt-conc-sensing} (b) and
 Figure~\ref{fig-salt-conc-sensing} (c) can be displayed instead as (a)
 and (b) respectively. (c) shows a magnified version of the step at
 addition 2 in (a).}
@@ -4658,7 +4648,7 @@ the implementation of this filter discussed in
 Section~\ref{sec-python-analysis}. The filtered data is shown in
 Figure~\ref{fig-salt-conc-sensing} (c). Noise and initial transients are
 removed completely, while the clearly defined step to a new current
-baseline is retained. Using the realtime data in
+baseline is retained. Using the real-time data in
 Figure~\ref{fig-salt-conc-sensing} (c), a plot of signal against
 addition can be created using the method described in
 Section~\ref{sec-python-analysis}, shown in
@@ -4692,13 +4682,13 @@ discrete signal changes, as in Figure~\ref{fig-salt-conc-signal} (a), is
 one way of excluding these deviations (see
 Section~\ref{sec-python-analysis}). An alternative way of presenting the
 signal changes, by normalising relative to both \(I_{0}\) and the final
-current reading with the formula \$(I - I\_\{0\})/(I\_\{f\} -
-I\_\{0\})\$, is shown in Figure~\ref{fig-salt-conc-sensing-2}. This
-approach is useful for filtering out remaining unaccounted-for drift
-behaviour in order to compare the short-term transient responses to
-additions across the device channels. Furthermore, it lets us better
-understand how the short-term transient responses affect the longer-term
-step responses discussed earlier.
+current reading with the formula \((I - I_{0})/(I_{f} - I_{0})\), is
+shown in Figure~\ref{fig-salt-conc-sensing-2}. This approach is useful
+for filtering out remaining unaccounted-for drift behaviour in order to
+compare the short-term transient responses to additions across the
+device channels. Furthermore, it lets us better understand how the
+short-term transient responses affect the longer-term step responses
+discussed earlier.
 
 Figure~\ref{fig-salt-conc-sensing-2} (a) and
 Figure~\ref{fig-salt-conc-sensing-2} (c) show that the transient
@@ -4843,13 +4833,13 @@ setup.
 
 \caption{\label{fig-salt-conc-SNR}The transfer characteristics of a
 single steam-deposited carbon nanotube field-effect transistor channel
-are shown in (a). \(V_{\textrm{gap}}\) is the gate voltage corresponding
-to the center of the transistor bandgap, found at the minimum of the
+are shown in (a). \(V_{gap}\) is the gate voltage corresponding to the
+center of the transistor bandgap, found at the minimum of the
 characteristic curve. The signal-to-noise ratio of the channel response
 to a deionised water addition after a suitable control series is shown
 in (b). The blue current trace in (b) was performed gating the device
-150 mV away from \(V_{\textrm{gap}}\), while the red current was
-performed gating the device 200 mV away from \(V_{\textrm{gap}}\).}
+150 mV away from \(V_{gap}\), while the red current was performed gating
+the device 200 mV away from \(V_{gap}\).}
 
 \end{figure}
 
@@ -4863,11 +4853,11 @@ for liquid-gated, encapsulated carbon nanotube devices suggests that
 gating devices close to \(V_{gap}\) should give a larger signal-to-noise
 ratio for salt concentration changes \autocite{Heller2009}. However, in
 this case, improved signal-to-noise ratio was observed when gated at a
-voltage further removed from \(V_{\textrm{gap}}\). This discrepancy
-could be a result of the use of a network of carbon nanotubes rather
-than a single nanotube, where gating may have less of an impact on
-noise. Alternatively, it could be a result of a lack of mixing in the
-well setup used, leading to inconsistent signal sizes with concentration
+voltage further removed from \(V_{gap}\). This discrepancy could be a
+result of the use of a network of carbon nanotubes rather than a single
+nanotube, where gating may have less of an impact on noise.
+Alternatively, it could be a result of a lack of mixing in the well
+setup used, leading to inconsistent signal sizes with concentration
 change. Heller \emph{et al.} used a flow cell during their
 signal-to-ratio work \autocite{Heller2009}. By using a flow cell with
 our devices, it would be possible to understand the role of mixing in
@@ -4885,7 +4875,7 @@ significant impact on the electrical characteristics of the devices,
 determined by comparison of the skew-normal height profile of the carbon
 nanotube network and the key electrical parameters of a selection of
 carbon nanotube devices. When carbon nanotubes were deposited in
-solvent, the resulting networks were highly bundled (\(>95\) \% bundled)
+solvent, the resulting networks were highly bundled (\(>97\) \% bundled)
 and there were large variations in bundle diameter. Liquid-gated devices
 created using these carbon nanotube films had highly variable on-off
 ratios due to the large variation in the conductive pathways available.
@@ -4904,8 +4894,8 @@ present. Atomic force microscopy indicated the presence of contamination
 due to steam-assisted deposition. Raman spectroscopy showed that steam
 deposition led to increased defects in the network, with a significantly
 increased \(D\)-peak to \(G^+\)-peak height ratio. The average threshold
-voltage for steam-assisted surfactant-deposited network devices
-wassignificantly higher than the average threshold voltage for
+voltage for steam-assisted surfactant-deposited network devices was
+significantly higher than the average threshold voltage for
 solvent-deposited devices, indicating these defects \(p\)-dope the
 network. The shift in threshold voltage was found to reduce device
 transconductance, a parameter which should be maximised for optimal
