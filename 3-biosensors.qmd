@@ -60,9 +60,9 @@ functionalisation_types %>%
 ```
 
 ```{=tex}
-\newpage
-\thispagestyle{empty}
-\KOMAoptions{paper=landscape,pagesize}
+\newgeometry{a4paper,centering=true,right=1.5in,headsep=44.95pt,footskip=23pt}
+\begin{landscape}
+\begin{center}
 ```
 ```{r warning=FALSE}
 #| label: tbl-or-biosensors
@@ -86,8 +86,9 @@ knitr::kable(or_table,
 ```
 
 ```{=tex}
-\newpage
-\KOMAoptions{paper=portrait,pagesize}
+\end{center}
+\end{landscape}
+\restoregeometry % Restore the global document page margins
 ```
 @tbl-or-biosensors summarises all published odorant-receptor functionalised carbon nanotube and graphene field-effect transistor-based sensors to date. The majority of published works on this topic come from the Tai Hyun Park group at Seoul National University. The Park group has mainly focused on CNT FETs functionalised with human odorant receptors, but has used a range of different covalent and non-covalent transducer immobilisation techniques when producing the sensors. Dog and mouse odorant receptors have also been used, by the Park group and by Goldsmith *et al.* respectively. As far as the author knows, the Plank group at Te Herenga Waka $-$ Victoria University of Wellington is the only group to have produced carbon nanotube and graphene field-effect transistors functionalised with insect odorant receptors. The behaviour of insect odorant receptors is significantly different to that of vertebrate odorant receptors, and their behaviour in sensor applications is currently not well understood. The distinction between vertebrate and insect odorant receptors is discussed in more depth in @sec-insect-OR-biosensors.
 
