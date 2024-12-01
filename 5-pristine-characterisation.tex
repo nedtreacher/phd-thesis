@@ -204,7 +204,7 @@
 \date{}
 
 \begin{document}
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, breakable, frame hidden, boxrule=0pt, enhanced, interior hidden, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, sharp corners, breakable, borderline west={3pt}{0pt}{shadecolor}, interior hidden, boxrule=0pt, enhanced]}{\end{tcolorbox}}\fi
 
 \hypertarget{sec-pristine-characteristics}{%
 \section{Characteristics of Pristine Thin-Film
@@ -1244,27 +1244,26 @@ masked in (e) and (f).}
 \end{figure}
 
 In the atomic force microscope images of the more highly bundled
-networks, it is easy to distinguish the carbon nanotube bundles from the
+networks, the carbon nanotube bundles can be distinguished from the
 substrate background by eye. Therefore, it was reasonably
-straightforward to use techniques similar to those previously outlined
-by Vobornik \emph{et al.} for network morphology analysis
-{[}@Vobornik2023{]}. In Gwyddion, two coloured height thresholds or
-``masks'' were defined, one which covered all exposed substrate along
-with small bundles, shown for each film in Figure~\ref{fig-cnt-mask}
-(a)-(b), and one which covered all substrate but excluded all bundles,
-shown for each film in Figure~\ref{fig-cnt-mask} (c)-(d). The median
-substrate height of the combined masked region from both films was
+straightforward to use network morphology analysis techniques similar to
+those previously outlined by Vobornik \emph{et al.} {[}@Vobornik2023{]}.
+In Gwyddion, two coloured height thresholds or `masks' were defined, one
+which covered all exposed substrate along with small bundles, shown in
+Figure~\ref{fig-cnt-mask} (a)-(b), and one which covered all substrate
+but excluded all bundles, shown in Figure~\ref{fig-cnt-mask} (c)-(d).
+The median substrate height across both substrate masks was
 \(8.4 \pm 0.5\) nm for the solvent-deposited film, and \(4.3 \pm 0.1\)
-nm for the surfactant-deposited film. The median was used instead of the
-mean to exclude outlier measurements. These values are dramatically
-different from the median substrate height of \(1.9 \pm 0.3\) nm
-obtained from the distributions in Figure~\ref{fig-afm-substrate}. From
-comparing the atomic force microscope images in
-Figure~\ref{fig-afm-substrate} with Figure~\ref{fig-cnt-mask}, it does
-not appear a dramatic increase in substrate surface roughness has
-occurred after carbon nanotube deposition. Instead, it is suggested here
-that the difference between these values results from the imaging
-process.
+nm for the surfactant-deposited film, where the medians of the
+individual masks for each film were used to give the upper and lower
+bounds of uncertainty. These values are dramatically different from the
+median substrate height of \(1.9 \pm 0.3\) nm obtained from the
+distributions in Figure~\ref{fig-afm-substrate}. From comparing the
+atomic force microscope images in Figure~\ref{fig-afm-substrate} with
+Figure~\ref{fig-cnt-mask}, it does not appear a dramatic increase in
+substrate surface roughness has occurred after carbon nanotube
+deposition. Instead, it appears that the discrepancy between these
+values results from the imaging process.
 
 In Figure~\ref{fig-afm-morphology}, deep streaks or scars with rounded
 edges can often be found in the close vicinity of larger nanotube
@@ -1502,14 +1501,15 @@ height values were sorted into five equal-sized bins, as shown in
 Figure~\ref{fig-cnt-histogram}. Each histogram appears to follow a
 moderately positive-skewed normal distribution, different to the
 skew-free normal distribution found in previous works {[}@LeMieux2008;
-@Liu2013; @Vobornik2023{]}. The skew is likely to be another imaging
-artifact. The force of the atomic force microscope tip is known to cause
-larger bundles to undergo some degree of compression, and the resulting
-systematic underestimation of their height may be responsible for the
-distribution skewness {[}@Vobornik2023{]}. The fitted skew-normal
-distribution in Figure~\ref{fig-cnt-histogram} (b) has \(\alpha = 2.7\)
-(slant, indicates skew), \(\xi = 4.3\) nm (location, indicates mean),
-and \(\omega = 5.9\) nm (scale, indicates standard deviation), while the
+@Liu2013; @Vobornik2023{]}. The skew therefore appears to be a
+distortion, introduced by the imaging process. The force of the atomic
+force microscope tip is known to cause larger bundles to undergo some
+degree of compression, and the resulting systematic underestimation of
+their height may be responsible for the distribution skewness
+{[}@Vobornik2023{]}. The fitted skew-normal distribution in
+Figure~\ref{fig-cnt-histogram} (b) has \(\alpha = 2.7\) (slant,
+indicates skew), \(\xi = 4.3\) nm (location, indicates mean), and
+\(\omega = 5.9\) nm (scale, indicates standard deviation), while the
 distribution in Figure~\ref{fig-cnt-histogram} (d) has \(\alpha = 2.5\),
 \(\xi = 2.2\) nm, and \(\omega = 2.6\) nm. The probability density for
 the carbon nanotube bundle histogram drops to approximately zero at 0
@@ -1620,25 +1620,26 @@ Surfactant-deposited & 3.9 ± 1.9 & 4 & > 77\% & < 40\%\\
 \paragraph*{Dense Nanotube Networks}\label{dense-nanotube-networks}}
 \addcontentsline{toc}{paragraph}{Dense Nanotube Networks}
 
-Both the solvent-deposited and surfactant-deposited networks seen in
-Figure~\ref{fig-afm-morphology} (a)-(d) are relatively sparse compared
-to the steam-deposited film in Figure~\ref{fig-afm-morphology} (e)-(f).
-Because it becomes difficult to distinguish between small nanotubes and
-the surrounding substrate, it is not immediately clear whether the
-method of Vobornik \emph{et al.} can be used. The steam-deposited film
-appears as a dense network of single and less-bundled nanotubes, with
-larger bundles scattered throughout. A similar dual-masking approach as
-that used earlier can be applied. As before, the first mask covers all
-exposed substrate including small bundles, as shown in
-Figure~\ref{fig-dense-network} (a). In the case of the dense network,
-the second mask is set empty, assuming that in the most extreme case
-almost the entire surface is densely covered with carbon nanotubes. The
-median height of the masked substrate is then \(2.9 \pm 0.1\) nm.
-Artifact regions are highlighted in the top-left corner of
-Figure~\ref{fig-dense-network} (b) which have a height of
-\(0.7 \pm 0.2\) nm. Subtracting artifacts from the median height gives
-\(2.2 \pm 0.3\) nm, in range of the median substrate height of
-\(1.9 \pm 0.3\) nm taken from Figure~\ref{fig-afm-substrate}.
+The solvent-deposited and surfactant-deposited networks in
+Figure~\ref{fig-afm-morphology} (a)-(d) are relatively sparse, while the
+steam-deposited film seen in Figure~\ref{fig-afm-morphology} (e)-(f)
+shows a dense network of single and less-bundled nanotubes, along with
+some larger bundles. It was unclear whether the method of Vobornik
+\emph{et al.} could be used due to difficulty distinguishing small
+nanotubes from the substrate, but a similar approach was attempted. The
+dual-masking technique seen earlier was used to estimate the substrate
+height. The first mask covers all exposed substrate, including small
+bundles, as shown in Figure~\ref{fig-dense-network} (a). The second mask
+is set empty, assuming that almost the entire surface is densely covered
+with carbon nanotubes. The median height of the masked region is
+\(2.9 \pm 0.1\) nm. Artifact regions with a height of \(0.7 \pm 0.2\) nm
+are highlighted in the top-left corner of Figure~\ref{fig-dense-network}
+(b). Assuming the actual substrate surface is visible in atomic force
+microscope image, its height is estimated by adding the artifact height
+to the median substrate height of \(1.9 \pm 0.3\) nm from
+Figure~\ref{fig-afm-substrate}, which yields \(2.6 \pm 0.5\) nm. This
+estimate aligns with the masking result found previously, indicating it
+gives a reasonable estimate of substrate height even for dense networks.
 
 \begin{figure}
 
@@ -1836,34 +1837,33 @@ Figure~\ref{fig-dense-network} (b) which have a height of
 
 \caption{\label{fig-dense-network}The dense steam-deposited network is
 covered with a mask showing the maximum possible height of the substrate
-in (a), a mask highlighting imaging artifacts in (b). A histogram of
-bundle measurements above the median substrate height is shown in (c),
-while a mask covering all regions with height at or greater than the
-median carbon nanotube diameter is shown in (d).}
+in (a) and covered with a mask highlighting imaging artifacts in (b). A
+histogram of bundle measurements above the median substrate height is
+shown in (c), while a mask covering all regions with height at or
+greater than the median carbon nanotube diameter is shown in (d).}
 
 \end{figure}
 
-Taking binned diameter measurements of the larger bundles as seen
-earlier results in Figure~\ref{fig-dense-network} (c). Unlike the
-skew-normal distributions seen earlier, the distribution in
-Figure~\ref{fig-dense-network} (c) falls to zero at \(\sim\) 1 nm. This
-unphysical result comes from undercounting the large population of
-smaller nanotubes, which occurs due to difficulty distinguishing between
-less-bundled nanotubes and the substrate background. It is still
-possible to use masking to obtain an estimate of the median bundle
-height present. The median height of the combined unmasked regions in
-Figure~\ref{fig-dense-network} (a)-(b) is \(4.1 \pm 0.2\) nm. The median
-height of the substrate, \(2.2 \pm 0.3\) nm, can then be subtracted for
-a median bundle diameter of \(1.9 \pm 0.5\) nm. The mask in
-Figure~\ref{fig-dense-network} (d) highlights all regions in the network
-of height at or above the median bundle diameter estimate. The median
-bundle diameter estimate is approximately half the median bundle
-diameter of the surfactant-deposited film without steam. This result
-implies the presence of steam disrupts the bundling of carbon nanotubes
-during deposition. However, it is also possible that no substrate is
-visible in Figure~\ref{fig-dense-network}, and the two films have
-similar bundle sizes once the resulting height offset is taken into
-account.
+Taking binned diameter measurements of the larger bundles, as seen
+earlier, gives the histogram shown in Figure~\ref{fig-dense-network}
+(c). Unlike the skew-normal distributions seen earlier, the distribution
+in Figure~\ref{fig-dense-network} (c) falls to zero at \(\sim\) 1.5 nm.
+This unphysical result comes from undercounting the large population of
+smaller nanotubes, which in turn results from less-bundled nanotubes
+being difficult to distinguish from the substrate background. It is
+still possible to use masking to obtain an estimate of the median bundle
+height. The median height of the combined unmasked regions in
+Figure~\ref{fig-dense-network} (a)-(b) is \(4.1 \pm 0.2\) nm, with all
+regions in the network at or above this height shown in
+Figure~\ref{fig-dense-network} (d). The median substrate height,
+\(2.9 \pm 0.1\) nm, can be subtracted from the unmasked region height
+for a median bundle diameter of \(1.2 \pm 0.3\) nm. This estimate is
+less than half that of the median bundle diameter in the film deposited
+with surfactant without steam present. This result implies the presence
+of steam disrupts the bundling of carbon nanotubes during deposition.
+However, it is also possible that no substrate is visible in
+Figure~\ref{fig-dense-network}, and the two films have similar bundle
+sizes once the resulting height offset is taken into account.
 
 The discussion in this section gives us a new understanding of the
 histograms shown in Figure~\ref{fig-afm-morphology}. It appears that
@@ -3549,9 +3549,9 @@ previously been observed during sensing runs using similar devices
 at 0 s. The PBS control series ran over the first 1800 s, with 20 µL
 \(1 \times\) PBS additions at 100 s, 200 s and 300 s, and 20 µL
 subtractions at 400 s, 500 s and 600 s. The device was left untouched
-over the next 1200 s to allow the current level to settle, seen to
-typically be sufficient in previous work with a similar platform
-{[}@Cassie2023{]}. The gate voltage was held at \(V_g\) = 0 V.
+over the next 1200 s to allow the current level to settle, seen to be
+sufficient for similar devices {[}@Cassie2023{]}. The gate voltage was
+held at \(V_g\) = 0 V.
 
 Figure~\ref{fig-salt-conc-control-series} (a) shows the PBS control
 series corresponding to each device channel alongside gate current. In
@@ -3574,27 +3574,6 @@ SiO\(_2\) layer, a gate voltage of 0.0 V instead of -15.0 V, and an
 asymmetric, liquid-gated transfer sweep over a shorter voltage range
 when characterising devices before each control series {[}@Noyce2019{]}.
 
-As a first-order approximation to the longer time constant exponentials
-discussed by Noyce \emph{et al.} {[}@Noyce2019{]}, linear fits were
-performed on each PBS control series from \(1200-1800\) s. These fits
-are tangent to the curve of the sum of the larger time constant
-exponentials, and are a close approximation to this curve when higher
-order terms in the series expansion are approximately zero. This is only
-the case when \(t\ll\tau_i\), where the time interval of interest \(t\)
-is much shorter than the time constants of the larger time constant
-exponentials, \(\tau_i\). These linear fits are shown by the dashed
-yellow lines in Figure~\ref{fig-salt-conc-control-series} (a). The
-parameters from each fit in Figure~\ref{fig-salt-conc-control-series}
-(a) are shown in Table~\ref{tbl-linear-fits}, where \(I = c_1t + c_2\).
-Intriguingly, the fits for channels 1, 5 and 7 are all in parallel
-within error. Furthermore, the gradient value for each fit in
-Figure~\ref{fig-salt-conc-control-series} (a) is consistent within a 2.6
-pA/s range across all channels. The current data from channel 1 is
-closely approximated by the linear trendline across the entire control
-series. No short-term decay is present for this channel, indicating the
-channel has low net trapped charge. It is unclear why trapped charge is
-significantly lower for channel 1 than across the rest of the device.
-
 \hypertarget{tbl-linear-fits}{}
 \begin{longtable}[]{@{}lllllll@{}}
 \caption{\label{tbl-linear-fits}The coefficients of linear fits to the
@@ -3616,21 +3595,26 @@ Channels & CH1 & CH2 & CH3 & CH5 & CH6 & CH7 \\
 \(c_2\) (\(\mu\)A) & 0.316 & 0.316 & 0.308 & 0.218 & 0.364 & 0.332 \\
 \end{longtable}
 
-The long-term linear fits were next subtracted from the raw control
-series data. Figure~\ref{fig-salt-conc-control-series} (b) shows
-exponential fits to the remaining curve from \(0-1800\) s, which was
-successful for all channels except channels 1 and 5. The parameters from
-each fit are shown in Table~\ref{tbl-exp-fits}, where
-\(I = I_0\exp(-t/\tau)\). Any constant term \(I_C\) resulting from the
-fit was negligible and so could be neglected. The exponential fits had
-characteristic time constants \(\tau\) ranging between \(280 - 610\) s.
-Note that the value of peak-to-peak noise is above 5\% of the initial
-current value for all channels. This result indicates that 3 time
-constants is a sufficient length of time for this short-term baseline
-drift to decay almost completely for each channels. At most,
-\(1830\pm150\) s is required to minimise the drift present when sensing
-is performed, which is fulfilled by the chosen length of the control
-series.
+As a first-order approximation to the longer time constant exponentials
+discussed by Noyce \emph{et al.} {[}@Noyce2019{]}, linear fits were
+performed on each PBS control series from \(1200-1800\) s. These fits
+are tangent to the curve of the sum of the larger time constant
+exponentials, and are a close approximation to this curve when higher
+order terms in the series expansion are approximately zero. This is only
+the case when \(t\ll\tau_i\), where the time interval of interest \(t\)
+is much shorter than the time constants of the larger time constant
+exponentials, \(\tau_i\). These linear fits are shown by the dashed
+yellow lines in Figure~\ref{fig-salt-conc-control-series} (a). The
+parameters from each fit in Figure~\ref{fig-salt-conc-control-series}
+(a) are shown in Table~\ref{tbl-linear-fits}, where \(I = c_1t + c_2\).
+Intriguingly, the fits for channels 1, 5 and 7 are all in parallel
+within error. Furthermore, the gradient value for each fit in
+Figure~\ref{fig-salt-conc-control-series} (a) is consistent within a 2.6
+pA/s range across all channels. The current data from channel 1 is
+closely approximated by the linear trendline across the entire control
+series. No short-term decay is present for this channel, indicating the
+channel has low net trapped charge. It is unclear why trapped charge is
+significantly lower for channel 1 than across the rest of the device.
 
 \hypertarget{tbl-exp-fits}{}
 \begin{longtable}[]{@{}lllll@{}}
@@ -3655,6 +3639,22 @@ Channels & CH2 & CH3 & CH6 & CH7 \\
 \(350\pm30\) \\
 \end{longtable}
 
+The long-term linear fits were next subtracted from the raw control
+series data. Figure~\ref{fig-salt-conc-control-series} (b) shows
+exponential fits to the remaining curve from \(0-1800\) s, which was
+successful for all channels except channels 1 and 5. The parameters from
+each fit are shown in Table~\ref{tbl-exp-fits}, where
+\(I = I_0\exp(-t/\tau)\). Any constant term \(I_C\) resulting from the
+fit was negligible and so could be neglected. The exponential fits had
+characteristic time constants \(\tau\) ranging between \(280 - 610\) s.
+Note that the value of peak-to-peak noise is above 5\% of the initial
+current value for all channels. This result indicates that 3 time
+constants is a sufficient length of time for this short-term baseline
+drift to decay almost completely for each channels. At most,
+\(1830\pm150\) s is required to minimise the drift present when sensing
+is performed, which is fulfilled by the chosen length of the control
+series.
+
 From this analysis it appears that the baseline drift for the
 liquid-gated carbon nanotube devices can generally be approximated as a
 combination of a linear and exponential term. The exponential term
@@ -3672,6 +3672,20 @@ series is appropriate for further experimental work.
 
 \hypertarget{sec-salt-conc-series}{%
 \subsubsection{Sensing Series}\label{sec-salt-conc-series}}
+
+A salt concentration sensing series was performed from 1800 s onwards,
+directly after the PBS control series. The responses to successive
+dilutions of the PBS gate were recorded to confirm the fabricated
+devices were sensitive to small environmental changes in their pristine
+state, to check for spurious signals, and to ensure gate current leakage
+or other confounding factors were not contributing to sensing responses.
+The PDMS well contained 80 µL \(1 \times\) PBS at 1800 s. During the
+series, successive additions of deionised water were made to reduce the
+concentration of PBS in the well. An initial \(1 \times\) PBS addition
+was performed at 2100s, to confirm no changes occurred during the PBS
+control series that would interfere with sensing. All additions to the
+well in the sensing series and resulting changes to the PBS
+concentration in the well are shown in Table~\ref{tbl-salt-conc-series}.
 
 \hypertarget{tbl-salt-conc-series}{}
 \begin{longtable}[t]{lcccccc}
@@ -3693,20 +3707,6 @@ Final PBS concentration & 1X & 0.83X & 0.71X & 0.63X & 0.56X & 0.50X\\
 Δ PBS concentration & 0 & -0.17X & -0.12X & -0.09X & -0.07X & -0.06X\\
 \bottomrule
 \end{longtable}
-
-A salt concentration sensing series was performed from 1800 s onwards,
-directly after the PBS control series. The responses to successive
-dilutions of the PBS gate were recorded to confirm the fabricated
-devices were sensitive to small environmental changes in their pristine
-state, to check for spurious signals, and to ensure gate current leakage
-or other confounding factors were not contributing to sensing responses.
-The PDMS well contained 80 µL \(1 \times\) PBS at 1800 s. During the
-series, successive additions of deionised water were made to reduce the
-concentration of PBS in the well. An initial \(1 \times\) PBS addition
-was performed at 2100s, to confirm no changes occurred during the PBS
-control series that would interfere with sensing. All additions to the
-well in the sensing series and resulting changes to the PBS
-concentration in the well are shown in Table~\ref{tbl-salt-conc-series}.
 
 \begin{figure}
 
