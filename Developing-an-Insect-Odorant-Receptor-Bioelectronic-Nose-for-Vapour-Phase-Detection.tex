@@ -311,7 +311,7 @@ I started this project with minimal formal training in biological science, comin
 
 \pagestyle{headings}
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, sharp corners, boxrule=0pt, frame hidden, borderline west={3pt}{0pt}{shadecolor}, interior hidden, enhanced]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, boxrule=0pt, breakable, borderline west={3pt}{0pt}{shadecolor}, frame hidden, sharp corners, enhanced]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -684,7 +684,7 @@ Flow}\label{sec-responses-to-vapour}}
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch9/chamber-manifold-v2.png}
+{\centering \includegraphics[width=0.85\textwidth,height=\textheight]{figures/ch9/chamber-manifold-v2.png}
 
 }
 
@@ -716,6 +716,20 @@ flow through the chamber exits via the PID. If a 100 sccm flowmeter rate
 is pumped through the PID, \(P \sim\) 70 sccm, and therefore \(\sim\)
 30\% of the chamber flow exits through the PID.
 
+To test the relative humidity indicator (RHI), all valves out of the
+chamber were sealed except for the valve for the relative humidity
+indicator chamber. This meant all flow coming out of the system would
+pass through the relative humidity indicator chamber (\(P\) = 0 sccm and
+exhaust goes to RHI in Figure~\ref{fig-chamber-schematic}). Continuous
+nitrogen flow was then placed through the chamber until relative
+humidity dropped to about 20\%. 10 mL of deionised water was placed into
+the analyte bottle. A series of different flow rates through each line
+was sent to the chamber, with the sequence of flow rates shown in
+Table~\ref{tbl-RHI-flow-sequence} (\(t\) = time, \(C\) = carrier line
+flow rate, \(D\) = dilution line flow rate). Note that between 200 s and
+600 s, the total flow rate remains the same, but the ratio of dilution
+to carrier flow differs.
+
 \hypertarget{relative-humidity-indicator}{%
 \subsection{Relative Humidity
 Indicator}\label{relative-humidity-indicator}}
@@ -740,20 +754,6 @@ humidity indicator.}\tabularnewline
 200 & 200 & 100 \\
 200 & 200 & 0 \\
 \end{longtable}
-
-To test the relative humidity indicator (RHI), all valves out of the
-chamber were sealed except for the valve for the relative humidity
-indicator chamber. This meant all flow coming out of the system would
-pass through the relative humidity indicator chamber (\(P\) = 0 sccm and
-exhaust goes to RHI in Figure~\ref{fig-chamber-schematic}). Continuous
-nitrogen flow was then placed through the chamber until relative
-humidity dropped to about 20\%. 10 mL of deionised water was placed into
-the analyte bottle. A series of different flow rates through each line
-was sent to the chamber, with the sequence of flow rates shown in
-Table~\ref{tbl-RHI-flow-sequence} (\(t\) = time, \(C\) = carrier line
-flow rate, \(D\) = dilution line flow rate). Note that between 200 s and
-600 s, the total flow rate remains the same, but the ratio of dilution
-to carrier flow differs.
 
 \begin{figure}
 
