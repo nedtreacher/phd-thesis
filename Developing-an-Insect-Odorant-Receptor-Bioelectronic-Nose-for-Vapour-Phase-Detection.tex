@@ -311,7 +311,7 @@ I started this project with minimal formal training in biological science, comin
 
 \pagestyle{headings}
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, breakable, enhanced, frame hidden, interior hidden, boxrule=0pt, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, sharp corners, boxrule=0pt, frame hidden, borderline west={3pt}{0pt}{shadecolor}, interior hidden, enhanced]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -628,1080 +628,191 @@ work described in this thesis.
 
 \bookmarksetup{startatroot}
 
-\hypertarget{sec-biosensing-iORs}{%
-\chapter{Aqueous Sensing with iOR-Functionalised Carbon Nanotube
-Devices}\label{sec-biosensing-iORs}}
+\hypertarget{sec-vapour-biosensing-iORs}{%
+\chapter{Vapour-Phase Sensing with iOR-Functionalised Carbon Nanotube
+Devices}\label{sec-vapour-biosensing-iORs}}
 
 \hypertarget{introduction-1}{%
 \section{Introduction}\label{introduction-1}}
 
-So far in this thesis, multiple design schemes have been described for
-the construction of biosensors with insect odorant receptors. In
-\textbf{?@sec-fabrication}, transducers were fabricated and
-characterised which used either various carbon nanotube network
-morphologies or a graphene thin-film for the conductive channel. The
-carbon nanotube network morphologies included highly bundled networks
-from dropcasting in an organic solution, and less bundled networks
-dropcast in surfactant solution either with or without steam present.
-The networks deposited using steam were found to have a more homogeneous
-morphology than the other network types, giving rise to devices with a
-large on-off ratio and highly consistent device-to-device electrical
-characteristics. Functionalisation approaches using the attachment
-linkers PBASE, PBA/EDC, pyrene-NTA and pyrene-biotin were discussed in
-\textbf{?@sec-noncovalent-functionalisation}, where linker
-functionalisation was investigated using electrical, spectroscopic and
-optical analysis techniques. Successful attachment of the pyrene group
-of PBASE was demonstrated by comparing device transfer characteristics
-and Raman spectra of the thin film before and after PBASE
-functionalisation. Fluorescence microscopy was also used to identify and
-eliminate multiple obstacles to successful PBASE functionalisation.
+In the previous chapter, \textbf{?@sec-vapour-sensing-biosensors}, the
+development of a vapour delivery system for testing novel field-effect
+transistor-based biosensors was detailed. Once the vapour delivery
+system was successfully constructed and calibrated, the next step was to
+use the vapour delivery system to test the response of functionalised
+insect odorant receptor (iOR) biosensors to ethyl hexanoate and
+\emph{trans}-2-hexenal, two odorant compounds associated with the scent
+of a Queensland fruit fly infestation. A successful vapour-phase
+biosensor sensitive to these compounds could be used to identify and
+eliminate these infestations. A variety of functionalisation procedures
+were previously trialled in an aqueous environment, with the results of
+these trials described in \textbf{?@sec-biosensing-iORs}. The most
+successful approach, which eliminated a number of possible surface
+coatings and discarded the nanodisc format, was subsequently tested in
+the vapour delivery system. Numerous alternative functionalisation
+approaches trialled in \textbf{?@sec-biosensing-iORs} were unable to
+produce sensors which consistently responded to their target analyte.
+The inconsistent behaviour of these sensors meant they were considered
+inappropriate for testing in the vapour delivery system, as it would be
+difficult to determine whether a sensor had failed to respond because
+the analyte was in vapour phase, or whether the functionalisation had
+been unsuccessful.
 
-In this chapter, aqueous sensing using insect odorant receptor
-functionalised thin-film transistors was achieved through the use of two
-different functionalisation approaches. The first involved attaching
-linker to the transducer in organic solvent, and subsequently exposing
-the linker-modified transducer to odorant receptor nanodiscs; the second
-involved attaching linker to odorant receptors prior to device
-functionalisation, which allowed the functionalisation process to be
-performed entirely in aqueous solution. The first approach was similar
-to approaches used in previous research for thin-film functionalisation
-with insect odorant receptors \autocite{Murugathas2019a,Murugathas2020}.
-However, sensing with devices functionalised in this manner was not
-consistently reproducible. A range of slight changes to this organic
-solvent functionalisation procedure were trialled to identify the source
-of the inconsistency in biosensor behaviour. This testing indicated that
-the quality of functionalisation was variable, which may be attributed
-to surface coatings on the thin film or the protective structure of the
-nanodiscs interfering with odorant receptor attachment. From the results
-of this testing process, the second approach was developed, which was
-used to successfully create a functional device. This sensor could
-detect aqueous volatiles in the femtomolar range, and retained this
-level of sensitivity upon being washed and reused.
+This chapter first demonstrates that the reference sensors described in
+\textbf{?@sec-vapour-sensing-biosensors} were able to non-selectively
+respond to vapour in a consistent manner. These reference sensors were
+then used to monitor the vapour system chamber environment during
+testing of sensors; the reference sensor responses were measured to
+ensure sensors were responding to vapour and not to other environmental
+effects. Next, measurements were taken to understand the response of
+pristine carbon nanotube thin-film transistors to volatile compounds in
+the vapour delivery system, to later compare with the response of
+functionalised devices to similar vapour concentrations. The transducers
+were shown to give a small signal response to parts per million
+concentrations of ethyl hexanoate and \emph{trans}-2-hexenal. A device
+was then functionalised using the aqueous approach described in
+\textbf{?@sec-aqueous-functionalisation}, and exposed to
+\emph{trans}-2-hexenal vapour in the delivery system. However, little
+response to the positive analyte was shown by the functionalised sensor
+when compared to a pristine control. The chapter finishes with a
+discussion of possible reasons for the lack of response to vapour shown
+by the functionalised device.
 
-\hypertarget{sec-aqueous-sensing-EtHex}{%
-\section{Aqueous Sensing of Ethyl Hexanoate with OR22a-Functionalised
-Device}\label{sec-aqueous-sensing-EtHex}}
-
-\hypertarget{sec-working-PBASE-functionalisation}{%
-\subsection{OR Nanodisc
-Functionalisation}\label{sec-working-PBASE-functionalisation}}
-
-A carbon nanotube network field-effect transistor device, fabricated
-using post-Jun 2023 methods as described in \textbf{?@sec-fabrication},
-was functionalised with OR22a nanodiscs. The network used for the device
-was deposited using the steam-assisted surfactant method, and the device
-was encapsulated with AZ\(^\circledR\) 1518 using the post-Jan 2023
-photolithography mask. The functionalisation was performed as follows:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  The device was exposed to UV light for 1 minute, placed in
-  AZ\(^\circledR\) 326 developer for 3 minutes, then rinsed with
-  acetone, isopropanol and nitrogen dried.
-\item
-  The device was vacuum annealed for 1 hour at 150°C.
-\end{enumerate}
-
-Note: Steps 1 \& 2 were added to ensure any residual photoresist on the
-channel was removed or passivated before functionalisation, see
-\textbf{?@sec-photoresist-contamination}.
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
-\tightlist
-\item
-  A solution of 1 mM PBASE (Setareh Biotech) in methanol was prepared by
-  fully dissolving 2 mg PBASE in 5 mL methanol by vortex mixing at 1000
-  rpm in a dark room.
-\end{enumerate}
-
-Note: PBASE was stored at -18°C for 18 months prior to use, and was
-thawed under vacuum for 15 minutes in dark conditions before opening.
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
-\item
-  The device was then rinsed with methanol, fully submerged in \(\sim\)
-  1 mL of PBASE in methanol solution and left covered with parafilm for
-  1 hour, then rinsed with methanol for 15 s, rinsed with phosphate
-  buffered saline (PBS) for 15 s and nitrogen dried to remove residual
-  PBASE.
-\item
-  The device was left dry and in darkness while collecting the OR22a
-  nanodiscs from the -80°C freezer.
-\item
-  10 µL OR22a nanodiscs (batch number ND-OR22a-SB018, 1.9 mg/mL,
-  prepared 7 months earlier) were diluted in 1 mL freshly-prepared PBS.
-\end{enumerate}
-
-Note: The full 1 mL was used to flush out the nanodisc vial when
-preparing the nanodisc solution, with successive additions and
-subtractions of 50 µL \(1 \times\) PBS into and from the vial.
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{6}
-\tightlist
-\item
-  The device was submerged in the OR22a nanodisc solution and left
-  covered with parafilm for 1 hour, then rinsed with \(1 \times\) PBS
-  for 15 s and gently nitrogen dried.
-\end{enumerate}
+\hypertarget{sec-responses-to-vapour}{%
+\section{Reference Sensor Responses to Vapour
+Flow}\label{sec-responses-to-vapour}}
 
 \begin{figure}
 
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(a).png}
+{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch9/chamber-manifold-v2.png}
 
 }
 
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Q1C6_ch7_absolute_values_with_gate_current.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(b).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Q1C6_ch7_absolute_values_with_threshold_voltage_shift_without_gate_current.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-
-\caption{\label{fig-OR22a-TX-comparison}Liquid-gated carbon nanotube
-network device transfer characteristics before and after OR22a nanodisc
-functionalisation. Source-drain voltage was \(V_{ds}\) = 100 mV for both
-the forward and reverse sweep. In (a), the characteristics are shown on
-a logarithmic scale, where the gate current for each transfer curve is
-shown with a dashed line. In (b), the characteristics are shown on a
-linear scale alongside a dashed line tangent to the subthreshold slope
-of the characteristic curve in the forward direction. The threshold
-voltage corresponding to the intercept of this slope with the x-axis is
-shown for each transfer characteristic curve.}
+\caption{\label{fig-chamber-schematic}Simplified schematic showing the
+flow into and out of the device chamber and manifold of the delivery
+system. The input flows from the carrier and dilution line are
+represented by \(C\) and \(D\), and the output flow through the PID is
+represented by \(P\). The exhaust can either flow past the relative
+humidity indicator or straight to the fumehood. This diagram assumes
+that flow through leaks in the chamber and manifold is low enough to be
+considered negligible, which was confirmed by leak testing with bubble
+solution.}
 
 \end{figure}
 
-The liquid-gated electrical characteristics shown in
-Figure~\ref{fig-OR22a-TX-comparison} were taken using the B1500A
-semiconductor device analyser of the sensing channel (channel 7) before
-and after functionalisation with OR22a nanodiscs. The liquid-gate
-electrolyte used was \(1 \times\) PBS containing 0.5\% v/v DMSO. The
-device exhibited ambipolar characteristics before functionalisation,
-which is typically seen for steam-deposited carbon nanotube films
-(\textbf{?@sec-electrical-characterisation-CNT};
-\textbf{?@sec-cnt-devices}). However, \(p\)-type behaviour dominates
-after device functionalisation due to a significant drop in \(n\)-type
-conductance. A slight increase in hysteresis was observed
-post-functionalisation. Leakage current (shown by the dashed traces)
-never exceeded \(1 \times 10^{-7}\) V, both before and after
-functionalisation. The significant change in electrical characteristics
-could be due to some combination of five possible factors: adsorption of
-solvent onto the network, network attachment of PBASE without subsequent
-protein attachment, non-specific adsorption of protein onto the network,
-PBASE-mediated attachment of the membrane scaffold protein (MSP) of
-nanodiscs to the network, and PBASE-mediated attachment of odorant
-receptors to the network. As the nanodisc volume is much larger than
-that of the odorant receptor, any direct protein adsorption most likely
-adsorption of the nanodisc membrane onto the carbon nanotube network.
-Odorant receptor attachment with PBASE is therefore the only desirable
-functionalisation result for sensing purposes.
-
-Functionalisation of the channel resulted in a negative shift in
-threshold voltage of \(-0.20 \pm 0.03\) V. This significantly exceeds
-the threshold voltage shifts measured for both methanol adsorption
-(\(-0.15 \pm 0.02\) V) and device exposure to PBASE in methanol
-(\(-0.06 \pm 0.04\) V), confirming that protein has attached to the
-carbon nanotubes. However, both direct protein adsorption
-\autocite{Bradley2004,Heller2008,Kauffman2008} and empty nanodisc
-membrane attachment \autocite{Murugathas2019a} should also lead to a
-significant negative threshold voltage shift and therefore increased
-\(p\)-conduction in the liquid-gated transfer characteristic curve. In
-all three cases, the voltage shift is predominantly the result of
-negative charge transfer from the adsorbed proteins to the
-semiconducting carbon nanotubes
-\autocite{Bradley2004,Heller2008,Murugathas2019a}. It is likely that the
-negative shift observed results from some combination of the three types
-of attachment. It should be noted that while the size of the
-functionalisation-induced threshold voltage shift can be used to
-determine whether an amine-tagged protein has attached to the nanodisc
-network, it cannot be used to specifically determine whether odorant
-receptors have attached to the network.
-
-Atomic force microscope images were taken of the device channels both
-before functionalisation and after sensing with the functionalised
-device to confirm the presence of nanodiscs. The images are shown in
-Figure~\ref{fig-working-OR22a-AFM} (a)-(b). As far as the author knows,
-these are the first atomic force microscope images taken of iOR
-nanodiscs found on a sensing channel rather than on a separate carbon
-nanotube film; this was made possible by using the 20 µm wide aperture
-encapsulation mask discussed in \textbf{?@sec-encapsulation}. AFM images
-showing iOR-nanodisc functionalised carbon nanotube networks have been
-reported by Murugathas \emph{et al.}, but these images were not of
-channels used for sensing \autocite{Murugathas2019a}. The visible
-nanodisc features in Figure~\ref{fig-working-OR22a-AFM} (b) are much
-smaller than the aggregated or agglomerated nanodisc features in the
-atomic microscope images taken by Murugathas \emph{et al.}
-\autocite{Murugathas2019a}. On the dense network morphology used here,
-the position of nanodisc clusters relative to the carbon nanotubes is
-also less distinct. To confirm whether nanodiscs have preferentially
-attached to the carbon nanotubes, a more quantitative approach is
-required.
-
-\begin{figure}
-
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(a).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Pristine_DF2Q3D10_00141.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(b).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/DF2Q1D6_postNDOR22a_ch7_1_00375.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(c).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Pristine_DF2Q3D10_00141_mask.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(d).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/DF2Q1D6_postNDOR22a_ch7_1_00375_mask.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(e).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Pristine_DF2Q3D10_00141_crosssection.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(f).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/DF2Q1D6_postNDOR22a_ch7_1_00375_crosssection_edit.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-
-\caption{\label{fig-working-OR22a-AFM}Atomic force microscope images of
-the channel region of carbon nanotube network devices before and after
-functionalisation. The channel network of a pristine device is shown in
-(a), while (b) is of channel 7 from the sensing device functionalised in
-this section. The same images over a smaller height scale are shown in
-(c) and (d), with regions at or below the median substrate height (2 nm)
-highlighted green. Binary representations of the atomic force microscope
-images are shown in (e) for the the pristine device and (f) for the
-functionalised device, with a threshold height of 12 nm used (10 nm
-above the average substrate height).}
-
-\end{figure}
-
-Following the discussion in \textbf{?@sec-pristine-AFM}, the median
-substrate height in Figure~\ref{fig-working-OR22a-AFM} (b) is assumed to
-be \(\sim\) 2 nm as there are no visible imaging artifacts. This height
-is shown against each carbon nanotube network using the Gwyddion masking
-tool in Figure~\ref{fig-working-OR22a-AFM} (c) and (d). In Gwyddion,
-both images were then simplified to a binary representation, where
-features above a certain threshold were shown as white and features
-below shown as black. This representation, shown in
-Figure~\ref{fig-working-OR22a-AFM} (e) and (f), has the appearance of a
-cross-section through the network at the threshold height. The threshold
-was chosen as the minimum height where carbon nanotube spindles were no
-longer apparent in the functionalised image, 10 nm above the substrate.
-Figure~\ref{fig-working-OR22a-AFM} (e) shows only a few, sparsely
-distributed features, each with a width below 50 nm. These features may
-correspond to large nanotube-nanotube junctions, surfactant residue, or
-other surface contamination (\textbf{?@sec-pristine-morphology}). In
-Figure~\ref{fig-working-OR22a-AFM} (f), many features are over 50 nm in
-width. They are often found close together, and form a curved line
-across the network in the bottom left corner (shown in red); this
-arrangement of nanodisc features is similar to that reported previously
-for OR22a nanodiscs on sparser, more bundled networks
-\autocite{Murugathas2019a}.
-
-Figure~\ref{fig-working-OR22a-AFM} (b) shows that the maximum image
-height of the OR nanodisc-functionalised channel is 27 nm, while
-Figure~\ref{fig-working-OR22a-AFM} (f) indicates only nanodisc features
-are present at 12 nm. Therefore, nanodisc agglomerates at least 15 nm
-tall are present on the channel. Assuming a average carbon nanotube
-bundle diameter of 2 nm, with an average substrate height of 2 nm, the
-nanodisc agglomerates visible in Figure~\ref{fig-working-OR22a-AFM}
-could be up to \(\sim\) 23 nm tall. The estimated height range for
-nanodiscs is \(\sim 10 - 20\) nm
-\autocite{Nath2007,Bayburt2010,Murugathas2020,Cheema2021}. It therefore
-appears that nanodiscs have formed a single layer on the carbon nanotube
-network. Height measurements of biological samples taken via AFM have
-been shown to underestimate actual feature height by over 50\%
-\autocite{Vobornik2023}. Even so \(-\) assuming this squishing effect is
-not significantly in excess of 50\% \(-\) the agglomerates are only a
-few nanodiscs high at most. As the nanodisc agglomerates are up to 200
-nm across at their widest point (Figure~\ref{fig-working-OR22a-AFM}),
-comprising of at least 20 nanodiscs, it appears that the clustering
-behaviour is primarily across the plane rather than vertical. The
-observed behaviour indicates nanodiscs individually attach to preferred
-locations on the network instead of nucleating in solution prior to
-attachment.
-
-This attachment behaviour can be contrasted with the behaviour observed
-in the atomic microscope image of agglomerated OR22a nanodiscs taken by
-Murugathas \emph{et al.} \autocite{Murugathas2019a}. The network is
-significantly sparser, so the relative extent of clustering at different
-points is easier to discern. There is clearly significant variation in
-nanodisc attachment across a single nanotube bundle, and it appears that
-clustering is more significant at junctions between carbon nanotube
-bundles. Preferred attachment locations away from junctions could result
-from the higher reactivity of exposed metallic CNTs \autocite{Cao2009},
-or from regions which are particularly clean of contamination.
-Interestingly, while the OR22a nanodisc features seen by Murugathas
-\emph{et al.} via AFM are similar in breadth to those seen here, OR
-agglomerates which are at least 53 nm tall are present
-\autocite{Murugathas2020}. It is unclear why the extent of vertical
-agglomeration differs between this work and that of Murugathas \emph{et
-al.}, but may be linked to the difference in morphology between the
-networks used. One possibility is that nanodiscs will preferentially
-attach to metallic carbon nanotubes, but prefer to attach to each other
-instead of semiconducting nanotubes. Semiconducting tubes in a highly
-bundled network may block proteins from accessing metallic tubes in the
-same bundle, leading to a greater degree of self-attachment.
-
-\begin{figure}
-
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(a).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/modified_GFPOR_10sexposure_20X_mediumcontrast_ch6_240208.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(b).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/modified_GFPOR_PBASE_10sexposure_20X_mediumcontrast_ch1_231019_2.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(c).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/modified_GFPOR_10sexposure_40X_mediumcontrast_ch6_240208.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(d).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/modified_GFPOR_PBASE_10sexposure_40X_mediumcontrast_ch1_231019_2.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(e).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/modified_GFPOR_10sexposure_40X_mediumcontrast_ch3_240208.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(f).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/modified_GFPOR_PBASE_10sexposure_40X_mediumcontrast_ch2_231019.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-
-\caption{\label{fig-PBASE-GFP-ORs}The fluorescence images on the left
-side \(-\) (a), (c) and (e) \(-\) show unencapsulated carbon nanotube
-network channels from a device incubated in GFP-OR nanodiscs. The
-rectangular dark regions to the left and right of each image are the Au
-electrodes. The fluorescence images on the right \(-\) (b), (d) and (f)
-\(-\) show the channels of a similar device after successive PBASE and
-GFP-OR nanodisc incubation. Images (a) and (c) are both of the same
-channel on the first device, and images (b) and (d) are of the same
-channel on the second, but (c) and (d) were taken using a greater
-magnification. The insets in (c)-(f) compare the central channel region
-of (c)-(f) more directly. All images were taken with the same microscope
-settings (GFP filter and 10 s exposure time), taken in quick succession,
-directly after functionalisation in a dark room.}
-
-\end{figure}
-
-Fluorescence microscopy was also used to confirm the presence of odorant
-receptors tagged with \emph{Aequorea Victoria} green fluorescent protein
-(GFP-ORs) on the carbon nanotube film. A device was functionalised with
-GFP-OR nanodiscs using the process described at the beginning of this
-section (batch number ND-GFP-OR43b-0002, prepared 12 months earlier).
-This functionalisation was performed in darkness, with the odorant
-receptor nanodisc vial transported under an opaque cover to protect it
-from light. After functionalisation, devices were briefly rinsed with DI
-water and nitrogen dried to remove salt residue left by the \(1 \times\)
-PBS. A control device was also prepared without the use of PBASE,
-skipping steps 3 and 4 in the functionalisation process. Fluorescence
-microscope images were taken immediately after functionalisation;
-devices were transported to the fluorescence microscope room in a
-foil-wrapped container, and the fluorescence microscope room was kept
-dark while images were taken. Fluorescence images of the devices are
-shown in Figure~\ref{fig-PBASE-GFP-ORs}. The SiO\(_2\) regions in each
-image appear bright under the GFP filter, indicating attachment between
-the GFP-OR nanodiscs and the SiO\(_2\) substrate has occurred. As the
-process from \textbf{?@sec-photoresist-contamination} has been followed,
-it is unlikely that the GFP-OR nanodiscs are affixed to residual
-photoresist.
-
-A comparison of fluorescence in the channel region between images on the
-left of Figure~\ref{fig-PBASE-GFP-ORs} (GFP-OR nanodiscs) and the images
-on the right (GFP-OR nanodiscs and PBASE) is given by the inset in
-Figure~\ref{fig-PBASE-GFP-ORs} (c)-(f). The inset demonstrates that the
-channels not incubated in PBASE are significantly less bright than those
-that had been incubated with PBASE. It appears that the presence of
-GFP-OR nanodiscs in \(1 \times\) PBS is limited on these channels.
-However, when the carbon nanotubes are modified with PBASE, there is
-clear attachment of GFP-OR nanodiscs to the channel, and the channel
-shows up brightly under the fluorescence microscope. Importantly, since
-the GFP is attached to odorant receptors rather than the nanodiscs
-themselves, there must be odorant receptors present on the channel after
-functionalisation; attachment to the channel is not limited to empty
-nanodiscs. This trend was consistent across all conducting channels on
-each of the two devices. A similar comparison technique has been used
-previously to detect human odorant receptor attachment to a carbon
-nanotube network via 1,5-diaminonaphthalene \autocite{Lee2012b}. As far
-as I know, this is the first time fluorescence has been used to
-investigate the attachment of insect odorant receptor nanodiscs to a
-carbon nanotube network.
-
-\hypertarget{sec-EtHex-aqueous-sensing}{%
-\subsection{Aqueous Sensing of Ethyl
-Hexanoate}\label{sec-EtHex-aqueous-sensing}}
-
-The procedure used for biosensor detection of ethyl hexanoate in liquid
-was the same as the procedure outlined in \textbf{?@sec-dummy-sensing},
-except 0.5\% v/v DMSO was present in the buffer solution (to improve
-ethyl hexanoate solubility \autocite{Galvao2014}) and dilutions of ethyl
-hexanoate in the same 0.5\% v/v DMSO \(1 \times\) PBS were added during
-the sensing series. Dilutions of 1 fM, 1 pM, 1 nM and 1 µM ethyl
-hexanoate in 0.5\% v/v DMSO \(1 \times\) PBS were prepared before device
-characterisation according to Table~\ref{tbl-dilution-preparation},
-using pre-prepared concentrations of 200 fM, 200 pM, 200 nM and 200 µM
-ethyl hexanoate in DMSO. The ethyl hexanoate in DMSO dilutions were
-prepared beforehand as a 1:10 dilution series in DMSO using 200 mM stock
-solution, where dilutions ranged from 20 mM to 200 fM. Sampling
-measurements were taken using the B1500A semiconductor device analyser,
-with the transfer measurement in Figure~\ref{fig-OR22a-TX-comparison}
-(b) taken directly before sensing. The full control series plus sensing
-sequence is shown in Figure~\ref{fig-EtHex-aqueous-sensing}. Gate
-current remained negligible across the entire sensing procedure.
-
-\hypertarget{tbl-dilution-preparation}{}
-\begin{longtable}[t]{>{\raggedright\arraybackslash}p{3.2cm}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{2.5cm}>{\raggedright\arraybackslash}p{4.2cm}}
-\caption{\label{tbl-dilution-preparation}Preparation of analyte dilutions in 1X PBS from solutions of analyte in
-DMSO. The 1X PBS used was prepared on the same day as the dilution
-process. }\tabularnewline
-
-\toprule
-Conc. in DMSO & 1XPBS added & Final volume & Final conc.\\
-\midrule
-5 µL × 0 fM & 995 µL & 1 mL & 0 fM, 0.5\% v/v DMSO\\
-5 µL × 200 fM & 995 µL & 1 mL & 1 fM, 0.5\% v/v DMSO\\
-5 µL × 200 pM & 995 µL & 1 mL & 1 pM, 0.5\% v/v DMSO\\
-5 µL × 200 nM & 995 µL & 1 mL & 1 nM, 0.5\% v/v DMSO\\
-5 µL × 200 µM & 995 µL & 1 mL & 1 µM, 0.5\% v/v DMSO\\
-\bottomrule
+Once the rate of flow through the device chamber had been calibrated,
+the correct operation of the reference sensors used in the system was
+verified. Various flow rates in and out of the chamber were used to
+calibrate and verify the reference sensors. These flows in and out of
+the chamber are labelled on the simplified schematic in
+Figure~\ref{fig-chamber-schematic}. Note that the labels on this
+schematic assume that nitrogen compression at any point within this
+schematic is negligible. \textbf{?@sec-calibration} shows that a 200
+sccm flow into the chamber corresponds to an actual rate for \(C + D\)
+of \(\sim\) 230 sccm. If a 150 sccm flow rate as measured by the
+flowmeter is pumped out through the PID, \textbf{?@sec-calibration}
+shows that \(P \sim\) 110 sccm. This means that \(\sim\) 50\% of the
+flow through the chamber exits via the PID. If a 100 sccm flowmeter rate
+is pumped through the PID, \(P \sim\) 70 sccm, and therefore \(\sim\)
+30\% of the chamber flow exits through the PID.
+
+\hypertarget{relative-humidity-indicator}{%
+\subsection{Relative Humidity
+Indicator}\label{relative-humidity-indicator}}
+
+\hypertarget{tbl-RHI-flow-sequence}{}
+\begin{longtable}[]{@{}lll@{}}
+\caption{\label{tbl-RHI-flow-sequence}Flow sequence for testing relative
+humidity indicator.}\tabularnewline
+\toprule\noalign{}
+\(t\) (s) & \(C\) (sccm) & \(D\) (sccm) \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+\(t\) (s) & \(C\) (sccm) & \(D\) (sccm) \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+200 & 0 & 400 \\
+200 & 100 & 300 \\
+200 & 200 & 200 \\
+200 & 200 & 100 \\
+200 & 200 & 0 \\
 \end{longtable}
 
+To test the relative humidity indicator (RHI), all valves out of the
+chamber were sealed except for the valve for the relative humidity
+indicator chamber. This meant all flow coming out of the system would
+pass through the relative humidity indicator chamber (\(P\) = 0 sccm and
+exhaust goes to RHI in Figure~\ref{fig-chamber-schematic}). Continuous
+nitrogen flow was then placed through the chamber until relative
+humidity dropped to about 20\%. 10 mL of deionised water was placed into
+the analyte bottle. A series of different flow rates through each line
+was sent to the chamber, with the sequence of flow rates shown in
+Table~\ref{tbl-RHI-flow-sequence} (\(t\) = time, \(C\) = carrier line
+flow rate, \(D\) = dilution line flow rate). Note that between 200 s and
+600 s, the total flow rate remains the same, but the ratio of dilution
+to carrier flow differs.
+
 \begin{figure}
 
-{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch7/Q1C6.png}
+{\centering \includegraphics[width=0.6\textwidth,height=\textheight]{figures/ch9/RHI_verification.png}
 
 }
 
-\caption{\label{fig-EtHex-aqueous-sensing}The control series (\(0-1800\)
-s) and ethyl hexanoate sensing series (\(1800-3900\)) of the
-OR22a-functionalised device channel. Source-drain voltage was set at
-\(V_{ds}\) = 100 mV while gate voltage was set at \(V_g\) = 0 V.
-Functionalisation and sensing was performed using the methods developed
-in this thesis by Danica Fontein, School of Chemical and Physical
-Sciences, Te Herenga Waka - Victoria University of Wellington.}
+\caption{\label{fig-RHI-verification}Relative humidity readouts from the
+relative humidity indicator juxtaposed with flow rates from the dilution
+line and carrier lines of the vapour system, with 10 mL deionised water
+in the carrier line analyte bottle.}
 
 \end{figure}
+
+Figure~\ref{fig-RHI-verification} shows that the Telaire sensor records
+decreased humidity after flow exclusively from the dilution line and
+increased humidity after flow from the analyte bottle. It also shows
+that in regular 200 s intervals, the rate of relative humidity change
+increases and then begins to stabilise. Each accelerated change in
+relative humidity occurs about 50 s after a corresponding increase in
+flow through the carrier line. It appears a 50 s period passes before an
+increased concentration of water vapour due to increased carrier flow
+first reaches the relative humidity indicator. Over the full 800 s of
+carrier line flow, relative humidity increases from a minimum of
+\(14.0 \pm 2.0\)\% to a maximum of \(43.6 \pm 2.0\)\%. The temperature
+in the chamber remained within the range 20.5°C \(-\) 21.5°C over the
+entire measurement period. Combining equations
+\textbf{?@eq-absolute-humidity} and \textbf{?@eq-water-vapour-pressure}
+from \textbf{?@sec-reference-sensors}, we find that the absolute
+humidity in the chamber reaches a low of \(2.6\pm0.4\) gm\(^{-3}\) at
+238.1 s, 38.1 s after the initial onset of carrier flow, and a high of
+\(8.4 \pm 0.5\) gm\(^{-3}\) at 998.8 s, after 798.8 s of carrier flow
+through the chamber. The clear response of the Telaire RHI to increased
+water vapour flow confirms that this sensor is working.
+
+\hypertarget{photoionisation-detector-with-continuous-vapour-flow}{%
+\subsection{Photoionisation Detector with Continuous Vapour
+Flow}\label{photoionisation-detector-with-continuous-vapour-flow}}
+
+To test the photoionisation detector, the device chamber and carrier
+line were first purged of vapour through the exhaust using a roughing
+pump, with the PID valve closed to protect it from the pump. The PID
+valve was then opened, the micropump was set to 150 sccm as read by the
+flowmeter. During testing with the PID, the total flow into the chamber
+was set at 200 sccm as read by the Tylan mass flow controllers. The
+calibration curves in \textbf{?@sec-calibration} show that the actual
+flow \(C + D\) was then therefore approximately the same as the actual
+flow rate into the PID, \(P\). A flow of 200 sccm nitrogen was placed
+through the dilution line to the chamber for 10 minutes until successive
+concentration readings from the PID were either approximately constant,
+or until baseline drift was small enough to be considered negligible.
+These measurements were then used as the baseline (0 ppm) for subsequent
+measurements. 5 mL of the volatile organic compound ethyl hexanoate
+(EtHex), also known as ethyl caproate, was placed into the analyte
+bottle. A flow of 150 sccm was then sent through the carrier line and 50
+sccm through the dilution line for 600 s. The same procedure was
+performed on two separate dates spaced three days apart (23 Feb and 26
+Feb) to check that the measured PID response to ethyl hexanoate vapour
+pumped out of the manifold was repeatable.
 
 \begin{figure}
 
@@ -1745,7 +856,7 @@ Sciences, Te Herenga Waka - Victoria University of Wellington.}
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/Q1C6_with_fitted_curves.png}
+\includegraphics{figures/ch9/240223_240226_comparison_unnormalised.png}
 
 }
 
@@ -1803,7 +914,190 @@ Sciences, Te Herenga Waka - Victoria University of Wellington.}
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/Q1C6_with_fitted_curves_exp.png}
+\includegraphics{figures/ch9/240223_240226_comparison.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption{\label{fig-PID-EtHex-response}The response of the
+photoionisation detector to ethyl hexanoate vapour over 600 s of
+exposure is shown relative to the 200 sccm nitrogen flow baseline in
+(a), and normalised with respect to the maximum reading in (b).}
+
+\end{figure}
+
+The responses from each date are shown in
+Figure~\ref{fig-PID-EtHex-response}. In
+Figure~\ref{fig-PID-EtHex-response} (a), the response corresponding to
+each measurement date is shown unnormalised, with the parts per million
+concentration shown relative to the nitrogen baseline as recorded by the
+PID. Both measurements show little to no response to vapour for
+approximately 50 s, which seems to be the time taken for vapour to first
+reach the PID. Over the next 100s, there is a rapid increase in vapour
+concentration detected, which then settles to a constant concentration
+at about 300 s. This appears to be the maximum concentration of EtHex
+vapour that can be contained by the chamber in this configuration. There
+is approximately a 200 parts per billion difference in maximum
+concentration between the measurement on each date.
+
+However, this is not unexpected. As discussed in
+\textbf{?@sec-reference-sensors}, the PID is being run uncalibrated, and
+some drift of the sensitivity of the sensor due to environmental changes
+is highly likely. To check that the PID records the same evolution of
+vapour flow with time, regardless of its sensitivity, the measurements
+from both dates were then normalised with respect to the maximum
+concentration reading. Figure~\ref{fig-PID-EtHex-response} (b) shows
+that once normalised, the rate of change in concentration with time is
+almost identical between the two measurement sets. This test verifies
+that the evolution of vapour concentration of the device chamber can be
+repeatably measured using the PID in the vapour delivery system.
+
+\hypertarget{photoionisation-detector-with-vapour-flow-intervals}{%
+\subsection{Photoionisation Detector with Vapour Flow
+Intervals}\label{photoionisation-detector-with-vapour-flow-intervals}}
+
+A further series of tests were performed to verify whether it was
+possible to compare different concentrations of vapour in the chamber
+using the PID. All testing was performed on the same day to minimise
+sensitivity drift. For each test, the system was purged of vapour and
+the total dilution flow into the chamber was set at 200 sccm as read by
+the Tylan mass flow controller. Flow out of the chamber to the PID was
+set at 100 sccm as read by the micropump flowmeter, and the
+almost-constant nitrogen baseline after 10 minutes was set as the PID
+zero point. 5 mL of the volatile organic compound ethyl hexanoate
+(EtHex) was placed into the analyte bottle. During each test, 200 sccm
+was continuously flowed through the dilution line, except during three
+evenly spaced intervals of equal length. During these intervals, 150
+sccm flow was placed through the carrier line and 50 sccm flow placed
+through the dilution line. In each test, the input interval time was
+varied to examine its effect on maximum vapour concentration recorded by
+the PID. As it took longer for the PID to return to a constant baseline
+with increased input intervals, when the input interval was increased,
+the spacing between intervals was also increased.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch9/input_time_comparison_PID.png}
+
+}
+
+\caption{\label{fig-concentration-comparison}The response of the
+photoionisation detector to three evenly-spaced intervals of ethyl
+hexanoate vapour entering the device chamber, relative to a 200 sccm
+nitrogen flow baseline. Input intervals were either 50 s, 100 s or 200 s
+in length. During each input interval, 150 sccm carrier flow and 50 sccm
+dilution flow were placed through the chamber.}
+
+\end{figure}
+
+The results of three tests, with input intervals of 50 s, 100 s and 200
+s, are shown in Figure~\ref{fig-concentration-comparison}. Each interval
+of carrier flow corresponds to a rapid increase in concentration, which
+reaches a peak, then decreases. The change in concentration
+corresponding to each interval is shown above each peak. Note that the
+peak labels do not correspond to the difference between the original
+baseline and the maximum concentration of each peak. Instead, they
+correspond to the difference between the concentration measurement at a
+set time before the onset of carrier flow and the maximum concentration
+reached. For each test, this set time is 5\% of the spacing time used,
+50 s, 150 s and 300 s respectively. This approach was taken to account
+for drift from the original 0 ppm baseline. This variable baseline drift
+was particularly significant for the 100 s interval measurements, where
+concentration measurements settled to a new baseline of \(\sim\) 0.05
+ppm after the third peak.
+
+The values of the three concentration changes in each test shown in
+Figure~\ref{fig-concentration-comparison} are highly consistent, with
+only a \(\pm\) 0.02 ppm margin of error. This experiment demonstrates
+that if tests using the PID are performed during the same day, placing
+the same vapour flow into the PID for the same interval of time in each
+test, the PID can be used to show the same exposure intervals give rise
+to similar changes in concentration. This result indicates that placing
+the same amount of vapour flow into the chamber for a set amount of time
+leads to a reproducible concentration of vapour building up within the
+chamber. Drift in the baseline does not significantly affect the
+magnitude of each concentration peak when measured relative to the
+baseline reading directly before each interval.
+
+\hypertarget{sec-pristine-EtHex}{%
+\section{Pristine Device Detection of Volatile Organic
+Compounds}\label{sec-pristine-EtHex}}
+
+\hypertarget{sec-vapour-drift}{%
+\subsection{Baseline Drift}\label{sec-vapour-drift}}
+
+When sensing vapour in the vapour delivery system, devices have no
+liquid gate, and are instead backgated when taking measurements.
+Therefore, the baseline drift of devices characterised in this manner
+should be considered separately to those characterised in an
+liquid-gated environment. Device baseline drift of a backgated device in
+the vapour sensing chamber is therefore examined here in more detail. An
+AZ\(^\circledR\) 1518 encapsulated carbon nanotube network device was
+used for this discussion. The device was fabricated on a substrate with
+a 300 nm SiO\(_2\) layer, and the carbon nanotube film was deposited
+using the steam-assisted surfactant method. Before measurements were
+taken, the vapour system was purged of vapour, the total dilution flow
+into the chamber was set at 200 sccm as read by the Tylan mass flow
+controller and flow to the PID was set to 150 sccm on the flowmeter.
+Sensing measurements were taken using the B1500A semiconductor device
+analyser.
+
+\begin{figure}
+
+\begin{minipage}[t]{0.11\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(a).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.70\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch9/Q2C6_fitted_curves.png}
 
 }
 
@@ -1837,7 +1131,7 @@ Sciences, Te Herenga Waka - Victoria University of Wellington.}
 
 \raisebox{-\height}{
 
-\includegraphics{figures/(c).png}
+\includegraphics{figures/(b).png}
 
 }
 
@@ -1861,7 +1155,7 @@ Sciences, Te Herenga Waka - Victoria University of Wellington.}
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/Q1C6_filtered_detrend_trunc_arrows_normalised.png}
+\includegraphics{figures/ch9/Q2C6_fitted_curves_exp.png}
 
 }
 
@@ -1879,188 +1173,87 @@ Sciences, Te Herenga Waka - Victoria University of Wellington.}
 
 \end{minipage}%
 
-\caption{\label{fig-OR22a-series}The control series of the
-OR22a-functionalised device is shown in (a) alongside an extrapolated
-linear fit from 1200 s onwards. The control series with the linear
-approximation subtracted is shown in (b), where an exponential curve has
-been fitted. The normalised ethyl hexanoate sensing series is shown in
-(c) with baseline drift substracted and a moving median filter applied.
-The concentration of each 20 µL addition is indicated above the time of
-addition. Across both the control series and sensing series, \(V_{ds}\)
-= 100 mV and \(V_g\) = 0 V.}
+\caption{\label{fig-bg-baseline-drift}The source-drain and gate current
+measured for a backgated device channel across 3600 s, where \(V_{ds}\)
+= 100 mV and \(V_g\) = 0 V is shown in (a). A linear fit to the data
+from 2400 s onwards has been indicated on (a) with a black dashed line.
+The linear fit has then been subtracted from (a) to give the dataset
+shown in (b). An exponential fit to the dataset in (b) is also shown in
+black.}
 
 \end{figure}
 
-The control series for the sensing series is shown in
-Figure~\ref{fig-OR22a-series} (a). No clear stepwise response is seen to
-PBS additions or subtractions. The functionalised device shows similar
-baseline drift behaviour to that of a pristine device, with a period of
-short-term decay quickly yielding to a more long-lived decay behaviour.
-A linear fit \(I = c_1t + c_2\) to the region \(1200-1800\) s had a
-gradient of \(c_1 = -1.76\pm0.02\) pA/s. This gradient is smaller than
-the range of values found for the linear fit approximating the
-longer-term drift of a pristine device (\textbf{?@sec-baseline-drift}),
-but of the same order of magnitude. The linear fit was then subtracted
-from the control series and an exponential fit \(I = I_0\exp(-t/\tau)\)
-was performed on the remaining dataset from 0-1200 s, as shown in
-Figure~\ref{fig-OR22a-series} (b). A value of \(660 \pm 10\) s was found
-for the exponential time constant, similar to those found for the
-channels of the pristine device. This confirms that the 1800 s control
-series is sufficient to avoid the presence of short-term decay during
-sensing.
+Figure~\ref{fig-bg-baseline-drift} (a) shows 3600 s of baseline drift
+from the same channel when the device was backgated at \(V_g\) = 0 V and
+a source-drain voltage of \(V_{ds}\) = 100 mV was placed across the
+channel. During this period of time, a 200 sccm nitrogen flow was placed
+through the device chamber with the dilution mass flow controller. Gate
+leakage current remains negligible across the entire control series. As
+seen for the liquid-gated device in \textbf{?@sec-baseline-drift}, there
+is a period of rapidly-disappearing exponential decay followed by a
+period of stable, approximately linear baseline drift. The baseline
+drift observed here appears to be significantly lower than that seen by
+Noyce \emph{et al.} This observation suggests that the higher magnitude
+of drift observed by Noyce \emph{et al.} is not primarily due to
+backgating in air, but instead results from the use of a significantly
+different fabrication process for their devices \autocite{Noyce2019}.
 
-Figure~\ref{fig-OR22a-series} (c) shows the cleaned and filtered ethyl
-hexanoate sensing data from the OR22a-functionalised device from 1800 s
-onwards. The concentration of each 20 µL addition is indicated above the
-corresponding addition time. The actual concentration in the liquid-gate
-well is determined by both the concentration of analyte being added and
-the volume of 1X PBS 0.5\% v/v DMSO already present. The concentration
-of ethyl hexanoate in the well after each addition is shown in
-Table~\ref{tbl-concentrations}. With each addition of ethyl hexanoate, a
-subsequent rapid drop in source-drain current across the channel was
-observed. This current decrease appears irreversible, as the current
-stabilises after each addition at a lower current level than prior to
-the addition. As in previous works, all responses were observed without
-requiring an ORCO coreceptor present
-\autocite{Murugathas2019a,Murugathas2020,Khadka2019,Cheema2021}.
+A linear least-squares fit was performed on the samples taken between
+2400 s \(-\) 3600 s, and the fit obtained had an R-squared value of
+0.998. The constants obtained for the linear fit, where
+\(I = c_1t + c_2\), were \(c_1 = -17.31\pm0.05\) pAs\(^{-1}\) and
+\(c_2 = 0.779\) µA. Both linear and constant terms are higher than that
+of the average liquid-gated device drift. The linear fit was then
+subtracted from the raw data, and an exponential least-squares fit was
+performed on the remaining dataset. Figure~\ref{fig-bg-baseline-drift}
+(b) shows the exponential fit to this remaining dataset from 0 s \(-\)
+3600 s. The constants obtained for the exponential fit
+\(I = I_0\textrm{exp}(-t/\tau)\) were \(I_0 = 7.20 \pm 0.05\) nA and
+\(\tau = 730 \pm 10\) s. The exponential term is similar in size to
+those found for the channels of the liquid-gated device, which may
+indicate the magnitude of this decay behaviour is independent of the
+type of transistor gating. Three time constants equates to
+\(2190 \pm 30\) s, indicating the length of the control sequence could
+be safely reduced to 2400 s without the short-term exponential drift
+being present during sensing.
 
-\hypertarget{tbl-concentrations}{}
-\begin{longtable}[t]{>{\raggedright\arraybackslash}p{3.2cm}>{\raggedright\arraybackslash}p{1.4cm}>{\raggedright\arraybackslash}p{1.4cm}>{\raggedright\arraybackslash}p{1.4cm}>{\raggedright\arraybackslash}p{1.4cm}>{\raggedright\arraybackslash}p{1.4cm}>{\raggedright\arraybackslash}p{1.4cm}}
-\caption{\label{tbl-concentrations}Comparison of ethyl hexanoate analyte in the 20 µL additions to the
-total ethyl hexanoate concentration in the liquid-gate well, alongside
-the volume in the PDMS well after each addition. }\tabularnewline
+This analysis indicates that the baseline drift for the backgated carbon
+nanotube under nitrogen flow can be approximated as a combination of a
+exponential, linear and constant term. Furthermore, while only measured
+here for a single channel, it appears likely that we can expect
+backgated baseline drift behaviour to be similar to the multiplexed
+liquid-gated drifts observed in \textbf{?@sec-baseline-drift}, except
+possibly with a longer time constant for the exponential term. It seems
+that the baseline drift behaviour in these devices is primarily due to
+the general nature of the carbon nanotube network. It appears possible
+that the type of gating used for device characterisation may affect the
+rate at which the exponential term decays. However, further
+experimentation is needed to confirm this relationship, work which is
+outside the scope of this thesis.
 
-\toprule
-Addition \# & 1 & 2 & 3 & 4 & 5 & 6\\
-\midrule
-Addition conc. & 0 fM & 1 fM & 1 pM & 1 nM & 1 µM & 1 µM\\
-Volume in well & 100 µL & 120 µL & 140 µL & 160 µL & 180 µL & 200 µL\\
-Conc. in well & 0 fM & 170 aM & 140 fM & 130 pM & 110 nM & 200 nM\\
-\bottomrule
-\end{longtable}
+\hypertarget{sec-vapour-series}{%
+\subsection{Sensing Series}\label{sec-vapour-series}}
 
-The relationship between ethyl hexanoate concentration in the sensing
-well and the signal responses of the OR22a-functionalised device are
-shown in Figure~\ref{fig-EtHex-responses}. Both mammalian and insect
-odorant receptors show a logarthmic electrical response to low
-concentrations of target analyte, while responses saturate at higher
-analyte concentrations
-\autocite{Persaud1982,Jin2012,Kwon2015,Yoo2022,Khadka2019,Murugathas2020,Cheema2021}.
-The response behaviour with concentration across the first five
-datapoints has the shape of a Langmuir response curve
-\autocite{Jin2012,Kwon2015,Yoo2022}, indicating that the interaction
-between analyte and the monolayer of immobilised odorant receptors forms
-a similar equilibrium to that of the dynamic equilibrium seen for
-adsorption and desorption from a adsorbent surface
-\autocite{Ayawei2017}. The responses by OR22a to both methyl hexanoate
-and ethyl hexanoate on different sensing platforms follow a similar
-trend, where saturation occurs at high picomolar concentrations
-\autocite{Murugathas2020,Cheema2021}. Due to the low number of
-datapoints in Figure~\ref{fig-EtHex-responses}, comparing this dataset
-to a physical model directly is infeasible, but the first five
-measurements do not conflict with previous observations of a logarthmic
-trend that gives way to saturation for insect odorant receptor sensors.
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.8\textwidth,height=\textheight]{figures/ch7/concentrations.png}
-
-}
-
-\caption{\label{fig-EtHex-responses}Cumulative device response
-corresponding to the 20 µL analyte additions relative to the ethyl
-hexanoate (EtHex) concentration present in the device liquid-gate.}
-
-\end{figure}
-
-However, the final addition resulted in an unexpectedly large response
-of \(\sim\) 45\% which dramatically deviates from this well-established
-trend. This large response occurs when the concentration of ethyl
-hexanoate in the well is approximately doubled from \(\sim\) 100 nM to
-\(\sim\) 200 nM. The size of this response well exceeds any error due to
-insufficient mixing in the PDMS, which is usually on the scale of
-\(\sim\) 1\% (\textbf{?@sec-salt-conc-series}). The analysis in the
-subsequent section (Section~\ref{sec-variability}) demonstrates that
-this response cannot be explained as the carbon nanotubes (or nanodiscs)
-responding to a relatively large concentration of ethyl hexanoate
-directly. No significant changes in gate current occur during the
-sensing series (Figure~\ref{fig-EtHex-aqueous-sensing}), so the response
-cannot be explained as being due to changes in the gate capacitance due
-to leakage current. The responses of OR22a to target analyte at
-liquid-gate concentrations above 1 nM have not previously been
-investigated for field-effect transistor sensors
-\autocite{Murugathas2019a,Murugathas2020}. More research may be required
-to understand device behaviour at analyte concentrations well above the
-apparent saturation regime at high picomolar concentrations.
-
-\hypertarget{sec-variability}{%
-\section{Addressing Biosensor Variability}\label{sec-variability}}
-
-\hypertarget{sec-variability-biosensor}{%
-\subsection{Variability in Biosensor
-Behaviour}\label{sec-variability-biosensor}}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch7/Q4C4_OR22a_Functionalised_filtered_detrend_trunc_arrows_normalised.png}
-
-}
-
-\caption{\label{fig-OR22a-variability}The normalised sensing series of
-another OR22a-functionalised device across six multiplexed channels,
-where current data has been despiked, baseline drift removed and a
-moving median filter applied. The concentration of each 20 µL addition
-is indicated above the time of addition.}
-
-\end{figure}
-
-Despite the successful detection of ethyl hexanoate by an OR22a
-nanodisc-functionalised biosensor in
-Section~\ref{sec-aqueous-sensing-EtHex}, it was found that this
-behaviour was not readily reproducible. The results from the previous
-section were not repeated when using the same procedure for fabrication
-of devices alongside an identical functionalisation process with the
-same batch of OR22a nanodiscs (ND-OR22a-SB018). The ethyl hexanoate
-sensing sequence from six functionalised device channels is shown in
-Figure~\ref{fig-OR22a-variability}. The current response to each analyte
-addition is similar to that seen after the initial addition without
-ethyl hexanoate present. The largest contributing factor to current
-change appears to be drift. Unlike the clear decreases in current
-subsequent to ethyl hexanoate additions seen in
-Figure~\ref{fig-OR22a-series} (c), no decreases are seen in
-Figure~\ref{fig-OR22a-variability} to any ethyl hexanoate solution
-addition. It is clear that although the same process has been followed
-here as in Section~\ref{sec-EtHex-aqueous-sensing}, the functionalised
-device is not responding to the presence of target analyte. The device
-characteristics were therefore investigated for differences from the
-functionalisation results seen in
-Section~\ref{sec-working-PBASE-functionalisation}.
-
-Liquid-gated electrical characteristics were taken of each sensing
-channel from this device before and after functionalisation with OR22a
-nanodiscs, in the same manner as in
-Section~\ref{sec-working-PBASE-functionalisation}. These characteristics
-are shown in Figure~\ref{fig-OR22a-variability-TX}. The average
-threshold shift was \(-0.06 \pm 0.02\), the same as that of a device
-functionalised with PBASE in methanol without subsequent
-functionalisation with OR22a nanodiscs. To test whether protein was
-present on the channel, an atomic force microscope image was taken of
-channel 6. The resulting image is shown in
-Figure~\ref{fig-OR22a-variability-AFM-comparison} (a) with the mean
-substrate height (\(\sim\) 2 nm) masked in green. A binary
-representation of the image was also prepared with a 12 nm threshold,
-shown in Figure~\ref{fig-OR22a-variability-AFM-comparison} (c). As in
-Figure~\ref{fig-working-OR22a-AFM} (f), the surface is densely populated
-with non-nanotube features over 50 nm across. These features also form
-clusters across the network. Nanodisc agglomerates \(\sim\) 29 \(-\) 37
-nm in height are therefore present on channel 6 (following the
-discussion in Section~\ref{sec-working-PBASE-functionalisation}),
-despite the lack of a significant threshold shift subsequent to
-functionalisation. The agglomerates are still relatively small compared
-to those reported by Murugathas \emph{et al.}, so the large size of
-nanodiscs in Figure~\ref{fig-OR22a-variability-AFM-comparison} relative
-to those in Section~\ref{sec-working-PBASE-functionalisation} is
-unlikely to be an issue \autocite{Murugathas2019a}.
+Directly after the 3600 s control series, sensing devices were exposed
+to four intervals of volatile organic vapour flow from the carrier line.
+Two high vapour pressure compounds, ethyl hexanoate (0.21 kPa at room
+temperature \autocite{EtHex}) and \emph{trans}-2-hexen-1-al (0.88 kPa at
+room temperature \autocite{E2Hex}), were measured separately using two
+different devices. 5 mL of the analyte of interest was placed into the
+analyte bottle on the carrier line before each sensing series. The same
+settings for the vapour delivery system were kept from
+Section~\ref{sec-vapour-drift}. A total flow of 200 sccm between the two
+mass flow controllers was kept through the chamber at all times. During
+each interval 150 sccm flow was placed through the carrier line. Apart
+for the duration of these intervals, flow through the carrier line was
+kept at zero. The intervals were of varying lengths to see how the
+carbon nanotube device responded to various concentrations of vapour in
+the chamber as recorded by the PID. A 1200 s recovery period was placed
+between each carrier flow interval, where 200 sccm flow was placed into
+the chamber from the dilution line. A separate series was also performed
+for each device in an identical manner except without analyte in the
+analyte bottle. The chamber temperature was 22°C \(\pm\) 3°C for all
+measurements.
 
 \begin{figure}
 
@@ -2094,7 +1287,7 @@ unlikely to be an issue \autocite{Murugathas2019a}.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/Q4C4_ch2.png}
+\includegraphics{figures/ch9/Q39C11_detrend_trunc_arrows_normalised.png}
 
 }
 
@@ -2142,7 +1335,7 @@ unlikely to be an issue \autocite{Murugathas2019a}.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/Q4C4_ch3.png}
+\includegraphics{figures/ch9/Q2C6_detrend_trunc_arrows_normalised.png}
 
 }
 
@@ -2190,7 +1383,7 @@ unlikely to be an issue \autocite{Murugathas2019a}.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/Q4C4_ch4.png}
+\includegraphics{figures/ch9/Q39C11_filtered_detrend_trunc_arrows_normalised.png}
 
 }
 
@@ -2238,7 +1431,7 @@ unlikely to be an issue \autocite{Murugathas2019a}.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/Q4C4_ch5.png}
+\includegraphics{figures/ch9/Q2C6_filtered_detrend_trunc_arrows_normalised.png}
 
 }
 
@@ -2286,7 +1479,7 @@ unlikely to be an issue \autocite{Murugathas2019a}.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/Q4C4_ch6.png}
+\includegraphics{figures/ch9/Q39C11_mean_simple_difference_before_and_after_step_filtered_concentrations.png}
 
 }
 
@@ -2334,7 +1527,7 @@ unlikely to be an issue \autocite{Murugathas2019a}.
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/Q4C4_ch7.png}
+\includegraphics{figures/ch9/Q2C6_mean_simple_difference_before_and_after_step_filtered_concentrations.png}
 
 }
 
@@ -2352,22 +1545,65 @@ unlikely to be an issue \autocite{Murugathas2019a}.
 
 \end{minipage}%
 
-\caption{\label{fig-OR22a-variability-TX}Liquid-gated carbon nanotube
-network device transfer characteristics before and after OR22a nanodisc
-functionalisation. Source-drain voltage was \(V_{ds}\) = 100 mV for both
-the forward and reverse sweep. Each subfigure (a)-(f) corresponds to a
-different channel of the functionalised device; (a) corresponds to
-channel 2, (b) corresponds to channel 3, (c) corresponds to channel 4,
-(d) corresponds to channel 5, (e) corresponds to channel 6 and (f)
-corresponds to channel 7. The dashed line shown is tangent to the
-subthreshold slope of the characteristic curve in the forward direction.
-The threshold voltage corresponding to the intercept of this slope with
-the x-axis is shown for each transfer characteristic curve.}
+\caption{\label{fig-EtHex-sampling}Device channel responses to intervals
+of flow from the carrier line into the vapour delivery system chamber.
+Intervals begin at 3600 s, 4850 s, 6150 s and 7500 s. The length of each
+interval is indicated above the corresponding normalised current
+response to \emph{trans}-2-hexen-1-al (E2Hex) in (a) and to ethyl
+hexanoate (EtHex) in (b). Each series is shown alongside a control
+series in which no analyte was present in the analyte bottle. The
+dataset after applying a moving median filter is shown in (c) for E2Hex
+and (d) for EtHex. The signal changes corresponding to the current
+responses to each interval are shown in (e) for E2Hex and (f) for
+EtHex.}
 
 \end{figure}
 
+The results of these interval tests, both with and without analyte, are
+shown in Figure~\ref{fig-EtHex-sampling} (a) for
+\emph{trans}-2-hexen-1-al and Figure~\ref{fig-EtHex-sampling} (b) for
+ethyl hexanoate. These results have been normalised, despiked and have
+had baseline drift corrections applied in the manner described in both
+\textbf{?@sec-python-analysis} and \textbf{?@sec-salt-conc-series}. To
+more clearly discern sensing behaviour through the noise present, a
+moving median filter was applied to these datasets, as shown in
+Figure~\ref{fig-EtHex-sampling} (c) and Figure~\ref{fig-EtHex-sampling}
+(d) for E2Hex and EtHex respectively. Most intervals of exposure to
+carrier line flow correspond to a current increase. These increases have
+been labelled with the length of the corresponding interval used. When
+analyte was present in the analyte bottle on the carrier line, the
+response to each exposure interval was generally larger than the
+response when no analyte is present. Some response to carrier line flow
+is observed even when the analyte bottle is empty. As the system lines
+are purged with a roughing pump before sensing, and both lines are
+checked for vapour before sensing using the PID, it appears these small
+responses may be due to a slow leak of volatiles from the fumehood
+environment into the carrier line when not in use.
+
+Vapour concentration measurements from PID, shown in
+Figure~\ref{fig-EtHex-sampling-PID}, also indicate that an ionisable gas
+is reaching the chamber during each interval, even when the analyte
+bottle is left empty. As discussed in
+Section~\ref{sec-responses-to-vapour}, some baseline drift is seen after
+each addition, which is particularly significant for the second two
+carrier line intervals in Figure~\ref{fig-EtHex-sampling-PID} (a). The
+baseline immediately before each peak was therefore subtracted from the
+maximum concentration measured during each interval to give the values
+shown above each peak. These values are taken to represent the nominal
+change in chamber concentration as a result of each exposure interval.
+
 \begin{figure}
 
+\begin{minipage}[t]{0.11\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
 \begin{minipage}[t]{0.03\linewidth}
 
 {\centering 
@@ -2392,13 +1628,13 @@ the x-axis is shown for each transfer characteristic curve.}
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.45\linewidth}
+\begin{minipage}[t]{0.70\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/Q4C4_CH6_PostSensing_OR22a_Func_AFM100670_00693_mask.png}
+\includegraphics{figures/ch9/input_time_comparison_E2Hex.png}
 
 }
 
@@ -2406,55 +1642,7 @@ the x-axis is shown for each transfer characteristic curve.}
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(b).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Ned_Q16D2_W4_OR22a1_noPBASE_sensing_2.5micron_256px_00462_2021092_mask.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
+\begin{minipage}[t]{0.15\linewidth}
 
 {\centering 
 
@@ -2464,169 +1652,11 @@ the x-axis is shown for each transfer characteristic curve.}
 
 \end{minipage}%
 \newline
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(c).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
+\begin{minipage}[t]{0.11\linewidth}
 
 {\centering 
 
 ~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Q4C4_CH6_PostSensing_OR22a_Func_AFM100670_00693_threshold.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(d).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Ned_Q16D2_W4_OR22a1_noPBASE_sensing_2.5micron_256px_00462_2021092_threshold.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-
-\caption{\label{fig-OR22a-variability-AFM-comparison}An scaled atomic
-force microscope image of channel 6 from the unresponsive device is
-shown in (a). An atomic force microscope image of a device modified with
-OR22a nanodiscs without the use of PBASE is shown in (b), with an
-imaging artifact bounded in red. A binary representation of the atomic
-force microscope image in (a) with a threshold height of 12 nm is shown
-in (c); a binary representation of the atomic force microscope image in
-(b) is shown in (d), with a threshold height of 14 nm. In (a) and (b),
-the average substrate height has been highlighted green with the
-Gwyddion software mask tool.}
-
-\end{figure}
-
-Both OR nanodisc and empty nanodisc attachment via PBASE have been shown
-to cause significant gating of the network
-(Section~\ref{sec-working-PBASE-functionalisation}). The amine group on
-proteins can be attached directly onto carbon nanotubes by adsorption,
-although this attachment is relatively weak \autocite{Bradley2004}.
-Figure~\ref{fig-OR22a-variability-AFM-comparison} (b) shows an AFM image
-of a carbon nanotube network film after submersion in a 10 µL/mL OR22a
-nanodisc in PBS solution for 1 hour (batch NDOR22a-0016-1), without
-prior exposure to PBASE in methanol. A \(\sim\) 2 nm high image artifact
-(see \textbf{?@sec-pristine-AFM}) is present in the lower left of the
-image, bounded in red, and so the median substrate height of the image
-is found at \(\sim\) 4 nm, highlighted green in
-Figure~\ref{fig-OR22a-variability-AFM-comparison} (b). A binary
-representation of this AFM at with a threshold height of 14 nm is shown
-in Figure~\ref{fig-OR22a-variability-AFM-comparison} (d), where nanodisc
-agglomerations are clearly visible. Therefore, it might be reasoned that
-the lack of a gating effect even while nanodiscs are present results
-from a direct attachment mechanism which circumvents the PBASE linker.
-
-\begin{figure}
-
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(a).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.49\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Q4C8_filtered_trunc_arrows_normalised.png}
-
-}
 
 }
 
@@ -2656,13 +1686,13 @@ from a direct attachment mechanism which circumvents the PBASE linker.
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.42\linewidth}
+\begin{minipage}[t]{0.70\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/Q4C8_ch4_without_gate_current.png}
+\includegraphics{figures/ch9/input_time_comparison_EtHex.png}
 
 }
 
@@ -2670,7 +1700,7 @@ from a direct attachment mechanism which circumvents the PBASE linker.
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.01\linewidth}
+\begin{minipage}[t]{0.15\linewidth}
 
 {\centering 
 
@@ -2680,201 +1710,97 @@ from a direct attachment mechanism which circumvents the PBASE linker.
 
 \end{minipage}%
 
-\caption{\label{fig-OR22a-variability-noPBASE}Real-time sampling using
-channel 4 of the device modified with OR22a nanodisc solution without
-prior exposure to PBASE or methanol shown in (a). A 20 µL addition of
-1\% v/v DMSO \(1 \times\) PBS was made at 200 s. Subsequently, 20 µL
-additions of ethyl hexanoate diluted in 1\% v/v DMSO \(1 \times\) PBS
-were made at 400 s, 600 s, 800 s and 1000 s and 1200 s, with the
-concentration of each addition indicated above the time of addition.
-Liquid-gated carbon nanotube network device transfer characteristics of
-the same channel are shown in (b), before and after functionalisation.
-Source-drain voltage was \(V_{ds}\) = 100 mV.}
+\caption{\label{fig-EtHex-sampling-PID}Nominal concentration
+measurements by the photoionisation detector taken from the device
+chamber during device current sampling from 3600 s onwards. Measurements
+both with and without \emph{trans}-2-hexen-1-al (E2Hex) in the analyte
+bottle are shown in (a), while measurements both with and without ethyl
+hexanoate (EtHex) are shown in (b). The maximum nominal concentration
+reached during each carrier flow interval is indicated above each peak.}
 
 \end{figure}
 
-Figure~\ref{fig-OR22a-variability-noPBASE} (a) shows the sensing results
-from the device functionalised without the use of PBASE. Small, positive
-current responses to additions of ethyl hexanoate diluted in 1\% v/v
-DMSO \(1 \times\) PBS are visible. These responses may may result from
-the weakly attached OR22a nanodiscs being mechanically removed by the
-pressure of each addition on the device channels. While the sensing
-response shows similarities with that seen in
-Figure~\ref{fig-OR22a-variability}, the electrical characteristics of
-the device channel are starkly different to those in
-Figure~\ref{fig-OR22a-variability-TX}. These channel characteristics are
-shown in Figure~\ref{fig-OR22a-variability-noPBASE} (b). The negative
-threshold shift was -0.27 V, far larger than any seen in
-Figure~\ref{fig-OR22a-variability-TX} and similar in size to the
-threshold shift after functionalisation seen for the working biosensor
-in Figure~\ref{fig-OR22a-TX-comparison}. Despite the difference in
-attachment mechanism, there is still significant electrical modification
-of the channel by the nanodiscs not seen for the unresponsive device in
-Figure~\ref{fig-OR22a-variability}. It appears that attachment by
-mechanisms other than PBASE cannot sufficiently explain the variability
-in sensor behaviour.
-
-A new explanation is therefore required for this apparently
-contradictory scenario where nanodiscs can be present on a device
-channel without the observation of significant gating effects
-post-functionalisation. The most straightforward explanation is that no
-reliable correlation exists between the two phenomena. Given the
-consistent threshold shift results for various linker functionalisations
-seen in \textbf{?@sec-noncovalent-functionalisation}, this scenario
-implies a significant variation in protein structure and charge
-behaviour within a single nanodisc batch, which seems unlikely. Another
-possibility is that some type of surface coating is causing nanodiscs to
-not attach to either PBASE or the carbon nanotubes. This surface coating
-might be attractive, attaching to both nanodiscs and carbon nanotubes,
-but forming a barrier layer between the two. Alternatively, this coating
-might be repulsive, causing nanodiscs to attach weakly to the substrate
-around the carbon nanotubes and not the nanotubes themselves. Variations
-in the degree to which a network is coated may then explain why the same
-functionalisation method might work for one device but not another. The
-following section investigates ways of eliminating possible sources of
-surface coating for more reliable functionalisation results.
-
-\hypertarget{sec-contamination}{%
-\subsection{Potential Sources of Variability}\label{sec-contamination}}
-
-Throughout the course of this thesis, multiple potential candidates for
-the unwanted surface coating discussed in the previous section have been
-identified. These include the surfactant used in carbon nanotube
-deposition (\textbf{?@sec-pristine-morphology},
-\textbf{?@sec-pristine-electrical-characterisation}), the solvent used
-in functionalisation (\textbf{?@sec-PBASE-electrical-characterisation}),
-residual photoresist (\textbf{?@sec-photoresist-contamination}), and the
-hydrophobic layer which naturally forms on graphene and carbon nanotubes
-in air (\textbf{?@sec-hydrophobicity}). Another possibility is that
-PBASE itself is acting as a surface coating, which could result from
-multilayer coverage restricting access by the odorant receptors to
-directly attached PBASE (\textbf{?@sec-PBASE-attachment}).
-Alternatively, PBASE may have hydrolysed into PBA prior to attachment,
-forming an inert surface layer upon \(\pi\)-stacking around the carbon
-nanotubes. However, no threshold shift directly attributable to PBA
-attachment should occur (\textbf{?@sec-PBA-characterisation}), and this
-is not what was observed when characterising the non-working device in
-Section~\ref{sec-variability-biosensor}. To understand which of these
-candidates is responsible for the significant variability in biosensor
-functionality, the sensing procedure was performed with slight
-variations on the biosensor fabrication and functionalisation
-procedures. In each test, an individual element of one of these
-procedures was altered to prevent the introduction of a specific surface
-coating. The biosensor was then characterised and tested to see if it
-would respond to its target odorant.
-
-\hypertarget{spurious-responses}{%
-\subsubsection*{Spurious Responses}\label{spurious-responses}}
-\addcontentsline{toc}{subsubsection}{Spurious Responses}
+Each signal response corresponds to a change in conductance through the
+exposed carbon nanotubes within the device channel. These conductance
+changes occur due to the molecular adsorption of analyte vapour onto the
+external and internal surfaces of the nanotubes. The vapour can dope the
+semiconducting carbon nanotubes in the channel, causing a shift in the
+channel threshold voltage, and can cause carrier scattering when
+adsorped onto the metallic nanotubes present. Binding of analyte to a
+gas sensing material can be reversible or irreversible. In general,
+adsorption onto carbon nanotube sensors is irreversible. This
+irreversibility means after a response to analyte, readings from the
+sensor will not return to the original baseline within the same
+timescale as the sensing response, even after stopping analyte flow to
+the chamber \autocite{Agnihotri2005,Lee2005}. From
+Figure~\ref{fig-EtHex-sampling}, it is clear that the carbon nanotube
+sensor configuration used here is primarily irreversible, where the
+current level does not return to baseline within a period of 1200 s
+after analyte exposure.
 
 \begin{figure}
 
-{\centering \includegraphics[width=0.62\textwidth,height=\textheight]{figures/ch7/NGW4_D7_OR22aliposome_sampling_220623_detrend_trunc_arrows_normalised.png}
+{\centering \includegraphics[width=0.55\textwidth,height=\textheight]{figures/ch9/EtHex-ratio-comparison.png}
 
 }
 
-\caption{\label{fig-DMSO-concentration}Response to changing the
-concentration of DMSO in the PDMS well of a OR22a-functionalised sensor.
-Source-drain voltage was set at \(V_{ds}\) = 100 mV while gate voltage
-was set at \(V_g\) = 0 V. The well originally contained 100 µL of 1\%
-v/v DMSO 1X PBS. 20 µL additions of DMSO in PBS were made at 3300 s and
-3600 s.}
+\caption{\label{fig-EtHex-ratio-comparison}Device response against
+maximum concentration measurement corresponding to each interval of
+carrier flow, where control responses to carrier line flow from an empty
+analyte bottle have been subtracted. The chamber temperature was 22°C ±
+2°C during collection of all data used here.}
 
 \end{figure}
 
-Before testing to see if a surface coating was responsible for the lack
-of response seen to ethyl hexanoate by the device in
-Section~\ref{sec-variability-biosensor}, it was important to investigate
-the possibility the signals seen in
-Section~\ref{sec-EtHex-aqueous-sensing} were false positives. The highly
-sensitive device channel could credibly respond to three different rapid
-environmental changes occurring with each addition: the mechanical
-action of the addition, a difference between the 0.5\% v/v DMSO in
-\(1 \times\) PBS containing the analyte and the 0.5\% v/v DMSO in
-\(1 \times\) PBS already in the well, or a direct response to analyte.
-It is important to eliminate the first two possibilities to be certain
-that the device is responding to analyte. The control series as it
-stands demonstrates responses cannot be explained by mechanical action.
-All analyte solutions are prepared simultaneously using the same
-\(1 \times\) PBS, taking care to avoid cross-contamination, so responses
-are unlikely to result from a difference between the \(1 \times\) PBS in
-the analyte solution and the \(1 \times\) PBS in the well. It then must
-be verified whether a functionalised device channel will respond to a
-change in DMSO concentration, which is the result of the DMSO
-concentration in an analyte addition being different to the
-concentration in the PDMS well.
+Assuming that the signal response is directly proportional to the degree
+of surface coverage by adsorbed analyte on the carbon nanotube network
+\autocite{Lee2005}, the relationship between signal response
+(Figure~\ref{fig-EtHex-sampling}) and concentration in the device
+chamber (Figure~\ref{fig-EtHex-sampling-PID}) can be modelled with a
+adsorption isotherm \autocite{Agnihotri2005}. The Freundlich adsorption
+isotherm (Equation~\ref{eq-freundlich}) models adsorption onto a
+heterogeneous surface, and has previously been used to model adsorption
+of volatile organic molecules onto single-walled carbon nanotubes.
 
-Figure~\ref{fig-DMSO-concentration} shows that a increase in DMSO
-concentration in the well from 1\% v/v to 2.5\% v/v leads to a steep
-drop in current of 0.5\% \(-\) 1.5\% across two OR22a-functionalised
-device channels, significantly smaller than the \textgreater2\% changes
-seen in Section~\ref{sec-EtHex-aqueous-sensing}. Furthermore, as precise
-measurements were used during analyte preparation, a change in
-proportion of DMSO in the well of this scale during a sensing sequence
-is unlikely. It therefore seems improbable that a change in DMSO
-concentration is causing the sensing responses in
-Section~\ref{sec-EtHex-aqueous-sensing}. However, the author recommends
-a slight modification to the control series used earlier for a more
-robust experimental baseline in future works. For a device with 100 µL
-0.5\% v/v DMSO \(1 \times\) PBS in the well after the control addition
-at 100 s, a subsequent 20 µL addition of 1\% v/v DMSO \(1 \times\) PBS
-at 200 s and 20 µL addition of 0\% v/v DMSO \(1 \times\) PBS addition at
-300 s can be used to check for spurious responses due to changing DMSO
-concentration, while ensuring the DMSO concentration in the well is
-0.5\% v/v after the control series.
+\begin{equation}\protect\hypertarget{eq-freundlich}{}{
+q_e = K_F(k_Dk_{RF}C_e)^{1/n}
+}\label{eq-freundlich}\end{equation}
 
-\hypertarget{fabrication}{%
-\subsubsection*{Fabrication}\label{fabrication}}
-\addcontentsline{toc}{subsubsection}{Fabrication}
+\(K_F\) is the adsorption capacity, indicating the amount of analyte
+that can be adsorped onto the surface. \(1/n\) is adsorption intensity,
+which can be used to understand the heterogeneity of adsorbate sites
+\autocite{Ayawei2017,Sabzehmeidani2021}. The vapour response factor,
+which is equal to 1.6 for a 10.6 eV photoionisation detector (PID), is
+denoted as \(k_{RF}\). As the PID has been run uncalibrated, a factor
+\(k_{D}\) has been included to account for linear span drift. As span
+drift due to window contamination can cause concentration readings to be
+reduced up to 30\% after six months of PID operation, it is expected
+that \(k_{D}\) falls within the range of 0.2 \(-\) 1 for the sensing
+configuration used \autocite{PIDmanual,Ionscience}.
 
-Two different approaches were trialled to eliminate possible surfactant
-contamination, both of which drew heavily on previous methods used for
-iOR biosensor fabrication \autocite{Murugathas2019a,Murugathas2020}.
-Solvent-deposited carbon nanotube network and graphene devices were
-fabricated as described in \textbf{?@sec-qw-processing}. The same
-functionalisation process for each device was used as described in
-Section~\ref{sec-working-PBASE-functionalisation} with OR22a nanodiscs.
+To examine only the device response directly attributable to the
+presence of analyte vapour, the average response resulting from carrier
+line exposure with no analyte present was subtracted from each device
+current reading. The same was then done for the vapour concentration
+readings from the PID. Due to the equivalence of the three final
+concentration measurements in Figure~\ref{fig-EtHex-sampling-PID} (a),
+\(0.11\pm0.01\) ppm, no isotherm could be fitted to the E2Hex dataset. A
+best-fit Freundlich isotherm to EtHex concentration readings against
+device channel responses is shown in
+Figure~\ref{fig-EtHex-ratio-comparison}. This dataset was collected
+primarily to demonstrate the responsiveness of carbon nanotubes to
+vapour; while the limited data collected does not rule out the
+possibility that the signal response relationship follows a Freudlich
+isotherm, further testing would be required to confirm whether this is
+the case. A more thorough investigation into this relationship was
+outside of the scope of this thesis, but further work could be done to
+rigorously confirm whether the Freundlich isotherm is a valid model for
+relating the PID response to the pristine carbon nanotube sensor
+response of this system.
 
-The normalised sensing behaviour for the solvent-deposited carbon
-nanotube device is shown in Figure~\ref{fig-solvent-deposited-sensing}.
-Gate current remained negligible across this time period (\textless0.1\%
-of average drain current). No current change subsequent to each addition
-exceeded 2\%, and current changes appear negligible on the scale of the
-changes seen in Section~\ref{sec-EtHex-aqueous-sensing}. Deviations from
-linear drift dominate the change in current across the sensing run,
-especially for channels 2 and 3.
-Figure~\ref{fig-solvent-deposited-sensing-TX} shows that the average
-threshold shift from functionalisation was \(-0.02 \pm 0.01\) V, which
-indicates attachment of PBASE but not nanodiscs. As the pre-2023
-encapsulation mask was used, an AFM was taken of a separate film
-modified in the same manner before and after functionalisation shown in
-Figure~\ref{fig-solvent-deposited-AFM-comparison} (a) and (b)
-respectively. Attached nanodisc aggregations are clearly visible. Rather
-than appearing similar to the atomic force microscope images of an
-OR22a-functionalised highly-bundled morphology in the literature, the
-functionalised film image appears closer in nature to those observed for
-the OR35a-functionalised and empty nanodisc functionalised
-highly-bundled film \autocite{Murugathas2019a}.
-Figure~\ref{fig-solvent-deposited-AFM-comparison} (c) and (d) show that
-over a larger scale these aggregations can be over 300 nm tall, forming
-large galaxy-like clusters which indicate mutual interaction during
-deposition. These results lend further support to the relationship
-between network morphology and vertical aggregation of nanodiscs, as
-discussed in Section~\ref{sec-working-PBASE-functionalisation}.
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch7/NTQ25C5_OR22a_sample_220126_filtered_detrend_trunc_arrows_normalised.png}
-
-}
-
-\caption{\label{fig-solvent-deposited-sensing}The normalised sensing
-series of the solvent-deposited, OR22a-functionalised device across six
-multiplexed channels, \(V_{ds}\) = 100 mV and \(V_g\) = 0 V, where
-current data has been despiked, baseline drift removed and a moving
-median filter applied.}
-
-\end{figure}
+\hypertarget{or35a-functionalised-device-detection-of-trans-2-hexen-1-al}{%
+\section{\texorpdfstring{OR35a-Functionalised Device Detection of
+\emph{trans}-2-hexen-1-al}{OR35a-Functionalised Device Detection of trans-2-hexen-1-al}}\label{or35a-functionalised-device-detection-of-trans-2-hexen-1-al}}
 
 \begin{figure}
 
@@ -2908,7 +1834,7 @@ median filter applied.}
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/Q3C3_ch6_PBASE_OR22a.png}
+\includegraphics{figures/ch9/AQ1C4_ch4_absolute_values_with_gate_current.png}
 
 }
 
@@ -2956,7 +1882,7 @@ median filter applied.}
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/Q3C9_ch4_noPBASE_OR22a.png}
+\includegraphics{figures/ch9/Q31C12_ch7_absolute_values_with_gate_current.png}
 
 }
 
@@ -2974,1730 +1900,35 @@ median filter applied.}
 
 \end{minipage}%
 
-\caption{\label{fig-graphene-sensing-TX}Liquid-gated graphene device
-transfer characteristics showing Dirac point voltage before and after
-OR22a nanodisc functionalisation, where (a) was functionalised using the
-standard method while (b) was functionalised without submerging the
-device in PBASE and methanol. Source-drain voltage was V\(_{ds}\) = 100
-mV for both forward and reverse sweeps.}
-
-\end{figure}
-
-\begin{figure}
-
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(a).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/NTQ25C5_ch1.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(b).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/NTQ25C5_ch2.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(c).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/NTQ25C5_ch3.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(d).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/NTQ25C5_ch4.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(e).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/NTQ25C5_ch5.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(f).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/NTQ25C5_ch6.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-
-\caption{\label{fig-solvent-deposited-sensing-TX}Liquid-gated
-solvent-deposited carbon nanotube device transfer characteristics before
-and after OR22a nanodisc functionalisation. Source-drain voltage was
-\(V_{ds}\) = 100 mV for both the forward and reverse sweep. (a)
-corresponds to channel 2, (b) corresponds to channel 3, (c) corresponds
-to channel 4, (d) corresponds to channel 5, (e) corresponds to channel 6
-and (f) corresponds to channel 7. The dashed line shown is tangent to
-the subthreshold slope of the characteristic curve. The threshold
-voltage corresponding to the intercept of this slope with the x-axis is
-shown for each transfer characteristic curve.}
-
-\end{figure}
-
-\begin{figure}
-
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(a).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Ned_NTQ25C5_W5_20220426_00501.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(b).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Ned_NTQ25C5_W4_20220126_00245.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(c).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Ned_NTQ13_D11_dep50min_OR22a_dep1hr_20210211_00089.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(d).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Ned_NTQ13_D11_dep50min_OR22a_dep1hr_20210211_00088.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(e).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Ned_NG007_w3_pristine_00087_20210428.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(f).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Ned_NGW3D4_OR22a_w1_00243_20210802.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-
-\caption{\label{fig-solvent-deposited-AFM-comparison}An 2.5 µm
-\(\times\) 2.5 µm atomic force microscope image of a solvent-deposited
-carbon nanotube film before functionalisation is shown in (a), and
-another image of the same film after OR22a nanodisc functionalisation is
-shown in (b). 10 µm \(\times\) 10 µm and 50 µm \(\times\) 50 µm atomic
-force microscope images of another film functionalised in the same
-manner are shown in (c) and (d) respectively. Atomic force microscope
-images of a monolayer graphene film on SiO\(_2\) are also shown, before
-(e) and after (f) OR22a-nanodisc functionalisation.}
-
-\end{figure}
-
-The electrical characteristics of a graphene device channel before and
-after functionalisation with OR22a nanodiscs in the manner outlined
-previously are shown in Figure~\ref{fig-graphene-sensing-TX} (a),
-showing a significant decrease in on-current and a negatively shifted
-Dirac point with functionalisation, as seen previously for working OR22a
-nanodisc GFET biosensors \autocite{Murugathas2020}.
-Figure~\ref{fig-graphene-sensing-TX} (b) shows when the process is
-repeated on another device without initial exposure to PBASE and
-methanol, a larger negative Dirac point shift is observed. It appears
-the initial functionalisation with PBASE and methanol decreases the
-charge transferred to the graphene when the nanodiscs are introduced;
-the difference between these two surface modifications is analogous to
-that seen for the carbon nanotube devices in
-Section~\ref{sec-variability-biosensor}. These results are a further
-indication that excess PBASE inhibits electrical interaction between the
-proteins and transistor channel. A pristine graphene surface and a
-OR22a-functionalised graphene surface are shown in
-Figure~\ref{fig-solvent-deposited-AFM-comparison} (e) and (f)
-respectively. Graphene folds of approximately 5 nm in height are visible
-on the right hand side of
-Figure~\ref{fig-solvent-deposited-AFM-comparison} (e). When
-functionalised with OR22a nanodiscs, the surface is densely coated with
-nanodisc aggregates up to \(\sim\) 250 nm across and \(\sim\) 30 nm
-tall, similar in size to those observed by Murugathas \emph{et al.}
-\autocite{Murugathas2020}.
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch7/Q3C3_filtered_detrend_trunc_arrows_normalised_edit.png}
-
-}
-
-\caption{\label{fig-graphene-sensing}A normalised ethyl hexanoate
-sensing series taken with a OR22a-functionalised graphene device.
-Source-drain voltage was set at \(V_{ds}\) = 100 mV while gate voltage
-was set at \(V_g\) = 0 V. The concentration of each 20 µL addition is
-indicated above the time of addition, with additions made at 500 s, 1000
-s, 1500 s, 2000 s and 2500 s.}
-
-\end{figure}
-
-Both the transfer characteristics and atomic force microscope image
-indicates widespread attachment of nanodiscs. However, the normalised
-current data from a OR22a nanodisc graphene field-effect transistor in
-Figure~\ref{fig-graphene-sensing} shows current changes of less than 1\%
-in response to ethyl hexanoate additions. This contrasts with the OR22a
-nanodisc-functionalised graphene device behaviour observed by Murugathas
-\emph{et al.}, where target analyte additions with concentration above
-10 fM consistently caused current changes of above 2\%
-\autocite{Murugathas2020}. Again, there appears to be an unresolved
-functionalisation issue that is not clearly captured either by the
-atomic force microscope images or the transfer characteristics before
-and after functionalisation of the graphene devices. It appears that
-avoiding the use of surfactant on the transducer element is not
-sufficient to ensure consistent iOR biosensor functionalisation; it
-therefore seems likely that a surfactant coating is not the primary
-reason for the observed variability in device operation. Furthermore,
-the confound appears to persist across multiple transducer morphologies
-which show significant variations in both their active surface area and
-electrical properties.
-
-\hypertarget{functionalisation}{%
-\subsubsection*{Functionalisation}\label{functionalisation}}
-\addcontentsline{toc}{subsubsection}{Functionalisation}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch7/NTQ25C10_OR22a_sample_220208_filtered_detrend_trunc_arrows_normalised.png}
-
-}
-
-\caption{\label{fig-DMSO-sensing}A normalised sensing series across four
-multiplexed channels from a device functionalised with PBASE in DMSO to
-attach OR22a nanodiscs. Source-drain voltage was set at \(V_{ds}\) = 100
-mV while gate voltage was set at \(V_g\) = 0 V. The concentration of
-each 20 µL addition of methyl hexanoate in 1\% v/v DMSO \(1 \times\) PBS
-is indicated above the time of addition. Current data has been despiked,
-baseline drift and a moving median filter applied.}
-
-\end{figure}
-
-Next, an investigation was made into whether the type of solvent used in
-functionalisation was responsible for the variability observed in device
-behaviour. A solvent commonly used in the literature for
-functionalisation with PBASE is dimethyl sulfoxide (DMSO), as discussed
-in \textbf{?@sec-PBASE-attachment}. A surfactant-deposited device was
-functionalised with OR22a nanodiscs in the same manner as described in
-Section~\ref{sec-working-PBASE-functionalisation}, except DMSO was used
-instead of methanol when preparing the PBASE solution. The sensing
-datasets from the four working device channels are displayed in
-Figure~\ref{fig-DMSO-sensing}, where methyl hexanoate (MeHex) was used
-as the target compound. No channel shows a negative current response to
-MeHex. Current changes after each addition are consistently below 1\% on
-all channels.
-
-\begin{figure}
-
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(a).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/NTQ25C10_ch1_DMSO.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(b).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/NTQ25C10_ch2_DMSO.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(c).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/NTQ25C10_ch3_DMSO.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(d).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/NTQ25C10_ch4_DMSO.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-
-\caption{\label{fig-DMSO-TX}Liquid-gated carbon nanotube network device
-transfer characteristics before and after OR22a nanodisc
-functionalisation using PBASE in DMSO. Source-drain voltage was
-\(V_{ds}\) = 100 mV for both the forward and reverse sweep. Each
-subfigure (a)-(d) corresponds to a different channel of the
-functionalised device; (a) corresponds to channel 1, (b) corresponds to
-channel 2, (c) corresponds to channel 3, and (d) corresponds to channel
-4. The dashed line shown is tangent to the subthreshold slope of the
-forward sweep of the characteristic curve. The threshold voltage
-associated with each curve is also shown.}
-
-\end{figure}
-
-The transfer characteristics of the four sensing channels are displayed
-in Figure~\ref{fig-DMSO-TX}. An average threshold shift of
-\(-0.22\pm0.03\) V is seen across these channels, significantly
-exceeding the expected threshold shifts of \(-0.06\pm0.01\) for exposure
-to PBASE in DMSO and \(-0.15\pm0.01\) for exposure to DMSO without
-PBASE. This functionalisation threshold shift is similar to that of the
-device which responded to target analyte in
-Section~\ref{sec-EtHex-aqueous-sensing}, -0.20 V. The shift is also
-similar to that seen for the device functionalised directly with OR22a
-nanodiscs without PBASE, -0.27 V. It appears that the nanodiscs are able
-to interact with the carbon nanotube network, yet they do not respond to
-the target analyte. It seems likely that the negative gating is a result
-of nanodisc attachment to the network, either with or without PBASE as a
-linker; meanwhile, there is limited or no attachment between the network
-and the odorant receptors themselves. This lack of connection to the
-odorant receptors appears to be a second factor at play in the
-variability seen in biosensor behaviour.
-
-\begin{figure}
-
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(a).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Ned_NTQ25C10_W2_2.5um_20220208_00287.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(b).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Ned_NTQ25C10_W2_2.5um_20220208_00287_threshold_1.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(c).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Ned_NTQ25C10_W2_2.5um_20220208_00287_threshold_2.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(d).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Ned_NTQ25C10_W2_2.5um_20220208_00287_threshold_3.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(e).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Ned_NTQ25D3_2.5um_20220222_00362.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(f).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Ned_NTQ25D3_2.5um_20220222_00362_threshold.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-
-\caption{\label{fig-DMSO-AFM-comparison}A 2.5 µm \(\times\) 2.5 µm
-atomic force microscope image of a carbon nanotube film functionalised
-with OR22a nanodiscs, using PBASE in DMSO, is shown in (a). A binary
-representation of the atomic force microscope image with a threshold
-height of 12 nm is displayed in (b). (c) shows features in the
-functionalised film across the height range \(12-17\) nm, while (d)
-shows another binary representation at 17 nm. An atomic force microscope
-image of a carbon nanotube film functionalised with OR22a nanodiscs,
-using PBA in DMSO with EDC and NHS, is shown in (e) and in (f) across
-the height range \(25-35\) nm.}
-
-\end{figure}
-
-An atomic force microscope image of a film modified using DMSO in PBASE
-with OR22a nanodiscs is shown in Figure~\ref{fig-DMSO-AFM-comparison}
-(a). The binary representation in Figure~\ref{fig-DMSO-AFM-comparison}
-(b) shows long, rounded features sit directly above the above the CNT
-threshold height of 12 nm. By extending the threshold height range to
-\(12-17\) nm, it becomes apparent that these features are not simply
-large carbon nanotube bundles, but instead appear to be densely packed
-collections of nanodisc aggregates following the length of various
-carbon nanotube bundles. The distribution of nanodiscs along the
-nanotubes gives them a `string of pearls' or \emph{Hormosira}-like
-appearance \autocite{NewZealandPlantConservationNetwork}. Some features
-are too tall for the `pearls' on the `string' to be individually
-distinguished in Figure~\ref{fig-DMSO-AFM-comparison} (c), but
-Figure~\ref{fig-DMSO-AFM-comparison} (d) shows that by adjusting the
-height threshold, the rounded `pearls' along every `string' correspond
-to separate aggregations of nanodiscs. These images strongly suggest
-nanodisc aggregations are present on the network, and are more densely
-packed along the nanotubes than in earlier images. However, this
-observation does not necessarily indicate odorant receptors are
-interacting with the nanotube network.
-
-As discussed in \textbf{?@sec-PBASE-purity}, DMSO is a highly
-hygroscopic solvent. If a non-negligible amount of water is present in
-the DMSO during functionalisation, the PBASE is being exposed to water
-for more than an hour before introducing OR nanodiscs. Over this time
-period, the PBASE may be able to undergo ester hydrolysis
-\autocite{Hermanson2013-3}. To eliminate the possibility that hydrolysis
-has prevented the attachment of odorant receptors to PBASE on the
-network, an alternative method using 1-pyrenebutyric acid (PBA) in DMSO
-was also trialled. This method was similar to those seen in
-\textbf{?@sec-PBA}. PBA is first attached to the carbon nanotube
-network, then, once the bulk of the DMSO has been rinsed off the device
-surface, converted to PBASE using carbodiimide (EDC) and succinimide
-(NHS) reagents. The PBASE is then available to attach to the OR22a
-nanodiscs as usual.
-
-The functionalisation process with PBA was therefore the same as in
-Section~\ref{sec-working-PBASE-functionalisation}, with the following
-steps replacing steps \(3-4\):
-
-\begin{itemize}
-\item
-  A solution of 5 mM PBA (Setareh Biotech) in DMSO was prepared by fully
-  dissolving 7 mg PBASE in 5 mL DMSO by vortex mixing at 1000 rpm.
-\item
-  The device was left submerged in the 5 mM PBASE in DMSO solution for 1
-  hour in a parafilm-sealed container.
-\item
-  A solution of 20 mM EDC and 40 mM NHS in \(1 \times\) PBS was prepared
-  by dissolving 31 mg EDC and 46 mg NHS in 10 mL \(1 \times\) PBS.
-\end{itemize}
-
-Note: EDC was thawed under vacuum for 15 minutes in dark conditions
-before opening.
-
-\begin{itemize}
-\item
-  The device was rinsed with DMSO for 15 s and \(1 \times\) PBS for 15
-  s, then placed into the EDC/NHS solution for 30 minutes.
-\item
-  The device was then rinsed with \(1 \times\) PBS for 15s before OR22a
-  nanodisc functionalisation.
-\end{itemize}
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch7/NTQ25D3_OR22a_sample_220218_EDCNHS.png}
-
-}
-
-\caption{\label{fig-EDCNHS-sensing}A normalised methyl hexanoate (MeHex)
-sensing series taken with a OR22a-functionalised carbon nanotube device
-using PBA with EDC and NHS. Source-drain voltage was set at \(V_{ds}\) =
-100 mV while gate voltage was set at \(V_g\) = 0 V. The concentration of
-each 20 µL addition is indicated above the time of addition.}
-
-\end{figure}
-
-These steps were designed to be broadly similar to those seen in
-\textbf{?@sec-PBA}, with a molar excess of NHS relative to EDC to ensure
-full conversion of the \emph{O}-acylisourea intermediate into PBASE.
-Normalised, filtered sensing series from two multiplexed channels of the
-functionalised device are shown in Figure~\ref{fig-EDCNHS-sensing}.
-Again, any current response subsequent to additions is positive and less
-than 1\%. An atomic force microscope image of a film modified in the
-same manner as the sensing device is shown in
-Figure~\ref{fig-DMSO-AFM-comparison} (e). When a suitable height range
-above the threshold height 12 nm is selected, as in
-Figure~\ref{fig-DMSO-AFM-comparison} (f), highly clustered nanodisc
-features with the appearance of pearls on a string are again visible.
-The transfer characteristics of each channel before and after
-functionalisation are shown in Figure~\ref{fig-EDCNHS-TX}, where an
-average threshold shift of \(-0.12 \pm 0.01\) V is observed. In
-\textbf{?@sec-PBA-characterisation}, the threshold shift for PBA
-attachment in DMSO was -0.15 V. The difference between these two values
-is not large enough to convincingly conclude whether nanodiscs have
-attached via PBASE or not. It therefore appears that the problem
-identified with variability in device behaviour in
-Section~\ref{sec-variability-biosensor} is not resolved by the use of a
-different solvent or by steps to prevent PBASE hydrolysis.
-
-\begin{figure}
-
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(a).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/NTQ25D3_ch3_EDCNHS.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(b).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/NTQ25D3_ch6_EDCNHS.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-
-\caption{\label{fig-EDCNHS-TX}Liquid-gated carbon nanotube network
-device transfer characteristics before and after OR22a nanodisc
-functionalisation using PBA in DMSO with EDC and NHS. Source-drain
-voltage was \(V_{ds}\) = 100 mV for both the forward and reverse sweep.
-Each subfigure corresponds to a different device channel, where (a) is
-channel 3 and (b) is channel 6. The dashed line shown is tangent to the
-subthreshold slope of the forward sweep of the characteristic curve. The
-threshold voltage associated with each curve is also shown.}
-
-\end{figure}
-
-From this elimination process, three possible sources of variability in
-device performance due to nanoscale surface contamination remain. The
-first is the hydrocarbonaceous layer that forms due to device exposure
-to air, which causes channel hydrophobicity. The second is multilayer
-adhesion of PBASE or PBA on the transducer surface. A further possible
-source of variability was also identified from the PBASE in DMSO
-functionalisation, where transfer measurements
-(Figure~\ref{fig-DMSO-TX}) and AFM imaging
-(Figure~\ref{fig-DMSO-AFM-comparison}) each indicated that direct
-attachment of nanodiscs was occurring despite the device not functioning
-as a sensor: the possibility of minimal or no attachment of the
-contained odorant receptors despite nanodisc attachment. An altered
-non-covalent functionalisation method using pyrene-PEG-biotin was
-therefore developed to eliminate the confound factors identified here
-and investigate the resulting sensor behaviour. This novel method is
-trialled in the following section.
-
-\hypertarget{ior-biosensing-with-aqueous-functionalisation}{%
-\section{iOR Biosensing with Aqueous
-Functionalisation}\label{ior-biosensing-with-aqueous-functionalisation}}
-
-\hypertarget{aqueous-based-functionalisation}{%
-\subsection{Aqueous-Based
-Functionalisation}\label{aqueous-based-functionalisation}}
-
-A carbon nanotube network field-effect transistor device, fabricated
-using post-Jun 2023 methods as described in \textbf{?@sec-fabrication},
-was functionalised with a novel method using OR10a solubilised in
-surfactant. The odorant receptors were not expressed in a nanodisc
-format to avoid nanodisc-film interaction, despite this leaving them
-potentially vulnerable to adverse environmental conditions
-\autocite{Nath2007,Bayburt2010}. The odorant receptors were avi-tagged
-and subsequently modified with pyrene-PEG-biotin, as described in
-\textbf{?@sec-NTA-biotin-PEG}, allowing them to attach directly from
-solution to the carbon nanotubes via the pyrene linker. The
-preattachment of odorant receptors to linker means that this approach
-must be entirely performed in aqueous solution, but ensures no PBASE or
-PBA was needed in the functionalisation process. To eliminate the
-hydrocarbonaceous coating of nanotubes and ensure aqueous
-functionalisation was possible, a short oxygen plasma cleaning step was
-used.
-
-The details of the functionalisation process, loosely based on the
-non-covalent functionalisation procedure used by Miki \emph{et al.}
-\autocite{Miki2019}, are as follows:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  The device was exposed to UV light for 1 minute, placed in
-  AZ\(^\circledR\) 326 developer for 3 minutes, then rinsed with
-  acetone, isopropanol and nitrogen dried.
-\item
-  The device was vacuum annealed for 1 hour at 150°C.
-\end{enumerate}
-
-Note: Steps 1 \& 2 were added to either remove or passivate residual
-photoresist on the channel before functionalisation, see
-\textbf{?@sec-photoresist-contamination}.
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{2}
-\tightlist
-\item
-  10 µL surfactant-solubilised avi-tagged OR10a modified with
-  pyrene-PEG-biotin (batch number AviHis-OR10a-001, prepared 12 months
-  earlier) was diluted in 1 mL freshly-prepared \(1 \times\) PBS.
-\end{enumerate}
-
-Note: The full 1 mL was used to flush out the nanodisc vial when
-preparing the nanodisc solution, with successive additions and
-subtractions of 50 µL \(1 \times\) PBS into and from the vial.
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{3}
-\tightlist
-\item
-  Device was treated with a gentle oxygen plasma, \(\sim\) 5 W at
-  200-300 mTorr, for 15 seconds.
-\end{enumerate}
-
-Note: Oxygen plasma was very gentle, with an O\(_2\) flow rate of
-\textless10 sccm into the plasma cleaner, to avoid excessive damage to
-the carbon nanotube network.
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\setcounter{enumi}{4}
-\tightlist
-\item
-  The device was submerged in the OR10a solution and left covered with
-  parafilm for 15 minutes, then rinsed with \(1 \times\) PBS for 15 s
-  and thoroughly nitrogen dried.
-\end{enumerate}
-
-\begin{figure}
-
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(a).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/NTQ39C7_ch2_absolute_values_with_gate_current.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(b).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/Q31C12_ch6_absolute_values_with_gate_current.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-
-\caption{\label{fig-OR10a-TX-comparison}Liquid-gated carbon nanotube
+\caption{\label{fig-OR35a-TX-comparison}Back-gated carbon nanotube
 network device transfer characteristics on a logarithmic scale before
-and after modification, \(V_{ds}\) = 100 mV, where gate current is shown
-with a dashed line. The change in characteristics from the
-functionalisation process in this section is shown in (a), while the
-change resulting from a 5 W plasma clean is shown in (b).}
+and after modification, where the gate current for each transfer curve
+is shown with a dashed line. Source-drain voltage was \(V_{ds}\) = 100
+mV for each of the forward and reverse sweep. The change in
+characteristics from avi-tagged OR35a functionalisation is shown in (a),
+while the change resulting from a 5 W plasma clean is shown in (b).}
 
 \end{figure}
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.45\textwidth,height=\textheight]{figures/ch7/Ned_funcverification_PPNHSwamine_R_1um_20220414_00466.png}
-
-}
-
-\caption{\label{fig-PPN-linker}1 µm \(\times\) 1 µm atomic force
-microscope image of a solvent-deposited carbon nanotube film
-functionalised with OR nanodiscs using Pyrene-PEG-NHS.}
-
-\end{figure}
-
-Figure~\ref{fig-OR10a-TX-comparison} (a) shows the liquid-gated
-characteristics of a device channel before and after the
-functionalisation process with OR10a. The change of characteristics
-observed can be compared with the change of characteristics when plasma
-cleaned without further modification, seen in
-Figure~\ref{fig-OR10a-TX-comparison} (b). A significant drop in channel
-current occurs as a result of the plasma cleaning process. This large
-change in mobility makes it difficult to clearly identify changes in
-gating specifically due to the presence of the OR10a. The OR10a is not
-held within a nanodisc format, so the morphology of the functionalised
-network cannot be compared directly using previous atomic force
-microscope images. A solvent-deposited carbon nanotube film was prepared
-separately using OR nanodiscs, where the ORs were attached via their
-amine group using pyrene-PEG-NHS ester. Pyrene-PEG-NHS ester is very
-similar to PBASE but contains a PEG chain. Figure~\ref{fig-PPN-linker}
-shows an atomic force microscope image of the modified film. OR nanodisc
-aggregates very clearly follow the carbon nanotubes, indicating specific
-attachment between nanodiscs and carbon nanotubes can be acheived using
-linker containing pyrene-PEG. The presence of PEG chains may help
-prevent direct adsorption of proteins onto the carbon nanotubes,
-improving device quality and therefore sensing behaviour
-\autocite{Star2003a,Chen2004}.
-
-\hypertarget{sec-MeSal-aqueous-sensing}{%
-\subsection{Aqueous Sensing of Methyl
-Salicylate}\label{sec-MeSal-aqueous-sensing}}
-
-The procedure used for sensing methyl salicylate (MeSal) was identical
-to that used in Section~\ref{sec-EtHex-aqueous-sensing}, except using
-MeSal instead of EtHex. Analyte solutions in 0.5\% DMSO/\(1 \times\) PBS
-solution containing methyl salicylate concentrations at 1 fM, 1 pM, 1 nM
-and 1 µM were prepared beforehand, The same PBS was used for each
-dilution, as well as for the well, which contained 80 µL 0.5\%
-DMSO/\(1 \times\) PBS prior to sensing. Sensing measurements were taken
-using the NI-PXIe system. The full measurement sequence is shown in
-Figure~\ref{fig-MeSal-sensing} alongside gate current. \(I_g\) remained
-negligible across the full sensing procedure, and no responses were seen
-to PBS additions or subtractions. A linear fit to the baseline drift in
-the region \(1200-1800\) s, shown in Figure~\ref{fig-OR10a-sensing} (a),
-had a gradient of \(c_1 = -0.38\pm0.01\) pA/s, while an exponential fit
-to the drift minus the linear fit, shown in
-Figure~\ref{fig-OR10a-sensing} (b), had a time constant of
-\(506 \pm 12\) s. A deviation from the exponential fit similar to that
-seen for the control series in Section~\ref{sec-EtHex-aqueous-sensing}
-is observed, as observed previously.
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch7/NTQ39C7_OR10avihis_MeSalsensing_240403.png}
-
-}
-
-\caption{\label{fig-MeSal-sensing}The control series (before 1800 s) and
-methyl salicylate sensing series (after 1800 s) of the
-OR10a-functionalised device channel. Source-drain voltage was set at
-\(V_{ds}\) = 100 mV while gate voltage was set at \(V_g\) = 0 V. No
-responses to 0.5\% v/v DMSO 1X PBS were seen during the control series,
-while significant responses to additions of methyl salicylate diluted in
-0.5\% v/v DMSO 1X PBS were seen at 2400 s and 3000 s.}
-
-\end{figure}
+Despite the drawbacks outlined previously, the functionalisation method
+in this section was also used to trial vapour phase sensing for the
+odorant receptor devices. The vapour pressure of methyl salicylate, 5
+Pa, was too low for reliable vapour system delivery (\emph{c.f.}
+Section~\ref{sec-vapour-series}) \autocite{MeSal}. The odorant receptor
+OR35a (batch number AviHis-OR35a-001, prepared 12 months earlier) was
+therefore used in the functionalisation process instead of OR10a, as it
+responds to \emph{trans}-2-hexanal (E2Hex) \autocite{Murugathas2019a},
+which can be delivered successfully in the vapour system (see
+Section~\ref{sec-vapour-series}). Back-gated transfer characteristics of
+a OR35a-functionalised before and after functionalisation are shown in
+Figure~\ref{fig-OR35a-TX-comparison} (a), alongside characteristics from
+a device before and after plasma cleaning at 5 W without subsequent
+functionalisation in Figure~\ref{fig-OR35a-TX-comparison} (b). As
+expected, a significant drop in mobility is seen as a result of the
+plasma cleaning step. Unlike the functionalised device, the device
+plasma cleaned without functionalisation turns off entirely at
+\(V_g \sim\) 3 V, with this difference apparently due to variability in
+the results of plasma etching for different carbon nanotube devices.
 
 \begin{figure}
 
@@ -4741,7 +1972,7 @@ while significant responses to additions of methyl salicylate diluted in
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/NTQ39C7_OR10avihis_MeSalsensing_240403_with_fitted_curves.png}
+\includegraphics{figures/ch9/AQ1C4_with_fitted_curves_normalised.png}
 
 }
 
@@ -4799,7 +2030,7 @@ while significant responses to additions of methyl salicylate diluted in
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/NTQ39C7_OR10avihis_MeSalsensing_240403_with_fitted_curves_exp.png}
+\includegraphics{figures/ch9/AQ1C4_with_fitted_curves.png}
 
 }
 
@@ -4851,13 +2082,13 @@ while significant responses to additions of methyl salicylate diluted in
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.70\linewidth}
+\begin{minipage}[t]{0.75\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/NTQ39C7_OR10avihis_MeSalsensing_240403_filtered_detrend_trunc_arrows_normalised.png}
+\includegraphics{figures/ch9/AQ1C4_filtered_detrend_trunc_arrows_normalised.png}
 
 }
 
@@ -4865,7 +2096,7 @@ while significant responses to additions of methyl salicylate diluted in
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.15\linewidth}
+\begin{minipage}[t]{0.10\linewidth}
 
 {\centering 
 
@@ -4875,548 +2106,195 @@ while significant responses to additions of methyl salicylate diluted in
 
 \end{minipage}%
 
-\caption{\label{fig-OR10a-sensing}Control series for the
-OR10a-functionalised device is shown in (a) alongside a linear fit to
-the control series from 1200 s onwards, where the fit has been
-extrapolated to 0 s, shown as a black dotted line. The control series
-with the linear approximation subtracted is shown in (b), fitted with an
-exponential function shown as a black dotted line. The normalised
-sensing series for the OR10a-functionalised device is shown in (c),
-where the current data has been despiked, baseline drift subtracted and
-a moving median filter applied.}
+\caption{\label{fig-E2Hex-sampling}The baseline drift data across the
+first 2500 s of measurement for both a pristine and OR35a-functionalised
+device is shown in (a). A linear fit to the baseline drift data between
+\(2150-3350\) s is indicated in (a) with a black dashed line. The
+difference between the raw dataset and linear fit is shown in (b), with
+an exponential fit to the data indicated with a black dotted line.
+Device channel responses to intervals of flow through the
+\emph{trans}-2-hexen-1-al (E2Hex) bubbler and carrier line between
+\(3000-6500\) s are shown in (c), where drift corrections and a moving
+median filter have been applied. Intervals begin at 3350 s, 4450 s and
+5600 s.}
 
 \end{figure}
 
-Cleaned and filtered methyl salicylate sensing data with linear baseline
-drift removed is shown in Figure~\ref{fig-OR10a-sensing} (c). The
-concentration of each 20 µL methyl salicylate addition is shown above
-each corresponding addition time. Significant and irreversible current
-decreases occurred directly after the 1 fM and 1 nM MeSal additions. A
-\(\sim\) 3\% current drop occurred subsequent to the 1 fM addition and a
-\(\sim\) 23\% current drop occurred subsequent to the 1 nM MeSal
-addition. No negative change in current occurred after the PBS addition,
-or at any of the other three analyte additions. Murugathas \emph{et al.}
-also observed a similar drop-off in response with increased analyte
-concentration when sensing with OR10a \autocite{Murugathas2019a}. Just
-like the OR22a odorant receptors tested earlier, it appears that the
-OR10a odorant receptors saturate at the 1 nM addition, but do not show
-any unexplained `post-saturation' activity. Transfer characteristics of
-the device before and after sensing are shown in
-Figure~\ref{fig-OR10a-TX-1} (a), showing a threshold shift of -0.07 V.
+In a similar manner as in Section~\ref{sec-pristine-EtHex}, the
+functionalised device was back-gated in the vapour delivery system and a
+series of exposures to E2Hex was performed. Another pristine device
+channel was measured during the same sensing series for a baseline
+comparison. Before each series was performed, the vapour system was
+purged of vapour, the total dilution flow was set at 200 sccm (nominal)
+and flow to the PID was set to 150 sccm on the flowmeter. In line with
+the discussion in Section~\ref{sec-vapour-drift}, a 2500 s control
+series was used. The baseline drift is shown in
+Figure~\ref{fig-E2Hex-sampling} (a) and (b), with a backgate of \(V_g\)
+= 0 V and a source-drain voltage of \(V_{ds}\) = 100 mV across the
+channel during each measurement. During this period, 200 sccm of
+nitrogen flow was placed through the device chamber. A linear fit
+\(I = c_1t + c_2\) was performed on the the measurements from each
+channel between \(2150-3350\) s. For the pristine device,
+\(c_1 = -1.29\pm0.01\) pAs\(^{-1}\), while for the OR35a-functionalised
+device, \(c_1 = -0.55\pm0.01\) pAs\(^{-1}\).
+Figure~\ref{fig-E2Hex-sampling} (b) shows the exponential fit
+\(I = I_0\textrm{exp}(-t/\tau)\) to each dataset with linear drift
+subtracted, where the time constant for the pristine device was
+\(\tau = 963 \pm 25\) s and for the OR35a-functionalised device was
+\(\tau = 704 \pm 4\) s.
+
+After the 2500 s control series, each device was exposed to three
+intervals of \emph{trans}-2-hexen-1-al vapour flow from the carrier line
+in the same manner. A total of 5 mL of the analyte of interest was
+present in the analyte bottle before each sensing series. A total flow
+of 200 sccm was kept through the chamber at all times. During each
+interval, 150 sccm of this total flow passed through the carrier line.
+Except during intervals, no flow was placed through the carrier line. A
+1000 s recovery period was used between each interval. The temperature
+was 20°C \(\pm\) 2°C during each series. These sensing series, which
+have been normalised, despiked, corrected for drift and filtered, are
+shown side-by-side in Figure~\ref{fig-E2Hex-sampling} (c). A larger
+current change is shown by the functionalised device than the pristine
+device after each addition. The PID indicated a similar concentration of
+E2Hex was present in the device chamber with each addition, shown in
+Figure~\ref{fig-E2Hex-additions-PID}. Note that measurements were taken
+two days apart; the \(\sim\) 50\% variation in chamber concentration
+reached with each interval is largely due to PID span drift
+(Section~\ref{sec-responses-to-vapour}).
 
 \begin{figure}
 
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(a).png}
+{\centering \includegraphics[width=0.8\textwidth,height=\textheight]{figures/ch9/input_time_comparison.png}
 
 }
 
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/NTQ39C7_ch2_before_after_sensing_1.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(b).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.46\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/NTQ39C7_ch2_before_after_rinse.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-
-\caption{\label{fig-OR10a-TX-1}Transfer characteristics of the device
-after the 1st sensing series, where \(V_{ds}\) = 100 mV. The transfer
-characteristics before and after sensing are shown in (a), while (b)
-shows the channel characteristics before and after being rinsed with
-\(1 \times\) PBS.}
+\caption{\label{fig-E2Hex-additions-PID}Nominal concentration
+measurements by the photoionisation detector taken from the device
+chamber during the vapour sensing series for both pristine and
+OR35a-functionalised devices. The maximum nominal concentration reached
+during each interval of carrier flow is indicated above each peak.}
 
 \end{figure}
 
-The device was then rinsed for 15 s in \(1 \times\) PBS after the
-initial sensing series. The effect of the rinse on the transfer
-characteristics of the device is illustrated in
-Figure~\ref{fig-OR10a-TX-1} (b). The threshold voltage before sensing
-was 0.16 V. The rinsing step appears to have largely restored the
-electrical characteristics of the device to its state prior to sensing,
-bringing the threshold voltage back from 0.09 V post-sensing to 0.14 V
-after the rinse step. In other words, it appears the gating effect due
-to the presence of analyte has been reversed. Assuming that the gating
-effect results from structural changes in the odorant receptors, the
-reversal of threshold shift upon rinsing indicates that without analyte
-present, the proteins return to their original structure. This implies
-that the device can be reused as a sensor. Furthermore, as adsorption of
-solvent leads to gating which is not reversible through rinsing
-(\textbf{?@sec-PBASE-electrical-characterisation}), this is also an
-indication that the responses are not simply due to adsorption of the
-DMSO present.
+The current responses from the functionalised carbon nanotube sensor are
+not the sharp, clear responses to analyte of the liquid-gated device
+seen in \textbf{?@sec-MeSal-aqueous-sensing}. There are alternative
+explanations for the current changes observed in
+Figure~\ref{fig-E2Hex-sampling} which do not involve specific detection
+of analyte. The functionalisation may have altered the drift behaviour
+in a manner which reduces the accuracy of the linear approximation used
+to remove baseline drift. It may be useful for future works to
+incorporate computational approaches to baseline drift compensation if
+the linear approximation regularly breaks down for functionalised
+devices \autocite{Zhang2022}. The breakdown in this approximation has
+then led to current increases that do not directly correspond to analyte
+being added. The functionalisation process may also have caused the
+device to become more sensitive to changes in vapour concentration,
+increasing the signal-to-noise ratio of the sensor. Regardless of their
+origin, the current increases observed cannot fairly be described as
+clear or convincing sensing responses. A working sensor should exhibit
+responses more similar to those seen in
+\textbf{?@sec-MeSal-aqueous-sensing}.
+
+It may be necessary to ensure the sensing environment is similar to that
+used for aqueous sensing for reliable sensing. A buffered environment
+helps to stabilise the unprotected odorant receptors
+\autocite{Sato2014}, and so a PDMS well containing 50 µL 0.5\% v/v DMSO
+\(1 \times\) PBS was attached to the device for vapour sensing. Despite
+the well being upside-down in the vapour delivery system, the
+hydrophobicity of the PDMS was sufficient to store the PBS securely.
+Current sampling over a 1 hour period in this configuration, with 200
+sccm constant flow across the surface of the well, is presented in
+Figure~\ref{fig-buffer-vapour}. If the well solution was leaking out of
+the well, the conductive liquid could form a short between the channel
+electrodes and backgate, prompting a large increase in gate current.
+However, gate current remains stable across the entire measurement
+period, indicating the well remains secure. However, fluctuations in
+drain current became apparent after \(\sim\) 800 s, and at \(\sim\) 2400
+s, the direction of baseline drift was reversed entirely. These
+undesirable changes appear to result from rapid evaporation of liquid in
+the well; when the device chamber was opened, only \(\sim\) 10-20 µL of
+PBS was still present.
 
 \begin{figure}
 
-\begin{minipage}[t]{0.11\linewidth}
-
-{\centering 
-
-~
+{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch9/Q39C11.png}
 
 }
 
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(a).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.70\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/NTQ39C7_2.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.15\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.11\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(b).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.70\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/NTQ39C7_2_filtered_detrend_trunc_arrows_normalised.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.15\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-
-\caption{\label{fig-OR10a-responses}The rinsed OR10a-functionalised
-device channel was reused to collect a second methyl salicylate sensing
-series, shown in Figure~\ref{fig-OR10a-responses} (a). Source-drain
-voltage was set at \(V_{ds}\) = 100 mV while gate voltage was set at
-\(V_g\) = 0 V. No responses to 0.5\% v/v DMSO \(1 \times\) PBS additions
-or significant gate current leakage was observed. The sensing series
-from \(1800-3900\) s is shown in (b), where a moving median filter
-applied and linear baseline drift removed.}
+\caption{\label{fig-buffer-vapour}Electrical samples from a carbon
+nanotube transistor in the vapour delivery system device chamber.
+Transistor voltages were \(V_{g}\) = 0 V and \(V_{ds}\) = 100 mV. During
+the measurement, a PDMS well containing 50 µL 0.5\% v/v DMSO 1X PBS was
+present on the device surface. Significant changes in baseline drift
+behaviour are indicated with red dotted lines.}
 
 \end{figure}
 
-The same OR10a-functionalised device channel was then reused as a sensor
-subsequent to rinsing, with the full sensing run alongside gate current
-shown in Figure~\ref{fig-OR10a-responses} (a). In this second sensing
-series, only 1 nM additions of methyl salicylate were made, to explore
-the device behaviour at concentrations close to saturation. An
-irreversible current response was seen directly after all five methyl
-salicylate additions; the concentration in the well after each addition
-is shown in Table~\ref{tbl-concentrations-2}. The expected logarithmic
-relationship \(R = \alpha\textrm{log}C\) between odorant receptor
-response \(R\) and low concentrations of analyte \(C\) is seen in
-Figure~\ref{fig-OR10a-signal-TX} (a), with a relationship constant of
-\(\alpha =16.8\pm5.7\). As the relationship holds across all additions,
-it appears the presence of 500 pM MeSal does not bring odorant receptors
-to their saturation limit. The initial 1 nM analyte addition, bringing
-well concentration to 170 pM, was similar in size (24\%) to the current
-change resulting from the 1 nM analyte addition bringing MeSal
-concentration to 130 pM in Figure~\ref{fig-OR10a-sensing} (23\%). This
-result indicates that the relationship between response size and
-concentration is reproducible when the sensing channel is reused.
-
-\hypertarget{tbl-concentrations-2}{}
-\begin{longtable}[t]{>{\raggedright\arraybackslash}p{3.2cm}>{\raggedright\arraybackslash}p{1.4cm}>{\raggedright\arraybackslash}p{1.4cm}>{\raggedright\arraybackslash}p{1.4cm}>{\raggedright\arraybackslash}p{1.4cm}>{\raggedright\arraybackslash}p{1.4cm}>{\raggedright\arraybackslash}p{1.4cm}}
-\caption{\label{tbl-concentrations-2}Comparison of methyl salicylate concentration in the 20 µL additions to
-the total concentration of analyte in the liquid-gate electrolyte and
-the volume of electrolyte in the PDMS well after each addition. }\tabularnewline
-
-\toprule
-Addition \# & 1 & 2 & 3 & 4 & 5 & 6\\
-\midrule
-Addition conc. & 0 fM & 1 nM & 1 nM & 1 nM & 1 nM & 1 nM\\
-Volume in well & 100 µL & 120 µL & 140 µL & 160 µL & 180 µL & 200 µL\\
-Conc. in well & 0 fM & 170 pM & 290 pM & 380 pM & 440 pM & 500 pM\\
-\bottomrule
-\end{longtable}
-
-\begin{figure}
-
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(a).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/water-sensing.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.03\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/(b).png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.45\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/NTQ39C7_ch2_before_after_sensing_2.png}
-
-}
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.01\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-
-\caption{\label{fig-OR10a-signal-TX}Device responses against methyl
-salicylate (MeSal) concentration present in the device liquid-gate
-during the 2nd sensing series are shown in (a), while transfer
-characteristics of the device directly before and after the 2nd sensing
-series are shown in (b), where \(V_{ds}\) = 100 mV.}
-
-\end{figure}
-
-It also appears that the second sensing series resulted in a similar
-shift in transfer characteristics to that of the first sensing series.
-Figure~\ref{fig-OR10a-signal-TX} (b) shows a shift in threshold voltage
-of -0.08 V between the transfer characteristics directly before and
-directly after the second sensing series. The similarity between
-Figure~\ref{fig-OR10a-TX-1} (a) and Figure~\ref{fig-OR10a-signal-TX} (b)
-suggests the device gating and associated behaviour of odorant receptors
-was broadly similar when the sensor was used a second time, indicating a
-odorant receptor-functionalised device can be reused. This is
-surprising, given the odorant receptors lack a protective membrane. This
-discussion indicates that the attached odorant receptors can remain
-viable for at least several hours in room temperature PBS solution,
-without the need for the nanodisc format. The similar size of the
-threshold shifts seen in Figure~\ref{fig-OR10a-TX-1} (a) and
-Figure~\ref{fig-OR10a-signal-TX} (b) also indicates that even though it
-appears the odorant receptors did not saturate with the nanomolar
-additions of MeSal, the saturation limit was being approached. It should
-be noted, however, that this discussion does not account for the impact
-of hysteresis and current annealing on the device transfer
-characteristics, both of which impact the reliability of the transfer
-characteristic curve as an indicator of sensing.
-
-The functionalisation method used in this section has a number of
-advantages over the OR nanodisc functionalisation method outlined
-earlier. The plasma cleaning step eliminates uncertainty stemming from a
-variety of possible surface coatings on the carbon nanotubes. Using
-detergent-solubilised odorant receptors removes the possibility that the
-nanodiscs are impeding direct attachment to odorant receptors in the
-functionalisation procedure. However, it has its own difficulties.
-Oxygen plasma cleaning, even at low power, had a fairly destructive
-effect on the carbon nanotube network. A large drop in mobility resulted
-from plasma cleaning; for sparser carbon nanotube morphologies, a
-sizable current drop could leave a device unsuitable for sensing. Since
-the main advantage of non-covalent functionalisation over covalent
-functionalisation is its minimal impact on mobility
-(\textbf{?@sec-non-covalent-bonding}), this approach seems
-contradictory. It appears a less destructive but solvent-free approach
-should be identified for non-covalent functionalisation
-\autocite{Ashraf2014}, or a well-established covalent approach should
-instead be used for attaching odorant receptors
-(\textbf{?@sec-sensor-types}).
+For readily reproducible vapour sensing, therefore, one of two
+approaches present themselves. The first approach is to identify a
+covalent attachment mechanism that allows for specific attachment to
+odorant receptors via a histidine or avidin tag. This approach allows
+for a protective format like nanodiscs to be used in the sensing setup
+while eliminating concerns around unwanted attachment of the protective
+membrane protein. The weak nature of non-covalent binding lends itself
+to variable functionalisation quality and poor reproducibility.
+Non-covalent functionalisation may also be less suitable for use in
+non-aqueous environments lacking buffer solution stabilisation
+\autocite{Li2023}. Conversely, covalent functionalisation of
+mammalian-OR sensors has been used before for successful vapour sensing
+of eugenol \autocite{Goldsmith2011}. Alternatively, a similar process to
+the one investigated here could be used. This non-covalent approach
+would require the development of a highly reproducible cleaning process,
+able to remove a variety of organic contaminants from the carbon
+nanotube surface prior to functionalisation. Furthermore, a liquid
+capture layer which is both biofriendly and has a low vapour pressure
+may need to be identified and used. Ideally, this liquid would be
+hydrophilic and miscible with a wide range of substances. Further
+discussion of potential capture layers can be found in
+\textbf{?@sec-future-work-vapour}.
 
 \hypertarget{conclusion}{%
 \section{Conclusion}\label{conclusion}}
 
-A carbon nanotube device was non-covalently functionalised using PBASE
-in methanol with OR22a nanodiscs and operated as a biosensor in an
-aqueous environment. Real-time conductance decreases of up to \(\sim\)
-45\% across the sensor channel were observed in response to analyte
-additions, which varied logarithmically at low analyte concentrations.
-Short-term drift behaviour was found to be similar to that of pristine
-devices, but it appears functionalisation may affect long-term baseline
-drift. Other changes resulting from successful sensor functionalisation
-included a device threshold voltage shift of \(-0.20\pm0.03\) V and an
-increase in network height of over 15 nm, both resulting from the
-presence of nanodiscs on the network. Additionally, to confirm the
-presence of odorant receptors on device channels post-functionalisation,
-ORs were tagged with green fluorescent protein and fluorescence
-microscope images taken. The functionalised channels showed
-significantly more green fluorescence than the control, which indicates
-that protein attachment to the channel is not limited to empty
-nanodiscs.
+The onboard reference sensors within the vapour delivery system were
+confirmed to be functional, giving repeatable concentration readings
+with minimal baseline drift when measurements were taken on the same
+day. Real-time vapour sensing series with \emph{trans}-2-hexen-1-al
+(E2Hex) and ethyl hexanoate (EtHex) were used to determine the response
+of carbon nanotube transistor devices to volatile vapour, as well as to
+confirm that the vapour delivery system was working as expected. The
+pristine transducers were found to be sensitive to parts-per-million
+vapour concentrations of both E2Hex and EtHex as measured by the
+photoionisation detector. These experiments were used as controls for
+comparison with biosensor responses to vapour after functionalisation
+with insect odorant receptors. As these devices are highly sensitive, it
+is important to be able to discern whether a signal response is due to
+modification of an attached biomolecule or whether the carbon nanotubes
+themselves are responding.
 
-However, the use of the functionalisation procedure with PBASE in
-methanol and OR22a in nanodiscs was not readily reproducible. A repeat
-of the functionalisation procedure and sensing procedure across six
-different device channels showed no decrease in current subsequent to
-additions ranging from 1 fM to 1 µM. Further control testing indicated
-that the successful sensing seen earlier was not spurious, meaning that
-the lack of reproducibility could be attributed to the functionalisation
-procedure. Device characterisation showed that although nanodiscs
-appeared to be present on the channel, with a change in network height
-of over 20 nm, the average threshold shift was the same as that of a
-device functionalised using PBASE in methanol without subsequent
-exposure to nanodiscs. A control taken without using PBASE also showed
-nanodiscs present on the channel, but resulted in a threshold shift of
-\(\sim -0.27\) V. It therefore appears that while nanodiscs are present,
-they are blocked off from the network in a way that prevents them from
-altering the electrical characteristics of the channel.
-
-Potential confounding variables identified in the functionalisation
-process included coatings of surfactant, solvent, photoresist,
-multilayered or hydrolysed PBASE, and the atmospheric long-chain alkanes
-which cause carbon nanotube hydrophobicity. Several possible confounding
-variables were individually eliminated by making slight changes to the
-fabrication and functionalisation of the device. Neither changing the
-morphology of the carbon nanotube network or using a graphene device led
-to a operational sensor. Furthermore, the average threshold shift for
-the highly-bundled device after functionalisation was \(−0.02\pm0.01\)
-V, indicating a lack of electrical contact between the channel and
-nanodiscs even without surfactant present. By changing the solvent used
-for functionalisation from methanol to DMSO, the average threshold shift
-was \(−0.22\pm0.03\) V, which demonstrates electrical contact with the
-nanodiscs. However, no negative current changes were observed subsequent
-to analyte additions, suggesting other confounding factors are also
-present. To ensure that the hygroscopic DMSO was not hydrolysing the
-PBASE and preventing odorant receptor attachment, a PBA with EDC/NHS
-functionalisation method was used. However, the average threshold shift
-observed was \(-0.12\pm0.01\) V, similar to the -0.15 V shift seen for
-attachment of PBA to DMSO without subsequent modification. The
-confounding factor is therefore not resolved by either changing the
-solvent or through the prevention of hydrolysis.
-
-The remaining possible sources of surface contamination, including
-alkane hydrocarbons, multilayer linker and photoresist, were then
-addressed by making significant changes to the functionalisation
-procedure. To avoid multilayer coverage, pyrene-PEG-biotin was attached
-to avi-tagged odorant receptors before functionalisation. To remove
-hydrocarbons and residual photoresist, the transducer device was gently
-oxygen plasma cleaned before functionalisation. Furthermore, no
-nanodiscs were used, to ensure direct attachment of odorant receptors.
-Although there are also issues with reliable reproducibility of this
-method due to the plasma cleaning step, when a device was functionalised
-with OR10a in this manner, device current decreases of up to \(\sim\)
-24\% were observed in response to methyl salicylate additions. It was
-found that rinsing the device meant the sensors transfer characteristics
-were restored, and the device could be reused. When reusing the sensor,
-a logarithmic relationship was observed between picomolar concentrations
-of methyl salicylate in the well and the sensor current response.
+The aqueous functionalisation approach used in
+\textbf{?@sec-vapour-sensing-biosensors} was also used for vapour
+sensing with OR35a odorant receptors. Clear responses consistent with
+those seen in an aqueous environment were not observed. The changes in
+current seen appeared more likely to result from a breakdown of the
+linear approximation of baseline drift for functionalised devices, or
+from increased non-specific sensitivity of the device
+post-functionalisation. It was concluded that reproducible vapour
+sensing would require either a robust covalent functionalisation method
+which used a protective membrane-like format, or alternatively requires
+a capture layer to protect non-covalently attached odorant receptors
+from the harsh chamber environment. However, it was found 0.5\% v/v DMSO
+\(1 \times\) PBS could not act as this capture layer, due to rapid
+evaporation of the layer dramatically altering baseline drift from
+\(\sim\) 800 s onwards. An alternative liquid should therefore be
+identified which is biofriendly and miscible, while having a low vapour
+pressure (ideally \(< 100\) Pa at room temperature). It should also
+repel PDMS, to remain contained in the PDMS well upside down in the
+device chamber. These approaches significantly expand the scope of this
+work, and are therefore not addressed extensively in this thesis.
+However, some preliminary work on alternative approaches is discussed in
+\textbf{?@sec-future-work}.
 
 \cleardoublepage
 \phantomsection
