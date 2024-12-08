@@ -216,7 +216,7 @@ The discussion in this section gives us a new understanding of the histograms sh
 
 Raman spectroscopy was also used to analyse and compare the deposited carbon nanotube networks. Raman measurements were collected from a solvent-deposited carbon nanotube film and a steam-assisted surfactant-deposited film, both on SiO$_2$, in the manner described in @sec-raman-characterisation. These spectra were then processed using the Python script mentioned in @sec-raman-analysis. For each location, spectra over two wavenumber ranges were collected. A peak corresponding to the bulk Si/SiO$_2$ substrate, found in the range between 100 cm$^{-1}$ and 650 cm$^{-1}$, was used as a reference peak for normalisation of spectral intensity [@E2015]; these normalised spectra are shown in @fig-pristine-raman. In nanotube networks, the properties of individual nanotubes influence the frequency of vibrational modes excited by the inelastic scattering of incident laser light, and therefore the location of peaks in the resulting Raman spectrum. In carbon nanotube network spectra, a D-band comprising a single D-peak is typically observed at $\sim$ 1320 cm$^{-1}$, and a G-band comprising two G-peaks, G$^-$ and G$^+$, is observed between $\sim$ 1525 cm$^{-1}$ and $\sim$ 1650 cm$^{-1}$, as seen in @fig-pristine-raman (a)-(b) [@Dresselhaus2005; @King2014; @E2015].
 
-::: {#fig-pristine-raman fig-scap="Raman spectra at different locations across two different 40 µm $\times$ 100 µm carbon nanotube film regions, along with a histogram of D-peak/G$^+$-peak spectral ratios corresponding to each film." layout="[[-11,3,-1,70,-15], [-11,3,-1,70,-15], [-10,3,-1,72,-14]]"}
+::: {#fig-pristine-raman fig-scap="Raman spectra at different locations across two different 40 µm $\\times$ 100 µm carbon nanotube film regions, along with a histogram of D-peak/G$^+$-peak spectral ratios corresponding to each film." layout="[[-11,3,-1,70,-15], [-11,3,-1,70,-15], [-10,3,-1,72,-14]]"}
 ![](figures/(a).png)
 
 ![](figures/ch5/bundled_raman.png)
@@ -245,7 +245,6 @@ Analysis of electrical measurements was performed using the three Python modules
 The first of the three modules is for processing sensing datasets. Types of plots produced include normalised plots, plots with fitted curves, plots with the linear baseline drift removed, plots of signal against analyte addition, 'despiked' plots, 'filtered' plots and plots with any combination of these modifications. This module uses the scipy.optimize.curve_fit function when fitting exponential and linear curves to regions of the sensing data. It then returns .csv spreadsheets containing the results of these analyses, including the standard deviation for all calculated parameters. For a linear fit $c_1t + c_2$, the initial estimates used for $c_1$ and $c_2$ were straightforward: $c_1=1$ and $c_2=0$. For an exponential fit $I_0\exp{(-t/\tau)} + I_C$, rough approximations were used for the initial parameters: $I_C$ was set as the final current measurement of the region of interest, $I_0$ was set as the initial current measurement minus $I_C$, and $\tau$ was set as the time where measured current drops to $e^{-1}I_0 + I_C$.
 
 ::: {#fig-spaa-plot-comparison fig-scap="A comparison of signal with analyte addition plots with different filtering approaches used." layout="[[-13.5,3,-1,65,-17.5],[-13.5,3,-1,65,-17.5]]"}
-
 ![](figures/(a).png)
 
 ![](figures/ch5/NTQ31C1_mean_simple_difference_before_and_after_step_filtered_concentrations.png)
@@ -263,7 +262,7 @@ The second module creates combined and individual plots of transfer data collect
 
 ### Graphene Devices
 
-::: {#fig-pristine-graphene fig-scap="Liquid-gated transfer characteristics of channels from two encapsulated graphene devices, alongside the change in transfer characteristics upon various degrees of exposure to $1 \times$ PBS." layout="[[3,-1,45,-1,3,-1,45,-1], [3,-1,45,-1,3,-1,45,-1]]"}
+::: {#fig-pristine-graphene fig-scap="Liquid-gated transfer characteristics of channels from two encapsulated graphene devices, alongside the change in transfer characteristics upon various degrees of exposure to $1 \\times$ PBS." layout="[[3,-1,45,-1,3,-1,45,-1], [3,-1,45,-1,3,-1,45,-1]]"}
 ![](figures/(a).png)
 
 ![](figures/ch5/JG098_pristine_TXLG01_5mVstep_220920_norinse.png)
@@ -317,7 +316,7 @@ Graphene field-effect transistor devices were electrically characterised in the 
 Back-gated (left) and liquid-gated (right) transfer characteristics of AZ$^\circledR$ 1518 encapsulated carbon nanotube network field-effect transistors, where the film was deposited with solvent in (a) and (b), deposited with surfactant in (c) and (d), and deposited with surfactant in the presence of steam in (e) and (f). A step size of 100 mV was used for the backgated sweeps in (a), (c) and (e), while a step size of 20 mV was used for the liquid-gated sweeps in (b), (d) and (f). Gate current (leakage current) is shown with a dashed line. The source-drain voltage used for all sweeps was $V_{ds} = 100 \textrm{mV}$, and $1 \times$ PBS was used as the buffer for the liquid-gated measurements here.
 :::
 
-::: {#fig-buffer-effect-on-backgate fig-scap="Backgated transfer sweeps of an single unencapsulated device before and after exposure to 50 µL $1 \times$ PBS." layout="[[3,-1,45,-1,3,-1,45,-1]]"}
+::: {#fig-buffer-effect-on-backgate fig-scap="Backgated transfer sweeps of an single unencapsulated device before and after exposure to 50 µL $1 \\times$ PBS." layout="[[3,-1,45,-1,3,-1,45,-1]]"}
 ![](figures/(a).png)
 
 ![](figures/ch5/Q35C3_nobuffer.png)
@@ -370,7 +369,6 @@ The solvent-deposited devices had a slightly larger transconductance at $V_g$ = 
 ### Control Series and Baseline Drift {#sec-baseline-drift}
 
 ::: {#fig-salt-conc-control-series fig-scap="Salt concentration control series across six device channels, with linear and exponential fits to the baseline drift of each channel." layout="[[-11,3,-1,70,-15], [-11,3,-1,70,-15]]"}
-
 ![](figures/(a).png)
 
 ![](figures/ch5/NTQ31C1_pristine_saltconc_sample_230324_control.png)
