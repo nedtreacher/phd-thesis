@@ -21,17 +21,17 @@ A carbon nanotube network field-effect transistor device, fabricated using post-
 
 1.  The device was exposed to UV light for 1 minute, placed in AZ$^\circledR$ 326 developer for 3 minutes, then rinsed with acetone, isopropanol and nitrogen dried.
 
-2.  The device was vacuum annealed for 1 hour at 150°C.
+2.  The device was vacuum annealed for 1 hour at 150 °C.
 
 Note: Steps 1 & 2 were added to ensure any residual photoresist on the channel was removed or passivated before functionalisation, see @sec-photoresist-contamination.
 
 3.  A solution of 1 mM PBASE (Setareh Biotech) in methanol was prepared by fully dissolving 2 mg PBASE in 5 mL methanol by vortex mixing at 1000 rpm in a dark room.
 
-Note: PBASE was stored at -18°C for 18 months prior to use, and was thawed under vacuum for 15 minutes in dark conditions before opening.
+Note: PBASE was stored at -18 °C for 18 months prior to use, and was thawed under vacuum for 15 minutes in dark conditions before opening.
 
 4.  The device was then rinsed with methanol, fully submerged in $\sim$ 1 mL of PBASE in methanol solution and left covered with parafilm for 1 hour, then rinsed with methanol for 15 s, rinsed with phosphate buffered saline (PBS) for 15 s and nitrogen dried to remove residual PBASE.
 
-5.  The device was left dry and in darkness while collecting the OR22a nanodiscs from the -80°C freezer.
+5.  The device was left dry and in darkness while collecting the OR22a nanodiscs from the -80 °C freezer.
 
 6.  10 µL OR22a nanodiscs (batch number ND-OR22a-SB018, 1.9 mg/mL, prepared 7 months earlier) were diluted in 1 mL freshly-prepared PBS.
 
@@ -296,7 +296,7 @@ Throughout the course of this thesis, multiple potential candidates for the unwa
 
 Before testing to see if a surface coating was responsible for the lack of response seen to ethyl hexanoate by the device in @sec-variability-biosensor, it was important to investigate the possibility the signals seen in @sec-EtHex-aqueous-sensing were false positives. The highly sensitive device channel could credibly respond to three different rapid environmental changes occurring with each addition: the mechanical action of the addition, a difference between the 0.5% v/v DMSO in $1 \times$ PBS containing the analyte and the 0.5% v/v DMSO in $1 \times$ PBS already in the well, or a direct response to analyte. It is important to eliminate the first two possibilities to be certain that the device is responding to analyte. The control series as it stands demonstrates responses cannot be explained by mechanical action. All analyte solutions are prepared simultaneously using the same $1 \times$ PBS, taking care to avoid cross-contamination, so responses are unlikely to result from a difference between the $1 \times$ PBS in the analyte solution and the $1 \times$ PBS in the well. It then must be verified whether a functionalised device channel will respond to a change in DMSO concentration, which is the result of the DMSO concentration in an analyte addition being different to the concentration in the PDMS well.
 
-@fig-DMSO-concentration shows that a increase in DMSO concentration in the well from 1% v/v to 2.5% v/v leads to a steep drop in current of 0.5% $-$ 1.5% across two OR22a-functionalised device channels, significantly smaller than the \>2% changes seen in @sec-EtHex-aqueous-sensing. Furthermore, as precise measurements were used during analyte preparation, a change in proportion of DMSO in the well of this scale during a sensing sequence is unlikely. It therefore seems improbable that a change in DMSO concentration is causing the sensing responses in @sec-EtHex-aqueous-sensing. However, the author recommends a slight modification to the control series used earlier for a more robust experimental baseline in future works. For a device with 100 µL 0.5% v/v DMSO $1 \times$ PBS in the well after the control addition at 100 s, a subsequent 20 µL addition of 1% v/v DMSO $1 \times$ PBS at 200 s and 20 µL addition of 0% v/v DMSO $1 \times$ PBS addition at 300 s can be used to check for spurious responses due to changing DMSO concentration, while ensuring the DMSO concentration in the well is 0.5% v/v after the control series.
+@fig-DMSO-concentration shows that a increase in DMSO concentration in the well from 1% v/v to 2.5% v/v leads to a steep drop in current of 0.5% $-$ 1.5% across two OR22a-functionalised device channels, significantly smaller than the \>2% changes seen in @sec-EtHex-aqueous-sensing. Furthermore, as precise measurements were used during analyte preparation, a change in proportion of DMSO in the well of this scale during a sensing sequence is unlikely. It therefore seems improbable that a change in DMSO concentration is causing the sensing responses in @sec-EtHex-aqueous-sensing. However, the author recommends a slight modification to the control series used earlier for a more robust experimental baseline in future works. For a device with 100 µL 0.5% v/v DMSO $1 \times$ PBS in the well after the control addition at 100 s, a subsequent 20 µL addition of 1% v/v DMSO $1 \times$ PBS at 200 s and 20 µL addition of 0% v/v DMSO $1 \times$ PBS addition at 300 s can be used to check for spurious responses due to changing DMSO concentration, while ensuring the DMSO concentration in the well is still 0.5% v/v after the control series.
 
 #### Fabrication {.unnumbered}
 
@@ -476,13 +476,13 @@ From this elimination process, three possible sources of variability in device p
 
 ### Aqueous-Based Functionalisation {#sec-aqueous-functionalisation}
 
-A carbon nanotube network field-effect transistor device, fabricated using post-Jun 2023 methods as described in @sec-fabrication, was functionalised with a novel method using OR10a solubilised in surfactant. The odorant receptors were not expressed in a nanodisc format to avoid nanodisc-film interaction, despite this leaving them potentially vulnerable to adverse environmental conditions [@Nath2007; @Bayburt2010]. The odorant receptors were avi-tagged and subsequently modified with pyrene-PEG-biotin, as described in @sec-NTA-biotin-PEG, allowing them to attach directly from solution to the carbon nanotubes via the pyrene linker. The prior attachment of odorant receptors to linker means that this approach must be entirely performed in aqueous solution, but ensures no PBASE or PBA was needed in the functionalisation process. To eliminate the hydrocarbonaceous coating of nanotubes and ensure aqueous functionalisation was possible, a short oxygen plasma cleaning step was used.
+A carbon nanotube network field-effect transistor device, fabricated using post-Jun 2023 methods as described in @sec-fabrication, was functionalised with a novel method using OR10a solubilised in surfactant. The odorant receptors were not expressed in a nanodisc format to avoid nanodisc-film interaction, despite this leaving them potentially vulnerable to adverse environmental conditions [@Nath2007; @Bayburt2010]. The odorant receptors were avi-tagged, biotinylated and subsequently modified with avidin and pyrene-PEG-biotin (PPB), as described in @sec-NTA-biotin-PEG. This allowed the odorant receptors to attach directly from solution to the carbon nanotubes via the pyrene linker. The prior attachment of odorant receptors to linker means that this approach must be entirely performed in aqueous solution, but ensures no PBASE or PBA was needed in the functionalisation process. To eliminate the hydrocarbonaceous coating of nanotubes and ensure aqueous functionalisation was possible, a short oxygen plasma cleaning step was used.
 
 The details of the functionalisation process, loosely based on the non-covalent functionalisation procedure used by Miki *et al.* [@Miki2019], are as follows:
 
 1.  The device was exposed to UV light for 1 minute, placed in AZ$^\circledR$ 326 developer for 3 minutes, then rinsed with acetone, isopropanol and nitrogen dried.
 
-2.  The device was vacuum annealed for 1 hour at 150°C.
+2.  The device was vacuum annealed for 1 hour at 150 °C.
 
 Note: Steps 1 & 2 were added to either remove or passivate residual photoresist on the channel before functionalisation, see @sec-photoresist-contamination.
 
@@ -605,10 +605,34 @@ The functionalisation method used in this section has a number of advantages ove
 
 ## Conclusion
 
-A carbon nanotube device was non-covalently functionalised using PBASE in methanol with OR22a nanodiscs and operated as a biosensor in an aqueous environment. Real-time conductance decreases of up to $\sim$ 45% across the sensor channel were observed in response to analyte additions, which varied logarithmically low analyte concentrations. Short-term drift behaviour was found to be similar to that of pristine devices, but it appears functionalisation may affect long-term baseline drift. Other changes resulting from successful sensor functionalisation included a device threshold voltage shift of $-0.20\pm0.03$ V and an increase in network height of over 15 nm, both resulting from the presence of nanodiscs on the network. Additionally, to confirm the presence of odorant receptors on device channels post-functionalisation, ORs were tagged with green fluorescent protein and fluorescence microscope images taken. The functionalised channels showed significantly more green fluorescence than the control, which indicates that protein attachment to the channel is not limited to empty na
+A carbon nanotube device was non-covalently functionalised using PBASE in methanol with OR22a nanodiscs and operated as a biosensor in an aqueous environment. Real-time conductance decreases of up to $\sim$ 45% across the sensor channel were observed in response to analyte additions, which varied logarithmically low analyte concentrations. Short-term drift behaviour was found to be similar to that of pristine devices, but it appears functionalisation may affect long-term baseline drift. Other changes resulting from successful sensor functionalisation included a device threshold voltage shift of $-0.20\pm0.03$ V and an increase in network height of over 15 nm, both resulting from the presence of nanodiscs on the network. Additionally, to confirm the presence of odorant receptors on device channels post-functionalisation, ORs were tagged with green fluorescent protein and fluorescence microscope images taken. The functionalised channels showed significantly more green fluorescence than the control, which indicates that protein attachment to the channel is not limited to empty nanodiscs.
 
 However, the use of the functionalisation procedure with PBASE in methanol and OR22a in nanodiscs was not readily reproducible. A repeat of the functionalisation procedure and sensing procedure across six different device channels showed no decrease in current subsequent to additions ranging from 1 fM to 1 µM. Further control testing indicated that the successful sensing seen earlier was not spurious, meaning that the lack of reproducibility could be attributed to the functionalisation procedure. Device characterisation showed that although nanodiscs appeared to be present on the channel, with a change in network height of over 20 nm, the average threshold shift was the same as that of a device functionalised using PBASE in methanol without subsequent exposure to nanodiscs. A control taken without using PBASE also showed nanodiscs present on the channel, but resulted in a threshold shift of $\sim -0.27$ V. It therefore appears that while nanodiscs are present, they are blocked off from the network in a way that prevents them from altering the electrical characteristics of the channel.
 
 Potential confounding variables identified in the functionalisation process included coatings of surfactant, solvent, photoresist, multilayered or hydrolysed PBASE, and the atmospheric long-chain alkanes which cause carbon nanotube hydrophobicity. Several possible confounding variables were individually eliminated by making slight changes to the fabrication and functionalisation of the device. Neither changing the morphology of the carbon nanotube network or using a graphene device led to a operational sensor. Furthermore, the average threshold shift for the highly-bundled device after functionalisation was $−0.02\pm0.01$ V, indicating a lack of electrical contact between the channel and nanodiscs even without surfactant present. By changing the solvent used for functionalisation from methanol to DMSO, the average threshold shift was $−0.22\pm0.03$ V, which demonstrates electrical contact with the nanodiscs. However, no negative current changes were observed subsequent to analyte additions, suggesting other confounding factors are also present. To ensure that the hygroscopic DMSO was not hydrolysing the PBASE and preventing odorant receptor attachment, a PBA with EDC/NHS functionalisation method was used. However, the average threshold shift observed was $-0.12\pm0.01$ V, similar to the -0.15 V shift seen for attachment of PBA to DMSO without subsequent modification. The confounding factor is therefore not resolved by either changing the solvent or through the prevention of hydrolysis.
 
-The remaining possible sources of surface contamination, including alkane hydrocarbons, multilayer linker and photoresist, were then addressed by making significant changes to the functionalisation procedure. To avoid multilayer coverage, pyrene-PEG-biotin was attached to avi-tagged odorant receptors before functionalisation. To remove hydrocarbons and residual photoresist, the transducer device was oxygen plasma cleaned before functionalisation in the most gentle manner available to the author. Furthermore, no nanodiscs were used, to ensure direct attachment of odorant receptors. Although there are also issues with reliable reproducibility of this method due to the plasma cleaning step, when a device was functionalised with OR10a in this manner, device current decreases of up to $\sim$ 24% were observed in response to methyl salicylate additions. It was found that rinsing the device meant the sensors transfer characteristics were restored, and the device could be reused. When reusing the sensor, a logarithmic relationship was observed between picomolar concentrations of methyl salicylate in the well and the sensor current response.
+```{r}
+#| label: setup-84
+#| include: false
+
+library(tidyverse)
+library(kableExtra)
+
+method_summary <- read.csv("tables/ch7/method_summary.csv", sep=",", check.names=FALSE)
+method_summary <- method_summary[rowSums(is.na(method_summary)) == 0,]
+```
+
+```{r}
+#| tbl-cap: Summary of approaches used for sensor functionalisation in this chapter.
+#| label: tbl-method-summary
+#| echo: false
+
+method_summary %>% 
+  kable(
+    booktabs = TRUE, #LaTeX "booktabs formatting"
+    row.names = FALSE, #remove row labels
+    linesep = "" #no linespaces
+  ) %>% column_spec(1, width = "4.5cm") %>% column_spec(2, width = "1.6cm") %>% column_spec(3, width = "1.6cm") %>% column_spec(4, width = "1cm") %>% column_spec(5, width = "1.5cm")
+```
+
+The remaining possible sources of surface contamination, including alkane hydrocarbons, multilayer linker and photoresist, were then addressed by making significant changes to the functionalisation procedure. To avoid multilayer coverage, pyrene-PEG-biotin was attached to avi-tagged odorant receptors before functionalisation. To remove hydrocarbons and residual photoresist, the transducer device was oxygen plasma cleaned before functionalisation in the most gentle manner available to the author. Furthermore, no nanodiscs were used, to ensure direct attachment of odorant receptors. Although there are also issues with reliable reproducibility of this method due to the plasma cleaning step, when a device was functionalised with OR10a in this manner, device current decreases of up to $\sim$ 24% were observed in response to methyl salicylate additions. It was found that rinsing the device meant the sensors transfer characteristics were restored, and the device could be reused. When reusing the sensor, a logarithmic relationship was observed between picomolar concentrations of methyl salicylate in the well and the sensor current response. A summary of the different functionalisation processes trialled in this section can be found in @tbl-method-summary.
