@@ -204,7 +204,7 @@
 \date{}
 
 \begin{document}
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, frame hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, interior hidden, sharp corners, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, frame hidden, interior hidden, boxrule=0pt, sharp corners, enhanced, breakable]}{\end{tcolorbox}}\fi
 
 \hypertarget{sec-pristine-characteristics}{%
 \section{Characteristics of Pristine Thin-Film
@@ -563,15 +563,18 @@ while the length range is \(0.3-5.0\) µm (Nanointegris).
 
 \end{minipage}%
 
-\caption{\label{fig-afm-morphology}2.5 µm \(\times\) 2.5 µm atomic force
-microscope (AFM) images of carbon nanotube films deposited using various
-methods, shown side-by-side with histogram height distributions and
-kernel density estimate (KDE) plots corresponding to each image. The
-network shown in (a) with height distribution shown in (b) was deposited
-in solvent, the network shown in (c) with height distribution shown in
-(d) was dropcast in surfactant, and the network shown in (e) with height
-distribution shown in (f) was dropcast in surfactant with steam
-present.}
+\caption[Atomic force microscope images of carbon nanotube films
+deposited using various methods, shown side-by-side with histogram
+height distributions and kernel density estimate (KDE) plots
+corresponding to each image.]{\label{fig-afm-morphology}2.5 µm
+\(\times\) 2.5 µm atomic force microscope (AFM) images of carbon
+nanotube films deposited using various methods, shown side-by-side with
+histogram height distributions and kernel density estimate (KDE) plots
+corresponding to each image. The network shown in (a) with height
+distribution shown in (b) was deposited in solvent, the network shown in
+(c) with height distribution shown in (d) was dropcast in surfactant,
+and the network shown in (e) with height distribution shown in (f) was
+dropcast in surfactant with steam present.}
 
 \end{figure}
 
@@ -881,8 +884,10 @@ modified surfaces are shown in Figure~\ref{fig-afm-substrate}.
 
 \end{minipage}%
 
-\caption{\label{fig-afm-substrate}2.5 µm \(\times\) 2.5 µm atomic force
-microscope (AFM) images of SiO\(_2\) substrates alongside histogram
+\caption[Atomic force microscope images of SiO\(_2\) substrates
+alongside histogram height distributions and KDE plots corresponding to
+each image.]{\label{fig-afm-substrate}2.5 µm \(\times\) 2.5 µm atomic
+force microscope images of SiO\(_2\) substrates alongside histogram
 height distributions and KDE plots corresponding to each image. The
 substrate in (a) and (b) was exposed to solvent, the substrate in (c)
 and (d) was exposed to surfactant, and the substrate in (e) and (f) was
@@ -1232,7 +1237,9 @@ R-squared value of 0.98.
 
 \end{minipage}%
 
-\caption{\label{fig-cnt-mask}A mask, shaded green, sets a height
+\caption[Atomic force microscope images which have been masked
+(highlighted green) below various threshold
+heights.]{\label{fig-cnt-mask}A mask, shaded green, sets a height
 threshold so that masked features are hidden from the height dataset.
 The network in (a), (c) and (e) was solvent-deposited, while the network
 in (b), (d) and (f) was surfactant-deposited. The maximum possible
@@ -1481,9 +1488,11 @@ substrate, following the same approach as Vobornik \emph{et al.}
 
 \end{minipage}%
 
-\caption{\label{fig-cnt-histogram}Histogram height distributions for
-each carbon nanotube network with corresponding kernel density estimate
-plots collected via the morphology analysis method outlined by Vobornik
+\caption[Histogram height distributions for each carbon nanotube network
+with corresponding kernel density estimate
+plots.]{\label{fig-cnt-histogram}Histogram height distributions for each
+carbon nanotube network with corresponding kernel density estimate plots
+collected via the morphology analysis method outlined by Vobornik
 \emph{et al.} {[}@Vobornik2023{]}. The histogram for the
 solvent-deposited network in (a) is shown in (b) and the histogram for
 the surfactant-deposited network in (c) is shown in (d). The red dotted
@@ -1835,12 +1844,16 @@ gives a reasonable estimate of substrate height even for dense networks.
 
 \end{minipage}%
 
-\caption{\label{fig-dense-network}The dense steam-deposited network is
-covered with a mask showing the maximum possible height of the substrate
-in (a) and covered with a mask highlighting imaging artifacts in (b). A
-histogram of bundle measurements above the median substrate height is
-shown in (c), while a mask covering all regions with height at or
-greater than the median carbon nanotube diameter is shown in (d).}
+\caption[An atomic force microscope image of a dense carbon nanotube
+network which has been masked below various threshold heights, along
+with corresponding histogram height distribution and kernel density
+estimate plots.]{\label{fig-dense-network}The dense steam-deposited
+network is covered with a mask showing the maximum possible height of
+the substrate in (a) and covered with a mask showing median substrate
+height in (b). A histogram of bundle measurements above the median
+substrate height is shown in (c), while a mask covering all regions with
+height at or greater than the median carbon nanotube diameter is shown
+in (d).}
 
 \end{figure}
 
@@ -2084,12 +2097,15 @@ cm\(^{-1}\), as seen in Figure~\ref{fig-pristine-raman} (a)-(b)
 
 \end{minipage}%
 
-\caption{\label{fig-pristine-raman}A series of nine Raman spectra at
-different locations across a 40 µm \(\times\) 100 µm carbon nanotube
-film region, where (a) shows spectra from a film deposited using solvent
-while (b) shows spectra from a film deposited with surfactant in the
-presence of steam. (c) shows a histogram of the range of
-D-peak/G\(^+\)-peak spectral ratios corresponding to each film.}
+\caption[Raman spectra at different locations across two different 40 µm
+\(\times\) 100 µm carbon nanotube film regions, along with a histogram
+of D-peak/G\(^+\)-peak spectral ratios corresponding to each
+film.]{\label{fig-pristine-raman}A series of nine Raman spectra at
+different locations across two different 40 µm \(\times\) 100 µm carbon
+nanotube film regions, where (a) shows spectra from a film deposited
+using solvent while (b) shows spectra from a film deposited with
+surfactant in the presence of steam. (c) shows a histogram of the range
+of D-peak/G\(^+\)-peak spectral ratios corresponding to each film.}
 
 \end{figure}
 
@@ -2293,8 +2309,10 @@ present.
 
 \end{minipage}%
 
-\caption{\label{fig-spaa-plot-comparison}A comparison of signal with
-analyte addition plots taken from a PBS dilution sensing dataset. In
+\caption[A comparison of signal with analyte addition plots with
+different filtering approaches used.]{\label{fig-spaa-plot-comparison}A
+comparison of signal with analyte addition plots with different
+filtering approaches used taken from a PBS dilution sensing dataset. In
 (a), a simple difference before and after addition calculation was
 performed on filtered data with the baseline drift removed, while in
 (b), baseline drift was not removed before performing the calculation.}
@@ -2511,14 +2529,16 @@ or major Dirac voltage of the device.
 
 \end{minipage}%
 
-\caption{\label{fig-pristine-graphene}Figures (a) and (b) show
-liquid-gated transfer characteristics of channels from two
-AZ\(^\circledR\) 1518 encapsulated graphene devices. The transfer
-characteristics of channel 1 in (a) and channel 5 in (b) after various
-degrees of exposure to \(1 \times\) PBS are shown in (c) and (d)
-respectively, with each transfer sweep numbered in the order the sweeps
-were taken. The dashed lines correspond to measurements of gate leakage
-current.}
+\caption[Liquid-gated transfer characteristics of channels from two
+encapsulated graphene devices, alongside the change in transfer
+characteristics upon various degrees of exposure to \(1 \times\)
+PBS.]{\label{fig-pristine-graphene}Figures (a) and (b) show liquid-gated
+transfer characteristics of channels from two AZ\(^\circledR\) 1518
+encapsulated graphene devices. The transfer characteristics of channel 1
+in (a) and channel 5 in (b) after various degrees of exposure to
+\(1 \times\) PBS are shown in (c) and (d) respectively, with each
+transfer sweep numbered in the order the sweeps were taken. The dashed
+lines correspond to measurements of gate leakage current.}
 
 \end{figure}
 
@@ -2895,17 +2915,20 @@ Dirac Point Voltage (V) & 0.28 ± 0.04 & 0.31 ± 0.03 & 0.28 ± 0.02 \\
 
 \end{minipage}%
 
-\caption{\label{fig-pristine-cnt-characteristics}Back-gated (left) and
+\caption[Back-gated and liquid-gated transfer characteristics of
+encapsulated carbon nanotube network field-effect transistors with
+thin-films deposited using various
+methods.]{\label{fig-pristine-cnt-characteristics}Back-gated (left) and
 liquid-gated (right) transfer characteristics of AZ\(^\circledR\) 1518
-encapsulated field-effect transistors, where the film was deposited with
-solvent in (a) and (b), deposited with surfactant in (c) and (d), and
-deposited with surfactant in the presence of steam in (e) and (f). A
-step size of 100 mV was used for the backgated sweeps in (a), (c) and
-(e), while a step size of 20 mV was used for the liquid-gated sweeps in
-(b), (d) and (f). Gate current (leakage current) is shown with a dashed
-line. The source-drain voltage used for all sweeps was
-\(V_{ds} = 100 \textrm{mV}\), and \(1 \times\) PBS was used as the
-buffer for the liquid-gated measurements here.}
+encapsulated carbon nanotube network field-effect transistors, where the
+film was deposited with solvent in (a) and (b), deposited with
+surfactant in (c) and (d), and deposited with surfactant in the presence
+of steam in (e) and (f). A step size of 100 mV was used for the
+backgated sweeps in (a), (c) and (e), while a step size of 20 mV was
+used for the liquid-gated sweeps in (b), (d) and (f). Gate current
+(leakage current) is shown with a dashed line. The source-drain voltage
+used for all sweeps was \(V_{ds} = 100 \textrm{mV}\), and \(1 \times\)
+PBS was used as the buffer for the liquid-gated measurements here.}
 
 \end{figure}
 
@@ -3007,10 +3030,12 @@ buffer for the liquid-gated measurements here.}
 
 \end{minipage}%
 
-\caption{\label{fig-buffer-effect-on-backgate}Backgated transfer sweeps
-were taken of an single unencapsulated device with a 300 nm SiO\(_2\)
-layer and steam assisted surfactant-deposited carbon nanotube network
-channels before and after being covered in 50 µL \(1 \times\) PBS.}
+\caption[Backgated transfer sweeps of an single unencapsulated device
+before and after exposure to 50 µL \(1 \times\)
+PBS.]{\label{fig-buffer-effect-on-backgate}Backgated transfer sweeps of
+an single unencapsulated device with a 300 nm SiO\(_2\) layer and steam
+assisted surfactant-deposited carbon nanotube network channels before
+and after being covered in 50 µL \(1 \times\) PBS.}
 
 \end{figure}
 
@@ -3208,15 +3233,20 @@ channels before and after being covered in 50 µL \(1 \times\) PBS.}
 
 \end{minipage}%
 
-\caption{\label{fig-sweep-parameters}These boxplots illustrate the
+\caption[Boxplots showing the statistical distribution of the on-off
+ratio, transconductance, threshold voltage and subthreshold slope of
+liquid-gated encapsulated carbon nanotube network transistor channels
+with thin-films deposited using various
+methods.]{\label{fig-sweep-parameters}These boxplots illustrate the
 statistical distribution of (a) the on-off ratio, (b) the
 transconductance at \(V_g\) = 0 V, (c) the threshold voltage and (d) the
 subthreshold slope of liquid-gated and AZ\(^\circledR\) 1518
-encapsulated transistor channels fabricated using solvent-deposited,
-surfactant-deposited or steam-assisted surfactant-deposited methods. For
-each deposition type, electrical characteristics were taken of 21
-channels of at least three separate devices. The boxes indicate the 25th
-and 75th percentile of the distribution.}
+encapsulated carbon nanotube network transistor channels fabricated
+using solvent-deposited, surfactant-deposited or steam-assisted
+surfactant-deposited methods. For each deposition type, electrical
+characteristics were taken of 21 channels of at least three separate
+devices. The boxes indicate the 25th and 75th percentile of the
+distribution.}
 
 \end{figure}
 
@@ -3524,16 +3554,7 @@ Drift}\label{sec-baseline-drift}}
 
 \end{minipage}%
 
-\caption{\label{fig-salt-conc-control-series}The transfer
-characteristics in (a) were taken of the steam-deposited carbon nanotube
-field-effect transistor used here for an example of salt concentration
-sensing. The absolute values of measurements are shown, so that negative
-values resulting from measurement error can be visualised. Linear fits
-to the PBS control series from each channel from 1200 s onwards are
-shown in (b), while exponential fits to the PBS control series from
-\(0-1200\) s with the linear fit subtracted are shown in (c). No
-significant response to PBS additions are seen at any of the addition
-times from \(100-600\) s.}
+\caption{\label{fig-salt-conc-control-series}???}
 
 \end{figure}
 
@@ -3545,8 +3566,8 @@ first step to verifying device suitability was ensuring the device
 showed no response to \(1 \times\) PBS, unwanted behaviour which has
 previously been observed during sensing runs using similar devices
 {[}@Cassie2023{]}. This sequence is referred to in this thesis as the
-``PBS control series''. The PDMS well contained 80 µL \(1 \times\) PBS
-at 0 s. The PBS control series ran over the first 1800 s, with 20 µL
+`PBS control series'. The PDMS well contained 80 µL \(1 \times\) PBS at
+0 s. The PBS control series ran over the first 1800 s, with 20 µL
 \(1 \times\) PBS additions at 100 s, 200 s and 300 s, and 20 µL
 subtractions at 400 s, 500 s and 600 s. The device was left untouched
 over the next 1200 s to allow the current level to settle, seen to be
@@ -4492,21 +4513,23 @@ straightforward.
 
 However, less bundled networks had the most surface contamination
 present. Atomic force microscopy indicated the presence of contamination
-due to steam-assisted deposition. Raman spectroscopy showed that steam
-deposition led to increased defects in the network, with a significantly
-increased D-peak to G\(^+\)-peak height ratio. The average threshold
-voltage for steam-assisted surfactant-deposited network devices was
-significantly higher than the average threshold voltage for
-solvent-deposited devices, indicating these defects \(p\)-dope the
-network. The shift in threshold voltage was found to reduce device
-transconductance, a parameter which should be maximised for optimal
-sensing. Furthermore, the presence of surfactant or even trapped water
-could potentially have negative impacts on device functionalisation,
-discussed further in \textbf{?@sec-noncovalent-functionalisation}.
-Techniques to remove contaminants may need to be explored in more detail
-in future works. Thermal oxidation of carbon nanotube films could be
-used to resolve this issue, and this is discussed further in
-\textbf{?@sec-future-work-fabrication}.
+due to steam-assisted deposition. Raman spectroscopy showed that the
+steam deposition method was associated with increased defects in the
+network, with a significantly increased D-peak to G\(^+\)-peak height
+ratio. The average threshold voltage for steam-assisted
+surfactant-deposited network devices was significantly higher than the
+average threshold voltage for solvent-deposited devices, indicating
+these defects \(p\)-dope the network. The shift in threshold voltage was
+found to reduce device transconductance, a parameter which should be
+maximised for optimal sensing. Furthermore, the presence of surfactant
+or even trapped water could potentially have negative impacts on device
+functionalisation, discussed further in
+\textbf{?@sec-noncovalent-functionalisation}. Techniques to remove
+contaminants may need to be explored in more detail in future works,
+which is discussed further in \textbf{?@sec-future-work-fabrication}.
+Raman spectroscopy could be used to verify the effectiveness of such
+cleaning methods by comparing the \(I_{G^-}/I_{G^+}\) intensity peak
+ratio before and after cleaning.
 
 Constant voltage real-time measurements of the carbon nanotube
 field-effect transistor devices had a characteristic drift that could be
@@ -4525,10 +4548,10 @@ measurements for liquid-gated drift. A longer control series length of
 2400 s was therefore used to minimise exponential drift when vapour
 sensing.
 
-A PBS dilution sensing series was used to verify that the carbon
-nanotube transistor devices were highly sensitive to changes in an
-aqueous environment. The expected logarithmic signal response behaviour
-was observed when detecting dilutions of PBS in a liquid-gate
+A real-time PBS dilution sensing series was used to verify that the
+carbon nanotube transistor devices were highly sensitive to changes in
+an aqueous environment. The expected logarithmic signal response
+behaviour was observed when detecting dilutions of PBS in a liquid-gate
 environment. Signal size relative to baseline drift was highly
 consistent between channels, which is promising for multiplexing work.
 Deviations from the logarithmic trend possibly indicated insufficient
@@ -4548,10 +4571,10 @@ the sensing behaviour of graphene devices. The graphene device
 characteristics were found to be highly consistent after 1 hour exposure
 to PBS with minimal drift. There was some indications from the transfer
 characteristics that \(p\)-dopants were present on the graphene surface.
-Salt concentration and vapour sensing with graphene FETs are not shown
-in this thesis, but it is important to perform similar device
-verification and control testing when using a batch of graphene devices
-for biofunctionalised sensing.
+Salt concentration sensing with graphene FETs is not shown in this
+thesis, but it is important to perform similar device verification and
+control testing when using a batch of graphene devices for
+biofunctionalised sensing.
 
 
 
