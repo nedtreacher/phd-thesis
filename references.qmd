@@ -4,6 +4,17 @@ format: pdf
 
 # References {.unnumbered}
 
+\begingroup
+\raggedright
 ::: {#refs}
 :::
+\endgroup
 
+{{< pagebreak >}}
+
+\
+
+\thispagestyle{empty}
+\mbox{~}
+\clearpage
+\newpage

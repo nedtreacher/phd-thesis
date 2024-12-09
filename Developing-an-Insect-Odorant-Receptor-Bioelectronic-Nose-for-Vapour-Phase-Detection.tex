@@ -311,7 +311,7 @@ I started this project with minimal formal training in biological science, comin
 
 \pagestyle{headings}
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable, frame hidden, boxrule=0pt, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, frame hidden, boxrule=0pt, breakable, sharp corners, borderline west={3pt}{0pt}{shadecolor}, enhanced]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -21763,9 +21763,20 @@ using the Sourcetree Git GUI.
 
 \markboth{References}{References}
 
+\begingroup
+\raggedright
+
 \printbibliography[heading=none]
 
+\endgroup
+
 \newpage{}
+
+\hfill\break
+
+\thispagestyle{empty}
+
+\mbox{~} \clearpage \newpage
 
 
 \backmatter
