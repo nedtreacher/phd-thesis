@@ -2254,4 +2254,271 @@
       </bcf:constraint>
     </bcf:constraints>
     <bcf:constraints>
-      <bcf:entrytype>misc</bcf
+      <bcf:entrytype>misc</bcf:entrytype>
+      <bcf:entrytype>software</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>title</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>online</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>title</bcf:field>
+        <bcf:fieldor>
+          <bcf:field>url</bcf:field>
+          <bcf:field>doi</bcf:field>
+          <bcf:field>eprint</bcf:field>
+        </bcf:fieldor>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>patent</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>author</bcf:field>
+        <bcf:field>title</bcf:field>
+        <bcf:field>number</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>periodical</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>editor</bcf:field>
+        <bcf:field>title</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>proceedings</bcf:entrytype>
+      <bcf:entrytype>mvproceedings</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>title</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>inproceedings</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>author</bcf:field>
+        <bcf:field>title</bcf:field>
+        <bcf:field>booktitle</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>report</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>author</bcf:field>
+        <bcf:field>title</bcf:field>
+        <bcf:field>type</bcf:field>
+        <bcf:field>institution</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>thesis</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>author</bcf:field>
+        <bcf:field>title</bcf:field>
+        <bcf:field>type</bcf:field>
+        <bcf:field>institution</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:entrytype>unpublished</bcf:entrytype>
+      <bcf:constraint type="mandatory">
+        <bcf:field>author</bcf:field>
+        <bcf:field>title</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+    <bcf:constraints>
+      <bcf:constraint type="data" datatype="isbn">
+        <bcf:field>isbn</bcf:field>
+      </bcf:constraint>
+      <bcf:constraint type="data" datatype="issn">
+        <bcf:field>issn</bcf:field>
+      </bcf:constraint>
+      <bcf:constraint type="data" datatype="ismn">
+        <bcf:field>ismn</bcf:field>
+      </bcf:constraint>
+      <bcf:constraint type="data" datatype="pattern" pattern="(?:sf|sm|sn|pf|pm|pn|pp)">
+        <bcf:field>gender</bcf:field>
+      </bcf:constraint>
+    </bcf:constraints>
+  </bcf:datamodel>
+  <!-- CITATION DATA -->
+  <!-- SECTION 0 -->
+  <bcf:bibdata section="0">
+    <bcf:datasource type="file" datatype="bibtex" glob="false">references.bib</bcf:datasource>
+  </bcf:bibdata>
+  <bcf:section number="0">
+    <bcf:citekey order="1">Glatz2011</bcf:citekey>
+    <bcf:citekey order="1">Kwon2015</bcf:citekey>
+    <bcf:citekey order="1">Dung2018</bcf:citekey>
+    <bcf:citekey order="1">Kim2022a</bcf:citekey>
+    <bcf:citekey order="2">Kauffman2008</bcf:citekey>
+    <bcf:citekey order="2">Khan2020</bcf:citekey>
+    <bcf:citekey order="3">Shkodra2021</bcf:citekey>
+    <bcf:citekey order="4">Dung2018</bcf:citekey>
+    <bcf:citekey order="4">Arakawa2019</bcf:citekey>
+    <bcf:citekey order="4">Yang2017</bcf:citekey>
+    <bcf:citekey order="4">Son2017</bcf:citekey>
+    <bcf:citekey order="5">Moser2020</bcf:citekey>
+    <bcf:citekey order="6">Lee2010</bcf:citekey>
+    <bcf:citekey order="6">Moon2020</bcf:citekey>
+    <bcf:citekey order="6">Terutsuki2020</bcf:citekey>
+    <bcf:citekey order="7">Yoon2009</bcf:citekey>
+    <bcf:citekey order="7">Lee2010</bcf:citekey>
+    <bcf:citekey order="7">Yang2018</bcf:citekey>
+    <bcf:citekey order="8">Hallem2004</bcf:citekey>
+    <bcf:citekey order="8">Smart2008</bcf:citekey>
+    <bcf:citekey order="8">Wicher2008</bcf:citekey>
+    <bcf:citekey order="8">Munch2016</bcf:citekey>
+    <bcf:citekey order="8">Bohbot2020</bcf:citekey>
+    <bcf:citekey order="9">Murugathas2019a</bcf:citekey>
+    <bcf:citekey order="9">Murugathas2020</bcf:citekey>
+    <bcf:citekey order="10">Yamada2021</bcf:citekey>
+    <bcf:citekey order="11">Lee2010</bcf:citekey>
+    <bcf:citekey order="12">Murugathas2020</bcf:citekey>
+    <bcf:citekey order="12">Khadka2019</bcf:citekey>
+    <bcf:citekey order="12">Cheema2021</bcf:citekey>
+    <bcf:citekey order="13">Khan2020</bcf:citekey>
+    <bcf:citekey order="13">Shkodra2021</bcf:citekey>
+    <bcf:citekey order="13">Hirata2021</bcf:citekey>
+    <bcf:citekey order="14">Kauffman2008</bcf:citekey>
+    <bcf:citekey order="14">Petti2016</bcf:citekey>
+    <bcf:citekey order="14">Tran2016</bcf:citekey>
+    <bcf:citekey order="14">Shkodra2021</bcf:citekey>
+    <bcf:citekey order="14">Yao2021</bcf:citekey>
+    <bcf:citekey order="15">Weimer1962</bcf:citekey>
+    <bcf:citekey order="16">Kauffman2008</bcf:citekey>
+    <bcf:citekey order="16">Cao2009</bcf:citekey>
+    <bcf:citekey order="16">Petti2016</bcf:citekey>
+    <bcf:citekey order="16">Shkodra2021</bcf:citekey>
+    <bcf:citekey order="17">Cao2009</bcf:citekey>
+    <bcf:citekey order="18">Petti2016</bcf:citekey>
+    <bcf:citekey order="19">Avouris2007</bcf:citekey>
+    <bcf:citekey order="19">Shkodra2021</bcf:citekey>
+    <bcf:citekey order="19">Tran2016</bcf:citekey>
+    <bcf:citekey order="19">Li2023</bcf:citekey>
+    <bcf:citekey order="20">Avouris2007</bcf:citekey>
+    <bcf:citekey order="20">Cao2009</bcf:citekey>
+    <bcf:citekey order="20">Heller2009a</bcf:citekey>
+    <bcf:citekey order="20">Tran2016</bcf:citekey>
+    <bcf:citekey order="20">Miranda2016</bcf:citekey>
+    <bcf:citekey order="20">Kireev2017</bcf:citekey>
+    <bcf:citekey order="20">Li2023</bcf:citekey>
+    <bcf:citekey order="21">Heller2010</bcf:citekey>
+    <bcf:citekey order="21">Kireev2017</bcf:citekey>
+    <bcf:citekey order="21">Shkodra2021</bcf:citekey>
+    <bcf:citekey order="22">Tiwari2022</bcf:citekey>
+    <bcf:citekey order="23">Heller2010</bcf:citekey>
+    <bcf:citekey order="23">Ohno2015</bcf:citekey>
+    <bcf:citekey order="23">Shkodra2021</bcf:citekey>
+    <bcf:citekey order="23">Yao2021</bcf:citekey>
+    <bcf:citekey order="24">Ohno2015</bcf:citekey>
+    <bcf:citekey order="24">Shkodra2021</bcf:citekey>
+    <bcf:citekey order="24">Tiwari2022</bcf:citekey>
+    <bcf:citekey order="25">Ohno2015</bcf:citekey>
+    <bcf:citekey order="25">Shkodra2021</bcf:citekey>
+    <bcf:citekey order="25">Tiwari2022</bcf:citekey>
+    <bcf:citekey order="26">Stern2007</bcf:citekey>
+    <bcf:citekey order="26">Shkodra2021</bcf:citekey>
+    <bcf:citekey order="27">Kireev2017</bcf:citekey>
+    <bcf:citekey order="27">Shkodra2021</bcf:citekey>
+    <bcf:citekey order="28">Heller2010</bcf:citekey>
+    <bcf:citekey order="28">Ohno2015</bcf:citekey>
+    <bcf:citekey order="28">Kireev2017</bcf:citekey>
+    <bcf:citekey order="28">Yao2021</bcf:citekey>
+    <bcf:citekey order="29">Stern2007</bcf:citekey>
+    <bcf:citekey order="29">Piccinini2018</bcf:citekey>
+    <bcf:citekey order="29">Shkodra2021</bcf:citekey>
+    <bcf:citekey order="30">Gao2016</bcf:citekey>
+    <bcf:citekey order="30">Filipiak2018</bcf:citekey>
+    <bcf:citekey order="30">Kesler2020</bcf:citekey>
+    <bcf:citekey order="30">Albarghouthi2022</bcf:citekey>
+    <bcf:citekey order="31">Petti2016</bcf:citekey>
+    <bcf:citekey order="32">Petti2016</bcf:citekey>
+    <bcf:citekey order="33">Kauffman2008</bcf:citekey>
+    <bcf:citekey order="33">Petti2016</bcf:citekey>
+    <bcf:citekey order="33">Shkodra2021</bcf:citekey>
+    <bcf:citekey order="34">Avouris2007</bcf:citekey>
+    <bcf:citekey order="34">Tran2016</bcf:citekey>
+    <bcf:citekey order="34">Heller2009a</bcf:citekey>
+    <bcf:citekey order="35">Avouris2007</bcf:citekey>
+    <bcf:citekey order="35">Yao2021</bcf:citekey>
+    <bcf:citekey order="35">Li2023</bcf:citekey>
+    <bcf:citekey order="36">Petti2016</bcf:citekey>
+    <bcf:citekey order="36">Shkodra2021</bcf:citekey>
+    <bcf:citekey order="36">Li2023</bcf:citekey>
+    <bcf:citekey order="37">Petti2016</bcf:citekey>
+    <bcf:citekey order="37">Shkodra2021</bcf:citekey>
+    <bcf:citekey order="37">Li2023</bcf:citekey>
+    <bcf:citekey order="38">Petti2016</bcf:citekey>
+    <bcf:citekey order="39">Kauffman2008</bcf:citekey>
+    <bcf:citekey order="39">Petti2016</bcf:citekey>
+    <bcf:citekey order="39">Shkodra2021</bcf:citekey>
+    <bcf:citekey order="40">Rouhi2010</bcf:citekey>
+    <bcf:citekey order="41">Petti2016</bcf:citekey>
+    <bcf:citekey order="41">Zheng2017</bcf:citekey>
+    <bcf:citekey order="42">Avouris2007</bcf:citekey>
+    <bcf:citekey order="42">Kauffman2008</bcf:citekey>
+    <bcf:citekey order="42">Heller2010</bcf:citekey>
+    <bcf:citekey order="43">Shkodra2021</bcf:citekey>
+    <bcf:citekey order="44">Heller2009a</bcf:citekey>
+    <bcf:citekey order="44">Ohno2015</bcf:citekey>
+    <bcf:citekey order="44">Kireev2017</bcf:citekey>
+    <bcf:citekey order="45">Rouhi2010</bcf:citekey>
+    <bcf:citekey order="45">Petti2016</bcf:citekey>
+    <bcf:citekey order="45">Li2023</bcf:citekey>
+    <bcf:citekey order="46">Tran2016</bcf:citekey>
+    <bcf:citekey order="46">Shkodra2021</bcf:citekey>
+    <bcf:citekey order="47">Noyce2019</bcf:citekey>
+    <bcf:citekey order="47">Shkodra2021</bcf:citekey>
+    <bcf:citekey order="47">Albarghouthi2022</bcf:citekey>
+    <bcf:citekey order="48">Padovani2017</bcf:citekey>
+    <bcf:citekey order="49">Wang2010</bcf:citekey>
+    <bcf:citekey order="49">Ohno2015</bcf:citekey>
+    <bcf:citekey order="49">Shkodra2021</bcf:citekey>
+    <bcf:citekey order="50">McEuen2002</bcf:citekey>
+    <bcf:citekey order="50">Kim2003</bcf:citekey>
+    <bcf:citekey order="50">Wang2010</bcf:citekey>
+    <bcf:citekey order="50">Bartolomeo2011</bcf:citekey>
+    <bcf:citekey order="50">Bargaoui2018</bcf:citekey>
+    <bcf:citekey order="50">Peng2018</bcf:citekey>
+    <bcf:citekey order="51">Wang2010</bcf:citekey>
+    <bcf:citekey order="51">Yao2021</bcf:citekey>
+    <bcf:citekey order="52">Kim2003</bcf:citekey>
+    <bcf:citekey order="52">Wang2010</bcf:citekey>
+    <bcf:citekey order="53">Noyce2019</bcf:citekey>
+    <bcf:citekey order="54">Lin2006</bcf:citekey>
+    <bcf:citekey order="54">Bargaoui2018</bcf:citekey>
+    <bcf:citekey order="54">Noyce2019</bcf:citekey>
+    <bcf:citekey order="55">Noyce2019</bcf:citekey>
+    <bcf:citekey order="56">DiMaria1993</bcf:citekey>
+    <bcf:citekey order="56">Collins2000</bcf:citekey>
+    <bcf:citekey order="57">McEuen2002</bcf:citekey>
+    <bcf:citekey order="57">Novoselov2004</bcf:citekey>
+    <bcf:citekey order="57">Geim2007</bcf:citekey>
+    <bcf:citekey order="57">Tran2016</bcf:citekey>
+    <bcf:citekey order="58">McEuen2002</bcf:citekey>
+    <bcf:citekey order="59">McEuen2002</bcf:citekey>
+    <bcf:citekey order="59">Peng2018</bcf:citekey>
+    <bcf:citekey order="60">Geim2007</bcf:citekey>
+    <bcf:citekey order="60">Ohno2015</bcf:citekey>
+    <bcf:citekey order="61">Novoselov2004</bcf:citekey>
+    <bcf:citekey order="62">Novoselov2004</bcf:citekey>
+    <bcf:citekey order="62">Geim2007</bcf:citekey>
+    <bcf:citekey order="62">Peng2018</bcf:citekey>
+    <bcf:citekey order="63">Ohno2015</bcf:citekey>
+    <bcf:citekey order="63">Tran2016</bcf:citekey>
+    <bcf:citekey order="64">Reddy2011</bcf:citekey>
+    <bcf:citekey order="65">Zhu2012</bcf:citekey>
+    <bcf:citekey order="66">Zhao2012</bcf:citekey>
+    <bcf:citekey order="66">Zhu2012</bcf:citekey>
+    <bcf:citekey order="66">Chhikara2013</bcf:citekey>
+    <bcf:citekey order="67">Zhao2012</bcf:citekey>
+    <bcf:citekey order="67">Kireev2017</bcf:citekey>
+    <bcf:citekey order="68">Geim2007</bcf:citekey>
+    <bcf:citekey order="68">Chhikara2013</bcf:citekey>
+    <bcf:citekey order="68">Zhu2012</bcf:citekey>
+    <bcf:citekey order="69">Zhao2012</bcf:citekey>
+    <bcf:citekey order="70">Chhikara2013</bcf:citekey>
+    <bcf:citekey order="71">Zhao2012</bcf:citekey>
+    <bcf:citekey order="71">Chhikara2013</bcf:citekey>
+    <bcf:citeke
