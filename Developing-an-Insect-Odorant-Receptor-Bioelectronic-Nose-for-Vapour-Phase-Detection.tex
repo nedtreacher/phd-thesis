@@ -93,6 +93,7 @@
 \usepackage{makecell}
 \usepackage{xcolor}
 \usepackage{fancyhdr}
+\usepackage{textcomp}
 \usepackage{titling}
 \usepackage{pdflscape}
 \usepackage{geometry}
@@ -311,7 +312,7 @@ I started this project with minimal formal training in biological science, comin
 
 \pagestyle{headings}
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, frame hidden, boxrule=0pt, breakable, sharp corners, borderline west={3pt}{0pt}{shadecolor}, enhanced]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, frame hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, enhanced, boxrule=0pt, interior hidden]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -858,8 +859,7 @@ formation of an electric double layer (EDL) under an applied voltage
 between source and liquid-gate electrodes, with a \(p\)-type
 semiconductor used for the channel thin-film. Electric double layers are
 present at both the gate-electrolyte interface and
-semiconductor-electrolyte interface. Adapted from
-\autocite{Ohno2015,Shkodra2021,Tiwari2022}.}
+semiconductor-electrolyte interface.}
 
 \end{figure}
 
@@ -930,7 +930,7 @@ transistor.]{\label{fig-linear-region}The linear and saturation
 operation regimes of an \(n\)-type metal oxide semiconductor thin-film
 transistor, \(V_{t} \sim 0\) V. Current has been normalised with respect
 to channel width (W). Reproduced with permission from
-\autocite{Petti2016}.}
+\autocite{Petti2016}. Copyright \(\copyright\) 2016 AIP Publishing.}
 
 \end{figure}
 
@@ -1501,18 +1501,18 @@ or \(n\)-conduction and increased \(I_d\) \autocite{Geim2007}. The
 regions of hole conduction and electron conduction are shown in
 Figure~\ref{fig-graphene-characteristics} (a), alongside the
 corresponding Fermi energy on the simplified graphene bandstructure
-(known as a ``Dirac cone''). The transconductance of the curve at
-\(V_g\) = 0 V, \(g_m\) = 1 µS, is similar to the liquid-gated
-transconductance of a carbon nanotube device shown earlier. As graphene
-lacks a bandgap, there is a minimum possible conductance for graphene
-devices, which leads to a relatively small on-off ratio
-\autocite{Novoselov2004,Geim2007}. Folding may further decrease on-off
-ratio due to diffusive transport of carriers along the folds
-\autocite{Zhu2012}. The on-off ratio of the graphene transfer curve
-shown in Figure~\ref{fig-graphene-characteristics} (a) is 5. A bandgap
-can be introduced to a graphene device using a dual-gated configuration,
-where both back-gate and top-gate can be swept simultaneously,
-increasing the on-off ratio past 100
+(known as a ``Dirac cone'') \autocite{Geim2007,Ohno2015}. The
+transconductance of the curve at \(V_g\) = 0 V, \(g_m\) = 1 µS, is
+similar to the liquid-gated transconductance of a carbon nanotube device
+shown earlier. As graphene lacks a bandgap, there is a minimum possible
+conductance for graphene devices, which leads to a relatively small
+on-off ratio \autocite{Novoselov2004,Geim2007}. Folding may further
+decrease on-off ratio due to diffusive transport of carriers along the
+folds \autocite{Zhu2012}. The on-off ratio of the graphene transfer
+curve shown in Figure~\ref{fig-graphene-characteristics} (a) is 5. A
+bandgap can be introduced to a graphene device using a dual-gated
+configuration, where both back-gate and top-gate can be swept
+simultaneously, increasing the on-off ratio past 100
 \autocite{Xia2010,Ahn2020,Shkodra2021}.
 
 \begin{figure}
@@ -1622,10 +1622,9 @@ which exhibits a double-minimum feature seen in longer transistor
 channels. In (a), the Dirac point voltage is indicated by a red line,
 and regions of hole conduction and electron conduction are also shown.
 The relative Fermi energy in each region is shown on simplified graphene
-bandstructure insets (Adapted from \autocite{Geim2007,Ohno2015}). The
-graphene channel in (b) has double conduction minima, which are
-highlighted with red arrows. The relative Fermi energy at each minima is
-also shown on bandstructure insets (Adapted from \autocite{Peng2018}).}
+bandstructure insets. The graphene channel in (b) has double conduction
+minima, which are highlighted with red arrows. The relative Fermi energy
+at each minima is also shown on bandstructure insets.}
 
 \end{figure}
 
@@ -1671,21 +1670,21 @@ regions determines the relative \(V_g\) position of each local minimum
 on the \(I_d - V_g\) curve \autocite{Bartolomeo2011,Peng2018,Zhang2015}.
 
 Figure~\ref{fig-graphene-characteristics} (b) shows a double-minimum
-transfer characteristic with each Dirac point indicated. At large
-negative \(V_g\), the Fermi energy level is far from the Dirac point
-energy of both the channel and contact regions, and holes dominate
-conduction. As \(V_g\) and the Fermi energy approach and then pass the
-Dirac point corresponding to the left minimum \(V_{D,-}\), the available
-carriers decrease to a minimum and begin to increase again in one region
-\(R_1\), but continuously decrease in the other region \(R_2\). The
-shape of the curve between \(V_{D,-}\) and the right local minimum
-\(V_{D,+}\) then depends on the relative rate of increasing electron and
-decreasing hole populations, where the graphene is \(n\)-doped in
-\(R_1\) and \(p\)-doped in \(R_2\). At the local minimum on the right,
-\(V_{D,+}\), the carriers in \(R_2\) now reach a minimum, while carriers
-in \(R_1\) continue to increase. At voltages well beyond \(V_{D,+}\),
-electrons then dominate conduction in both regions
-\autocite{Bartolomeo2011,Zhang2015,Peng2018}.
+transfer characteristic with each Dirac point indicated
+\autocite{Peng2018}. At large negative \(V_g\), the Fermi energy level
+is far from the Dirac point energy of both the channel and contact
+regions, and holes dominate conduction. As \(V_g\) and the Fermi energy
+approach and then pass the Dirac point corresponding to the left minimum
+\(V_{D,-}\), the available carriers decrease to a minimum and begin to
+increase again in one region \(R_1\), but continuously decrease in the
+other region \(R_2\). The shape of the curve between \(V_{D,-}\) and the
+right local minimum \(V_{D,+}\) then depends on the relative rate of
+increasing electron and decreasing hole populations, where the graphene
+is \(n\)-doped in \(R_1\) and \(p\)-doped in \(R_2\). At the local
+minimum on the right, \(V_{D,+}\), the carriers in \(R_2\) now reach a
+minimum, while carriers in \(R_1\) continue to increase. At voltages
+well beyond \(V_{D,+}\), electrons then dominate conduction in both
+regions \autocite{Bartolomeo2011,Zhang2015,Peng2018}.
 
 \hypertarget{sensing-behaviour}{%
 \subsection{Sensing Behaviour}\label{sensing-behaviour}}
@@ -1732,8 +1731,7 @@ is given by \(C_h = 6a_1+4a_2\). The chiral vector forms the
 circumference of the rolled carbon nanotube. The left edge in the zigzag
 (\(n\),0) and armchair (\(n\),\(n\)) cases are shown with a blue and
 purple dotted line respectively. The location of the right edge
-(diameter of the nanotube) is determined by the value chosen for \(n\).
-Adapted from \autocite{Dekker1999,Lu2012}.}
+(diameter of the nanotube) is determined by the value chosen for \(n\).}
 
 \end{figure}
 
@@ -1947,8 +1945,8 @@ metal-CNT network interface is shown in (a) for platinum, palladium,
 gold and titanium electrodes, where \(\phi_{SB}\) is Schottky barrier
 height and \(E_g\) is bandgap size. The output characteristic curves of
 devices with these electrodes are shown in (b), where the devices are
-gated fully on at \(V_g = -5\) V. Both figures reproduced with
-permission from \autocite{Bargaoui2018}.}
+gated fully on at \(V_g = -5\) V. Reproduced with permission from
+\autocite{Bargaoui2018}. Copyright \(\copyright\) 2018 Elsevier.}
 
 \end{figure}
 
@@ -2082,8 +2080,8 @@ conductance and proportion of semiconducting tubes present is shown in
 (b), in the specific case where density was roughly 3 times the
 percolation threshold (in the case where all tubes were either metallic
 or semiconducting). Specific morphologies A, B, C, D and E are shown on
-both figures. Both figures have been reproduced with permission from
-\autocite{Topinka2009}.}
+both figures. Reprinted with permission from \autocite{Topinka2009}.
+Copyright \(\copyright\) 2009 American Chemical Society.}
 
 \end{figure}
 
@@ -2633,13 +2631,15 @@ nanomaterial-based transducers \autocite{Lim2015,Dung2018}.
 
 \caption[Diagrams showing the structure of various artificial
 membranes.]{\label{fig-membranes}Liposomes and micelles are shown in (a)
-with the hydrophilic heads and hydrophobic tails indicated (figure
-adapted from \autocite{Micelle}). A lipid nanodisc wrapped around an
-insect odorant receptor transmembrane protein is shown in (b), where the
-amine group shown is the odorant receptor N-terminus (reproduced with
-permission from \autocite{Murugathas2019a}). The nanodisc consists of a
-lipid bilayer encircled by a membrane scaffold protein (MSP). Images are
-not to scale.}
+with the hydrophilic heads and hydrophobic tails indicated. A lipid
+nanodisc wrapped around an insect odorant receptor transmembrane protein
+is shown in (b), where the amine group shown is the odorant receptor
+N-terminus. The nanodisc consists of a lipid bilayer encircled by a
+membrane scaffold protein (MSP). Images are not to scale. The schematic
+in (a) is adapted from \autocite{Micelle}, and used under the CC BY-4.0
+license. The schematic in (b) is reprinted with permission from
+\autocite{Murugathas2019a}. Copyright \(\copyright\) 2019 American
+Chemical Society.}
 
 \end{figure}
 
@@ -3130,16 +3130,16 @@ protocols.
 field-effect biosensor of Lim \emph{et
 al.}]{\label{fig-lim-ion-channel}Schematics detailing the
 nanovesicle-based carbon nanotube field-effect biosensor of Lim \emph{et
-al.} (a) shows a schematic of the different elements and signalling
-pathways present in the sensor (not to scale), (b) shows an atomic force
-microscope image of the functionalised device. Real-time conductance
-changes resulting from amyl butyrate additions to the electrolyte gate
-are compared against relevant controls in (c) and (d), while the
-dose-dependent response patterns to amyl butyrate corresponding to (c)
-and (d) are shown in (e) and (f) respectively. The key in (c)-(f)
-indicates the concentration of ions available to flow through
-nanovesicle ion channels in each experimental series. Reproduced with
-permission from \autocite{Lim2015}.}
+al.} (a) shows a schematic of the various signalling pathways present in
+the sensor (not to scale), while (b) shows an atomic force microscope
+image of the functionalised device. Real-time conductance changes
+resulting from amyl butyrate additions are compared against relevant
+controls in (c) and (d), while the dose-dependent response patterns to
+amyl butyrate corresponding to (c) and (d) are shown in (e) and (f)
+respectively. The key in (c)-(f) indicates the concentration of ions
+available to flow through nanovesicle ion channels in each experimental
+series. Reprinted with permission from \autocite{Lim2015}. Copyright
+\(\copyright\) 2015 American Chemical Society.}
 
 \end{figure}
 
@@ -3399,7 +3399,8 @@ concentrations of amyl butyrate (AB) analyte; (d) shows the real-time
 responses of the hOR3A1-modified transistor (sub-SB3) to various
 concentrations of helional (HE) analyte; and (e) shows the
 dose-dependent response curve corresponding to the sub-SB2 and sub-SB3
-sensors. Reproduced with permission from \autocite{Kwon2015}.}
+sensors. Reprinted with permission from \autocite{Kwon2015}. Copyright
+\(\copyright\) 2015 American Chemical Society.}
 
 \end{figure}
 
@@ -3706,7 +3707,8 @@ responses of the functionalised, liquid-gated channel to additions of
 dimethyl methylphosphonate (DMMP) analyte; (e) shows the dose-dependent
 response curve to DMMP; and (f) shows a control series demonstrating the
 selective behaviour of the sensor (EB is ethyl butyrate, AB is amyl
-butyrate). Reproduced with permission from \autocite{Yoo2022}.}
+butyrate). Adapted with permission from \autocite{Yoo2022}. Copyright
+\(\copyright\) 2022 Elsevier.}
 
 \end{figure}
 
@@ -3886,8 +3888,9 @@ demonstrated with an atomic force microscope image in (a), while (b)
 shows real-time responses of the sensor to 2 ppm eugenol vapour. The
 response to eugenol on day 69 (red triangles) indicates that the device
 retains the ability to respond to eugenol 10 weeks after
-functionalisation. Reproduced with permission from
-\autocite{Goldsmith2011}.}
+functionalisation. Reprinted with permission from
+\autocite{Goldsmith2011}. Copyright \(\copyright\) 2011 American
+Chemical Society.}
 
 \end{figure}
 
@@ -3954,8 +3957,7 @@ native cell membrane, with C-terminus and N-terminus
 indicated.]{\label{fig-iOR-membrane}The tuning OR and odorant receptor
 coreceptor (ORCO) on the native cell membrane, with C-terminus and
 N-terminus indicated. The red arrow indicates the location of ion
-transport across the membrane. Adapted from
-\autocite{Brito2016,Wicher2021}.}
+transport across the membrane.}
 
 \end{figure}
 
@@ -4185,8 +4187,9 @@ thin-films.]{\label{fig-functionalisation-AFM-literature}Atomic force
 microscope images of (a) a pristine graphene monolayer, (b) a OR22a
 nanodisc-functionalised graphene monolayer, (c) a pristine carbon
 nanotube network, and (d) an OR22a nanodisc-functionalised carbon
-nanotube network. Reproduced with permission from
-\autocite{Murugathas2019a,Murugathas2020}.}
+nanotube network. Reprinted with permission from
+\autocite{Murugathas2019a,Murugathas2020}. Copyright \(\copyright\)
+2019, 2020 American Chemical Society.}
 
 \end{figure}
 
@@ -11458,7 +11461,8 @@ receptor Y to a carbon nanotube, representing the transducer element of
 a field-effect transistor.]{\label{fig-pi-interaction-cnt}Attachment of
 pyrene-based linker molecule pyrene-X and receptor Y to a carbon
 nanotube, representing the transducer element of a field-effect
-transistor. Source: Adapted from \autocite{Carbonnanotube}.}
+transistor. Figure adapted from \autocite{Carbonnanotube}, used under
+the CC BY-SA 4.0 license.}
 
 \end{figure}
 
@@ -11496,10 +11500,10 @@ in Figure~\ref{fig-pbase-structure}, non-covalently bonds to the carbon
 rings of the transducer. Previous modelling has shown that when PBASE
 attaches to graphene, it may take on one of two different locally stable
 conformations (one straight, one bent) \autocite{Oishi2022}. The
-N-hydroxysuccinimide (NHS) ester group, indicated with a green dashed
-outline in Figure~\ref{fig-pbase-structure}, can undergo a nucleophilic
-substitution reaction with primary amines attached to biomolecules,
-tethering them with an amide or imide bond
+N-hydroxysuccinimide (NHS) ester group, found within the structure
+highlighted red in Figure~\ref{fig-pbase-structure}, can undergo a
+nucleophilic substitution reaction with primary amines attached to
+biomolecules, tethering them with an amide or imide bond
 \autocite{Chen2001,Hermanson2013-16,Hermanson2013-3,Shkodra2021,Mishyn2022}.
 
 \begin{figure}
@@ -11513,7 +11517,8 @@ tethering them with an amide or imide bond
 N-hydroxysuccinimide ester (PBASE) visualised in XCrySDen software
 \autocite{Kokalj1999}. Blue corresponds to hydrogen, yellow to carbon,
 red to oxygen and grey to nitrogen. The NHS ester is highlighted with a
-green dashed outline. Figure adapted from \autocite{Oishi2022}.}
+green dashed outline. Figure reproduced from \autocite{Oishi2022}, used
+under the CC BY-NC-ND 4.0 license.}
 
 \end{figure}
 
