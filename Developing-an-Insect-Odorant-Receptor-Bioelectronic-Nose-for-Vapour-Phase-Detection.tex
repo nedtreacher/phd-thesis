@@ -312,7 +312,7 @@ I started this project with minimal formal training in biological science, comin
 
 \pagestyle{headings}
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[sharp corners, frame hidden, breakable, borderline west={3pt}{0pt}{shadecolor}, enhanced, boxrule=0pt, interior hidden]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, frame hidden, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, sharp corners, enhanced, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -418,7 +418,6 @@ I started this project with minimal formal training in biological science, comin
     OBP  & Odorant Binding Protein  \\[5pt]
     OR  & Odorant Receptor  \\[5pt]
     ORCO  & Odorant Receptor Co-Receptor  \\[5pt]
-    PBA  & 1-Pyrenebutyric Acid  \\[5pt]
   \end{tabular}
 \end{table}
 
@@ -430,6 +429,7 @@ I started this project with minimal formal training in biological science, comin
 \fancyfoot[R]{\thepage} %prints the page number on the right side of the header
 \begin{table}[H]
   \begin{tabular}{@{}p{0.25\textwidth} p{0.75\textwidth}@{}}  % Adjust the width as needed
+    PBA  & 1-Pyrenebutyric Acid  \\[5pt]
     PBASE  & 1-Pyrenebutanoic Acid N-hydroxysuccinimide Ester  \\[5pt]
     PBS  & Phosphate-Buffered Saline  \\[5pt]
     PCB  & Printed Circuit Board   \\[5pt]
@@ -460,6 +460,17 @@ I started this project with minimal formal training in biological science, comin
     TX  & Transfer Characteristics  \\[5pt]
     UV  & Ultraviolet  \\[5pt]
     VI  & Virtual Instrument  \\[5pt]
+  \end{tabular}
+\end{table}
+
+\newpage
+\fancyhf{} %clear all headers and footers fields
+\thispagestyle{fancy} % Change header and footer on this page
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[R]{\textit{List of Abbreviations}} % Set header content
+\fancyfoot[R]{\thepage} %prints the page number on the right side of the header
+\begin{table}[H]
+  \begin{tabular}{@{}p{0.25\textwidth} p{0.75\textwidth}@{}}  % Adjust the width as needed
     VUAA1  & N-(4-Ethylphenyl)-2-{[4-ethyl-5-(pyridin-3-yl)-4H-1,2,4-triazol-3-yl]sulfanyl}acetamide  \\[5pt] 
   \end{tabular}
 \end{table}
