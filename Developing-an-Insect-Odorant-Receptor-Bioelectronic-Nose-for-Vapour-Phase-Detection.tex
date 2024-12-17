@@ -97,6 +97,8 @@
 \usepackage{titling}
 \usepackage{pdflscape}
 \usepackage{geometry}
+\usepackage[english]{babel}
+\usepackage[autostyle]{csquotes}
 \setlength{\droptitle}{-2cm}
 \preauthor{
   \begin{center}
@@ -236,7 +238,7 @@ Vapour-Phase Detection}
 
 \vspace*{\baselineskip}
 
-The ability to detect volatile organic compounds in a highly sensitive and selective manner is desirable for applications as varied as diagnoses of illnesses at a remote clinic, monitoring of air in an industrial setting, or identification of invasive organisms at a biosecurity checkpoint. Historically, animal noses have been used for such tasks, as their combined sensitivity and selectivity are superior to traditional artificial sensors. However, training and deploying animals in such situations is both time and cost intensive. In recent years, an improved understanding of \textit{in vivo} biological sensing has driven efforts to mimic these highly efficient processes in an artificial sensor format. \\[5pt] To this end, a "bioelectronic nose" was developed. This sensor uses an artificial transducer to amplify responses of an insect odorant receptor protein to specific volatile compounds. Thin-film transistors were used as the amplifier element, given their low cost, small size and extreme sensitivity. Various thin-film morphologies were compared, and their suitability for bioelectronic nose development assessed. Transducers made using a novel steam-assisted thin-film deposition technique were found to have highly consistent device-to-device electrical properties relative to other films. Films made using this process typically showed more surface contamination than other morphologies, but their high sensitivity was confirmed with a non-specific sensing series in an aqueous environment. \\[5pt] One of the major challenges encountered in this thesis was variability in the quality of sensor functionalisation. Raman spectroscopy and fluorescence microscopy confirmed an existing non-covalent attachment method could successfully immobilise nanodiscs onto the transistor channel region. However, various sensors functionalised using the same procedure often exhibited no sensing activity. Extensive electrical characterisation indicated the presence of an unidentified contamination layer which prevented electrical interaction between the insect odorant receptors and the transducer thin-film. It was shown that this layer was unlikely to be directly associated with the thin-film morphology used for the transducer. \\[5pt] Subsequently, an alternative biotin-based non-covalent method was used for functionalisation of the proteins, which eliminated several possible sources of contamination. This alternative biotin-based method was used to demonstrate successful aqueous sensing of femtomolar concentrations of methyl salicylate by an iOR10a-functionalised device. When tested in a custom-built vapour delivery system, a similar bioelectronic sensor was shown to be highly sensitive to the target vapour. However, consistent reproduction of the biotin-based method was challenging due to the harsh cleaning method involved. It was therefore difficult to determine conclusively whether the vapour-phase sensor responses were selective. By finding new, systematic approaches to address the barriers to sensor success carefully identified in this work, there are promising signs that a highly reliable vapour-phase bioelectronic nose can be produced.
+The ability to detect volatile organic compounds in a highly sensitive and selective manner is desirable for applications as varied as diagnoses of illnesses at a remote clinic, monitoring of air in an industrial setting, or identification of invasive organisms at a biosecurity checkpoint. Historically, animal noses have been used for such tasks, as their combined sensitivity and selectivity are superior to traditional artificial sensors. However, training and deploying animals in such situations is both time and cost intensive. In recent years, an improved understanding of \textit{in vivo} biological sensing has driven efforts to mimic these highly efficient processes in an artificial sensor format. \\[5pt] To this end, a ``bioelectronic nose'' was developed. This sensor uses an artificial transducer to amplify responses of an insect odorant receptor protein to specific volatile compounds. Thin-film transistors were used as the amplifier element, given their low cost, small size and extreme sensitivity. Various thin-film morphologies were compared, and their suitability for bioelectronic nose development assessed. Transducers made using a novel steam-assisted thin-film deposition technique were found to have highly consistent device-to-device electrical properties relative to other films. Films made using this process typically showed more surface contamination than other morphologies, but their high sensitivity was confirmed with a non-specific sensing series in an aqueous environment. \\[5pt] One of the major challenges encountered in this thesis was variability in the quality of sensor functionalisation. Raman spectroscopy and fluorescence microscopy confirmed an existing non-covalent attachment method could successfully immobilise nanodiscs onto the transistor channel region. However, various sensors functionalised using the same procedure often exhibited no sensing activity. Extensive electrical characterisation indicated the presence of an unidentified contamination layer which prevented electrical interaction between the insect odorant receptors and the transducer thin-film. It was shown that this layer was unlikely to be directly associated with the thin-film morphology used for the transducer. \\[5pt] Subsequently, an alternative biotin-based non-covalent method was used for functionalisation of the proteins, which eliminated several possible sources of contamination. This alternative biotin-based method was used to demonstrate successful aqueous sensing of femtomolar concentrations of methyl salicylate by an iOR10a-functionalised device. When tested in a custom-built vapour delivery system, a similar bioelectronic sensor was shown to be highly sensitive to the target vapour. However, consistent reproduction of the biotin-based method was challenging due to the harsh cleaning method involved. It was therefore difficult to determine conclusively whether the vapour-phase sensor responses were selective. By finding new, systematic approaches to address the barriers to sensor success carefully identified in this work, there are promising signs that a highly reliable vapour-phase bioelectronic nose can be produced.
 
 %\fancyhf{} %clear all headers and footers fields
 %\thispagestyle{fancy} % Change header and footer on this page
@@ -295,7 +297,7 @@ I chose to start my doctoral studies just a few months into a global pandemic. C
 \renewcommand{\headrulewidth}{0pt}
 \fancyhead[L]{\textit{Acknowledgements}} % Set header content
 \fancyfoot[L]{\thepage} %prints the page number on the left side of the header 
-I started this project with minimal formal training in biological science, coming from a primarily physics and engineering background. \\[5pt] The immense support I received from Melissa Jordan and Colm Carraher from the Institute for Plant and Food Research (PFR) to complete this project meant that this was not an issue, and I thank them both immensely for this. \\[5pt] I would not have been able to begin this thesis without the financial backing and support I received from PFR and the Better Border Biosecurity (B3) programme. In particular, I am very grateful to Andrew Kralicek, formerly with PFR and now at Scentian Bio, and the ex-Director of B3, David Teulon, for helping to secure funding for my project. I would also like to thank the donor of the Ernest Marsden Scholarship in Physics for their significant financial support. \\[5pt] There are many incredibly supportive people who I worked alongside during my project. I would like to start off by thanking Rifat Ullah, whose mentoring and kindness encouraged me to pursue further study. His work on the initial design and setup of the vapour delivery system was invaluable to me throughout this project. I am also especially grateful to Alex Puglisi, for constructing the mechanical elements of the vapour delivery system and giving me extensive feedback on the system design. I would like to thank Peter Coard, for his advice and guidance when constructing the electrical elements of the vapour delivery system. I thank Selvan Murugathas, too, for his advice on constructing the insect odorant receptor sensors, as well as Damon Colbert and Valentina Lucarelli, who provided the insect odorant receptor nanodiscs used in this work. \\[5pt] Thank you to AProf. Ben Ruck, my supportive secondary supervisor, and to AProf. Franck Natali, for always asking about my thesis in the tearoom. Thank you to Gideon Gouws for his friendly encouragement and advice. For their substantial technical assistance and mentoring during this project, I thank Alan Rennie, Grant Franklin, Chris Lepper, Rashika Gunasekara, Pete Jebson and Sushila Pillai from VUW, Andrew Chan from PFR, AProf. Charles Unsworth from the University of Auckland, and Prof. Simon Brown and his nanomaterials group from the University of Canterbury. \\[5pt] I was lucky enough to start my doctoral program just as a group of supportive and talented senior students were finishing, and finished just as a group of enthusiastic and talented new doctoral students were starting. A special thanks to Jenna Nyugen, Erica Happe and Erica Cassie for teaching me the fabrication processes and characterisation procedures that made this thesis happen; and a special thanks to Marissa Dierkes, Danica Fontein, Sangar Begzaad and Alireza Zare, for their incredible support throughout the thesis writing process. I am also thankful for the assistance of the cleanroom group interns over the course of my PhD, including Liam, Hayden and Lotte. I would further like to thank everyone else I shared an office with and worked alongside, including Jackson, Will, Roshni, Ali, Sam, Kira, Catherine, Martin, Janani, Ted, Kiri and Joe. \\[5pt] A massive thank you to Openstar Technologies. It has been an honour to work on a cutting-edge plasma physics project right here in Te Whanganui-a-Tara. A particularly big thank you to Ratu, Darren and Thomas for having me as part of the plasma physics team. Thank you also to the other Openstar interns, in particular the other plasma physics interns, Valentina, Benjy and Chris. I wish you success in all your dipole-confined plasma related endeavours. \\[5pt] I want to thank Shodokan Aikido New Zealand for their support throughout this thesis, in particular for the once-in-a-lifetime opportunity to travel to Osaka to be graded for first-dan by Nariyama Shihan. Thanks for all the training and support, Ian. \\[5pt] Thank you to all the friends and whānau, old and new, who have supported me over these wild past few years. You know who you are. \\[5pt] Thank you to my brother, Keeson, and to my parents, Hilary and Phillip. Your support means everything to me, and I would not be where I am today without you. Our Friday lunchtime cafe visits kept me motivated and inspired throughout the doctoral program. Thank you, thank you, thank you for your love, your compassion, and for being there for me. \\[5pt] Finally, thank you Nina. Your incredible love has kept me going through the most difficult and most wonderful times over the last four years. You are the light of my life, and I am so happy to have taken on this challenge with you by my side. \\[5pt] Arohanui and peace to you all, Eddyn (Ned)
+I started this project with minimal formal training in biological science, coming from a primarily physics and engineering background. \\[5pt] The immense support I received from Melissa Jordan and Colm Carraher from the Institute for Plant and Food Research (PFR) to complete this project meant that this was not an issue, and I thank them both immensely for this. \\[5pt] I would not have been able to begin this thesis without the financial backing and support I received from PFR and the Better Border Biosecurity (B3) programme. In particular, I am very grateful to Andrew Kralicek, formerly with PFR and now at Scentian Bio, and the ex-Director of B3, David Teulon, for helping to secure funding for my project. I would also like to thank the donor of the Ernest Marsden Scholarship in Physics for their significant financial support. \\[5pt] There are many incredibly supportive people who I worked alongside during my project. I would like to start off by thanking Rifat Ullah, whose mentoring and kindness encouraged me to pursue further study. His work on the initial design and setup of the vapour delivery system was invaluable to me throughout this project. I am also especially grateful to Alex Puglisi, for constructing the mechanical elements of the vapour delivery system and giving me extensive feedback on the system design. I would like to thank Peter Coard, for his advice and guidance when constructing the electrical elements of the vapour delivery system. I thank Selvan Murugathas, too, for his advice on constructing the insect odorant receptor sensors, as well as Damon Colbert and Valentina Lucarelli, who provided the insect odorant receptor nanodiscs used in this work. \\[5pt] Thank you to Prof. Ben Ruck, my supportive secondary supervisor, and to AProf. Franck Natali, for always asking about my thesis in the tearoom. Thank you to Gideon Gouws for his friendly encouragement and advice. For their substantial technical assistance and mentoring during this project, I thank Alan Rennie, Grant Franklin, Chris Lepper, Rashika Gunasekara, Pete Jebson and Sushila Pillai from VUW, Andrew Chan from PFR, AProf. Charles Unsworth from the University of Auckland, and Prof. Simon Brown and his nanomaterials group from the University of Canterbury. \\[5pt] I was lucky enough to start my doctoral program just as a group of supportive and talented senior students were finishing, and finished just as a group of enthusiastic and talented new doctoral students were starting. A special thanks to Jenna Nyugen, Erica Happe and Erica Cassie for teaching me the fabrication processes and characterisation procedures that made this thesis happen; and a special thanks to Marissa Dierkes, Danica Fontein, Sangar Begzaad and Alireza Zare, for their incredible support throughout the thesis writing process. I am also thankful for the assistance of the cleanroom group interns over the course of my PhD, including Liam, Hayden and Lotte. I would further like to thank everyone else I shared an office with and worked alongside, including Jackson, Will, Roshni, Ali, Sam, Kira, Catherine, Martin, Janani, Ted, Kiri and Joe. \\[5pt] A massive thank you to Openstar Technologies. It has been an honour to work on a cutting-edge plasma physics project right here in Te Whanganui-a-Tara. A particularly big thank you to Ratu, Darren and Thomas for having me as part of the plasma physics team. Thank you also to the other Openstar interns, in particular the other plasma physics interns, Valentina, Benjy and Chris. I wish you success in all your dipole-confined plasma related endeavours. \\[5pt] I want to thank Shodokan Aikido New Zealand for their support throughout this thesis, in particular for the once-in-a-lifetime opportunity to travel to Osaka to be graded for first-dan by Nariyama Shihan. Thanks for all the training and support, Ian. \\[5pt] Thank you to all the friends and whānau, old and new, who have supported me over these wild past few years. You know who you are. \\[5pt] Thank you to my brother, Keeson, and to my parents, Hilary and Phillip. Your support means everything to me, and I would not be where I am today without you. Our Friday lunchtime cafe visits kept me motivated and inspired throughout the doctoral program. Thank you, thank you, thank you for your love, your compassion, and for being there for me. \\[5pt] Finally, thank you Nina. Your incredible love has kept me going through the most difficult and most wonderful times over the last four years. You are the light of my life, and I am so happy to have taken on this challenge with you by my side. \\[5pt] Arohanui and peace to you all, Eddyn (Ned)
 
 \fancyhf{} %clear all headers and footers fields
 \thispagestyle{fancy} % Change header and footer on this page
@@ -312,7 +314,7 @@ I started this project with minimal formal training in biological science, comin
 
 \pagestyle{headings}
 
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, interior hidden, frame hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners, breakable, boxrule=0pt]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, sharp corners, borderline west={3pt}{0pt}{shadecolor}, frame hidden, enhanced, interior hidden, breakable]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of Contents}
 {
@@ -502,24 +504,24 @@ The ``bioelectronic nose'', an electronic transducer modified with
 elements of the animal olfactory system, has the potential to allow
 specific detection of airborne volatile compounds at concentrations as
 low as parts per trillion
-\autocite{Glatz2011,Kwon2015,Dung2018,Kim2022a}. An ideal transducer
-platform is the thin-film transistor (TFT) which is particularly
-portable, simple to use, small and robust
-\autocite{Kauffman2008,Khan2020}. The thin films used in these
-field-effect transistors (FETs) include carbon nanotube networks and
-graphene, low-dimensional nanomaterials which are both highly sensitive
-and biocompatible \autocite{Shkodra2021}. The implications of successful
+\autocite{Glatz2011,Kwon2015,Dung2018,Kim2022a}. The thin-film
+transistor (TFT), a type of field-effect transistor (FET), is a
+particularly portable, simple to use, small and robust option for the
+transducer component \autocite{Kauffman2008,Khan2020}. The thin films
+used in these transistors include carbon nanotube networks and graphene,
+low-dimensional nanomaterials which are both highly sensitive and
+biocompatible \autocite{Shkodra2021}. The implications of successful
 development of such a portable and robust bioelectronic nose are
 significant. Applications could be found in high-importance fields such
 as biosecurity, medicine, environmental protection and food safety
 \autocite{Dung2018,Arakawa2019,Yang2017,Son2017}. For example, it has
-been demonstrated that it is possible to detect invasive brown
-marmorated stinkbugs based on their volatile trace \autocite{Moser2020}.
-A bioelectronic nose could potentially accomplish this biosecurity task
-far more cheaply and efficiently than trained sniffer dogs
-\autocite{Lee2010,Moon2020,Terutsuki2020}. There has been rapid progress
-in the development of bioelectronic noses using carbon nanotube
-field-effect transistors (CNT FETs) and graphene field-effect
+been demonstrated that it is possible to specifically detect invasive
+brown marmorated stinkbugs based on their volatile trace
+\autocite{Moser2020}. A bioelectronic nose could potentially accomplish
+this biosecurity task far more cheaply and efficiently than trained
+sniffer dogs \autocite{Lee2010,Moon2020,Terutsuki2020}. There has been
+rapid progress in the development of bioelectronic noses using carbon
+nanotube field-effect transistors (CNT FETs) and graphene field-effect
 transistors (GFETs) over the past 15-20 years
 \autocite{Yoon2009,Lee2010,Yang2018}.
 
@@ -529,53 +531,77 @@ a huge number of specific volatile compounds
 \autocite{Hallem2004,Smart2008,Wicher2008,Munch2016,Bohbot2020}. Within
 the past five years, a variety of \emph{Drosophila melanogaster} iORs
 have been successfully coupled with highly sensitive low-dimensional
-thin-film transistors (TFTs) for specific detection of fruit-like odors
-in an aqueous environment \autocite{Murugathas2019a,Murugathas2020}.
-iORs have also been used for sensitive and selective volatile detection
-in a lipid bilayer format, but not in a portable bioelectronic nose
-format \autocite{Yamada2021}. In this thesis, my aim was to investigate
+thin-film transistors for specific detection of fruit-like odors in an
+aqueous environment \autocite{Murugathas2019a,Murugathas2020}. Insect
+odorant receptors have also been used for sensitive and selective
+volatile detection of volatile compounds in a lipid bilayer format
+\autocite{Yamada2021}. In this thesis, the primary aim was to verify
 whether a bioelectronic nose capable of odorant detection in a
 vapour-phase environment could be constructed by coupling iORs with
-TFTs. Alongside practical applications, development of a vapour-phase
+thin-film transistors. Alongside the future use of this technology in
+targeted sensor applications, development of a vapour-phase
 bioelectronic nose using iORs may give us a greater understanding of the
 mechanisms underlying insect olfaction \autocite{Lee2010}. The
 transduction mechanism of nanomaterial-based iOR sensors is still
-unknown, and I hope to shed further light on the biological and
-electronic processes underpinning this mechanism
+unknown, and it is hoped this work sheds further light on the biological
+and electronic processes underpinning this mechanism
 \autocite{Murugathas2020,Khadka2019,Cheema2021}.
+
+To answer the question of whether selective vapour-phase detection could
+be achieved using the architecture described above, it was first
+important to verify that each of the component parts of this highly
+integrated system functioned as expected and were mutually compatible.
+As the thin-film transistor is a relatively recent technology, the
+design and fabrication of these devices continues to evolve, and it was
+important to ensure that the methods used gave rise to devices of
+consistent quality which were sufficiently sensitive. Insect odorant
+receptor biofunctionalisation is also an emerging field; it was
+important to review and test existing functionalisation approaches, to
+identify their relative strengths and weaknesses for biosensor
+applications. Finally, to ensure that both functioning parts worked
+together once integrated, the functionalised transducer was tested in an
+aqueous environment to compare its sensitivity with previous research
+\autocite{Murugathas2019a,Murugathas2020}. A suitable vapour delivery
+system for testing the working sensors was developed in parallel, with
+reference sensors installed to compare their responses with the activity
+of the biosensor. Once this system was confirmed to behave in a
+controllable manner, the bioelectronic nose was tested in the
+vapour-phase environment.
 
 \hypertarget{thesis-outline}{%
 \section{Thesis Outline}\label{thesis-outline}}
 
-This thesis consists of nine chapters. The first three chapters,
+This thesis consists of ten chapters. The first three chapters,
 including this one, are background chapters introducing the general
-topics of this thesis. The fourth and fifth chapters are methods
-chapters, while the next three chapters (sixth, seventh and eight)
-describe the results obtained. The ninth chapter concludes the thesis
-and discusses possible next steps for future research.
+topics of this thesis. The fourth chapter is a methods chapter,
+describing device fabrication and characterisation in detail. The fifth,
+sixth and seventh chapters describe the results obtained when verifying
+the sensitivity of the novel biosensor in an aqueous environment, while
+the eighth and ninth chapters relate the results of testing the
+biosensing platform in a vapour-phase environment. The tenth chapter
+concludes the thesis and discusses possible next steps for future
+research.
 
 \textbf{Chapter 2} gives a broad description of carbon nanotube and
 graphene field-effect transistors with a focus on their use in sensing
 applications. The chapter begins by looking at the general structure and
 properties of thin-film transistors, where key figures of merit such as
 transconductance, on-off ratio, gate current and hysteresis are
-described. Graphene field-effect transistors (GFETs) and carbon nanotube
-network field-effect transistors (CNT FETs) are then discussed in
-greater detail. These descriptions include the chemical composition of
-each nanomaterial, their conduction behaviour and their unique sensor
-properties when integrated into a field-effect transistor as a
-thin-film.
+described. The chemical compositions of graphene and carbon nanotube
+networks are described, as well as their conduction behaviour and unique
+sensing properties when integrated as a thin-film channel into a
+field-effect transistor.
 
 \textbf{Chapter 3} investigates existing odorant receptor-coupled
 thin-film field-effect transistors in the literature. First, the
 biological structure of odorant receptors and membrane formats for their
 protection \emph{in vitro} are discussed. Details are then provided
 regarding the construction and operation of existing vertebrate odorant
-receptor TFT biosensors. The structure and function of the insect
-odorant receptor is then contrasted with the vertebrate odorant
-receptor, and existing insect odorant receptor TFT biosensors in the
-literature are discussed. The chapter finishes with a brief discussion
-of non-specific binding and its role in hindering biosensor activity.
+receptor biosensors. The structure and function of the insect odorant
+receptor is then contrasted with the vertebrate odorant receptor, and
+existing insect odorant receptor TFT biosensors in the literature are
+discussed. The chapter finishes with a brief discussion of non-specific
+binding and its role in hindering biosensor activity.
 
 \textbf{Chapter 4} describes the fabrication of the CNT FET and GFET
 transducers used in this thesis and the characterisation techniques used
@@ -602,7 +628,7 @@ N-hydroxysuccinimide ester (PBASE) and 1-pyrenebutyric acid (PBA) with
 1-Ethyl-3-(3-dimethylaminopropyl)carbodiimide (EDC). Pyrene-NTA and
 pyrene-biotin were also investigated as other possible linker molecules.
 The quality of various functionalisation approaches was then explored
-with various fluorescently-tagged linker molecules and biomolecules. In
+with various fluorescent-tagged linker molecules and biomolecules. In
 this process, various potential obstacles to successful biosensor
 functionalisation were identified.
 
@@ -613,31 +639,1743 @@ gave rise to working aqueous-phase biosensors. The first
 functionalisation approach, which used PBASE in methanol, led to
 irreproducible results when biosensing. Possible factors causing the
 unreliability of this method were then investigated. A second approach
-was then designed to avoid the malign influence of any identified
-factors.
+was then designed to avoid the undesirable influence of the confounding
+factors identified.
 
 \textbf{Chapter 8} outlines the development of a vapour delivery system
 for characterisation of the insect odorant receptor functionalised TFT
 biosensors in a vapour-phase environment. The vapour delivery system was
-upgraded from an existing system to include new mass flow controllers,
-to have greater control of flow through the system, and off the shelf
-vapour sensors, to collect vapour flow data that could be used for
-comparison against biosensor activity. The chapter also describes the
+upgraded from an existing system to include new mass flow controllers
+(to have greater control of flow through the system) and off the shelf
+vapour sensors (to collect vapour flow data that could be used for
+comparison against biosensor activity). The chapter also describes the
 design and construction of an electronic interface to monitor and
-control the components of the vapour delivery system, and calibration of
-the system.
+control the components of the vapour delivery system, as well as
+calibration of the mass flow controllers.
 
 \textbf{Chapter 9} details the use of the vapour delivery system for
 testing the functionalised biosensors in the vapour phase. First, the
 flow behaviour of volatile organic vapours through the system was
 validated using onboard reference sensors. The response of a pristine
-carbon nanotube device to two volatile compounds is then compared to the
-response of carbon nanotube devices functionalised using the second
-functionalisation approach discussed in the previous chapter.
+carbon nanotube device to two volatile compounds was investigated and
+compared to signals from the reference sensors. Finally, a CNT FET
+functionalised using the second functionalisation approach from chapter
+7 was tested in the vapour delivery system, and its responses to vapour
+were compared to the responses obtained from a pristine device.
 
 \textbf{Chapter 10} summarises the conclusions drawn from this work, and
 proposes various related studies which can be undertaken to continue the
 work described in this thesis.
+
+\bookmarksetup{startatroot}
+
+\hypertarget{sec-vapour-biosensing-iORs}{%
+\chapter{Vapour-Phase Sensing with iOR-Functionalised Carbon Nanotube
+Devices}\label{sec-vapour-biosensing-iORs}}
+
+\hypertarget{introduction-1}{%
+\section{Introduction}\label{introduction-1}}
+
+In the previous chapter, \textbf{?@sec-vapour-sensing-biosensors}, the
+development of a vapour delivery system for testing novel field-effect
+transistor-based biosensors was detailed. Once the vapour delivery
+system was successfully constructed and calibrated, the next step was to
+use the vapour delivery system to test the response of functionalised
+insect odorant receptor (iOR) biosensors to ethyl hexanoate and
+\emph{trans}-2-hexenal, two odorant compounds associated with the scent
+of a Queensland fruit fly infestation. A successful vapour-phase
+biosensor sensitive to these compounds could be used to identify and
+eliminate these infestations. The sensor could then be used to prevent
+cross-border incursions by the Queensland fruit fly, which have
+historically cost the New Zealand government millions of NZD to address
+\autocite{Queensland1,Queensland2}.
+
+A variety of biosensor functionalisation procedures were previously
+trialled in an aqueous environment, with the results of these trials
+described in \textbf{?@sec-biosensing-iORs}. The most successful
+approach, which eliminated a number of possible surface coatings and
+discarded the nanodisc format, was subsequently tested in the vapour
+delivery system. Numerous alternative functionalisation approaches
+trialled in \textbf{?@sec-biosensing-iORs} were unable to produce
+sensors which consistently responded to their target analyte. The
+inconsistent behaviour of these sensors meant they were considered
+inappropriate for testing in the vapour delivery system, as it would be
+difficult to determine whether a sensor had failed to respond because
+the analyte was in vapour phase, or whether the functionalisation had
+been unsuccessful.
+
+This chapter first demonstrates that the reference sensors described in
+\textbf{?@sec-vapour-sensing-biosensors} were able to non-selectively
+respond to vapour in a consistent manner. These reference sensors were
+then used to monitor the vapour system chamber environment during
+testing of sensors; the reference sensor responses were measured to
+ensure sensors were responding to vapour and not to other environmental
+effects. Next, measurements were taken to understand the response of
+pristine carbon nanotube thin-film transistors to volatile compounds in
+the vapour delivery system, to later compare with the response of
+functionalised devices to similar vapour concentrations. The transducers
+were shown to give a small signal response to parts per million
+concentrations of ethyl hexanoate and \emph{trans}-2-hexenal. A device
+was then functionalised using the aqueous approach described in
+\textbf{?@sec-aqueous-functionalisation}, and exposed to
+\emph{trans}-2-hexenal vapour in the delivery system. However, little
+response to the positive analyte was shown by the functionalised sensor
+when compared to a pristine control. The chapter finishes with a
+discussion of possible reasons for the lack of response to vapour shown
+by the functionalised device.
+
+\hypertarget{sec-responses-to-vapour}{%
+\section{Reference Sensor Responses to Vapour
+Flow}\label{sec-responses-to-vapour}}
+
+\begin{figure}
+
+{\centering \includegraphics[width=1\textwidth,height=\textheight]{figures/ch9/chamber-manifold-v2.png}
+
+}
+
+\caption[Simplified schematic showing the flow into and out of the
+device chamber and manifold of the delivery
+system.]{\label{fig-chamber-schematic}Simplified schematic showing the
+flow into and out of the device chamber and manifold of the delivery
+system. The input flows from the carrier and dilution line are
+represented by \(C\) and \(D\), and the output flow through the PID is
+represented by \(P\). The exhaust can either flow past the relative
+humidity indicator or straight to the fumehood. This diagram assumes
+that flow through leaks in the chamber and manifold is low enough to be
+considered negligible, which was confirmed by leak testing with bubble
+solution.}
+
+\end{figure}
+
+Once the rate of flow through the device chamber had been calibrated,
+the correct operation of the reference sensors used in the system was
+verified. Various flow rates in and out of the chamber were used to
+calibrate and verify the reference sensors. These flows in and out of
+the chamber are labelled on the simplified schematic in
+Figure~\ref{fig-chamber-schematic}. Note that the labels on this
+schematic assume that nitrogen compression at any point within this
+schematic is negligible. \textbf{?@sec-calibration} shows that a 200
+sccm flow into the chamber corresponds to an actual rate for \(C + D\)
+of \(\sim\) 230 sccm. If a 150 sccm flow rate as measured by the
+flowmeter is pumped out through the PID, \textbf{?@sec-calibration}
+shows that \(P \sim\) 110 sccm. This means that \(\sim\) 50\% of the
+flow through the chamber exits via the PID. If a 100 sccm flowmeter rate
+is pumped through the PID, \(P \sim\) 70 sccm, and therefore \(\sim\)
+30\% of the chamber flow exits through the PID.
+
+To test the relative humidity indicator (RHI), all valves out of the
+chamber were sealed except for the valve for the relative humidity
+indicator chamber. This meant all flow coming out of the system would
+pass through the relative humidity indicator chamber (\(P\) = 0 sccm and
+exhaust goes to RHI in Figure~\ref{fig-chamber-schematic}). Continuous
+nitrogen flow was then placed through the chamber until relative
+humidity dropped to about 20\%. 10 mL of deionised water was placed into
+the analyte bottle. A series of different flow rates through each line
+was sent to the chamber, with the sequence of flow rates shown in
+\textbf{?@tbl-RHI-flow-sequence} (\(t\) = time, \(C\) = carrier line
+flow rate, \(D\) = dilution line flow rate). Note that between 200 s and
+600 s, the total flow rate remains the same, but the ratio of dilution
+to carrier flow differs.
+
+\hypertarget{relative-humidity-indicator}{%
+\subsection{Relative Humidity
+Indicator}\label{relative-humidity-indicator}}
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch9/RHI_verification.png}
+
+}
+
+\caption[Relative humidity readouts from the relative humidity indicator
+juxtaposed with flow rates from the dilution line and carrier lines of
+the vapour system.]{\label{fig-RHI-verification}Relative humidity
+readouts from the relative humidity indicator juxtaposed with flow rates
+from the dilution line and carrier lines of the vapour system, with 10
+mL deionised water in the carrier line analyte bottle.}
+
+\end{figure}
+
+Figure~\ref{fig-RHI-verification} shows that the Telaire sensor records
+decreased humidity after flow exclusively from the dilution line and
+increased humidity after flow from the analyte bottle. It also shows
+that in regular 200 s intervals, the rate of relative humidity change
+increases and then begins to stabilise. Each accelerated change in
+relative humidity occurs about 50 s after a corresponding increase in
+flow through the carrier line. It appears a 50 s period passes before an
+increased concentration of water vapour due to increased carrier flow
+first reaches the relative humidity indicator. Over the full 800 s of
+carrier line flow, relative humidity increases from a minimum of
+\(14.0 \pm 2.0\)\% to a maximum of \(43.6 \pm 2.0\)\%. The temperature
+in the chamber remained within the range 20.5 °C \(-\) 21.5 °C over the
+entire measurement period. Combining equations
+\textbf{?@eq-absolute-humidity} and \textbf{?@eq-water-vapour-pressure}
+from \textbf{?@sec-reference-sensors}, we find that the absolute
+humidity in the chamber reaches a low of \(2.6\pm0.4\) gm\(^{-3}\) at
+238.1 s, 38.1 s after the initial onset of carrier flow, and a high of
+\(8.4 \pm 0.5\) gm\(^{-3}\) at 998.8 s, after 798.8 s of carrier flow
+through the chamber. The clear response of the Telaire RHI to increased
+water vapour flow confirms that this sensor is working.
+
+\hypertarget{photoionisation-detector-with-continuous-vapour-flow}{%
+\subsection{Photoionisation Detector with Continuous Vapour
+Flow}\label{photoionisation-detector-with-continuous-vapour-flow}}
+
+\begin{figure}
+
+\begin{minipage}[t]{0.09\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(a).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.75\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch9/240223_240226_comparison_unnormalised.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.12\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.09\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.75\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch9/240223_240226_comparison.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.12\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption[The response of the photoionisation detector to ethyl hexanoate
+vapour relative to the 200 sccm nitrogen flow baseline over 600 s of
+exposure, both unnormalised and normalised to the maximum
+reading.]{\label{fig-PID-EtHex-response}The response of the
+photoionisation detector to ethyl hexanoate vapour over 600 s of
+exposure is shown relative to the 200 sccm nitrogen flow baseline in
+(a), and normalised with respect to the maximum reading in (b).}
+
+\end{figure}
+
+To test the photoionisation detector, the device chamber and carrier
+line were first purged of vapour through the exhaust using a roughing
+pump, with the PID valve closed to protect it from the pump. The PID
+valve was then opened, the micropump was set to 150 sccm as read by the
+flowmeter. During testing with the PID, the total flow into the chamber
+was set at 200 sccm as read by the Tylan mass flow controllers. The
+calibration curves in \textbf{?@sec-calibration} show that the actual
+flow \(C + D\) was then therefore approximately the same as the actual
+flow rate into the PID, \(P\). A flow of 200 sccm nitrogen was placed
+through the dilution line to the chamber for 10 minutes until successive
+concentration readings from the PID were either approximately constant,
+or until baseline drift was small enough to be considered negligible.
+These measurements were then used as the baseline (0 ppm) for subsequent
+measurements. 5 mL of the volatile organic compound ethyl hexanoate
+(EtHex), also known as ethyl caproate, was placed into the analyte
+bottle. A flow of 150 sccm was then sent through the carrier line and 50
+sccm through the dilution line for 600 s. The same procedure was
+performed on two separate dates spaced three days apart (23 Feb and 26
+Feb) to check that the measured PID response to ethyl hexanoate vapour
+pumped out of the manifold was repeatable.
+
+The responses from each date are shown in
+Figure~\ref{fig-PID-EtHex-response}. In
+Figure~\ref{fig-PID-EtHex-response} (a), the response corresponding to
+each measurement date is shown unnormalised, with the parts per million
+concentration shown relative to the nitrogen baseline as recorded by the
+PID. Both measurements show little to no response to vapour for
+approximately 50 s, which seems to be the time taken for vapour to first
+reach the PID. Over the next 100s, there is a rapid increase in vapour
+concentration detected, which then settles to a constant concentration
+at about 300 s. This appears to be the maximum concentration of EtHex
+vapour that can be contained by the chamber in this configuration. There
+is approximately a 200 parts per billion difference in maximum
+concentration between the measurement on each date.
+
+However, this is not unexpected. As discussed in
+\textbf{?@sec-reference-sensors}, the PID is being run uncalibrated, and
+some drift of the sensitivity of the sensor due to environmental changes
+is highly likely. To check that the PID records the same evolution of
+vapour flow with time, regardless of its sensitivity, the measurements
+from both dates were then normalised with respect to the maximum
+concentration reading. Figure~\ref{fig-PID-EtHex-response} (b) shows
+that once normalised, the rate of change in concentration with time is
+almost identical between the two measurement sets. This test verifies
+that the evolution of vapour concentration of the device chamber can be
+repeatably measured using the PID in the vapour delivery system.
+
+\hypertarget{photoionisation-detector-with-vapour-flow-intervals}{%
+\subsection{Photoionisation Detector with Vapour Flow
+Intervals}\label{photoionisation-detector-with-vapour-flow-intervals}}
+
+A further series of tests were performed to verify whether it was
+possible to compare different concentrations of vapour in the chamber
+using the PID. All testing was performed on the same day to minimise
+sensitivity drift. For each test, the system was purged of vapour and
+the total dilution flow into the chamber was set at 200 sccm as read by
+the Tylan mass flow controller. Flow out of the chamber to the PID was
+set at 100 sccm as read by the micropump flowmeter, and the
+almost-constant nitrogen baseline after 10 minutes was set as the PID
+zero point. 5 mL of the volatile organic compound ethyl hexanoate
+(EtHex) was placed into the analyte bottle. During each test, 200 sccm
+was continuously flowed through the dilution line, except during three
+evenly spaced intervals of equal length. During these intervals, 150
+sccm flow was placed through the carrier line and 50 sccm flow placed
+through the dilution line. In each test, the input interval time was
+varied to examine its effect on maximum vapour concentration recorded by
+the PID. As it took longer for the PID to return to a constant baseline
+with increased input intervals, when the input interval was increased,
+the spacing between intervals was also increased.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.75\textwidth,height=\textheight]{figures/ch9/input_time_comparison_PID.png}
+
+}
+
+\caption[The response of the photoionisation detector to three
+evenly-spaced intervals of ethyl hexanoate vapour entering the device
+chamber, relative to a 200 sccm nitrogen flow
+baseline.]{\label{fig-concentration-comparison}The response of the
+photoionisation detector to three evenly-spaced intervals of ethyl
+hexanoate vapour entering the device chamber, relative to a 200 sccm
+nitrogen flow baseline. Input intervals were either 50 s, 100 s or 200 s
+in length. During each input interval, 150 sccm carrier flow and 50 sccm
+dilution flow were placed through the chamber.}
+
+\end{figure}
+
+The results of three tests, with input intervals of 50 s, 100 s and 200
+s, are shown in Figure~\ref{fig-concentration-comparison}. Each interval
+of carrier flow corresponds to a rapid increase in concentration, which
+reaches a peak, then decreases. The change in concentration
+corresponding to each interval is shown above each peak. Note that the
+peak labels do not correspond to the difference between the original
+baseline and the maximum concentration of each peak. Instead, they
+correspond to the difference between the concentration measurement at a
+set time before the onset of carrier flow and the maximum concentration
+reached. For each test, this set time is 5\% of the spacing time used,
+50 s, 150 s and 300 s respectively. This approach was taken to account
+for drift from the original 0 ppm baseline. This variable baseline drift
+was particularly significant for the 100 s interval measurements, where
+concentration measurements settled to a new baseline of \(\sim\) 0.05
+ppm after the third peak.
+
+The values of the three concentration changes in each test shown in
+Figure~\ref{fig-concentration-comparison} are highly consistent, with
+only a \(\pm\) 0.02 ppm margin of error. This experiment demonstrates
+that if tests using the PID are performed during the same day, placing
+the same vapour flow into the PID for the same interval of time in each
+test, the PID can be used to show the same exposure intervals give rise
+to similar changes in concentration. This result indicates that placing
+the same amount of vapour flow into the chamber for a set amount of time
+leads to a reproducible concentration of vapour building up within the
+chamber. Drift in the baseline does not significantly affect the
+magnitude of each concentration peak when measured relative to the
+baseline reading directly before each interval.
+
+\hypertarget{sec-pristine-EtHex}{%
+\section{Pristine Device Detection of Volatile Organic
+Compounds}\label{sec-pristine-EtHex}}
+
+\hypertarget{sec-vapour-drift}{%
+\subsection{Baseline Drift}\label{sec-vapour-drift}}
+
+\begin{figure}
+
+\begin{minipage}[t]{0.11\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(a).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.70\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch9/Q2C6_fitted_curves.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.11\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.70\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch9/Q2C6_fitted_curves_exp.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption[The source-drain and gate current measured for a backgated
+device channel across 3600 s, with a linear curve fitted to the data,
+alongside a figure showing the current data with linear fit subtracted
+and an exponential curve fitted.]{\label{fig-bg-baseline-drift}The
+source-drain and gate current measured for a backgated device channel
+across 3600 s, where \(V_{ds}\) = 100 mV and \(V_g\) = 0 V is shown in
+(a). A linear fit to the data from 2400 s onwards has been indicated on
+(a) with a black dashed line. The linear fit has then been subtracted
+from (a) to give the dataset shown in (b). An exponential fit to the
+dataset in (b) is also shown in black.}
+
+\end{figure}
+
+When sensing vapour in the vapour delivery system, devices have no
+liquid gate, and are instead backgated when taking measurements.
+Therefore, the baseline drift of devices characterised in this manner
+should be considered separately to those characterised in an
+liquid-gated environment. Device baseline drift of a backgated device in
+the vapour sensing chamber is therefore examined here. An
+AZ\(^\circledR\) 1518 encapsulated carbon nanotube network device was
+used for this discussion. The device was fabricated on a substrate with
+a 300 nm SiO\(_2\) layer, and the carbon nanotube film was deposited
+using the steam-assisted surfactant method. Before measurements were
+taken, the vapour system was purged of vapour, the total dilution flow
+into the chamber was set at 200 sccm as read by the Tylan mass flow
+controller and flow to the PID was set to 150 sccm on the flowmeter.
+Sensing measurements were taken using the B1500A semiconductor device
+analyser.
+
+Figure~\ref{fig-bg-baseline-drift} (a) shows 3600 s of baseline drift
+from the same channel when the device was backgated at \(V_g\) = 0 V and
+a source-drain voltage of \(V_{ds}\) = 100 mV was placed across the
+channel. During this period of time, a 200 sccm nitrogen flow was placed
+through the device chamber with the dilution mass flow controller. Gate
+leakage current remains negligible across the entire control series. As
+seen for the liquid-gated device in \textbf{?@sec-baseline-drift}, there
+is a period of rapidly-disappearing exponential decay followed by a
+period of stable, approximately linear baseline drift. The baseline
+drift observed here appears to be significantly lower than that seen by
+Noyce \emph{et al.} This observation suggests that the higher magnitude
+of drift observed by Noyce \emph{et al.} is not primarily due to
+backgating in air, but instead results from the use of a significantly
+different fabrication process for their devices \autocite{Noyce2019}.
+
+A linear least-squares fit was performed on the samples taken between
+2400 s \(-\) 3600 s, and the fit obtained had an R-squared value of
+0.998. The constants obtained for the linear fit, where
+\(I = c_1t + c_2\), were \(c_1 = -17.31\pm0.05\) pAs\(^{-1}\) and
+\(c_2 = 0.779\) µA. Both linear and constant terms are higher than that
+of the average liquid-gated device drift. The linear fit was then
+subtracted from the raw data, and an exponential least-squares fit was
+performed on the remaining dataset. Figure~\ref{fig-bg-baseline-drift}
+(b) shows the exponential fit to this remaining dataset from 0 s \(-\)
+3600 s. The constants obtained for the exponential fit
+\(I = I_0 \textrm{exp}(-t/\tau)\) were \(I_0 = 7.20 \pm 0.05\) nA and
+\(\tau = 730 \pm 10\) s. The exponential term is similar in size to
+those found for the channels of the liquid-gated device, which may
+indicate the magnitude of this decay behaviour is independent of the
+type of transistor gating. Three time constants equates to
+\(2190 \pm 30\) s, indicating the length of the control sequence could
+be safely reduced to 2400 s without the short-term exponential drift
+being present during sensing.
+
+This analysis indicates that the baseline drift for the backgated carbon
+nanotube under nitrogen flow can be approximated as a combination of a
+exponential, linear and constant term. Furthermore, while only measured
+here for a single channel, it appears likely that we can expect
+backgated baseline drift behaviour to be similar to the multiplexed
+liquid-gated drifts observed in \textbf{?@sec-baseline-drift}, except
+possibly with a longer time constant for the exponential term. It seems
+that the baseline drift behaviour in these devices is primarily due to
+the general nature of the carbon nanotube network. It appears possible
+that the type of gating used for device characterisation may affect the
+rate at which the exponential term decays. However, further
+experimentation is needed to confirm this relationship, work which is
+outside the scope of this thesis.
+
+\hypertarget{sec-vapour-series}{%
+\subsection{Sensing Series}\label{sec-vapour-series}}
+
+Directly after the 3600 s control series, sensing devices were exposed
+to four intervals of volatile organic vapour flow from the carrier line.
+Two high vapour pressure compounds, ethyl hexanoate (0.21 kPa at room
+temperature \autocite{EtHex}) and \emph{trans}-2-hexen-1-al (0.88 kPa at
+room temperature \autocite{E2Hex}), were measured separately using two
+different devices. 5 mL of the analyte of interest was placed into the
+analyte bottle on the carrier line before each sensing series. Intervals
+of varying lengths were used to see how the device responded to various
+concentrations of vapour in the chamber. A separate sensing series was
+also performed for each device where no analyte was present in the
+analyte bottle across the four intervals; this series was performed to
+ensure that signal responses from the transistor and photoionisation
+detector were due to analyte, and not due to changes in nitrogen flow
+during each interval. Aside from changes to the mass flow controller
+settings during each interval, all other settings for the vapour
+delivery system were kept the same as those in
+Section~\ref{sec-vapour-drift}. During all measurements, the chamber
+temperature remained at 22 °C \(\pm\) 3 °C and the relative humidity
+never exceeded 50\%.
+
+During each interval 150 sccm flow was placed through the carrier line;
+a combined flow of 200 sccm from the two mass flow controllers was
+placed through the chamber at all times. Apart for the duration of the
+four intervals, flow through the carrier line was kept at zero. It is
+important to note that these flow rate values are nominal, and from the
+discussion in \textbf{?@sec-calibration} it can be seen that actual mass
+flow rate may vary across an experimental run by up to 10\%. While the
+impact of this variability on the vapour delivered to the chamber should
+be considered when reviewing the results in the rest of this chapter,
+Figure~\ref{fig-concentration-comparison} indicates the chamber
+concentration of a specific volatile compound should remain reasonably
+consistent between flow intervals of the same length. A 1200 s recovery
+period was included between each carrier flow interval, where 200 sccm
+flow was placed into the chamber from the dilution line. This recovery
+period allowed measurements from the photoionisation detector to
+approach the original baseline after each interval to avoid saturation
+of the photoionisation detector.
+
+\begin{figure}
+
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(a).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch9/Q39C11_detrend_trunc_arrows_normalised.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch9/Q2C6_detrend_trunc_arrows_normalised.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(c).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch9/Q39C11_filtered_detrend_trunc_arrows_normalised.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(d).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch9/Q2C6_filtered_detrend_trunc_arrows_normalised.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(e).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch9/Q39C11_mean_simple_difference_before_and_after_step_filtered_concentrations.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(f).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch9/Q2C6_mean_simple_difference_before_and_after_step_filtered_concentrations.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption[Device channel responses to intervals of
+\emph{trans}-2-hexen-1-al (E2Hex) or ethyl hexanoate (EtHex) flow from
+the carrier line into the vapour delivery system chamber, with and
+without filtering, and compared with a control series where no analyte
+was present in the analyte bottle.]{\label{fig-EtHex-sampling}Device
+channel responses to intervals of flow from the carrier line into the
+vapour delivery system chamber. Intervals begin at 3600 s, 4850 s, 6150
+s and 7500 s. The length of each interval is indicated above the
+corresponding normalised current response to \emph{trans}-2-hexen-1-al
+(E2Hex) in (a) and to ethyl hexanoate (EtHex) in (b). Each series is
+shown alongside a control series in which no analyte was present in the
+analyte bottle. The dataset after applying a moving median filter is
+shown in (c) for E2Hex and (d) for EtHex. The signal changes
+corresponding to the current responses to each interval are shown in (e)
+for E2Hex and (f) for EtHex.}
+
+\end{figure}
+
+\begin{figure}
+
+\begin{minipage}[t]{0.11\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(a).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.70\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch9/input_time_comparison_E2Hex.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.11\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.70\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch9/input_time_comparison_EtHex.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption[Nominal concentration measurements by the photoionisation
+detector taken from the device chamber during device current sampling
+from 3600 s onwards, with and without \emph{trans}-2-hexen-1-al (E2Hex)
+or ethyl hexanoate (EtHex) present in the analyte
+bottle.]{\label{fig-EtHex-sampling-PID}Nominal concentration
+measurements by the photoionisation detector taken from the device
+chamber during device current sampling from 3600 s onwards. Measurements
+both with and without \emph{trans}-2-hexen-1-al (E2Hex) in the analyte
+bottle are shown in (a), while measurements both with and without ethyl
+hexanoate (EtHex) are shown in (b). The maximum nominal concentration
+reached during each carrier flow interval is indicated above each peak.}
+
+\end{figure}
+
+The results of these interval tests, both with and without analyte, are
+shown in Figure~\ref{fig-EtHex-sampling} (a) for
+\emph{trans}-2-hexen-1-al and Figure~\ref{fig-EtHex-sampling} (b) for
+ethyl hexanoate. These results have been normalised, despiked and have
+had baseline drift corrections applied in the manner described in both
+\textbf{?@sec-python-analysis} and \textbf{?@sec-salt-conc-series}. To
+more clearly discern sensing behaviour through the noise present, a
+moving median filter was applied to these datasets, as shown in
+Figure~\ref{fig-EtHex-sampling} (c) and Figure~\ref{fig-EtHex-sampling}
+(d) for E2Hex and EtHex respectively. Most intervals of exposure to
+carrier line flow correspond to a current increase. These increases have
+been labelled with the length of the corresponding interval used. When
+analyte was present in the analyte bottle on the carrier line, the
+response to each exposure interval was generally larger than the
+response when no analyte is present. Some response to carrier line flow
+is observed even when the analyte bottle is empty. As the system lines
+are purged with a roughing pump before sensing, and both lines are
+checked for vapour before sensing using the PID, it appears these small
+responses may be due to a slow leak of volatiles from the fumehood
+environment into the carrier line when not in use.
+
+Vapour concentration measurements from PID, shown in
+Figure~\ref{fig-EtHex-sampling-PID}, also indicate that an ionisable gas
+is reaching the chamber during each interval, even when the analyte
+bottle is left empty. As discussed in
+Section~\ref{sec-responses-to-vapour}, some baseline drift is seen after
+each addition, which is particularly significant for the second two
+carrier line intervals in Figure~\ref{fig-EtHex-sampling-PID} (a). The
+baseline immediately before each peak was therefore subtracted from the
+maximum concentration measured during each interval to give the values
+shown above each peak. These values are taken to represent the nominal
+change in chamber concentration as a result of each exposure interval.
+
+Each signal response corresponds to a change in conductance through the
+exposed carbon nanotubes within the device channel. These conductance
+changes occur due to the molecular adsorption of analyte vapour onto the
+external and internal surfaces of the nanotubes. The vapour can dope the
+semiconducting carbon nanotubes in the channel, causing a shift in the
+channel threshold voltage, and can cause carrier scattering when
+adsorped onto the metallic nanotubes present. Binding of analyte to a
+gas sensing material can be reversible or irreversible. In general,
+adsorption onto carbon nanotube sensors is irreversible. This
+irreversibility means after a response to analyte, readings from the
+sensor will not return to the original baseline within the same
+timescale as the sensing response, even after stopping analyte flow to
+the chamber \autocite{Agnihotri2005,Lee2005}. From
+Figure~\ref{fig-EtHex-sampling}, it is clear that the carbon nanotube
+sensor configuration used here is primarily irreversible, where the
+current level does not return to baseline within a period of 1200 s
+after analyte exposure.
+
+Assuming that the signal response is directly proportional to the degree
+of surface coverage by adsorbed analyte on the carbon nanotube network
+\autocite{Lee2005}, the relationship between signal response
+(Figure~\ref{fig-EtHex-sampling}) and concentration in the device
+chamber (Figure~\ref{fig-EtHex-sampling-PID}) can be modelled with a
+adsorption isotherm \autocite{Agnihotri2005}. The Freundlich adsorption
+isotherm (Equation~\ref{eq-freundlich}) models adsorption onto a
+heterogeneous surface, and has previously been used to model adsorption
+of volatile organic molecules onto single-walled carbon nanotubes.
+
+\begin{equation}\protect\hypertarget{eq-freundlich}{}{
+q_e = K_F(k_Dk_{RF}C_e)^{1/n}
+}\label{eq-freundlich}\end{equation}
+
+\(K_F\) is the adsorption capacity, indicating the amount of analyte
+that can be adsorped onto the surface. \(1/n\) is adsorption intensity,
+which can be used to understand the heterogeneity of adsorbate sites
+\autocite{Ayawei2017,Sabzehmeidani2021}. The vapour response factor,
+which is equal to 1.6 for a 10.6 eV photoionisation detector (PID), is
+denoted as \(k_{RF}\). As the PID has been run uncalibrated, a factor
+\(k_{D}\) has been included to account for linear span drift. As span
+drift due to window contamination can cause concentration readings to be
+reduced up to 30\% after six months of PID operation, it is expected
+that \(k_{D}\) falls within the range of 0.2 \(-\) 1 for the sensing
+configuration used \autocite{PIDmanual,Ionscience}.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.55\textwidth,height=\textheight]{figures/ch9/EtHex-ratio-comparison.png}
+
+}
+
+\caption[Device responses against maximum concentration measurement
+corresponding to each interval of carrier flow, where control responses
+to carrier line flow from an empty analyte bottle have been
+subtracted.]{\label{fig-EtHex-ratio-comparison}Device responses against
+maximum concentration measurement corresponding to each interval of
+carrier flow, where control responses to carrier line flow from an empty
+analyte bottle have been subtracted. The chamber temperature was 22 °C ±
+2 °C during collection of all data used here.}
+
+\end{figure}
+
+To examine only the device response directly attributable to the
+presence of analyte vapour, the average response resulting from carrier
+line exposure with no analyte present was subtracted from each device
+current reading. The same was then done for the vapour concentration
+readings from the PID. Due to the equivalence of the three final
+concentration measurements in Figure~\ref{fig-EtHex-sampling-PID} (a),
+\(0.11\pm0.01\) ppm, no isotherm could be fitted to the E2Hex dataset. A
+best-fit Freundlich isotherm to EtHex concentration readings against
+device channel responses is shown in
+Figure~\ref{fig-EtHex-ratio-comparison}. This dataset was collected
+primarily to demonstrate the responsiveness of carbon nanotubes to
+vapour; while the limited data collected does not rule out the
+possibility that the signal response relationship follows a Freudlich
+isotherm, further testing would be required to confirm whether this is
+the case. A more thorough investigation into this relationship was
+outside of the scope of this thesis, but further work could be done to
+rigorously confirm whether the Freundlich isotherm is a valid model for
+relating the PID response to the pristine carbon nanotube sensor
+response of this system.
+
+\hypertarget{or35a-functionalised-device-detection-of-trans-2-hexen-1-al}{%
+\section{\texorpdfstring{OR35a-Functionalised Device Detection of
+\emph{trans}-2-hexen-1-al}{OR35a-Functionalised Device Detection of trans-2-hexen-1-al}}\label{or35a-functionalised-device-detection-of-trans-2-hexen-1-al}}
+
+Vapour phase sensing was trialled using an odorant receptor device
+functionalised in the manner described in
+\textbf{?@sec-aqueous-functionalisation-biosensing}. The vapour pressure
+of methyl salicylate, 5 Pa, was too low for reliable vapour system
+delivery (\emph{c.f.} Section~\ref{sec-vapour-series}) \autocite{MeSal}.
+The odorant receptor OR35a (batch number AviHis-OR35a-001, prepared 12
+months earlier) was therefore used in the functionalisation process
+instead of OR10a, as it responds to \emph{trans}-2-hexanal (E2Hex)
+\autocite{Murugathas2019a}, which can be delivered successfully in the
+vapour system (see Section~\ref{sec-vapour-series}). Back-gated transfer
+characteristics of a OR35a-functionalised before and after
+functionalisation are shown in Figure~\ref{fig-OR35a-TX-comparison} (a),
+alongside characteristics from a device before and after plasma cleaning
+at 5 W without subsequent functionalisation in
+Figure~\ref{fig-OR35a-TX-comparison} (b). As expected, a significant
+drop in mobility is seen as a result of the plasma cleaning step. Unlike
+the functionalised device, the device plasma cleaned without
+functionalisation turns off entirely at \(V_g \sim\) 3 V, with this
+difference apparently due to variability in the results of plasma
+etching for different carbon nanotube devices.
+
+\begin{figure}
+
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(a).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch9/AQ1C4_ch4_absolute_values_with_gate_current.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch9/Q31C12_ch7_absolute_values_with_gate_current.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption[Back-gated carbon nanotube network device transfer
+characteristics before and after modification with OR35a, compared to
+the change resulting from a 5 W plasma
+clean.]{\label{fig-OR35a-TX-comparison}Back-gated carbon nanotube
+network device transfer characteristics on a logarithmic scale before
+and after modification with OR35a, where the gate current for each
+transfer curve is shown with a dashed line. Source-drain voltage was
+\(V_{ds}\) = 100 mV for each of the forward and reverse sweep. The
+change in characteristics from avi-tagged OR35a functionalisation is
+shown in (a), while the change resulting from a 5 W plasma clean is
+shown in (b).}
+
+\end{figure}
+
+\begin{figure}
+
+\begin{minipage}[t]{0.11\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(a).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.70\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch9/AQ1C4_with_fitted_curves_normalised.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.11\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.70\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch9/AQ1C4_with_fitted_curves.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.15\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.11\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(c).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.75\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch9/AQ1C4_filtered_detrend_trunc_arrows_normalised.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.10\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption[The baseline drift data for both a pristine and
+OR35a-functionalised device with a linear fitted curve shown, alongside
+the same dataset with linear fit subtracted and an exponential curve
+fitted. Device channel responses to \emph{trans}-2-hexen-1-al (E2Hex),
+filtered and with drift corrections, are also
+shown.]{\label{fig-E2Hex-sampling}The baseline drift data across the
+first 2500 s of measurement for both a pristine and OR35a-functionalised
+device is shown in (a). A linear fit to the baseline drift data between
+\(2150-3350\) s is indicated in (a) with a black dashed line. The
+difference between the raw dataset and linear fit is shown in (b), with
+an exponential fit to the data indicated with a black dotted line.
+Device channel responses to intervals of flow through the
+\emph{trans}-2-hexen-1-al (E2Hex) bubbler and carrier line between
+\(3000-6500\) s are shown in (c), where drift corrections and a moving
+median filter have been applied. Intervals begin at 3350 s, 4450 s and
+5600 s.}
+
+\end{figure}
+
+In a similar manner as in Section~\ref{sec-pristine-EtHex}, the
+functionalised device was back-gated in the vapour delivery system and a
+series of exposures to E2Hex was performed. Another pristine device
+channel was measured during the same sensing series for a baseline
+comparison. Before each series was performed, the vapour system was
+purged of vapour, the total dilution flow was set at 200 sccm (nominal)
+and flow to the PID was set to 150 sccm on the flowmeter. In line with
+the discussion in Section~\ref{sec-vapour-drift}, a 2500 s control
+series was used. The baseline drift is shown in
+Figure~\ref{fig-E2Hex-sampling} (a) and (b), with a backgate of \(V_g\)
+= 0 V and a source-drain voltage of \(V_{ds}\) = 100 mV across the
+channel during each measurement. During this period, 200 sccm of
+nitrogen flow was placed through the device chamber. A linear fit
+\(I = c_1t + c_2\) was performed on the the measurements from each
+channel between \(2150-3350\) s. For the pristine device,
+\(c_1 = -1.29\pm0.01\) pAs\(^{-1}\), while for the OR35a-functionalised
+device, \(c_1 = -0.55\pm0.01\) pAs\(^{-1}\).
+Figure~\ref{fig-E2Hex-sampling} (b) shows the exponential fit
+\(I = I_0\textrm{exp}(-t/\tau)\) to each dataset with linear drift
+subtracted, where the time constant for the pristine device was
+\(\tau = 963 \pm 25\) s and for the OR35a-functionalised device was
+\(\tau = 704 \pm 4\) s.
+
+After the 2500 s control series, each device was exposed to three
+intervals of \emph{trans}-2-hexen-1-al vapour flow from the carrier line
+in the same manner. A total of 5 mL of the analyte of interest was
+present in the analyte bottle before each sensing series. A total flow
+of 200 sccm was kept through the chamber at all times. During each
+interval, 150 sccm of this total flow passed through the carrier line.
+Except during intervals, no flow was placed through the carrier line. A
+1000 s recovery period was used between each interval. The temperature
+was 20 °C \(\pm\) 2 °C during each series. These sensing series, which
+have been normalised, despiked, corrected for drift and filtered, are
+shown side-by-side in Figure~\ref{fig-E2Hex-sampling} (c). A larger
+current change is shown by the functionalised device than the pristine
+device after each addition. The PID indicated a similar concentration of
+E2Hex was present in the device chamber with each addition, shown in
+Figure~\ref{fig-E2Hex-additions-PID}. Note that measurements were taken
+two days apart; the \(\sim\) 50\% variation in chamber concentration
+reached with each interval is largely due to PID span drift
+(Section~\ref{sec-responses-to-vapour}).
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.8\textwidth,height=\textheight]{figures/ch9/input_time_comparison.png}
+
+}
+
+\caption[Nominal concentration measurements by the photoionisation
+detector taken from the device chamber during the vapour sensing series
+for both pristine and OR35a-functionalised
+devices.]{\label{fig-E2Hex-additions-PID}Nominal concentration
+measurements by the photoionisation detector taken from the device
+chamber during the vapour sensing series for both pristine and
+OR35a-functionalised devices. The maximum nominal concentration reached
+during each interval of carrier flow is indicated above each peak.}
+
+\end{figure}
+
+The current responses from the functionalised carbon nanotube sensor are
+not the sharp, clear responses to analyte of the liquid-gated device
+seen in \textbf{?@sec-MeSal-aqueous-sensing}. There are alternative
+explanations for the current changes observed in
+Figure~\ref{fig-E2Hex-sampling} which do not involve specific detection
+of analyte. The functionalisation may have altered the drift behaviour
+in a manner which reduces the accuracy of the linear approximation used
+to remove baseline drift. It may be useful for future works to
+incorporate computational approaches to baseline drift compensation if
+the linear approximation regularly breaks down for functionalised
+devices \autocite{Zhang2022}. The breakdown in this approximation has
+then led to current increases that do not directly correspond to analyte
+being added. The functionalisation process may also have caused the
+device to become more sensitive to changes in vapour concentration,
+increasing the signal-to-noise ratio of the sensor. Regardless of their
+origin, the current increases observed cannot fairly be described as
+clear or convincing sensing responses. A working sensor should exhibit
+responses more similar to those seen in
+\textbf{?@sec-MeSal-aqueous-sensing}.
+
+It may be necessary to ensure the sensing environment is similar to that
+used for aqueous sensing for reliable sensing. A buffered environment
+helps to stabilise the unprotected odorant receptors
+\autocite{Sato2014}, and so a PDMS well containing 50 µL 0.5\% v/v DMSO
+\(1 \times\) PBS was attached to the device for vapour sensing. Despite
+the well being upside-down in the vapour delivery system, the
+hydrophobicity of the PDMS was sufficient to store the PBS securely.
+Current sampling over a 1 hour period in this configuration, with 200
+sccm constant flow across the surface of the well, is presented in
+Figure~\ref{fig-buffer-vapour}. If the well solution was leaking out of
+the well, the conductive liquid could form a short between the channel
+electrodes and backgate, prompting a large increase in gate current.
+However, gate current remains stable across the entire measurement
+period, indicating the well remains secure. However, fluctuations in
+drain current became apparent after \(\sim\) 800 s, and at \(\sim\) 2400
+s, the direction of baseline drift was reversed entirely. These
+undesirable changes appear to result from rapid evaporation of liquid in
+the well; when the device chamber was opened, only \(\sim\) 10-20 µL of
+PBS was still present.
+
+\begin{figure}
+
+{\centering \includegraphics[width=0.7\textwidth,height=\textheight]{figures/ch9/Q39C11.png}
+
+}
+
+\caption[Electrical samples from a carbon nanotube transistor in the
+vapour delivery system device chamber, where 50 µL 0.5\% v/v DMSO 1X PBS
+was present on the device surface.]{\label{fig-buffer-vapour}Electrical
+samples from a carbon nanotube transistor in the vapour delivery system
+device chamber. Transistor voltages were \(V_{g}\) = 0 V and \(V_{ds}\)
+= 100 mV. During the measurement, a PDMS well containing 50 µL 0.5\% v/v
+DMSO 1X PBS was present on the device surface. Significant changes in
+baseline drift behaviour are indicated with red dotted lines.}
+
+\end{figure}
+
+For readily reproducible vapour sensing, therefore, one of two
+approaches present themselves. The first approach is to identify a
+covalent attachment mechanism that allows for specific attachment to
+odorant receptors via a histidine or avidin tag. This approach allows
+for a protective format like nanodiscs to be used in the sensing setup
+while eliminating concerns around unwanted attachment of the protective
+membrane protein. The weak nature of non-covalent binding lends itself
+to variable functionalisation quality and poor reproducibility.
+Non-covalent functionalisation may also be less suitable for use in
+non-aqueous environments lacking buffer solution stabilisation
+\autocite{Li2023}. Conversely, covalent functionalisation of
+mammalian-OR sensors has been used before for successful vapour sensing
+of eugenol \autocite{Goldsmith2011}. Alternatively, a similar process to
+the one investigated here could be used. This non-covalent approach
+would require the development of a highly reproducible cleaning process,
+able to remove a variety of organic contaminants from the carbon
+nanotube surface prior to functionalisation. Furthermore, a liquid
+capture layer which is both biofriendly and has a low vapour pressure
+may need to be identified and used. Ideally, this liquid would be
+hydrophilic and miscible with a wide range of substances. Further
+discussion of potential capture layers can be found in
+\textbf{?@sec-future-work-vapour}.
+
+\hypertarget{conclusion}{%
+\section{Conclusion}\label{conclusion}}
+
+The onboard reference sensors within the vapour delivery system were
+confirmed to be functional, giving repeatable concentration readings
+with minimal baseline drift when measurements were taken on the same
+day. Real-time vapour sensing series with \emph{trans}-2-hexen-1-al
+(E2Hex) and ethyl hexanoate (EtHex) were used to determine the response
+of carbon nanotube transistor devices to volatile vapour, as well as to
+confirm that the vapour delivery system was working as expected. The
+pristine transducers were found to be sensitive to parts-per-million
+vapour concentrations of both E2Hex and EtHex as measured by the
+photoionisation detector. These experiments were used as controls for
+comparison with biosensor responses to vapour after functionalisation
+with insect odorant receptors. As these devices are highly sensitive, it
+is important to be able to discern whether a signal response is due to
+modification of an attached biomolecule or whether the carbon nanotubes
+themselves are responding.
+
+The aqueous functionalisation approach used in
+\textbf{?@sec-vapour-sensing-biosensors} was also used for vapour
+sensing with OR35a odorant receptors. Clear responses consistent with
+those seen in an aqueous environment were not observed. The changes in
+current seen appeared more likely to result from a breakdown of the
+linear approximation of baseline drift for functionalised devices, or
+from increased non-specific sensitivity of the device
+post-functionalisation. It was concluded that reproducible vapour
+sensing would require either a robust covalent functionalisation method
+which used a protective membrane-like format, or alternatively requires
+a capture layer to protect non-covalently attached odorant receptors
+from the harsh chamber environment. However, it was found 0.5\% v/v DMSO
+\(1 \times\) PBS could not act as this capture layer, due to rapid
+evaporation of the layer dramatically altering baseline drift from
+\(\sim\) 800 s onwards. An alternative liquid should therefore be
+identified which is biofriendly and miscible, while having a low vapour
+pressure (ideally \(< 100\) Pa at room temperature). It should also
+repel PDMS, to remain contained in the PDMS well upside down in the
+device chamber. These approaches significantly expand the scope of this
+work, and are therefore not addressed extensively in this thesis.
+However, some preliminary work on alternative approaches is discussed in
+\textbf{?@sec-future-work}.
 
 \cleardoublepage
 \phantomsection
