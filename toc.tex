@@ -1,3 +1,5 @@
+\begin{spacing}{1.2}
+
 $if(toc)$
 $if(toc-title)$
 \renewcommand*\contentsname{$toc-title$}
@@ -29,10 +31,6 @@ $if(lot)$
 \addcontentsline{toc}{chapter}{List of Tables}
 $endif$
 
-\clearpage
-\newpage
-\thispagestyle{empty} % Hide header and footer on this page
-\mbox{~}
 \clearpage
 \newpage
 
@@ -76,10 +74,6 @@ $endif$
     DNA  & Deoxyribonucleic Acid  \\[5pt]
     E2Hex  & \textit{trans}-2-hexan-1-al  \\[5pt]
     EB  & Ethyl Butyrate  \\[5pt]
-    EDC  & 1-Ethyl-3-(3-dimethylaminopropyl)carbodiimide  \\[5pt]
-    EDL  & Electric Double Layer  \\[5pt]
-    EIS  & Electrochemical Impedance Spectroscopy  \\[5pt]
-    EtHex  & Ethyl Hexanoate  \\[5pt]
   \end{tabular}
 \end{table}
 
@@ -91,6 +85,10 @@ $endif$
 \fancyfoot[L]{\thepage} %prints the page number on the right side of the header
 \begin{table}[H]
   \begin{tabular}{@{}p{0.25\textwidth} p{0.75\textwidth}@{}}  % Adjust the width as needed
+    EDC  & 1-Ethyl-3-(3-dimethylaminopropyl)carbodiimide  \\[5pt]
+    EDL  & Electric Double Layer  \\[5pt]
+    EIS  & Electrochemical Impedance Spectroscopy  \\[5pt]
+    EtHex  & Ethyl Hexanoate  \\[5pt]
     EtOH  & Ethanol  \\[5pt]
     FET  & Field-Effect Transistor  \\[5pt]
     FITC  & Fluorescein isothiocyanate  \\[5pt]
@@ -114,14 +112,6 @@ $endif$
     MSP  & Membrane Scaffold Protein  \\[5pt]
     MWCNT  & Multi-Walled Carbon Nanotube  \\[5pt]
     ND  & Nanodisc  \\[5pt]
-    NHS  & N-Hydroxysuccinimide  \\[5pt]
-    NHSS  & N-hydroxysulfosuccinimide   \\[5pt]
-    NMR  & Nuclear Magnetic Resonance  \\[5pt]
-    NSB  & Non-Specific Binding   \\[5pt]
-    NTA  & Nitrilotriacetic Acid   \\[5pt]
-    OBP  & Odorant Binding Protein  \\[5pt]
-    OR  & Odorant Receptor  \\[5pt]
-    ORCO  & Odorant Receptor Co-Receptor  \\[5pt]
   \end{tabular}
 \end{table}
 
@@ -133,6 +123,14 @@ $endif$
 \fancyfoot[R]{\thepage} %prints the page number on the right side of the header
 \begin{table}[H]
   \begin{tabular}{@{}p{0.25\textwidth} p{0.75\textwidth}@{}}  % Adjust the width as needed
+    NHS  & N-Hydroxysuccinimide  \\[5pt]
+    NHSS  & N-hydroxysulfosuccinimide   \\[5pt]
+    NMR  & Nuclear Magnetic Resonance  \\[5pt]
+    NSB  & Non-Specific Binding   \\[5pt]
+    NTA  & Nitrilotriacetic Acid   \\[5pt]
+    OBP  & Odorant Binding Protein  \\[5pt]
+    OR  & Odorant Receptor  \\[5pt]
+    ORCO  & Odorant Receptor Co-Receptor  \\[5pt]
     PBA  & 1-Pyrenebutyric Acid  \\[5pt]
     PBASE  & 1-Pyrenebutanoic Acid N-hydroxysuccinimide Ester  \\[5pt]
     PBS  & Phosphate-Buffered Saline  \\[5pt]
@@ -152,6 +150,17 @@ $endif$
     QCM  & Quartz Crystal Microbalance  \\[5pt]
     RH  & Relative Humidity  \\[5pt]
     RHI  & Relative Humidity and Temperature Indicator  \\[5pt] 
+  \end{tabular}
+\end{table}
+
+\newpage
+\fancyhf{} %clear all headers and footers fields
+\thispagestyle{fancy} % Change header and footer on this page
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[L]{\textit{List of Abbreviations}} % Set header content
+\fancyfoot[L]{\thepage} %prints the page number on the right side of the header
+\begin{table}[H]
+  \begin{tabular}{@{}p{0.25\textwidth} p{0.75\textwidth}@{}}  % Adjust the width as needed
     RNA  & Ribonucleic Acid   \\[5pt]
     SAW  & Surface Acoustic Wave   \\[5pt]
     s-CNT  & Semiconducting Carbon Nanotube   \\[5pt]
@@ -164,33 +173,26 @@ $endif$
     TX  & Transfer Characteristics  \\[5pt]
     UV  & Ultraviolet  \\[5pt]
     VI  & Virtual Instrument  \\[5pt]
-  \end{tabular}
-\end{table}
-
-\newpage
-\fancyhf{} %clear all headers and footers fields
-\thispagestyle{fancy} % Change header and footer on this page
-\renewcommand{\headrulewidth}{0pt}
-\fancyhead[R]{\textit{List of Abbreviations}} % Set header content
-\fancyfoot[R]{\thepage} %prints the page number on the right side of the header
-\begin{table}[H]
-  \begin{tabular}{@{}p{0.25\textwidth} p{0.75\textwidth}@{}}  % Adjust the width as needed
     VUAA1  & N-(4-Ethylphenyl)-2-{[4-ethyl-5-(pyridin-3-yl)-4H-1,2,4-triazol-3-yl]sulfanyl}acetamide  \\[5pt] 
   \end{tabular}
 \end{table}
-
-\clearpage
-\newpage
-\thispagestyle{empty} % Hide header and footer on this page
-\mbox{~}
-\clearpage
-\newpage
 
 % Adjust the top and bottom margins of float pages to center floats
 \makeatletter
 \setlength{\@fptop}{0pt plus 1fil}
 \setlength{\@fpbot}{0pt plus 1fil}
 \makeatother
+
+\fancyhf{} %clear all headers and footers fields
+\thispagestyle{fancy} % Change header and footer on this page
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[L]{\textit{List of Abbreviations}} % Set header content
+\fancyfoot[L]{\thepage} %prints the page number on the right side of the header
+
+\clearpage
+\newpage
+
+\end{spacing}
 
 \pagestyle{headings}
 

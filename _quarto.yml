@@ -8,18 +8,18 @@ book:
   date-format: "MMM YYYY"
   chapters:
      - index.qmd
-     - 2-transistors.qmd
+     #- 2-transistors.qmd
      - 3-biosensors.qmd
-     - 4-fabrication.qmd
-     - 5-pristine-characterisation.qmd
-     - 6-functionalisation-verification.qmd
-     - 7-functionalisation-testing.qmd
-     - 8-vapour-system.qmd
-     - 9-vapour-sensing.qmd
-     - 10-conclusions.qmd
+     #- 4-fabrication.qmd
+     #- 5-pristine-characterisation.qmd
+     #- 6-functionalisation-verification.qmd
+     #- 7-functionalisation-testing.qmd
+     #- 8-vapour-system.qmd
+     #- 9-vapour-sensing.qmd
+     #- 10-conclusions.qmd
   appendices:
-    - app1-vapour-sensor-components.qmd
-    - app2-FET-analysis-software.qmd
+    #- app1-vapour-sensor-components.qmd
+    #- app2-FET-analysis-software.qmd
     - references.qmd
 bibliography: references.bib
 cite-method: biblatex
@@ -32,6 +32,7 @@ biblatexoptions:
 #sansfont: lmroman17-regular.otf
 mainfont: Latin Modern Roman
 sansfont: Latin Modern Roman
+linestretch: 1.2
 execute:
   echo: false # change to false to hide code
   show: false # change to false to hide code
@@ -58,36 +59,40 @@ format:
       \usepackage{textcomp}
       \usepackage{titling}
       \usepackage{pdflscape}
+      \usepackage{rotating}
       \usepackage{geometry}
-      \usepackage[english]{babel}
-      \usepackage[autostyle]{csquotes}
+      \usepackage{setspace}
       \setlength{\droptitle}{-2cm}
       \preauthor{
         \begin{center}
         \Large
-        \vspace{10mm}
+        \vspace{15mm}
         by
-        \vspace{20mm}
+        \vspace{10mm}
+        
       }
       \postauthor{
         \end{center}
-        \vfill
+        
       }
-      
+
       \predate{
+        \begin{spacing}{1.2}
         \begin{center}
-        A thesis 
-        submitted in partial fulfilment of the \\
-        requirements of the degree of \\
-        Doctor of Philosophy in Physics\\               % Degree
-        School of Physical and Chemical Sciences\\          % Department
-        Te Herenga Waka - Victoria University of Wellington\\                       % University 
-        \vspace{5mm}
+        \vspace{22mm}
+        
+        A thesis \\
+        submitted to the Victoria University of Wellington \\
+        in partial fulfilment of the requirements for the  \\
+        degree of Doctor of Philosophy\\               % Degree
+        \vspace{24mm}
+        Te Herenga Waka $-$ Victoria University of Wellington\\
       }
       \postdate{
         \\
         \includegraphics[width=3in,height=1.5in]{figures/VUW-logo.png}\\
         \end{center}
+        \end{spacing}
         }
 
       \renewcommand{\topfraction}{.8}
