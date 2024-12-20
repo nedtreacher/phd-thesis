@@ -320,7 +320,7 @@ I chose to start my doctoral studies just a few months into a global pandemic. C
 
 \pagestyle{headings}
 
-\end{spacing}\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, enhanced, interior hidden, boxrule=0pt, breakable, sharp corners, frame hidden]}{\end{tcolorbox}}\fi
+\end{spacing}\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[boxrule=0pt, enhanced, breakable, interior hidden, borderline west={3pt}{0pt}{shadecolor}, sharp corners, frame hidden]}{\end{tcolorbox}}\fi
 
 \begin{spacing}{1.2}
 
@@ -4047,6 +4047,22 @@ series. No short-term decay is present for this channel, indicating the
 channel has low net trapped charge. It is unclear why trapped charge is
 significantly lower for channel 1 relative to the other channels.
 
+The long-term linear fits were next subtracted from the raw control
+series data. Figure~\ref{fig-salt-conc-control-series} (b) shows
+exponential fits to the remaining curve from \(0 - 1800\) s, which was
+successful for all channels except channels 1 and 5. The parameters from
+each fit are shown in Table~\ref{tbl-exp-fits}, where
+\(I = I_0\exp(-t/\tau)\). Any constant term \(I_C\) resulting from the
+fit was negligible and so could be neglected. The exponential fits had
+characteristic time constants \(\tau\) ranging between \(280 - 610\) s.
+Note that the value of peak-to-peak noise is above 5\% of the initial
+current value for all channels. This result indicates that 3 time
+constants is a sufficient length of time for this short-term baseline
+drift to decay almost completely for each channel. At most, a time
+period of \(1830 \pm 150\) s is required to minimise the drift present
+when sensing, fulfilled here by the length selected for the control
+series.
+
 \hypertarget{tbl-linear-fits}{}
 \begin{longtable}[]{@{}lllllll@{}}
 \caption{\label{tbl-linear-fits}The coefficients of linear fits to the
@@ -4068,21 +4084,20 @@ Channels & CH1 & CH2 & CH3 & CH5 & CH6 & CH7 \\
 \(c_2\) (\(\mu\)A) & 0.316 & 0.316 & 0.308 & 0.218 & 0.364 & 0.332 \\
 \end{longtable}
 
-The long-term linear fits were next subtracted from the raw control
-series data. Figure~\ref{fig-salt-conc-control-series} (b) shows
-exponential fits to the remaining curve from \(0 - 1800\) s, which was
-successful for all channels except channels 1 and 5. The parameters from
-each fit are shown in Table~\ref{tbl-exp-fits}, where
-\(I = I_0\exp(-t/\tau)\). Any constant term \(I_C\) resulting from the
-fit was negligible and so could be neglected. The exponential fits had
-characteristic time constants \(\tau\) ranging between \(280 - 610\) s.
-Note that the value of peak-to-peak noise is above 5\% of the initial
-current value for all channels. This result indicates that 3 time
-constants is a sufficient length of time for this short-term baseline
-drift to decay almost completely for each channel. At most, a time
-period of \(1830 \pm 150\) s is required to minimise the drift present
-when sensing, fulfilled here by the length selected for the control
-series.
+From this analysis it appears that the baseline drift for the
+liquid-gated carbon nanotube network devices can generally be
+approximated as a combination of a linear and exponential term. The
+exponential term corresponds to short-term, fast decaying baseline
+drift, while the linear term is an approximation to longer-term, slow
+decaying exponential baseline drift. The lack of response at all of the
+six PBS addition and removal times gives us confidence that this is a
+stable baseline which can be used for reliable sensing. Furthermore, the
+baseline drift can reasonably be approximated as linear after
+\(\sim 1800\) s. This linear drift has a small gradient of less than -10
+pA/s. The relatively small size of this drift makes it easier to
+distinguish responses due to analyte addition from baseline drift. It
+can therefore be concluded that the 1800 s length of the PBS control
+series is appropriate for further experimental work.
 
 \hypertarget{tbl-exp-fits}{}
 \begin{longtable}[]{@{}lllll@{}}
@@ -4106,21 +4121,6 @@ Channels & CH2 & CH3 & CH6 & CH7 \\
 \(\tau\) (s) & \(450\pm10\) & \(610\pm30\) & \(280\pm10\) &
 \(350\pm30\) \\
 \end{longtable}
-
-From this analysis it appears that the baseline drift for the
-liquid-gated carbon nanotube network devices can generally be
-approximated as a combination of a linear and exponential term. The
-exponential term corresponds to short-term, fast decaying baseline
-drift, while the linear term is an approximation to longer-term, slow
-decaying exponential baseline drift. The lack of response at all of the
-six PBS addition and removal times gives us confidence that this is a
-stable baseline which can be used for reliable sensing. Furthermore, the
-baseline drift can reasonably be approximated as linear after
-\(\sim 1800\) s. This linear drift has a small gradient of less than -10
-pA/s. The relatively small size of this drift makes it easier to
-distinguish responses due to analyte addition from baseline drift. It
-can therefore be concluded that the 1800 s length of the PBS control
-series is appropriate for further experimental work.
 
 \hypertarget{sec-salt-conc-series}{%
 \subsection{Sensing Series}\label{sec-salt-conc-series}}
