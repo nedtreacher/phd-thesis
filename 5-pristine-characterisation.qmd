@@ -262,7 +262,7 @@ The second module creates combined and individual plots of transfer data collect
 
 ### Graphene Devices
 
-::: {#fig-pristine-graphene fig-scap="Liquid-gated transfer characteristics of channels from two encapsulated graphene devices, alongside the change in transfer characteristics upon various degrees of exposure to $1 \\times$ PBS." layout="[[3,-1,45,-1,3,-1,45,-1], [3,-1,45,-1,3,-1,45,-1]]"}
+::: {#fig-pristine-graphene fig-scap="Liquid-gated transfer characteristics of channels from two encapsulated graphene devices, alongside the change in transfer characteristics upon various degrees of exposure to $1 \times$ PBS." layout="[[3,-1,45,-1,3,-1,45,-1], [3,-1,45,-1,3,-1,45,-1]]"}
 ![](figures/(a).png)
 
 ![](figures/ch5/JG098_pristine_TXLG01_5mVstep_220920_norinse.png)
@@ -316,7 +316,7 @@ Graphene field-effect transistor devices were electrically characterised in the 
 Back-gated (left) and liquid-gated (right) transfer characteristics of AZ$^\circledR$ 1518 encapsulated carbon nanotube network field-effect transistors, where the film was deposited with solvent in (a) and (b), deposited with surfactant in (c) and (d), and deposited with surfactant in the presence of steam in (e) and (f). A step size of 100 mV was used for the backgated sweeps in (a), (c) and (e), while a step size of 20 mV was used for the liquid-gated sweeps in (b), (d) and (f). Gate current (leakage current) is shown with a dashed line. The source-drain voltage used for all sweeps was $V_{ds} = 100 \textrm{mV}$, and $1 \times$ PBS was used as the buffer for the liquid-gated measurements.
 :::
 
-::: {#fig-buffer-effect-on-backgate fig-scap="Backgated transfer sweeps of an single unencapsulated device before and after exposure to 50 µL $1 \\times$ PBS." layout="[[3,-1,45,-1,3,-1,45,-1]]"}
+::: {#fig-buffer-effect-on-backgate fig-scap="Backgated transfer sweeps of an single unencapsulated device before and after exposure to 50 µL $1 \times$ PBS." layout="[[3,-1,45,-1,3,-1,45,-1]]"}
 ![](figures/(a).png)
 
 ![](figures/ch5/Q35C3_nobuffer.png)
@@ -446,7 +446,7 @@ salt_conc_series %>%
     align = c(rep("l", 1), rep("c", 6))#, #aligns col 1 left, all others center
     #col.names = NULL #removes csv column names
   ) %>%
-  add_header_above(c(" " = 1, "1X PBS" = 1, "DI Water Additions" = 5), bold = FALSE)
+  add_header_above(c(" " = 1, "1× PBS" = 1, "DI Water Additions" = 5), bold = FALSE)
 ```
 
 @fig-salt-conc-sensing (a) shows a multiplexed salt concentration sensing series from the channels of a single AZ$^\circledR$ 1518 encapsulated device, measured with the NI-PXIe. The gate voltage used was 0 V, which meant current measurements were well above the magnitude of the subthreshold device current. Gate current measurements did not exceed 10 nA at any point. At each of the deionised water addition times, the current traces for at least two out of six channels showed a sharp, transient increase in current followed by a return to an increased baseline. It is well established that changing the salt concentration of the liquid gate has an electrostatic gating effect on the carbon nanotubes or graphene, and changes the transfer characteristics of the channel. This shift in transfer characteristic leads to a real-time signal response to each addition [@Heller2009; @Heller2010; @Kireev2017].
