@@ -5,13 +5,11 @@ format: pdf
 
 # Python Code for Data Analysis {.appendix}
 
-## Code Repository
-
 The code used for general analysis of field-effect transistor devices in this thesis was written with Python 3.8.8. Contributors to the code used include Erica Cassie, Erica Happe, Marissa Dierkes and Leo Browning. The code is located on GitHub and the research group OneDrive, as well as being publicly available on Figshare [@Treacher2024].
 
 ## Atomic Force Microscope Histogram Analysis {#sec-histogram-analysis}
 
-The purpose of this code is to analyse atomic force microscope (AFM) images of carbon nanotube networks in .xyz format taken using an atomic force microscope and processed in Gwyddion (see @sec-afm-characterisation). It was originally designed by Erica Happe in Matlab, and adapted by Marissa Dierkes and myself for use in Python. The code imports the .xyz data and sorts it into bins 0.15 nm in size for processing. To perform skew-normal distribution fits, both *scipy.optimize.curve_fit* and *scipy.stats.skewnorm* modules are used in this code.
+The purpose of this code is to analyse atomic force microscope (AFM) images of carbon nanotube networks in .xyz format (see @sec-afm-characterisation). It was originally designed by Erica Happe in Matlab, and adapted by Marissa Dierkes and myself for use in Python. The code imports the .xyz data and sorts it into bins 0.15 nm in size for processing. To perform skew-normal distribution fits, both *scipy.optimize.curve_fit* and *scipy.stats.skewnorm* modules are used in this code.
 
 ## Raman Spectroscopy Analysis {#sec-raman-analysis}
 

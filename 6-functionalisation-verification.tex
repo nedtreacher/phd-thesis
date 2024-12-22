@@ -190,26 +190,27 @@
 \date{}
 
 \begin{document}
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[enhanced, interior hidden, breakable, frame hidden, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, sharp corners]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, sharp corners, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, enhanced, frame hidden, breakable]}{\end{tcolorbox}}\fi
 
-\hypertarget{non-covalent-functionalisation-of-carbon-nanotubes-and-graphene}{%
-\section{Non-Covalent Functionalisation of Carbon Nanotubes and
-Graphene}\label{non-covalent-functionalisation-of-carbon-nanotubes-and-graphene}}
+\hypertarget{sec-noncovalent-functionalisation}{%
+\section{Non-Covalent Functionalisation of Carbon Nanotube \& Graphene
+Films}\label{sec-noncovalent-functionalisation}}
 
 \hypertarget{introduction}{%
 \subsection{Introduction}\label{introduction}}
 
-In previous chapters, I have discussed methods of fabricating carbon
-nanotube and graphene devices and then shown that they are sensitive to
-environmental changes in a saline solution. However, for specific
-sensing, the devices require (bio)chemical functionalisation. Instead of
-responding to stimuli themselves, the sensing signal is picked up by
-attached receptors. The devices then act as passive transducers for the
+In \textbf{?@sec-fabrication}, methods of fabricating carbon nanotube
+and graphene devices were discussed, and in
+\textbf{?@sec-pristine-characteristics}, it was demonstrated that these
+devices are highly sensitive to environmental changes in an aqueous
+environment. However, for specific sensing, the devices require
+biochemical functionalisation. The sensing signal is picked up by
+attached receptors, while the transistors act as transducers for the
 received signal. Receptors previously used with carbon nanotube and
 graphene devices include aptamers {[}@Khan2021; @Nguyen2021;
 @Shkodra2021; @Nekrasov2021; @Mishyn2022; @Cassie2023{]} and a range of
 proteins {[}@Lerner2014; @Ahn2020; @Tong2020; @Wang2020{]}, including
-animal odorant receptors {[}@Goldsmith2011; @Lee2018; @Murugathas2019b;
+animal odorant receptors {[}@Goldsmith2011; @Lee2018; @Murugathas2019a;
 @Murugathas2020; @Moon2020; @Yoo2022{]}. A common approach to attaching
 receptors to the transducer involves the use of a linker molecule to
 tether the receptor to the transducer. Verifying that this linker
@@ -222,272 +223,137 @@ to the attached linker molecule.
 
 This chapter therefore takes some time exploring the following selection
 of available linker molecules for specific biosensing: 1-Pyrenebutanoic
-Acid N-Hydroxysuccinimide Ester (PBASE), 1-Pyrenebutyric Acid (PBA),
-Pyrene-PEG-NTA (PPN) and Pyrene-PEG-Biotin (PPB). The linker molecules
-used are discussed in detail, and numerous hurdles to successful
-functionalisation via linker molecules are identified and addressed.
-Next, it looks at verifying that that the odorant receptor proteins of
-interest have specifically attached to these linker molecules. The
-experimental parameters used for both the attachment of linker molecules
-and receptor proteins are also varied, and the impact of these
-variations on successful functionalisation is investigated via Raman
-spectroscopy, fluorescence microscopy and electrical characterisation.
-
-\hypertarget{non-covalent-bonding-and-pi-stacking}{%
-\subsection{\texorpdfstring{Non-Covalent Bonding and
-\(\pi\)-Stacking}{Non-Covalent Bonding and \textbackslash pi-Stacking}}\label{non-covalent-bonding-and-pi-stacking}}
-
-Linker molecules may be attached via covalent or non-covalent bonding to
-carbon nanomaterials, such as carbon nanotubes and graphene. Covalent
-bonding is stronger than non-covalent bonding, and therefore gives a
-more permanent attachment between linker molecules and the transducer.
-However, non-covalent bonding has the advantage of having less of an
-impact on the structure of a nanomaterial than covalent bonding, meaning
-non-covalent bonding is less likely to negatively affect the electrical
-properties of the transducer {[}@Long2012; @DiCrescenzo2014; @Wang2020;
-@Khan2021; @Mishyn2022{]}. For example, one group found covalent bonding
-of diazonium linker caused a \(\sim 50\)\% drop in graphene channel
-mobility {[}@Lerner2014{]}. In comparison, only a \(\sim 5\)\% drop in
-mobility was seen for attachment of a mixture of linkers containing
-pyrene to a graphene channel via non-covalent \(\pi\) stacking
-{[}@Thodkar2021{]}.
-
-\begin{figure}
-
-{\centering \includegraphics[width=0.8\textwidth,height=\textheight]{figures/ch7/pyrene-cnt.png}
-
-}
-
-\caption{\label{fig-pi-interaction-cnt}Attachment of pyrene-based linker
-molecule pyrene-X and receptor Y to a carbon nanotube, representing the
-transducer element of a field-effect transistor. Source: Adapted from
-{[}@Carbonnanotube{]}.}
-
-\end{figure}
-
-\(\pi\)-stacking or \(\pi-\pi\) interaction is often used to describe a
-type of non-covalent bonding which occurs due to dispersion forces
-between unsaturated polycyclic molecules {[}@Perez2015{]}. It has been
-argued that this label is unhelpfully specific and a misrepresentation
-of what can be simply classed as a type of Van Der Waals bonding
-{[}@Martinez2012; @Perez2015{]}. However, as the use of the term is
-widespread in the literature, it is also used here for the sake of
-clarity. Carbon nanotubes and graphene consist of a network of carbon
-atoms attached to each other by sp\(^{2}\) hybrid orbitals in a
-polycyclic structure. They are therefore able to strongly interact with
-linker molecules with aromatic moieties, such as pyrene
-{[}@Hermanson2013-16; @Perez2015; @Mishyn2022{]}.
-Figure~\ref{fig-pi-interaction-cnt} is a visual demonstration of the
-relationship between the pyrene-based linker molecule with the
-transducer and receptor elements. A wide range of pyrene-based linker
-molecules have been used for non-covalent modification of carbon
-nanotubes and graphene {[}@Zhou2019{]}. \(\pi\)-stacking with pyrene is
-the bonding mechanism underlying all the functionalisation processes in
-this thesis.
+Acid N-hydroxysuccinimide Ester (PBASE), 1-Pyrenebutyric Acid (PBA),
+Pyrene-PEG-NTA (PPN) and Pyrene-PEG-Biotin (PPB). The mechanisms
+underlying functionalisation with each linker are described. A
+literature review and analysis techniques including Raman spectroscopy,
+fluorescence microscopy and electrical characterisation are used to
+understand the impact of various experimental parameters on the
+functionalisation process. Electrical characterisation of linker
+attachment to the transducer was also performed to act as a comparison
+tool when performing functionalisation with insect odorant receptors.
+Numerous obstacles to successful functionalisation are identified and
+discussed, including PBASE hydrolysis, linker coverage, non-specific
+attachment, photoresist contamination, channel hydrophobicity and the
+coffee-ring effect. Approaches to overcome these obstacles were
+identified, tested and the results characterised. This process provided
+assurance that successful attachment of linker molecule to the carbon
+nanotube network or graphene region could be achieved.
 
 \hypertarget{sec-PBASE}{%
 \subsection{Attachment of 1-Pyrenebutanoic Acid N-Hydroxysuccinimide
 Ester}\label{sec-PBASE}}
 
-\hypertarget{comparing-attachment-methods}{%
-\subsubsection{Comparing Attachment
-Methods}\label{comparing-attachment-methods}}
+\hypertarget{sec-pi-stacking}{%
+\subsubsection{Pi-stacking}\label{sec-pi-stacking}}
+
+Pi-stacking or \(\pi-\pi\) interaction is a specific type of
+non-covalent bonding which occurs due to dispersion forces between
+unsaturated polycyclic molecules {[}@Perez2015{]}. It has been argued
+that this label is unhelpfully specific and a misrepresentation of what
+can be simply classed as a type of Van der Waals bonding
+{[}@Martinez2012; @Perez2015{]}. However, as the use of the term is
+widespread in the literature, it is also used here for the sake of
+clarity. A wide range of linker molecules with aromatic moieties, such
+as pyrene, have been used for modification of polycyclic carbon
+nanotubes and graphene via pi-stacking {[}@Hermanson2013-16; @Perez2015;
+@Zhou2019; @Mishyn2022{]}. Pyrene-based pi-stacking underlies all the
+functionalisation processes used in this thesis.
+Figure~\ref{fig-pi-interaction-cnt} demonstrates how a pyrene-based
+linker molecule can be used to attach a receptor element to a thin-film
+transducer. The linker element attaches to the biomolecule via covalent
+bonding with a nucleophilic functional group; linker attachment can
+occur via biomolecule aminos, carboxyls, hydroxyls, thiols/sulfhydryls,
+phenols, imidazoles and so on {[}@Fruh2011; @Dung2018{]}.
 
 \begin{figure}
 
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/pbase_stable_1_pyrene.png}
+{\centering \includegraphics[width=0.6\textwidth,height=\textheight]{figures/ch6/pyrene-cnt.png}
 
 }
 
-}
-
-\subcaption{\label{fig-pbase-stable-1}}
-\end{minipage}%
-%
-\begin{minipage}[t]{0.05\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/pbase_stable_2_pyrene.png}
-
-}
-
-}
-
-\subcaption{\label{fig-pbase-stable-2}}
-\end{minipage}%
-
-\caption{\label{fig-pbase-structure}Two conformations of PBASE molecule
-with geometry optimised via \emph{ab initio} calculations performed with
-Gaussian 16 software {[}@g16{]}. White balls correspond to hydrogen,
-grey to carbon, red to oxygen and blue to nitrogen. The pyrene moiety is
-highlighted in the image with a red dashed outline.}
+\caption[Attachment of pyrene-based linker molecule pyrene-X and
+receptor Y to a carbon nanotube, representing the transducer element of
+a field-effect transistor.]{\label{fig-pi-interaction-cnt}Attachment of
+pyrene-based linker molecule pyrene-X and receptor Y to a carbon
+nanotube, representing the transducer element of a field-effect
+transistor. Figure adapted from {[}@Carbonnanotube{]}, used under the CC
+BY-SA 4.0 license.}
 
 \end{figure}
 
-1-pyrenebutanoic acid N-hydroxysuccinimide ester (also known
-commercially and in the literature both as 1-pyrenebutyric acid
-N-hydroxysuccinimide ester and 1-pyrenebutanoic acid succinimidyl ester;
-acronyms include PBASE, PBSE, PyBASE, PASE, PYSE, PSE, Pyr-NHS and
-PANHS) is a aromatic molecule commonly used for tethering biomolecules
-to the carbon rings of graphene and carbon nanotubes. Using
-computational modelling, two locally stable molecular conformations were
-found to exist, a straight (Figure~\ref{fig-pbase-stable-1}) and bent
-(Figure~\ref{fig-pbase-stable-2}) structure. The conformation in
-Figure~\ref{fig-pbase-stable-1} has a Hartree-Fock energy of -3427728.67
-kJ/mol, while the conformation in Figure~\ref{fig-pbase-stable-2} has a
-Hartree-Fock energy of -3427729.66 kJ/mol. The difference between
-computed Hartree-Fock energies is 1.0 kJ/mol, small enough that the
-existence of both molecular conformations is physically feasible.
-Similar straight and bent structures have previously been modelled for
-PBASE attached to graphene {[}@Oishi2022{]}.
+\hypertarget{sec-PBASE-attachment}{%
+\subsubsection{Comparing Attachment
+Methods}\label{sec-PBASE-attachment}}
 
-\newpage
-\KOMAoptions{paper=landscape,pagesize}
+1-pyrenebutanoic acid N-hydroxysuccinimide ester (also known as
+1-pyrenebutyric acid N-hydroxysuccinimide ester and 1-pyrenebutanoic
+acid succinimidyl ester, and by the acronyms PBASE, PBSE, PyBASE, PASE,
+PYSE, PSE, Pyr-NHS and PANHS) is a pyrene-based linker molecule commonly
+used for tethering biomolecules to the carbon rings of graphene and
+carbon nanotubes. A ball-and-stick model of the PBASE molecule is shown
+in Figure~\ref{fig-pbase-structure}. The pyrene moiety, highlighted blue
+in Figure~\ref{fig-pbase-structure}, non-covalently bonds to the carbon
+rings of the transducer. Previous modelling has shown that when PBASE
+attaches to graphene, it may take on one of two different locally stable
+conformations (one straight, one bent) {[}@Oishi2022{]}. The
+N-hydroxysuccinimide (NHS) ester group, found within the structure
+highlighted red in Figure~\ref{fig-pbase-structure}, can undergo a
+nucleophilic substitution reaction with primary amines attached to
+biomolecules, tethering them with an amide or imide bond {[}@Chen2001;
+@Hermanson2013-16; @Hermanson2013-3; @Shkodra2021; @Mishyn2022{]}.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{knitr}\SpecialCharTok{::}\NormalTok{opts\_chunk}\SpecialCharTok{$}\FunctionTok{set}\NormalTok{(}\AttributeTok{echo =} \ConstantTok{FALSE}\NormalTok{)}
-\FunctionTok{library}\NormalTok{(knitr)}
+\begin{figure}
 
-\NormalTok{pbase\_table }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"tables/ch7/pbase\_table.csv"}\NormalTok{, }\AttributeTok{sep=}\StringTok{","}\NormalTok{)}
-\NormalTok{pbase\_table }\OtherTok{\textless{}{-}}\NormalTok{ pbase\_table[}\FunctionTok{rowSums}\NormalTok{(}\FunctionTok{is.na}\NormalTok{(pbase\_table)) }\SpecialCharTok{==} \DecValTok{0}\NormalTok{,]}
+{\centering \includegraphics[width=0.9\textwidth,height=\textheight]{figures/ch6/PBASE_edit.png}
 
-\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(pbase\_table, }
-            \AttributeTok{col.names =} \FunctionTok{c}\NormalTok{(}\StringTok{"Solvent"}\NormalTok{,}
-                           \StringTok{"Channel"}\NormalTok{,}
-                           \StringTok{"Conc. (mM)"}\NormalTok{,}
-                           \StringTok{"Incubation type"}\NormalTok{,}
-                           \StringTok{"Time (hr)"}\NormalTok{,}
-                           \StringTok{"Rinse steps"}\NormalTok{,}
-                           \StringTok{"References"}\NormalTok{), }\AttributeTok{format =} \StringTok{"simple"}\NormalTok{) }
-\end{Highlighting}
-\end{Shaded}
+}
 
-\hypertarget{tbl-pbase-functionalisation}{}
-\begin{longtable}[]{@{}lllllll@{}}
-\caption{\label{tbl-pbase-functionalisation}Comparison of PBASE
-functionalisation processes used for immobilisation of proteins and
-aptamers onto carbon nanotubes and graphene. Experimentally optimised
-variables are marked with a star (*). Blank entries indicate there was
-no mention of the parameter in a particular paper.}\tabularnewline
-\toprule\noalign{}
-Solvent & Channel & Conc. (mM) & Incubation type & Time (hr) & Rinse
-steps & References \\
-\midrule\noalign{}
-\endfirsthead
-\toprule\noalign{}
-Solvent & Channel & Conc. (mM) & Incubation type & Time (hr) & Rinse
-steps & References \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-DMF & CNT & 5 & Immersed & 1 & PBS & Maehashi, 2007.
-\cite{Maehashi2007} \\
-& & 6 & Immersed & 1 & DMF, PBS & García-Aljaro, 2010.
-\cite{Garcia-Aljaro2010} \\
-& & 6 & Immersed & 1 & DMF & Chen, 2001. \cite{Chen2001} \\
-& & 6 & Immersed & 1 & DMF & Cella, 2010. \cite{Cella2010} \\
-& & 6 & Immersed & 1 & DMF & Das, 2011. \cite{Das2011} \\
-& & 6 & - & 2 & DMF & Besteman, 2003. \cite{Besteman2003} \\
-& Graphene & - & - & 2 & DMF & Tsang, 2019. \cite{Tsang2019} \\
-& & - & - & 20 & - & Wiedman, 2017. \cite{Wiedman2017} \\
-& & 0.2 & Immersed & 20 & DMF, IPA, DI water & Gao, 2018.
-\cite{Gao2018} \\
-& & 1 & Dropcast & 6 & DMF, IPA, DI water & Nekrasov, 2021.
-\cite{Nekrasov2021} \\
-& & 5 & Immersed & 1 & DMF, DI water & Hwang, 2016. \cite{Hwang2016} \\
-& & 5* & Immersed & 3* & DMF & Hao, 2020. \cite{Hao2020} \\
-& & 5 & Immersed & 4* & DMF, DI water & Mishyn, 2022.
-\cite{Mishyn2022} \\
-& & 6 & Dropcast & 2 & DMF, DI water & Nur Nasufiya, 2020.
-\cite{NurNasyifa2020} \\
-& & 10 & Dropcast & 2 & DMF, DI water & Campos, 2019.
-\cite{Campos2019} \\
-& & 10 & Immersed & 2 & DMF, PBS & Kuscu, 2020. \cite{Kuscu2020} \\
-& & 10 & Immersed & 1 & DMF & Xu, 2017. \cite{Xu2017} \\
-& & 10 & Immersed & 12 & DMF, EtOH, DI water & Khan, 2020.
-\cite{Khan2020} \\
-& & 50 & Immersed & 4* & MeOH & Wang, 2020. \cite{Wang2020} \\
-2-Methoxyethanol & Graphene & 1 & Immersed & 1 & DI water & Ono, 2020.
-\cite{Ono2020} \\
-Methanol & CNT & 1 & Immersed & 1 & MeOH, DI water & Zheng, 2016.
-\cite{Zheng2016} \\
-& & 1 & Immersed & 2 & MeOH & Kim, 2009. \cite{Kim2009} \\
-& & 100 & Dropcast & 1 & DI water & Yoo, 2022. \cite{Yoo2022} \\
-& Graphene & 5 & Immersed & 2 & - & Sethi, 2020. \cite{Sethi2020} \\
-& & 5 & Immersed & 1 & MeOH, PBS & Ohno, 2010. \cite{Ohno2010} \\
-DMSO & CNT & 10 & - & 1 & DI water & Lopez, 2015. \cite{Lopez2015} \\
-& & 10 & Immersed & 1 & PBS & Strack, 2013. \cite{Strack2013} \\
-\end{longtable}
+\caption[Structure of 1-pyrenebutanoic acid N-hydroxysuccinimide ester
+(PBASE).]{\label{fig-pbase-structure}Structure of 1-pyrenebutanoic acid
+N-hydroxysuccinimide ester (PBASE) visualised in XCrySDen software
+{[}@Kokalj1999{]}. Blue corresponds to hydrogen, yellow to carbon, red
+to oxygen and grey to nitrogen. The NHS ester is the ring structure on
+the right hand side of the figure. Figure reproduced from
+{[}@Oishi2022{]}, used under the CC BY-NC-ND 4.0 license.}
 
-\newpage
-\KOMAoptions{paper=portrait,pagesize}
-
-The pyrene moiety, highlighted with a red dashed outline in
-Figure~\ref{fig-pbase-stable-1}-b, non-covalently bonds to the carbon
-rings of the carbon nanotube and graphene surface. The
-N-hydroxysuccinimide (NHS) ester group, seen on the right-hand side of
-Figure~\ref{fig-pbase-structure}, is highly reactive with amine groups.
-It can undergo a nucleophilic substitution reaction with amines attached
-to proteins or aptamers, tethering these biomolecules via an amide or
-imide bond {[}@Chen2001; @Hermanson2013-16; @Hermanson2013-3;
-@Mishyn2022{]}.
+\end{figure}
 
 The non-covalent functionalisation of proteins onto a single-walled
 carbon nanotube using PBASE was first reported by Chen \emph{et al.} in
 2001 {[}@Chen2001{]}. Two successful methods for protein
 functionalisation and immobilisation were reported, with the only
-differences being the solvent used to dissolve the PBASE powder (DMF,
-methanol) and the final concentration of the resulting solutions (6 mM,
-1 mM respectively). PBASE powder appears to dissolve poorly in methanol
-at higher concentrations, which might explain the use of different
-concentrations of PBASE in each solvent. An extensive comparison of
-methods used in the literature for PBASE functionalisation of carbon
-nanotube and graphene devices with aptamers and proteins is given in
-Table~\ref{tbl-pbase-functionalisation}. Several listed works directly
-cite Chen \emph{et al.} when discussing functionalisation with PBASE
-{[}@Besteman2003; @Cella2010; @Campos2019; @Zheng2016; @Ohno2010{]}. The
-other works listed do not explicitly reference Chen \emph{et al.} in
-their methodology; however, the frequency of methods detailing the use
+differences being the solvent used to dissolve the PBASE powder
+(dimethylformamide, methanol) and the final concentration of the
+resulting solutions (6 mM, 1 mM respectively). PBASE powder appears to
+dissolve poorly in methanol at higher concentrations, which might
+explain the use of different concentrations of PBASE with each solvent.
+An extensive comparison of methods used in the literature for PBASE
+functionalisation of carbon nanotube and graphene devices with aptamers
+and proteins is given in \textbf{?@tbl-pbase-functionalisation}. Several
+listed works directly cite Chen \emph{et al.} when discussing
+functionalisation with PBASE {[}@Cella2010; @Ohno2010; @Zheng2016{]}.
+The other works listed do not explicitly reference Chen \emph{et al.} in
+their methodology; however, the frequency of methods describing the use
 of 6 mM PBASE in dimethylformamide (DMF) and 1 mM PBASE in methanol
-indicate that these processes are largely copying the process used by
-Chen \emph{et al.}.
+indicate that other groups typically emulate the original process from
+Chen \emph{et al.}
 
-However, it is also apparent from
-Table~\ref{tbl-pbase-functionalisation} that there is a large degree of
-variation in the methods used for PBASE functionalisation. Various
-electrical characterisation, microscopy and spectroscopy techniques have
-been used to demonstrate successful functionalisation. Until recently,
-there has been little justification provided for the selection of
-variables used in the functionalisation procedure (e.g.~length of time
-submerged in solvent containing PBASE), despite the wide-ranging use of
-this process in the literature {[}@Hinnemo2017; @Zhen2018; @Wang2020{]}.
-This is surprising, given that the sensitivity of functionalised devices
-is considered to be closely related to the density of surface
-functionalisation {[}@White2008; @Hermanson2013-3; @Chen2014{]}.
-Furthermore, a detailed investigation of PBASE functionalisation process
-variables has only been undertaken for graphene-based devices
-{[}@Zhen2018; @Hao2020; @Wang2020; @Mishyn2022{]}.
+However, it is also apparent from \textbf{?@tbl-pbase-functionalisation}
+that there is a large degree of variation in the methods used for PBASE
+functionalisation. Various electrical characterisation, microscopy and
+spectroscopy techniques have been used to demonstrate successful
+functionalisation. Until recently, there has been little justification
+provided for the selection of variables used in the functionalisation
+procedure (\emph{e.g.} length of time submerged in solvent containing
+PBASE), despite the widespread use of this process in the literature
+{[}@Hinnemo2017; @Zhen2018; @Wang2020{]}. Furthermore, a detailed
+investigation of PBASE functionalisation process variables has only been
+undertaken for graphene-based devices {[}@Zhen2018; @Hao2020; @Wang2020;
+@Mishyn2022{]}. This is surprising, given that multiple sources make an
+explicit link between sensitivity of functionalised devices and the
+density of surface functionalisation with PBASE {[}@White2008;
+@Hermanson2013-3; @Chen2014{]}.
 
 Zhen \emph{et al.} {[}@Zhen2018{]}, Wang \emph{et al.} {[}@Wang2020{]}
 and Mishyn \emph{et al.} {[}@Mishyn2022{]} have all claimed that
@@ -499,105 +365,46 @@ occurs when multiple layers of PBASE are present. However, none of these
 groups have presented analyte sensing results from their functionalised
 graphene devices. In contrast, Hao \emph{et al.} {[}@Hao2020{]} found
 that maximising the PBASE surface coverage of a channel resulted in more
-sensitive aptameric sensing, thereby reaching the opposite conclusion.
-The inconsistency in these recent findings mean more work is needed to
-understand the PBASE functionalisation process to achieve optimal
-biosensor sensitivity. It may also be the case that a specific
-functionalisation process is required for optimal sensitivity with the
-use of a specific type of receptor.
+sensitive aptameric sensing. The inconsistency in these recent findings
+mean more work is needed to understand the PBASE functionalisation
+process and achieve optimal biosensor sensitivity.
 
-\begin{figure}
-
-\begin{minipage}[t]{\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/labelled_modified_sigma_pbase_nmr.png}
-
-}
-
-}
-
-\subcaption{\label{fig-sigma-nmr}}
-\end{minipage}%
-\newline
-\begin{minipage}[t]{\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/labelled_modified_setareh_pbase_nmr.png}
-
-}
-
-}
-
-\subcaption{\label{fig-setareh-nmr}}
-\end{minipage}%
-\newline
-\begin{minipage}[t]{\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/labelled_modified_dmso_nmr.png}
-
-}
-
-}
-
-\subcaption{\label{fig-dmso-nmr}}
-\end{minipage}%
-
-\caption{\label{fig-pbase-nmr}\(^{1}\)H Nuclear Magnetic Resonance (NMR)
-spectra, performed with DMSO-d\(_6\) used as the NMR solvent. (a) and
-(b) show NMR spectrum for commercially purchased PBASE, from
-Sigma-Aldrich and Setareh Biotech respectively, while (c) shows the
-blank spectrum taken with only DMSO-d\(_6\) present. Spectra were taken
-by Jennie Ramirez-Garcia, School of Chemical and Physical Sciences, Te
-Herenga Waka - Victoria University of Wellington. Unlabelled peaks
-correspond to sample impurities.}
-
-\end{figure}
+It may also be the case that a specific functionalisation process is
+required for optimal sensitivity with the use of a specific type of
+receptor.
 
 Once fastened to a bioreceptor via an amide or imide bond, the
 attachment to the linker molecule is not easily broken. However, prior
 to use in functionalisation processes, the NHS ester may react with any
-water present (hydrolysis). This reaction converts PBASE to
-1-pyrenebutyric acid (PBA), leaving it unavailable to react further with
-amine groups {[}@Hermanson2013-3; @Hermanson2013-5; @Mishyn2022{]}. If
-the amine group functionalisation is performed within a \(\sim1\) hour
-period, with a high concentration of bioreceptor used at close to
-neutral pH, competing hydrolysis should not have a significantly adverse
-impact on the functionalisation process {[}@Hermanson2013-3{]}. However,
-if PBASE is exposed to water during storage over a significant length of
-time, the presence of 1-Ethyl-3-(3-dimethylaminopropyl)carbodiimide
-(EDC) can be used to restore the NHS ester and enable the substitution
-reaction to take place (see discussion of PBA/EDC in
-Section~\ref{sec-PBA}).
+water present. This ester hydrolysis converts PBASE to its corresponding
+carboxylic acid, 1-pyrenebutyric acid (PBA), leaving it unavailable to
+react further with amine groups {[}@Hermanson2013-3; @Hermanson2013-5;
+@Mishyn2022{]}. If the amine group functionalisation is performed at
+close to neutral pH, within a \(\sim\) 1 hour period, and with a high
+concentration of bioreceptor present, competing hydrolysis should not
+have a significantly adverse impact on the functionalisation process
+{[}@Hermanson2013-3{]}. If PBASE is exposed to water during storage,
+1-ethyl-3-(3-dimethylaminopropyl)carbodiimide (EDC) can be used to
+restore the NHS ester and enable the substitution reaction to take place
+(see Section~\ref{sec-PBA}).
 
-\hypertarget{examining-1-pyrenebutanoic-acid-n-hydroxysuccinimide-ester-purity}{%
+\hypertarget{sec-PBASE-purity}{%
 \subsubsection{Examining 1-Pyrenebutanoic Acid N-Hydroxysuccinimide
-Ester
-Purity}\label{examining-1-pyrenebutanoic-acid-n-hydroxysuccinimide-ester-purity}}
+Ester Purity}\label{sec-PBASE-purity}}
 
 I purchased PBASE from two suppliers, Sigma-Aldrich and Setareh Biotech.
-Sigma recommended DMF and methanol as suitable solvents for dissolving
-PBASE, alongside chloroform and dimethyl sulfoxide (DMSO). Setareh
-Biotech indicated methanol can be used for dissolving PBASE. The two
-suppliers had conflicting information for suitable storage of PBASE,
-with Sigma recommending room temperature storage while Setareh Biotech
-recommends storage of -5 to -30°C and protection from light and
-moisture. I used nuclear magnetic resonance (NMR) spectroscopy to verify
-the purity of PBASE from various suppliers. As water can react with
-PBASE to form unwanted byproducts, it appears that protection from
-moisture is particularly important. A particular emphasis was placed on
-detecting water presence in the received samples, considering the long
-travel time of the PBASE with uncertain storage conditions.
+Sigma-Aldrich listed DMF and methanol as suitable solvents for
+dissolving PBASE, alongside chloroform and dimethyl sulfoxide (DMSO).
+Setareh Biotech indicated methanol can be used for dissolving PBASE. The
+two suppliers had conflicting information for suitable storage of PBASE,
+where Sigma recommended room temperature storage, while Setareh Biotech
+recommended storage of \(-5\) to \(-30\) °C alongside protection from
+light and moisture. Nuclear magnetic resonance (NMR) spectroscopy was
+used to verify the purity of PBASE from various suppliers. As water can
+react with PBASE to form unwanted byproducts, it appears that protection
+from moisture is particularly important. A particular emphasis was
+placed on detecting water presence in the received samples, considering
+the long travel time of the PBASE with uncertain storage conditions.
 
 Figure~\ref{fig-pbase-nmr} compares the shapes of hydrogen NMR spectra
 of PBASE from each supplier when dissolved in deuterated DMSO, alongside
@@ -605,154 +412,454 @@ a blank deuterated DMSO spectrum. Both PBASE samples possessed
 characteristic chemical shift features between \(2.1-2.2\) ppm,
 \(2.8-2.9\) ppm, and \(3.4-3.5\) ppm. These chemical shifts roughly
 correspond to those seen in previous NMR spectra for PBASE {[}@NMR2{]}.
-The feature at 2.50 ppm represents the deuterated DMSO solvent, while
-the single peak between \(3.3-3.4\) ppm represents the water present in
-the sample. By comparing the area of these peaks, a rough estimate of
-the amount of water originally present in the PBASE sample can be
-obtained. The H\(_{2}\)O:DMSO ratio is 1:7 in the blank spectrum, but
-\(\sim\) 1:3 in the provided samples, possibly indicating the
-introduction of water to the PBASE during production or storage.
-However, DMSO is strongly hygroscopic and slight differences in DMSO
-storage time, as well as differences in humidity during sample
-preparation, may have had a significant impact on this result
-{[}@Lebel1962{]}. Other impurities are also seen on both PBASE spectra,
-though their small size indicates they make up only a small percentage
-of each sample. Strack \emph{et al.} {[}@Strack2013{]} recommend leaving
-frozen PBASE at room temperature for 15 minutes before exposing it to
-air to prevent condensation near the PBASE, as this can cause
-unnecessary \(H_2O\) contamination.
-
-\hypertarget{electrical-characterisation}{%
-\subsubsection{Electrical
-Characterisation}\label{electrical-characterisation}}
+The feature at 2.5 ppm represents the deuterated DMSO solvent, while the
+single peak between \(3.3-3.4\) ppm represents the water present in the
+sample. By comparing the area of these peaks, a rough estimate of the
+amount of water originally present in the PBASE sample can be obtained.
 
 \begin{figure}
 
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.03\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/Q23D5_ch1_MeOHonly.png}
+\includegraphics{figures/(a).png}
 
 }
 
 }
 
-\subcaption{\label{fig-meoh-only-tx}}
 \end{minipage}%
 %
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.92\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/Q23D12_ch1_DMSOonly.png}
+\includegraphics{figures/ch6/labelled_modified_sigma_pbase_nmr.png}
 
 }
 
 }
 
-\subcaption{\label{fig-dmso-only-tx}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.04\linewidth}
+
+{\centering 
+
+~
+
+}
+
 \end{minipage}%
 \newline
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.03\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/Q2C6_ch2_MeOHPBASE.png}
+\includegraphics{figures/(b).png}
 
 }
 
 }
 
-\subcaption{\label{fig-meoh-pbase-tx}}
 \end{minipage}%
 %
-\begin{minipage}[t]{0.50\linewidth}
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.92\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/Q23D7_ch3_DMSOPBASE.png}
+\includegraphics{figures/ch6/labelled_modified_setareh_pbase_nmr.png}
 
 }
 
 }
 
-\subcaption{\label{fig-dmso-pbase-tx}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.04\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(c).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.92\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/labelled_modified_dmso_nmr.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.04\linewidth}
+
+{\centering 
+
+~
+
+}
+
 \end{minipage}%
 
-\caption{\label{fig-PBASE-vs-solvent-only}The electrical transfer
-characteristics of carbon nanotube transistors (\(V_{ds}\) = 100 mV)
-before and after being submerged in methanol (a) or dimethyl sulfoxide
-(b) for one hour and subsequently rinsed with deionised water. The
-change in characteristics of similar transistor channels after being
-submerged in these same solvents containing 1 mM PBASE for one hour and
-then rinsed are shown in (c) and (d) respectively. Average threshold
-voltages for each transfer characteristic curve are also shown (taking
-the average of forward and reverse sweep values).}
+\caption[\(^{1}\)H Nuclear Magnetic Resonance (NMR) spectra of
+commercially purchased PBASE in the alkyl region, using DMSO-d\(_6\) as
+the NMR solvent.]{\label{fig-pbase-nmr}\(^{1}\)H Nuclear Magnetic
+Resonance (NMR) spectra in the alkyl region. Spectra were taken using
+DMSO-d\(_6\) as the NMR solvent. (a) and (b) show NMR spectrum for
+commercially purchased PBASE, from Sigma-Aldrich and Setareh Biotech
+respectively, while (c) shows the blank spectrum taken with only
+DMSO-d\(_6\) present. Spectra were taken by Jennie Ramirez-Garcia,
+School of Chemical and Physical Sciences, Te Herenga Waka \(-\) Victoria
+University of Wellington. Unlabelled peaks correspond to sample
+impurities.}
 
 \end{figure}
 
-The electrical characteristics of the carbon nanotube or graphene
+The H\(_{2}\)O:DMSO ratio is 1:7 in the blank spectrum, but \(\sim\) 1:3
+in the provided samples, possibly indicating the introduction of water
+to the PBASE during production or storage. However, DMSO is strongly
+hygroscopic and slight differences in DMSO storage time, as well as
+differences in humidity during sample preparation, may have had a
+significant impact on this result {[}@Lebel1962{]}. Other impurities are
+also seen on both PBASE spectra, though their small size indicates they
+make up only a small percentage of each sample. Strack \emph{et al.}
+{[}@Strack2013{]} recommend leaving frozen PBASE at room temperature for
+15 minutes before exposing it to air to prevent condensation near the
+PBASE, as this can cause unnecessary H\(_2\)O contamination.
+
+\hypertarget{sec-PBASE-electrical-characterisation}{%
+\subsubsection{Electrical
+Characterisation}\label{sec-PBASE-electrical-characterisation}}
+
+The transfer characteristics of the carbon nanotube or graphene
 transistor are often used to verify successful functionalisation and
-make a statement about the effect of chemical modification on the
-channel. However, this verification usually does not account for the
-effect of the solvent on the transistor channel.
-Figure~\ref{fig-meoh-only-tx} and Figure~\ref{fig-dmso-only-tx} show
-that by exposing a steam-deposited carbon nanotube network channel to
-solvents commonly used in PBASE functionalisation processes
-(Table~\ref{tbl-pbase-functionalisation}), such as methanol (MeOH) or
+make a statement about the effects of chemical modification. However,
+this verification usually does not account for the effects of exposing
+the transistor channel to solvent.
+Figure~\ref{fig-PBASE-vs-solvent-only} (a) and
+Figure~\ref{fig-PBASE-vs-solvent-only} (b) show that by exposing a
+steam-deposited carbon nanotube network channel to solvents commonly
+used in PBASE functionalisation processes
+(\textbf{?@tbl-pbase-functionalisation}), such as methanol (MeOH) or
 dimethyl sulfoxide (DMSO), a significant negative shift in channel
 threshold voltage occurs even after thorough rinsing with deionised
-water. Besteman \emph{et al.} reported observing a similar effect from
-prolonged exposure of a single carbon nanotube to dimethylformamide
-(DMF) {[}@Besteman2003{]}. It appears that the carbon nanotubes have
-adsorped solvent which persists even after device cleaning. From the
-shape of the change in the transfer curve, it seems the residual polar
-solvent molecules capacitively gate the channel {[}@Artyukhin2006;
-@Heller2008{]}.
+water. It appears that the carbon nanotubes have adsorped solvent which
+persists even after thoroughly rinsing the device. From the shape of the
+change in the transfer curve, it seems the residual polar solvent
+molecules capacitively gate the channel {[}@Artyukhin2006;
+@Heller2008{]}. Besteman \emph{et al.} reported observing a similar
+effect from prolonged exposure of a single carbon nanotube to
+dimethylformamide (DMF) {[}@Besteman2003{]}.
 
-Furthermore, using the same characterisation process as in this work,
-Murugathas \emph{et al.} {[}@Murugathas2019b{]} showed that
-\(\pi\)-stacking of PBASE onto a solvent-deposited carbon nanotube
-network had little effect on channel threshold voltage, implying the
-presence of PBASE had not significantly influenced channel gating
-{[}@Murugathas2019b{]}. However, they did observe a slight increase in
-channel conductance after PBASE functionalisation. In
-Figure~\ref{fig-PBASE-vs-solvent-only}, a slight increase in channel
-conductance post-functionalisation is observed for both
-Figure~\ref{fig-meoh-pbase-tx} and Figure~\ref{fig-dmso-pbase-tx} when
-compared to the solvent-only case in Figure~\ref{fig-meoh-only-tx} and
-Figure~\ref{fig-dmso-only-tx}. This result implies that the presence of
-PBASE molecules increases channel mobility and therefore conductance
-{[}@Heller2008{]}.
+\begin{figure}
 
-Capactive gating results from dense coverage of adsorped molecules on
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(a).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Q23D5_ch1_MeOHonly.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Q23D12_ch1_DMSOonly.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(c).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Q2C6_ch2_MeOHPBASE.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(d).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/Q23D7_ch3_DMSOPBASE.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption[The transfer characteristics of carbon nanotube transistors
+before and after being submerged in MeOH or DMSO for one hour, either
+with or without 1 mM PBASE
+present.]{\label{fig-PBASE-vs-solvent-only}The transfer characteristics
+of carbon nanotube transistors (\(V_{ds}\) = 100 mV) before and after
+being submerged in MeOH (a) or DMSO (b) for one hour and subsequently
+rinsed with deionised water. The change in characteristics of similar
+transistor channels after being submerged in these same solvents
+containing 1 mM PBASE for one hour and then rinsed are shown in (c) and
+(d) respectively. The threshold voltage for the forward sweep of each
+transfer characteristic curve is also shown.}
+
+\end{figure}
+
+Capacitive gating results from dense coverage of adsorped molecules on
 the carbon nanotube surface which have a low permittivity relative to
 the surrounding electrolyte {[}@Heller2008{]}. The relative permittivity
 of MeOH and DMSO are \(\sim\) 33 {[}@Mohsen-Nia2010{]} and \(\sim\) 47
 {[}@Hunger2010{]} respectively, which are both much lower than the
-relative permittivity of phosphate buffer saline, \(\sim\) 80
-{[}@Shkodra2021{]}. From Figure~\ref{fig-meoh-only-tx} and
-Figure~\ref{fig-dmso-only-tx}, the threshold shift values found
-resulting from exposure to each solvent, taking the average of forward
-and reverse sweep values from a single device, were \(\Delta\)V =
-\(-0.15 \pm 0.02\) V and \(\Delta\)V = \(-0.15 \pm 0.01\) V for MeOH and
-DMSO respectively. The average threshold shift value for a second device
-exposed to MeOH was \(\Delta\)V = \(-0.16 \pm 0.02\) V, indicating that
-this threshold shift result is reproducible. The threshold voltage
-shifts in Figure~\ref{fig-meoh-pbase-tx} and
-Figure~\ref{fig-dmso-pbase-tx} from the pristine are small compared with
-the devices exposed to solvent only - this is likely due to the effect
-of increased conductance from the PBASE competing with the gating effect
-from the residual solvent.
+relative permittivity of PBS, \(\sim\) 80 {[}@Shkodra2021{]}. From
+Figure~\ref{fig-PBASE-vs-solvent-only} (a) and
+Figure~\ref{fig-PBASE-vs-solvent-only} (b), the threshold shift values
+found resulting from exposure to each solvent, taking the average of
+forward and reverse sweep values from a single device, were
+\(\Delta V = -0.15 \pm 0.02\) V and \(\Delta V = -0.15 \pm 0.01\) V for
+MeOH and DMSO respectively. The average threshold shift value for a
+second device exposed to MeOH was \(\Delta V = -0.16 \pm 0.02\) V,
+indicating that this threshold shift result is reproducible.
+
+Using the same characterisation process as in this work, Murugathas
+\emph{et al.} {[}@Murugathas2019a{]} showed that the attachment of PBASE
+to a solvent-deposited carbon nanotube network had little effect on
+channel threshold voltage, implying the presence of PBASE had not
+significantly influenced channel gating. Here, an average threshold
+voltage shift of \(-0.06 \pm 0.04\) V is seen after PBASE
+functionalisation in MeOH and \(-0.06 \pm 0.01\) V after PBASE
+functionalisation in DMSO. These threshold voltage shifts are small
+compared to the shift values from solvent exposure. It is possible that
+the attachment of PBASE prevents solvent adsorption, and has a small
+negative gating effect on the channel. Alternatively, while the solvent
+negatively gates the channel, resulting in a threshold shift of
+\(-0.15\) V, the PBASE may be counteracting this by positively gating
+the channel, resulting in a threshold shift of \(+0.09\) V. Murugathas
+\emph{et al.} also observed a slight increase in channel conductance
+after PBASE functionalisation {[}@Murugathas2019a{]}.
+Figure~\ref{fig-PBASE-vs-solvent-only} also shows a slight increase in
+channel conductance post-functionalisation in both
+Figure~\ref{fig-PBASE-vs-solvent-only} (c) and
+Figure~\ref{fig-PBASE-vs-solvent-only} (d) relative to the solvent-only
+case in Figure~\ref{fig-PBASE-vs-solvent-only} (a) and
+Figure~\ref{fig-PBASE-vs-solvent-only} (b). This result implies that the
+presence of PBASE molecules increases channel mobility and therefore
+conductance {[}@Heller2008{]}.
 
 The absorption of organic solvent by the carbon nanotube network has
 unknown but potentially negative implications for biosensor
@@ -761,158 +868,161 @@ attack the encapsulation layer of devices, promoting gate current
 leakage. In light of these issues, recent work has begun to explore
 alternative aqueous-based methods for functionalisation of biosensors
 {[}@Khan2021{]}. The discussion here also illustrates the importance of
-considering each substance used when electrical characterising a device
-to verify if functionalisation has worked. The qualitative presence of a
-change in characteristics (or lack of one) over the full process is not
-sufficient to make conclusive remarks regarding successful
-functionalisation. A full set of electrical control measurements are
-required for an understanding of electronic changes occuring during the
-functionalisation process, in the manner of Besteman \emph{et al.}
-{[}@Besteman2003{]}.
-
-\newpage
-\KOMAoptions{paper=landscape,pagesize}
-
-\hfill\break
-\hfill\break
-
-\hypertarget{tbl-pba-functionalisation}{}
-\begin{longtable}[]{@{}llllllll@{}}
-\caption{\label{tbl-pba-functionalisation}Comparison of 1-pyrenebutyric
-acid (PBA) functionalisation processes used for immobilisation of
-proteins, enzymes and aptamers onto carbon nanotubes and graphene.
-1-ethyl-3-(3-dimethylaminopropyl) carbodiimide hydrochloride (EDC) and
-NHS were co-mingled in buffer/electrolyte solution or DI water in each
-process - some papers used N-hydroxysulfosuccinimide instead of
-N-hydroxysuccinimide, and both compounds are abbreviated as NHS in this
-table for simplicity. Device exposure times to each solution are shown
-next to the solution concentration. Blank entries indicate there was no
-mention of the parameter in a particular paper. \(^†\)PEG or PEG pyrene
-were used to reduce non-specific binding. \(^{††}\)Several pyrene-based
-linkers were compared and PBA gave an optimal functionalisation
-result.}\tabularnewline
-\toprule\noalign{}
-Solvent & Channel & PBA (mM) & Time (hr) & EDC (mM) & NHS (mM) & Time
-(min) & References \\
-\midrule\noalign{}
-\endfirsthead
-\toprule\noalign{}
-Solvent & Channel & PBA (mM) & Time (hr) & EDC (mM) & NHS (mM) & Time
-(min) & References \\
-\midrule\noalign{}
-\endhead
-\bottomrule\noalign{}
-\endlastfoot
-DMF & Graphene & 0.6 & 1 & - & - & 120 & Gao, 2016\(^†\).
-\cite{Gao2016} \\
-& & 5 & 2 & 2 & 5 & 30 & Mishyn, 2022. \cite{Mishyn2022} \\
-& CNT & 100 & 3 & 200 & - & 30 & Min, 2012. \cite{Min2012} \\
-& Graphene, CNT & 7.6 & 2 & 8 & 20 & 120 & Xu, 2014. \cite{Xu2014} \\
-DI water & CNT & - & - & 32 & 12 & Overnight & Pacios, 2012\(^†\).
-\cite{Pacios2012} \\
-Ethanol & CNT & 1 & 1 & 100 & 100 & 20 & Filipiak, 2018\(^†\).
-\cite{Filipiak2018} \\
-Acetonitrile & Graphene & 1 & 1 & 400 & 100 & 60 & Tong, 2020\(^{††}\).
-\cite{Tong2020} \\
-Borax & CNT & 2 & 24 & 2.5 & - & 1080 & Liu, 2011\(^†\).
-\cite{Liu2011} \\
-DMSO & Graphene & 5 & 1 & 50 & 50 & 90 & Fenzl, 2017.
-\cite{Fenzl2017} \\
-\end{longtable}
-
-\newpage
-\KOMAoptions{paper=portrait,pagesize}
+considering each substance used when characterising a device to verify
+if functionalisation has worked. The qualitative presence of a change in
+characteristics (or lack of one) over the full process is not sufficient
+to make conclusive remarks regarding successful functionalisation. A
+full set of control measurements are required for an understanding of
+electronic changes occurring during the functionalisation process, in
+the manner of Besteman \emph{et al.} {[}@Besteman2003{]}.
 
 \hypertarget{sec-PBA}{%
 \subsection{Attachment of 1-Pyrenebutyric Acid}\label{sec-PBA}}
 
-\hypertarget{comparing-attachment-methods-1}{%
+\hypertarget{comparing-attachment-methods}{%
 \subsubsection{Comparing Attachment
-Methods}\label{comparing-attachment-methods-1}}
+Methods}\label{comparing-attachment-methods}}
 
 Another linker molecule that can be used to attach receptor molecules to
 a carbon nanotube or graphene channel is 1-pyrenebutyric acid (PBA or
-PyBA). As with PBASE, the pyrene group of PBA has a \(\pi\) interaction
-with the carbon rings of the channel surface. It is possible to react
-PBA with 1-ethyl-3-(3-dimethylaminopropyl) carbodiimide hydrochloride
-(EDC or EDAC) to form an \emph{O}-acylisourea intermediate, which can
-then react with an amine group on a biomolecule and form an amide bond
+PyBA). The pyrene group in PBA also undergoes pi-stacking with the
+channel surface. PBA can be reacted with
+1-ethyl-3-(3-dimethylaminopropyl) carbodiimide hydrochloride (EDC or
+EDAC) to form an \emph{O}-acylisourea intermediate, which then reacts
+with an amine group on a biomolecule to form an amide or imide bond
 {[}@Sehgal1994; @Hermanson2013-4{]}. The water solubility of EDC means
 that, unlike PBASE, it is possible to functionalise with EDC dissolved
 in water rather than in an organic solvent. However, like PBASE, EDC and
 the \emph{O}-acylisourea intermediate are prone to hydrolysis,
 especially in acidic conditions. Therefore, like PBASE, it should be
-stored at −20°C, and warmed to room temperature to prevent condensation
-build-up, since exposure to condensation will hydrolyse the reagent
-{[}@Hermanson2013-4{]}. Furthermore, by adding N-Hydroxysuccinimide
-(NHS) or N-hydroxysulfosuccinimide (sulfo-NHS) to the reaction vessel,
-PBASE is formed as an active intermediate, which is less prone to
-hydrolysis and increases the PBA/EDC reaction yield {[}@Sehgal1994;
-@Hermanson2013-4; @Hermanson2013-14{]}.
+stored at \(-20\) °C, and warmed to room temperature to prevent
+condensation build-up, since exposure to condensation will hydrolyse the
+reagent {[}@Hermanson2013-4{]}. Furthermore, by adding
+N-hydroxysuccinimide (NHS) or N-hydroxysulfosuccinimide (Sulfo-NHS or
+NHSS) to the reaction vessel, PBASE is formed as an active intermediate,
+which is less prone to hydrolysis and increases the PBA/EDC reaction
+yield {[}@Sehgal1994; @Hermanson2013-4; @Hermanson2013-14{]}.
 
-A full comparison of functionalisation procedures used for linking
-carbon nanotube and graphene devices to aptamers and proteins with PBA
-is given in Table~\ref{tbl-pba-functionalisation}. To the best of my
-knowledge, this table is as complete a summary as possible of
-1-pyrenebutyric acid functionalisation processes for carbon nanotube and
-graphene field-effect transistor biochemical sensors. By comparing
-Table~\ref{tbl-pbase-functionalisation} and
+To the best of my knowledge, a full comparison of functionalisation
+procedures used for linking carbon nanotube and graphene devices to
+aptamers and proteins with PBA is given in
+Table~\ref{tbl-pba-functionalisation}. By comparing
+\textbf{?@tbl-pbase-functionalisation} and
 Table~\ref{tbl-pba-functionalisation}, it is clear that PBASE is more
-widely used for non-covalent functionalisation than PBA/EDC. As was the
-case for PBASE, there are a wide range of process variables used for the
-functionalisation process, with little justification used for variables
-chosen. Also notable is the frequent use of polyethylene glycol (PEG) or
-pyrene-PEG for prevention of non-specific binding (NSB). Non-specific
-binding is discussed further in \textbf{?@sec-non-specific-binding}.
-Despite being less widely used, Mishyn \emph{et al.} {[}@Mishyn2022{]}
-state a preference for the use of PBA/EDC over PBASE, as they found it
-was less prone to hydrolysis and gave a larger reaction yield when
-binding ferrocene to graphene. A potential downside of using PBA/EDC for
-protein immobilisation is that EDC has numerous ways of interacting with
-proteins, and not all of these are necessarily desirable; furthermore,
-the addition of NHS may also cause other issues, such as precipitation
-of the reaction compound {[}@Hermanson2013-4{]}. The greater range of
-process variables involved in the functionalisation also adds to the
-complexity of reproducing past results.
+widely used for non-covalent functionalisation than PBA/EDC. As with
+PBASE, there are a wide range of process variables used for the PBA
+functionalisation process. Also notable is the frequent use of
+polyethylene glycol (PEG) or pyrene-PEG for prevention of non-specific
+binding (see \textbf{?@sec-non-specific-binding} for a further
+discussion of NSB). Despite being less widely used, Mishyn \emph{et al.}
+{[}@Mishyn2022{]} state a preference for the use of PBA/EDC over PBASE,
+as they found it gave a larger reaction yield when binding ferrocene to
+graphene. A potential downside of using PBA/EDC for protein
+immobilisation is that EDC has numerous ways of interacting with
+proteins, and not all of these are necessarily desirable. Furthermore,
+the addition of NHS may cause other issues, such as precipitation of the
+reaction compound {[}@Hermanson2013-4{]}. The greater range of process
+variables involved in the functionalisation also makes reproducing past
+results more complex.
 
 \hypertarget{raman-spectroscopy}{%
 \subsubsection{Raman Spectroscopy}\label{raman-spectroscopy}}
 
-\begin{figure}
-
-{\centering \includegraphics[width=0.5\textwidth,height=\textheight]{figures/ch7/comparison_raman.png}
-
-}
-
-\caption{\label{fig-linker-raman}This box plot shows the distribution of
-D-band peak to G\(^+\)-band peak ratio, I\(_D\)/I\(_G\), across nine
-locations for a selection of chemically-modified carbon nanotube films.
-The D-band and G-band intensities for all samples were first normalised
-to the intensity peak corresponding to the silicon dioxide substrate.}
-
-\end{figure}
-
 Raman spectroscopy was used to verify the attachment of PBA to a carbon
-nanotube network film with a silicon dioxide substrate in the manner
-outlined in \textbf{?@sec-raman-characterisation}. As highly-bundled
-devices were found to have less defects present prior to modification,
-as discussed in \textbf{?@sec-pristine-raman}, solvent-deposited films
-were used for the verification of pyrene attachment to prevent the
-initial presence of defects influencing the analysis. Droplets of DMSO
-solution were placed on three (solvent-deposited) carbon nanotube films
-taken from the same wafer. The DMSO solution on one film contained 5 mM
-PBA, the solution on another film contained 5 mM PBASE, and the DMSO on
-the final film contained no linker molecule. After incubation for 1
-hour, films were rinsed for 15 s with DMSO, then for 15 s with IPA to
-remove excess DMSO while avoiding hydrolysis of the PBASE. After the
-first set of Raman spectra was taken, the film initially exposed to PBA
-was further exposed to a solution of 20 mM EDC and 40 mM NHS in 1XPBS
-electrolyte for 30 minutes, and a second set of Raman spectra was taken
-for this film. As in \textbf{?@sec-pristine-raman}, two spectra taken at
-each position were processed according to \textbf{?@sec-raman-analysis},
-and the silicon dioxide reference peak measured in the wavenumber range
-100 cm\(^{-1}\) \(-\) 650 cm\(^{-1}\) was used to normalise the D-band
-and G-band peaks from the wavenumber range 1300 cm\(^{-1}\) \(-\) 1650
+nanotube network film with a SiO\(_2\) substrate in the manner outlined
+in \textbf{?@sec-raman-characterisation}. As highly bundled devices were
+found to have fewer defects present prior to modification, as discussed
+in \textbf{?@sec-pristine-raman}, solvent-deposited films were used for
+the verification of pyrene attachment to prevent the initial presence of
+defects influencing the analysis.
+
+\newgeometry{a4paper,centering=true,right=1.5in,headsep=44.95pt,footskip=23pt}
+\begin{landscape}
+\begin{center}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{knitr}\SpecialCharTok{::}\NormalTok{opts\_chunk}\SpecialCharTok{$}\FunctionTok{set}\NormalTok{(}\AttributeTok{echo =} \ConstantTok{FALSE}\NormalTok{)}
+\FunctionTok{library}\NormalTok{(knitr)}
+
+\NormalTok{pba\_table }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"tables/ch6/pba\_table.csv"}\NormalTok{, }\AttributeTok{sep=}\StringTok{","}\NormalTok{)}
+\NormalTok{pba\_table }\OtherTok{\textless{}{-}}\NormalTok{ pba\_table[}\FunctionTok{rowSums}\NormalTok{(}\FunctionTok{is.na}\NormalTok{(pba\_table)) }\SpecialCharTok{==} \DecValTok{0}\NormalTok{,]}
+
+\NormalTok{knitr}\SpecialCharTok{::}\FunctionTok{kable}\NormalTok{(pba\_table, }
+            \AttributeTok{col.names =} \FunctionTok{c}\NormalTok{(}\StringTok{"Solvent"}\NormalTok{,}
+                           \StringTok{"Channel"}\NormalTok{,}
+                           \StringTok{"PBA (mM)"}\NormalTok{,}
+                           \StringTok{"Time (hr)"}\NormalTok{,}
+                           \StringTok{"EDC (mM)"}\NormalTok{,}
+                           \StringTok{"NHS (mM)"}\NormalTok{,}
+                           \StringTok{"NHSS (mM)"}\NormalTok{,}
+                           \StringTok{"Time (min)"}\NormalTok{,}
+                           \StringTok{"References"}\NormalTok{),}
+            \AttributeTok{column\_spec =} \FunctionTok{c}\NormalTok{(}\FunctionTok{rep}\NormalTok{(}\ConstantTok{NULL}\NormalTok{, }\DecValTok{2}\NormalTok{), }\StringTok{"border{-}left: 2px solid black"}\NormalTok{),}
+            \AttributeTok{format =} \StringTok{"simple"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{tbl-pba-functionalisation}{}
+\begin{longtable}[]{@{}lllllllll@{}}
+\caption{\label{tbl-pba-functionalisation}Comparison of 1-pyrenebutyric
+acid (PBA) functionalisation processes.
+1-ethyl-3-(3-dimethylaminopropyl) carbodiimide hydrochloride (EDC) and
+NHS or NHSS (N-hydroxysulfosuccinimide) were co-mingled with PBA during
+each process. Device exposure times to each compound are shown next to
+the compound concentration. Blank entries indicate there was no mention
+of the parameter in a particular paper. \(^†\)PEG or PEG pyrene were
+used to reduce non-specific binding. \(^{††}\)Several pyrene-based
+linkers were compared and PBA gave an optimal functionalisation
+result.}\tabularnewline
+\toprule\noalign{}
+Solvent & Channel & PBA (mM) & Time (hr) & EDC (mM) & NHS (mM) & NHSS
+(mM) & Time (min) & References \\
+\midrule\noalign{}
+\endfirsthead
+\toprule\noalign{}
+Solvent & Channel & PBA (mM) & Time (hr) & EDC (mM) & NHS (mM) & NHSS
+(mM) & Time (min) & References \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+DMF & Graphene & 0.6 & 1 & - & - & - & 120 & Gao, 2016\(^†\).
+\cite{Gao2016} \\
+& & 5 & 2 & 2 & 5 & - & 30 & Mishyn, 2022. \cite{Mishyn2022} \\
+& CNT & 100 & 3 & 200 & - & - & 30 & Min, 2012. \cite{Min2012} \\
+& & 7.6 & 2 & 8 & 20 & - & 120 & Xu, 2014. \cite{Xu2014} \\
+DI water & CNT & - & - & 32 & - & 12 & Overnight & Pacios, 2012\(^†\).
+\cite{Pacios2012} \\
+Ethanol & CNT & 1 & 1 & 100 & 100 & - & 20 & Filipiak, 2018\(^†\).
+\cite{Filipiak2018} \\
+Acetonitrile & Graphene & 1 & 1 & 400 & 100 & - & 60 & Tong,
+2020\(^{††}\). \cite{Tong2020} \\
+Borax & CNT & 2 & 24 & 2.5 & - & - & 1080 & Liu, 2011\(^†\).
+\cite{Liu2011} \\
+DMSO & Graphene & 5 & 1 & 50 & 50 & - & 90 & Fenzl, 2017.
+\cite{Fenzl2017} \\
+\end{longtable}
+
+\end{center}
+\end{landscape}
+\restoregeometry % Restore the global document page margins
+
+Droplets of DMSO solution were placed on three (solvent-deposited)
+carbon nanotube films taken from the same wafer. The DMSO solution on
+one film contained 5 mM PBA, the solution on another film contained 5 mM
+PBASE, and the DMSO on the final film contained no linker molecule.
+After incubation for 1 hour, films were rinsed for 15 s with DMSO, then
+for 15 s with IPA to remove excess DMSO while avoiding hydrolysis of the
+PBASE. After the first set of Raman spectra was taken, the film
+initially exposed to PBA was further exposed to a solution of 20 mM EDC
+and 40 mM NHS in \(1 \times\) phosphate buffer saline (PBS) electrolyte
+for 30 minutes, and a second set of Raman spectra was taken for this
+film. As in \textbf{?@sec-pristine-raman}, two spectra taken at each
+position were processed according to \textbf{?@sec-raman-analysis}, and
+the SiO\(_2\) reference peak measured in the wavenumber range 100
+cm\(^{-1}\) \(-\) 650 cm\(^{-1}\) was used to normalise the D-band and
+G-band peaks from the wavenumber range 1300 cm\(^{-1}\) \(-\) 1650
 cm\(^{-1}\). The ratio between the average intensity of the D-peak and
 the G\(^+\)-peak at each position was calculated, and the distribution
 of ratio values corresponding to each modified film is shown in
@@ -920,142 +1030,300 @@ Figure~\ref{fig-linker-raman}.
 
 \begin{figure}
 
-\begin{minipage}[t]{0.50\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/NTQ24C10_ch3_comparison_1.png}
+{\centering \includegraphics[width=0.5\textwidth,height=\textheight]{figures/ch6/comparison_raman.png}
 
 }
 
-}
-
-\subcaption{\label{fig-pba-threshold-shift}}
-\end{minipage}%
-%
-\begin{minipage}[t]{0.50\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/NTQ24C10_ch3_comparison_2.png}
-
-}
-
-}
-
-\subcaption{\label{fig-edc-nhs-threshold-shift}}
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.50\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/NTQ24C10_ch3_comparison_3.png}
-
-}
-
-}
-
-\subcaption{\label{fig-rinse-threshold-shift}}
-\end{minipage}%
-%
-\begin{minipage}[t]{0.50\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/NTQ24C10_ch3_comparison_4.png}
-
-}
-
-}
-
-\subcaption{\label{fig-pba-threshold-shift-comparison}}
-\end{minipage}%
-
-\caption{\label{fig-pba-functionalisation-threshold-shift}Electrical
-transfer characteristics of a carbon nanotube transistor before
-functionalisation alongside the transfer characteristics (a) after being
-submerged in DMSO containing 5 mM PBA for 1 hour in red, (b) after being
-submerged in 1XPBS containing 20 mM EDC and 40 mM NHS for 30 min in
-blue, and (c) after being submerged in fresh 1XPBS for 1 hour in green.
-The linear fits to the subthreshold slope of each characteristic curve
-are shown in (d) as dashed lines, alongside the threshold voltages
-calculated by finding the intercept of each fit.}
+\caption[A box plot showing the distribution of D-band peak to
+G\(^+\)-band peak ratios, \(I_D/I_G\), across nine locations for a
+selection of chemically-modified carbon nanotube
+films.]{\label{fig-linker-raman}A box plot showing the distribution of
+D-band peak to G\(^+\)-band peak ratios, \(I_D/I_G\), across nine
+locations for a selection of chemically-modified carbon nanotube films.
+The D-band and G-band intensities for all samples were first normalised
+to the intensity peak corresponding to the SiO\(_2\) substrate.}
 
 \end{figure}
 
-There is a \(\sim 3 \times\) increase in the intensity ratio
-I\(_D\)/I\(_G\) for both the films modified with PBASE and PBA compared
-to the film which was only exposed to DMSO. Previous works have found
-that a change in the intensity ratio indicates successful
-\(\pi\)-stacking on the carbon nanotube surface, as it indicates surface
-modification of the carbon nanotubes has occurred {[}@Wei2010;
-@Lan2013{]}. Wei \emph{et al.} {[}@Wei2010{]} found functionalisation
-with PBASE altered the ratio by a factor of \(\sim 1.5 \times\), while
-Lan \emph{et al.} {[}@Lan2013{]} found that functionalisation with PBA
-altered the ratio by a factor of \(\sim 0.8 \times\). The reason for the
-large difference between results is not immediately clear, but may
-result from the significant differences in the pristine composition and
-morphology of carbon nanotube networks used in each publication, and
-differences in the functionalisation method used. Across all scan
-locations in \textbf{?@fig-raman-comparison}, the value found for
-I\(_D\)/I\(_G\) is consistently \(\sim 0.095\) for both PBA and PBASE.
-Furthermore, subsequent Raman measurements of the PBA-modified film
-after further functionalisation with EDC/NHS do not show a significant
-change in I\(_D\)/I\(_G\). These results indicate that presence of the
-NHS ester has little effect on the Raman shift. It should be clarified
-that Raman spectroscopy cannot be used to distinguish between the
-presence of PBA and PBASE on the device surface. However, it is clear
-that functionalisation of the carbon nanotube network with both the PBA
-and PBASE has led to measurable \(pi\)-stacking between the network and
-the pyrene group attached to each compound.
+There is a \(\sim 3 \times\) increase in the intensity ratio \(I_D/I_G\)
+for both the films modified with PBASE and PBA compared to the film
+which was only exposed to DMSO. Previous works have found that a change
+in the intensity ratio indicates successful pi-stacking on the carbon
+nanotube surface, as it indicates successful surface modification of the
+carbon nanotubes {[}@Wei2010; @Lan2013{]}.
 
-\hypertarget{electrical-characterisation-1}{%
+Wei \emph{et al.} {[}@Wei2010{]} found functionalisation with PBASE
+altered the ratio by a factor of \(\sim 1.5 \times\), while Lan \emph{et
+al.} {[}@Lan2013{]} found that functionalisation with PBA altered the
+ratio by a factor of \(\sim 0.8 \times\). The reason for the large
+difference between results is not immediately clear, but may result from
+the significant differences in the pristine composition and morphology
+of carbon nanotube networks used in each publication, and differences in
+the functionalisation method used. Across all scan locations in
+Figure~\ref{fig-linker-raman}, the value found for \(I_D/I_G\) is
+consistently \(\sim 0.095\) for both PBA and PBASE. Furthermore,
+subsequent Raman measurements of the PBA-modified film after further
+functionalisation with EDC/NHS do not show a significant change in
+\(I_D/I_G\). These results indicate that presence of the NHS ester has
+little effect on the Raman shift, as expected. Raman spectroscopy
+therefore cannot be used to distinguish between the presence of PBA and
+PBASE on the device surface. However, it is clear that functionalisation
+of the carbon nanotube network with both the PBA and PBASE has led to
+measurable pi-stacking between the network and the pyrene group attached
+to each compound.
+
+\hypertarget{sec-PBA-characterisation}{%
 \subsubsection{Electrical
-Characterisation}\label{electrical-characterisation-1}}
+Characterisation}\label{sec-PBA-characterisation}}
 
 Figure~\ref{fig-pba-functionalisation-threshold-shift} shows the
 transfer characteristics of a carbon nanotube transistor channel at
-various stages of a PBA/EDC functionalisation, where a excess of
+various stages of a PBA/EDC functionalisation, where an excess of
 N-hydroxysuccinimide (NHS) was added alongside EDC. A solvent-deposited
 carbon nanotube film was used for the device. The PBA was dissolved in
 DMSO, and the device channels were exposed to this solution for 1 hour.
-The electrical change resulting from PBA exposure is shown in
-Figure~\ref{fig-pba-threshold-shift}. The threshold shift with the
-addition of 5 mM PBA in DMSO for 1 hour is equivalent to the shift seen
-when only DMSO is added, \(\Delta\)V = -0.15 V. The lack of a
-significant threshold shift directly attributable to the PBA is a result
-of pyrene having a neutral charge state; any contributions from the
-charged carboxyl group are screened from the carbon nanotube sidewalls
-by surrounding water molecules {[}@Lerner2012{]}. However, as in the
-case of the addition of PBASE, there also appears to be an increase in
-hole mobility, which may be due to the pyrene groups increasing
-connectivity within the carbon nanotube network {[}@Murugathas2019b{]}.
+The change resulting from PBA exposure is shown in
+Figure~\ref{fig-pba-functionalisation-threshold-shift} (a). The
+threshold shift with the addition of 5 mM PBA in DMSO for 1 hour is
+equivalent to the shift seen when only DMSO is added,
+\(\Delta V = -0.15\) V. The lack of a significant threshold shift
+attributable to the PBA is a result of pyrene having a neutral charge
+state. Any contributions from the charged carboxyl group are screened
+from the carbon nanotube sidewalls by surrounding water molecules
+{[}@Lerner2012{]}. However, as in the case of the addition of PBASE,
+there also appears to be an increase in hole mobility, which may be due
+to the pyrene groups increasing connectivity within the carbon nanotube
+network {[}@Murugathas2019a{]}.
 
-Subsequently, the device was rinsed with 1XPBS and exposed to 20 mM EDC
-and 40 mM NHS in 1XPBS electrolyte for 30 minutes.
-Figure~\ref{fig-edc-nhs-threshold-shift} shows the change resulting from
-subsequent EDC/NHS exposure. When EDC/NHS is added, a threshold shift of
-\(\Delta\)V \(\sim\) -0.08 V was observed on multiple channels. The
-exposure to EDC/NHS negatively shifts the transfer characteristic curve,
-most likely due to the PBA present reacting to form positively-charged
-\emph{O}-acylisourea esters and negatively gating the attached carbon
-nanotube network {[}@Heller2008; @Hermanson2013-4{]}.
-Figure~\ref{fig-rinse-threshold-shift} shows that this shift is not
-significantly affected by further exposure of the channel to PBS. This
-indicates that hydrolysis over the course of one hour is insufficient to
-hydrolyse a significant proportion of the \emph{O}-acylisourea back to
-PBA, as PBA is charge neutral. We therefore expect that the a
-significant amount of \emph{O}-acylisourea remains active within this
-time period and available for reaction with biomolecule amine groups.
+\begin{figure}
+
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(a).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NTQ24C10_ch3_comparison_1.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NTQ24C10_ch3_comparison_2.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(c).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NTQ24C10_ch3_comparison_3.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(d).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NTQ24C10_ch3_comparison_4.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+
+\caption[Transfer characteristics of a carbon nanotube transistor,
+before and after functionalisation with PBA or PBA/EDC/NHS, as well as
+after submersion in fresh PBS, alongside linear fits to the subthreshold
+slope of each curve in the forward
+direction.]{\label{fig-pba-functionalisation-threshold-shift}Transfer
+characteristics of a carbon nanotube transistor before functionalisation
+alongside the transfer characteristics (a) after being submerged in DMSO
+with 5 mM PBA in red, (b) after being submerged in PBS with 20 mM EDC
+and 40 mM NHS in blue, and (c) after being submerged in fresh PBS in
+green. The dashed lines in (d) are linear fits to the subthreshold slope
+of each curve in the forward direction, and are shown alongside the
+threshold voltages corresponding to each fit.}
+
+\end{figure}
+
+Subsequently, the device was rinsed with \(1 \times\) PBS and exposed to
+20 mM EDC and 40 mM NHS in \(1 \times\) PBS electrolyte for 30 minutes.
+Figure~\ref{fig-pba-functionalisation-threshold-shift} (b) shows the
+change resulting from subsequent EDC/NHS exposure. When EDC/NHS is
+added, a threshold shift of \(\Delta V \sim -0.08\) V was observed on
+multiple channels. The exposure to EDC/NHS negatively shifts the
+transfer characteristic curve, most likely due to the PBA present
+reacting to form positively-charged \emph{O}-acylisourea esters and
+negatively gating the attached carbon nanotube network {[}@Heller2008;
+@Hermanson2013-4{]}.
+Figure~\ref{fig-pba-functionalisation-threshold-shift} (c) shows that
+this shift is not significantly affected by further exposure of the
+channel to PBS. The lack of a change in gating may imply that hydrolysis
+over the course of one hour is insufficient to hydrolyse a significant
+proportion of the attached \emph{O}-acylisourea or PBASE back to PBA,
+leaving them available for reaction with biomolecule amine groups. A
+further test could be performed to see if leaving the device submerged
+in water over a longer time period to check if ester hydrolysis
+eventually affects threshold voltage in a significant manner, but this
+was considered to be outside the scope of this work.
 
 \hypertarget{attachment-of-peglyated-pyrene-based-linkers}{%
 \subsection{Attachment of PEGlyated Pyrene-Based
@@ -1070,46 +1338,53 @@ ester group on PBASE with other groups that can undergo binding
 reactions with proteins. Unlike PBASE, these groups do not suffer the
 drawback of being readily hydrolysed. For example, PBASE can be modified
 with N\(\alpha\),N\(\alpha\)-Bis(carboxymethyl)-L-lysine hydrate (also
-known as N-(5-Amino-1-carboxypentyl)iminodiacetic acid, AB-NTA) to
-produce pyrene-nitrilotriacetic acid (pyrene-NTA). The attached NTA
-group is able to chelate with metal ions such as Cu\(^{2+}\) or
-Ni\(^{2+}\), which then can then coordinate with polyhistidine-tags
-attached to a protein {[}@Holzinger2011; @Amano2016; @Chang2017{]}. Use
-of Cu\(^{2+}\) ions over Ni\(^{2+}\) gives stronger histidine bonding
-and less non-specific adsorption {[}@Chang2017{]}. Functionalisation
-using the NTA-Ni\(^{2+}\) chemistry was successfully used to attach
-mammalian odorant receptors to a single carbon nanotube for detection of
-eugenol vapour in real-time {[}@Goldsmith2011{]}. Pyrene-biotin (pyrene
-butanol biotin ester) can also be produced for attaching avidin or
-strepavidin {[}@Holzinger2011{]}. As avidin and strepavidin are
-tetrameric, they can be attached to both pyrene-biotin and biotinylated
-avi-tagged proteins simultaneously via strong non-covalent bonding,
-therefore linking the transducer and receptor {[}@Star2003a;
-@Dundas2013; @Hermanson2013-11; @Fairhead2015{]}. As the presence of
-his-tags and avi-tags on proteins can be readily controlled, these
-methods offer improved specificity and directionality over the
-traditional amide bonding seen earlier.
+known as N-(5-Amino-1-carboxypentyl)iminodiacetic acid, amine-NTA,
+AB-NTA) to produce pyrene-nitrilotriacetic acid. The attached NTA group
+is able to chelate with metal ions such as Cu\(^{2+}\) or Ni\(^{2+}\),
+which then can then coordinate with polyhistidine-tags attached to a
+protein {[}@Holzinger2011; @Fruh2011; @Amano2016; @Chang2017{]}. Use of
+Cu\(^{2+}\) ions over Ni\(^{2+}\) gives stronger histidine bonding and
+less non-specific adsorption {[}@Chang2017{]}. Functionalisation using
+the NTA-Ni\(^{2+}\) chemistry was successfully used to attach mammalian
+odorant receptors to a single carbon nanotube for detection of eugenol
+vapour in real-time {[}@Goldsmith2011{]}. Pyrene-biotin (pyrene butanol
+biotin ester) can also be produced for attaching avidin or strepavidin
+{[}@Holzinger2011{]}. As avidin and strepavidin are tetrameric, they can
+be attached to both pyrene-biotin and biotinylated avi-tagged proteins
+simultaneously via strong non-covalent bonding, therefore linking the
+transducer and receptor {[}@Star2003a; @Dundas2013; @Hermanson2013-11;
+@Fairhead2015{]}. As the presence of his-tags and avi-tags on proteins
+can be readily controlled, these methods offer improved specificity and
+directionality over the traditional amide bonding seen earlier.
 
-It is also possible to attach polyethylene glycol (PEG) chains to a
-pyrene group and modify them with reactive groups such as NTA and biotin
-to attach proteins in the manner outlined in the previous paragraph
-{[}@Hermanson2013-18; @Meran2018{]}. Once modified with PEG, the water
-solubility of pyrene linkers increases, making it possible to perform a
-full functionalisation procedure exclusively in aqueous solution
-{[}@Hermanson2013-18{]}. By setting the length of the PEG chain, the
-size of the linker molecule can be controlled - selection of a short
-chain is important for ensuring attached receptors remain within the
-Debye length of the transducer {[}@Shkodra2021{]}. Functionalisation of
-a graphene transducer with pyrene-PEG-biotin has previously been used to
-bind streptavidin to a graphene field-effect transistor device
-{[}@Miki2019{]}. The PEGlyated linkers used in the following sections
-were purchased pre-prepared. Pyrene-PEG-NTA (2 kDa) was purchased from
-Nanocs, while pyrene-PEG-FITC (2 kDa, 10 kDa), pyrene-PEG-rhodamine (3.4
-kDa), mPEG-Pyrene (10 kDa) and pyrene-PEG-biotin (10 kDa) were purchased
-from Creative PEGworks.
+It is also possible to attach biocompatible {[}@Chen2004{]} polyethylene
+glycol (PEG) chains to a pyrene group and modify them with reactive
+groups such as NTA and biotin to attach proteins in the manner outlined
+in the previous paragraph {[}@Hermanson2013-18; @Meran2018{]}. Once
+modified with PEG, the hydrophilicity of the PEG increases the water
+solubility of pyrene linkers, making it possible to perform a full
+functionalisation procedure exclusively in aqueous solution
+{[}@Chen2004; @Hermanson2013-18{]}. By setting the length of the PEG
+chain, the size of the linker molecule can be controlled; selection of a
+short chain is important to ensure attached receptors remain within the
+Debye length of the transducer {[}@Shkodra2021{]}. Note that PEG
+naturally repels proteins and can also bond to carbon nanotubes, and
+both behaviours have uncertain implications for successful protein
+functionalisation {[}@Chen2004{]}. However, functionalisation of both
+carbon nanotube and graphene transducers with pyrene-PEG-biotin (PPB)
+has previously been used for the successful detection of streptavidin
+{[}@Star2003a; @Miki2019{]}. PEG is also charge neutral, so its presence
+is not expected to significantly affect device characteristics
+{[}@Chen2004{]}.
+
+The PEGlyated linkers used in the following sections were purchased
+pre-prepared. Pyrene-PEG-NTA (2 kDa) was purchased from Nanocs, while
+pyrene-PEG-FITC (2 kDa, 10 kDa), pyrene-PEG-rhodamine (3.4 kDa),
+mPEG-Pyrene (10 kDa) and pyrene-PEG-biotin (10 kDa) were purchased from
+Creative PEGworks.
 
 \hypertarget{sec-impediments}{%
-\subsection{Identifying Functionalisation Issues using Fluorescence
+\subsection{Identifying Functionalisation Obstacles using Fluorescence
 Microscopy}\label{sec-impediments}}
 
 \hypertarget{sec-fluorescence-remarks}{%
@@ -1121,36 +1396,37 @@ nanotube or graphene surface with fluorescence microscopy. The dyes
 included fluorescein isothiocyanate (FITC), Rhodamine B and Cyanine 3
 (Cy3). Green fluorescent protein was also used for this testing process.
 It is important to note that these dyes and the GFP chromophore all
-contain benzene rings which are able to \(\pi\)-stack with carbon rings
-to some degree {[}@Nakayama-Ratchford2007; @Tang2012;@Khrenova2019;
-@Qiu2019{]}. However, there is also significant variation in the
-effectiveness of this \(\pi\)-stacking, as shown by
-Figure~\ref{fig-FITC-rhodamine-B}. Here, a clear, specific interaction
-is seen between Rhodamine B and graphene, but little interaction between
-FITC and graphene is observed, even when a longer exposure time is used.
-Whether the addition of pyrene linker groups these dyes, or dye-modified
-biomolecules, was therefore investigated in further detail. This process
-then led to the identification of multiple issues that could impede a
-successful device functionalisation.
+contain benzene rings which are able to pi-stack with carbon rings to
+some degree {[}@Nakayama-Ratchford2007; @Tang2012; @Khrenova2019;
+@Qiu2019{]}. However, there is also significant variation in the extent
+to which this pi-stacking occurs, which can be seen by comparing
+Figure~\ref{fig-FITC-rhodamine-B} (a) and
+Figure~\ref{fig-FITC-rhodamine-B} (b). Here, a clear, specific
+interaction is seen between Rhodamine B and graphene, but little
+interaction between FITC and graphene is observed, even when a longer
+exposure time is used when imaging. Whether the addition of pyrene
+linker groups to these dyes or dye-modified biomolecules was able to
+improve attachment was next investigated. This process led to the
+identification of multiple issues that could impede a successful device
+functionalisation.
 
 \begin{figure}
 
-\begin{minipage}[t]{0.47\linewidth}
+\begin{minipage}[t]{0.03\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/NGW8D1_FITC_6.5sexposure_10X_221121.png}
+\includegraphics{figures/(a).png}
 
 }
 
 }
 
-\subcaption{\label{fig-FITC}}
 \end{minipage}%
 %
-\begin{minipage}[t]{0.05\linewidth}
+\begin{minipage}[t]{0.01\linewidth}
 
 {\centering 
 
@@ -1160,27 +1436,85 @@ successful device functionalisation.
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.47\linewidth}
+\begin{minipage}[t]{0.45\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/NGW8D4_rhodamineB_cornergraphene_221110.png}
+\includegraphics{figures/ch6/NGW8D1_FITC_6.5sexposure_10X_221121.png}
 
 }
 
 }
 
-\subcaption{\label{fig-rhodamine}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/NGW8D4_rhodamineB_cornergraphene_221110.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
 \end{minipage}%
 
-\caption{\label{fig-FITC-rhodamine-B}Four 200 \(\mu\)m \(\times\) 200
-\(\mu\)m graphene squares modified with the dyes (a) fluorescein
-isothiocyanate (FITC) and (b) Rhodamine B. No pyrene/PEG/pyrene-PEG was
-attached to these dyes. In (a), an FITC filter and 6.5 s exposure time
-was used, and in (b) a Texas Red filter and 1.4 s exposure time was
-used.}
+\caption[Four 200 µm \(\times\) 200 µm graphene squares modified with
+the dyes fluorescein isothiocyanate (FITC) and Rhodamine
+B.]{\label{fig-FITC-rhodamine-B}Four 200 µm \(\times\) 200 µm graphene
+squares modified with the dyes (a) fluorescein isothiocyanate (FITC) and
+(b) Rhodamine B. No pyrene/PEG/pyrene-PEG was attached to these dyes. In
+(a), an FITC filter and 6.5 s exposure time was used, and in (b) a Texas
+Red filter and 1.4 s exposure time was used.}
 
 \end{figure}
 
@@ -1193,33 +1527,52 @@ devices were not used for fluorescence imaging. (Consider a photograph
 of a dim outdoor lamp; if the photograph was taken on a starless night,
 the light from the lamp would show up clearly, but with the sun out the
 light would be very difficult to see regardless of how the photograph
-was taken.) A different type of encapsulation could potentially be used
+was taken). A different type of encapsulation could potentially be used
 to verify linker attachment with fluorescence after a device has been
 encapsulated. These alternative encapsulation methods for use with
-fluorescence microscopy are discussed in \textbf{?@sec-future-work}.
+fluorescence microscopy are discussed in
+\textbf{?@sec-future-work-fabrication}.
 
 \hypertarget{sec-photoresist-contamination}{%
 \subsubsection{Photoresist
 Contamination}\label{sec-photoresist-contamination}}
 
+An functionalisation issue quickly encountered when characterising
+pyrene-PEG-FITC (PPF) functionalisation via fluorescence microscopy was
+an unwanted secondary interaction between the linker and residual
+photoresist. Figure~\ref{fig-photoresist-contamination} (a) and
+Figure~\ref{fig-photoresist-contamination} (b) are fluorescence images
+of SU8 encapsulation (using the pre-2023 mask) before and after being
+exposed to PPF. Despite the same microscope settings being used to take
+the images (filter, ISO, contrast, exposure time), the SU8 exposed to
+PPF appears much brighter than the pristine SU8. This result indicates
+that the linker appears to have an extensive interaction with the
+photoresist via an unknown mechanism. No fluorescence is seen from the
+device channel. The length of exposure time required to see fluorescence
+from the modified channel would lead to fluorescence from the modified
+linker attached to the photoresist (as well as the photoresist itself)
+flooding the image with light. Therefore, it is not clear whether the
+carbon nanotubes have been functionalised with the dye-modified linker.
+Out of caution, we can assume that this secondary interaction is not
+desirable for successful functionalisation.
+
 \begin{figure}
 
-\begin{minipage}[t]{0.47\linewidth}
+\begin{minipage}[t]{0.03\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/modified_SU8only_FITCfilter_channel2_350ms_12.6X_221207.png}
+\includegraphics{figures/(a).png}
 
 }
 
 }
 
-\subcaption{\label{fig-350ms-SU8}}
 \end{minipage}%
 %
-\begin{minipage}[t]{0.05\linewidth}
+\begin{minipage}[t]{0.01\linewidth}
 
 {\centering 
 
@@ -1229,37 +1582,93 @@ Contamination}\label{sec-photoresist-contamination}}
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.47\linewidth}
+\begin{minipage}[t]{0.45\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/modified_CNT20_1mMPPF_channel8_350ms_12.6X_221124.png}
+\includegraphics{figures/ch6/modified_SU8only_FITCfilter_channel2_350ms_12.6X_221207.png}
 
 }
 
 }
 
-\subcaption{\label{fig-350ms-SU8-FITC}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/modified_CNT20_1mMPPF_channel8_350ms_12.6X_221124.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
 \end{minipage}%
 \newline
-\begin{minipage}[t]{0.47\linewidth}
+\begin{minipage}[t]{0.03\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/modified_Ccontrol_ch2_mCherry_10sexposure_highcontrast_12.6X.png}
+\includegraphics{figures/(c).png}
 
 }
 
 }
 
-\subcaption{\label{fig-aptamer-photoresist-1}}
 \end{minipage}%
 %
-\begin{minipage}[t]{0.05\linewidth}
+\begin{minipage}[t]{0.01\linewidth}
 
 {\centering 
 
@@ -1269,37 +1678,93 @@ Contamination}\label{sec-photoresist-contamination}}
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.47\linewidth}
+\begin{minipage}[t]{0.45\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/modified_C1_ch5_mCherry_10sexposure_highcontrast_12.6X.png}
+\includegraphics{figures/ch6/modified_Ccontrol_ch2_mCherry_10sexposure_highcontrast_12.6X.png}
 
 }
 
 }
 
-\subcaption{\label{fig-aptamer-photoresist-2}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(d).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/modified_C1_ch5_mCherry_10sexposure_highcontrast_12.6X.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
 \end{minipage}%
 \newline
-\begin{minipage}[t]{0.47\linewidth}
+\begin{minipage}[t]{0.03\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/modified_softbake1minacetonerinse_aptamer_ch3_mCherry_30sexposure_highcontrast_ISO200_12.6X.png}
+\includegraphics{figures/(e).png}
 
 }
 
 }
 
-\subcaption{\label{fig-aptamer-photoresist-3}}
 \end{minipage}%
 %
-\begin{minipage}[t]{0.05\linewidth}
+\begin{minipage}[t]{0.01\linewidth}
 
 {\centering 
 
@@ -1309,22 +1774,82 @@ Contamination}\label{sec-photoresist-contamination}}
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.47\linewidth}
+\begin{minipage}[t]{0.45\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/modified_hardbake_aptamer_ch3_mCherry_30sexposure_highcontrast_ISO200_12.6X.png}
+\includegraphics{figures/ch6/modified_softbake1minacetonerinse_aptamer_ch3_mCherry_30sexposure_highcontrast_ISO200_12.6X.png}
 
 }
 
 }
 
-\subcaption{\label{fig-aptamer-photoresist-4}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(f).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/modified_hardbake_aptamer_ch3_mCherry_30sexposure_highcontrast_ISO200_12.6X.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
 \end{minipage}%
 
-\caption{\label{fig-photoresist-contamination}A fluorescence image of a
+\caption[Fluorescence images demonstrating the interaction of
+fluorescent-tagged linker or aptamer with photoresist present on a
+carbon nanotube network device
+surface.]{\label{fig-photoresist-contamination}A fluorescence image of a
 SU8-encapsulated carbon nanotube device is shown in (a), while (b) shows
 the same channel after modification with an solution of 1 mM
 Pyrene-PEG-FITC. A 0.35 s exposure time and FITC filter were used for
@@ -1338,45 +1863,25 @@ and 30 s exposure time were used for for (e)-(f).}
 
 \end{figure}
 
-An functionalisation issue quickly encountered when characterising
-pyrene-PEG-FITC (PPF) interaction with sensing channels via fluorescence
-microscopy was an unwanted secondary interaction between the linker and
-residual photoresist. Figure~\ref{fig-350ms-SU8} and
-Figure~\ref{fig-350ms-SU8-FITC} are fluorescence images of SU8
-encapsulation (using the pre-2023 mask) before and after being exposed
-to PPF. Despite the same microscope settings being used to take the
-images (filter, ISO, contrast, exposure time), the SU8 exposed to PPF
-appears much brighter than the pristine SU8. This result indicates that
-the linker appears to have an extensive interaction with the photoresist
-via an unknown mechanism. No fluorescence is seen from the device
-channel. The length of exposure time required to see fluorescence from
-the modified channel would lead to fluorescence from the modified linker
-attached to the photoresist \(-\) as well as the photoresist itself
-\(-\) flooding the image with light. Therefore, it is not clear whether
-the carbon nanotubes have been functionalised with the dye-modified
-linker. However, out of caution we can assume that the presence of this
-secondary interaction is not desirable.
-
 A similar interaction was seen between AZ\(^\circledR\) 1518 photoresist
 and fluorescent-tagged, amine-terminated aptamer. An unencapsulated
-carbon nanotube network device, fabricated using the pre-June 2022
+carbon nanotube network device, fabricated using the pre-Jun 2022
 process outlined in \textbf{?@sec-fabrication}, was incubated with 500
-nM Cy3-tagged aptamer in Tris buffer at 4°C overnight. The aptamer was
-first denatured by heating in a water bath at 95°C for 5 minutes then
-cooling in an ice bath for 10 minutes before use.
-
-Figure~\ref{fig-aptamer-photoresist-1} and
-Figure~\ref{fig-aptamer-photoresist-2} are fluorescence images of the
-device channel region before and after exposure to aptamer. A thick red
-ring is visible around the electrodes after functionalisation, despite
-no PBASE being used to tether the amine-terminated aptamer. It appears
-that these bright patches correspond to patches of residual photoresist
-which have not been completely removed from the carbon nanotube square
-by the development process. These patches have then interacted with the
+nM Cy3-tagged aptamer in Tris solution at 4 °C overnight. The aptamer
+was first denatured by heating in a water bath at 95 °C for 5 minutes,
+then cooling in an ice bath for 10 minutes before use.
+Figure~\ref{fig-photoresist-contamination} (c) and
+Figure~\ref{fig-photoresist-contamination} (d) are fluorescence images
+of the device channel region before and after exposure to aptamer. A
+thick red ring is visible around the electrodes after functionalisation,
+despite no PBASE being used to tether the amine-terminated aptamer. It
+appears that these bright patches correspond to residual photoresist
+which has not been completely removed from the carbon nanotube square in
+the development process. These patches have then interacted with the
 aptamer, causing them to appear bright under the fluorescence
 microscope. Beyond potentially interfering with functionalisation,
 photoresist residue blocking a device channel will prevent interaction
-with the buffer and prevent sensing.
+with the Tris solution and prevent sensing.
 
 To test whether residual resist could be prevented from interacting with
 aptamer by crosslinking the resist, two unencapsulated devices were
@@ -1384,40 +1889,40 @@ prepared as follows. Devices were first spincoated with AZ\(^\circledR\)
 1518 in the manner described in \textbf{?@sec-fabrication}. Next, the
 majority of resist was removed by soaking the device in acetone for 1
 minute. This process left a thin coating of photoresist on the devices.
-One of these devices was then hardbaked at 200°C for 1 hour. Both
+One of these devices was then hardbaked at 200 °C for 1 hour. Both
 devices were subsequently functionalised in the following manner:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
 \item
-  Unencapsulated device was submerged in 1 mM PBASE in methanol solution
-  for 1 hour.
+  The unencapsulated device was submerged in 1 mM PBASE in methanol
+  solution for 1 hour.
 \item
-  The device was then rinsed with methanol and Tris buffer.
+  The device was then rinsed with methanol and Tris.
 \item
-  1 \(\mu\)M Cy3-tagged aptamer was denatured by heating in a water bath
-  at 95°C for 5 minutes then cooling in an ice bath for 10 minutes
-  before use.
+  1 µM Cy3-tagged aptamer was denatured by heating in a water bath at
+  95°C for 5 minutes, then cooling in an ice bath for 10 minutes before
+  use.
 \item
-  The device was incubated with aptamer in Tris buffer at 4°C overnight.
+  The device was incubated with aptamer in Tris at 4 °C overnight.
 \end{enumerate}
 
 Fluorescence microscope images of channels from each device are shown in
-Figure~\ref{fig-aptamer-photoresist-3} and
-Figure~\ref{fig-aptamer-photoresist-4}, where the latter is the device
-hardbaked before functionalisation. By comparing the two images, it is
-apparent that hardbaking the AZ\(^\circledR\) 1518 photoresist
+Figure~\ref{fig-photoresist-contamination} (e) and
+Figure~\ref{fig-photoresist-contamination} (f), where the latter is the
+device hardbaked before functionalisation. By comparing the two images,
+it is apparent that hardbaking the AZ\(^\circledR\) 1518 photoresist
 significantly reduces the amount of fluorescent aptamer attached to the
 surface. This result is an indication that sufficient heating of the
 photoresist can prevent it interacting with PBASE or amine-tagged
 biological material. However, there is still some Cy3-tagged aptamer
-fluorescence visible in Figure~\ref{fig-aptamer-photoresist-4}. It
-appears that hardbaking has not completely prevented photoresist from
+fluorescence visible in Figure~\ref{fig-photoresist-contamination} (f).
+It appears that hardbaking has not completely prevented photoresist from
 interacting with the aptamer. It is possible that heating from the
 bottom of the device is insufficient to hardbake the photoresist layer
 completely, an effect that would be amplified for the thick photoresist
-layer on encapsulated devices. Therefore, from June 2023 onwards devices
-were vacuum annealed for 1 hour at 150°C prior to functionalisation.
+layer on encapsulated devices. Therefore, from Jun 2023 onwards devices
+were vacuum annealed for 1 hour at 150 °C prior to functionalisation.
 This approach was taken to ensure photoresist was heated from above as
 well as below and made chemically inert across its surface.
 
@@ -1425,261 +1930,113 @@ This result demonstrates the use of fluorescence microscopy as a tool to
 detect residue and test suitable residue elimination measures. Further
 testing showed that performing a 1 minute flood exposure (for positive
 resist only) then placing a device in AZ\(^\circledR\) 326 developer for
-3 minutes was highly effective at removing photoresist residue. Both
-these development and annealing techniques were used for all
-functionalised devices in subsequent sections.
+three minutes (for both positive and negative resist) was highly
+effective at removing photoresist residue. Both these development and
+annealing techniques were used for all functionalised devices in
+subsequent sections.
 
 \hypertarget{sec-hydrophobicity}{%
 \subsubsection{Hydrophobicity of Carbon Nanotubes and
 Graphene}\label{sec-hydrophobicity}}
 
-\begin{figure}
-
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/modified_NGW8D9_edgechannel_post10min50Cacetonerinse_221109.png}
-
-}
-
-}
-
-\subcaption{\label{fig-no-attachment}}
-\end{minipage}%
-%
-\begin{minipage}[t]{0.05\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/modified_NGW8D7_edgechannel_lowerexposuretime_221108.png}
-
-}
-
-}
-
-\subcaption{\label{fig-attachment-post-plasma}}
-\end{minipage}%
-
-\caption{\label{fig-hydrophobicity}Fluorescence images of a 1000
-\(\mu\)m \(\times\) 100 \(\mu\)m graphene channel after
-functionalisation with 1 mM pyrene-PEG-rhodamine in 1XPBS. The graphene
-film in (a) was not oxygen plasma cleaned before functionalisation,
-while the graphene film in (b) was oxygen plasma cleaned at 5 W for 15 s
-at 300 mTorr pressure immediately before functionalisation. Insets show
-a 10 \(\mu\)L droplet placed on an unencapsulated carbon nanotube device
-before (a) and after (b) the same oxygen plasma treatment procedure.
-Images were taken using an Texas Red filter and a 1.8 s exposure time.}
-
-\end{figure}
-
-\begin{figure}
-
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/modified_NGW6D4_PyPEGFITC_channel2_1.6sexposure_10X_221122.png}
-
-}
-
-}
-
-\subcaption{\label{fig-FITC-silicon-dioxide}}
-\end{minipage}%
-%
-\begin{minipage}[t]{0.05\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/modified_SiO2_1mMPPR_2_221109.png}
-
-}
-
-}
-
-\subcaption{\label{fig-rhodamine-silicon-dioxide}}
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/modified_NGW6D7_PyPEGFITC_channel3top_postmsurfclean_7.5sexposure_20X_221123.png}
-
-}
-
-}
-
-\subcaption{\label{fig-PPF-PBS-20X}}
-\end{minipage}%
-%
-\begin{minipage}[t]{0.05\linewidth}
-
-{\centering 
-
-~
-
-}
-
-\end{minipage}%
-%
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/modified_NGW6D7_PyPEGFITC_channel1_postmsurfclean_7.75sexposure_40X_221123.png}
-
-}
-
-}
-
-\subcaption{\label{fig-PPF-PBS-40X}}
-\end{minipage}%
-
-\caption{\label{fig-silicon-dioxide-interaction}The 1000 \(\mu\)m
-\(\times\) 100 \(\mu\)m graphene film in image (a) was functionalised
-with 1 mM pyrene-PEG-FITC in 1XPBS after oxygen plasma treatment, taken
-using an FITC filter and a 1.6 s exposure time. (b) shows a silicon
-dioxide surface which had never been exposed to carbon nanotubes,
-graphene or photoresist after exposure to 1 mM pyrene-PEG-rhodamine in
-1XPBS, taken using a Texas Red filter and a 1.8 s exposure time.
-Graphene films on a substrate functionalised with 1 mM pyrene-PEG-FITC
-in 1XPBS after oxygen plasma treatment then cleaned with m-CNT
-dispersion surfactant (NanoIntegris) are shown in (c) and (d), where a
-FITC filter was used, with 7.5 s and 7.75 s exposure times
-respectively.}
-
-\end{figure}
-
 As PEGlyated linker dissolves well in aqueous solution, initial
 fluorescence imaging focused on functionalising devices with these
-linkers dissolved in 1XPBS. It was hoped that by keeping the device
-channels in a pH-controlled environment, the channel surface would be
-made more suitable for the attached receptors.
-Figure~\ref{fig-no-attachment} shows a graphene film after exposure to
-pyrene-PEG-rhodamine (PPR) in 1XPBS solution for 1 hour. The
-pyrene-PEG-rhodamine has interacted with the silicon dioxide substrate
-(discussed further in Section~\ref{sec-pyrene-interactions}) but not the
-graphene film. The graphene has not attached to the pyrene or rhodamine
-due to the highly hydrophobic graphene surface repelling the surrounding
-solution, preventing \(\pi\)-stacking from occurring. The hydrophobicity
-of the graphene surface is not intrinsic to graphene, but instead
-results from a hydrocarbonaceous layer which forms on the channel
-surface when exposed to air {[}@Ashraf2014{]}. A hydrophobic layer wiil
-also form on carbon nanotube networks {[}@Stando2019; @Park2022{]}.
-Treatment with oxygen plasma at 5 W for 15 s has previously been found
-to remove this hydrocarbonaceous layer, restoring the intrinsic
-hydrophilicity of graphene {[}@Shin2010{]}. Storing the graphene surface
-in deionised water rather than air prevents the return of this
-hydrocarbon layer {[}@Ashraf2014{]}. The use of a relatively low power
-plasma ensures damage to the graphene layer is minimised.
+linkers dissolved in \(1 \times\) PBS. It was hoped that by keeping the
+device channels in a pH-controlled environment, the channel surface
+would be made more suitable for the attached receptors.
+Figure~\ref{fig-silicon-dioxide-interaction} (a) shows a graphene film
+after exposure to pyrene-PEG-rhodamine (PPR) in \(1 \times\) PBS
+solution for 1 hour. The pyrene-PEG-rhodamine has interacted with the
+SiO\(_2\) substrate (discussed further in
+Section~\ref{sec-pyrene-interactions}) but not the graphene film. The
+graphene has not attached to the pyrene or rhodamine due to the highly
+hydrophobic graphene surface repelling the surrounding solution,
+preventing pi-stacking from occurring. The hydrophobicity of the
+graphene surface is not intrinsic to graphene. Instead, it results from
+a hydrocarbon layer which forms on the channel surface when exposed to
+air, primarily composed of long-chain alkanes {[}@Ashraf2014;
+@Palinkas2022{]}. A hydrophobic layer wiil also form on carbon nanotube
+networks {[}@Stando2019; @Park2022{]}. Treatment with oxygen plasma at 5
+W for 15 s has previously been found to remove this hydrocarbon layer,
+restoring the intrinsic hydrophilicity of graphene {[}@Shin2010{]}.
+Storing the graphene surface in deionised water rather than air prevents
+the return of this hydrocarbon layer {[}@Ashraf2014{]}. The use of a
+relatively low power plasma ensures damage to the graphene layer is
+minimised.
 
 Treatment of an unencapsulated carbon nanotube network device at 5 W for
 15 s at 300 mTorr greatly reduced the contact angle of a water droplet
-placed on the device surface, shown inset in
-Figure~\ref{fig-hydrophobicity} before and after plasma treatment. A
-graphene film was then functionalised with pyrene-PEG-rhodamine in 1XPBS
-in the same manner as for the film in Figure~\ref{fig-no-attachment},
-except with the same plasma treatment performed on the film less than 1
-minute before functionalisation. The result is shown in
-Figure~\ref{fig-attachment-post-plasma}. The graphene now appears to
-interact with the pyrene-PEG-rhodamine. These results both indicate that
-the plasma treatment is increasing the hydrophilicity of the device
-surface, improving the ability of pyrene-PEG-rhodamine to \(\pi\)-stack
-with graphene. The disadvantage of this procedure is that the plasma
-cleaning introduces defects to the graphene surface which may be
-undesirable for device electrical behaviour. Furthermore, it was often
-found that devices functionalised in this manner had their conductance
-drop significantly after functionalisation, even though plasma treatment
-itself did not significantly alter device conductance. Solvent was
-therefore used for the initial linker functionalisation in
-Section~\ref{sec-linker-receptor-attachment}, as it did not require a
-plasma cleaning step for successful attachment.
+placed on the device surface. The water droplet before and after plasma
+treatment is shown inset in Figure~\ref{fig-silicon-dioxide-interaction}
+(a) and Figure~\ref{fig-silicon-dioxide-interaction} (b) respectively. A
+graphene film was then functionalised with pyrene-PEG-rhodamine in
+\(1 \times\) PBS in the same manner as for the film in
+Figure~\ref{fig-silicon-dioxide-interaction} (a), except with the same
+plasma treatment performed on the film less than 1 minute before
+functionalisation. The result is shown in
+Figure~\ref{fig-silicon-dioxide-interaction} (b). The graphene now
+appears to interact with the pyrene-PEG-rhodamine. These results both
+indicate that the plasma treatment is increasing the hydrophilicity of
+the device surface, improving the ability of pyrene-PEG-rhodamine to
+\(\pi\)-stack with graphene. The disadvantage of this procedure is that
+the plasma cleaning introduces defects to the graphene surface which may
+be undesirable for device electrical behaviour. Furthermore, it was
+often found that devices functionalised in this manner had their
+conductance drop significantly after functionalisation, even though
+plasma treatment itself did not significantly alter device conductance.
+Solvent was therefore used for the initial linker functionalisation in
+\textbf{?@sec-biosensing-iORs}, as a plasma cleaning step was not
+required for linker attachment.
 
 \hypertarget{sec-pyrene-interactions}{%
 \subsubsection{Substrate Interaction with Linker
 Molecules}\label{sec-pyrene-interactions}}
 
 Another issue that arose when verifying surface functionalisation was
-the interaction between pyrene linker and the silicon dioxide substrate.
-This interaction meant it was difficult to discern whether the pyrene
-group was interacting in a specific manner with the channel film. It was
-confirmed that pyrene-PEG was interacting with silicon dioxide, rather
-than residual photoresist or nanomaterial, by performing a
-pyrene-PEG-rhodamine functionalisation on pristine silicon dioxide, as
-shown in Figure~\ref{fig-rhodamine-silicon-dioxide}. The PEGlyated
+the interaction between pyrene linker and the SiO\(_2\) substrate. This
+interaction meant it was difficult to discern whether the pyrene group
+was interacting in a specific manner with the channel film. It was
+confirmed that pyrene-PEG was interacting with SiO\(_2\), rather than
+residual photoresist or nanomaterial, by performing a
+pyrene-PEG-rhodamine functionalisation on pristine SiO\(_2\), as shown
+in Figure~\ref{fig-silicon-dioxide-interaction} (c). The PEGlyated
 linker supplier suggested that the surface should be thoroughly rinsed
 with surfactant to remove weakly-bound pyrene-PEG-FITC attached to the
-silicon dioxide, while preserving the pyrene-PEG-FITC strongly attached
-via \(\pi\)-stacking to the graphene or carbon nanotube film
-{[}@CreativePEGworks2022{]}. The following process was then used to
-remove pyrene-PEG-FITC from the silicon dioxide: the film was rinsed
-with DI water for 30 s, then placed in m-CNT dispersion solution
-(NanoIntegris) for 5 minutes at 70°C while agitating with a pipette, and
-finally rinsed with DI water, ethanol, acetone, IPA and nitrogen dried.
-The results of this thorough cleaning process are shown in
-Figure~\ref{fig-PPF-PBS-20X} and Figure~\ref{fig-PPF-PBS-40X}. The
-majority of pyrene-PEG-FITC was removed in regions with no graphene, but
-remained where graphene was present, indicating specific,
-\(\pi\)-stacking interaction took place between the pyrene-PEG-FITC and
-graphene. However, this surfactant rinse step was not used when
-performing functionalisation with biological materials, to prevent
-damage to the lipid membranes used.
-
-\hypertarget{sec-coffee-ring}{%
-\subsubsection{Coffee-Ring Effect}\label{sec-coffee-ring}}
+SiO\(_2\), while preserving the pyrene-PEG-FITC strongly attached via
+pi-stacking to the graphene or carbon nanotube film
+{[}@CreativePEGworks2022{]}. A novel process was then developed to
+remove pyrene-PEG-FITC from the SiO\(_2\). The film was rinsed with DI
+water for 30 s, placed in m-CNT dispersion solution (NanoIntegris) for 5
+minutes at 70 °C while agitating with a pipette, and finally rinsed with
+DI water, ethanol, acetone, IPA and nitrogen dried. A the graphene
+region before cleaning is shown in
+Figure~\ref{fig-silicon-dioxide-interaction} (d), while the results of
+cleaning are shown in Figure~\ref{fig-silicon-dioxide-interaction} (e)
+and Figure~\ref{fig-silicon-dioxide-interaction} (f). The majority of
+pyrene-PEG-FITC was removed in regions with no graphene, but remained
+where graphene was present, indicating specific, pi-stacking interaction
+took place between the pyrene-PEG-FITC and graphene. However, this
+surfactant rinse step was not used when performing functionalisation
+with biological materials, to prevent damage to the lipid membranes
+used.
 
 \begin{figure}
 
-\begin{minipage}[t]{0.47\linewidth}
+\begin{minipage}[t]{0.03\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/modified_GFPNi2+1_5sexposure_12.6X_mediumcontrast_18_230324.png}
+\includegraphics{figures/(a).png}
 
 }
 
 }
 
-\subcaption{\label{fig-GFP-coffee-ring-1}}
 \end{minipage}%
 %
-\begin{minipage}[t]{0.05\linewidth}
+\begin{minipage}[t]{0.01\linewidth}
 
 {\centering 
 
@@ -1689,86 +2046,326 @@ damage to the lipid membranes used.
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.47\linewidth}
+\begin{minipage}[t]{0.45\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/modified_GFPNi2+1_5sexposure_12.6X_mediumcontrast_20_230324.png}
+\includegraphics{figures/ch6/modified_NGW8D9_edgechannel_post10min50Cacetonerinse_221109.png}
 
 }
 
 }
 
-\subcaption{\label{fig-GFP-coffee-ring-2}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(b).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/modified_NGW8D7_edgechannel_lowerexposuretime_221108.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(c).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/modified_SiO2_1mMPPR_2_221109.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(d).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/modified_NGW6D4_PyPEGFITC_channel2_1.6sexposure_10X_221122.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+\newline
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(e).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/modified_NGW6D7_PyPEGFITC_channel3top_postmsurfclean_7.5sexposure_20X_221123.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.03\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/(f).png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.45\linewidth}
+
+{\centering 
+
+\raisebox{-\height}{
+
+\includegraphics{figures/ch6/modified_NGW6D7_PyPEGFITC_channel1_postmsurfclean_7.75sexposure_40X_221123.png}
+
+}
+
+}
+
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
 \end{minipage}%
 
-\caption{\label{fig-GFP-coffee-ring}Both (a) and (b) show a build-up of
-his-tag GFP at the edges of the droplet region where pyrene-PEG-NTA had
-been present, taken using an GFP filter and a 5 s exposure time. On the
-right hand side of (b), no his-tag GFP is visible on the metal
-electrode, as no pyrene-PEG attaches to the metal electrodes.}
+\caption[Fluorescence images of a 1000 µm \(\times\) 100 µm graphene
+channel, showing the effects of oxygen plasma cleaning and surfactant
+rinsing on fluorescent linker
+functionalisation.]{\label{fig-silicon-dioxide-interaction}Fluorescence
+images of a 1000 µm \(\times\) 100 µm graphene channel. (a) was not
+oxygen plasma cleaned before functionalisation with pyrene-PEG-rhodamine
+(PPR), while (b) was oxygen plasma cleaned immediately before PPR
+functionalisation. Insets show a water droplet on an unencapsulated
+device before (a) and after (b) being treated with O\(_2\) plasma; (c)
+shows a pristine SiO\(_2\) surface after PPR exposure. (a), (b) and (c)
+were taken using a Texas Red filter and a 1.8 s exposure time. (d) was
+functionalised with 1 mM PPF in PBS after oxygen plasma treatment, while
+(e) and (f) were functionalised with 1 mM PPF after oxygen plasma
+treatment, then cleaned with surfactant (m-CNT surfactant,
+NanoIntegris). (d), (e) and (f) were taken using an FITC filter, with
+1.6 s, 7.5 s and 7.75 s exposure times respectively.}
 
 \end{figure}
 
-From Table~\ref{tbl-pbase-functionalisation}, full device submersion
+\hypertarget{sec-coffee-ring}{%
+\subsubsection{Coffee-Ring Effect}\label{sec-coffee-ring}}
+
+From \textbf{?@tbl-pbase-functionalisation}, full device submersion
 appears to be the most common approach for functionalisation with
 solution containing linker molecules like PBASE. However, some groups
 placed small droplets of solution onto the device channels when
 functionalisation, and this approach was tested as part of the
 fluorescence verification work. For functionalisation with his-tagged
 green fluorescent protein, after plasma cleaning at 5 W for 15 s at 300
-mTorr, a 4 \(\mu\)L droplet of 100\(\mu\)M pyrene-PEG-NTA in 1XPBS was
+mTorr, a 4 µL droplet of 100 µM pyrene-PEG-NTA in \(1 \times\) PBS was
 placed on each graphene device channel and left covered in a humid
-environment for 15 minutes. The device was then rinsed with 1XPBS,
-submerged in 10 mM NiSO\(_4\) in 1XPBS for 1 hour, rinsed in 1XPBS, then
-submerged in 10 mL of 100 ng/mL his-tag GFP solution (Thermofisher)
-overnight. Fluorescence microscope imaging showed that a ring of
-biomaterial would build up around the outer edge of regions where
-pyrene-PEG-NTA had been present, as seen in
+environment for 15 minutes. The device was then rinsed with \(1 \times\)
+PBS, submerged in 10 mM NiSO\(_4\) in \(1 \times\) PBS for 1 hour,
+rinsed in \(1 \times\) PBS, then submerged in 10 mL of 100 ng/mL his-tag
+GFP solution (Thermofisher) overnight. Fluorescence microscope imaging
+showed that a ring of biomaterial would build up around the outer edge
+of regions where pyrene-PEG-NTA had been present, as seen in
 Figure~\ref{fig-GFP-coffee-ring}.
-
-It appears this is a result of the his-tag GFP attaching to a dense
-region of pyrene-PEG-NTA at the edge of the functionalisation droplet.
-This accretion of pyrene-PEG-NTA at the edge of the droplet is a result
-of the coffee-ring effect, where the evaporation of the droplet leads to
-transport of particles to the droplet edges via capillary flow
-{[}@Deegan1997; @Shimobayashi2018{]}. As this gradient in surface
-coverage of attached proteins has unknown consequences for sensing, in
-subsequent sections devices were functionalised with PBASE or
-pyrene-PEG-NTA by submerging them in solution instead of dropcasting.
-
-\hypertarget{sec-linker-receptor-attachment}{%
-\subsection{Verifying Linker-OR Nanodisc Attachment with Fluorescence
-Microscopy}\label{sec-linker-receptor-attachment}}
-
-To verify the formation of amide (or imide) bonds between PBASE and the
-odorant receptors (ORs) contained within nanodiscs, a fluorescent
-biomarker was directly attached to the odorant receptors for detection
-with fluorescence microscopy. The biomarker used was the \emph{Aequorea
-Victoria} green fluorescent protein (GFP). As far as I know, this is the
-first time fluorescence has been used to verify the successful
-attachment of odorant receptor nanodiscs to a carbon nanotube network.
 
 \begin{figure}
 
-\begin{minipage}[t]{0.47\linewidth}
+\begin{minipage}[t]{0.03\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/modified_GFPOR_10sexposure_20X_mediumcontrast_ch6_240208.png}
+\includegraphics{figures/(a).png}
 
 }
 
 }
 
-\subcaption{\label{fig-GFP-OR-ch6-zoom}}
 \end{minipage}%
 %
-\begin{minipage}[t]{0.05\linewidth}
+\begin{minipage}[t]{0.01\linewidth}
 
 {\centering 
 
@@ -1778,37 +2375,21 @@ attachment of odorant receptor nanodiscs to a carbon nanotube network.
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.47\linewidth}
+\begin{minipage}[t]{0.45\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/modified_GFPOR_PBASE_10sexposure_20X_mediumcontrast_ch1_231019_2.png}
+\includegraphics{figures/ch6/modified_GFPNi2+1_5sexposure_12.6X_mediumcontrast_18_230324.png}
 
 }
 
 }
 
-\subcaption{\label{fig-PBASE-GFP-OR-ch1-zoom}}
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/modified_GFPOR_10sexposure_40X_mediumcontrast_ch6_240208.png}
-
-}
-
-}
-
-\subcaption{\label{fig-GFP-OR-ch6}}
 \end{minipage}%
 %
-\begin{minipage}[t]{0.05\linewidth}
+\begin{minipage}[t]{0.01\linewidth}
 
 {\centering 
 
@@ -1818,37 +2399,21 @@ attachment of odorant receptor nanodiscs to a carbon nanotube network.
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.47\linewidth}
+\begin{minipage}[t]{0.03\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/modified_GFPOR_PBASE_10sexposure_40X_mediumcontrast_ch1_231019_2.png}
+\includegraphics{figures/(b).png}
 
 }
 
 }
 
-\subcaption{\label{fig-PBASE-GFP-OR-ch1}}
-\end{minipage}%
-\newline
-\begin{minipage}[t]{0.47\linewidth}
-
-{\centering 
-
-\raisebox{-\height}{
-
-\includegraphics{figures/ch7/modified_GFPOR_10sexposure_40X_mediumcontrast_ch3_240208.png}
-
-}
-
-}
-
-\subcaption{\label{fig-GFP-OR-ch3}}
 \end{minipage}%
 %
-\begin{minipage}[t]{0.05\linewidth}
+\begin{minipage}[t]{0.01\linewidth}
 
 {\centering 
 
@@ -1858,132 +2423,58 @@ attachment of odorant receptor nanodiscs to a carbon nanotube network.
 
 \end{minipage}%
 %
-\begin{minipage}[t]{0.47\linewidth}
+\begin{minipage}[t]{0.45\linewidth}
 
 {\centering 
 
 \raisebox{-\height}{
 
-\includegraphics{figures/ch7/modified_GFPOR_PBASE_10sexposure_40X_mediumcontrast_ch2_231019.png}
+\includegraphics{figures/ch6/modified_GFPNi2+1_5sexposure_12.6X_mediumcontrast_20_230324.png}
 
 }
 
 }
 
-\subcaption{\label{fig-PBASE-GFP-OR-ch2}}
+\end{minipage}%
+%
+\begin{minipage}[t]{0.01\linewidth}
+
+{\centering 
+
+~
+
+}
+
 \end{minipage}%
 
-\caption{\label{fig-PBASE-GFP-ORs}The fluorescence images on the left
-side \(-\) (a), (c) and (e) \(-\) show unencapsulated carbon nanotube
-network channels from a device incubated in GFP-OR43b nanodiscs. The
-fluorescence images on the right \(-\) (b), (d) and (f) \(-\) show the
-channels of a similar device after successive PBASE and GFP-OR43b
-nanodisc incubation. Images (a) and (c) are both of the same channel on
-the first device, and images (b) and (d) are of the same channel on the
-second, but (c) and (d) were taken using a greater magnification. The
-insets in (c)-(f) compare the central channel region of (c)-(f) more
-directly. All images were taken using the same microscope settings, with
-a GFP filter and a 10 s exposure time.}
+\caption[Fluorescence images showing the impact of the coffee-ring
+effect on the surface distribution of fluorescent protein across a
+carbon nanotube network device
+post-functionalisation.]{\label{fig-GFP-coffee-ring}Both (a) and (b)
+show a build-up of his-tag GFP at the edges of the droplet region where
+pyrene-PEG-NTA had been present, taken using an GFP filter and a 5 s
+exposure time. On the right hand side of (b), no his-tag GFP is visible
+on the metal electrode, as no pyrene-PEG attaches to the metal
+electrodes.}
 
 \end{figure}
 
-The functionalisation of unencapsulated carbon nanotube devices
-(steam-deposited, fabricated using post-June 2023 methods outlined in
-\textbf{?@sec-fabrication}) with PBASE and GFP-OR nanodiscs was
-performed as follows:
-
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\item
-  The device was exposed to UV light for 1 minute, placed in
-  AZ\(^\circledR\) 326 developer for 3 minutes, then rinsed with
-  acetone, isopropanol and nitrogen dried.
-\item
-  The device was vacuum annealed for 1 hour at 150°C (Note: Steps 1 \& 2
-  were added to ensure any residual photoresist on the channel was
-  removed or passivated before functionalisation, see
-  Section~\ref{sec-photoresist-contamination}).
-\item
-  A solution of 1 mM PBASE (Setareh Biotech) in methanol prepared by
-  fully dissolving 2 mg PBASE in 5 mL methanol by vortex mixing at 1000
-  rpm in a dark room (Note: PBASE was stored at -18°C for 18 months
-  prior to use, and was thawed under vacuum for 15 minutes in dark
-  conditions before opening)
-\item
-  The device was then rinsed with methanol, fully submerged in \(\sim\)
-  1 mL of PBASE in methanol solution and left covered with parafilm for
-  1 hour, then rinsed with methanol for 15 s, rinsed with 1XPBS for 15 s
-  and nitrogen dried to remove residual PBASE.
-\item
-  The device was left dry and in darkness while collecting the GFP-OR
-  nanodiscs from the -80°C freezer.
-\item
-  20 \(\mu\)L GFP-OR nanodiscs (batch number ND-GFP-OR43b-0002, prepared
-  12 months earlier) were diluted in 2 mL 1XPBS (Note: The full 2 mL was
-  used to flush out the nanodisc vial when preparing the nanodisc
-  solution, with successive additions and subtractions of 50 \(\mu\)L
-  1XPBS into and from the vial).
-\item
-  The device was submerged in the GFP-OR43b nanodisc solution and left
-  covered with parafilm for 1 hour, then rinsed with 1XPBS for 15 s.
-\item
-  For fluorescence microscopy, the device was briefly rinsed with DI
-  water and nitrogen dried to remove dried-down salt residue left by the
-  1XPBS.
-\item
-  Fluorescence microscope images were taken immediately after
-  functionalisation; devices were transported to the fluorescence
-  microscope room in a foil-wrapped container, and the fluorescence
-  microscope room was kept dark while images were taken.
-\end{enumerate}
-
-A control device was prepared using the same process but skipping steps
-3 and 4. Fluorescence images of both devices are shown in
-Figure~\ref{fig-PBASE-GFP-ORs}. All fluorescence images were taken of
-channels with a measured resistance within a 50-500 k\(\Omega\) range
-both before and after functionalisation.
-
-As mentioned in \textbf{?@sec-fluorescence-characterisation}, the
-rectangular dark regions to the left and right of each image are the
-gold electrodes. The silicon dioxide regions in each image appear bright
-under the GFP filter, indicating non-specific binding between the
-GFP-OR43b nanodiscs and the silicon dioxide substrate. As this device
-has been annealed, UV exposed and developed before functionalisation,
-this non-specific attachment is unlikely to be interaction with residual
-photoresist (see Section~\ref{sec-photoresist-contamination}). The
-SiO\(_2\) substrate also appears brighter in the images on the right of
-Figure~\ref{fig-PBASE-GFP-ORs}, which are of the device initially
-exposed to PBASE. The discussion in
-Section~\ref{sec-pyrene-interactions} indicates that the pyrene moiety
-of PBASE may non-specifically interact with the silicon dioxide
-substrate, therefore, the SiO\(_2\) substrate may have had a coating of
-attached PBASE when the device on the right of
-Figure~\ref{fig-PBASE-GFP-ORs} was submerged in the GFP-OR43b nanodiscs.
-The attachment of GFP-OR43b nanodiscs to this PBASE coating may have
-been more extensive than direct attachment of GFP-OR43b nanodiscs to the
-silicon dioxide, which led to brighter fluorescence of the modified
-silicon dioxide for the PBASE-incubated device.
-
-A comparison of fluorescence in the channel region between images on the
-left of Figure~\ref{fig-PBASE-GFP-ORs} (GFP-OR43b only) and the images
-on the right (GFP-OR43b and PBASE) is given by the inset in
-Figure~\ref{fig-GFP-OR-ch6}-f.~The inset demonstrates that the channels
-not incubated in PBASE are significantly less bright than those that had
-been incubated with PBASE. It appears that, as expected from the
-discussion in Section~\ref{sec-hydrophobicity}, the GFP-OR43b in 1XPBS
-is unable to approach the unmodified channel due to the hydrophobicity
-of the carbon nanotubes. However, when the carbon nanotubes are modified
-with PBASE, the GFP-OR43b is able to attach to the channel, and so the
-channel shows up brightly under the fluorescence microscope GFP filter.
-This trend was consistent across all conducting channels on each of the
-two devices.
+It appears this non-specific binding is a result of the his-tag GFP
+attaching to a dense region of pyrene-PEG-NTA at the edge of the
+functionalisation droplet. This accretion of pyrene-PEG-NTA at the edge
+of the droplet is a result of the coffee-ring effect, where the
+evaporation of the droplet leads to transport of particles to the
+droplet edges via capillary flow {[}@Deegan1997; @Shimobayashi2018{]}.
+As this gradient in surface coverage of attached proteins has unknown
+consequences for sensing, in the subsequent chapter devices were always
+functionalised by submerging them in solution instead of dropcasting.
 
 \hypertarget{sec-conclusion}{%
 \subsection{Conclusion}\label{sec-conclusion}}
 
-It has been well-established in the literature that the \(\pi\)-stacking
-reaction mechanism between pyrene-based linkers and graphene and carbon
-nanotube network field-effect transistors can be used to create working
+It has been established in the literature that the pi-stacking reaction
+mechanism between pyrene-based linkers and graphene and carbon nanotube
+network field-effect transistors can be used to create working
 biosensors. The previous use of various linker molecules for biosensor
 functionalisation was investigated. Despite the wide use of
 1-pyrenebutanoic acid N-hydroxysuccinimide ester (PBASE) and
@@ -2002,32 +2493,31 @@ several steps were taken to identify a rapid and simple method for
 verifying successful functionalisation, and to locate any potential
 barriers to a successful functionalisation.
 
-I first compared the advantages and disadvantages of the various linker
-molecules under investigation. The use of hydrogen NMR gave indications
-that water was present in PBASE samples prepared in DMSO. Concerns
-around the impact of the hydrolysis of PBASE on functionalisation mean
-that the presence of water is strongly undesirable. An alternative
-functionalisation approach less prone to hydrolysis is the reaction of
-PBA with EDC in the presence of NHS. However, this process has its own
-disadvantages, such as undesirable protein interactions and the
-increased amount of steps and process variables involved. Pyrene-NTA is
-also less prone to hydrolysis than PBASE but unlike PBASE or PBA/EDC
-interacts with a specific protein tag, the histidine tag. PEGlyation of
-the pyrene-NTA linker also means that the entire functionalisation
-process can be performed in aqueous solution, avoiding the introduction
-of non-organic solvents. This approach is desirable, since the
-non-aqueous solvents traditionally used for functionalisation may have
-negative impacts on device behaviour. For example, carbon nanotube
-device channel transfer characteristics were found to undergo a
-significant shift of \(\Delta V = -0.15 \pm 0.02\) when exposed to DMSO
-or MeOH for 1 hour.
+The advantages and disadvantages of these linker molecules were first
+compared. Hydrogen NMR indicated that water was present in PBASE samples
+prepared in DMSO. The potential for PBASE to hydrolyse during
+functionalisation means that the presence of water is strongly
+undesirable. The reaction of PBA with EDC in the presence of NHS is an
+alternative functionalisation approach which is less prone to
+hydrolysis. However, this process has its own disadvantages, such as
+undesirable protein interactions and the increased amount of steps and
+process variables involved. Pyrene-NTA is also less prone to hydrolysis
+than PBASE, but unlike PBASE or PBA/EDC, interacts with a specific
+protein tag (his-tag). PEGlyation of the pyrene-NTA linker also means
+that the entire functionalisation process can be performed in aqueous
+solution, avoiding the introduction of non-organic solvents. This
+approach is desirable, since the non-aqueous solvents traditionally used
+for functionalisation may have negative impacts on device behaviour. For
+example, carbon nanotube device channel transfer characteristics were
+found to undergo a significant shift of \(\Delta V = -0.15 \pm 0.02\) V
+when exposed to DMSO or MeOH for 1 hour.
 
-Next, I verified that the pyrene groups of the linker molecules of
+Next, it was verified that the pyrene groups of the linker molecules of
 interest were attaching successfully to either carbon nanotubes or
 graphene. Raman spectroscopy showed that incubating a highly-bundled
 carbon nanotube film in 5 mM PBASE or PBA in DMSO for 1 hour increased
-I\(_D\)/I\(_G\) by a factor of \(\sim 3\) relative to the DMSO-only
-case. Incubating a steam-deposited carbon nanotube device in a 1 mM
+\(I_D/I_G\) by a factor of \(\sim 3\) relative to the DMSO-only case.
+Incubating a steam-deposited carbon nanotube device in a 1 mM
 concentration of PBASE in methanol or DMSO for 1 hour was found to cause
 a significant increase in device on-current relative to the solvent-only
 case, and a similar increase in on-current was seen for 5 mM PBA in DMSO
@@ -2039,27 +2529,16 @@ using an attached FITC probe, where immersing a graphene film in 1 mM
 pyrene-PEG in ethanol led to the channels becoming brightly fluorescent
 relative to the background using a 1 s exposure time.
 
-Various obstacles to successful functionalisation were encountered and
-addressed. Photoresist contamination was addressed with exposure and
-development steps before functionalisation (no exposure for SU8
-encapsulated devices). Hydrophobicity of graphene films was addressed by
+Various obstacles to successful functionalisation were also encountered
+and addressed using fluorescence microscopy. Photoresist contamination
+was addressed with exposure and development steps before
+functionalisation, with the exposure skipped for negative-resist
+encapsulated devices. Hydrophobicity of graphene films was addressed by
 plasma treatment before functionalisation in aqueous solution. A
 surfactant rinse was used to distinguish between weak substrate-linker
-interaction and \(\pi\)-stacking between linker and the channel.
-Finally, coffee-ring distribution of linker was addressed by always
+interaction and pi-stacking between linker and the channel. Finally,
+coffee-ring distribution of linker was addressed by always fully
 submerging the device in linker when functionalising.
-
-Finally, fluorescence microscopy was used to investigate PBASE
-functionalisation of GFP-tagged odorant receptors. An eight-channel
-device was modified by submersion in 1 mM PBASE in methanol for 1 hour,
-then submersion in 10 \(\mu\)L mL\(^{-1}\) OR43b nanodiscs in 1XPBS for
-1 hour. An eight-channel control device was also prepared by submersion
-in 10 \(\mu\)L mL\(^{-1}\) OR43b nanodiscs in 1XPBS for 1 hour, but with
-no PBASE. The channels of the PBASE-submersed devices showed significant
-GFP fluorescence, while the channels of the control devices showed
-little to no GFP fluorescence. As far as I am aware, this is the first
-time fluorescence has been used to verify successful attachment of
-odorant receptors to a carbon nanotube network.
 
 
 
