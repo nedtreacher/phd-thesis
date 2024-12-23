@@ -92,7 +92,9 @@ Two LabView Virtual Instruments (VIs) were adapted from pre-existing VIs for ope
 
 ### Initial Design
 
-The initial design of the vapour delivery system was relatively simple. No reference sensors were included in the setup, and only one channel could be characterised without opening the chamber and changing the position of the device. However, as constructed it worked well as a self-contained system, which was able to deliver vapour to a device channel while measuring current across the channel. A 500 sccm full-range MFC (Tylan) was placed on the dilution line, and a 200 sccm full-range MFC (Tylan) was placed on the carrier line. A glass container for analyte was present on the carrier line, with a vapour trap upstream to collect any backflow. The vapour trap was removed in later iterations due to the presence of a check valve to prevent backflow. The device chamber and mass flow controllers were connected to a laptop and an Agilent 4156C semiconductor parameter analyser and controlled using LabView.
+The initial design of the vapour delivery system, as shown in @fig-stage-0-pid, was relatively simple. No reference sensors were included in the setup, and only one channel could be characterised without opening the chamber and changing the position of the device. However, as constructed it worked well as a self-contained system, which was able to deliver vapour to a device channel while measuring current across the channel. A 500 sccm full-range MFC (Tylan) was placed on the dilution line, and a 200 sccm full-range MFC (Tylan) was placed on the carrier line. A glass container for analyte was present on the carrier line, with a vapour trap upstream to collect any backflow. The vapour trap was removed in later iterations due to the presence of a check valve to prevent backflow. The device chamber and mass flow controllers were connected to a laptop and an Agilent 4156C semiconductor parameter analyser and controlled using LabView.
+
+![Process & instrumentation diagram (P&ID) of the original vapour delivery system.](figures/ch8/PID_V0.png){#fig-stage-0-pid fig-scap="Process & instrumentation diagram (P&ID) of the original vapour delivery system." width="60%"}
 
 ### Stage I Design {#sec-vapour-system-design-1}
 
@@ -106,7 +108,7 @@ The first stage of the vapour delivery system redesign, as shown in @fig-stage-1
 
 -   There was no way to ensure the device chamber was free of analyte vapour before an experimental run aside from running nitrogen through the dilution line. After prolonged use, condensed analyte was sometimes visible in the PVC lines of the delivery system.
 
-![Process & instrumentation diagram (P&ID) of Stage I of the vapour delivery system.](figures/ch8/PID_V1.png){#fig-stage-1-pid fig-scap="P&ID of Stage I of the vapour delivery system." width="100%"}
+![P&ID of Stage I of the vapour delivery system.](figures/ch8/PID_V1.png){#fig-stage-1-pid fig-scap="P&ID of Stage I of the vapour delivery system." width="100%"}
 
 These issues, along with various minor structural and design issues, were addressed in the second-stage implementation of the system.
 

@@ -320,7 +320,7 @@ I chose to start my doctoral studies just a few months into a global pandemic. C
 
 \pagestyle{headings}
 
-\end{spacing}\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[breakable, frame hidden, sharp corners, enhanced, boxrule=0pt, interior hidden, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
+\end{spacing}\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, frame hidden, sharp corners, boxrule=0pt, enhanced, breakable, borderline west={3pt}{0pt}{shadecolor}]}{\end{tcolorbox}}\fi
 
 \begin{spacing}{1.2}
 
@@ -12154,11 +12154,7 @@ a carbon nanotube or graphene channel is 1-pyrenebutyric acid (PBA or
 PyBA). The pyrene group in PBA also undergoes pi-stacking with the
 channel surface. PBA can be reacted with
 1-ethyl-3-(3-dimethylaminopropyl) carbodiimide hydrochloride (EDC or
-EDAC) to form an \emph{O}-acylisourea intermediate, which then reacts
-with an amine group on a biomolecule to form an amide or imide bond
-\autocite{Sehgal1994,Hermanson2013-4}. The water solubility of EDC means
-that, unlike PBASE, it is possible to functionalise with EDC dissolved
-in water rather than in an organic solvent.
+EDAC) to form an \emph{O}-acylisourea intermediate.
 
 \newgeometry{a4paper,centering=true,right=1.5in,headsep=44.95pt,footskip=23pt}
 \begin{landscape}
@@ -12209,15 +12205,20 @@ DMSO & Graphene & 5 & 1 & 50 & 50 & - & 90 & Fenzl, 2017.
 \end{landscape}
 \restoregeometry % Restore the global document page margins
 
-However, like PBASE, EDC and the \emph{O}-acylisourea intermediate are
-prone to hydrolysis, especially in acidic conditions. It should
-therefore be stored at \(-20\) °C, and warmed to room temperature to
-prevent condensation build-up, since exposure to condensation will
-hydrolyse the reagent \autocite{Hermanson2013-4}. Furthermore, by adding
-N-hydroxysuccinimide (NHS) or N-hydroxysulfosuccinimide (Sulfo-NHS or
-NHSS) to the reaction vessel, PBASE is formed as an active intermediate,
-which is less prone to hydrolysis and increases the PBA/EDC reaction
-yield \autocite{Sehgal1994,Hermanson2013-4,Hermanson2013-14}.
+The \emph{O}-acylisourea intermediate then reacts with an amine group on
+a biomolecule to form an amide or imide bond
+\autocite{Sehgal1994,Hermanson2013-4}. The water solubility of EDC means
+that, unlike PBASE, it is possible to functionalise with EDC dissolved
+in water rather than in an organic solvent. However, like PBASE, EDC and
+the \emph{O}-acylisourea intermediate are prone to hydrolysis,
+especially in acidic conditions. It should therefore be stored at
+\(-20\) °C, and warmed to room temperature to prevent condensation
+build-up, since exposure to condensation will hydrolyse the reagent
+\autocite{Hermanson2013-4}. Furthermore, by adding N-hydroxysuccinimide
+(NHS) or N-hydroxysulfosuccinimide (Sulfo-NHS or NHSS) to the reaction
+vessel, PBASE is formed as an active intermediate, which is less prone
+to hydrolysis and increases the PBA/EDC reaction yield
+\autocite{Sehgal1994,Hermanson2013-4,Hermanson2013-14}.
 
 To the best of my knowledge, a full comparison of functionalisation
 procedures used for linking carbon nanotube and graphene devices to
@@ -16821,7 +16822,9 @@ transfer characteristics showing Dirac point voltage before and after
 OR22a nanodisc functionalisation, where (a) was functionalised using the
 standard method while (b) was functionalised without submerging the
 device in PBASE and methanol. Source-drain voltage was V\(_{ds}\) = 100
-mV for both forward and reverse sweeps.}
+mV for both forward and reverse sweeps. The change in Dirac point gate
+voltage from before to after functionalisation is shown alongside each
+set of characteristics.}
 
 \end{figure}
 
@@ -17119,10 +17122,11 @@ network device transfer characteristics before and after OR22a nanodisc
 functionalisation using PBASE in DMSO. Source-drain voltage was
 \(V_{ds}\) = 100 mV for both the forward and reverse sweep. Each
 subfigure (a)-(d) corresponds to a different channel of the
-functionalised device (channels \(1-4\) respectively). The dashed line
-shown is tangent to the subthreshold slope of the forward sweep of the
-characteristic curve. The threshold voltage associated with each curve
-is also shown.}
+functionalised device, where (a) corresponds to channel 1, (b)
+corresponds to channel 2, (c) corresponds to channel 3, and (d)
+corresponds to channel 4. The dashed line shown is tangent to the
+subthreshold slope of the forward sweep of the characteristic curve. The
+threshold voltage associated with each curve is also shown.}
 
 \end{figure}
 
@@ -17529,7 +17533,14 @@ selected, as in Figure~\ref{fig-DMSO-AFM-comparison} (f), highly
 clustered nanodisc features with the appearance of pearls on a string
 are again visible. The transfer characteristics of each channel before
 and after functionalisation are shown in Figure~\ref{fig-EDCNHS-TX},
-where an average threshold shift of \(-0.12 \pm 0.01\) V is observed.
+where an average threshold shift of \(-0.12 \pm 0.01\) V is observed. In
+Section~\ref{sec-PBA-characterisation}, the threshold shift for PBA
+attachment in DMSO was \(-0.15\) V. The difference between these two
+values is not large enough to convincingly conclude whether nanodiscs
+have attached via PBASE or not. It therefore appears that the problem
+identified with variability in device behaviour in
+Section~\ref{sec-variability-biosensor} is not resolved by the use of a
+different solvent or by steps to prevent PBASE hydrolysis.
 
 \begin{figure}
 
@@ -17642,14 +17653,6 @@ characteristic curve, with threshold voltage shown alongside each
 transfer curve.}
 
 \end{figure}
-
-In Section~\ref{sec-PBA-characterisation}, the threshold shift for PBA
-attachment in DMSO was \(-0.15\) V. The difference between these two
-values is not large enough to convincingly conclude whether nanodiscs
-have attached via PBASE or not. It therefore appears that the problem
-identified with variability in device behaviour in
-Section~\ref{sec-variability-biosensor} is not resolved by the use of a
-different solvent or by steps to prevent PBASE hydrolysis.
 
 From this elimination process, three possible sources of variability in
 device performance due to nanoscale surface contamination remain. The
