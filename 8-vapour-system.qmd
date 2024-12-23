@@ -86,7 +86,7 @@ Images of the vapour delivery control system circuit board, where (a) shows the 
 
 ![Circuit board schematic for controlling and monitoring both the mass flow controllers and the relative humidity and temperature sensor. Resistors R1-R6 are all 10 kilo-ohm, while R7-R8 are both 0 ohm. The circuit board was designed using the KiCad Layout Editor.](figures/ch8/current_PCB.png){#fig-current-pcb-design fig-scap="Circuit board schematic for controlling and monitoring both the mass flow controllers and the relative humidity and temperature sensor." width="95%"}
 
-Two LabView Virtual Instruments (VIs) were adapted from pre-existing VIs for operating the mass flow controllers and monitoring vapour flow into the device chamber, as well as monitoring temperature and humidity in the vapour delivery system's manifold. These VIs were named "vapour-sensor-basic.vi" and "temp-and-humidity-basic.vi". A third VI was developed in parallel which combined the first two Virtual Instruments and allowed the user to set a sequence of values for the output flow from the mass flow controllers before an experimental run. This VI was named "vapour-sensor-sequence-timestamped.vi". Flow rate, relative humidity and temperature data were then saved as .lvm files. The LabView VIs described here are available on request. The data collected from the photoionisation detector and from the mass flow controllers was processed using the code described in @sec-vapour-delivery-analysis.
+Two LabView Virtual Instruments (VIs) were adapted from pre-existing VIs for operating the mass flow controllers and monitoring vapour flow into the device chamber, as well as monitoring temperature and humidity in the vapour delivery system's manifold. These VIs were named "vapour-sensor-basic.vi" and "temp-and-humidity-basic.vi". A third VI was developed in parallel which combined the first two Virtual Instruments and allowed the user to set a sequence of values for the output flow from the mass flow controllers before an experimental run. This VI was named "vapour-sensor-sequence-timestamped.vi". Flow rate, relative humidity and temperature data were then saved as .lvm files. The data collected from the photoionisation detector and from the mass flow controllers was processed using the code described in @sec-vapour-delivery-analysis.
 
 ## Design {#sec-vapour-system-design}
 
@@ -94,7 +94,7 @@ Two LabView Virtual Instruments (VIs) were adapted from pre-existing VIs for ope
 
 The initial design of the vapour delivery system, as shown in @fig-stage-0-pid, was relatively simple. No reference sensors were included in the setup, and only one channel could be characterised without opening the chamber and changing the position of the device. However, as constructed it worked well as a self-contained system, which was able to deliver vapour to a device channel while measuring current across the channel. A 500 sccm full-range MFC (Tylan) was placed on the dilution line, and a 200 sccm full-range MFC (Tylan) was placed on the carrier line. A glass container for analyte was present on the carrier line, with a vapour trap upstream to collect any backflow. The vapour trap was removed in later iterations due to the presence of a check valve to prevent backflow. The device chamber and mass flow controllers were connected to a laptop and an Agilent 4156C semiconductor parameter analyser and controlled using LabView.
 
-![Process & instrumentation diagram (P&ID) of the original vapour delivery system.](figures/ch8/PID_V0.png){#fig-stage-0-pid fig-scap="Process & instrumentation diagram (P&ID) of the original vapour delivery system." width="60%"}
+![Process & instrumentation diagram (P&ID) of the original vapour delivery system.](figures/ch8/PID_V0.png){#fig-stage-0-pid fig-scap="Process & instrumentation diagram (P&ID) of the original vapour delivery system." width="80%"}
 
 ### Stage I Design {#sec-vapour-system-design-1}
 
@@ -108,7 +108,7 @@ The first stage of the vapour delivery system redesign, as shown in @fig-stage-1
 
 -   There was no way to ensure the device chamber was free of analyte vapour before an experimental run aside from running nitrogen through the dilution line. After prolonged use, condensed analyte was sometimes visible in the PVC lines of the delivery system.
 
-![P&ID of Stage I of the vapour delivery system.](figures/ch8/PID_V1.png){#fig-stage-1-pid fig-scap="P&ID of Stage I of the vapour delivery system." width="100%"}
+![P&ID of Stage I of the vapour delivery system.](figures/ch8/PID_V1.png){#fig-stage-1-pid fig-scap="P&ID of Stage I of the vapour delivery system." width="95%"}
 
 These issues, along with various minor structural and design issues, were addressed in the second-stage implementation of the system.
 
@@ -116,7 +116,7 @@ These issues, along with various minor structural and design issues, were addres
 
 @fig-stage-2-pid gives an overview of the second-stage design for the vapour delivery system setup. This stage of the redesign was implemented between Jan and May 2022. Changes from the first stage included:
 
-![P&ID of the second-stage design for the vapour delivery system. Red outlines indicate additions introduced to the system subsequent to the first stage design.](figures/ch8/PID_V2.png){#fig-stage-2-pid fig-scap="P&ID of Stage II of the vapour delivery system." width="100%"}
+![P&ID of the second-stage design for the vapour delivery system. Red outlines indicate additions introduced to the system subsequent to the first stage design.](figures/ch8/PID_V2.png){#fig-stage-2-pid fig-scap="P&ID of Stage II of the vapour delivery system." width="95%"}
 
 -   The addition of a N$_2$ cylinder (152D size) as the source of nitrogen for the system to replace the lab supply.
 
