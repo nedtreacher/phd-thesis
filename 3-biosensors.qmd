@@ -1,3 +1,9 @@
+---
+keep-tex: true
+format: pdf
+linestretch: 1.2
+---
+
 # Biosensing with Insect Odorant Receptors {#sec-iOR-sensors}
 
 ## Introduction {#sec-biosensing-transducers}
@@ -34,7 +40,7 @@ Nanodiscs have emerged as a model membrane candidate with many advantages over t
 
 ### Sensor Functionalisation {#sec-sensor-types}
 
-@tbl-or-biosensors summarises all published odorant receptor functionalised carbon nanotube and graphene field-effect transistor-based sensors to date. The majority of published works on this topic come from the Tai Hyun Park group at Seoul National University. The Park group has mainly focused on CNT FETs functionalised with human odorant receptors, but has used a range of different transducer immobilisation techniques when producing the sensors.
+@tbl-or-biosensors summarises all published odorant receptor functionalised carbon nanotube and graphene field-effect transistor-based sensors to date. The majority of published works on this topic come from the Tai Hyun Park group at Seoul National University. The Park group has mainly focused on CNT FETs functionalised with human odorant receptors, but has used a range of different transducer immobilisation techniques when producing the sensors. Dog and mouse odorant receptors have also been used in bioelectronic nose applications, by the Park group and Goldsmith *et al.* respectively.
 
 ```{r}
 #| label: setup-31
@@ -49,6 +55,7 @@ functionalisation_types <- functionalisation_types[rowSums(is.na(functionalisati
 
 ```{=tex}
 \newgeometry{a4paper,centering=true,right=1.5in,headsep=44.95pt,footskip=23pt}
+\setstretch{1.2} % Or whatever your linespacing setting is
 \begin{landscape}
 \begin{center}
 ```
@@ -77,8 +84,10 @@ knitr::kable(or_table,
 \end{center}
 \end{landscape}
 \restoregeometry % Restore the global document page margins
+\setstretch{1.2} % Or whatever your linespacing setting is
 ```
-nanotube and graphene field-effect transducers in bioelectronic nose applications, by the Park group and by Goldsmith *et al.* respectively. As far as the author knows, the Plank group at Te Herenga Waka $-$ Victoria University of Wellington is the only group to have produced thin-film transistors functionalised with insect odorant receptors. The behaviour of insect odorant receptors is significantly different to that of vertebrate odorant receptors, and their behaviour in sensor applications is currently not well understood. The distinction between vertebrate and insect odorant receptors is discussed in more depth in @sec-insect-OR-biosensors.
+
+As far as the author knows, the Plank group at Te Herenga Waka $-$ Victoria University of Wellington is the only group to have produced thin-film transistors functionalised with insect odorant receptors. The behaviour of insect odorant receptors is significantly different to that of vertebrate odorant receptors, and their behaviour in sensor applications is currently not well understood. The distinction between vertebrate and insect odorant receptors is discussed in more depth in @sec-insect-OR-biosensors.
 
 For a bioelectronic nose to operate in a selective manner, sufficient coupling must exist between the bioreceptor element and the graphene or carbon nanotube channel of the field-effect transistor. Odorant receptors can be directly attached to the transducer by physical adsorption; however, this approach is difficult to control, and can lead to weak coupling between the two elements [@Kwon2015; @Dung2018; @Bohbot2020]. Alternatively, a bifunctional linker element may mediate the attachment between functional groups of the bioreceptor and the transducer in a biochemical process referred to as "functionalisation" [@Star2003a]. Functionalisation may involve covalent or non-covalent bonding to the carbon-ring transducer surface. Covalent bonding is stronger than non-covalent bonding, and therefore gives a more permanent attachment between linker molecules and the transducer. The relative advantages and disadvantages of each type of receptor immobilisation can be found in [@tbl-functionalisation-types; @Dung2018; @Bohbot2020].
 
@@ -290,4 +299,4 @@ Odorant receptors can be used to fabricate highly sensitive and selective biosen
 
 Mammalian odorant receptors have been thoroughly explored in carbon nanotube and graphene field-effect transistor sensing applications, with both non-covalent and covalent functionalisation mechanisms used to create sensors which detect analyte at sub-femtomolar concentrations. The mechanisms behind sensing rely on transistor gating either due to ion flow into a nanovesicle format, or from conformational change in the odorant receptor. Covalently-attached mammalian odorant receptors have also been used with a single carbon nanotube field-effect transistor device for vapour-phase detection at concentrations down to $\sim$ 7 ppb by Goldsmith *et al.*
 
-Femtomolar detection of analyte has also been achieved with an insect odorant receptor functionalised device. However, the exact mechanism behind detection is unclear, as the presence of ORCO is not required for successful sensor behaviour. It is possible that the mechanism results from a change in conformation of the odorant receptor, similar to the mammalian odorant receptor. Due to the possible difference in mechanism between mammalian odorant receptor detection and insect odorant receptor detection, it is not clear that vapour-phase detection can be achieved by simply reproducing the work of Goldsmith *et al.* using insect odorant receptors. @sec-noncovalent-functionalisation looks further at various non-covalent functionalisation approaches for the creation of a insect odorant receptor-based field-effect transistor biosensor, while @sec-biosensing-iORs tests sensor behaviour in both aqueous and vapour-phase environments.
+Femtomolar detection of analyte has also been achieved with an insect odorant receptor functionalised device. However, the exact mechanism behind detection is unclear, as the presence of ORCO is not required for successful sensor behaviour. It is possible that the mechanism results from a change in conformation of the odorant receptor, similar to the mammalian odorant receptor. Due to the possible difference in mechanism between mammalian odorant receptor detection and insect odorant receptor detection, it is not clear that vapour-phase detection can be achieved by simply reproducing the work of Goldsmith *et al.* using insect odorant receptors. @sec-noncovalent-functionalisation looks further at various non-covalent functionalisation approaches for the creation of a insect odorant receptor-based field-effect transistor biosensor, @sec-biosensing-iORs tests sensor behaviour in an aqueous environment, and @sec-vapour-biosensing-iORs tests sensor behaviour in a vapour-phase environment.

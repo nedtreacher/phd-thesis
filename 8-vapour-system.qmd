@@ -1,6 +1,7 @@
 ---
 keep-tex: true
 latex_runs: 3
+linestretch: 1.2
 format: pdf
 ---
 
@@ -114,9 +115,11 @@ These issues, along with various minor structural and design issues, were addres
 
 ### Stage II Design
 
-@fig-stage-2-pid gives an overview of the second-stage design for the vapour delivery system setup. This stage of the redesign was implemented between Jan and May 2022. Changes from the first stage included:
+@fig-stage-2-pid gives an overview of the second-stage design for the vapour delivery system setup. This stage of the redesign was implemented between Jan and May 2022. 
 
 ![P&ID of the second-stage design for the vapour delivery system. Red outlines indicate additions introduced to the system subsequent to the first stage design.](figures/ch8/PID_V2.png){#fig-stage-2-pid fig-scap="P&ID of Stage II of the vapour delivery system." width="95%"}
+
+Changes from the first stage included:
 
 -   The addition of a N$_2$ cylinder (152D size) as the source of nitrogen for the system to replace the lab supply.
 
@@ -138,7 +141,7 @@ These changes largely addressed the issues identified in @sec-vapour-system-desi
 
 A water displacement test was carried out to determine the relationship between the flow rate measured by the mass flow controllers and the actual flow rate passing through the chamber. All valves were set so that both the dilution and carrier lines followed a single path. Both these paths went through the device chamber and out through the system exhaust. An empty analyte bottle was placed on the carrier line. The system exhaust was placed into a bucket filled with tap water, with the outlet sitting beneath an upturned 500 mL measurement cylinder, as pictured in @fig-water-displacement. The cylinder was used to measure the volume of displaced water over time, which is equivalent to the rate of change of nitrogen volume entering the cylinder from the exhaust. Measurements were taken from the bottom of the meniscus of the water in the cylinder. As leaks from the manifold, chamber and exhaust line were not detected when leak testing with bubble solution, it can be safely assumed that the rate at which nitrogen exits the exhaust is equivalent to the nitrogen flow rate through the device chamber.
 
-![Setup for calibration of mass flow controllers using the water displacement method.](figures/ch8/water_displacement.png){#fig-water-displacement fig-scap="Setup for calibration of mass flow controllers using the water displacement method." width="50%"}
+![Setup for calibration of mass flow controllers using the water displacement method.](figures/ch8/water_displacement.png){#fig-water-displacement fig-scap="Setup for calibration of mass flow controllers using the water displacement method." width="45%"}
 
 The time taken to displace 50 mL of water was measured three times for a series of constant flow rates, both for the 200 sccm MFC (MKS) on the carrier line and the 500 sccm MFC (Tylan) on the dilution line. The displacement flow rate corresponding to each measurement could then be found by dividing volume by time. These measurements, of displacement flow relative to nominal flow through the MFC, are shown in @fig-MFC-calibration-curves (a) and (b) respectively. The increased uncertainty for higher flow measurements is largely due to rapid flows being more difficult to measure precisely. However, increased instability of flow at higher flow rates may also contribute. A strong linear relationship between the nominal flow reading and actual flow was identified. A linear least-squares fit with 95% confidence interval was performed, where coefficients $a_1$ and $a_2$ were found for the linear relationship $D = a_1d + a_2$. Here, $d$ is nominal flow from the MFC and $D$ is measured displacement flow. For the 200 sccm MFC flow through the carrier line, values of $a_1 = 1.18 \pm 0.09$ and $a_2 = -1 \pm 13$ were obtained, while for the 500 sccm MFC flow through the dilution line, values of $a_1 = 1.16 \pm 0.04$ and $a_2 = -5 \pm 10$ were obtained.
 
