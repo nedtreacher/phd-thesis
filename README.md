@@ -18,3 +18,5 @@ The thesis is controlled via the \_quarto.yml file. In this file, the following 
 -   Description of cover figure (line 64)
 
 To learn more about using Quarto markdown, see <http://biostats-r.github.io/biostats/quarto>
+
+Feel free to use this template for your own PhD or Master's thesis in physics!
